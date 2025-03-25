@@ -1,0 +1,52 @@
+@page "{gameID?}"
+@model ASP_site.Pages.Games.GamesModel
+
+@{
+    ViewData["Title"] = @Model.Game?.Name;
+}
+<div class="jumbotron p-2">
+  <h1 class="display-4">
+    @Html.DisplayFor(Model => Model.Game.Name) - @Model.Game.Genre (@Model.Game.Year)
+  </h1>
+</div>
+<hr/>
+<div>@Model.Game.Description</div>
+<hr/>
+@if(Model.Game.EngineID != null)
+{
+  <div>Engine: <a class="" asp-page="/Engines/Engine" asp-route-EngineID="@Model.Game.EngineID">@Model.Game.EngineID</a></div>
+  <hr/>
+}
+@if(Model.Game.ModForGameID != null && Model.Game.ModForGameID != "")
+{
+  <div>Mod for: <a class="" asp-page="./Game" asp-route-GameID="@Model.Game.ModForGameID">@Model.Game.ModForGameID</a></div>
+  <hr/>
+}
+@if(Model.Game.Links.Length > 0)
+{
+  <div>
+    <h4>Links:</h4>
+    <ul>
+      @foreach(Link link in Model.Game.Links)
+      {
+        <li><a href="@link.Url">@link.Label</a> - @link.Description</li>
+      }
+    </ul>
+  </div>
+  <hr/>
+} else { <div>No links available. @Model.Game.Links.Length</div>
+<hr/>}
+@if(Model.Game.ReleaseDates.Length > 0) 
+{
+  <div>
+    <h4>Release Dates:</h4>
+    <ul>
+      @foreach(ReleaseDate releaseDate in Model.Game.ReleaseDates)
+      {
+        <li>@releaseDate.ReleaseVersion - @releaseDate.Date.ToString("yyyy-MM-dd") - @releaseDate.Region</li>
+     }
+    </ul>
+  </div>
+  <hr/>
+} else { <div>No release dates available. @Model.Game.ReleaseDates.Length</div>
+<hr/>}

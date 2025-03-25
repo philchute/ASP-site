@@ -1,0 +1,54 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+html {
+  font-size: 14px;
+  position: relative;
+  min-height: 100%;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+.a {
+  color: black;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+section.grid
+{
+  font-size: smaller;
+}
+
+section.grid a:hover
+{
+  background-color: #839496
+}
+
+section.grid a
+{
+  text-decoration: none;
+  cursor: pointer;
+  color:black;
+}
+
+.playable
+{
+  font-weight: bold;
+}
+
+.favorite
+{
+  background-color: gold;
+}

@@ -1,0 +1,41 @@
+@page "{engineID?}"
+@model ASP_site.Pages.Engines.EnginesModel
+
+@{
+  ViewData["Title"] = @Html.DisplayFor(Model => Model.Engine.Name);
+}
+<div class="jumbotron p-2">
+  <h1 class="display-4">
+    @Html.DisplayFor(Model => Model.Engine.Name)
+  </h1>
+</div>
+
+<div>@Model.Engine.Name (@Model.Engine.Year)</div>
+
+@if(Model.Engine.ParentID != null) {
+  <div>Derived From: <a class="" asp-page="./Engine" asp-route-EngineID="@Model.Engine.ParentID">@Model.Engine.ParentID</a></div>
+  <hr/>
+}
+
+<div>@Model.Engine.Description</div>
+<hr/>
+
+@if(Model.Engine.Children.Count > 0) {
+  <h2>Derived Engines</h2>
+  <ul>
+    @foreach(var child in Model.Engine.Children) {
+      <li>@child.Name (@child.Year)</li>
+    }
+  </ul>
+  <hr/>
+}
+
+@if(Model.Engine.Games.Count > 0) {
+  <h2>Games Using This Engine</h2>
+  <ul>
+    @foreach(var game in Model.Engine.Games) {
+      <li>@game.Name (@game.Year)</li>
+    }
+  </ul>
+  <hr/>
+}

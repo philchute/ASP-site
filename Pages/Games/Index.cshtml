@@ -1,0 +1,67 @@
+@page
+@model ASP_site.Pages.Games.IndexModel
+
+@{
+  ViewData["Title"] = "Games List";
+}
+
+<div class="jumbotron p-2 d-flex justify-content-between">
+  <h2 class="mr-auto display-3">Games List</h2>
+  <form class="d-flex">
+    <div class="form-group ps-2">
+    <label class="col-form-label" asp-for="SelectedEngine" class="control-label">Engine:</label>
+    <select class="form-control" asp-for="SelectedEngine" asp-items="Model.Engines" onchange="this.form.submit();">
+      <option value="">All</option>
+    </select>
+    </div>
+    <div class="form-group ps-2">
+    <label class="col-form-label" asp-for="SelectedState" class="control-label">Game State:</label>
+    <select class="form-control" asp-for="SelectedState" asp-items="Model.SelectStates" onchange="this.form.submit();">
+      <option value="">All</option>
+    </select>
+    </div>
+    <div class="form-group ps-2">
+    <label class="col-form-label" asp-for="SearchString" class="control-label">Name:</label>
+    <input class="form-control" type="text" asp-for="SearchString" />
+    <input class="form-control" type="submit" value="Search" class="btn btn-primary btn-sm mr-auto" />
+    </div>
+    <div class="form-group ps-2">
+    <label class="col-form-label" asp-for="SortField" class="control-label">Sort by:</label>
+    <select class="form-control" asp-for="SortField" onchange="this.form.submit();">
+      <option value="Year">Year</option>
+      <option value="Name">Name</option>
+      <option value="Engine">Engine</option>
+    </select>
+    </div>
+  </form>    
+</div>
+
+<section class="grid">
+  <div class="d-flex bg-primary text-white">
+    <div class="p-1" style="flex:0 0 10%">Year</div>
+    <div class="p-1" style="flex:0 0 10%">Name</div>
+    <div class="p-1" style="flex:0 0 20%">Engine</div>
+    <div class="p-1" style="flex:0 0 10%">Genre</div>
+    <div class="p-1" style="flex:0 0 10%">Free</div>
+    <div class="p-1" style="flex:0 0 10%">Paid</div>
+    <div class="p-1" style="flex:0 0 10%">Dev Maintained</div>
+    <div class="p-1" style="flex:0 0 10%">Community Maintained</div>
+    <div class="p-1" style="flex:0 0 10%">Needs Community Patches</div>
+  </div>
+
+  @if(Model.Games != null) {
+    @foreach (Game g in Model.Games) {
+      <a class="@Model.GameClass(g)" asp-page="./Game" asp-route-GameID="@g.GameID">
+        <div class="p-1" style="flex:0 0 10%">@g.Year</div>
+        <div class="p-1" style="flex:0 0 10%">@g.Name</div>
+        <div class="p-1" style="flex:0 0 20%">@g.EngineID</div>
+        <div class="p-1" style="flex:0 0 10%">@g.Genre</div>
+        <div class="p-1" style="flex:0 0 10%">@g.IsFree</div>
+        <div class="p-1" style="flex:0 0 10%">@g.IsPaid</div>
+        <div class="p-1" style="flex:0 0 10%">@g.IsDeveloperMaintained</div>
+        <div class="p-1" style="flex:0 0 10%">@g.IsCommunityMaintained</div>
+        <div class="p-1" style="flex:0 0 10%">@g.RequiresCommunityPatch</div>
+      </a>
+    }
+  }
+</section>

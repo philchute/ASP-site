@@ -1,0 +1,61 @@
+@page
+@model ASP_site.Pages.Engines.IndexModel
+
+@{
+  ViewData["Title"] = "Engines List";
+}
+
+<div class="jumbotron p-2 d-flex justify-content-between">
+  <h2 class="mr-auto display-3">Engines List</h2>
+  <form class="d-flex">
+    <div class="form-group ps-2">
+    <label class="col-form-label" asp-for="SelectedEngine" class="control-label">Engine:</label>
+    @* <select class="form-control" asp-for="SelectedEngine" asp-items="Model.Engines" onchange="this.form.submit();"> *@
+      <option value="">All</option>
+    </select>
+    </div>
+    <div class="form-group ps-2">
+    <label class="col-form-label" asp-for="SelectedState" class="control-label">Game State:</label>
+    <select class="form-control" asp-for="SelectedState" asp-items="Model.SelectStates" onchange="this.form.submit();">
+      <option value="">All</option>
+    </select>
+    </div>
+    <div class="form-group ps-2">
+    <label class="col-form-label" asp-for="SearchString" class="control-label">Name:</label>
+    <input class="form-control" type="text" asp-for="SearchString" />
+    <input class="form-control" type="submit" value="Search" class="btn btn-primary btn-sm mr-auto" />
+    </div>
+    <div class="form-group ps-2">
+    <label class="col-form-label" asp-for="SortField" class="control-label">Sort by:</label>
+    <select class="form-control" asp-for="SortField" onchange="this.form.submit();">
+      <option value="Year">Year</option>
+      <option value="Name">Name</option>
+      <option value="Engine">Engine</option>
+    </select>
+    </div>
+  </form>    
+</div>
+
+<section class="grid">
+  <div class="d-flex bg-primary text-white">
+    <div class="p-1" style="flex:0 0 10%">Year</div>
+    <div class="p-1" style="flex:0 0 20%">Engine</div>
+    <div class="p-1" style="flex:0 0 20%">Name</div>
+    <div class="p-1" style="flex:0 0 10%">Genre</div>
+    <div class="p-1" style="flex:0 0 10%">Game State</div>
+    <div class="p-1" style="flex:0 0 10%">Game State</div>
+  </div>
+
+  @if(Model.Engines != null) {
+    @foreach (Engine e in Model.Engines) {
+      <a class="@Model.EngineClass(e)" asp-page="./Engine" asp-route-EngineID="@e.EngineID">
+        <div class="p-1" style="flex:0 0 10%">@e.Year</div>
+        <div class="p-1" style="flex:0 0 20%">@e.EngineID</div>
+        <div class="p-1" style="flex:0 0 20%">@e.Name</div>
+        <div class="p-1" style="flex:0 0 10%">@e.EngineID</div>
+        <div class="p-1" style="flex:0 0 10%">@e.EngineID</div>
+        <div class="p-1" style="flex:0 0 10%">@e.EngineID</div>
+      </a>
+    }
+  }
+</section>
