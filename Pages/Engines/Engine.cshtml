@@ -2,40 +2,50 @@
 @model ASP_site.Pages.Engines.EnginesModel
 
 @{
-  ViewData["Title"] = @Html.DisplayFor(Model => Model.Engine.Name);
+  ViewData["Title"] = Model.Engine.Name;
 }
 <div class="jumbotron p-2">
   <h1 class="display-4">
-    @Html.DisplayFor(Model => Model.Engine.Name)
+    @Model.Engine.Name - @Model.Engine.Year
   </h1>
 </div>
-
-<div>@Model.Engine.Name (@Model.Engine.Year)</div>
-
-@if(Model.Engine.ParentID != null) {
-  <div>Derived From: <a class="" asp-page="./Engine" asp-route-EngineID="@Model.Engine.ParentID">@Model.Engine.ParentID</a></div>
-  <hr/>
-}
-
+<hr/>
 <div>@Model.Engine.Description</div>
 <hr/>
 
-@if(Model.Engine.Children.Count > 0) {
-  <h2>Derived Engines</h2>
-  <ul>
-    @foreach(var child in Model.Engine.Children) {
-      <li>@child.Name (@child.Year)</li>
+<div class="d-flex align-items-center justify-content-center">
+  <div class="engine-tree">
+    @if(Model.Engine.ParentID != null && Model.Engine.ParentID != "") {
+      <div class="parent-engine text-center mb-3">
+        <a class="" asp-page="./Engine" asp-route-EngineID="@Model.Engine.ParentID">@Model.Engine.ParentID</a>
+        <div class="tree-line">↓</div>
+      </div>
     }
-  </ul>
-  <hr/>
-}
+    
+    <div class="current-engine text-center mb-3 position-relative">
+      <div class="fw-bold">@Model.Engine.Name</div>
+      @if(Model.Engine.Games.Count > 0) {
+        <div class="games-list">
+          <div class="mx-2">→</div>
+          <div class="ps-3">
+            @foreach(var game in Model.Engine.Games) {
+              <div class="mb-1">
+                <a asp-page="/Games/Game" asp-route-GameID="@game.GameID">@game.Name - @game.Year</a>
+              </div>
+            }
+          </div>
+        </div>
+      }
+    </div>
 
-@if(Model.Engine.Games.Count > 0) {
-  <h2>Games Using This Engine</h2>
-  <ul>
-    @foreach(var game in Model.Engine.Games) {
-      <li>@game.Name (@game.Year)</li>
+    @if(Model.Engine.Children.Count > 0) {
+      <div class="tree-line text-center">↓</div>
+      <div class="children-engines text-center">
+        @foreach(var child in Model.Engine.Children) {
+          <a class="d-inline-block mx-2" asp-page="./Engine" asp-route-EngineID="@child.EngineID">@child.Name (@child.Year)</a>
+        }
+      </div>
     }
-  </ul>
-  <hr/>
-}
+  </div>
+</div>
+<hr/>

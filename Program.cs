@@ -17,7 +17,7 @@ namespace Games
     using var scope = host.Services.CreateScope();
     var services = scope.ServiceProvider;
     var context = services.GetRequiredService<GameContext>();
-    // context.Database.EnsureCreated();
+    context.Database.EnsureCreated();
     DbInitializer.Initialize(context);
     }
     public static IHostBuilder CreateHostBuilder(string[] args) =>

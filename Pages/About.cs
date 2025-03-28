@@ -13,6 +13,7 @@ namespace ASP_site.Pages
 
     public void OnGet()
     {
+      ViewData["ActivePage"] = "About";
     }
   }
 }

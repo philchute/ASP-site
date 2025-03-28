@@ -17,7 +17,15 @@ namespace ASP_site.Pages.Engines
     public Engine? Engine { get; set; }
     public async Task OnGetAsync(string EngineID)
     {
+      ViewData["ActivePage"] = "Engines";
+      if (EngineID == null) return;
+      
       Engine = await _context.Engines.FindAsync(EngineID);
+      if (Engine != null)
+      {
+        Engine.Children = Engine.AddChildren(Engine, _context.Engines.ToList());
+        Engine.Games = Engine.AddGames(Engine, _context.Games.ToList());
+      }
     }
   }
 }

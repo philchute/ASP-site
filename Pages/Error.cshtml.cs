@@ -21,6 +21,7 @@ namespace ASP_site.Pages
     public void OnGet()
     {
       RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
+      ViewData["ActivePage"] = "Error";
     }
   }
 }

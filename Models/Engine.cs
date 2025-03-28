@@ -5,14 +5,14 @@ public class Engine {
   public int? Year { get; set; }
   public string? Description { get; set; }
   public string ParentID { get; set; } = "";
-  public List<Engine> Children { get; set; } = []; // needed for seeing this on Engine page?
-  public List<Game> Games { get; set; } = []; // needed for seeing this on Engine page?
-  public static Engine AddChildren(Engine e, List<Engine> allEngines) {
+  public List<Engine> Children { get; set; } = new List<Engine>(); // needed for seeing this on Engine page?
+  public List<Game> Games { get; set; } = new List<Game>(); // needed for seeing this on Engine page?
+  public static List<Engine> AddChildren(Engine e, List<Engine> allEngines) {
     e.Children = allEngines.Where(x => x.ParentID == e.EngineID).ToList();
-    return e;
+    return e.Children;
   }
-  public static Engine AddGames(Engine e, List<Game> allGames) {
+  public static List<Game> AddGames(Engine e, List<Game> allGames) {
     e.Games = allGames.Where(x => x.EngineID == e.EngineID).ToList();
-    return e;
+    return e.Games;
   }
 }

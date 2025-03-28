@@ -15,8 +15,8 @@
     </select>
     </div>
     <div class="form-group ps-2">
-    <label class="col-form-label" asp-for="SelectedState" class="control-label">Game State:</label>
-    <select class="form-control" asp-for="SelectedState" asp-items="Model.SelectStates" onchange="this.form.submit();">
+    <label class="col-form-label" asp-for="SelectedGenre" class="control-label">Genre:</label>
+    <select class="form-control" asp-for="SelectedGenre" asp-items="Model.SelectGenres" onchange="this.form.submit();">
       <option value="">All</option>
     </select>
     </div>
@@ -37,30 +37,34 @@
 </div>
 
 <section class="grid">
-  <div class="d-flex bg-primary text-white">
-    <div class="p-1" style="flex:0 0 10%">Year</div>
-    <div class="p-1" style="flex:0 0 10%">Name</div>
-    <div class="p-1" style="flex:0 0 20%">Engine</div>
-    <div class="p-1" style="flex:0 0 10%">Genre</div>
-    <div class="p-1" style="flex:0 0 10%">Free</div>
-    <div class="p-1" style="flex:0 0 10%">Paid</div>
+  <div class="d-flex bg-dark text-white fw-bold">
+    <div class="p-1" style="flex:0 0 7%">Year</div>
+    <div class="p-1" style="flex:0 0 12%">Name</div>
+    <div class="p-1" style="flex:0 0 10%">Engine</div>
+    <div class="p-1" style="flex:0 0 7%">Genre</div>
+    <div class="p-1" style="flex:0 0 7%">Free</div>
+    <div class="p-1" style="flex:0 0 7%">Paid</div>
+    <div class="p-1" style="flex:0 0 10%">Developer</div>
     <div class="p-1" style="flex:0 0 10%">Dev Maintained</div>
     <div class="p-1" style="flex:0 0 10%">Community Maintained</div>
-    <div class="p-1" style="flex:0 0 10%">Needs Community Patches</div>
+    <div class="p-1" style="flex:0 0 10%">Needs Patches</div>
+    <div class="p-1" style="flex:0 0 10%">Mod For</div>
   </div>
 
   @if(Model.Games != null) {
     @foreach (Game g in Model.Games) {
-      <a class="@Model.GameClass(g)" asp-page="./Game" asp-route-GameID="@g.GameID">
-        <div class="p-1" style="flex:0 0 10%">@g.Year</div>
-        <div class="p-1" style="flex:0 0 10%">@g.Name</div>
-        <div class="p-1" style="flex:0 0 20%">@g.EngineID</div>
-        <div class="p-1" style="flex:0 0 10%">@g.Genre</div>
-        <div class="p-1" style="flex:0 0 10%">@g.IsFree</div>
-        <div class="p-1" style="flex:0 0 10%">@g.IsPaid</div>
-        <div class="p-1" style="flex:0 0 10%">@g.IsDeveloperMaintained</div>
-        <div class="p-1" style="flex:0 0 10%">@g.IsCommunityMaintained</div>
-        <div class="p-1" style="flex:0 0 10%">@g.RequiresCommunityPatch</div>
+      <a class="d-flex @Model.GameClass(g)" asp-page="./Game" asp-route-GameID="@g.GameID">
+        <div class="p-1" style="flex:0 0 7%">@(g.Year?.ToString() ?? "-")</div>
+        <div class="p-1" style="flex:0 0 12%">@(g.Name ?? "-")</div>
+        <div class="p-1" style="flex:0 0 10%">@(g.EngineID ?? "-")</div>
+        <div class="p-1" style="flex:0 0 7%">@(g.Genre?.ToString() ?? "-")</div>
+        <div class="p-1" style="flex:0 0 7%">@(g.IsFree == true ? "Yes" : g.IsFree == false ? "No" : "-")</div>
+        <div class="p-1" style="flex:0 0 7%">@(g.IsPaid == true ? "Yes" : g.IsPaid == false ? "No" : "-")</div>
+        <div class="p-1" style="flex:0 0 10%">@(g.Developer ?? "-")</div>
+        <div class="p-1" style="flex:0 0 10%">@(g.IsDeveloperMaintained == true ? "Yes" : g.IsDeveloperMaintained == false ? "No" : "-")</div>
+        <div class="p-1" style="flex:0 0 10%">@(g.IsCommunityMaintained == true ? "Yes" : g.IsCommunityMaintained == false ? "No" : "-")</div>
+        <div class="p-1" style="flex:0 0 10%">@(g.RequiresCommunityPatch ? "Yes" : "No")</div>
+        <div class="p-1" style="flex:0 0 10%">@(string.IsNullOrEmpty(g.ModForGameID) ? "-" : g.ModForGameID)</div>
       </a>
     }
   }

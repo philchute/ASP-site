@@ -37,7 +37,7 @@
 </div>
 
 <section class="grid">
-  <div class="d-flex bg-primary text-white">
+  <div class="d-flex bg-dark text-white fw-bold">
     <div class="p-1" style="flex:0 0 10%">Year</div>
     <div class="p-1" style="flex:0 0 20%">Engine</div>
     <div class="p-1" style="flex:0 0 20%">Name</div>
@@ -48,7 +48,7 @@
 
   @if(Model.Engines != null) {
     @foreach (Engine e in Model.Engines) {
-      <a class="@Model.EngineClass(e)" asp-page="./Engine" asp-route-EngineID="@e.EngineID">
+      <a class="d-flex @Model.EngineClass(e)" asp-page="./Engine" asp-route-EngineID="@e.EngineID">
         <div class="p-1" style="flex:0 0 10%">@e.Year</div>
         <div class="p-1" style="flex:0 0 20%">@e.EngineID</div>
         <div class="p-1" style="flex:0 0 20%">@e.Name</div>

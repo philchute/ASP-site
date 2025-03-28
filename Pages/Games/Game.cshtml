@@ -6,7 +6,7 @@
 }
 <div class="jumbotron p-2">
   <h1 class="display-4">
-    @Html.DisplayFor(Model => Model.Game.Name) - @Model.Game.Genre (@Model.Game.Year)
+    @Model.Game.Name <small class="text-muted">- @Model.Game.Genre - @Model.Game.Year</small>
   </h1>
 </div>
 <hr/>
@@ -22,20 +22,22 @@
   <div>Mod for: <a class="" asp-page="./Game" asp-route-GameID="@Model.Game.ModForGameID">@Model.Game.ModForGameID</a></div>
   <hr/>
 }
-@if(Model.Game.Links.Length > 0)
+@if(Model.GameLinks.Count > 0) 
 {
-  <div>
-    <h4>Links:</h4>
-    <ul>
-      @foreach(Link link in Model.Game.Links)
-      {
-        <li><a href="@link.Url">@link.Label</a> - @link.Description</li>
-      }
-    </ul>
-  </div>
-  <hr/>
-} else { <div>No links available. @Model.Game.Links.Length</div>
-<hr/>}
+    <div>
+        <h4>Links:</h4>
+        <ul>
+            @foreach(Link link in Model.GameLinks)
+            {
+                <li><a href="@link.Url">@link.Label</a> - @link.Description</li>
+            }
+        </ul>
+    </div>
+    <hr/>
+} else { 
+    <div>No links available.</div>
+    <hr/>
+}
 @if(Model.Game.ReleaseDates.Length > 0) 
 {
   <div>
@@ -43,10 +45,36 @@
     <ul>
       @foreach(ReleaseDate releaseDate in Model.Game.ReleaseDates)
       {
-        <li>@releaseDate.ReleaseVersion - @releaseDate.Date.ToString("yyyy-MM-dd") - @releaseDate.Region</li>
+        <li>@ReleaseDate.FormatReleaseType(releaseDate.ReleaseVersion) - @{
+          if (releaseDate.Day != null)
+          {
+            @($"{System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(releaseDate.Month.Value)} {releaseDate.Day:D2}, {releaseDate.Year}")
+          }
+          else if (releaseDate.Month != null)
+          {
+            @($"{System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(releaseDate.Month.Value)} {releaseDate.Year}")
+          }
+          else
+          {
+            @releaseDate.Year
+          }
+        } - @ReleaseDate.FormatRegion(releaseDate.Region)</li>
      }
     </ul>
   </div>
   <hr/>
-} else { <div>No release dates available. @Model.Game.ReleaseDates.Length</div>
+} else { <div>No release dates available.</div>
 <hr/>}
+@if(Model.Game.Mods.Count > 0) 
+{
+  <div>
+    <h4>Mods for this game:</h4>
+    <ul>
+      @foreach(Game mod in Model.Game.Mods)
+      {
+        <li><a asp-page="./Game" asp-route-GameID="@mod.GameID">@mod.Name</a> - @mod.Year</li>
+      }
+    </ul>
+  </div>
+  <hr/>
+}

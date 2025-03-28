@@ -18,21 +18,21 @@
         <div class="collapse navbar-collapse d-sm-inline-flex flex-sm-row-reverse" id="navbarColor02">
           <ul class="navbar-nav me-auto">
             <li class="nav-item">
-              <a class="nav-link active" asp-area="" asp-page="/Index">Home
+              <a class="nav-link @(ViewData["ActivePage"]?.ToString() == "Home" ? "active" : "")" asp-area="" asp-page="/Index">Home
                 <span class="visually-hidden">(current)</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" asp-area="" asp-page="/Games/Index">Games</a>
+              <a class="nav-link @(ViewData["ActivePage"]?.ToString() == "Games" ? "active" : "")" asp-area="" asp-page="/Games/Index">Games</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" asp-area="" asp-page="/Engines/Index">Engines</a>
+              <a class="nav-link @(ViewData["ActivePage"]?.ToString() == "Engines" ? "active" : "")" asp-area="" asp-page="/Engines/Index">Engines</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" asp-area="" asp-page="/Links">Links</a>
+              <a class="nav-link @(ViewData["ActivePage"]?.ToString() == "Links" ? "active" : "")" asp-area="" asp-page="/Links/Index">Links</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" asp-area="" asp-page="/About">About</a>
+              <a class="nav-link @(ViewData["ActivePage"]?.ToString() == "About" ? "active" : "")" asp-area="" asp-page="/About">About</a>
             </li>
           </ul>
         </div>
@@ -45,9 +45,9 @@
     </main>
   </div>
 
-  <footer class="border-top footer text-muted">
+  <footer class="border-top footer text-muted bg-dark" data-bs-theme="dark">
     <div class="container">
-      &copy; 2025 - Philip Chute - <a asp-area="" asp-page="/About">About</a>
+      &copy; 2025 - Philip Chute - <a class="link-secondary" asp-area="" asp-page="/About">About</a>
     </div>
   </footer>
 

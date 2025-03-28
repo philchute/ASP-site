@@ -10,9 +10,6 @@ html {
     font-size: 16px;
   }
 }
-.a {
-  color: black;
-}
 
 body {
   /* Margin bottom by footer height */
@@ -26,21 +23,15 @@ body {
   line-height: 60px; /* Vertically center the text there */
 }
 
-section.grid
-{
-  font-size: smaller;
+section.grid a:hover {
+  background-color: #4d5d6c;  /* Solar's default active background color */
+  transition: background-color 0.15s ease-in-out;
 }
 
-section.grid a:hover
-{
-  background-color: #839496
-}
-
-section.grid a
-{
+section.grid a {
   text-decoration: none;
   cursor: pointer;
-  color:black;
+  color: white;
 }
 
 .playable
@@ -51,4 +42,42 @@ section.grid a
 .favorite
 {
   background-color: gold;
+}
+.engine-tree {
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.tree-line {
+  font-size: 1.5rem;
+  color: #666;
+  margin: 0.5rem 0;
+}
+
+.current-engine {
+  padding: 1rem;
+  position: relative;
+}
+
+.parent-engine {
+  padding: 0.5rem;
+}
+
+.children-engines {
+  padding: 1rem;
+}
+
+.current-engine .games-list {
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+}
+
+.games-list a {
+  padding: 0.25rem 0.5rem;  /* Add some padding */
+
 }

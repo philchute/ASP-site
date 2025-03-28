@@ -30,6 +30,7 @@ namespace ASP_site.Pages.Engines
 
     public async Task OnGetAsync()
     {
+      ViewData["ActivePage"] = "Engines";
       // read the favorite team from a cookie
       FavoriteEngine = HttpContext.Session.GetString("_Favorite");
 

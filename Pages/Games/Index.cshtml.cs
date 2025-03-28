@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ASP_site.Models;
 using ASP_site.Data;
+using System.Linq;
 
 namespace ASP_site.Pages.Games
 {
@@ -19,17 +20,16 @@ namespace ASP_site.Pages.Games
     public string? FavoriteEngine { get; set; }
     public List<Game>? Games { get; set; }
     public SelectList? SelectGames { get; set; }
-    public SelectList? SelectStates { get; set; }
+    public SelectList? SelectGenres { get; set; }
     public SelectList? Engines { get; set; }
-    //public SelectList Games { get; set; }
-    //public SelectList States { get; set; }
     [BindProperty(SupportsGet = true)] public string? SearchString { get; set; } = null;
     [BindProperty(SupportsGet = true)] public string? SelectedEngine { get; set; } = null;
-    [BindProperty(SupportsGet = true)] public bool? SelectedState { get; set; } = null;
+    [BindProperty(SupportsGet = true)] public string? SelectedGenre { get; set; } = null;
     [BindProperty(SupportsGet = true)] public string SortField { get; set; } = "Name";
 
     public async Task OnGetAsync()
     {
+      ViewData["ActivePage"] = "Games";
       // read the favorite team from a cookie
       FavoriteEngine = HttpContext.Session.GetString("_Favorite");
 
@@ -38,13 +38,16 @@ namespace ASP_site.Pages.Games
                                      orderby g.GameID
                                      select g.GameID;
       SelectGames = new SelectList(await gameQuery.ToListAsync());
-      IQueryable<bool?> stateQuery = from g in _context.Games
-                                     orderby g.IsFree
-                                     select g.IsFree;
-      SelectStates = new SelectList(await gameQuery.Distinct().ToListAsync());
+
+      IQueryable<Genre?> genreQuery = from g in _context.Games
+                                     where g.Genre != null
+                                     orderby g.Genre
+                                     select g.Genre;
+      SelectGenres = new SelectList(await genreQuery.Distinct().ToListAsync());
+
       IQueryable<string> engineQuery = from e in _context.Engines
-                                         orderby e.EngineID
-                                         select e.EngineID;
+                                     orderby e.EngineID
+                                     select e.EngineID;
       Engines = new SelectList(await engineQuery.Distinct().ToListAsync());
 
       // create a base query that retrieves all players
@@ -52,7 +55,7 @@ namespace ASP_site.Pages.Games
       // modify the query if the user is searching or filtering
       if (!string.IsNullOrEmpty(SearchString)) { games = games.Where(g => g.Name.Contains(SearchString)); }
       if (!string.IsNullOrEmpty(SelectedEngine)) { games = games.Where(g => g.EngineID == SelectedEngine); }
-      //if (!string.IsNullOrEmpty("SelectedState")) { games = games.Where(g => g.GamePlayable == SelectedState); } //TODO
+      if (!string.IsNullOrEmpty(SelectedGenre)) { games = games.Where(g => g.Genre.ToString() == SelectedGenre); }
       // modify the query if the user is sorting
       switch (SortField) {
         case "Year": games = games.OrderBy(g => g.Year).ThenBy(g => g.GameID); break;
