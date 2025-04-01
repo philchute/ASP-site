@@ -2,10 +2,25 @@
 @using ASP_site.Pages
 @model IndexModel
 @{
-  ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-  <h1 class="display-4">Welcome</h1>
-  <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="tron-container">
+    <div class="grid"></div>
+    <div class="menu-container">
+        <div class="menu-frame">
+            <div class="menu-items">
+                <div class="menu-item" data-text="Games">Games</div>
+                <div class="menu-item" data-text="Engines">Engines</div>
+                <div class="menu-item" data-text="Links">Links</div>
+                <div class="menu-item" data-text="Servers">Servers</div>
+                <div class="menu-item" data-text="About">About</div>
+            </div>
+        </div>
+    </div>
 </div>
+
+@section Scripts {
+    <link rel="stylesheet" href="~/css/tron.css" />
+    <script src="~/js/tron.js"></script>
+}

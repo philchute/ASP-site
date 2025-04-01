@@ -1,10 +1,13 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
+
+/* Base Styles */
 html {
   font-size: 14px;
   position: relative;
   min-height: 100%;
 }
+
 @media (min-width: 768px) {
   html {
     font-size: 16px;
@@ -15,6 +18,8 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
+
+/* Layout */
 .footer {
   position: absolute;
   bottom: 0;
@@ -23,26 +28,32 @@ body {
   line-height: 60px; /* Vertically center the text there */
 }
 
-section.grid a:hover {
-  background-color: #4d5d6c;  /* Solar's default active background color */
-  transition: background-color 0.15s ease-in-out;
-}
-
+/* Grid Section */
 section.grid a {
   text-decoration: none;
   cursor: pointer;
   color: white;
+  transition: background-color 0.15s ease-in-out;
 }
 
-.playable
-{
+section.grid a:hover {
+  background-color: #4d5d6c;  /* Solar's default active background color */
+}
+
+/* Game List */
+.playable {
   font-weight: bold;
 }
 
-.favorite
-{
+.favorite {
   background-color: gold;
 }
+
+.games-list a {
+  padding: 0.25rem 0.5rem;  /* Add some padding */
+}
+
+/* Engine Tree */
 .engine-tree {
   max-width: 800px;
   margin: 2rem auto;
@@ -75,9 +86,4 @@ section.grid a {
   min-width: 300px;
   display: flex;
   align-items: center;
-}
-
-.games-list a {
-  padding: 0.25rem 0.5rem;  /* Add some padding */
-
 }

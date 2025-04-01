@@ -1,3 +1,6 @@
+//using System.ComponentModel.DataAnnotations;
+//using System.ComponentModel.DataAnnotations.Schema;
+
 namespace ASP_site.Models; 
 public class Engine {
   public required string EngineID { get; set; }
@@ -5,8 +8,8 @@ public class Engine {
   public int? Year { get; set; }
   public string? Description { get; set; }
   public string ParentID { get; set; } = "";
-  public List<Engine> Children { get; set; } = new List<Engine>(); // needed for seeing this on Engine page?
-  public List<Game> Games { get; set; } = new List<Game>(); // needed for seeing this on Engine page?
+  public List<Engine> Children { get; set; } = new List<Engine>();
+  public List<Game> Games { get; set; } = new List<Game>();
   public static List<Engine> AddChildren(Engine e, List<Engine> allEngines) {
     e.Children = allEngines.Where(x => x.ParentID == e.EngineID).ToList();
     return e.Children;

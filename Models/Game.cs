@@ -1,8 +1,8 @@
-using System.ComponentModel.DataAnnotations.Schema;
+//using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
-using System.ComponentModel.DataAnnotations;
+//using System.ComponentModel.DataAnnotations;
 
 namespace ASP_site.Models {
   public class Game {
@@ -25,19 +25,33 @@ namespace ASP_site.Models {
     public bool? IsCommunityMaintained { get; set; }
     public bool RequiresCommunityPatch { get; set; } = false;
     public List<Game> Mods { get; set; } = new List<Game>();
-    public static Game InitializeYear(Game g) {
+    public List<Server> Servers { get; set; } = new List<Server>();
+    
+    public static Game InitializeYear(Game g, List<Game> allGames) {
       if(g.ReleaseDates.Length > 0) {
         g.Year = g.ReleaseDates.OrderBy(x => x.Year).First().Year;
+      } else if (!string.IsNullOrEmpty(g.ModForGameID)) {
+        var parentGame = allGames.FirstOrDefault(x => x.GameID == g.ModForGameID);
+        if (parentGame?.Year != null) {
+          g.Year = parentGame.Year;
+        }
       }
       return g;
     }
+    
     public static List<Game> AddMods(Game g, List<Game> allGames) {
         g.Mods = allGames.Where(x => x.ModForGameID == g.GameID).ToList();
         return g.Mods;
     }
+    
     public static List<Link> GetLinks(Game g, List<Link> allLinks) {
         return allLinks.Where(l => l.GameID == g.GameID).ToList();
     }
+    
+    public static List<Server> GetServers(Game g, List<Server> allServers) {
+        return allServers.Where(s => s.GameID == g.GameID).ToList();
+    }
+    
     public static Game InitializeGenre(Game g, List<Game> allGames) {
         if (g.Genre == null && g.ModForGameID != null) {
             var parentGame = allGames.FirstOrDefault(x => x.GameID == g.ModForGameID);
@@ -47,11 +61,19 @@ namespace ASP_site.Models {
         }
         return g;
     }
+
+    public static Game InitializeEngine(Game g, List<Game> allGames) {
+        if (string.IsNullOrEmpty(g.EngineID) && !string.IsNullOrEmpty(g.ModForGameID)) {
+            g.EngineID = allGames.FirstOrDefault(x => x.GameID == g.ModForGameID)?.EngineID;
+        }
+        return g;
+    }
   }
 
-  public enum Genre { FPS, RTS }
+  public enum Genre { FPS, RTS, TBS,MOBA }
   public enum Region { Worldwide, NA, SA, EU, Asia }
   public enum ReleaseVersion { Alpha, Beta, Demo, FullGame, SteamRelease, ReRelease, LatestUpdate }
+  
   public class ReleaseDate {
     public required int Year { get; set; }
     public int? Month { get; set; }

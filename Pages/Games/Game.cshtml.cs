@@ -25,6 +25,7 @@ namespace ASP_site.Pages.Games
       {
         Game.Mods = Game.AddMods(Game, _context.Games.ToList());
         GameLinks = Game.GetLinks(Game, _context.Links.ToList());
+        Game.Servers = Game.GetServers(Game, _context.Servers.ToList());
       }
     }
   }

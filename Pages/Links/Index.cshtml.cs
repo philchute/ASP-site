@@ -15,7 +15,7 @@ namespace ASP_site.Pages.Links
             _context = context;
         }
 
-        public List<Link>? Links { get; set; }
+        public List<Link> Links { get; set; } = new();
         public SelectList? Games { get; set; }
         public SelectList? LinkTypes { get; set; }
         [BindProperty(SupportsGet = true)] public string? SearchString { get; set; }
@@ -35,22 +35,22 @@ namespace ASP_site.Pages.Links
             // Create select list for link types filter (excluding Steam and SteamDB)
             var linkTypesList = Enum.GetValues(typeof(LinkType))
                 .Cast<LinkType>()
-                .Where(lt => lt != LinkType.StoreLink && lt != LinkType.SteamDB)
+                .Where(lt => lt != LinkType.Store && lt != LinkType.SteamDB)
                 .Select(lt => lt.ToString());
             LinkTypes = new SelectList(linkTypesList);
 
             // Create base query for links, excluding Steam and SteamDB links
             var links = from l in _context.Links
-                       where l.LinkType != LinkType.StoreLink && l.LinkType != LinkType.SteamDB
+                       where l.LinkType != LinkType.Store && l.LinkType != LinkType.SteamDB
                        select l;
 
             // Apply search if provided
             if (!string.IsNullOrEmpty(SearchString))
             {
                 links = links.Where(l => 
-                    l.Label.Contains(SearchString) || 
-                    l.Description.Contains(SearchString) ||
-                    l.GameID.Contains(SearchString));
+                    (l.Label ?? "").Contains(SearchString) || 
+                    (l.Description ?? "").Contains(SearchString) ||
+                    (l.GameID ?? "").Contains(SearchString));
             }
 
             // Apply filters if selected

@@ -1,0 +1,70 @@
+@page
+@model ASP_site.Pages.Servers.IndexModel
+
+@{
+    ViewData["Title"] = "Servers List";
+}
+
+<div class="jumbotron p-2 d-flex justify-content-between">
+    <h2 class="mr-auto display-3">Servers List</h2>
+    <form class="d-flex">
+        <div class="form-group ps-2">
+            <label class="col-form-label" asp-for="SelectedGame" class="control-label">Game:</label>
+            <select class="form-control" asp-for="SelectedGame" asp-items="Model.Games" onchange="this.form.submit();">
+                <option value="">All</option>
+            </select>
+        </div>
+        <div class="form-group ps-2">
+            <label class="col-form-label" asp-for="SelectedServerType" class="control-label">Type:</label>
+            <select class="form-control" asp-for="SelectedServerType" asp-items="Model.ServerTypes" onchange="this.form.submit();">
+                <option value="">All</option>
+            </select>
+        </div>
+        <div class="form-group ps-2">
+            <label class="col-form-label" asp-for="SearchString" class="control-label">Search:</label>
+            <input class="form-control" type="text" asp-for="SearchString" />
+            <input class="form-control" type="submit" value="Search" class="btn btn-primary btn-sm mr-auto" />
+        </div>
+        <div class="form-group ps-2">
+            <label class="col-form-label" asp-for="SortField" class="control-label">Sort by:</label>
+            <select class="form-control" asp-for="SortField" onchange="this.form.submit();">
+                <option value="Game">Game</option>
+                <option value="Type">Type</option>
+                <option value="Name">Name</option>
+                <option value="Description">Description</option>
+            </select>
+        </div>
+    </form>
+</div>
+
+<div class="container-fluid">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4">
+        @if(Model.Servers != null) {
+            @foreach (Server server in Model.Servers) {
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <h5 class="card-title mb-3">
+                                @if(server.GameID != null) {
+                                    <a asp-page="/Games/Game" asp-route-GameID="@server.GameID">@server.GameID - </a> 
+                                }
+                                @(server.Name ?? "Unnamed Server")
+                            </h5>
+                            <a href="https://www.gametracker.com/server_info/@server.IPAddress/" target="_blank">
+                                <img src="https://cache.gametracker.com/server_info/@server.IPAddress/b_160_400_1_ffffff_c5c5c5_ffffff_000000_0_1_0.png" 
+                                     class="img-fluid" 
+                                     width="160" 
+                                     height="248" 
+                                     alt="@server.Name"
+                                     style="max-width: 160px; height: auto;" />
+                            </a>
+                            @if(!string.IsNullOrEmpty(server.Description)) {
+                                <p class="card-text mt-3">@server.Description</p>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</div>

@@ -1,0 +1,173 @@
+using ASP_site.Models;
+
+namespace ASP_site.Data.Initializers {
+  public static class EngineInitializer {
+    public static Engine[] GetEngines() {
+      return new Engine[] {
+        new Engine {
+          EngineID = "idtech1",
+          Name = "idtech1 (Doom Engine)",
+          Description = "idtech1 is a game engine developed by id Software, first used in the 1993 first-person shooter game Doom.",
+          ParentID = "", Year = 1993
+        },
+        new Engine {
+          EngineID = "idtech2",
+          Name = "idtech2 (Quake 1 Engine)",
+          Description = "idtech2 is a game engine developed by id Software, first used in the 1996 first-person shooter game Quake.",
+          ParentID = "idtech1", Year = 1996
+        },
+        new Engine {
+          EngineID = "idtech3",
+          Name = "idtech3 (Quake 3 Engine)",
+          Description = "idtech3 is a game engine developed by id Software, first used in the 1998 first-person shooter game Quake III Arena.",
+          ParentID = "idtech2", Year = 1998
+        },
+        new Engine {
+          EngineID = "idtech4",
+          Name = "idtech4 (Doom 3 Engine)",
+          Description = "idtech4 is a game engine developed by id Software, first used in the 2004 first-person shooter game Doom 3.",
+          ParentID = "idtech3", Year = 2004
+        },
+        new Engine {
+          EngineID = "idtech5",
+          Name = "idtech5 (Rage Engine)",
+          Description = "idtech5 is a game engine developed by id Software, first used in the 2011 first-person shooter game Rage.",
+          ParentID = "idtech4", Year = 2011
+        },
+        new Engine {
+          EngineID = "idtech6",
+          Name = "idtech6 (Doom 2016 Engine)",
+          Description = "idtech6 is a game engine developed by id Software, first used in the 2016 first-person shooter game Doom 2016.",
+          ParentID = "idtech5", Year = 2016
+        },
+        new Engine {
+          EngineID = "idtech7",
+          Name = "idtech7 (Doom Eternal Engine)",
+          Description = "idtech7 is a game engine developed by id Software, first used in the 2020 first-person shooter game Doom Eternal.",
+          ParentID = "idtech6", Year = 2020
+        },
+        new Engine {
+          EngineID = "idtech8",
+          Name = "idtech8 (Doom Dark Ages Engine)",
+          Description = "idtech8 is a game engine developed by id Software, first used in the 2025 first-person shooter game Doom Dark Ages.",
+          ParentID = "idtech7", Year = 2025
+        },
+        new Engine {
+          EngineID = "goldsrc",
+          Name = "GoldSrc (Half-Life Engine)",
+          Description = "GoldSrc is a game engine developed by Valve Software, first used in the 1998 first-person shooter game Half-Life.",
+          ParentID = "idtech2", Year = 1998
+        },
+        new Engine {
+          EngineID = "source",
+          Name = "Source (Half-Life 2 Engine)",
+          Description = "Source Engine is a game engine developed by Valve Software, first used in the 2004 first-person shooter game Half-Life 2.",
+          ParentID = "goldsrc", Year = 2004
+        },
+        new Engine {
+          EngineID = "source2",
+          Name = "Source 2 (Half-Life: Alyx Engine)",
+          Description = "Source 2 is a game engine developed by Valve Software, first used in Dota 2 in 2015.",
+          ParentID = "source", Year = 2015
+        },
+        new Engine {
+          EngineID = "iw2",
+          Name = "IW 2.0 (Call of Duty 2 Engine)",
+          Description = "IW 2.0 is a game engine developed by Infinity Ward, first used in Call of Duty 2. Based on Quake 3 engine idtech3.",
+          ParentID = "idtech3", Year = 2005
+        },
+        new Engine {
+          EngineID = "iw3",
+          Name = "IW 3.0 (Modern Warfare Engine)",
+          Description = "IW 3.0 is a game engine developed by Infinity Ward, first used in Call of Duty: Modern Warfare.",
+          ParentID = "iw2", Year = 2007
+        },
+        new Engine {
+          EngineID = "iw4",
+          Name = "IW 4.0 (Modern Warfare 2 Engine)",
+          Description = "IW 4.0 is a game engine developed by Infinity Ward, first used in Call of Duty: Modern Warfare 2. Based on IW 3.0.",
+          ParentID = "iw3", Year = 2009
+        },
+        new Engine {
+          EngineID = "iw5",
+          Name = "IW 5.0 (Modern Warfare 3 Engine)",
+          Description = "IW 5.0 is a game engine developed by Infinity Ward, first used in Call of Duty: Modern Warfare 3. Based on IW 4.0.",
+          ParentID = "iw4", Year = 2011
+        },
+        new Engine {
+          EngineID = "iw6",
+          Name = "IW 6.0 (Ghosts Engine)",
+          Description = "IW 6.0 is a game engine developed by Infinity Ward, first used in Call of Duty: Ghosts. Based on IW 5.0.",
+          ParentID = "iw5", Year = 2013
+        },
+        new Engine {
+          EngineID = "iw7",
+          Name = "IW 7.0 (Infinite Warfare Engine)",
+          Description = "IW 7.0 is a game engine developed by Infinity Ward, first used in Call of Duty: Infinite Warfare. Based on IW 6.0.",
+          ParentID = "iw6", Year = 2016
+        },
+        new Engine {
+          EngineID = "iw8",
+          Name = "IW 8.0 (Modern Warfare 2019 Engine)",
+          Description = "IW 8.0 is a game engine developed by Infinity Ward, first used in Call of Duty: Modern Warfare (2019). Based on IW 7.0.",
+          ParentID = "iw7", Year = 2019
+        },
+        new Engine {
+          EngineID = "iw9",
+          Name = "IW 9.0 (Modern Warfare 2 Engine)",
+          Description = "IW 9.0 is a game engine developed by Infinity Ward, first used in Call of Duty: Modern Warfare 2022. Based on IW 8.0.",
+          ParentID = "iw8", Year = 2022
+        },
+        new Engine {
+          EngineID = "treyarch",
+          Name = "Treyarch Engine",
+          Description = "Treyarch Engine is a game engine developed by Treyarch, first used in Call of Duty: World at War. Based on IW 4.0.",
+          ParentID = "iw3", Year = 2008
+        },
+        new Engine {
+          EngineID = "treyarch2",
+          Name = "Treyarch Engine 2.0",
+          Description = "Treyarch Engine 2.0 is a game engine developed by Treyarch, first used in Call of Duty: Black Ops III. Based on Treyarch Engine.",
+          ParentID = "treyarch", Year = 2015
+        },
+        new Engine {
+          EngineID = "sledgehammer",
+          Name = "Sledgehammer Engine",
+          Description = "Sledgehammer Engine is a game engine developed by Sledgehammer Games, first used in Call of Duty: Advanced Warfare."
+                      + " Based on IW 6.0. No longer in use.",
+          ParentID = "iw6", Year = 2014
+        },
+        new Engine {
+          EngineID = "unreal",
+          Name = "Unreal Engine",
+          Description = "Unreal Engine is a game engine developed by Epic Games, first used in Unreal Tournament.",
+          ParentID = "", Year = 1998
+        },
+        new Engine {
+          EngineID = "unreal2",
+          Name = "Unreal Engine 2",
+          Description = "Unreal Engine 2 is a game engine developed by Epic Games, used in Unreal Tournament 2004.",
+          ParentID = "unreal", Year = 2004
+        },
+        new Engine {
+          EngineID = "unreal3",
+          Name = "Unreal Engine 3",
+          Description = "Unreal Engine 3 is a game engine developed by Epic Games, used in Unreal Tournament 3.",
+          ParentID = "unreal2", Year = 2007
+        },
+        new Engine {
+          EngineID = "unreal4",
+          Name = "Unreal Engine 4",
+          Description = "Unreal Engine 4 is a game engine developed by Epic Games for the planned Unreal Tournament remake.",
+          ParentID = "unreal3", Year = 2014
+        },
+        new Engine {
+          EngineID = "unreal5",
+          Name = "Unreal Engine 5",
+          Description = "Unreal Engine 5 is a game engine developed by Epic Games.",
+          ParentID = "unreal4", Year = 2022
+        }
+      };
+    }
+  }
+}

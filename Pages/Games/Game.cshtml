@@ -6,18 +6,21 @@
 }
 <div class="jumbotron p-2">
   <h1 class="display-4">
-    @Model.Game.Name <small class="text-muted">- @Model.Game.Genre - @Model.Game.Year</small>
+    @Model.Game?.Name <small class="text-muted">- @Model.Game?.Genre - @Model.Game?.Year</small>
   </h1>
 </div>
 <hr/>
-<div>@Model.Game.Description</div>
-<hr/>
-@if(Model.Game.EngineID != null)
+@if(Model.Game?.Description != null)
+{
+  <div>@Model.Game.Description</div>
+  <hr/>
+}
+@if(Model.Game?.EngineID != null)
 {
   <div>Engine: <a class="" asp-page="/Engines/Engine" asp-route-EngineID="@Model.Game.EngineID">@Model.Game.EngineID</a></div>
   <hr/>
 }
-@if(Model.Game.ModForGameID != null && Model.Game.ModForGameID != "")
+@if(Model.Game?.ModForGameID != null && Model.Game.ModForGameID != "")
 {
   <div>Mod for: <a class="" asp-page="./Game" asp-route-GameID="@Model.Game.ModForGameID">@Model.Game.ModForGameID</a></div>
   <hr/>
@@ -29,7 +32,26 @@
         <ul>
             @foreach(Link link in Model.GameLinks)
             {
-                <li><a href="@link.Url">@link.Label</a> - @link.Description</li>
+                @if (link.LinkType == LinkType.OfficialDiscord || link.LinkType == LinkType.CommunityDiscord)
+                {
+                    <li>
+                        @link.LinkType: 
+                        <iframe 
+                            src="@link.Url" 
+                            width="350" 
+                            height="500" 
+                            allowtransparency="true" 
+                            frameborder="0"
+                            style="border: none; margin: 10px 0;">
+                        </iframe>
+                        <br/>
+                        <small class="text-muted">@link.Description</small>
+                    </li>
+                }
+                else
+                {
+                    <li>@link.LinkType: <a href="@link.Url">@link.Label</a> - @link.Description</li>
+                }
             }
         </ul>
     </div>
@@ -38,7 +60,7 @@
     <div>No links available.</div>
     <hr/>
 }
-@if(Model.Game.ReleaseDates.Length > 0) 
+@if(Model.Game?.ReleaseDates.Length > 0) 
 {
   <div>
     <h4>Release Dates:</h4>
@@ -46,11 +68,11 @@
       @foreach(ReleaseDate releaseDate in Model.Game.ReleaseDates)
       {
         <li>@ReleaseDate.FormatReleaseType(releaseDate.ReleaseVersion) - @{
-          if (releaseDate.Day != null)
+          if (releaseDate.Day.HasValue && releaseDate.Month.HasValue)
           {
             @($"{System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(releaseDate.Month.Value)} {releaseDate.Day:D2}, {releaseDate.Year}")
           }
-          else if (releaseDate.Month != null)
+          else if (releaseDate.Month.HasValue)
           {
             @($"{System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(releaseDate.Month.Value)} {releaseDate.Year}")
           }
@@ -65,7 +87,7 @@
   <hr/>
 } else { <div>No release dates available.</div>
 <hr/>}
-@if(Model.Game.Mods.Count > 0) 
+@if(Model.Game?.Mods.Count > 0) 
 {
   <div>
     <h4>Mods for this game:</h4>
@@ -78,3 +100,25 @@
   </div>
   <hr/>
 }
+@if(Model.Game?.Servers.Count > 0)
+{
+  <div>
+    <h4>Servers for this game:</h4>
+    <ul>
+      @foreach(Server server in Model.Game.Servers)
+      {
+        <li>
+          <a href="https://www.gametracker.com/server_info/@server.IPAddress/" target="_blank">
+            <img src="https://cache.gametracker.com/server_info/@server.IPAddress/b_350_20_5a6c3e_383f2d_d2e1b5_2e3226.png" 
+              border="0" 
+              width="350" 
+              height="20"
+              alt="@server.Name"/>
+          </a>
+        </li>
+      }
+    </ul>
+  </div>
+  <hr/>
+}
+

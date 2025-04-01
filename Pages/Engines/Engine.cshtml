@@ -2,20 +2,23 @@
 @model ASP_site.Pages.Engines.EnginesModel
 
 @{
-  ViewData["Title"] = Model.Engine.Name;
+  ViewData["Title"] = Model.Engine?.Name ?? "Engine";
 }
 <div class="jumbotron p-2">
   <h1 class="display-4">
-    @Model.Engine.Name - @Model.Engine.Year
+    @Model.Engine?.Name - @Model.Engine?.Year
   </h1>
 </div>
 <hr/>
-<div>@Model.Engine.Description</div>
-<hr/>
+@if(Model.Engine?.Description != null)
+{
+  <div>@Model.Engine.Description</div>
+  <hr/>
+}
 
 <div class="d-flex align-items-center justify-content-center">
   <div class="engine-tree">
-    @if(Model.Engine.ParentID != null && Model.Engine.ParentID != "") {
+    @if(Model.Engine?.ParentID != null && Model.Engine.ParentID != "") {
       <div class="parent-engine text-center mb-3">
         <a class="" asp-page="./Engine" asp-route-EngineID="@Model.Engine.ParentID">@Model.Engine.ParentID</a>
         <div class="tree-line">↓</div>
@@ -23,22 +26,40 @@
     }
     
     <div class="current-engine text-center mb-3 position-relative">
-      <div class="fw-bold">@Model.Engine.Name</div>
-      @if(Model.Engine.Games.Count > 0) {
+      <div class="fw-bold">@Model.Engine?.Name</div>
+      @if(Model.Engine?.Games.Count > 0) {
         <div class="games-list">
-          <div class="mx-2">→</div>
-          <div class="ps-3">
-            @foreach(var game in Model.Engine.Games) {
-              <div class="mb-1">
-                <a asp-page="/Games/Game" asp-route-GameID="@game.GameID">@game.Name - @game.Year</a>
-              </div>
-            }
+          <div class="d-flex align-items-center">
+            <div class="me-2">→</div>
+            <div class="flex-grow-1">
+              @{
+                var maxGamesToShow = 8;
+                var games = Model.Engine.Games.OrderBy(g => g.Year).ToList();
+                var gamesToShow = games.Take(maxGamesToShow);
+              }
+              @foreach(var game in gamesToShow) {
+                <div class="mb-1">
+                  <a asp-page="/Games/Game" asp-route-GameID="@game.GameID">@game.Name - @game.Year</a>
+                </div>
+              }
+              @if(games.Count > maxGamesToShow) {
+                @if(games.Count == maxGamesToShow + 1) {
+                  <div class="mb-1">
+                    <a asp-page="/Games/Game" asp-route-GameID="@games[maxGamesToShow].GameID">@games[maxGamesToShow].Name - @games[maxGamesToShow].Year</a>
+                  </div>
+                } else {
+                  <div class="text-muted">
+                    and @(games.Count - maxGamesToShow) more...
+                  </div>
+                }
+              }
+            </div>
           </div>
         </div>
       }
     </div>
 
-    @if(Model.Engine.Children.Count > 0) {
+    @if(Model.Engine?.Children.Count > 0) {
       <div class="tree-line text-center">↓</div>
       <div class="children-engines text-center">
         @foreach(var child in Model.Engine.Children) {

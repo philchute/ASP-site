@@ -26,7 +26,7 @@ namespace ASP_site.Pages.Engines
     [BindProperty(SupportsGet = true)] public string? SearchString { get; set; }
     [BindProperty(SupportsGet = true)] public string? SelectedEngine { get; set; }
     [BindProperty(SupportsGet = true)] public bool? SelectedState { get; set; }
-    [BindProperty(SupportsGet = true)] public string SortField { get; set; } = "Name";
+    [BindProperty(SupportsGet = true)] public string SortField { get; set; } = "Engine";
 
     public async Task OnGetAsync()
     {
