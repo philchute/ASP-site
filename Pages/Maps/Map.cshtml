@@ -1,0 +1,91 @@
+@page "{id?}"
+@model ASP_site.Pages.Maps.MapModel
+
+@{
+    ViewData["Title"] = Model.Map?.MapID ?? "Map";
+}
+
+<div class="container">
+    <h1>
+        @Model.Map?.MapID
+        @if (Model.Map?.IsCompetitive == true)
+        {
+            <span class="text-muted small">(Competitive Map)</span>
+        }
+    </h1>
+    
+    <div class="row">
+        <div class="col-md-8">
+            <p>@Model.Map?.Description</p>
+        </div>
+    </div>
+
+    @{
+        // Show map-specific links (no GameID) at the top
+        var mapSpecificLinks = Model.MapLinks
+            .Where(l => string.IsNullOrEmpty(l.GameID))
+            .OrderBy(l => l.LinkType)
+            .ThenBy(l => l.Label)
+            .ToList();
+        if (mapSpecificLinks.Any())
+        {
+            <div class="row mt-4">
+                <div class="col-md-8">
+                    <h2>Map Information</h2>
+                    <ul class="list-unstyled">
+                        @foreach (var link in mapSpecificLinks)
+                        {
+                            <li>@link.LinkType: <a href="@link.Url">@link.Label</a> - @link.Description</li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        }
+
+        // Get all unique GameIDs from links and game info, ordered by year
+        var allGameIDs = Model.Games
+            .Where(g => Model.MapLinks.Any(l => l.GameID == g.GameID) || 
+                       Model.Map?.GameInfo.Any(gi => gi.GameID == g.GameID) == true)
+            .Select(g => g.GameID)
+            .ToList();
+
+        // Show all game versions
+        foreach (var gameID in allGameIDs)
+        {
+            var gameInfo = Model.Map?.GameInfo.FirstOrDefault(g => g.GameID == gameID);
+            var gameLinks = Model.MapLinks
+                .Where(l => l.GameID == gameID && l.MapID == Model.Map?.MapID)
+                .OrderBy(l => l.LinkType)
+                .ThenBy(l => l.Label)
+                .ToList();
+
+            if (gameLinks.Any() || gameInfo != null)
+            {
+                <div class="row mt-4">
+                    <div class="col-md-8">
+                        <h2>
+                            @Model.Games.FirstOrDefault(g => g.GameID == gameID)?.Name
+                            @if (!string.IsNullOrEmpty(gameInfo?.FileName))
+                            {
+                                <span class="text-muted small">(@gameInfo.FileName)</span>
+                            }
+                        </h2>
+                        @if (!string.IsNullOrEmpty(gameInfo?.Author))
+                        {
+                            <p>Author: @gameInfo.Author</p>
+                        }
+                        @if (gameLinks.Any())
+                        {
+                            <ul class="list-unstyled">
+                                @foreach (var link in gameLinks)
+                                {
+                                    <li>@link.LinkType: <a href="@link.Url">@link.Label</a> - @link.Description</li>
+                                }
+                            </ul>
+                        }
+                    </div>
+                </div>
+            }
+        }
+    }
+</div> 

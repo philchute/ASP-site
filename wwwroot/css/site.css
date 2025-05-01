@@ -87,3 +87,10 @@ section.grid a:hover {
   display: flex;
   align-items: center;
 }
+
+.comp-icon,
+.game-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}

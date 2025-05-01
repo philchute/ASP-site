@@ -2,6 +2,25 @@ using ASP_site.Models;
 
 namespace ASP_site.Data.Initializers {
   public static class LinkInitializer {
+    public static Link[] GetSteamLinks(Game game) {
+      return new Link[] {
+        new Link {
+          Url = $"https://store.steampowered.com/app/{game.SteamID}/",
+        Label = "Steam Store Link",
+        LinkType = LinkType.Store,
+        Description = $"{game.Name} on Steam",
+          GameID = game.GameID
+        },
+        new Link {
+          Url = $"https://steamdb.info/app/{game.SteamID}/",
+          Label = "SteamDB Link",
+          LinkType = LinkType.SteamDB,
+          Description = $"{game.Name} on SteamDB",
+          GameID = game.GameID
+        }
+      };
+    }
+    
     public static Link[] GetLinks() {
       return new Link[] {
         // Empty GameID links
@@ -21,10 +40,6 @@ namespace ASP_site.Data.Initializers {
         // AoE4
         new Link { GameID = "AoE4", Label = "Age of Empires 4 Overview", Description = "My overview of Age of Empires 4", 
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=9GTc1nfHehg" },
-
-        // AttackersGoRed
-        new Link { GameID = "AttackersGoRed", Label = "Attackers Go Red", Description = "Me playing Medic on rock2", 
-          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=MxRhBqu5vT4" },
 
         // BattleGrounds
         new Link { GameID = "BattleGrounds", Label = "Battlegrounds", Description = "Me playing Battlegrounds on bg_bridge", 
@@ -83,72 +98,6 @@ namespace ASP_site.Data.Initializers {
         // ColdIce
         new Link { GameID = "ColdIce", Label = "Cold Ice", Description = "Me playing Horde mode on snowcross", 
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=LhspfckRDyU" },
-
-        // CounterStrike
-        new Link { GameID = "CounterStrike", Label = "The Story of CS:GO: The Game That Never Dies", Description = "CS:GO documentary",
-          LinkType = LinkType.Documentary, Url = "https://youtu.be/H8Nv--NOU2k" },
-        new Link { GameID = "CounterStrike", Label = "Legendary Astalis' dev1ce - CSGO frag movie", Description = "One of my favorite CS:GO frag movies",
-          LinkType = LinkType.Gameplay, Url = "https://youtu.be/J_lsx_qc70o" },
-        new Link { GameID = "CounterStrike", Label = "6 year old kid wins CS:GO round", Description = "6 year old kid wins CS:GO round",
-          LinkType = LinkType.Gameplay, Url = "https://youtu.be/3-XekLszoQw" },
-        new Link { GameID = "CounterStrike", Label = "CS:GO - Where Amazing Happens", Description = "CS:GO - Where Amazing Happens",
-          LinkType = LinkType.Gameplay, Url = "https://youtu.be/dXd8JVRn7rY" },
-        new Link { GameID = "CounterStrike", Label = "Let's do this Anubis", Description = "Competitive gameplay on de_anubis", 
-          LinkType = LinkType.Gameplay, Url = "https://youtu.be/rLHM7OWsl0s" },
-        new Link { GameID = "CounterStrike", Label = "CS:GO 2v2 Shortdust", Description = "Me playing 2v2 with Tweety on the old shortdust map", 
-          LinkType = LinkType.Gameplay, Url = "https://youtu.be/E2ZYkwKia5w" },
-        new Link { GameID = "CounterStrike", Label = "New Knife", Description = "Me playing 2v2 with Batman on nuke and the old boat house map", 
-          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=FAYz3AZ9dbM" },
-        new Link { GameID = "CounterStrike", Label = "Dangerzone Hacker", Description = "Me playing Dangerzone vs a hacker", 
-          LinkType = LinkType.Gameplay, Url = "https://youtu.be/9YiGzlBM_WI" },
-        new Link { GameID = "CounterStrike", Label = "Dangerzone Win", Description = "My first Dangerzone win", 
-          LinkType = LinkType.Gameplay, Url = "https://youtu.be/rpvvpJED0DI" },
-        new Link { GameID = "CounterStrike", Label = "Don't Forget to Plant", Description = "Me playing de_mirage 5v5", 
-          LinkType = LinkType.Gameplay, Url = "https://youtu.be/sqTsGzuoa8g" },
-        new Link { GameID = "CounterStrike", Label = "Danger Zone Coaching", Description = "DZ gameplay on blacksite", 
-          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=Uem9eQa3s7o" },
-        new Link { GameID = "CounterStrike", Label = "learning to fly on surf_pantheon", Description = "Surf gameplay on surf_pantheon", 
-          LinkType = LinkType.Gameplay, Url = "https://youtu.be/XEIIc1gFfpw" },
-        new Link { GameID = "CounterStrike", Label = "Counterstrike in 2024", Description = "Gameplay on de_overpass", 
-          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=l7YBgaO3Jcw" },
-        new Link { GameID = "CounterStrike", Label = "CS2 combat surf", Description = "Combat surf gameplay", 
-          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=MewoHsaWHJo" },
-        new Link { GameID = "CounterStrike", Label = "zombie escape", Description = "Zombie escape gameplay on colors", 
-          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=RstiQUX9trw" },
-        new Link { GameID = "CounterStrike", Label = "nuke gameplay", Description = "Gameplay on de_nuke", 
-          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=Odd3PLg8g2U" },
-        new Link { GameID = "CounterStrike", Label = "Arms Race insane game", Description = "Arms Race gameplay on ar_shoots", 
-          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=Rp1jWGpNNJU" },
-        new Link { GameID = "CounterStrike", Label = "CS2 Scancodes", Description = "CS2 Keybind Scancodes guide", 
-          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=6E1FOMlyN-w" },
-        new Link { GameID = "CounterStrike", Label = "new map mills", Description = "CT gameplay on de_mills", 
-          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=Hlo6Ehs6Bbk" },
-        new Link { GameID = "CounterStrike", Label = "new map thera", Description = "T gameplay on de_thera", 
-          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=SUi8FzGwacc" },
-        new Link { GameID = "CounterStrike", Label = "Counter-strike guide", Description = "", 
-          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=3rMQ3YxADaY" },
-
-        // CS16
-        new Link { GameID = "CS16", Label = "Where CS Happens (Where Amazing Happens) by EJA", Description = "Classic CS 1.6 edit",
-          LinkType = LinkType.Gameplay, Url = "https://youtu.be/H4r3EJXo25Q" },
-        new Link { GameID = "CS16", Label = "eoLithic - The Movie", Description = "eoLithic - The Movie",
-          LinkType = LinkType.Gameplay, Url = "https://youtu.be/DQROf32t4yQ" },
-        new Link { GameID = "CS16", Label = "eoLithic - Oslo by Storm", Description = "eoLithic - Oslo by Storm",
-          LinkType = LinkType.Gameplay, Url = "https://youtu.be/REjjTOSzeE4" },
-        new Link { GameID = "CS16", Label = "The Story of Door Stuck", Description = "Door stuck documentary",
-          LinkType = LinkType.Gameplay, Url = "https://youtu.be/cXFBHtaQd40" },
-        new Link { GameID = "CS16", Label = "play-cs", Description = "Me playing gun game on fy_pool_day on play-cs.com", 
-          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=aM1ocjaRXaE" },
-
-        // CSCZ
-        new Link { GameID = "CSCZ", Label = "VNN: The History of Counter-Strike: Condition Zero", Description = "VNN: The History of Counter-Strike: Condition Zero",
-          LinkType = LinkType.Documentary, Url = "https://youtu.be/E7dFt9-aGJQ" },
-        new Link { GameID = "CSCZ", Label = "CS: CZ func_vehicle maps", Description = "Me playing some nipper func_vehicle maps with GSS", 
-          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=EOazC0R_nxk" },
-
-        // CustomTF
-        new Link { GameID = "CustomTF", Label = "QuakeWorld Prozac CustomTF website", Description = "QuakeWorld Prozac CustomTF website",
-          LinkType = LinkType.Official, Url = "http://quake.midioz.com/" },
 
         // Deadlock
         new Link { GameID = "Deadlock", Label = "Deadlock introductory commentary", Description = "My introductory guide to Deadlock", 
@@ -268,69 +217,9 @@ namespace ASP_site.Data.Initializers {
         new Link { GameID = "ET", Label = "How to play ET: Legacy with ET Steam release", Description = "Guide on how to play Enemy Territory: Legacy with the Steam release",
           LinkType = LinkType.Guide, Url = "https://youtu.be/lUxPCx1zbAs" },
 
-        // ETF
-        new Link { GameID = "ETF", Label = "Enemy Territory Fortress Promo - ETF", Description = "Enemy Territory Fortress Promo - ETF",
-          LinkType = LinkType.Trailer, Url = "https://www.youtube.com/watch?v=autxXIr7KOg" },
-        new Link { GameID = "ETF", Label = "Moose & More - ETF Extreme", Description = "Moose & More - ETF Extreme",
-          LinkType = LinkType.Gameplay, Url = "https://youtu.be/ZKlk6REUL70" },
-
-        // FF
-        new Link { GameID = "FF", Label = "Fortress Forever Official Site", Description = "Fortress Forever Official Site",
-          LinkType = LinkType.Official, Url = "https://www.fortress-forever.com" },
-        new Link { GameID = "FF", Label = "Fortress Forever Official Discord", Description = "Fortress Forever Official Discord",
-          LinkType = LinkType.OfficialDiscord, Url = "https://discord.gg/jCphsAE" },
-        new Link { GameID = "FF", Label = "Fortress Forever Official Wiki", Description = "Fortress Forever Official Wiki",
-          LinkType = LinkType.Guide, Url = "http://www.fortress-forever.com/wiki/index.php?title=Main_Page" },
-        new Link { GameID = "FF", Label = "Fortress Forever Fan Site", Description = "Fortress Forever Fan Site and guide",
-          LinkType = LinkType.Community, Url = "https://sites.google.com/view/fortress-forever-fan-page/game" },
-        new Link { GameID = "FF", Label = "FF SDK 2013", Description = "FF SDK 2013", 
-          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=fszh23SzfGw" },
-        new Link { GameID = "FF", Label = "swoop engineer bingo", Description = "My playing engineer on swoop, many kill types in one game", 
-          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=PX1wEY3MMxk" },
-        new Link { GameID = "FF", Label = "Scout phantom", Description = "Me playing scout on ff_phantom", 
-          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=s6AmiHUjpXw" },
-        new Link { GameID = "FF", Label = "the soldier game", Description = "The four soldier defense on ff_tidal_b3", 
-          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=7RXkH-eiwaM" },
-        new Link { GameID = "FF", Label = "demoman full half", Description = "Me playing demoman on ff_nyx", 
-          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=-tB8Y_Cs758" },
-        new Link { GameID = "FF", Label = "destroy demoman chaos", Description = "Me playing demoman on ff_destroy", 
-          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=f8O7dPmuqAI" },
-        new Link { GameID = "FF", Label = "Pitfalls of pitfall - We don't go to pitfall", Description = "Me playing on ff_pitfall", 
-          LinkType = LinkType.Gameplay, Url = "https://youtu.be/1NgpsZpVdLI" },
-        new Link { GameID = "FF", Label = "FF schtop water game", Description = "Engineer/scout full game on ff_schtop", 
-          LinkType = LinkType.Gameplay, Url = "https://youtu.be/X0Ew4xIhMRg" },
-        new Link { GameID = "FF", Label = "TF2 players guide to FF", Description = "All class gameplay on ff_openfire", 
-          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=Cp-cETaiqDY" },
-        new Link { GameID = "FF", Label = "Engineer adventures on mortality", Description = "Me playing engineer on ff_mortality_gz_b1", 
-          LinkType = LinkType.Gameplay, Url = "https://youtu.be/jsqyuPHQfkY" },
-        new Link { GameID = "FF", Label = "Interesting start on catharsis", Description = "Me playing demoman on ff_catharsis_b4", 
-          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=NdgzhbyzspU" },
-        new Link { GameID = "FF", Label = "FF alpha4", Description = "FF alpha4", 
-          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=mbpyssjZLas" },
-        new Link { GameID = "FF", Label = "Fortress Forever 4v4 with commentary", Description = "4v4 gameplay with commentary on ff_destroy", 
-          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=ikYhLU6D2Rk" },
-
         // FLF
         new Link { GameID = "FLF", Label = "Front Line Force gameplay", Description = "Me playing assault on flf_village", 
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=jDLCM4pSQkw" },
-
-        // FortressOne
-        new Link { GameID = "FortressOne", Label = "FortressOne", Description = "FortressOne Official Site",
-          LinkType = LinkType.Official, Url = "https://www.fortressone.org/" },
-        new Link { GameID = "FortressOne", Label = "FortressOne Official Discord", Description = "FortressOne Official Discord",
-          LinkType = LinkType.OfficialDiscord, Url = "https://discord.fortressone.org" },
-        new Link { GameID = "FortressOne", Label = "FortressOne Latest Release", Description = "FortressOne Latest Release",
-          LinkType = LinkType.Download, Url = "https://github.com/FortressOne/windows-installer/releases/latest" },
-        new Link { GameID = "FortressOne", Label = "schtop snoozer stall", Description = "Me playing on ff-schtop", 
-          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=gUqfgc7jS98" },
-        new Link { GameID = "FortressOne", Label = "prelude in phantom", Description = "Me playing on ff-phantom", 
-          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=WwoQJK-gY6Q" },
-        new Link { GameID = "FortressOne", Label = "Spy Attacks on Swoop", Description = "Me playing spy on swoop", 
-          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=SDTcWKMXvGg" },
-        new Link { GameID = "FortressOne", Label = "Weird pyro plays", Description = "Me playing pyro on openfire", 
-          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=2smzY17Hp7E" },
-        new Link { GameID = "FortressOne", Label = "moving the flag out of destroy", Description = "Me playing on ff-destroy", 
-          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=ajTd3L8n6_w" },
 
         // HalfLife
         new Link { GameID = "HalfLife", Label = "Half-Life Fan Trailer", Description = "Half-Life Fan Trailer",
@@ -392,10 +281,6 @@ namespace ASP_site.Data.Initializers {
         new Link { GameID = "LambdaFortress", Label = "Lambda Fortress", Description = "Medic gameplay on hl2:episode 2", 
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=Roa8lmfpR4Q" },
 
-        // MegaTF
-        new Link { GameID = "MegaTF", Label = "Mega Fortress Wiki", Description = "Mega Fortress Wiki",
-          LinkType = LinkType.Guide, Url = "https://wiki.megateamfortress.com/Main_Page" },
-
         // Midair2
         new Link { GameID = "Midair2", Label = "midair 2", Description = "CTF gameplay on crater", 
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=lc269BpmM0I" },
@@ -435,10 +320,6 @@ namespace ASP_site.Data.Initializers {
         // PVK
         new Link { GameID = "PVK", Label = "pirates vikings and knights", Description = "Beserker viking gameplay on helms_deep", 
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=NRfRaGpmcJY" },
-
-        // Q3F
-        new Link { GameID = "Q3F", Label = "Quake 3 Fortress - The Dark Side", Description = "Quake 3 Fortress - The Dark Side",
-          LinkType = LinkType.Gameplay, Url = "https://youtu.be/r1m50MI1WJk" },
 
         // Quake1
         new Link { GameID = "Quake1", Label = "EzQuake", Description = "EzQuake Multiplayer Client",
@@ -546,14 +427,6 @@ namespace ASP_site.Data.Initializers {
         new Link { GameID = "QuakeLive", Label = "Quake Live Trailer", Description = "Quake Live Trailer",
           LinkType = LinkType.Trailer, Url = "https://youtu.be/4aNG7cd7rGM" },
 
-        // QWTF
-        new Link { GameID = "QWTF", Label = "Team Fortress Done Extreme", Description = "Team Fortress Done Extreme",
-          LinkType = LinkType.Gameplay, Url = "https://youtu.be/23bfEouzFxY" },
-        new Link { GameID = "QWTF", Label = "Team Fortress Done Extreme 2", Description = "Team Fortress Done Extreme 2",
-          LinkType = LinkType.Gameplay, Url = "https://youtu.be/gPEkSWj6Jyc" },
-        new Link { GameID = "QWTF", Label = "QWTF - The Redemption", Description = "QWTF - The Redemption",
-          LinkType = LinkType.Gameplay, Url = "https://youtu.be/uepAtTQhyVs" },
-
         // Ricochet
         new Link { GameID = "Ricochet", Label = "Ricochet discord", Description = "Ricochet discord",
           LinkType = LinkType.CommunityDiscord, Url = "https://discord.gg/b2teuWM" },
@@ -567,8 +440,8 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=XYqK1bxGWic" },
         new Link { GameID = "Ricochet", Label = "ricochet random maps 2", Description = "Gameplay on rc_pillars, rc_glupshitto_v2, rc_gss_dust2, rc_deathmatch_extended, rc_snake, and rc_skiz", 
           LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=iXjZ5xNTXcs" },
-        new Link { GameID = "Ricochet", Label = "ricochet dust2 pub", Description = "Gameplay on rc_dust2", 
-          LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=S5_IBXCFGX8" },
+        new Link { GameID = "Ricochet", Label = "ricochet dust2 pub", Description = "Gameplay on rc_dust2",
+          LinkType = LinkType.Highlights, MapID = "dust2", Url = "https://www.youtube.com/watch?v=S5_IBXCFGX8" },
 
         // RTCW
         new Link { GameID = "RTCW", Label = "Steam Sale Sleepers", Description = "Steam Sale Recomendations", 
@@ -577,30 +450,6 @@ namespace ASP_site.Data.Initializers {
         // ScienceAndIndustry
         new Link { GameID = "ScienceAndIndustry", Label = "Science and Industry", Description = "Gameplay on si_deep", 
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=RLS0ilDNsgE" },
-
-        // TF2
-        new Link { GameID = "TF2", Label = "Errant Signal: Social Spaces & Payload Races", Description = "Errant Signal: Social Spaces & Payload Races",
-          LinkType = LinkType.Documentary, Url = "https://youtu.be/-hj1haLcdI0" },
-        new Link { GameID = "TF2", Label = "What happens when overwatch players play TF2", Description = "What happens when overwatch players play TF2",
-          LinkType = LinkType.Gameplay, Url = "https://youtu.be/rGHazA5a0pM" },
-        new Link { GameID = "TF2", Label = "the best competitive game that nobody plays", Description = "the best competitive game that nobody plays",
-          LinkType = LinkType.Documentary, Url = "https://youtu.be/iHtmqtsRi3I" },
-        new Link { GameID = "TF2", Label = "The soul of TF2 in one clip", Description = "The soul of TF2 in one clip",
-          LinkType = LinkType.Gameplay, Url = "https://youtu.be/2hu1bUHL1mc" },
-
-        // TFC
-        new Link { GameID = "TFC", Label = "Nuki's TFC Learning Center", Description = "Nuki's TFC Learning Center",
-          LinkType = LinkType.Guide, Url = "https://sites.google.com/view/nlc-tfc/home" },
-        new Link { GameID = "TFC", Label = "20th Anniversary Retrospective", Description = "20th Anniversary Retrospective",
-          LinkType = LinkType.Documentary, Url = "https://youtu.be/q9nJLfjx7sA" },
-        new Link { GameID = "TFC", Label = "Defrag and vriens TFC Skills movie", Description = "Defrag and vriens TFC Skills movie",
-          LinkType = LinkType.Gameplay, Url = "https://youtu.be/LvTd9JkElNU" },
-        new Link { GameID = "TFC", Label = "Skillout", Description = "Skillout",
-          LinkType = LinkType.Gameplay, Url = "https://youtu.be/kRrjh8yp5yE" },
-        new Link { GameID = "TFC", Label = "Team Spirit", Description = "Team Spirit",
-          LinkType = LinkType.Gameplay, Url = "https://youtu.be/fbXsFZShsSE" },
-        new Link { GameID = "TFC", Label = "Plain", Description = "Plain",
-          LinkType = LinkType.Gameplay, Url = "https://youtu.be/V3Qu_47uUxI" },
 
         // TheFinals
         new Link { GameID = "TheFinals", Label = "the finals playtest", Description = "3v3v3 gameplay on stadium", 
@@ -621,25 +470,6 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=CnNYf6Oc1zw" },
         new Link { GameID = "Tribes3", Label = "Tribes 3 12s", Description = "Mid gameplay on mountain", 
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=o9oP8EwTBeQ" }
-    };
-  }
-
-  public static Link[] GetSteamLinks(Game game) {
-    return new Link[] {
-      new Link {
-        Url = $"https://store.steampowered.com/app/{game.SteamID}/",
-        Label = "Steam Store Link",
-        LinkType = LinkType.Store,
-        Description = $"{game.Name} on Steam",
-        GameID = game.GameID
-      },
-      new Link {
-        Url = $"https://steamdb.info/app/{game.SteamID}/",
-        Label = "SteamDB Link",
-        LinkType = LinkType.SteamDB,
-        Description = $"{game.Name} on SteamDB",
-        GameID = game.GameID
-      }
     };
   }
 }

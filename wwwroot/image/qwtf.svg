@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <!-- Red triangle (pointing down) -->
+  <path fill="#ff1a1a" d="M2 3h20L12 21z"/>
+  <!-- Yellow TF as one shape -->
+  <path fill="#ffcc00" d="M3 4h18v2.5H13v13h-2v-13H3V4zM13 9h4v2h-4z"/>
+</svg> 

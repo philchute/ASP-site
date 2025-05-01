@@ -622,26 +622,6 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "CounterStrike",
-          Name = "Counter-Strike 2",
-          Description = "Counter-Strike: Global Offensive was released in 2012 as a paid title and converted to free to play, then replaced by CS2." + 
-            " Counter-Strike 2 is the latest iteration of the Counter-Strike series, built on the Source 2 engine.",
-          EngineID = "source",
-          Developer = "Valve Software",
-          SteamID = 730,
-          IsFree = true,
-          IsPaid = true,
-          IsOpenSource = false,
-          IsDeveloperMaintained = true,
-          IsCommunityMaintained = false,
-          Genre = Genre.FPS,
-          ReleaseDates = [
-            new ReleaseDate{Year = 2012, Month = 8, Day = 21},
-            new ReleaseDate{Year = 2023, Month = 9, Day = 27, Region = Region.Worldwide, ReleaseVersion = ReleaseVersion.ReRelease},
-            new ReleaseDate{Year = 2025, Region = Region.Worldwide, ReleaseVersion = ReleaseVersion.LatestUpdate}
-          ]
-        },
-        new Game {
           GameID = "CryOfFear",
           Name = "Cry of Fear",
           Description = "A psychological horror game that puts the player in the shoes of Simon, a paraplegic who writes a book for therapy, and in the process faces the inner demons that plague his thoughts. Features a co-op mode.",
@@ -675,6 +655,21 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
+          GameID = "CSX",
+          Name = "Counter-Strike: Xbox",
+          Description = "Counter-Strike was released on Xbox in 2005.",
+          EngineID = "source",
+          Developer = "Valve Software",
+          IsPlayable = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = true,
+          Genre = Genre.FPS,
+          ReleaseDates = [
+            new ReleaseDate{Year = 2005, Month = 11, Day = 15},
+          ]
+        },
+        new Game {
           GameID = "CSCZ",
           Name = "Counter-Strike: Condition Zero",
           Description = "A spin-off of Counter-Strike featuring single-player missions and additional multiplayer content.",
@@ -689,6 +684,56 @@ namespace ASP_site.Data.Initializers {
           Genre = Genre.FPS,
           ReleaseDates = [
             new ReleaseDate{Year = 2004, Month = 3, Day = 23},
+          ]
+        },
+        new Game {
+          GameID = "CSS",
+          Name = "Counter-Strike: Source",
+          Description = "Counter-Strike: Source was released in 2004 as a paid title and converted to free to play, then replaced by CS2.",
+          EngineID = "source",
+          Developer = "Valve Software",
+          IsPlayable = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = true,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          ReleaseDates = [
+            new ReleaseDate{Year = 2004, Month = 11, Day = 18},
+          ]
+        },
+        new Game {
+          GameID = "CSGO",
+          Name = "Counter-Strike: Global Offensive",
+          Description = "Counter-Strike: Global Offensive was released in 2012 as a paid title and converted to free to play, then replaced by CS2.", 
+          EngineID = "source",
+          Developer = "Valve Software",
+          IsPlayable = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = true,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          ReleaseDates = [
+            new ReleaseDate{Year = 2012, Month = 8, Day = 21},
+          ]
+        },
+                new Game {
+          GameID = "CS2",
+          Name = "Counter-Strike 2",
+          Description = "Counter-Strike: Global Offensive was released in 2012 as a paid title and converted to free to play, then replaced by CS2." + 
+            " Counter-Strike 2 is the latest iteration of the Counter-Strike series, built on the Source 2 engine.",
+          EngineID = "source2",
+          Developer = "Valve Software",
+          SteamID = 730,
+          IsFree = true,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = true,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          ReleaseDates = [
+            new ReleaseDate{Year = 2012, Month = 8, Day = 21},
+            new ReleaseDate{Year = 2023, Month = 9, Day = 27, Region = Region.Worldwide, ReleaseVersion = ReleaseVersion.ReRelease},
+            new ReleaseDate{Year = 2025, Region = Region.Worldwide, ReleaseVersion = ReleaseVersion.LatestUpdate}
           ]
         },
         new Game {

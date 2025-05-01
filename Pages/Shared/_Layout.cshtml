@@ -26,6 +26,9 @@
               </a>
             </li>
             <li class="nav-item">
+              <a class="nav-link @(ViewData["ActivePage"]?.ToString() == "Maps" ? "active" : "")" asp-area="" asp-page="/Maps/Index">Maps</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link @(ViewData["ActivePage"]?.ToString() == "Games" ? "active" : "")" asp-area="" asp-page="/Games/Index">Games</a>
             </li>
             <li class="nav-item">

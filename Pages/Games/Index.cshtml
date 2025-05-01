@@ -59,31 +59,40 @@
           }
         </div>
         <div class="p-1 text-center" style="flex:0 0 10%">@(g.EngineID ?? "-")</div>
-        <div class="p-1 text-center" style="flex:0 0 4%">@(g.Genre?.ToString() ?? "-")</div>
+        <div class="p-1 text-center" style="flex:0 0 4%">
+          @if (g.Genre != null)
+          {
+            @if (g.Genre == Genre.FPS) { <img src="~/image/fps.svg" alt="@g.Genre" title="First-Person Shooter" /> }
+            else if (g.Genre == Genre.RTS) { <img src="~/image/rts.svg" alt="@g.Genre" title="Real-Time Strategy" /> }
+            else if (g.Genre == Genre.MOBA) { <img src="~/image/moba.svg" alt="@g.Genre" title="Multiplayer Online Battle Arena" /> }
+            else if (g.Genre == Genre.TBS) { <img src="~/image/tbs.svg" alt="@g.Genre" title="Turn-Based Strategy" /> }
+            else { @g.Genre.ToString() }
+          }
+          else
+          {
+            @("-")
+          }
+        </div>
         <div class="p-1 text-center" style="flex:0 0 15%">
           @if (g.IsOpenSource == true)
           {
-            @("Open Source")
+            <img src="~/image/opensource.svg" alt="Open Source" title="Free Open Source Software" />
             @if (g.IsPaid == true)
             {
-              @(" and Paid")
+              <img src="~/image/paid.svg" alt="Paid" title="Paid Title" />
             }
           }
           else
           {
             @if (g.IsFree == true)
             {
-              @("Free")
-              @if (g.IsPaid == true)
-              {
-                @(" and Paid")
-              }
+              <img src="~/image/free.svg" alt="Free" title="Free to Play" />
             }
-            else if (g.IsPaid == true)
+            @if (g.IsPaid == true)
             {
-              @("Paid")
+              <img src="~/image/paid.svg" alt="Paid" title="Paid Title" />
             }
-            else
+            @if (g.IsFree != true && g.IsPaid != true)
             {
               @("-")
             }
@@ -93,27 +102,22 @@
         <div class="p-1 text-center" style="flex:0 0 17%">
           @if (g.RequiresCommunityPatch)
           {
-            @("Needs Patches")
-          }
-          else if (g.IsDeveloperMaintained == true && g.IsCommunityMaintained == true)
-          {
-            @("Dev and Comm. Maintained")
-          }
-          else if (g.IsDeveloperMaintained == true)
-          {
-            @("Dev Maintained")
-          }
-          else if (g.IsCommunityMaintained == true)
-          {
-            @("Community Maintained")
-          }
-          else if (g.IsDeveloperMaintained == false && g.IsCommunityMaintained == false)
-          {
-            @("No Maintenance")
+            <img src="~/image/patch.svg" alt="Needs Patches" title="Needs Patches" />
           }
           else
           {
-            @("-")
+            @if (g.IsDeveloperMaintained == true)
+            {
+              <img src="~/image/dev.svg" alt="Dev Maintained" title="Developer Maintained" />
+            }
+            @if (g.IsCommunityMaintained == true)
+            {
+              <img src="~/image/comm.svg" alt="Community Maintained" title="Community Maintained" />
+            }
+            @if (g.IsDeveloperMaintained != true && g.IsCommunityMaintained != true)
+            {
+              @("-")
+            }
           }
         </div>
       </a>

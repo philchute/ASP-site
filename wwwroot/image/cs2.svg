@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <!-- Split background -->
+  <rect x="0" y="0" width="12" height="24" fill="#B8860B"/>
+  <rect x="12" y="0" width="12" height="24" fill="#1E3C8C"/>
+  <!-- White stick figure -->
+  <path fill="white" stroke="white" stroke-width="2" d="M12 1a2 2 0 100 4 2 2 0 000-4zM8 7l9-1M17 6l4 1M12 7v6M12 13l-5 10M12 13l4 6"/>
+</svg> 

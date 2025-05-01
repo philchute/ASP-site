@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <!-- Four quarter circles with thick gaps in orange -->
+  <path fill="#ff6600" d="M10.5 10.5L10.5 2A8.5 8.5 0 0 0 2 10.5z"/>
+  <path fill="#ff6600" d="M13.5 10.5L22 10.5A8.5 8.5 0 0 0 13.5 2z"/>
+  <path fill="#ff6600" d="M10.5 13.5L2 13.5A8.5 8.5 0 0 0 10.5 22z"/>
+  <path fill="#ff6600" d="M13.5 13.5L13.5 22A8.5 8.5 0 0 0 22 13.5z"/>
+</svg> 

@@ -30,29 +30,10 @@
     <div>
         <h4>Links:</h4>
         <ul>
-            @foreach(Link link in Model.GameLinks)
-            {
-                @if (link.LinkType == LinkType.OfficialDiscord || link.LinkType == LinkType.CommunityDiscord)
-                {
-                    <li>
-                        @link.LinkType: 
-                        <iframe 
-                            src="@link.Url" 
-                            width="350" 
-                            height="500" 
-                            allowtransparency="true" 
-                            frameborder="0"
-                            style="border: none; margin: 10px 0;">
-                        </iframe>
-                        <br/>
-                        <small class="text-muted">@link.Description</small>
-                    </li>
-                }
-                else
-                {
-                    <li>@link.LinkType: <a href="@link.Url">@link.Label</a> - @link.Description</li>
-                }
-            }
+          @foreach(Link link in Model.GameLinks)
+          {
+            <li>@link.LinkType: <a href="@link.Url">@link.Label</a> - @link.Description</li>
+          }
         </ul>
     </div>
     <hr/>

@@ -4,7 +4,13 @@ using ASP_site.Data.Initializers;
 namespace ASP_site.Data {
   public static class DbInitializer {
     public static void Initialize(GameContext context) {
-      if (context.Games.Any()) { return; }
+      // Clear all tables
+      context.Maps.RemoveRange(context.Maps);
+      context.Links.RemoveRange(context.Links);
+      context.Servers.RemoveRange(context.Servers);
+      context.Games.RemoveRange(context.Games);
+      context.Engines.RemoveRange(context.Engines);
+      context.SaveChanges();
       
       // Initialize engines
       var engines = EngineInitializer.GetEngines();
@@ -30,6 +36,34 @@ namespace ASP_site.Data {
         }
       }
       
+      // Initialize CS maps
+      var csmaps = CSMapInitializer.GetMaps();
+      foreach (var map in csmaps) {
+        try {
+          context.Maps.Add(map);
+          context.Links.Add(CSLinkInitializer.GetWikiLink(map.MapID));
+        }
+        catch (Exception ex) {
+          Console.WriteLine($"Failed to add map {map.MapID}: {ex.Message}");
+        }
+      }
+
+      // Initialize TF maps
+      var tfmaps = TFMapInitializer.GetMaps();
+      foreach (var map in tfmaps) {
+        try {
+          context.Maps.Add(map);
+          // Only add wiki link if the TFC version has Valve Corporation as author
+          var tfcVersion = map.GameInfo.FirstOrDefault(g => g.GameID == "TFC");
+          if (tfcVersion?.Author == "Valve Corporation") {
+            context.Links.Add(TFLinkInitializer.GetWikiLink(map.MapID));
+          }
+        }
+        catch (Exception ex) {
+          Console.WriteLine($"Failed to add map {map.MapID}: {ex.Message}");
+        }
+      }
+      
       // Initialize links
       var links = LinkInitializer.GetLinks();
       foreach (var link in links) {
@@ -49,6 +83,28 @@ namespace ASP_site.Data {
         }
         catch (Exception ex) {
           Console.WriteLine($"Failed to add Steam links for game {game.GameID}: {ex.Message}");
+        }
+      }
+      
+      // Add TF links
+      var tfLinks = TFLinkInitializer.GetLinks();
+      foreach (var link in tfLinks) {
+        try {
+          context.Links.Add(link);
+        }
+        catch (Exception ex) {
+          Console.WriteLine($"Failed to add TF link {link.Url}: {ex.Message}");
+        }
+      }
+      
+      // Add CS links
+      var csLinks = CSLinkInitializer.GetLinks();
+      foreach (var link in csLinks) {
+        try {
+          context.Links.Add(link);
+        }
+        catch (Exception ex) {
+          Console.WriteLine($"Failed to add CS link {link.Url}: {ex.Message}");
         }
       }
       

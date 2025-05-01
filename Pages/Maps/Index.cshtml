@@ -1,0 +1,93 @@
+@page
+@model ASP_site.Pages.Maps.IndexModel
+
+@{
+    ViewData["Title"] = "Maps";
+}
+
+<div class="jumbotron p-2 d-flex justify-content-between">
+    <h2 class="mr-auto display-3">Maps List</h2>
+    <form class="d-flex">
+        <div class="form-group ps-2">
+            <label class="col-form-label" asp-for="GameType" class="control-label">Game:</label>
+            <select class="form-control" asp-for="GameType" onchange="this.form.submit();">
+                <option value="All">All</option>
+                <option value="Counterstrike">Counterstrike</option>
+                <option value="Team Fortress">Team Fortress</option>
+            </select>
+        </div>
+        <div class="form-group ps-2">
+            <label class="col-form-label" asp-for="Competitive" class="control-label">Competitive:</label>
+            <select class="form-control" asp-for="Competitive" onchange="this.form.submit();">
+                <option value="All">All</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+        <div class="form-group ps-2">
+            <label class="col-form-label" asp-for="SearchString" class="control-label">Name:</label>
+            <input class="form-control" type="text" asp-for="SearchString" />
+            <input class="form-control" type="submit" value="Search" class="btn btn-primary btn-sm mr-auto" />
+        </div>
+        <div class="form-group ps-2">
+            <label class="col-form-label" asp-for="SortField" class="control-label">Sort by:</label>
+            <select class="form-control" asp-for="SortField" onchange="this.form.submit();">
+                <option value="Name">Name</option>
+                <option value="Competitive">Competitive</option>
+                <option value="Description">Description</option>
+            </select>
+        </div>
+    </form>
+</div>
+
+<h3 class="mt-4">Counter-Strike Maps</h3>
+<section class="grid">
+    <div class="d-flex bg-dark text-white fw-bold">
+        <div class="p-1 text-center" style="flex:0 0 4%">Comp</div>
+        <div class="p-1" style="flex:0 0 10%">Map Name</div>
+        <div class="p-1 text-center" style="flex:0 0 4%">1.6</div>
+        <div class="p-1 text-center" style="flex:0 0 4%">CS:CZ</div>
+        <div class="p-1 text-center" style="flex:0 0 4%">CS:S</div>
+        <div class="p-1 text-center" style="flex:0 0 4%">CS:GO</div>
+        <div class="p-1 text-center" style="flex:0 0 4%">CS2</div>
+        <div class="p-1" style="flex:1 1 auto">Description</div>
+    </div>
+
+    @foreach (var map in Model.CSMaps) {
+        <a class="d-flex" asp-page="./Map" asp-route-id="@map.MapID">
+            <div class="p-1 text-center" style="flex:0 0 4%">@(map.IsCompetitive ? Html.Raw("<img src=\"/image/star.svg\" alt=\"Competitive\" class=\"comp-icon\" />") : "")</div>
+            <div class="p-1" style="flex:0 0 10%">@map.MapID</div>
+            <div class="p-1 text-center" style="flex:0 0 4%">@(map.GameInfo.Any(g => g.GameID == "CS16") ? Html.Raw("<img src=\"/image/cs16.svg\" alt=\"CS 1.6\" class=\"game-icon\" />") : "")</div>
+            <div class="p-1 text-center" style="flex:0 0 4%">@(map.GameInfo.Any(g => g.GameID == "CSCZ") ? Html.Raw("<img src=\"/image/cscz.svg\" alt=\"CS:CZ\" class=\"game-icon\" />") : "")</div>
+            <div class="p-1 text-center" style="flex:0 0 4%">@(map.GameInfo.Any(g => g.GameID == "CSS") ? Html.Raw("<img src=\"/image/css.svg\" alt=\"CS:Source\" class=\"game-icon\" />") : "")</div>
+            <div class="p-1 text-center" style="flex:0 0 4%">@(map.GameInfo.Any(g => g.GameID == "CSGO") ? Html.Raw("<img src=\"/image/csgo.svg\" alt=\"CS:GO\" class=\"game-icon\" />") : "")</div>
+            <div class="p-1 text-center" style="flex:0 0 4%">@(map.GameInfo.Any(g => g.GameID == "CS2") ? Html.Raw("<img src=\"/image/cs2.svg\" alt=\"CS2\" class=\"game-icon\" />") : "")</div>
+            <div class="p-1" style="flex:1 1 auto">@map.Description</div>
+        </a>
+    }
+</section>
+
+<h3 class="mt-4">Team Fortress Maps</h3>
+<section class="grid">
+    <div class="d-flex bg-dark text-white fw-bold">
+        <div class="p-1 text-center" style="flex:0 0 4%">Comp</div>
+        <div class="p-1" style="flex:0 0 10%">Map Name</div>
+        <div class="p-1 text-center" style="flex:0 0 4%">QWTF</div>
+        <div class="p-1 text-center" style="flex:0 0 4%">TFC</div>
+        <div class="p-1 text-center" style="flex:0 0 4%">FF</div>
+        <div class="p-1 text-center" style="flex:0 0 4%">TF2</div>
+        <div class="p-1" style="flex:1 1 auto">Description</div>
+    </div>
+
+    @foreach (var map in Model.TFMaps) {
+        <a class="d-flex" asp-page="./Map" asp-route-id="@map.MapID">
+            <div class="p-1 text-center" style="flex:0 0 4%">@(map.IsCompetitive ? Html.Raw("<img src=\"/image/star.svg\" alt=\"Competitive\" class=\"comp-icon\" />") : "")</div>
+            <div class="p-1" style="flex:0 0 10%">@map.MapID</div>
+            <div class="p-1 text-center" style="flex:0 0 4%">@(map.GameInfo.Any(g => g.GameID == "QWTF") ? Html.Raw("<img src=\"/image/qwtf.svg\" alt=\"QWTF\" class=\"game-icon\" />") : "")</div>
+            <div class="p-1 text-center" style="flex:0 0 4%">@(map.GameInfo.Any(g => g.GameID == "TFC") ? Html.Raw("<img src=\"/image/tfc.svg\" alt=\"TFC\" class=\"game-icon\" />") : "")</div>
+            <div class="p-1 text-center" style="flex:0 0 4%">@(map.GameInfo.Any(g => g.GameID == "FF") ? Html.Raw("<img src=\"/image/ff.svg\" alt=\"FF\" class=\"game-icon\" />") : "")</div>
+            <div class="p-1 text-center" style="flex:0 0 4%">@(map.GameInfo.Any(g => g.GameID == "TF2") ? Html.Raw("<img src=\"/image/tf2.svg\" alt=\"TF2\" class=\"game-icon\" />") : "")</div>
+            <div class="p-1" style="flex:1 1 auto">@map.Description</div>
+        </a>
+    }
+</section> 

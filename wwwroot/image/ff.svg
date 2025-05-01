@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <rect width="24" height="24" fill="#4d4d4d"/>
+  <!-- Left F -->
+  <path fill="white" d="M6 6h6v2.5H9v3h2.5v2.5H9v4H6V6z"/>
+  <!-- Right F -->
+  <path fill="white" d="M13 6h6v2.5h-3v3h2.5v2.5H16v4h-3V6z"/>
+</svg> 

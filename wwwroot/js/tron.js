@@ -1,8 +1,7 @@
+// Wait for the page to load before running the code
 document.addEventListener('DOMContentLoaded', () => {
+    // Setup menu navigation
     const menuItems = document.querySelectorAll('.menu-item');
-    const container = document.querySelector('.tron-container');
-    
-    // Add click handlers for navigation
     menuItems.forEach(item => {
         item.addEventListener('click', () => {
             const page = item.textContent.toLowerCase();
@@ -10,147 +9,86 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Create trail container
+    // Create container for light trails
+    const container = document.querySelector('.tron-container');
     const trailContainer = document.createElement('div');
     trailContainer.className = 'light-trail-container';
     container.appendChild(trailContainer);
 
-    // Store existing trails and their segments
-    const trails = [];
-    const trailSpacing = 150;
-    const gridSize = 100;
-    const turnChance = 0.08;
-    const moveSpeed = 4;
+    // Trail settings
+    const colors = ['blue', 'orange', 'green', 'purple'];  // Available trail colors
+    const trails = [];  // Store all active trails
+    let currentColorIndex = 0;  // Track which color to use next
 
-    // Available colors for trails
-    const cycleColors = ['blue', 'orange', 'green', 'purple'];
-    let lastColorIndex = -1;
-
-    // Create a new trail segment
-    function createTrailSegment(x, y, width, height, color, isHorizontal) {
+    // Create a single trail segment (either horizontal or vertical)
+    function createSegment(x, y, width, height, color) {
         const segment = document.createElement('div');
-        segment.className = `permanent-trail ${isHorizontal ? 'horizontal' : 'vertical'}`;
-        segment.style.cssText = `
-            left: ${x}px;
-            top: ${y}px;
-            width: ${width}px;
-            height: ${height}px;
-            color: var(--neon-${color});
-            background: var(--neon-${color});
-        `;
+        segment.className = 'permanent-trail';
+        segment.style.left = `${x}px`;
+        segment.style.top = `${y}px`;
+        segment.style.width = `${width}px`;
+        segment.style.height = `${height}px`;
+        segment.style.color = `var(--neon-${color})`;
+        segment.style.background = `var(--neon-${color})`;
         trailContainer.appendChild(segment);
         return segment;
     }
 
-    // Create and animate a light trail
-    function createLightTrail() {
-        const minY = window.innerHeight * 0.1;
-        const maxY = window.innerHeight * 0.9;
-        const y = Math.round((Math.random() * (maxY - minY) + minY) / gridSize) * gridSize;
+    // Create and animate a complete trail
+    function createTrail() {
+        // Start trail at random height in the middle 80% of the screen
+        const y = Math.floor(Math.random() * (window.innerHeight * 0.8) + window.innerHeight * 0.1);
+        const color = colors[currentColorIndex];
+        currentColorIndex = (currentColorIndex + 1) % colors.length;
 
-        // Cycle through colors
-        lastColorIndex = (lastColorIndex + 1) % cycleColors.length;
-        const color = cycleColors[lastColorIndex];
+        let x = -100;  // Start off-screen to the left
+        let segments = [];  // Store all segments of this trail
+        let lastTurnX = -Infinity;  // Track where the last turn happened
 
-        let currentX = -100;
-        let currentY = y;
-        let currentSegment = null;
-        let segmentStartX = currentX;
-        let segmentStartY = currentY;
-        let lastTurnX = -Infinity;
-
-        const trail = {
-            color,
-            currentX,
-            currentY,
-            segments: []
-        };
-        trails.push(trail);
-
-        function updateTrail() {
-            if (currentX > window.innerWidth + 100) {
+        // Update trail position and create new segments
+        function update() {
+            // Remove trail if it goes off-screen to the right
+            if (x > window.innerWidth + 100) {
                 setTimeout(() => {
-                    trail.segments.forEach(segment => segment.remove());
-                    const index = trails.indexOf(trail);
+                    segments.forEach(segment => segment.remove());
+                    const index = trails.indexOf(segments);
                     if (index > -1) trails.splice(index, 1);
-                }, 4000);
+                }, 15000);  // Keep trail visible for 15 seconds after it finishes
                 return;
             }
 
-            const minDistanceBetweenTurns = window.innerWidth / 4;
-            const canTurn = currentX - lastTurnX >= minDistanceBetweenTurns;
-
-            if (canTurn && Math.random() < turnChance && currentSegment) {
-                const width = currentX - segmentStartX;
-                currentSegment.style.width = `${width}px`;
-
-                const direction = currentY > window.innerHeight / 2 ? -1 : 1;
-                const verticalDistance = gridSize * 2;
-
-                const verticalSegment = createTrailSegment(
-                    currentX,
-                    direction === 1 ? currentY : currentY - verticalDistance,
-                    3,
-                    verticalDistance,
-                    color,
-                    false
-                );
-                trail.segments.push(verticalSegment);
-
-                currentY += direction * verticalDistance;
-                lastTurnX = currentX;
-
-                segmentStartX = currentX;
-                segmentStartY = currentY;
-                currentSegment = createTrailSegment(
-                    segmentStartX,
-                    segmentStartY,
-                    0,
-                    3,
-                    color,
-                    true
-                );
-                trail.segments.push(currentSegment);
-            } else if (!currentSegment) {
-                currentSegment = createTrailSegment(
-                    currentX,
-                    currentY,
-                    0,
-                    3,
-                    color,
-                    true
-                );
-                trail.segments.push(currentSegment);
+            // Randomly turn up or down
+            if (x - lastTurnX > window.innerWidth / 4 && Math.random() < 0.08) {
+                const direction = y > window.innerHeight / 2 ? -1 : 1;  // Turn up if in bottom half, down if in top half
+                const verticalDistance = 200;  // How far to turn
+                
+                // Create vertical segment for the turn
+                const verticalSegment = createSegment(x, y, 3, verticalDistance, color);
+                segments.push(verticalSegment);
+                
+                y += direction * verticalDistance;  // Update y position after turn
+                lastTurnX = x;  // Mark where we turned
             }
 
-            currentX += moveSpeed;
+            // Create horizontal segment
+            const segment = createSegment(x, y, 4, 3, color);
+            segments.push(segment);
 
-            if (currentSegment) {
-                currentSegment.style.width = `${currentX - segmentStartX}px`;
-            }
-
-            trail.currentX = currentX;
-            trail.currentY = currentY;
-
-            requestAnimationFrame(updateTrail);
+            x += 4;  // Move trail forward
+            requestAnimationFrame(update);  // Continue animation
         }
 
-        requestAnimationFrame(updateTrail);
+        trails.push(segments);
+        requestAnimationFrame(update);
     }
 
-    // Create light trails periodically
-    function scheduleNextTrail() {
-        const minDelay = 8000;
-        const maxDelay = 12000;
-        const delay = Math.random() * (maxDelay - minDelay) + minDelay;
-        
-        setTimeout(() => {
-            createLightTrail();
-            scheduleNextTrail();
-        }, delay);
+    // Start creating trails with random delays
+    function startTrails() {
+        createTrail();
+        // Create next trail after 8-12 seconds
+        setTimeout(startTrails, Math.random() * 4000 + 8000);
     }
 
-    // Start creating trails
-    createLightTrail();
-    scheduleNextTrail();
-}); 
+    // Start the first trail
+    startTrails();
+});

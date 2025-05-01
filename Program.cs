@@ -1,30 +1,54 @@
+using Microsoft.EntityFrameworkCore;
 using ASP_site.Data;
+using ASP_site.Data.Initializers;
 
-namespace Games
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddRazorPages();
+
+// Add in-memory database
+builder.Services.AddDbContext<GameContext>(options =>
+    options.UseInMemoryDatabase("GameDb"));
+
+// Add session support
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
 {
-  public class Program
-  {
-    public static void Main(string[] args)
-    {
-    var host = CreateHostBuilder(args).Build();
-    CreateDbIfNotExists(host);
-    host.Run();
-    }
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
 
-    // call the initializer to populate the database
-    private static void CreateDbIfNotExists(IHost host)
-    {
-    using var scope = host.Services.CreateScope();
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Error");
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
+}
+
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+
+app.UseRouting();
+
+app.UseAuthorization();
+
+// Use session middleware
+app.UseSession();
+
+app.MapRazorPages();
+
+// Initialize the database
+using (var scope = app.Services.CreateScope())
+{
     var services = scope.ServiceProvider;
     var context = services.GetRequiredService<GameContext>();
     context.Database.EnsureCreated();
     DbInitializer.Initialize(context);
-    }
-    public static IHostBuilder CreateHostBuilder(string[] args) =>
-      Host.CreateDefaultBuilder(args)
-        .ConfigureWebHostDefaults(webBuilder =>
-        {
-          webBuilder.UseStartup<Startup>();
-        });
-  }
 }
+
+app.Run();
