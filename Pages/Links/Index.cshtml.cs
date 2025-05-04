@@ -39,9 +39,9 @@ namespace ASP_site.Pages.Links
                 .Select(lt => lt.ToString());
             LinkTypes = new SelectList(linkTypesList);
 
-            // Create base query for links, excluding Steam and SteamDB links
+            // Create base query for links, excluding Steam, SteamDB, and Wiki links
             var links = from l in _context.Links
-                       where l.LinkType != LinkType.Store && l.LinkType != LinkType.SteamDB
+                       where l.LinkType != LinkType.Store && l.LinkType != LinkType.SteamDB && l.LinkType != LinkType.Wiki
                        select l;
 
             // Apply search if provided

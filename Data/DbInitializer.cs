@@ -53,10 +53,18 @@ namespace ASP_site.Data {
       foreach (var map in tfmaps) {
         try {
           context.Maps.Add(map);
+          // Add wiki link for TF2 maps
+          if (map.GameInfo.Any(g => g.GameID == "TF2")) {
+            context.Links.Add(TFLinkInitializer.GetWikiLink(map.MapID));
+          }
           // Only add wiki link if the TFC version has Valve Corporation as author
           var tfcVersion = map.GameInfo.FirstOrDefault(g => g.GameID == "TFC");
           if (tfcVersion?.Author == "Valve Corporation") {
-            context.Links.Add(TFLinkInitializer.GetWikiLink(map.MapID));
+            context.Links.Add(TFLinkInitializer.GetWikiLinkClassic(map.MapID));
+          }
+          // Add map repo link for QWTF maps
+          if (map.GameInfo.Any(g => g.GameID == "QWTF")) {
+            context.Links.Add(TFLinkInitializer.GetRepoLink(map.MapID));
           }
         }
         catch (Exception ex) {

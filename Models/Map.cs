@@ -20,10 +20,7 @@ namespace ASP_site.Models
 
         public static List<Link> GetLinks(Map map, List<Link> allLinks)
         {
-            return allLinks.Where(l => 
-                l.MapID == map.MapID && // Must match the map ID
-                (string.IsNullOrEmpty(l.GameID) || map.GameInfo.Any(g => g.GameID == l.GameID)) // Either no GameID or matches a game version
-            ).ToList();
+            return allLinks.Where(l => l.MapID == map.MapID).ToList();
         }
     }
 }

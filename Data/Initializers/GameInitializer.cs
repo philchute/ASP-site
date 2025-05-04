@@ -932,6 +932,21 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
+          GameID = "Eleven",
+          Name = "Eleven",
+          Description = "Eleven is an accurate and competitive table tennis game for VR hardware.",
+          IsFree = true,
+          IsPaid = false,
+          SteamID = 488310,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = true,
+          Genre = Genre.Sports,
+          ReleaseDates = [
+            new ReleaseDate{Year = 2016, Month = 6, Day = 20},
+          ]
+        },
+        new Game {
           GameID = "ESF",
           Name = "Earth's Special Forces",
           Description = "A Dragon Ball Z mod for Half-Life featuring unique combat mechanics.",
@@ -1146,6 +1161,29 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
+          GameID = "HostileIntent",
+          Name = "Hostile Intent",
+          Description = "Hostile Intent is a goldsrc mod featuring tactical round based gameplay similar to Counterstrike with some hardcore mechanics.",
+          ModForGameID = "HalfLife",
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS          
+        },
+        new Game {
+          GameID = "Go",
+          Name = "Go",
+          Description = "Go is a board game for two players.",
+          IsFree = true,
+          IsPaid = false,
+          Genre = Genre.TBS,
+          ReleaseDates = [
+            new ReleaseDate{Year = -548}
+          ]
+        },
+        new Game {
           GameID = "Isonzo",
           Name = "Isonzo",
           Description = "A World War I first-person shooter focusing on the Italian Front.",
@@ -1240,7 +1278,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "MilitaryConflictVietnam",
+          GameID = "MCVietnam",
           Name = "Military Conflict: Vietnam",
           Description = "A first-person shooter set during the Vietnam War.",
           Developer = "Antimatter Games",
@@ -1537,7 +1575,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "ScienceAndIndustry",
+          GameID = "SAndI",
           Name = "Science and Industry",
           Description = "A team-based multiplayer mod in which players take the roles of security guards at two competing research firms. Features a weapons research system.",
           ModForGameID = "HalfLife",
@@ -1545,7 +1583,7 @@ namespace ASP_site.Data.Initializers {
           IsPaid = false,
           IsOpenSource = false,
           IsDeveloperMaintained = false,
-          IsCommunityMaintained = true,
+          IsCommunityMaintained = false,
           Genre = Genre.FPS,
           ReleaseDates = [
             new ReleaseDate{Year = 2002},
@@ -1560,7 +1598,7 @@ namespace ASP_site.Data.Initializers {
           IsPaid = false,
           IsOpenSource = false,
           IsDeveloperMaintained = true,
-          IsCommunityMaintained = false,
+          IsCommunityMaintained = true,
           Genre = Genre.FPS,
           ReleaseDates = [
             new ReleaseDate{Year = 2016, Region = Region.Worldwide, ReleaseVersion = ReleaseVersion.SteamRelease},

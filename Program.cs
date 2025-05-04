@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.InMemory;
 using ASP_site.Data;
 using ASP_site.Data.Initializers;
 
@@ -32,14 +33,9 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseRouting();
-
 app.UseAuthorization();
-
-// Use session middleware
 app.UseSession();
-
 app.MapRazorPages();
 
 // Initialize the database

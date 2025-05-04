@@ -3,6 +3,7 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
+    var version = DateTime.Now.Ticks; // Add cache-busting version
 }
 
 <div class="tron-container">
@@ -22,6 +23,6 @@
 </div>
 
 @section Scripts {
-    <link rel="stylesheet" href="~/css/tron.css" />
-    <script src="~/js/tron.js"></script>
+    <link rel="stylesheet" href="~/css/tron.css?v=@version" />
+    <script src="~/js/tron.js?v=@version"></script>
 }

@@ -28,7 +28,7 @@
         <div class="form-group ps-2">
             <label class="col-form-label" asp-for="SortField" class="control-label">Sort by:</label>
             <select class="form-control" asp-for="SortField" onchange="this.form.submit();">
-                <option value="Game">Game</option>
+                <option value="Game">Game/Map</option>
                 <option value="Type">Type</option>
                 <option value="Label">Label</option>
                 <option value="Description">Description</option>
@@ -39,7 +39,7 @@
 
 <section class="grid">
     <div class="d-flex bg-dark text-white fw-bold">
-        <div class="p-1" style="flex:0 0 10%">Game</div>
+        <div class="p-1" style="flex:0 0 10%">Game/Map</div>
         <div class="p-1" style="flex:0 0 10%">Type</div>
         <div class="p-1" style="flex:0 0 40%">Label</div>
         <div class="p-1" style="flex:0 0 40%">Description</div>
@@ -49,8 +49,10 @@
         @foreach (Link link in Model.Links) {
             <div class="d-flex">
                 <div class="p-1" style="flex:0 0 10%">
-                    @if(link.GameID != null) {
+                    @if(!string.IsNullOrEmpty(link.GameID)) {
                         <a asp-page="/Games/Game" asp-route-GameID="@link.GameID">@link.GameID</a>
+                    } else if (!string.IsNullOrEmpty(link.MapID)) {
+                        <a asp-page="/Maps/Map" asp-route-MapID="@link.MapID">@link.MapID</a>
                     } else {
                         <span>-</span>
                     }

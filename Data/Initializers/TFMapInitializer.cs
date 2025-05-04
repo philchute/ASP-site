@@ -45,7 +45,7 @@ namespace ASP_site.Data.Initializers
         },
         new Map
         {
-          MapID = "2trof_b3",
+          MapID = "2trof",
           IsCompetitive = true,
           Description = "2trof_b3 - Competitive TFC map with 0 MIRV grenades",
           GameInfo = new List<MapGameInfo>
@@ -96,7 +96,7 @@ namespace ASP_site.Data.Initializers
         },
         new Map
         {
-          MapID = "annex_b1",
+          MapID = "annex",
           IsCompetitive = true,
           Description = "annex_b1 - Competitive TFC map with 1 MIRV grenade",
           GameInfo = new List<MapGameInfo>
@@ -162,7 +162,8 @@ namespace ASP_site.Data.Initializers
           Description = "badlands - Capture the Flag map - Desert Canyon setting",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "TFC", FileName = "badlands", Author = "Valve Corporation", Description = "TFC" }
+            new MapGameInfo { GameID = "TFC", FileName = "badlands", Author = "Valve Corporation", Description = "TFC" },
+            new MapGameInfo { GameID = "TF2", FileName = "cp_badlands", Author = "Valve Corporation", Description = "TF2" }
           }
         },
         new Map
@@ -187,6 +188,16 @@ namespace ASP_site.Data.Initializers
         },
         new Map
         {
+          MapID = "bigzag",
+          IsCompetitive = true,
+          Description = "bigzag - Competitive QWTF and FO map",
+          GameInfo = new List<MapGameInfo>
+          {
+            new MapGameInfo { GameID = "QWTF", FileName = "etf-bigzag_b1", Author = "", Description = "QTF" }
+          }
+        },
+        new Map
+        {
           MapID = "bleepbloop",
           IsCompetitive = true,
           Description = "bleepbloop - Fortress Forever map",
@@ -203,6 +214,16 @@ namespace ASP_site.Data.Initializers
           GameInfo = new List<MapGameInfo>
           {
             new MapGameInfo { GameID = "FF", FileName = "ff_blis_2fort", Author = "", Description = "FF" }
+          }
+        },
+        new Map
+        {
+          MapID = "blitzkrieg2",
+          IsCompetitive = true,
+          Description = "blitzkrieg2 - Competitive QWTF and FO map",
+          GameInfo = new List<MapGameInfo>
+          {
+            new MapGameInfo { GameID = "QWTF", FileName = "blitzkrieg2", Author = "", Description = "QTF" }
           }
         },
         new Map
@@ -233,6 +254,46 @@ namespace ASP_site.Data.Initializers
           GameInfo = new List<MapGameInfo>
           {
             new MapGameInfo { GameID = "FF", FileName = "ff_boketto_b1", Author = "", Description = "FF" }
+          }
+        },
+        new Map
+        {
+          MapID = "boot_camp",
+          IsCompetitive = false,
+          Description = "boot_camp - Training map",
+          GameInfo = new List<MapGameInfo>
+          {
+            new MapGameInfo { GameID = "TFC", FileName = "boot_camp", Author = "Valve Corporation", Description = "TFC" }
+          }
+        },
+        new Map
+        {
+          MapID = "bounce",
+          IsCompetitive = false,
+          Description = "bounce - Capture the Flag map",
+          GameInfo = new List<MapGameInfo>
+          {
+            new MapGameInfo { GameID = "TFC", FileName = "bounce", Author = "Valve Corporation", Description = "TFC" }
+          }
+        },
+        new Map
+        {
+          MapID = "canal",
+          IsCompetitive = true,
+          Description = "canal_b7 - Competitive QWTF and FO map",
+          GameInfo = new List<MapGameInfo>
+          {
+            new MapGameInfo { GameID = "QWTF", FileName = "canal_b7", Author = "", Description = "QTF" }
+          }
+        },
+        new Map
+        {
+          MapID = "canalzone",
+          IsCompetitive = false,
+          Description = "canalzone - Command Point map - Industrial setting",
+          GameInfo = new List<MapGameInfo>
+          {
+            new MapGameInfo { GameID = "TFC", FileName = "canalzone", Author = "Valve Corporation", Description = "TFC" }
           }
         },
         new Map
@@ -308,6 +369,27 @@ namespace ASP_site.Data.Initializers
         },
         new Map
         {
+          MapID = "crossfaded2",
+          IsCompetitive = true,
+          Description = "mm_crossfaded2_b3 - Competitive TFC map with 1 MIRV grenade",
+          GameInfo = new List<MapGameInfo>
+          {
+            new MapGameInfo { GameID = "TFC", FileName = "mm_crossfaded2_b3", Author = "", Description = "TFC" },
+            new MapGameInfo { GameID = "TFC", FileName = "mm_crossfaded2_b6", Author = "", Description = "TFC" }
+          }
+        },
+        new Map
+        {
+          MapID = "crossfire",
+          IsCompetitive = false,
+          Description = "crossfire - Capture the Flag map",
+          GameInfo = new List<MapGameInfo>
+          {
+            new MapGameInfo { GameID = "TFC", FileName = "crossfire", Author = "Valve Corporation", Description = "TFC" }
+          }
+        },
+        new Map
+        {
           MapID = "crossover",
           IsCompetitive = true,
           Description = "crossover - Fortress Forever map",
@@ -359,22 +441,44 @@ namespace ASP_site.Data.Initializers
         },
         new Map
         {
-          MapID = "demolish_r",
-          IsCompetitive = true,
-          Description = "demolish_r - Competitive TFC map with 1 MIRV grenade (NO HWGUY)",
+          MapID = "datacore",
+          IsCompetitive = false,
+          Description = "datacore - Capture the Flag map",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "TFC", FileName = "demolish_r", Author = "", Description = "TFC" }
+            new MapGameInfo { GameID = "TFC", FileName = "datacore", Author = "Valve Corporation", Description = "TFC" }
+          }
+        },
+        new Map
+        {
+          MapID = "demolish",
+          IsCompetitive = true,
+          Description = "demolish",
+          GameInfo = new List<MapGameInfo>
+          {
+            new MapGameInfo { GameID = "TFC", FileName = "demolish_r", Author = "", Description = "Competitive TFC map with 1 MIRV grenade (NO HWGUY)" },
+            new MapGameInfo { GameID = "QWTF", FileName = "tfc-demolish_b2", Author = "", Description = "QWTF and FO map" }
           }
         },
         new Map
         {
           MapID = "destroy",
           IsCompetitive = true,
-          Description = "destroy - Fortress Forever map",
+          Description = "destroy - Classic simple donut shaped Fortress Forever map",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "FF", FileName = "ff_destroy", Author = "", Description = "FF" }
+            new MapGameInfo { GameID = "FF", FileName = "ff_destroy", Author = "", Description = "FF" },
+            new MapGameInfo { GameID = "QWTF", FileName = "ff-destroy3", Author = "", Description = "QWTF and FO map" }
+          }
+        },
+        new Map
+        {
+          MapID = "dragongod",
+          IsCompetitive = true,
+          Description = "dragongod - Competitive QWTF and FO map",
+          GameInfo = new List<MapGameInfo>
+          {
+            new MapGameInfo { GameID = "QWTF", FileName = "dragongod", Author = "", Description = "QTF" }
           }
         },
         new Map
@@ -395,12 +499,13 @@ namespace ASP_site.Data.Initializers
           GameInfo = new List<MapGameInfo>
           {
             new MapGameInfo { GameID = "TFC", FileName = "dustbowl", Author = "Valve Corporation", Description = "TFC" },
-            new MapGameInfo { GameID = "FF", FileName = "ff_dustbowl", Author = "", Description = "FF" }
+            new MapGameInfo { GameID = "FF", FileName = "ff_dustbowl", Author = "", Description = "FF" },
+            new MapGameInfo { GameID = "TF2", FileName = "cp_dustbowl", Author = "", Description = "One of the initial 6 maps in TF2" }
           }
         },
         new Map
         {
-          MapID = "elusive_2020_v6",
+          MapID = "elusive",
           IsCompetitive = true,
           Description = "elusive_2020_v6 - Competitive TFC map with 1 MIRV grenade",
           GameInfo = new List<MapGameInfo>
@@ -410,7 +515,7 @@ namespace ASP_site.Data.Initializers
         },
         new Map
         {
-          MapID = "entomb_b10",
+          MapID = "entomb",
           IsCompetitive = true,
           Description = "entomb_b10 - Competitive TFC map with 1 MIRV grenade",
           GameInfo = new List<MapGameInfo>
@@ -489,9 +594,39 @@ namespace ASP_site.Data.Initializers
             new MapGameInfo { GameID = "FF", FileName = "ff_flowb2", Author = "", Description = "FF" }
           }
         },
+                new Map
+        {
+          MapID = "frenzy",
+          IsCompetitive = false,
+          Description = "frenzy - Capture the Flag map",
+          GameInfo = new List<MapGameInfo>
+          {
+            new MapGameInfo { GameID = "TFC", FileName = "frenzy", Author = "Valve Corporation", Description = "TFC" }
+          }
+        },
         new Map
         {
-          MapID = "hammer2_b4",
+          MapID = "gasworks",
+          IsCompetitive = false,
+          Description = "gasworks - Capture the Flag map",
+          GameInfo = new List<MapGameInfo>
+          {
+            new MapGameInfo { GameID = "TFC", FileName = "gasworks", Author = "Valve Corporation", Description = "TFC" }
+          }
+        },
+        new Map
+        {
+          MapID = "h4rdcore",
+          IsCompetitive = true,
+          Description = "h4rdcore - Team Fortress map",
+          GameInfo = new List<MapGameInfo>
+          {
+            new MapGameInfo { GameID = "QWTF", FileName = "h4rdcore_b2", Author = "", Description = "QWTF and FO map" }
+          }
+        },
+        new Map
+        {
+          MapID = "hammer2",
           IsCompetitive = true,
           Description = "hammer2_b4 - Competitive TFC map with 1 MIRV grenade",
           GameInfo = new List<MapGameInfo>
@@ -501,7 +636,7 @@ namespace ASP_site.Data.Initializers
         },
         new Map
         {
-          MapID = "hectic_b3",
+          MapID = "hectic",
           IsCompetitive = true,
           Description = "hectic_b3 - Competitive TFC map with 1 MIRV grenade",
           GameInfo = new List<MapGameInfo>
@@ -564,10 +699,11 @@ namespace ASP_site.Data.Initializers
         {
           MapID = "japanesecastles",
           IsCompetitive = false,
-          Description = "japanesecastles - 3v3 map - can be 4v4 - not on pickup server",
+          Description = "japanese castles",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "FF", FileName = "ff_japanesecastles_b1", Author = "", Description = "FF" }
+            new MapGameInfo { GameID = "FF", FileName = "ff_japanesecastles_b1", Author = "", Description = " 3v3 map - can be 4v4 - not on pickup server" },
+            new MapGameInfo { GameID = "QWTF", FileName = "japanc", Author = "", Description = "QWTF and FO map" }
           }
         },
         new Map
@@ -582,23 +718,33 @@ namespace ASP_site.Data.Initializers
         },
         new Map
         {
-          MapID = "medieval",
-          IsCompetitive = true,
-          Description = "medieval - Fortress Forever map by elmo",
+          MapID = "lambda_bunker",
+          IsCompetitive = false,
+          Description = "lambda_bunker - Capture the Flag map",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "FF", FileName = "ff_medieval_b11", Author = "elmo", Description = "FF" }
+            new MapGameInfo { GameID = "TFC", FileName = "lambda_bunker", Author = "Valve Corporation", Description = "TFC" }
           }
         },
         new Map
         {
-          MapID = "mm_crossfaded2_b3",
+          MapID = "lastresport_b8",
           IsCompetitive = true,
-          Description = "mm_crossfaded2_b3 - Competitive TFC map with 1 MIRV grenade",
+          Description = "lastresport_b8 - Team Fortress map",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "TFC", FileName = "mm_crossfaded2_b3", Author = "", Description = "TFC" },
-            new MapGameInfo { GameID = "TFC", FileName = "mm_crossfaded2_b6", Author = "", Description = "TFC" }
+            new MapGameInfo { GameID = "QWTF", FileName = "lastresport_b8", Author = "", Description = "QWTF and FO map" }
+          }
+        },
+        new Map
+        {
+          MapID = "medieval",
+          IsCompetitive = true,
+          Description = "medieval - Team Fortress map in a medieval setting",
+          GameInfo = new List<MapGameInfo>
+          {
+            new MapGameInfo { GameID = "FF", FileName = "ff_medieval_b11", Author = "elmo", Description = "FF" },
+            new MapGameInfo { GameID = "QWTF", FileName = "ff-medievalr", Author = "", Description = "QWTF and FO map" }
           }
         },
         new Map
@@ -615,11 +761,12 @@ namespace ASP_site.Data.Initializers
         {
           MapID = "mortality",
           IsCompetitive = true,
-          Description = "mortality - Fortress Forever map - can be 3v3 maybe with no top?",
+          Description = "mortality - Classic Team Fortress map",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "FF", FileName = "ff_mortality_gz_b1", Author = "", Description = "FF" },
-            new MapGameInfo { GameID = "TFC", FileName = "mortality_c_b3", Author = "", Description = "Competitive TFC map with 1 MIRV grenade" }
+            new MapGameInfo { GameID = "FF", FileName = "ff_mortality_gz_b1", Author = "", Description = "Fortress Forever map - can be 3v3 maybe with no top?" },
+            new MapGameInfo { GameID = "TFC", FileName = "mortality_c_b3", Author = "", Description = "Competitive TFC map with 1 MIRV grenade" },
+            new MapGameInfo { GameID = "QWTF", FileName = "ff-mortality", Author = "", Description = "QWTF and FO map" }
           }
         },
         new Map
@@ -696,10 +843,13 @@ namespace ASP_site.Data.Initializers
         {
           MapID = "openfire",
           IsCompetitive = false,
-          Description = "openfire - 2v2 map - can be 3v3",
+          Description = "openfire - ",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "FF", FileName = "ff_openfire", Author = "", Description = "FF" }
+            new MapGameInfo { GameID = "FF", FileName = "ff_openfire", Author = "", Description = "2v2 map - can be 3v3" },
+            new MapGameInfo { GameID = "QWTF", FileName = "openfire", Author = "", Description = "QWTF and FO map played 4v4" },
+            new MapGameInfo { GameID = "QWTF", FileName = "propenfire", Author = "", Description = "QWTF and FO map played 4v4" },
+            new MapGameInfo { GameID = "TFC", FileName = "openfire", Author = "", Description = "TFC map" }
           }
         },
         new Map
@@ -724,7 +874,7 @@ namespace ASP_site.Data.Initializers
         },
         new Map
         {
-          MapID = "orbit_tfp",
+          MapID = "orbit",
           IsCompetitive = true,
           Description = "orbit_tfp - Competitive TFC map with 2 MIRV grenades",
           GameInfo = new List<MapGameInfo>
@@ -746,10 +896,21 @@ namespace ASP_site.Data.Initializers
         {
           MapID = "phantom",
           IsCompetitive = true,
-          Description = "phantom - Fortress Forever map",
+          Description = "phantom - Team Fortress map",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "FF", FileName = "ff_phantom_r", Author = "", Description = "FF" }
+            new MapGameInfo { GameID = "FF", FileName = "ff_phantom_r", Author = "", Description = "FF" },
+            new MapGameInfo { GameID = "QWTF", FileName = "ff-phantomr", Author = "", Description = "QWTF and FO map" }
+          }
+        },
+        new Map
+        {
+          MapID = "pineapple",
+          IsCompetitive = true,
+          Description = "pineapple - Team Fortress map",
+          GameInfo = new List<MapGameInfo>
+          {
+            new MapGameInfo { GameID = "QWTF", FileName = "pineapple_b3", Author = "", Description = "QWTF and FO map" }
           }
         },
         new Map
@@ -788,10 +949,11 @@ namespace ASP_site.Data.Initializers
         {
           MapID = "propinquity",
           IsCompetitive = true,
-          Description = "propinquity - Fortress Forever map",
+          Description = "propinquity - Team Fortress map",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "FF", FileName = "ff_propinquity_b4", Author = "", Description = "FF" }
+            new MapGameInfo { GameID = "FF", FileName = "ff_propinquity_b4", Author = "", Description = "FF" },
+            new MapGameInfo { GameID = "QWTF", FileName = "ff-propinquity_b2", Author = "", Description = "QWTF and FO map" }
           }
         },
         new Map
@@ -806,12 +968,13 @@ namespace ASP_site.Data.Initializers
         },
         new Map
         {
-          MapID = "proton_l",
+          MapID = "proton",
           IsCompetitive = true,
-          Description = "proton_l - Competitive TFC map with 1 MIRV grenade",
+          Description = "proton",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "TFC", FileName = "proton_l", Author = "", Description = "TFC" }
+            new MapGameInfo { GameID = "TFC", FileName = "proton_l", Author = "", Description = "Competitive TFC map with 1 MIRV grenade" },
+            new MapGameInfo { GameID = "QWTF", FileName = "proton", Author = "", Description = "QWTF and FO map" }
           }
         },
         new Map
@@ -842,6 +1005,16 @@ namespace ASP_site.Data.Initializers
           GameInfo = new List<MapGameInfo>
           {
             new MapGameInfo { GameID = "FF", FileName = "ff_raiden3_b1", Author = "", Description = "FF" }
+          }
+        },
+        new Map
+        {
+          MapID = "rapidcore",
+          IsCompetitive = false,
+          Description = "rapidcore - Capture the Flag map",
+          GameInfo = new List<MapGameInfo>
+          {
+            new MapGameInfo { GameID = "TFC", FileName = "rapidcore", Author = "Valve Corporation", Description = "TFC" }
           }
         },
         new Map
@@ -928,10 +1101,11 @@ namespace ASP_site.Data.Initializers
         {
           MapID = "schtop",
           IsCompetitive = true,
-          Description = "schtop - Fortress Forever map - can be 3v3",
+          Description = "schtop - Team Fortress map",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "FF", FileName = "ff_schtop", Author = "", Description = "FF" }
+            new MapGameInfo { GameID = "FF", FileName = "ff_schtop", Author = "", Description = "Fortress Forever map - can be 3v3" },
+            new MapGameInfo { GameID = "QWTF", FileName = "ff-schtop", Author = "", Description = "QWTF and FO map" }
           }
         },
         new Map
@@ -956,6 +1130,16 @@ namespace ASP_site.Data.Initializers
         },
         new Map
         {
+          MapID = "shoop",
+          IsCompetitive = true,
+          Description = "shoop - Team Fortress map ",
+          GameInfo = new List<MapGameInfo>
+          {
+            new MapGameInfo { GameID = "QWTF", FileName = "ff-shoop", Author = "Zang[KiN] (original) and Arc (revision)", Description = "QWTF map with updated FF textures" }
+          }
+        },
+        new Map
+        {
           MapID = "shutdown2",
           IsCompetitive = true,
           Description = "shutdown2 - Fortress Forever map",
@@ -976,7 +1160,7 @@ namespace ASP_site.Data.Initializers
         },
         new Map
         {
-          MapID = "siden_lg",
+          MapID = "siden",
           IsCompetitive = true,
           Description = "siden_lg - Competitive TFC map with 2 MIRV grenades",
           GameInfo = new List<MapGameInfo>
@@ -994,9 +1178,28 @@ namespace ASP_site.Data.Initializers
             new MapGameInfo { GameID = "FF", FileName = "ff_siege_classic", Author = "squeek", Description = "FF" }
           }
         },
+        new Map{
+          MapID = "smartbases",
+          IsCompetitive = true,
+          Description = "smartbases - Team Fortress map",
+          GameInfo = new List<MapGameInfo>
+          {
+            new MapGameInfo { GameID = "QWTF", FileName = "fo_smartbases_b2", Author = "", Description = "QWTF and FO map" }
+          }
+        },
         new Map
         {
-          MapID = "spaceape_b13",
+          MapID = "snark_pit",
+          IsCompetitive = false,
+          Description = "snark_pit - Capture the Flag map",
+          GameInfo = new List<MapGameInfo>
+          {
+            new MapGameInfo { GameID = "TFC", FileName = "snark_pit", Author = "Valve Corporation", Description = "TFC" }
+          }
+        },
+        new Map
+        {
+          MapID = "spaceape",
           IsCompetitive = true,
           Description = "spaceape_b13 - Competitive TFC map with 1 MIRV grenade",
           GameInfo = new List<MapGameInfo>
@@ -1006,12 +1209,22 @@ namespace ASP_site.Data.Initializers
         },
         new Map
         {
-          MapID = "speedy_ctf",
-          IsCompetitive = false,
-          Description = "speedy_ctf - Uncategorized map",
+          MapID = "spiderx",
+          IsCompetitive = true,
+          Description = "spiderx - Team Fortress map",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "FF", FileName = "ff_speedy_ctf", Author = "", Description = "FF" }
+            new MapGameInfo { GameID = "QWTF", FileName = "fo-spiderx_b6", Author = "", Description = "QWTF and FO map" }
+          }
+        },
+        new Map
+        {
+          MapID = "stalkyard",
+          IsCompetitive = false,
+          Description = "stalkyard - Capture the Flag map",
+          GameInfo = new List<MapGameInfo>
+          {
+            new MapGameInfo { GameID = "TFC", FileName = "stalkyard", Author = "Valve Corporation", Description = "TFC" }
           }
         },
         new Map
@@ -1047,12 +1260,23 @@ namespace ASP_site.Data.Initializers
         },
         new Map
         {
+          MapID = "subtransit",
+          IsCompetitive = false,
+          Description = "subtransit - Capture the Flag map",
+          GameInfo = new List<MapGameInfo>
+          {
+            new MapGameInfo { GameID = "TFC", FileName = "subtransit", Author = "Valve Corporation", Description = "TFC" }
+          }
+        },
+        new Map
+        {
           MapID = "swoop",
           IsCompetitive = true,
           Description = "swoop - Fortress Forever map",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "FF", FileName = "ff_swoop_b2", Author = "", Description = "FF" }
+            new MapGameInfo { GameID = "FF", FileName = "ff_swoop_b2", Author = "", Description = "FF" },
+            new MapGameInfo { GameID = "QWTF", FileName = "ff-swoop", Author = "", Description = "QWTF and FO map" }
           }
         },
         new Map
@@ -1077,7 +1301,7 @@ namespace ASP_site.Data.Initializers
         },
         new Map
         {
-          MapID = "toasted_b8",
+          MapID = "toasted",
           IsCompetitive = true,
           Description = "toasted_b8 - Competitive TFC map with 1 MIRV grenade",
           GameInfo = new List<MapGameInfo>
@@ -1097,12 +1321,32 @@ namespace ASP_site.Data.Initializers
         },
         new Map
         {
-          MapID = "turbowave_b1",
+          MapID = "turbo",
+          IsCompetitive = true,
+          Description = "turbo",
+          GameInfo = new List<MapGameInfo>
+          {
+            new MapGameInfo { GameID = "QWTF", FileName = "turbo", Author = "", Description = "QWTF and FO map" }
+          }
+        },
+        new Map
+        {
+          MapID = "turbowave",
           IsCompetitive = true,
           Description = "turbowave_b1 - Competitive TFC map with 1 MIRV grenade",
           GameInfo = new List<MapGameInfo>
           {
             new MapGameInfo { GameID = "TFC", FileName = "turbowave_b1", Author = "", Description = "TFC" }
+          }
+        },
+        new Map
+        {
+          MapID = "undertow",
+          IsCompetitive = false,
+          Description = "undertow - Capture the Flag map",
+          GameInfo = new List<MapGameInfo>
+          {
+            new MapGameInfo { GameID = "TFC", FileName = "undertow", Author = "Valve Corporation", Description = "TFC" }
           }
         },
         new Map
@@ -1113,16 +1357,6 @@ namespace ASP_site.Data.Initializers
           GameInfo = new List<MapGameInfo>
           {
             new MapGameInfo { GameID = "FF", FileName = "ff_venganza_b1", Author = "", Description = "FF" }
-          }
-        },
-        new Map
-        {
-          MapID = "verdun_xmas",
-          IsCompetitive = false,
-          Description = "verdun_xmas - Non-competitive map",
-          GameInfo = new List<MapGameInfo>
-          {
-            new MapGameInfo { GameID = "FF", FileName = "ff_verdun_xmas", Author = "", Description = "FF" }
           }
         },
         new Map
@@ -1179,7 +1413,7 @@ namespace ASP_site.Data.Initializers
         },
         new Map
         {
-          MapID = "waterwar_lg",
+          MapID = "waterwar",
           IsCompetitive = true,
           Description = "waterwar_lg - Competitive TFC map with 2 MIRV grenades",
           GameInfo = new List<MapGameInfo>
@@ -1194,8 +1428,11 @@ namespace ASP_site.Data.Initializers
           Description = "well - Capture the Flag map - Industrial setting",
           GameInfo = new List<MapGameInfo>
           {
+            new MapGameInfo { GameID = "QWTF", FileName = "well", Author = "", Description = "QWTF and FO map" },
             new MapGameInfo { GameID = "TFC", FileName = "well", Author = "Valve Corporation", Description = "TFC" },
-            new MapGameInfo { GameID = "FF", FileName = "ff_well", Author = "", Description = "FF" }
+            new MapGameInfo { GameID = "FF", FileName = "ff_well", Author = "", Description = "FF" },
+            new MapGameInfo { GameID = "TF2", FileName = "cp_well", Author = "", Description = "One of the initial 6 maps in TF2" },
+            new MapGameInfo { GameID = "TF2", FileName = "ctf_well", Author = "", Description = "The first official map to be added toTF2" }
           }
         },
         new Map
@@ -1205,7 +1442,8 @@ namespace ASP_site.Data.Initializers
           Description = "xpress - 2v2 map - can be 3v3",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "FF", FileName = "ff_xpress_b1", Author = "", Description = "FF" }
+            new MapGameInfo { GameID = "FF", FileName = "ff_xpress_b1", Author = "", Description = "FF" },
+            new MapGameInfo { GameID = "TFC", FileName = "xpress2k4", Author = "", Description = "TFC" }
           }
         },
         new Map
@@ -1220,132 +1458,12 @@ namespace ASP_site.Data.Initializers
         },
         new Map
         {
-          MapID = "canalzone",
-          IsCompetitive = false,
-          Description = "canalzone - Command Point map - Industrial setting",
+          MapID = "zzr",
+          IsCompetitive = true,
+          Description = "zzr",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "TFC", FileName = "canalzone", Author = "Valve Corporation", Description = "TFC" }
-          }
-        },
-        new Map
-        {
-          MapID = "boot_camp",
-          IsCompetitive = false,
-          Description = "boot_camp - Training map",
-          GameInfo = new List<MapGameInfo>
-          {
-            new MapGameInfo { GameID = "TFC", FileName = "boot_camp", Author = "Valve Corporation", Description = "TFC" }
-          }
-        },
-        new Map
-        {
-          MapID = "bounce",
-          IsCompetitive = false,
-          Description = "bounce - Capture the Flag map",
-          GameInfo = new List<MapGameInfo>
-          {
-            new MapGameInfo { GameID = "TFC", FileName = "bounce", Author = "Valve Corporation", Description = "TFC" }
-          }
-        },
-        new Map
-        {
-          MapID = "crossfire",
-          IsCompetitive = false,
-          Description = "crossfire - Capture the Flag map",
-          GameInfo = new List<MapGameInfo>
-          {
-            new MapGameInfo { GameID = "TFC", FileName = "crossfire", Author = "Valve Corporation", Description = "TFC" }
-          }
-        },
-        new Map
-        {
-          MapID = "datacore",
-          IsCompetitive = false,
-          Description = "datacore - Capture the Flag map",
-          GameInfo = new List<MapGameInfo>
-          {
-            new MapGameInfo { GameID = "TFC", FileName = "datacore", Author = "Valve Corporation", Description = "TFC" }
-          }
-        },
-        new Map
-        {
-          MapID = "frenzy",
-          IsCompetitive = false,
-          Description = "frenzy - Capture the Flag map",
-          GameInfo = new List<MapGameInfo>
-          {
-            new MapGameInfo { GameID = "TFC", FileName = "frenzy", Author = "Valve Corporation", Description = "TFC" }
-          }
-        },
-        new Map
-        {
-          MapID = "gasworks",
-          IsCompetitive = false,
-          Description = "gasworks - Capture the Flag map",
-          GameInfo = new List<MapGameInfo>
-          {
-            new MapGameInfo { GameID = "TFC", FileName = "gasworks", Author = "Valve Corporation", Description = "TFC" }
-          }
-        },
-        new Map
-        {
-          MapID = "lambda_bunker",
-          IsCompetitive = false,
-          Description = "lambda_bunker - Capture the Flag map",
-          GameInfo = new List<MapGameInfo>
-          {
-            new MapGameInfo { GameID = "TFC", FileName = "lambda_bunker", Author = "Valve Corporation", Description = "TFC" }
-          }
-        },
-        new Map
-        {
-          MapID = "rapidcore",
-          IsCompetitive = false,
-          Description = "rapidcore - Capture the Flag map",
-          GameInfo = new List<MapGameInfo>
-          {
-            new MapGameInfo { GameID = "TFC", FileName = "rapidcore", Author = "Valve Corporation", Description = "TFC" }
-          }
-        },
-        new Map
-        {
-          MapID = "snark_pit",
-          IsCompetitive = false,
-          Description = "snark_pit - Capture the Flag map",
-          GameInfo = new List<MapGameInfo>
-          {
-            new MapGameInfo { GameID = "TFC", FileName = "snark_pit", Author = "Valve Corporation", Description = "TFC" }
-          }
-        },
-        new Map
-        {
-          MapID = "stalkyard",
-          IsCompetitive = false,
-          Description = "stalkyard - Capture the Flag map",
-          GameInfo = new List<MapGameInfo>
-          {
-            new MapGameInfo { GameID = "TFC", FileName = "stalkyard", Author = "Valve Corporation", Description = "TFC" }
-          }
-        },
-        new Map
-        {
-          MapID = "subtransit",
-          IsCompetitive = false,
-          Description = "subtransit - Capture the Flag map",
-          GameInfo = new List<MapGameInfo>
-          {
-            new MapGameInfo { GameID = "TFC", FileName = "subtransit", Author = "Valve Corporation", Description = "TFC" }
-          }
-        },
-        new Map
-        {
-          MapID = "undertow",
-          IsCompetitive = false,
-          Description = "undertow - Capture the Flag map",
-          GameInfo = new List<MapGameInfo>
-          {
-            new MapGameInfo { GameID = "TFC", FileName = "undertow", Author = "Valve Corporation", Description = "TFC" }
+            new MapGameInfo { GameID = "QWTF", FileName = "rs_zzr", Author = "", Description = "QWTF and FO map" }
           }
         }
       };

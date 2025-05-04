@@ -13,11 +13,11 @@ namespace ASP_site.Data.Initializers
         {
           MapID = "oilrig",
           IsCompetitive = false,
-          Description = "Oil rig themed map",
+          Description = "One of the original two assassination maps in Counterstrike, Oilrig was released in Counterstrike beta 6.",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CS16", Author = "", Description = "1.6", FileName = "as_oilrig" },
-            new MapGameInfo { GameID = "CSCZ", Author = "", Description = "CSCZ", FileName = "as_oilrig_cz" }
+            new MapGameInfo { GameID = "CS16", Author = "Chris \"MacMan\" Ashton ", Description = "1.6", FileName = "as_oilrig" },
+            new MapGameInfo { GameID = "CSCZ", Author = "Chris \"MacMan\" Ashton ", Description = "CSCZ", FileName = "as_oilrig" }
           }
         },
 
@@ -26,42 +26,44 @@ namespace ASP_site.Data.Initializers
         {
           MapID = "747",
           IsCompetitive = false,
-          Description = "747 airplane themed hostage rescue map",
+          Description = "Small hostage rescue map set inside a 747 airplane",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CS16", Author = "", Description = "1.6", FileName = "cs_747" }
+            new MapGameInfo { GameID = "CS16", Author = "Leon Nieuwoudt, Stephen Superville", Description = "1.6", FileName = "cs_747" },
+            new MapGameInfo { GameID = "CSCZ", Author = "Leon Nieuwoudt, Stephen Superville", Description = "CSCZ", FileName = "cs_747" }
           }
         },
         new Map
         {
           MapID = "agency",
           IsCompetitive = false,
-          Description = "Small hostage rescue map in an office building",
+          Description = "Small hostage rescue map set inside an office building",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CSGO", Author = "", Description = "CS:GO", FileName = "cs_agency" }
+            new MapGameInfo { GameID = "CSGO", Author = "Chris Ashton", Description = "CS:GO", FileName = "cs_agency" }
           }
         },
         new Map
         {
           MapID = "assault",
           IsCompetitive = false,
-          Description = "Classic warehouse themed hostage rescue map",
+          Description = "Classic warehouse themed hostage rescue map first added in Counterstrike beta 1.1",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CS16", Author = "", Description = "1.6", FileName = "cs_assault" },
-            new MapGameInfo { GameID = "CSS", Author = "", Description = "CSS", FileName = "cs_assault" },
-            new MapGameInfo { GameID = "CSGO", Author = "", Description = "CS:GO", FileName = "cs_assault" }
+            new MapGameInfo { GameID = "CS16", Author = "Lari Muuriaisniemi", Description = "1.6", FileName = "cs_assault" },
+            new MapGameInfo { GameID = "CSS", Author = "Jess Cliffe, Valve Corporation", Description = "CSS", FileName = "cs_assault" },
+            new MapGameInfo { GameID = "CSGO", Author = "Hidden Path Entertainment, Valve Corporation", Description = "CS:GO", FileName = "cs_assault" }
           }
         },
         new Map
         {
           MapID = "backalley",
           IsCompetitive = false,
-          Description = "Back alley themed map",
+          Description = "Back alley themed hostage rescue map first added in Counterstrike beta 5",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CS16", Author = "", Description = "1.6", FileName = "cs_backalley" }
+            new MapGameInfo { GameID = "CS16", Author = "Jamie Mactaggart (Barking Dog Studios)", Description = "1.6", FileName = "cs_backalley" },
+            new MapGameInfo { GameID = "CSCZ", Author = "Jamie Mactaggart (Barking Dog Studios)", Description = "CSCZ", FileName = "cs_backalley" }
           }
         },
         new Map

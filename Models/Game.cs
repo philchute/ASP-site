@@ -70,7 +70,7 @@ namespace ASP_site.Models {
     }
   }
 
-  public enum Genre { FPS, RTS, TBS,MOBA }
+  public enum Genre { FPS, RTS, TBS, MOBA, Sports }
   public enum Region { Worldwide, NA, SA, EU, Asia }
   public enum ReleaseVersion { Alpha, Beta, Demo, FullGame, SteamRelease, ReRelease, LatestUpdate }
   
