@@ -1,70 +1,205 @@
 @page
 @model ASP_site.Pages.Servers.IndexModel
+@using ASP_site.GameServerListCommon.Model.A2S
 
-@{
-    ViewData["Title"] = "Servers List";
-}
+@{ ViewData["Title"] = "Servers"; }
 
-<div class="jumbotron p-2 d-flex justify-content-between">
-    <h2 class="mr-auto display-3">Servers List</h2>
-    <form class="d-flex">
-        <div class="form-group ps-2">
-            <label class="col-form-label" asp-for="SelectedGame" class="control-label">Game:</label>
-            <select class="form-control" asp-for="SelectedGame" asp-items="Model.Games" onchange="this.form.submit();">
-                <option value="">All</option>
-            </select>
-        </div>
-        <div class="form-group ps-2">
-            <label class="col-form-label" asp-for="SelectedServerType" class="control-label">Type:</label>
-            <select class="form-control" asp-for="SelectedServerType" asp-items="Model.ServerTypes" onchange="this.form.submit();">
-                <option value="">All</option>
-            </select>
-        </div>
-        <div class="form-group ps-2">
-            <label class="col-form-label" asp-for="SearchString" class="control-label">Search:</label>
-            <input class="form-control" type="text" asp-for="SearchString" />
-            <input class="form-control" type="submit" value="Search" class="btn btn-primary btn-sm mr-auto" />
-        </div>
-        <div class="form-group ps-2">
-            <label class="col-form-label" asp-for="SortField" class="control-label">Sort by:</label>
-            <select class="form-control" asp-for="SortField" onchange="this.form.submit();">
-                <option value="Game">Game</option>
-                <option value="Type">Type</option>
-                <option value="Name">Name</option>
-                <option value="Description">Description</option>
-            </select>
+<div class="container">
+    <h1 class="my-4">Game Server Browser</h1>
+
+    <form method="get">
+        <div class="row g-3 align-items-end mb-3">
+            <div class="col-md-4">
+                <label asp-for="SelectedGameId" class="form-label">Game:</label>
+                <select name="SelectedGameId" class="form-select" asp-for="SelectedGameId" asp-items="@(new SelectList(Model.GamesList, "GameId", "Name"))" onchange="this.form.submit();">
+                    <option value="">-- Select a Game --</option>
+                </select>
+            </div>
+
+            <div class="col-md-2">
+                <label asp-for="SortBy" class="form-label">Sort By:</label>
+                <select asp-for="SortBy" class="form-select" onchange="this.form.submit();">
+                    <option value="players">Players</option>
+                    <option value="name">Name</option>
+                    <option value="map">Map</option>
+                </select>
+            </div>
+
+             <div class="col-md-2">
+                <label asp-for="VacFilter" class="form-label">VAC:</label>
+                <select asp-for="VacFilter" class="form-select" onchange="this.form.submit();">
+                    <option value="all">All</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+             <div class="col-md-2">
+                <label asp-for="PasswordFilter" class="form-label">Password:</label>
+                <select asp-for="PasswordFilter" class="form-select" onchange="this.form.submit();">
+                    <option value="all">All</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+             <div class="col-md-2">
+                <label asp-for="EmptyFilter" class="form-label">Empty:</label>
+                <select asp-for="EmptyFilter" class="form-select" onchange="this.form.submit();">
+                    <option value="yes">Show</option> @* Default is now show empty *@
+                    <option value="no">Hide</option>
+                </select>
+            </div>
+
         </div>
     </form>
+
+    @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+    {
+        <div class="alert alert-danger" role="alert">
+            @Model.ErrorMessage
+        </div>
+    }
+
+    @if (Model.IsLoading)
+    {
+        <div class="d-flex justify-content-center my-4">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <span class="ms-2">Loading server list for @Model.SelectedGame?.Name...</span>
+        </div>
+    }
+    else if (Model.SelectedGame != null && Model.ServerList != null)
+    {
+        <h2 class="my-4">Servers for @Model.SelectedGame.Name (@Model.ServerList.Count found)</h2>
+
+        @if (!Model.ServerList.Any())
+        {
+            <p>No servers found for this game at the moment.</p>
+        }
+        else
+        {
+            <div class="table-responsive">
+                <table class="table table-striped table-hover table-sm site-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Map</th>
+                            <th>Players</th>
+                            <th class="text-center">OS</th>
+                            <th class="text-center">Type</th>
+                            <th class="text-center">VAC</th>
+                            <th class="text-center">PW</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var server in Model.ServerList)
+                        {
+                            var ipPort = $"{server.Address}:{server.Port}";
+                            var connectString = $"connect {ipPort}";
+                            <tr class="server-row" title="@ipPort (click to copy)" data-ip-port="@ipPort" style="cursor: pointer;">
+                                <td>@server.Name</td>
+                                <td>@server.Map</td>
+                                <td>@server.PlayersStr</td>
+                                <td class="text-center">
+                                    @switch (server.Environment)
+                                    {
+                                        case ASP_site.GameServerListCommon.Model.A2S.Environment.Linux:
+                                            <span title="Linux">L</span>
+                                            break;
+                                        case ASP_site.GameServerListCommon.Model.A2S.Environment.Windows:
+                                            <span title="Windows">W</span>
+                                            break;
+                                        case ASP_site.GameServerListCommon.Model.A2S.Environment.Mac:
+                                            <span title="Mac">M</span>
+                                            break;
+                                        default:
+                                            <span>?</span>
+                                            break;
+                                    }
+                                </td>
+                                <td class="text-center">
+                                     @switch (server.ServerType)
+                                    {
+                                        case ASP_site.GameServerListCommon.Model.A2S.ServerType.Dedicated:
+                                            <span title="Dedicated">D</span>
+                                            break;
+                                        case ASP_site.GameServerListCommon.Model.A2S.ServerType.Listen:
+                                            <span title="Listen">L</span>
+                                            break;
+                                        case ASP_site.GameServerListCommon.Model.A2S.ServerType.SourceTV:
+                                             <span title="SourceTV Proxy">P</span>
+                                            break;
+                                        default:
+                                            <span>?</span>
+                                            break;
+                                    }
+                                </td>
+                                <td class="text-center">
+                                    @if (server.RequiresVAC)
+                                    {
+                                        <span title="VAC Secured">Y</span>
+                                    }
+                                    else
+                                    {
+                                        <span title="Not VAC Secured">N</span>
+                                    }
+                                </td>
+                                <td class="text-center">
+                                     @if (server.PasswordProtected)
+                                    {
+                                        <span title="Password Protected">Y</span>
+                                    }
+                                    else
+                                    {
+                                        <span title="No Password">N</span>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+    }
+    else if (Model.SelectedGameId != null && !Model.IsLoading)
+    {
+         <p>Select a game from the list above to view its servers.</p>
+    }
+
 </div>
 
-<div class="container-fluid">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4">
-        @if(Model.Servers != null) {
-            @foreach (Server server in Model.Servers) {
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="card-body text-center">
-                            <h5 class="card-title mb-3">
-                                @if(server.GameID != null) {
-                                    <a asp-page="/Games/Game" asp-route-GameID="@server.GameID">@server.GameID - </a> 
-                                }
-                                @(server.Name ?? "Unnamed Server")
-                            </h5>
-                            <a href="https://www.gametracker.com/server_info/@server.IPAddress/" target="_blank">
-                                <img src="https://cache.gametracker.com/server_info/@server.IPAddress/b_160_400_1_ffffff_c5c5c5_ffffff_000000_0_1_0.png" 
-                                     class="img-fluid" 
-                                     width="160" 
-                                     height="248" 
-                                     alt="@server.Name"
-                                     style="max-width: 160px; height: auto;" />
-                            </a>
-                            @if(!string.IsNullOrEmpty(server.Description)) {
-                                <p class="card-text mt-3">@server.Description</p>
-                            }
-                        </div>
-                    </div>
-                </div>
-            }
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const rows = document.querySelectorAll('.server-row');
+            rows.forEach(row => {
+                row.addEventListener('click', function () {
+                    const ipPortToCopy = this.dataset.ipPort;
+                    const commandToCopy = `connect ${ipPortToCopy}`;
+                    if (commandToCopy) {
+                        navigator.clipboard.writeText(commandToCopy).then(() => {
+                            console.log('Copied command:', commandToCopy);
+                            this.classList.add('copied-feedback');
+                            setTimeout(() => { this.classList.remove('copied-feedback'); }, 500);
+                        }).catch(err => {
+                            console.error('Failed to copy command:', err);
+                            alert('Failed to copy connect command.');
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+    <style>
+        .server-row.copied-feedback td {
+             /* Example subtle feedback */
+            background-color: #e0ffe0 !important; 
+            transition: background-color 0.1s ease-in-out;
         }
-    </div>
-</div>
+    </style>
+}
+
+@* Include Bootstrap Icons CSS if not already included globally *@
+@* <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> *@
