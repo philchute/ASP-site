@@ -1,409 +1,84 @@
 [
-  {
-    "name": "Half-Life",
-    "icon": "img/icons/hl",
-    "gamedir": "valve",
-    "appId": 70
-  },
-  {
-    "name": "Half-Life 2: Deathmatch",
-    "icon": "img/icons/hl2",
-    "appId": 320
-  },
-  {
-    "name": "Master Sword: Rebirth",
-    "icon": "img/icons/msr",
-    "appId": 1961680
-  },
-  {
-    "name": "Master Sword: Continued",
-    "icon": "img/icons/msr",
-    "gamedir": "msc",
-    "appId": 70
-  },
-  {
-    "name": "Cry of Fear",
-    "icon": "img/icons/cof",
-    "appId": 223710
-  },
-  {
-    "name": "Cry of Fear (MOD)",
-    "icon": "img/icons/cof",
-    "gamedir": "cof",
-    "appId": 70
-  },
-  {
-    "name": "Resident Evil: Cold Blood",
-    "icon": "img/icons/recb",
-    "gamedir": "recb",
-    "appId": 70
-  },
-  {
-    "name": "BrainBread",
-    "icon": "img/icons/bb",
-    "gamedir": "brainbread",
-    "appId": 70
-  },
-  {
-    "name": "Battle Grounds",
-    "icon": "img/icons/hl",
-    "gamedir": "bg",
-    "appId": 70
-  },
-  {
-    "name": "Halo: GoldSrc",
-    "icon": "img/icons/halogs",
-    "gamedir": "halogs",
-    "appId": 70
-  },
-  {
-    "name": "Firearms",
-    "icon": "img/icons/hl",
-    "gamedir": "firearms",
-    "appId": 70
-  },
-  {
-    "name": "The Specialists",
-    "icon": "img/icons/hl",
-    "gamedir": "ts",
-    "appId": 70
-  },
-  {
-    "name": "Vampire Slayer",
-    "icon": "img/icons/hl",
-    "gamedir": "vs",
-    "appId": 70
-  },
-  {
-    "name": "Zombie Panic!",
-    "icon": "img/icons/hl",
-    "gamedir": "zp",
-    "appId": 70
-  },
-  {
-    "name": "Gunman Chronicles",
-    "icon": "img/icons/gunman",
-    "gamedir": "rewolf",
-    "appId": 70
-  },
-  {
-    "name": "Earth's Special Forces",
-    "icon": "img/icons/esf",
-    "gamedir": "esf",
-    "appId": 70
-  },
-  {
-    "name": "Natural Selection",
-    "icon": "img/icons/ns",
-    "gamedir": "ns",
-    "appId": 70
-  },
-  {
-    "name": "Wizard Wars",
-    "icon": "img/icons/wizardwars",
-    "gamedir": "wizardwars",
-    "appId": 70
-  },
-  {
-    "name": "Scientist Hunt",
-    "icon": "img/icons/hl",
-    "gamedir": "scihunt",
-    "appId": 70
-  },
-  {
-    "name": "Sven Co-Op",
-    "icon": "img/icons/sven",
-    "appId": 225840
-  },
-  {
-    "name": "Sven Co-Op (CLASSIC)",
-    "icon": "img/icons/sven",
-    "gamedir": "svencoop",
-    "appId": 70
-  },
-  {
-    "name": "Treason",
-    "icon": "img/icons/treason",
-    "appId": 1786950
-  },
-  {
-    "name": "Synergy",
-    "icon": "img/icons/synergy",
-    "gamedir": "synergy",
-    "appId": 17520
-  },
-  {
-    "name": "Insurgency: Modern Infantry Combat",
-    "icon": "img/icons/ins",
-    "appId": 17700,
-    "masterServer": "Source",
-    "noBackgroundService": true
-  },
-  {
-    "name": "Infestus",
-    "icon": "img/icons/infestus",
-    "appId": 656800
-  },
-  {
-    "name": "BrainBread 2",
-    "icon": "img/icons/bb2",
-    "appId": 346330
-  },
-  {
-    "name": "Battle Grounds III",
-    "icon": "img/icons/bg3",
-    "appId": 1057700
-  },
-  {
-    "name": "Age of Chivalry",
-    "icon": "img/icons/aoc",
-    "appId": 17510
-  },
-  {
-    "name": "Action Half-Life: Source",
-    "icon": "img/icons/actionhls",
-    "appId": 977050
-  },
-  {
-    "name": "Black Mesa",
-    "icon": "img/icons/bms",
-    "appId": 362890
-  },
-  {
-    "name": "Garry's Mod",
-    "icon": "img/icons/gmod",
-    "gamedir": "garrysmod",
-    "appId": 4000
-  },
-  {
-    "name": "Golden Eye: Source",
-    "icon": "img/icons/ges",
-    "gamedir": "gesource",
-    "appId": 218
-  },
-  {
-    "name": "Firearms: Source",
-    "icon": "img/icons/fas",
-    "gamedir": "fas",
-    "appId": 218
-  },
-  {
-    "name": "Zombie Master: Reborn",
-    "icon": "img/icons/zmr",
-    "gamedir": "zombie_master_reborn",
-    "appId": 243750
-  },
-  {
-    "name": "Codename CURE",
-    "icon": "img/icons/cure",
-    "appId": 355180
-  },
-  {
-    "name": "Contagion",
-    "icon": "img/icons/contagion",
-    "appId": 238430
-  },
-  {
-    "name": "Dark Messiah of Might & Magic",
-    "icon": "img/icons/messiah",
-    "appId": 2130,
-    "masterServer": "DarkMessiah",
-    "noBackgroundService": true
-  },
-  {
-    "name": "Double Action: Boogaloo",
-    "icon": "img/icons/dab",
-    "appId": 317360
-  },
-  {
-    "name": "Dystopia",
-    "icon": "img/icons/dys",
-    "appId": 17580
-  },
-  {
-    "name": "Eternal Silence",
-    "icon": "img/icons/es",
-    "gamedir": "Eternal-Silence",
-    "appId": 215
-  },
-  {
-    "name": "Fistful of Frags",
-    "icon": "img/icons/fof",
-    "appId": 265630
-  },
-  {
-    "name": "Fortress Forever",
-    "icon": "img/icons/ff",
-    "appId": 253530
-  },
-  {
-    "name": "Jabroni Brawl: Episode 3",
-    "icon": "img/icons/jb3",
-    "appId": 869480
-  },
-  {
-    "name": "JBMod",
-    "icon": "img/icons/jbmod",
-    "appId": 2158860
-  },
-  {
-    "name": "Military Conflict: Vietnam",
-    "icon": "img/icons/mcv",
-    "appId": 1190770
-  },
-  {
-    "name": "Modular Combat",
-    "icon": "img/icons/modcom",
-    "gamedir": "ModularCombat",
-    "appId": 218
-  },
-  {
-    "name": "Neotokyo",
-    "icon": "img/icons/nt",
-    "gamedir": "NeotokyoSource",
-    "appId": 218
-  },
-  {
-    "name": "No More Room in Hell",
-    "icon": "img/icons/nmrih",
-    "appId": 224260
-  },
-  {
-    "name": "Nuclear Dawn",
-    "icon": "img/icons/nd",
-    "appId": 17710
-  },
-  {
-    "name": "Obsidian Conflict",
-    "icon": "img/icons/oc",
-    "appId": 382110
-  },
-  {
-    "name": "Pirates, Vikings, and Knights II",
-    "icon": "img/icons/pvkii",
-    "appId": 17570
-  },
-  {
-    "name": "Source SDK Base 2013 Multiplayer",
-    "icon": "img/icons/sdk",
-    "appId": 243750
-  },
-  {
-    "name": "Source SDK Base 2007",
-    "icon": "img/icons/sdk",
-    "gamedir": "sourcetest",
-    "appId": 218
-  },
-  {
-    "name": "Source SDK Base 2006",
-    "icon": "img/icons/sdk",
-    "gamedir": "hl2mp",
-    "appId": 215
-  },
-  {
-    "name": "Team Fortress Classic",
-    "icon": "img/icons/tfc",
-    "gamedir": "tfc",
-    "appId": 20
-  },
-  {
-    "name": "Team Fortress 2",
-    "icon": "img/icons/tf2",
-    "gamedir": "tf",
-    "appId": 440
-  },
-  {
-    "name": "Zombie Panic! Source",
-    "icon": "img/icons/zps",
-    "appId": 17500
-  },
-  {
-    "name": "Opposing Force",
-    "icon": "img/icons/op4",
-    "gamedir": "gearbox",
-    "appId": 50
-  },
-  {
-    "name": "Counter-Strike",
-    "icon": "img/icons/cs",
-    "gamedir": "cstrike",
-    "appId": 10
-  },
-  {
-    "name": "Condition Zero",
-    "icon": "img/icons/cscz",
-    "gamedir": "czero",
-    "appId": 80
-  },
-  {
-    "name": "Counter-Strike: Source",
-    "icon": "img/icons/css",
-    "gamedir": "cstrike",
-    "appId": 240
-  },
-  {
-    "name": "Day of Defeat",
-    "icon": "img/icons/dod",
-    "gamedir": "dod",
-    "appId": 30
-  },
-  {
-    "name": "Day of Defeat: Source",
-    "icon": "img/icons/dods",
-    "gamedir": "dod",
-    "appId": 300
-  },
-  {
-    "name": "Half-Life 2",
-    "icon": "img/icons/hl2",
-    "gamedir": "hl2",
-    "appId": 220
-  },
-  {
-    "name": "Deathmatch Classic",
-    "icon": "img/icons/dmc",
-    "gamedir": "dmc",
-    "appId": 40
-  },
-  {
-    "name": "Ricochet",
-    "icon": "img/icons/ricochet",
-    "gamedir": "ricochet",
-    "appId": 60
-  },
-  {
-    "name": "Left 4 Dead",
-    "icon": "img/icons/l4d",
-    "gamedir": "left4dead",
-    "appId": 500
-  },
-  {
-    "name": "Left 4 Dead 2",
-    "icon": "img/icons/l4d2",
-    "gamedir": "left4dead2",
-    "appId": 550
-  },
-  {
-    "name": "Half-Life: Adrenaline Gamer",
-    "icon": "img/icons/ag",
-    "gamedir": "ag",
-    "appId": 70
-  },
-  {
-    "name": "Half-Life: Opposing Force CTF",
-    "icon": "img/icons/op4ctf",
-    "gamedir": "OpForCTF",
-    "appId": 70
-  },
-  {
-    "name": "Counter-Strike: Global Offensive",
-    "icon": "img/icons/csgo",
-    "gamedir": "csgo",
-    "appId": 730
-  },
-  {
-    "name": "Counter-Strike 2",
-    "icon": "img/icons/cs2",
-    "appId": 730
-  }
+  { "name": "3 Wave CTF", "icon": "img/icons/hl", "appId": 70, "gamedir": "3wave", "masterServer": "GoldSource" },
+  { "name": "Action Half-Life", "icon": "img/icons/hl", "appId": 70, "gamedir": "action", "masterServer": "GoldSource" },
+  { "name": "Action Half-Life: Source", "icon": "img/icons/actionhls", "appId": 977050 },
+  { "name": "Age of Chivalry", "icon": "img/icons/aoc", "appId": 17510 },
+  { "name": "Battle Grounds", "icon": "img/icons/hl", "appId": 70, "gamedir": "bg", "masterServer": "GoldSource" },
+  { "name": "Battle Grounds III", "icon": "img/icons/bg3", "appId": 1057700 },
+  { "name": "Black Mesa", "icon": "img/icons/bms", "appId": 362890 },
+  { "name": "BrainBread", "icon": "img/icons/bb", "appId": 70, "gamedir": "brainbread", "masterServer": "GoldSource" },
+  { "name": "BrainBread 2", "icon": "img/icons/bb2", "appId": 346330 },
+  { "name": "Bumper Cars", "icon": "img/icons/hl", "appId": 70, "gamedir": "BumperCars", "masterServer": "GoldSource" },
+  { "name": "Codename CURE", "icon": "img/icons/cure", "appId": 355180 },
+  { "name": "Cold Ice Beta 5", "icon": "img/icons/hl", "appId": 70, "gamedir": "ice_beta5", "masterServer": "GoldSource" },
+  { "name": "Condition Zero", "icon": "img/icons/cscz", "appId": 80, "gamedir": "czero" },
+  { "name": "Contagion", "icon": "img/icons/contagion", "appId": 238430 },
+  { "name": "Counter-Strike", "icon": "img/icons/cs", "appId": 10, "gamedir": "cstrike" },
+  { "name": "Counter-Strike 2", "icon": "img/icons/cs2", "appId": 730 },
+  { "name": "Counter-Strike: Global Offensive", "icon": "img/icons/csgo", "appId": 730, "gamedir": "csgo" },
+  { "name": "Counter-Strike: Source", "icon": "img/icons/css", "appId": 240, "gamedir": "cstrike" },
+  { "name": "Cry of Fear", "icon": "img/icons/cof", "appId": 223710 },
+  { "name": "Cry of Fear (MOD)", "icon": "img/icons/cof", "appId": 70, "gamedir": "cof", "masterServer": "GoldSource" },
+  { "name": "Dark Messiah of Might & Magic", "icon": "img/icons/messiah", "appId": 2130, "masterServer": "DarkMessiah", "noBackgroundService": true },
+  { "name": "Day of Defeat", "icon": "img/icons/dod", "appId": 30, "gamedir": "dod" },
+  { "name": "Day of Defeat: Source", "icon": "img/icons/dods", "appId": 300, "gamedir": "dod" },
+  { "name": "Deathmatch Classic", "icon": "img/icons/dmc", "appId": 40, "gamedir": "dmc" },
+  { "name": "Double Action: Boogaloo", "icon": "img/icons/dab", "appId": 317360 },
+  { "name": "Dystopia", "icon": "img/icons/dys", "appId": 17580 },
+  { "name": "Earth's Special Forces", "icon": "img/icons/esf", "appId": 70, "gamedir": "esf", "masterServer": "GoldSource" },
+  { "name": "Eternal Silence", "icon": "img/icons/es", "appId": 215, "gamedir": "Eternal-Silence" },
+  { "name": "Firearms", "icon": "img/icons/hl", "appId": 70, "gamedir": "firearms" },
+  { "name": "Firearms: Source", "icon": "img/icons/fas", "appId": 218, "gamedir": "fas" },
+  { "name": "Fistful of Frags", "icon": "img/icons/fof", "appId": 265630 },
+  { "name": "Fortress Forever", "icon": "img/icons/ff", "appId": 253530 },
+  { "name": "Frontline Force", "icon": "img/icons/hl", "appId": 70, "gamedir": "frontline", "masterServer": "GoldSource" },
+  { "name": "Garry's Mod", "icon": "img/icons/gmod", "appId": 4000, "gamedir": "garrysmod" },
+  { "name": "Golden Eye: Source", "icon": "img/icons/ges", "appId": 218, "gamedir": "gesource" },
+  { "name": "Gunman Chronicles", "icon": "img/icons/gunman", "appId": 70, "gamedir": "rewolf", "masterServer": "GoldSource" },
+  { "name": "Half-Life", "icon": "img/icons/hl", "appId": 70, "gamedir": "valve" },
+  { "name": "Half-Life 2", "icon": "img/icons/hl2", "appId": 220, "gamedir": "hl2" },
+  { "name": "Half-Life 2: Deathmatch", "icon": "img/icons/hl2", "appId": 320 },
+  { "name": "Half-Life: Adrenaline Gamer", "icon": "img/icons/ag", "appId": 70, "gamedir": "ag", "masterServer": "GoldSource" },
+  { "name": "Half-Life: Opposing Force CTF", "icon": "img/icons/op4ctf", "appId": 70, "gamedir": "OpForCTF", "masterServer": "GoldSource" },
+  { "name": "Half-Life: Rally", "icon": "img/icons/hl", "appId": 70, "gamedir": "hlrally", "masterServer": "GoldSource" },
+  { "name": "Halo: GoldSrc", "icon": "img/icons/halogs", "appId": 70, "gamedir": "halogs", "masterServer": "GoldSource" },
+  { "name": "Hostile Intent", "icon": "img/icons/hl", "appId": 70, "gamedir": "hi", "masterServer": "GoldSource" },
+  { "name": "Infestus", "icon": "img/icons/infestus", "appId": 656800 },
+  { "name": "Insurgency: Modern Infantry Combat", "icon": "img/icons/ins", "appId": 17700, "masterServer": "Source", "noBackgroundService": true },
+  { "name": "Jabroni Brawl: Episode 3", "icon": "img/icons/jb3", "appId": 869480 },
+  { "name": "JBMod", "icon": "img/icons/jbmod", "appId": 2158860 },
+  { "name": "Left 4 Dead", "icon": "img/icons/l4d", "appId": 500, "gamedir": "left4dead" },
+  { "name": "Left 4 Dead 2", "icon": "img/icons/l4d2", "appId": 550, "gamedir": "left4dead2" },
+  { "name": "Master Sword: Continued", "icon": "img/icons/msr", "appId": 70, "gamedir": "msc", "masterServer": "GoldSource" },
+  { "name": "Master Sword: Rebirth", "icon": "img/icons/msr", "appId": 1961680 },
+  { "name": "Military Conflict: Vietnam", "icon": "img/icons/mcv", "appId": 1190770 },
+  { "name": "Modular Combat", "icon": "img/icons/modcom", "appId": 218, "gamedir": "ModularCombat" },
+  { "name": "Natural Selection", "icon": "img/icons/ns", "appId": 70, "gamedir": "ns" },
+  { "name": "Neotokyo", "icon": "img/icons/nt", "appId": 218, "gamedir": "NeotokyoSource" },
+  { "name": "No More Room in Hell", "icon": "img/icons/nmrih", "appId": 224260 },
+  { "name": "Nuclear Dawn", "icon": "img/icons/nd", "appId": 17710 },
+  { "name": "Obsidian Conflict", "icon": "img/icons/oc", "appId": 382110 },
+  { "name": "Opposing Force", "icon": "img/icons/op4", "appId": 50, "gamedir": "gearbox" },
+  { "name": "Pirates, Vikings, and Knights", "icon": "img/icons/hl", "appId": 70, "gamedir": "pvk" },
+  { "name": "Pirates, Vikings, and Knights II", "icon": "img/icons/pvkii", "appId": 17570 },
+  { "name": "Resident Evil: Cold Blood", "icon": "img/icons/recb", "appId": 70, "gamedir": "recb" },
+  { "name": "Ricochet", "icon": "img/icons/ricochet", "appId": 60, "gamedir": "ricochet" },
+  { "name": "Science & Industry", "icon": "img/icons/hl", "appId": 70, "gamedir": "si", "masterServer": "GoldSource" },
+  { "name": "Scientist Hunt", "icon": "img/icons/hl", "appId": 70, "gamedir": "scihunt", "masterServer": "GoldSource" },
+  { "name": "Source SDK Base 2006", "icon": "img/icons/sdk", "appId": 215, "gamedir": "hl2mp" },
+  { "name": "Source SDK Base 2007", "icon": "img/icons/sdk", "appId": 218, "gamedir": "sourcetest" },
+  { "name": "Source SDK Base 2013 Multiplayer", "icon": "img/icons/sdk", "appId": 243750 },
+  { "name": "Sven Co-Op", "icon": "img/icons/sven", "appId": 225840 },
+  { "name": "Sven Co-Op (CLASSIC)", "icon": "img/icons/sven", "appId": 70, "gamedir": "svencoop", "masterServer": "GoldSource" },
+  { "name": "Synergy", "icon": "img/icons/synergy", "appId": 17520, "gamedir": "synergy" },
+  { "name": "Team Fortress 2", "icon": "img/icons/tf2", "appId": 440, "gamedir": "tf" },
+  { "name": "Team Fortress Classic", "icon": "img/icons/tfc", "appId": 20, "gamedir": "tfc" },
+  { "name": "The Specialists", "icon": "img/icons/hl", "appId": 70, "gamedir": "ts", "masterServer": "GoldSource" },
+  { "name": "The Trenches", "icon": "img/icons/hl", "appId": 70, "gamedir": "tt", "masterServer": "GoldSource" },
+  { "name": "Treason", "icon": "img/icons/treason", "appId": 1786950 },
+  { "name": "Vampire Slayer", "icon": "img/icons/hl", "appId": 70, "gamedir": "vs" },
+  { "name": "Wizard Wars", "icon": "img/icons/wizardwars", "appId": 70, "gamedir": "wizardwars" },
+  { "name": "Zombie Master: Reborn", "icon": "img/icons/zmr", "appId": 243750, "gamedir": "zombie_master_reborn" },
+  { "name": "Zombie Panic!", "icon": "img/icons/hl", "appId": 70, "gamedir": "zp", "masterServer": "GoldSource" },
+  { "name": "Zombie Panic! Source", "icon": "img/icons/zps", "appId": 17500 }
 ] 

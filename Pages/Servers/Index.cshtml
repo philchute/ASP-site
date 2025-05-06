@@ -6,12 +6,18 @@
 
 <div class="container">
     <h1 class="my-4">Game Server Browser</h1>
+    <p>
+        This was adapted from <a href="https://github.com/BerntA/GameServerBrowser/" target="_blank">https://github.com/BerntA/GameServerBrowser/</a>
+        which was not being hosted. I made this page to supplement the other tools available. 
+        <a href="https://www.gametracker.com/search/cs/">gametracker.com</a> shows many titles but I can add additional third party mods here. 
+        <a href="https://cs2browser.com/">cs2browser.com</a> is a good interface for browsing CS2 servers which allows filtering by game mode.
+    </p>
 
     <form method="get">
         <div class="row g-3 align-items-end mb-3">
             <div class="col-md-4">
-                <label asp-for="SelectedGameId" class="form-label">Game:</label>
-                <select name="SelectedGameId" class="form-select" asp-for="SelectedGameId" asp-items="@(new SelectList(Model.GamesList, "GameId", "Name"))" onchange="this.form.submit();">
+                <label asp-for="SelectedGameIndex" class="form-label">Game:</label>
+                <select name="SelectedGameIndex" class="form-select" asp-for="SelectedGameIndex" asp-items="@(new SelectList(Model.GamesList, "Index", "Name"))" onchange="this.form.submit();">
                     <option value="">-- Select a Game --</option>
                 </select>
             </div>
@@ -163,7 +169,7 @@
             </div>
         }
     }
-    else if (Model.SelectedGameId != null && !Model.IsLoading)
+    else if (Model.SelectedGameIndex != null && !Model.IsLoading)
     {
          <p>Select a game from the list above to view its servers.</p>
     }

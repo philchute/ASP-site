@@ -21,12 +21,16 @@ namespace ASP_site.Data.Initializers
       return new Link[]
       {
         // CS16
+        new Link { GameID = "CS16", Label = "155 Nipper CS 1.6 MAPS", Description = "Cool edit looking at legendary map maker Nipper's works",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=SOh3e58nJGA" },
         new Link { GameID = "CS16", Label = "Where CS Happens (Where Amazing Happens) by EJA", Description = "Classic CS 1.6 edit spoofing an old NBA ad",
           LinkType = LinkType.Highlights, Url = "https://youtu.be/H4r3EJXo25Q" },
         new Link { GameID = "CS16", Label = "eoLithic - The Movie", Description = "One of my favorite classic CS 1.6 highlight videos",
           LinkType = LinkType.Highlights, Url = "https://youtu.be/DQROf32t4yQ" },
         new Link { GameID = "CS16", Label = "eoLithic - Oslo by Storm", Description = "Another favorite highlight video, EoL from CPL Europe Oslo 2002",
           LinkType = LinkType.Highlights, Url = "https://youtu.be/REjjTOSzeE4" },
+        new Link { GameID = "CS16", Label = "aAa's Frag collection 2002", Description = "Classic CS 1.6 frag movie",
+          LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=49mMIAaJsXE" },
         new Link { GameID = "CS16", Label = "The Story of Door Stuck", Description = "A documentary about the infamous Door Stuck clip",
           LinkType = LinkType.Documentary, Url = "https://youtu.be/cXFBHtaQd40" },
         new Link { GameID = "CS16", Label = "play-cs", Description = "Me playing gun game on fy_pool_day on play-cs.com", 
@@ -50,10 +54,18 @@ namespace ASP_site.Data.Initializers
           LinkType = LinkType.Highlights, Url = "https://youtu.be/dXd8JVRn7rY" },
         new Link { GameID = "CSGO", Label = "CS:GO: The stories behind the pro graffitis", Description = "CS:GO documentary about the in-game graffitis",
           LinkType = LinkType.Documentary, Url = "https://www.youtube.com/watch?v=qfWlejm01cE" },
+        new Link { GameID = "CSGO", Label = "Most INSANE CS:GO PLAYS! (Community highlights)", Description = "Community highlights",
+          LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=p_HLyWB5bOo" },
+        new Link { GameID = "CSGO", Label = "This was CS:GO", Description = "CS:GO all time highlights",
+          LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=-jbMt_jpC7A" },
         new Link { GameID = "CSGO", Label = "Thank you CS:GO (Tribute)", Description = "CS:GO tribute video",
           LinkType = LinkType.Documentary, Url = "https://www.youtube.com/watch?v=pXyGBwx4dks" },
         new Link { GameID = "CSGO", Label = "Thank you CS:GO (Tribute) part 2", Description = "CS:GO tribute video part 2",
           LinkType = LinkType.Documentary, Url = "https://www.youtube.com/watch?v=lbMxYLkiKAQ" },
+        new Link { GameID = "CSGO", Label = "Valve employee reveals secrets behind CSGO's economy", Description = "interesting talk about the skins economy",
+          LinkType = LinkType.Documentary, Url = "https://www.youtube.com/watch?v=4odPJMmeNnc" },
+        new Link { GameID = "CSGO", Label = "How CSGO Pros Played 10 Years Ago Is Shocking", Description = "Interesting look at the evolution of top level play in CSGO",
+          LinkType = LinkType.Documentary, Url = "https://www.youtube.com/watch?v=lKFuaOQrobQ" },
         // Gameplay
         new Link { GameID = "CSGO", Label = "Let's do this Anubis", Description = "Me playing competitive gameplay on de_anubis", 
           LinkType = LinkType.Gameplay, MapID = "anubis", Url = "https://youtu.be/rLHM7OWsl0s" },
@@ -69,6 +81,10 @@ namespace ASP_site.Data.Initializers
           LinkType = LinkType.Gameplay, Url = "https://youtu.be/rpvvpJED0DI" },
         new Link { GameID = "CSGO", Label = "Danger Zone Coaching", Description = "DZ gameplay on blacksite", 
           LinkType = LinkType.Gameplay, MapID = "blacksite", Url = "https://www.youtube.com/watch?v=Uem9eQa3s7o" },
+        new Link { GameID = "CSGO", Label = "How 7000+ wins actually WAS playing DANGER ZONE", Description = "Dangerzone highlight movie", 
+          LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=g0eJP3dttdI" },
+        new Link { GameID = "CSGO", Label = "Guide to snurfing in Danger Zone (Rampsliding)", Description = "Guide to snurfing in Danger Zone (Rampsliding)",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=YblZkx7mXFM" },
 
         // CS2
         // General

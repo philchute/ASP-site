@@ -46,7 +46,7 @@ namespace ASP_site.Pages.Servers
 
         // Bind properties for Game Selection, Sorting, and Filtering
         [BindProperty(SupportsGet = true)]
-        public string? SelectedGameId { get; set; }
+        public int? SelectedGameIndex { get; set; }
 
         [BindProperty(SupportsGet = true)]
         public string SortBy { get; set; } = "players"; // Default sort
@@ -75,11 +75,12 @@ namespace ASP_site.Pages.Servers
                 GamesList = _gameDataService.GetGames().OrderBy(g => g.Name).ToList();
                 _logger.LogInformation($"Loaded {GamesList.Count} games for display.");
 
-                if (!string.IsNullOrEmpty(SelectedGameId))
+                // Check if a game index is selected
+                if (SelectedGameIndex.HasValue)
                 {
-                    _logger.LogInformation($"Game ID '{SelectedGameId}' selected. Fetching servers...");
+                    _logger.LogInformation($"Game Index '{SelectedGameIndex.Value}' selected. Fetching servers...");
                     IsLoading = true; // Set loading true before fetch
-                    SelectedGame = _gameDataService.GetGameById(SelectedGameId);
+                    SelectedGame = _gameDataService.GetGameByIndex(SelectedGameIndex.Value);
 
                     if (SelectedGame != null)
                     {
@@ -135,7 +136,7 @@ namespace ASP_site.Pages.Servers
                     else
                     {
                         IsLoading = false; // Also set loading false if game not found
-                        ErrorMessage = $"Selected game ID '{SelectedGameId}' not found.";
+                        ErrorMessage = $"Selected game index '{SelectedGameIndex.Value}' not found or out of range.";
                     }
                 }
             }

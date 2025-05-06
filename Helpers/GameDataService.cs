@@ -122,8 +122,8 @@ public class GameDataService : IGameDataService
     public Game? GetGameById(string gameId)
     {
          EnsureInitialized();
-         // Find by AppId (as string) or Gamedir
-         return _games.FirstOrDefault(g => (g.AppId?.ToString() == gameId) || (g.Gamedir == gameId));
+         // Find by the compound GameId property (e.g., "70:si" or "320")
+         return _games.FirstOrDefault(g => g.GameId == gameId);
     }
 
     private void EnsureInitialized()

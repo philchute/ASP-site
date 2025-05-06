@@ -716,7 +716,7 @@ namespace ASP_site.Data.Initializers {
             new ReleaseDate{Year = 2012, Month = 8, Day = 21},
           ]
         },
-                new Game {
+        new Game {
           GameID = "CS2",
           Name = "Counter-Strike 2",
           Description = "Counter-Strike: Global Offensive was released in 2012 as a paid title and converted to free to play, then replaced by CS2." + 
@@ -731,7 +731,6 @@ namespace ASP_site.Data.Initializers {
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
           ReleaseDates = [
-            new ReleaseDate{Year = 2012, Month = 8, Day = 21},
             new ReleaseDate{Year = 2023, Month = 9, Day = 27, Region = Region.Worldwide, ReleaseVersion = ReleaseVersion.ReRelease},
             new ReleaseDate{Year = 2025, Region = Region.Worldwide, ReleaseVersion = ReleaseVersion.LatestUpdate}
           ]
@@ -751,8 +750,7 @@ namespace ASP_site.Data.Initializers {
         new Game {
           GameID = "Deadlock",
           Name = "Deadlock",
-          Description = "A multiplayer mod for Half-Life featuring unique gameplay mechanics.",
-          ModForGameID = "HalfLife",
+          Description = "Valve's latest title, still in development, is a MOBA with hero shooter mechanics.",
           SteamID = 1422450,
           IsFree = true,
           IsPaid = false,
@@ -766,7 +764,7 @@ namespace ASP_site.Data.Initializers {
         new Game {
           GameID = "Diabotical",
           Name = "Diabotical",
-          Description = "",
+          Description = "Diabotical is an original arena shooter using mechanics from Quake 3 and Unreal Tournament.",
           Developer = "The GD Studio",
           IsFree = true,
           IsPaid = false,
@@ -803,6 +801,7 @@ namespace ASP_site.Data.Initializers {
           Description = "Deathmatch Classic was Valve's port of Quakeworld Deathmatch to the goldsrc engine."
             + "DMC:R is a source mod which extends this legacy to the the Half-Life 2 engine.",
           ModForGameID = "HalfLife2",
+          Developer = "CoaXioN",
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
@@ -1012,21 +1011,6 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "FLF",
-          Name = "FLF",
-          Description = "A multiplayer mod for Half-Life featuring unique gameplay mechanics.",
-          ModForGameID = "HalfLife",
-          IsFree = true,
-          IsPaid = false,
-          IsOpenSource = false,
-          IsDeveloperMaintained = false,
-          IsCommunityMaintained = true,
-          Genre = Genre.FPS,
-          ReleaseDates = [
-            new ReleaseDate{Year = 2000}
-          ]
-        },
-        new Game {
           GameID = "FortressOne",
           Name = "FortressOne",
           Description = "FortressOne is a free and open source mod for QuakeWorld that brings Team Fortress to the modern era.",
@@ -1039,7 +1023,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "FrontlineForce",
+          GameID = "FLF",
           Name = "Frontline Force",
           Description = "A team-oriented first person shooter mod in which players are divided into 2 teams: Attackers and Defenders.",
           ModForGameID = "HalfLife",
@@ -1127,6 +1111,16 @@ namespace ASP_site.Data.Initializers {
           ReleaseDates = [
             new ReleaseDate{Year = 2021, Month = 7, Day = 27}
           ]
+        },
+        new Game {
+          GameID = "HLRally",
+          Name = "Half-Life: Rally",
+          Description = "Half-Life: Rally is a first-person shooter game developed by Valve Software.",
+          EngineID = "source",
+          ModForGameID = "HalfLife",
+          IsOpenSource = true,
+          IsCommunityMaintained = true,
+          Genre = Genre.Sports
         },
         new Game {
           GameID = "Holdfast",
