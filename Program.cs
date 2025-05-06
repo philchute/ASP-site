@@ -1,11 +1,12 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.InMemory;
 using ASP_site.Data;
-using ASP_site.Data.Initializers;
 using ASP_site.Helpers;
 using ASP_site.GameServerListCommon.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Configure Kestrel to listen only on localhost for port 5175
+builder.WebHost.UseUrls("http://localhost:5175"); 
 
 // Add services to the container.
 builder.Services.AddRazorPages();

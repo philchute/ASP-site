@@ -934,12 +934,12 @@ namespace ASP_site.Data.Initializers {
           GameID = "Eleven",
           Name = "Eleven",
           Description = "Eleven is an accurate and competitive table tennis game for VR hardware.",
-          IsFree = true,
-          IsPaid = false,
+          IsFree = false,
+          IsPaid = true,
           SteamID = 488310,
           IsOpenSource = false,
-          IsDeveloperMaintained = false,
-          IsCommunityMaintained = true,
+          IsDeveloperMaintained = true,
+          IsCommunityMaintained = false,
           Genre = Genre.Sports,
           ReleaseDates = [
             new ReleaseDate{Year = 2016, Month = 6, Day = 20},
@@ -1119,7 +1119,7 @@ namespace ASP_site.Data.Initializers {
           EngineID = "source",
           ModForGameID = "HalfLife",
           IsOpenSource = true,
-          IsCommunityMaintained = true,
+          IsCommunityMaintained = false,
           Genre = Genre.Sports
         },
         new Game {

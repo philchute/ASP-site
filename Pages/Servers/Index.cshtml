@@ -50,10 +50,11 @@
             </div>
 
              <div class="col-md-2">
-                <label asp-for="EmptyFilter" class="form-label">Empty:</label>
-                <select asp-for="EmptyFilter" class="form-select" onchange="this.form.submit();">
-                    <option value="yes">Show</option> @* Default is now show empty *@
-                    <option value="no">Hide</option>
+                <label asp-for="PopulationFilter" class="form-label">Population:</label>
+                <select asp-for="PopulationFilter" class="form-select" onchange="this.form.submit();">
+                    <option value="all">Show All</option>
+                    <option value="hide_empty">Hide Empty</option>
+                    <option value="hide_full">Hide Full</option>
                 </select>
             </div>
 

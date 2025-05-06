@@ -1,16 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using ASP_site.Models;
-using ASP_site.Data;
 using ASP_site.GameServerListCommon.Model;
 using ASP_site.Helpers;
 using ASP_site.GameServerListCommon.Services;
-using Microsoft.Extensions.Logging;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using System.Linq;
 
 namespace ASP_site.Pages.Servers
 {
@@ -19,20 +11,16 @@ namespace ASP_site.Pages.Servers
         private readonly ILogger<IndexModel> _logger;
         private readonly IGameDataService _gameDataService;
         private readonly SteamServerBrowserApiService _serverBrowserService;
-        // Optional: Inject player detail service if needed later
-        // private readonly SteamPlayerDetailApiService _playerDetailService;
 
         public IndexModel(
             ILogger<IndexModel> logger,
             IGameDataService gameDataService,
             SteamServerBrowserApiService serverBrowserService
-            // SteamPlayerDetailApiService playerDetailService
             )
         {
             _logger = logger;
             _gameDataService = gameDataService;
             _serverBrowserService = serverBrowserService;
-            // _playerDetailService = playerDetailService;
             GamesList = new List<ASP_site.GameServerListCommon.Model.Game>(); // Initialize lists
             ServerList = new List<GameServerItem>();
         }
@@ -55,7 +43,7 @@ namespace ASP_site.Pages.Servers
         public string VacFilter { get; set; } = "all"; // all, yes, no
 
         [BindProperty(SupportsGet = true)]
-        public string EmptyFilter { get; set; } = "yes"; // Changed default to yes (show empty)
+        public string PopulationFilter { get; set; } = "all"; // Changed from EmptyFilter, new default "all"
 
         [BindProperty(SupportsGet = true)]
         public string PasswordFilter { get; set; } = "all"; // all, yes, no
@@ -104,10 +92,16 @@ namespace ASP_site.Pages.Servers
                             else if (VacFilter == "no")
                                 filteredList = filteredList.Where(s => !s.RequiresVAC);
 
-                            if (EmptyFilter == "no") 
+                            // Apply Population Filter
+                            if (PopulationFilter == "hide_empty") 
                             {
                                 filteredList = filteredList.Where(s => s.Players > 0);
                             }
+                            else if (PopulationFilter == "hide_full")
+                            {
+                                filteredList = filteredList.Where(s => s.Players < s.MaxPlayers);
+                            }
+                            // "all" case requires no action here
 
                             if (PasswordFilter == "yes")
                                 filteredList = filteredList.Where(s => s.PasswordProtected);

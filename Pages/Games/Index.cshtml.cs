@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ASP_site.Models;
 using ASP_site.Data;
-using System.Linq;
 
 namespace ASP_site.Pages.Games
 {
@@ -30,9 +29,6 @@ namespace ASP_site.Pages.Games
     public async Task OnGetAsync()
     {
       ViewData["ActivePage"] = "Games";
-      // read the favorite team from a cookie
-      FavoriteEngine = HttpContext.Session.GetString("_Favorite");
-
       // make select lists for the filter dropdowns
       IQueryable<string> gameQuery = from g in _context.Games
                                      orderby g.GameID
@@ -69,10 +65,6 @@ namespace ASP_site.Pages.Games
     public string GameClass(Game Game)
     {
       string Class = "d-flex";
-      // if (Game.GamePlayable == GamePlayable.DeveloperMaintained || Game.GamePlayable == GamePlayable.StillPlayable)
-      //   Class += " playable";
-      // if (Game.EngineID == FavoriteEngine)
-      //   Class += " favorite";
       return Class;
     }
   }

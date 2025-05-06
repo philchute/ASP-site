@@ -33,7 +33,7 @@
             <div class="me-2">→</div>
             <div class="flex-grow-1">
               @{
-                var maxGamesToShow = 8;
+                var maxGamesToShow = 10;
                 var games = Model.Engine.Games.OrderBy(g => g.Year).ToList();
                 var gamesToShow = games.Take(maxGamesToShow);
               }
