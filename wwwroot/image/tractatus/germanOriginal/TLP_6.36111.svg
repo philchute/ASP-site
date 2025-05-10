@@ -1,0 +1,38 @@
+<svg width="500" height="100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 100">
+  <style>
+    .line { stroke: #839496; stroke-width: 1.5; fill: none; }
+    .dashed-line { stroke: #839496; stroke-width: 1.5; fill: none; stroke-dasharray: 4, 4; }
+    .label { font-family: serif; font-size: 18px; font-style: italic; fill: #839496; text-anchor: middle; }
+    .circle-marker { stroke: #839496; stroke-width: 1.5; fill: none; }
+    .cross-marker { stroke: #839496; stroke-width: 1.5; fill: none; }
+  </style>
+
+  <!-- Define y-coordinate for the main horizontal line -->
+  <defs>
+    <path id="main-line-y" d="M 0,50 L 500,50" />
+  </defs>
+
+  <!-- Elements from left to right -->
+  <line class="dashed-line" x1="20" y1="50" x2="60" y2="50" />
+  <circle class="circle-marker" cx="70" cy="50" r="5" />
+  <line class="line" x1="80" y1="50" x2="160" y2="50" />
+  <text x="120" y="75" class="label">a</text>
+  
+  <g class="cross-marker" transform="translate(175, 50)">
+    <line x1="-5" y1="-5" x2="5" y2="5" />
+    <line x1="-5" y1="5" x2="5" y2="-5" />
+  </g>
+  
+  <line class="dashed-line" x1="190" y1="50" x2="230" y2="50" />
+  
+  <g class="cross-marker" transform="translate(245, 50)">
+    <line x1="-5" y1="-5" x2="5" y2="5" />
+    <line x1="-5" y1="5" x2="5" y2="-5" />
+  </g>
+  
+  <line class="line" x1="260" y1="50" x2="340" y2="50" />
+  <text x="300" y="75" class="label">b</text>
+  <circle class="circle-marker" cx="350" cy="50" r="5" />
+  <line class="dashed-line" x1="360" y1="50" x2="400" y2="50" />
+
+</svg>

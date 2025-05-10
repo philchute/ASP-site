@@ -1,0 +1,36 @@
+<svg width="450" height="200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 200">
+  <style>
+    .line { stroke: #839496; stroke-width: 1.5; fill: none; }
+    .label-connector { stroke: #839496; stroke-width: 1; fill: none; }
+    .formula { font-family: serif; font-size: 22px; font-style: italic; fill: #839496; text-anchor: middle; }
+    .label { font-family: serif; font-size: 20px; fill: #839496; text-anchor: middle; dominant-baseline: central; }
+  </style>
+
+  <!-- Left side: ~q structure -->
+  <text x="100" y="100" class="formula">“WqF”</text>
+  <text x="90" y="50" class="label">W</text> <!-- Input T for q -->
+  <line class="line" x1="90" y1="60" x2="110" y2="80" /> <!-- T_input(q) to F_output_of_~q -->
+  <text x="110" y="140" class="label">F</text> <!-- Input F for q -->
+  <line class="line" x1="110" y1="130" x2="90" y2="110" /> <!-- F_input(q) to T_output_of_~q -->
+
+  <!-- Right side: p structure -->
+  <text x="350" y="100" class="formula">TpF</text>
+
+  <!-- Main Connecting Lines -->
+  <!-- Path 1 (Top-Outer) -->
+  <path class="line" d="M 90,40 Q 250,20 365,80" /> 
+  <!-- Path 2 (Top-Inner) -->
+  <path class="line" d="M 90,40 Q 200,40 340,80" /> 
+  <!-- Path 3 (Bottom-Outer) -->
+  <path class="line" d="M 110,150 Q 250,180 365,105" /> 
+  <!-- Path 4 (Bottom-Inner) -->
+  <path class="line" d="M 110,150 Q 200,160 340,105" /> 
+
+  <!-- Overall Proposition Labels -->
+  <text x="260" y="175" class="label">F</text> <!-- Label for Path 4 (Bottom-Inner) -->
+  <text x="220" y="65" class="label">W</text> <!-- Single T label for Paths 1, 2, 3 -->
+  <!-- Lines from single W to other paths -->
+  <line class="label-connector" x1="220" y1="142" x2="260" y2="165" /> <!-- To Path 1 (Top-Outer) -->
+  <line class="label-connector" x1="280" y1="48" x2="260" y2="165" /> <!-- To Path 2 (Top-Inner)-->
+  <line class="label-connector" x1="280" y1="145" x2="260" y2="165" /> <!-- To Path 3 (Bottom-Outer) -->
+</svg>

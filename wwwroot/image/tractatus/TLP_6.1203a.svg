@@ -1,0 +1,25 @@
+<svg width="350" height="150" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 150">
+  <style>
+    .line { stroke: #839496; stroke-width: 1.5; fill: none; }
+    .formula { font-family: serif; font-size: 22px; font-style: italic; fill: #839496; text-anchor: middle; }
+  </style>
+
+  <!-- Text Elements -->
+  <text x="100" y="75" class="formula">T p F</text>
+  <text x="250" y="75" class="formula">T q F</text>
+
+  <!-- Top Lines -->
+  <!-- 1. From T of 'T p F' to T of 'T q F' (curving upwards) -->
+  <path class="line" d="M 85,55 Q 157,25 235,55" /> 
+
+  <!-- 2. From T of 'T p F' to F of 'T q F' (curving upwards, wider/higher) -->
+  <path class="line" d="M 85,55 Q 177,10 265,55" />
+
+  <!-- Bottom Lines -->
+  <!-- 3. From F of 'T p F' to T of 'T q F' (curving downwards) -->
+  <path class="line" d="M 115,80 Q 175,105 235,80" /> 
+
+  <!-- 4. From F of 'T p F' to F of 'T q F' (curving downwards, wider/lower) -->
+  <path class="line" d="M 115,80 Q 190,120 265,80" />
+
+</svg>

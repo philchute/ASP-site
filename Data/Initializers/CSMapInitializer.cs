@@ -37,10 +37,11 @@ namespace ASP_site.Data.Initializers
         {
           MapID = "agency",
           IsCompetitive = false,
-          Description = "Small hostage rescue map set inside an office building",
+          Description = "Small hostage rescue map set inside an office building, was added back to CS2 on 5/7/2025",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CSGO", Author = "Chris Ashton", Description = "CS:GO", FileName = "cs_agency" }
+            new MapGameInfo { GameID = "CSGO", Author = "Chris Ashton", Description = "CS:GO", FileName = "cs_agency" },
+            new MapGameInfo { GameID = "CS2", Author = "", Description = "CS2", FileName = "cs_agency" }
           }
         },
         new Map
@@ -100,7 +101,7 @@ namespace ASP_site.Data.Initializers
         {
           MapID = "havana",
           IsCompetitive = false,
-          Description = "Cuban themed map",
+          Description = "Cuban themed hostage rescue map",
           GameInfo = new List<MapGameInfo>
           {
             new MapGameInfo { GameID = "CS16", Author = "", Description = "1.6", FileName = "cs_havana" },
@@ -113,7 +114,7 @@ namespace ASP_site.Data.Initializers
         {
           MapID = "italy",
           IsCompetitive = false,
-          Description = "Hostage rescue map set in an Italian town",
+          Description = "Classic hostage rescue map set in an Italian town",
           GameInfo = new List<MapGameInfo>
           {
             new MapGameInfo { GameID = "CS16", Author = "", Description = "1.6", FileName = "cs_italy" },
@@ -128,7 +129,7 @@ namespace ASP_site.Data.Initializers
         {
           MapID = "miami",
           IsCompetitive = false,
-          Description = "Miami themed map",
+          Description = "Miami themed hostage rescue map",
           GameInfo = new List<MapGameInfo>
           {
             new MapGameInfo { GameID = "CSX", Author = "", Description = "Xbox", FileName = "cs_miami" }
@@ -138,7 +139,7 @@ namespace ASP_site.Data.Initializers
         {
           MapID = "militia",
           IsCompetitive = false,
-          Description = "Militia themed map",
+          Description = "Militia themed hostage rescue map",
           GameInfo = new List<MapGameInfo>
           {
             new MapGameInfo { GameID = "CS16", Author = "", Description = "1.6", FileName = "cs_militia" },
@@ -152,7 +153,7 @@ namespace ASP_site.Data.Initializers
         {
           MapID = "office",
           IsCompetitive = false,
-          Description = "Hostage rescue map set in an office building",
+          Description = "Classic hostage rescue map set in an office building",
           GameInfo = new List<MapGameInfo>
           {
             new MapGameInfo { GameID = "CS16", Author = "", Description = "1.6", FileName = "cs_office" },
@@ -167,7 +168,7 @@ namespace ASP_site.Data.Initializers
         {
           MapID = "siege",
           IsCompetitive = false,
-          Description = "Siege themed map",
+          Description = "Siege themed hostage rescue map",
           GameInfo = new List<MapGameInfo>
           {
             new MapGameInfo { GameID = "CS16", Author = "", Description = "1.6", FileName = "cs_siege" }

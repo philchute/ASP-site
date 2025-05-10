@@ -1,0 +1,58 @@
+[
+  {
+    "LanguageKey": "germanOriginal",
+    "DisplayName": "German (Original)",
+    "SourceInfo": "L. Wittgenstein",
+    "DataFile": "germanOriginal.json",
+    "Tier": 1,
+    "IsDefaultInTier": true
+  },
+  {
+    "LanguageKey": "englishOgdenRamsey",
+    "DisplayName": "English (Ogden/Ramsey 1922)",
+    "SourceInfo": "Translated by F. P. Ramsey and C. K. Ogden, 1922",
+    "DataFile": "englishOgdenRamsey.json",
+    "Tier": 1,
+    "IsDefaultInTier": true
+  },
+  {
+    "LanguageKey": "frenchGranger",
+    "DisplayName": "French (Granger)",
+    "SourceInfo": "Translated by G. G. Granger",
+    "DataFile": "frenchGranger.json",
+    "Tier": 2,
+    "IsDefaultInTier": false
+  },
+  {
+    "LanguageKey": "italianLavazza",
+    "DisplayName": "Italian (Lavazza)",
+    "SourceInfo": "Translated by M. Lavazza",
+    "DataFile": "italianLavazza.json",
+    "Tier": 2,
+    "IsDefaultInTier": false
+  },
+  {
+    "LanguageKey": "spanishBuscato",
+    "DisplayName": "Spanish (Buscató)",
+    "SourceInfo": "Translated by A. G. Buscató",
+    "DataFile": "spanishBuscato.json",
+    "Tier": 2,
+    "IsDefaultInTier": false
+  },
+  {
+    "LanguageKey": "portugueseGiannotti",
+    "DisplayName": "Portuguese (Giannotti)",
+    "SourceInfo": "Translated by J. A. Giannotti",
+    "DataFile": "portugueseGiannotti.json",
+    "Tier": 2,
+    "IsDefaultInTier": false
+  },
+  {
+    "LanguageKey": "userNotes",
+    "DisplayName": "My Notes & Commentary",
+    "SourceInfo": "My notes and commentary",
+    "DataFile": "notes.json",
+    "Tier": 3,
+    "IsDefaultInTier": false
+  }
+]

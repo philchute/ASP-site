@@ -1,0 +1,17 @@
+<svg width="300" height="160" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 160">
+  <style>
+    .shape-outline { stroke: #839496; stroke-width: 2; fill: none; }
+    .eye-label { font-family: serif; font-size: 18px; fill: #839496; text-anchor: end; dominant-baseline: middle; }
+    .eye-circle { stroke: #839496; stroke-width: 2; fill: white; } /* White fill to look open */
+  </style>
+
+  <!-- Field of view: Pointed left, circular right -->
+  <path class="shape-outline" d="M 50,80 Q 150,-20 225,5 A 75 75 0 0 1 225,155 Q 150,180 50,80 Z" />
+
+  <!-- "Eye" circle at the left tip -->
+  <circle class="eye-circle" cx="50" cy="80" r="5" />
+
+  <!-- Label "Auge -" -->
+  <text x="40" y="80" class="eye-label">Auge –</text>
+
+</svg>

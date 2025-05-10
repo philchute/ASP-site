@@ -1,0 +1,31 @@
+<svg width="350" height="150" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 150">
+  <style>
+    .line { stroke: #839496; stroke-width: 1.5; fill: none; }
+    .label-connector { stroke: #839496; stroke-width: 1; fill: none; } /* For lines from single T */
+    .formula { font-family: serif; font-size: 22px; font-style: italic; fill: #839496; text-anchor: middle; }
+    .label { font-family: serif; font-size: 20px; fill: #839496; text-anchor: middle; dominant-baseline: middle; }
+  </style>
+
+  <!-- Text Elements -->
+  <text x="100" y="75" class="formula">T p F</text>
+  <text x="250" y="75" class="formula">T q F</text>
+
+  <!-- Connecting Lines -->
+  <!-- Path 1: TpF to TqF (T -> T) => T -->
+  <path class="line" d="M 85,55 Q 157,25 235,55" /> 
+  <!-- Path 2: TpF to FqF (T -> F) => F -->
+  <path class="line" d="M 85,55 Q 177,10 265,55" />
+  <!-- Path 3: FpF to TqF (F -> T) => T -->
+  <path class="line" d="M 115,80 Q 175,105 235,80" /> 
+  <!-- Path 4: FpF to FqF (F -> F) => T -->
+  <path class="line" d="M 115,80 Q 190,120 265,80" />   
+
+  <!-- T and F labels-->
+  <text x="175" y="140" class="label">T</text>
+  <text x="175" y="25" class="label">F</text>
+
+  <!-- Lines from single T to the T-curves apexes -->
+  <line class="label-connector" x1="175" y1="130" x2="157" y2="40" />
+  <line class="label-connector" x1="175" y1="130" x2="180" y2="92" />
+  <line class="label-connector" x1="175" y1="130" x2="190" y2="100" />
+</svg>

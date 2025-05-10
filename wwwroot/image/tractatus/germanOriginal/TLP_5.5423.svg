@@ -1,0 +1,42 @@
+<svg width="180" height="170" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 170">
+  <style>
+    .line { stroke: #839496; stroke-width: 1.5; }
+    .label { font-family: serif; font-size: 16px; fill: #839496; text-anchor: middle; dominant-baseline: central; }
+  </style>
+
+  <!-- Define vertices (adjust as needed for perspective) -->
+  <!-- Front face -->
+  <rect id="front-face" x="30" y="60" width="80" height="80" fill="none" stroke="none"/>
+  <!-- Back face (offset) -->
+  <rect id="back-face" x="60" y="30" width="80" height="80" fill="none" stroke="none"/>
+
+  <!-- Lines -->
+  <!-- Front face -->
+  <line class="line" x1="30" y1="140" x2="110" y2="140"/> <!-- V1-V2 (front bottom) -->
+  <line class="line" x1="110" y1="140" x2="110" y2="60"/>  <!-- V2-V3 (front right) -->
+  <line class="line" x1="110" y1="60" x2="30" y2="60"/>   <!-- V3-V4 (front top) -->
+  <line class="line" x1="30" y1="60" x2="30" y2="140"/>  <!-- V4-V1 (front left) -->
+
+  <!-- Back face -->
+  <line class="line" x1="60" y1="110" x2="140" y2="110"/> <!-- V5-V6 (back bottom) -->
+  <line class="line" x1="140" y1="110" x2="140" y2="30"/>  <!-- V6-V7 (back right) -->
+  <line class="line" x1="140" y1="30" x2="60" y2="30"/>   <!-- V7-V8 (back top) -->
+  <line class="line" x1="60" y1="30" x2="60" y2="110"/>  <!-- V8-V5 (back left) -->
+
+  <!-- Connecting lines -->
+  <line class="line" x1="30" y1="140" x2="60" y2="110"/> <!-- V1-V5 -->
+  <line class="line" x1="110" y1="140" x2="140" y2="110"/> <!-- V2-V6 -->
+  <line class="line" x1="110" y1="60" x2="140" y2="30"/>  <!-- V3-V7 -->
+  <line class="line" x1="30" y1="60" x2="60" y2="30"/>   <!-- V4-V8 -->
+
+  <!-- 'a' labels -->
+  <text class="label" x="22" y="145">a</text>  <!-- Near front-bottom-left (V1) -->
+  <text class="label" x="105" y="145">a</text> <!-- Near front-bottom-right (V2) -->
+  <text class="label" x="105" y="50">a</text>  <!-- Near front-top-right (V3) -->
+  <text class="label" x="22" y="50">a</text>   <!-- Near front-top-left (V4) -->
+  <!-- 'b' labels -->
+  <text class="label" x="63" y="118">b</text>  <!-- Near back-bottom-left (V5) -->
+  <text class="label" x="145" y="118">b</text> <!-- Near back-bottom-right (V6) -->
+  <text class="label" x="145" y="20">b</text>  <!-- Near back-top-right (V7) -->
+  <text class="label" x="63" y="20">b</text>   <!-- Near back-top-left (V8) -->
+</svg>

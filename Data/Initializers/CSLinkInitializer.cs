@@ -126,6 +126,8 @@ namespace ASP_site.Data.Initializers
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=Rk4Mdum7qCg" },
         new Link { MapID = "ancient", Label = "de_ancient T guide", Description = "sebcs's ancient T side guide",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=52YOTZvar-4" },
+        new Link { MapID = "ancient", Label = "de_ancient positioning guide", Description = "ancient positioning guide",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=u_pmhFbnKaQ" },
         // de_anubis
         new Link { MapID = "anubis", Label = "de_anubis CT guide", Description = "Birds's anubis CT side guide",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=wx3g1V5pnpA" },
@@ -137,6 +139,8 @@ namespace ASP_site.Data.Initializers
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=4hHn3X_fN6k" },
         new Link { MapID = "anubis", Label = "de_anubis T guide", Description = "sebcs's anubis T side guide",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=Y4cYaFfrcXU" },
+        new Link { MapID = "anubis", Label = "de_anubis positioning guide", Description = "anubis positioning guide",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=hP7Z-lafHco" },
         // de_dust2
         new Link { MapID = "dust2", Label = "de_dust2 CT guide", Description = "Bird's dust2 CT side guide",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=JwGE65uxBdY" },
@@ -144,6 +148,8 @@ namespace ASP_site.Data.Initializers
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=JyT4VaATRN4" },
         new Link { MapID = "dust2", Label = "de_dust2 T guide", Description = "sebcs's dust2 T side guide",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=ml3Np9ZewZI" },
+        new Link { MapID = "dust2", Label = "de_dust2 positioning guide", Description = "dust2 positioning guide",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=hG14sNLcHAg" },
         // de_inferno
         new Link { MapID = "inferno", Label = "de_inferno CT guide", Description = "Bird's inferno CT side guide",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=DYUyvAYq0tg" },
@@ -153,13 +159,25 @@ namespace ASP_site.Data.Initializers
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=p-7jOK8eTT8" },
         new Link { MapID = "inferno", Label = "de_inferno T guide", Description = "sebcs's inferno T side guide",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=Q2ZbsYahBYU" },
+        new Link { MapID = "inferno", Label = "de_inferno angles and positions", Description = "inferno positioning guide",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=kNZRX0iW8Nw" },
         // de_mirage
         new Link { MapID = "mirage", Label = "de_mirage CT guide", Description = "Bird's mirage CT side guide",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=VyhGmGoRUNg" },
         new Link { MapID = "mirage", Label = "de_mirage CT guide", Description = "sebcs's mirage CT side guide",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=OFqqXj5u3x8" },
+        new Link { MapID = "mirage", Label = "de_mirage T guide", Description = "Flom's mirage T side guide",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=RyAg82pPs1M" },
         new Link { MapID = "mirage", Label = "de_mirage T guide", Description = "sebcs's mirage T side guide",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=Rkd35TqX-0A" },
+        new Link { MapID = "mirage", Label = "de_mirage AWP guide", Description = "Flom's mirage AWP guide (early round)",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=9Aezjn9OfJQ" },
+        new Link { MapID = "mirage", Label = "de_mirage AWP guide", Description = "Flom's mirage AWP guide (late round)",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=inr4RAr0iBA" },
+        new Link { MapID = "mirage", Label = "de_mirage positioning guide", Description = "mirage positioning guide",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=fBeFNHq4uHw" },
+        new Link { MapID = "mirage", Label = "de_mirage positioning guide 2", Description = "mirage positioning guide part 2",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=iMX94goIbVk" },
         // de_nuke
         new Link { MapID = "nuke", Label = "de_nuke CT guide", Description = "Bird's nuke CT side guide",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=SR7CXB4mBA4" },
@@ -169,15 +187,24 @@ namespace ASP_site.Data.Initializers
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=53cQnMpDqJw" },
         new Link { MapID = "nuke", Label = "de_nuke T guide", Description = "Bird's nuke T side guide",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=YcDNhoX3yos" },
+        new Link { MapID = "nuke", Label = "de_nuke T guide", Description = "Flom's nuke T side guide",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=WZAm1YRM1XY" },
         new Link { MapID = "nuke", Label = "de_nuke T guide", Description = "sebcs's nuke T side guide",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=j74yKZ7i1pM" },
+        new Link { MapID = "nuke", Label = "de_nuke positioning guide", Description = "nuke positioning guide",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=-bh7auHMff4" },
         // de_train
         new Link { MapID = "train", Label = "de_train CT guide", Description = "Bird's train CT side guide",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=U-a6IwdYl-U" },
         new Link { MapID = "train", Label = "de_train guide", Description = "sebcs's train guide",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=x2MdEcZ2DJw" },
+        new Link { MapID = "train", Label = "de_train positioning guide", Description = "train positioning guide",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=u1iwOz8REIw" },
 
         // Other maps
+        // de_cache
+        new Link { MapID = "cache", Label = "de_cache AWP guide", Description = "Flom's cache AWP guide",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=X6Slzv5bk-Y" },
         // de_overpass
         new Link { MapID = "overpass", Label = "de_overpass CT guide", Description = "Bird's overpass CT side guide",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=4hLTerHEgdc" },
@@ -185,11 +212,19 @@ namespace ASP_site.Data.Initializers
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=HZuhx7Di3Dk" },
         new Link { MapID = "overpass", Label = "de_overpass T guide", Description = "sebcs's overpass T side guide",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=LkT2oM2DIB8" },
+        new Link { MapID = "overpass", Label = "de_overpass positioning guide", Description = "overpass positioning guide",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=mGDfd5-n8QE" },
+        new Link { MapID = "overpass", Label = "de_overpass B site smoke guide", Description = "overpass B site smoke guide (good for 2v2)",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=bDD2Yd4rDvc" },
+        new Link { MapID = "overpass", Label = "de_overpass wingman guide", Description = "overpass 2v2 wingman guide",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=fRSHa_eUENQ" },
         // de_vertigo
         new Link { MapID = "vertigo", Label = "de_vertigo CT guide", Description = "Bird's vertigo CT side guide",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=hlT2YcIabhM" },
         new Link { MapID = "vertigo", Label = "de_vertigo T guide", Description = "Bird's vertigo T side guide",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=UEIGuSJxJx0" },
+        new Link { MapID = "vertigo", Label = "de_vertigo positioning guide", Description = "vertigo positioning guide",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=K44jACpB2Jg" },
       };
     }
   }

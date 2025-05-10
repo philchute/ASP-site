@@ -1,0 +1,19 @@
+<svg width="150" height="150" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150">
+  <style>
+    .line { stroke: #839496; stroke-width: 1.5; fill: none; }
+    .formula { font-family: serif; font-size: 22px; font-style: italic; fill: #839496; text-anchor: middle; }
+    .label { font-family: serif; font-size: 20px; fill: #839496; text-anchor: middle; dominant-baseline: central; }
+  </style>
+
+  <!-- Central Text -->
+  <text x="75" y="75" class="formula">“WξF”</text>
+
+  <!-- Top W label and connecting line -->
+  <text x="60" y="30" class="label">W</text>
+  <line class="line" x1="65" y1="40" x2="80" y2="55" /> 
+
+  <!-- Bottom F label and connecting line -->
+  <text x="90" y="110" class="label">F</text>
+  <line class="line" x1="80" y1="100" x2="65" y2="85" />
+
+</svg>
