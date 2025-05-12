@@ -94,3 +94,9 @@ section.grid a:hover {
   height: 24px;
   vertical-align: middle;
 }
+
+/* Styles for green checkboxes when checked */
+.form-check-input:checked {
+    background-color: #2aa198; /* Green color - General */
+    border-color: #2aa198;
+}

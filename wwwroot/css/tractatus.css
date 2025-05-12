@@ -92,7 +92,6 @@ body {
 
 .language-config input[type="checkbox"] {
     margin-right: 5px;
-    accent-color: #2aa198; /* Solarized Cyan/Teal */
 }
 
 .language-tier-group {

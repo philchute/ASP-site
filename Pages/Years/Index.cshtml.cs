@@ -15,65 +15,78 @@ namespace ASP_site.Pages.Years
     {
         private List<ASP_site.Models.YearEntry> _allEntries;
 
+        // Helper dictionaries for checkboxes
+        public Dictionary<string, string> AllContentTypes { get; private set; }
+
+
         public IndexModel()
         {
             _allEntries = YearEntryInitializer.GetYearEntries();
-            TimelineEntries = new List<ASP_site.Models.YearEntry>(); // Initialize to empty, will be populated in OnGet
+            TimelineEntries = new List<ASP_site.Models.YearEntry>();
 
-            // Populate ContentTypes from Enum
-            ContentTypes = new SelectList(Enum.GetValues(typeof(ContentType))
-                .Cast<ContentType>()
-                .Select(e => new SelectListItem { Value = e.ToString(), Text = e.ToString() })
-                .ToList(), "Value", "Text");
+            // Populate checkbox options for ContentTypes
+            AllContentTypes = Enum.GetValues(typeof(ContentType))
+                                .Cast<ContentType>()
+                                .ToDictionary(e => e.ToString(), e => e.ToString());
 
-            // Populate AgeAppropriatenessLevels from Enum, respecting Display attribute
-            AgeAppropriatenessLevels = new SelectList(Enum.GetValues(typeof(AgeAppropriateness))
-                .Cast<AgeAppropriateness>()
-                .Select(e => new SelectListItem
-                {
-                    Value = e.ToString(),
-                    Text = GetEnumDisplayName(e)
-                })
-                .ToList(), "Value", "Text");
-
+            // Simplified Sort Options
             SortOptions = new SelectList(new List<SelectListItem>
             {
-                new SelectListItem { Value = "Year", Text = "Year (Event)" },
+                new SelectListItem { Value = "Year", Text = "Year" },
                 new SelectListItem { Value = "Title", Text = "Title" },
-                new SelectListItem { Value = "Published", Text = "Published Date" }
+                new SelectListItem { Value = "Published", Text = "Published" }
             }, "Value", "Text");
+
+            // Initialize lists
+            SelectedContentTypes = new List<string>();
+            SelectedAgeAppropriateness = new List<string>();
         }
 
         public IList<ASP_site.Models.YearEntry> TimelineEntries { get; set; }
 
         [BindProperty(SupportsGet = true)]
-        public string? SelectedContentType { get; set; }
-        public SelectList? ContentTypes { get; set; }
+        public List<string> SelectedContentTypes { get; set; }
 
         [BindProperty(SupportsGet = true)]
-        public string? SelectedAgeAppropriateness { get; set; }
-        public SelectList? AgeAppropriatenessLevels { get; set; }
+        public List<string> SelectedAgeAppropriateness { get; set; }
 
         [BindProperty(SupportsGet = true)]
         public string? SearchString { get; set; }
 
         [BindProperty(SupportsGet = true)]
-        public string? SortField { get; set; } = "Year"; // Default sort
+        public string? SortField { get; set; } = "Year";
         public SelectList? SortOptions { get; set; }
 
         public void OnGet()
         {
+            // Initialize selections if empty (treat as 'All' selected)
+            if (SelectedContentTypes == null || !SelectedContentTypes.Any())
+            {
+                 SelectedContentTypes = AllContentTypes.Keys.ToList();
+            }
+             if (SelectedAgeAppropriateness == null || !SelectedAgeAppropriateness.Any())
+            {
+                 // When empty, consider all possible enum values selected
+                 SelectedAgeAppropriateness = Enum.GetNames(typeof(AgeAppropriateness)).ToList(); 
+            }
+
+
             IEnumerable<ASP_site.Models.YearEntry> entries = _allEntries;
 
-            if (!string.IsNullOrEmpty(SelectedContentType) && Enum.TryParse<ContentType>(SelectedContentType, out var contentTypeEnum))
+            // Filter by selected Content Types
+            // Check count against AllContentTypes dictionary size
+            if (SelectedContentTypes != null && SelectedContentTypes.Any() && SelectedContentTypes.Count < AllContentTypes.Count) 
             {
-                entries = entries.Where(e => e.Type == contentTypeEnum);
+                entries = entries.Where(e => e.Type.HasValue && SelectedContentTypes.Contains(e.Type.Value.ToString()));
             }
 
-            if (!string.IsNullOrEmpty(SelectedAgeAppropriateness) && Enum.TryParse<AgeAppropriateness>(SelectedAgeAppropriateness, out var ageEnum))
+            // Filter by selected Age Appropriateness levels
+            // Check count against total number of AgeAppropriateness enum values
+            if (SelectedAgeAppropriateness != null && SelectedAgeAppropriateness.Any() && SelectedAgeAppropriateness.Count < Enum.GetNames(typeof(AgeAppropriateness)).Length)
             {
-                entries = entries.Where(e => e.Age == ageEnum);
+                entries = entries.Where(e => SelectedAgeAppropriateness.Contains(e.Age.ToString()));
             }
+
 
             if (!string.IsNullOrEmpty(SearchString))
             {
@@ -88,11 +101,9 @@ namespace ASP_site.Pages.Years
                     entries = entries.OrderBy(e => e.Title).ThenBy(e => e.Year);
                     break;
                 case "Published":
-                    // Assuming Published is a string that can be parsed to int or compared lexicographically
-                    // For more robust sorting, convert to DateTime or int if possible.
-                    entries = entries.OrderBy(e => e.Published).ThenBy(e => e.Year);
+                    entries = entries.OrderBy(e => string.IsNullOrEmpty(e.Published)).ThenBy(e => e.Published).ThenBy(e => e.Year);
                     break;
-                default: // Year and any other case
+                default: // Year
                     entries = entries.OrderBy(e => e.Year).ThenBy(e => e.StartDate).ThenBy(e => e.Title);
                     break;
             }
@@ -100,10 +111,10 @@ namespace ASP_site.Pages.Years
             TimelineEntries = entries.ToList();
         }
 
-        // Helper to get DisplayName for enums, made public static to be accessible from Razor page
-        public static string GetEnumDisplayName(Enum? enumValue) // Changed to public static and nullable Enum
+        // Helper to get DisplayName for enums
+        public static string GetEnumDisplayName(Enum? enumValue) 
         {
-            if (enumValue == null) return "-"; // Handle null enum values gracefully
+            if (enumValue == null) return "-"; 
             return enumValue.GetType()
                             .GetMember(enumValue.ToString())
                             .First()
@@ -115,15 +126,15 @@ namespace ASP_site.Pages.Years
             if (year <= -3000) return "Prehistory";
             if (year <= -1200) return "Bronze Age";  //Bronze Age (3000 BCE to 1200 BC)
             if (year <= -550) return "Iron Age"; // Iron Age (1200 BC to 550 BC) 
-            if (year <= 1) return "Early Classical Era"; // Early Classical Era (550 BC to 1 AD)
-            if (year <= 476) return "Latter Classical Era"; // Latter Classical Era (1 AD to 476 AD, Fall of Western Roman Empire)
+            if (year <= 1) return "Early Classical"; // Early Classical Era (550 BC to 1 AD)
+            if (year <= 476) return "Latter Classical"; // Latter Classical Era (1 AD to 476 AD, Fall of Western Roman Empire)
             if (year <= 1000) return "Early Medieval"; // Early Middle Ages (476 to 1000)
             if (year <= 1250) return "High Medieval"; // High Middle Ages (1000 to 1250)
             if (year <= 1491) return "Late Medieval"; // Late Middle Ages (1250 to 1453, eve of Columbus' voyage)
             if (year <= 1788) return "Renaissance"; // Up to eve of French Revolution
-            if (year <= 1945) return "Early Modern"; // Up to end of WWII
-            if (year <= 2045) return "Contemporary"; // Roughly up to a generation from now
-            if (year > 2045) return "Future";
+            if (year <= 1945) return "Modern"; // Up to end of WWII
+            if (year <= 2030) return "Contemporary"; // Roughly up to a generation from now
+            if (year > 2030) return "Future";
             return "Unknown"; // Default fallback
         }
     }

@@ -158,6 +158,7 @@ function LanguageConfiguration({ availableTranslations, selectedLanguages, onLan
                         <label key={lang.languageKey}>
                             <input
                                 type="checkbox"
+                                className="form-check-input"
                                 value={lang.languageKey}
                                 checked={selectedLanguages.includes(lang.languageKey)}
                                 onChange={() => handleCheckboxChange(lang.languageKey)}
