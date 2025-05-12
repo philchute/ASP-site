@@ -1,0 +1,81 @@
+@page
+@model ASP_site.Pages.Years.IndexModel
+@using ASP_site.Models @* For easy access to enums if needed in Razor *@
+@using System.ComponentModel.DataAnnotations @* Required for DisplayAttribute access in GetDisplayName if it were here *@
+
+@{
+    ViewData["Title"] = "Years Timeline";
+}
+
+<div class="jumbotron p-2 d-flex justify-content-between">
+    <h2 class="mr-auto display-3">Years</h2>
+    <form class="d-flex flex-wrap">
+        <div class="form-group ps-2">
+            <label class="col-form-label" asp-for="SelectedContentType">Content Type:</label>
+            <select class="form-control" asp-for="SelectedContentType" asp-items="Model.ContentTypes" onchange="this.form.submit();">
+                <option value="">All</option>
+            </select>
+        </div>
+        <div class="form-group ps-2">
+            <label class="col-form-label" asp-for="SelectedAgeAppropriateness">Age Group:</label>
+            <select class="form-control" asp-for="SelectedAgeAppropriateness" asp-items="Model.AgeAppropriatenessLevels" onchange="this.form.submit();">
+                <option value="">All</option>
+            </select>
+        </div>
+        <div class="form-group ps-2" style="flex-grow: 1;">
+            <label class="col-form-label" asp-for="SearchString">Search:</label>
+            <input class="form-control" type="text" asp-for="SearchString" />
+            <input class="form-control btn btn-light mt-1" type="submit" value="Search" />
+        </div>
+        <div class="form-group ps-2">
+            <label class="col-form-label" asp-for="SortField">Sort by:</label>
+            <select class="form-control" asp-for="SortField" asp-items="Model.SortOptions" onchange="this.form.submit();">
+            </select>
+        </div>
+    </form>
+</div>
+
+<section class="grid mt-3">
+    <div class="d-flex bg-dark text-white fw-bold sticky-top"> @* Added sticky-top for header *@
+        <div class="p-1" style="flex:0 0 15%">Era</div> @* Adjusted width *@
+        <div class="p-1 text-center" style="flex:0 0 5%">Year</div> @* Adjusted width, centered *@
+        <div class="p-1 text-center" style="flex:0 0 5%">Type</div> @* Adjusted width, centered *@
+        <div class="p-1" style="flex:0 0 13%">Age Group</div>
+        <div class="p-1" style="flex:0 0 47%">Title</div> @* Adjusted width *@
+        <div class="p-1" style="flex:0 0 15%">Published / Availability</div>
+    </div>
+
+    @if(Model.TimelineEntries != null && Model.TimelineEntries.Any()) {
+        foreach (var entry in Model.TimelineEntries) { 
+            <div class="d-flex border-bottom"> @* Added border-bottom for row separation *@
+                <div class="p-1" style="flex:0 0 15%">@ASP_site.Pages.Years.IndexModel.GetEra(entry.Year)</div> @* Adjusted width *@
+                <div class="p-1 text-center" style="flex:0 0 5%">@entry.Year</div> @* Adjusted width, centered *@
+                <div class="p-1 text-center" style="flex:0 0 5%"> @* Adjusted width, centered and content *@
+                    @if (entry.Type.HasValue)
+                    {
+                        <img src="~/image/@(entry.Type.Value.ToString()).svg" alt="@entry.Type.Value.ToString()" title="@entry.Type.Value.ToString()" style="width: 24px; height: 24px;" />
+                    }
+                    else
+                    {
+                        <span>-</span>
+                    }
+                </div>
+                <div class="p-1" style="flex:0 0 13%">@ASP_site.Pages.Years.IndexModel.GetEnumDisplayName(entry.Age)</div>
+                <div class="p-1" style="flex:0 0 47%" title="@entry.Description">@(entry.Title ?? "-")</div> @* Adjusted width, added hover text *@
+                <div class="p-1" style="flex:0 0 15%"> @* Updated display logic *@
+                    @if (!string.IsNullOrEmpty(entry.Availability) && !string.IsNullOrEmpty(entry.Published)) {
+                        <span>@entry.Availability - @entry.Published</span>
+                    } else if (!string.IsNullOrEmpty(entry.Availability)) {
+                        <span>@entry.Availability</span>
+                    } else if (!string.IsNullOrEmpty(entry.Published)) {
+                        <span>@entry.Published</span>
+                    } else {
+                        <span>-</span>
+                    }
+                </div>
+            </div>
+        }
+    } else {
+        <p class="p-2">No timeline entries found matching your criteria. Try adjusting the filters or search terms.</p>
+    }
+</section>

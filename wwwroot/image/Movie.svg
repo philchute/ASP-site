@@ -1,0 +1,12 @@
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <rect width="24" height="24" rx="3" ry="3" fill="#E0E0E0"/>
+
+  <!-- DVD Disc -->
+  <circle cx="12" cy="12" r="9.5" fill="#D3D3D3" stroke="black" stroke-width="0.8"/>
+  
+  <!-- Inner ring -->
+  <circle cx="12" cy="12" r="7" fill="none" stroke="#C0C0C0" stroke-width="1"/>
+
+  <!-- Center hole -->
+  <circle cx="12" cy="12" r="2.5" fill="#E0E0E0" stroke="#A9A9A9" stroke-width="0.5"/>
+</svg> 

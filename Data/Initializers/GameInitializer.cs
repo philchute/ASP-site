@@ -20,6 +20,25 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
+          GameID = "AoE",
+          Name = "Age of Empires",
+          Description = "The original title in the Age of Empires series. The original title maintains a competitive scene in Vietnam, but most " +
+            "players switched to AoE2. A Definitive Edition is available on Steam, but it does not receive regular updates anymore. " +
+            "The AoE2:DE expansion \"Rise of Rome\" is a remake of AoE1 in the AoE2 engine, which received some additional balance updates.",
+          Developer = "Ensemble Studios",
+          SteamID = 878380,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.RTS,
+          ReleaseDates = [
+            new ReleaseDate{Year = 1997, Month = 11, Day = 19},
+            new ReleaseDate{Year = 2019, Month = 8, Day = 19, Region = Region.Worldwide, ReleaseVersion = ReleaseVersion.ReRelease}
+          ]
+        },
+        new Game {
           GameID = "AoE2",
           Name = "Age of Empires II",
           Description = "A classic real-time strategy game set in the Middle Ages. The Definitive Edition is available on Steam.",
@@ -34,6 +53,23 @@ namespace ASP_site.Data.Initializers {
           ReleaseDates = [
             new ReleaseDate{Year = 1999, Month = 9, Day = 30},
             new ReleaseDate{Year = 2019, Month = 11, Day = 14, Region = Region.Worldwide, ReleaseVersion = ReleaseVersion.ReRelease}
+          ]
+        },
+        new Game {
+          GameID = "AoE3",
+          Name = "Age of Empires III",
+          Description = "The third entry in the Age of Empires series, which also received a Definitive Edition on Steam.",
+          Developer = "Ensemble Studios",
+          SteamID = 813780,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.RTS,
+          ReleaseDates = [
+            new ReleaseDate{Year = 2005, Month = 10, Day = 25},
+            new ReleaseDate{Year = 2020, Month = 10, Day = 15, Region = Region.Worldwide, ReleaseVersion = ReleaseVersion.ReRelease}
           ]
         },
         new Game {
@@ -53,10 +89,28 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
+          GameID = "AoM",
+          Name = "Age of Mythology",
+          Description = "A spin-off of the Age of Empires series, which received a \"Retold\" edition on Steam.",
+          Developer = "Ensemble Studios",
+          SteamID = 813780,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = true,
+          IsCommunityMaintained = false,
+          Genre = Genre.RTS,
+          ReleaseDates = [
+            new ReleaseDate{Year = 2002, Month = 10, Day = 31, Region = Region.NA},
+            new ReleaseDate{Year = 2002, Month = 11, Day = 14, Region = Region.EU},
+            new ReleaseDate{Year = 2024, Month = 9, Day = 4, Region = Region.Worldwide, ReleaseVersion = ReleaseVersion.ReRelease}
+          ]
+        },
+        new Game {
           GameID = "AttackersGoRed",
           Name = "Attackers Go Red",
           Description = "A team-based multiplayer mod for Quake.",
-          ModForGameID = "Quake",
+          ModForGameID = "Quake1",
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
@@ -1597,6 +1651,21 @@ namespace ASP_site.Data.Initializers {
           ReleaseDates = [
             new ReleaseDate{Year = 2016, Region = Region.Worldwide, ReleaseVersion = ReleaseVersion.SteamRelease},
             new ReleaseDate{Year = 1999, Month =1},
+          ]
+        },
+        new Game {
+          GameID = "Tannenberg",
+          Name = "Tannenberg",
+          Description = "A large scale WW1 squad based shooter allowing up to 64 players on a server.",
+          Developer = "M2H, Black Mill Games",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = true,
+          IsCommunityMaintained = true,
+          Genre = Genre.FPS,
+          ReleaseDates = [
+            new ReleaseDate{Year = 2019, Month = 2, Day = 13, Region = Region.Worldwide}
           ]
         },
         new Game {
