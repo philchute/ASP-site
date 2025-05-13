@@ -33,7 +33,7 @@
 
   @if(Model.Engines != null) {
     @foreach (Engine e in Model.Engines) {
-      <a class="row g-0 text-decoration-none text-reset @Model.EngineClass(e)" asp-page="./Engine" asp-route-EngineID="@e.EngineID">
+      <a class="row g-0 text-decoration-none text-reset border-bottom @Model.EngineClass(e)" asp-page="./Engine" asp-route-EngineID="@e.EngineID">
         <div class="p-1 text-center col-sm-2">@e.Year</div>
         <div class="p-1 col-sm-3">@e.EngineID</div>
         <div class="p-1 col">@e.Name</div>

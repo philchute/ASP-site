@@ -51,7 +51,7 @@
         </div>
 
         @foreach (var map in Model.CSMaps) {
-            <a class="row g-0 text-decoration-none text-reset" asp-page="./Map" asp-route-id="@map.MapID">
+            <a class="row g-0 text-decoration-none text-reset border-bottom" asp-page="./Map" asp-route-id="@map.MapID">
                 <div class="p-1 text-center col-sm-1">@(map.IsCompetitive ? Html.Raw("<img src=\"/image/star.svg\" alt=\"Competitive\" class=\"comp-icon\" title=\"Competitive Map\" />") : "")</div>
                 <div class="p-1 col-sm-2">@map.MapID</div>
                 <div class="py-1 px-0 text-center col-sm-1 d-flex justify-content-around align-items-center">
@@ -80,7 +80,7 @@
         </div>
 
         @foreach (var map in Model.TFMaps) {
-            <a class="row g-0 text-decoration-none text-reset" asp-page="./Map" asp-route-id="@map.MapID">
+            <a class="row g-0 text-decoration-none text-reset border-bottom" asp-page="./Map" asp-route-id="@map.MapID">
                 <div class="p-1 text-center col-sm-1">@(map.IsCompetitive ? Html.Raw("<img src=\"/image/star.svg\" alt=\"Competitive\" class=\"comp-icon\" title=\"Competitive Map\" />") : "")</div>
                 <div class="p-1 col-sm-2">@map.MapID</div>
                 <div class="py-1 px-0 text-center col-sm-1 d-flex justify-content-around align-items-center">

@@ -38,7 +38,7 @@
 
 <section class="grid">
   <div class="row bg-dark text-white fw-bold g-0">
-    <div class="p-1 text-end col-sm-1">Year</div>
+    <div class="p-1 text-center col-sm-1">Year</div>
     <div class="p-1 col-sm-3">Name</div>
     <div class="p-1 text-center col-sm-2">Engine</div>
     <div class="p-1 text-center col-sm-1">Genre</div>
@@ -49,8 +49,8 @@
 
   @if(Model.Games != null) {
     @foreach (Game g in Model.Games) {
-      <a class="row g-0 text-decoration-none text-reset @Model.GameClass(g)" asp-page="./Game" asp-route-GameID="@g.GameID">
-        <div class="p-1 text-end col-sm-1">@(g.Year?.ToString() ?? "-")</div>
+      <a class="row g-0 text-decoration-none text-reset border-bottom @Model.GameClass(g)" asp-page="./Game" asp-route-GameID="@g.GameID">
+        <div class="p-1 text-center col-sm-1">@(g.Year?.ToString() ?? "-")</div>
         <div class="p-1 col-sm-3">
           @(g.Name ?? "-")
           @if (!string.IsNullOrEmpty(g.ModForGameID))

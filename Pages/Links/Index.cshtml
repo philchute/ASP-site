@@ -47,7 +47,7 @@
 
     @if(Model.Links != null) {
         @foreach (Link link in Model.Links) {
-            <div class="row g-0">
+            <div class="row g-0 border-bottom">
                 <div class="p-1 col-sm-1 text-center">
                     @if(!string.IsNullOrEmpty(link.GameID)) {
                         <a asp-page="/Games/Game" asp-route-GameID="@link.GameID">@link.GameID</a>
