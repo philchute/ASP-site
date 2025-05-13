@@ -16,6 +16,7 @@ namespace ASP_site.Data
     public DbSet<Link> Links { get; set; }
     public DbSet<Server> Servers { get; set; }
     public DbSet<Map> Maps { get; set; }
+    public DbSet<YearEntry> YearEntries { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

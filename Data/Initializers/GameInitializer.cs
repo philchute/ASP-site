@@ -1525,7 +1525,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "QuakeChampions",
+          GameID = "QC",
           Name = "Quake Champions",
           Description = "A free-to-play arena shooter that brings the classic Quake gameplay to the modern era with unique champion abilities.",
           EngineID = "idtech6",

@@ -94,7 +94,7 @@ namespace ASP_site.Data.Initializers {
         // BlackMesa
         new Link { GameID = "BlackMesa", Label = "Black Mesa Gameplay Launch Trailer", Description = "Black Mesa Gameplay Launch Trailer",
           LinkType = LinkType.Trailer, Url = "https://youtu.be/V7vDsarvyoc" },
-        new Link { GameID = "BlackMesa", Label = "Black Mesa: The 16 Year Project to Remake Half-Life | Noclip Documentary", Description = "Black Mesa documentary",
+        new Link { GameID = "BlackMesa", Label = "Black Mesa: The 16 Year Project to Remake Half-Life", Description = "Black Mesa documentary",
           LinkType = LinkType.Documentary, Url = "https://youtu.be/G_TcAxAKCAI" },
         new Link { GameID = "BlackMesa", Label = "Black Mesa is Genius, And Here's Why", Description = "Black Mesa video essay",
           LinkType = LinkType.Documentary, Url = "https://youtu.be/-d8KAq78gco" },
@@ -199,7 +199,7 @@ namespace ASP_site.Data.Initializers {
         new Link { GameID = "DirtyBomb", Label = "Death of a Game: Dirty Bomb", Description = "Death of a Game: Dirty Bomb",
           LinkType = LinkType.Documentary, Url = "https://youtu.be/ORf1dIgbXTY" },
         new Link { GameID = "DirtyBomb", Label = "Dirty Bomb Official Discord", Description = "Dirty Bomb official Discord server",
-          LinkType = LinkType.OfficialDiscord, Url = "https://discord.gg/jqmQZJG" },
+          LinkType = LinkType.Discord, Url = "https://discord.gg/jqmQZJG" },
         new Link { GameID = "DirtyBomb", Label = "Engineer gameplay", Description = "Me playing Bushwhacker on offense", 
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=fRk_zF3UYAY" },
 
@@ -209,7 +209,7 @@ namespace ASP_site.Data.Initializers {
 
         // DMCR
         new Link { GameID = "DMCR", Label = "DMC:R official discord", Description = "DMC:R official discord",
-          LinkType = LinkType.CommunityDiscord, Url = "https://discord.gg/n2xpW9x" },
+          LinkType = LinkType.Discord, Url = "https://discord.gg/n2xpW9x" },
         new Link { GameID = "DMCR", Label = "DMC:R beta test", Description = "Me playing DMC:R on dm6 and e1m2", 
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=mmv3yiMkcOA" },
         new Link { GameID = "DMCR", Label = "Deathmatch Classic Refragged beta test", Description = "Me playing DMC:R on dm2 and dm3", 
@@ -227,7 +227,7 @@ namespace ASP_site.Data.Initializers {
         new Link { GameID = "DMCR", Label = "Coaxion Games", Description = "Coaxion Games",
           LinkType = LinkType.Official, Url = "https://coaxion.games/" },
         new Link { GameID = "DMCR", Label = "Coaxion Games discord", Description = "Coaxion Games discord",
-          LinkType = LinkType.CommunityDiscord, Url = "https://discord.gg/TvEyWQcm4j" },
+          LinkType = LinkType.Discord, Url = "https://discord.gg/TvEyWQcm4j" },
 
         // DoD
         new Link { GameID = "DoD", Label = "Nineteen Eleven DoD Community", Description = "Pickups, tournaments, forums and info",
@@ -299,9 +299,9 @@ namespace ASP_site.Data.Initializers {
         new Link { GameID = "ET", Label = "ET: Legacy Official Site", Description = "Enemy Territory: Legacy official website",
           LinkType = LinkType.Official, Url = "https://www.etlegacy.com" },
         new Link { GameID = "ET", Label = "ET: Legacy Discord", Description = "Enemy Territory: Legacy Discord server",
-          LinkType = LinkType.CommunityDiscord, Url = "https://discord.gg/etlegacy" },
+          LinkType = LinkType.Discord, Url = "https://discord.gg/etlegacy" },
         new Link { GameID = "ET", Label = "ET: Legacy Competitive Discord", Description = "Enemy Territory: Legacy Competitive Discord server",
-          LinkType = LinkType.CommunityDiscord, Url = "https://discord.gg/etcompetitive" },
+          LinkType = LinkType.Discord, Url = "https://discord.gg/etcompetitive" },
         new Link { GameID = "ET", Label = "ET: Legacy Server List", Description = "List of current Enemy Territory: Legacy servers",
           LinkType = LinkType.Community, Url = "https://etlegacy.com/servers" },
         new Link { GameID = "ET", Label = "Enemy Territory Singleplayer Trailer", Description = "Enemy Territory Singleplayer trailer",
@@ -355,7 +355,7 @@ namespace ASP_site.Data.Initializers {
         new Link { GameID = "HalfLife", Label = "Half-life: VR Mod", Description = "Half-life: VR Mod on Steam",
           LinkType = LinkType.Download, Url = "https://store.steampowered.com/app/1908720/HalfLife_VR_Mod/" },
         new Link { GameID = "HalfLife", Label = "Goldsrc and Source Mod discord", Description = "Goldsrc and Source Mod discord",
-          LinkType = LinkType.CommunityDiscord, Url = "https://discord.gg/kr8WWsB" },
+          LinkType = LinkType.Discord, Url = "https://discord.gg/kr8WWsB" },
         new Link { GameID = "HalfLife", Label = "Goldsrc Saturdays group", Description = "Goldsrc Saturdays group",
           LinkType = LinkType.Community, Url = "https://linktr.ee/gssat" },
 
@@ -443,7 +443,7 @@ namespace ASP_site.Data.Initializers {
         new Link { GameID = "NaturalSelection", Label = "Natural Selection pickups", Description = "Natural Selection pickups", 
           LinkType = LinkType.Community, Url = "https://www.ensl.org/" },
         new Link { GameID = "NaturalSelection", Label = "Natural Selection discord", Description = "Natural Selection discord", 
-          LinkType = LinkType.CommunityDiscord, Url = "https://discord.gg/ZUSSBUA" },
+          LinkType = LinkType.Discord, Url = "https://discord.gg/ZUSSBUA" },
         
         // NeoTokyo
         new Link { GameID = "NeoTokyo", Label = "Neo Tokyo Guide", Description = "Neo Tokyo Guide",
@@ -508,7 +508,7 @@ namespace ASP_site.Data.Initializers {
         new Link { GameID = "Quake1", Label = "quakeservers.net", Description = "Active servers",
           LinkType = LinkType.Community, Url = "https://www.quakeservers.net/quakeworld/servers/" },
         new Link { GameID = "Quake1", Label = "usquake.world discord", Description = "usquake.world discord",
-          LinkType = LinkType.CommunityDiscord, Url = "http://discord.usquake.world/" },
+          LinkType = LinkType.Discord, Url = "http://discord.usquake.world/" },
         new Link { GameID = "Quake1", Label = "Decino's Quake 25th Anniversary Event - Complete Chaos", Description = "packed server",
           LinkType = LinkType.Gameplay, Url = "https://youtu.be/rf7jFrhnhHU" },
         new Link { GameID = "Quake1", Label = "Kovaak teaches QuakeWorld duels", Description = "Kovaak teaches QuakeWorld duels playlist",
@@ -621,13 +621,13 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=111YR7B6PvU" },
 
         // QuakeChampions
-        new Link { GameID = "QuakeChampions", Label = "Quake Champions Trailer", Description = "Quake Champions GameplayTrailer",
+        new Link { GameID = "QC", Label = "Quake Champions Trailer", Description = "Quake Champions GameplayTrailer",
           LinkType = LinkType.Trailer, Url = "https://youtu.be/B5WXQW5opa8" },
-        new Link { GameID = "QuakeChampions", Label = "The Greatest Quake Player on Earth | rapha short movie", Description = "The Greatest Quake Player on Earth | rapha short movie",
+        new Link { GameID = "QC", Label = "The Greatest Quake Player on Earth | rapha short movie", Description = "The Greatest Quake Player on Earth | rapha short movie",
           LinkType = LinkType.Gameplay, Url = "https://youtu.be/lJBN_lu-OVo" },
-        new Link { GameID = "QuakeChampions", Label = "Is Quake Champions Any Good? - A sign of the times in modern gaming", Description = "Is Quake Champions Any Good? - A sign of the times in modern gaming",
+        new Link { GameID = "QC", Label = "Is Quake Champions Any Good?", Description = "Is Quake Champions Any Good? - A sign of the times in modern gaming",
           LinkType = LinkType.Documentary, Url = "https://youtu.be/L4ej5xk-HHY" },
-        new Link { GameID = "QuakeChampions", Label = "Death of a Game: Quake Champions", Description = "Death of a Game: Quake Champions",
+        new Link { GameID = "QC", Label = "Death of a Game: Quake Champions", Description = "Death of a Game: Quake Champions",
           LinkType = LinkType.Documentary, Url = "https://youtu.be/zsQFxBndRG0" },
 
         // QuakeLive
@@ -636,7 +636,7 @@ namespace ASP_site.Data.Initializers {
 
         // Ricochet
         new Link { GameID = "Ricochet", Label = "Ricochet discord", Description = "Ricochet community discord",
-          LinkType = LinkType.CommunityDiscord, Url = "https://discord.gg/b2teuWM" },
+          LinkType = LinkType.Discord, Url = "https://discord.gg/b2teuWM" },
         new Link { GameID = "Ricochet", Label = "Ricochet: A Deep Look at a Shallow Game", Description = "Ricochet: A Deep Look at a Shallow Game",
           LinkType = LinkType.Documentary, Url = "https://www.youtube.com/watch?v=4B2DRbbloEs" },
         new Link { GameID = "Ricochet", Label = "Ricochet Mapping Tutorial", Description = "Ricochet Mapping Tutorial",

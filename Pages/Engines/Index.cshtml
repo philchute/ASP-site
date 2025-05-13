@@ -25,18 +25,18 @@
 </div>
 
 <section class="grid">
-  <div class="d-flex bg-dark text-white fw-bold">
-    <div class="p-1" style="flex:0 0 10%">Year</div>
-    <div class="p-1" style="flex:0 0 20%">Engine</div>
-    <div class="p-1" style="flex:0 0 70%">Name</div>
+  <div class="row bg-dark text-white fw-bold g-0">
+    <div class="p-1 text-center col-2">Year</div>
+    <div class="p-1 col-3">Engine</div>
+    <div class="p-1 col">Name</div>
   </div>
 
   @if(Model.Engines != null) {
     @foreach (Engine e in Model.Engines) {
-      <a class="d-flex @Model.EngineClass(e)" asp-page="./Engine" asp-route-EngineID="@e.EngineID">
-        <div class="p-1" style="flex:0 0 10%">@e.Year</div>
-        <div class="p-1" style="flex:0 0 20%">@e.EngineID</div>
-        <div class="p-1" style="flex:0 0 70%">@e.Name</div>
+      <a class="row g-0 text-decoration-none text-reset @Model.EngineClass(e)" asp-page="./Engine" asp-route-EngineID="@e.EngineID">
+        <div class="p-1 text-center col-2">@e.Year</div>
+        <div class="p-1 col-3">@e.EngineID</div>
+        <div class="p-1 col">@e.Name</div>
       </a>
     }
   }

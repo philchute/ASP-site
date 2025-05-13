@@ -10,6 +10,7 @@ namespace ASP_site.Data {
       context.Servers.RemoveRange(context.Servers);
       context.Games.RemoveRange(context.Games);
       context.Engines.RemoveRange(context.Engines);
+      context.YearEntries.RemoveRange(context.YearEntries);
       context.SaveChanges();
       
       // Initialize engines
@@ -124,6 +125,17 @@ namespace ASP_site.Data {
         }
         catch (Exception ex) {
           Console.WriteLine($"Failed to add server {server.Name}: {ex.Message}");
+        }
+      }
+
+      // Initialize Year Entries
+      var yearEntries = YearEntryInitializer.GetYearEntries();
+      foreach (var entry in yearEntries) {
+        try {
+          context.YearEntries.Add(entry);
+        }
+        catch (Exception ex) {
+          Console.WriteLine($"Failed to add year entry (ID: {entry.ID}, Title: {entry.Title}): {ex.Message}");
         }
       }
       

@@ -35,7 +35,7 @@ namespace ASP_site.Pages.Links
             // Create select list for link types filter (excluding Steam and SteamDB)
             var linkTypesList = Enum.GetValues(typeof(LinkType))
                 .Cast<LinkType>()
-                .Where(lt => lt != LinkType.Store && lt != LinkType.SteamDB)
+                .Where(lt => lt != LinkType.Store && lt != LinkType.SteamDB && lt != LinkType.Wiki)
                 .Select(lt => lt.ToString());
             LinkTypes = new SelectList(linkTypesList);
 

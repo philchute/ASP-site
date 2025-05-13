@@ -4,24 +4,25 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Collections.Generic;
 using System.Linq;
 using ASP_site.Models;
-using ASP_site.Data.Initializers;
+using ASP_site.Data;
 using System.ComponentModel.DataAnnotations;
 using System;
 using System.Reflection;
+using Microsoft.EntityFrameworkCore;
 
 namespace ASP_site.Pages.Years
 {
     public class IndexModel : PageModel
     {
-        private List<ASP_site.Models.YearEntry> _allEntries;
+        private readonly GameContext _context;
 
         // Helper dictionaries for checkboxes
         public Dictionary<string, string> AllContentTypes { get; private set; }
 
 
-        public IndexModel()
+        public IndexModel(GameContext context)
         {
-            _allEntries = YearEntryInitializer.GetYearEntries();
+            _context = context;
             TimelineEntries = new List<ASP_site.Models.YearEntry>();
 
             // Populate checkbox options for ContentTypes
@@ -57,7 +58,7 @@ namespace ASP_site.Pages.Years
         public string? SortField { get; set; } = "Year";
         public SelectList? SortOptions { get; set; }
 
-        public void OnGet()
+        public async Task OnGetAsync()
         {
             // Initialize selections if empty (treat as 'All' selected)
             if (SelectedContentTypes == null || !SelectedContentTypes.Any())
@@ -70,27 +71,27 @@ namespace ASP_site.Pages.Years
                  SelectedAgeAppropriateness = Enum.GetNames(typeof(AgeAppropriateness)).ToList(); 
             }
 
-
-            IEnumerable<ASP_site.Models.YearEntry> entries = _allEntries;
+            // Fetch entries from context as IQueryable
+            IQueryable<ASP_site.Models.YearEntry> entriesQuery = _context.YearEntries.AsQueryable();
 
             // Filter by selected Content Types
             // Check count against AllContentTypes dictionary size
             if (SelectedContentTypes != null && SelectedContentTypes.Any() && SelectedContentTypes.Count < AllContentTypes.Count) 
             {
-                entries = entries.Where(e => e.Type.HasValue && SelectedContentTypes.Contains(e.Type.Value.ToString()));
+                entriesQuery = entriesQuery.Where(e => e.Type.HasValue && SelectedContentTypes.Contains(e.Type.Value.ToString()));
             }
 
             // Filter by selected Age Appropriateness levels
             // Check count against total number of AgeAppropriateness enum values
             if (SelectedAgeAppropriateness != null && SelectedAgeAppropriateness.Any() && SelectedAgeAppropriateness.Count < Enum.GetNames(typeof(AgeAppropriateness)).Length)
             {
-                entries = entries.Where(e => SelectedAgeAppropriateness.Contains(e.Age.ToString()));
+                entriesQuery = entriesQuery.Where(e => SelectedAgeAppropriateness.Contains(e.Age.ToString()));
             }
 
 
             if (!string.IsNullOrEmpty(SearchString))
             {
-                entries = entries.Where(s => (s.Title != null && s.Title.Contains(SearchString, StringComparison.OrdinalIgnoreCase)) ||
+                entriesQuery = entriesQuery.Where(s => (s.Title != null && s.Title.Contains(SearchString, StringComparison.OrdinalIgnoreCase)) ||
                                              (s.Description != null && s.Description.Contains(SearchString, StringComparison.OrdinalIgnoreCase)));
             }
 
@@ -98,17 +99,17 @@ namespace ASP_site.Pages.Years
             switch (SortField)
             {
                 case "Title":
-                    entries = entries.OrderBy(e => e.Title).ThenBy(e => e.Year);
+                    entriesQuery = entriesQuery.OrderBy(e => e.Title).ThenBy(e => e.Year);
                     break;
                 case "Published":
-                    entries = entries.OrderBy(e => string.IsNullOrEmpty(e.Published)).ThenBy(e => e.Published).ThenBy(e => e.Year);
+                    entriesQuery = entriesQuery.OrderBy(e => string.IsNullOrEmpty(e.Published)).ThenBy(e => e.Published).ThenBy(e => e.Year);
                     break;
                 default: // Year
-                    entries = entries.OrderBy(e => e.Year).ThenBy(e => e.StartDate).ThenBy(e => e.Title);
+                    entriesQuery = entriesQuery.OrderBy(e => e.Year).ThenBy(e => e.Title);
                     break;
             }
-
-            TimelineEntries = entries.ToList();
+            // Execute the query asynchronously
+            TimelineEntries = await entriesQuery.ToListAsync();
         }
 
         // Helper to get DisplayName for enums
@@ -133,7 +134,7 @@ namespace ASP_site.Pages.Years
             if (year <= 1491) return "Late Medieval"; // Late Middle Ages (1250 to 1453, eve of Columbus' voyage)
             if (year <= 1788) return "Renaissance"; // Up to eve of French Revolution
             if (year <= 1945) return "Modern"; // Up to end of WWII
-            if (year <= 2030) return "Contemporary"; // Roughly up to a generation from now
+            if (year <= 2030) return "Contemporary"; // Current time
             if (year > 2030) return "Future";
             return "Unknown"; // Default fallback
         }

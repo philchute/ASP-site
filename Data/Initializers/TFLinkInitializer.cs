@@ -72,7 +72,7 @@ namespace ASP_site.Data.Initializers
         new Link { GameID = "FortressOne", Label = "FortressOne", Description = "FortressOne Official Site",
           LinkType = LinkType.Official, Url = "https://www.fortressone.org/" },
         new Link { GameID = "FortressOne", Label = "FortressOne Official Discord", Description = "FortressOne Official Discord",
-          LinkType = LinkType.OfficialDiscord, Url = "https://discord.fortressone.org" },
+          LinkType = LinkType.Discord, Url = "https://discord.fortressone.org" },
         new Link { GameID = "FortressOne", Label = "FortressOne Latest Release", Description = "FortressOne Latest Release",
           LinkType = LinkType.Download, Url = "https://github.com/FortressOne/windows-installer/releases/latest" },
         new Link { GameID = "FortressOne", Label = "schtop snoozer stall", Description = "Me playing on ff-schtop", 
@@ -136,7 +136,7 @@ namespace ASP_site.Data.Initializers
         new Link { GameID = "TFC", Label = "TFC Pugs", Description = "TFC Pugs website which I run",
           LinkType = LinkType.Community, Url = "https://tfpugs.com/" },
         new Link { GameID = "TFC", Label = "TFC Pugs Discord", Description = "TFC Pugs Discord",
-          LinkType = LinkType.PickupDiscord, Url = "https://discord.gg/MmZeyPUH6q" },
+          LinkType = LinkType.Discord, Url = "https://discord.gg/MmZeyPUH6q" },
 
         // TF2
         new Link { GameID = "TF2", Label = "Errant Signal: Social Spaces & Payload Races", Description = "Compares the social experience of TF2 and Overwatch",
@@ -153,7 +153,7 @@ namespace ASP_site.Data.Initializers
         new Link { GameID = "FF", Label = "Fortress Forever Official Site", Description = "Fortress Forever Official Site",
           LinkType = LinkType.Official, Url = "https://www.fortress-forever.com" },
         new Link { GameID = "FF", Label = "Fortress Forever Official Discord", Description = "Fortress Forever Official Discord",
-          LinkType = LinkType.OfficialDiscord, Url = "https://discord.gg/jCphsAE" },
+          LinkType = LinkType.Discord, Url = "https://discord.gg/jCphsAE" },
         new Link { GameID = "FF", Label = "Fortress Forever Official Wiki", Description = "Fortress Forever Official Wiki",
           LinkType = LinkType.Guide, Url = "http://www.fortress-forever.com/wiki/index.php?title=Main_Page" },
         // Gameplay
@@ -308,17 +308,17 @@ namespace ASP_site.Data.Initializers
           LinkType = LinkType.Guide, MapID = "trimp_trainingz", Url = "https://www.youtube.com/watch?v=GUSoBXCtjXc" },
 
         // Map guides
-        new Link {Label = "Mortality guide by nuki", Description = "Mortality guide by nuki",
+        new Link { GameID = "TFC", Label = "Mortality guide by nuki", Description = "Mortality guide by nuki",
           LinkType = LinkType.Guide, MapID = "mortality", Url = "https://www.youtube.com/watch?v=T7BCJDCtrKw" },
-        new Link {Label = "openfire rampslide", Description = "openfire rampslide by snakey",
+        new Link { GameID = "TFC", Label = "openfire rampslide", Description = "openfire rampslide by snakey",
           LinkType = LinkType.Guide, MapID = "openfire", Url = "https://www.youtube.com/watch?v=CFNWb8cm7bg" },
-        new Link {Label = "openfire ramp slide 2", Description = "openfire ramp slide 2 by snakey",
+        new Link { GameID = "TFC", Label = "openfire ramp slide 2", Description = "openfire ramp slide 2 by snakey",
           LinkType = LinkType.Guide, MapID = "openfire", Url = "https://www.youtube.com/watch?v=W6DaGZK6xTg" },
-        new Link {Label = "openfire ramp slide longer guide", Description = "openfire ramp slide by Texas Cowboy",
+        new Link { GameID = "TFC", Label = "openfire ramp slide longer guide", Description = "openfire ramp slide by Texas Cowboy",
           LinkType = LinkType.Guide, MapID = "openfire", Url = "https://www.youtube.com/watch?v=ZqZZ8BNxK0g" },
-        new Link {Label = "How to shoop the shoop", Description = "How to shoop the shoop",
+        new Link { GameID = "TFC", Label = "How to shoop the shoop", Description = "How to shoop the shoop",
           LinkType = LinkType.Guide, MapID = "shoop", Url = "https://www.youtube.com/watch?v=sIaEaAeiIgo" },
-        new Link {Label = "shutdown2 map guide", Description = "shutdown2 map guide",
+        new Link { GameID = "FF", Label = "shutdown2 map guide", Description = "shutdown2 map guide",
           LinkType = LinkType.Guide, MapID = "shutdown2", Url = "https://www.youtube.com/watch?v=Z2GIVYdFk9k" }
       };
     }

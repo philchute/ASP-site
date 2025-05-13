@@ -2,8 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ASP_site.Models
 {
-    public enum LinkType { Official, Community, OfficialDiscord, CommunityDiscord, PickupDiscord, 
-        Documentary, Guide, Gameplay, Highlights, Store, Stats, Download, SteamDB, Trailer, Wiki }
+    public enum LinkType { Official, Community, Discord, Documentary, Guide, Gameplay, Highlights, Store, Stats, Download, SteamDB, Trailer, Wiki }
 
     public class Link
     {
