@@ -645,7 +645,7 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Highlights, Url = "https://youtu.be/eZW5iDiSoZ4" },
         new Link { GameID = "Ricochet", Label = "ricochet random maps", Description = "Gameplay on various maps", 
           LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=XYqK1bxGWic" },
-        new Link { GameID = "Ricochet", Label = "ricochet random maps 2", Description = "Gameplay on rc_pillars, rc_glupshitto_v2, rc_gss_dust2, rc_deathmatch_extended, rc_snake, and rc_skiz", 
+        new Link { GameID = "Ricochet", Label = "ricochet random maps 2", Description = "rc_pillars, rc_glupshitto_v2, rc_gss_dust2, rc_deathmatch_extended, rc_snake, rc_skiz", 
           LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=iXjZ5xNTXcs" },
         new Link { GameID = "Ricochet", Label = "ricochet dust2 pub", Description = "Gameplay on rc_dust2",
           LinkType = LinkType.Highlights, MapID = "dust2", Url = "https://www.youtube.com/watch?v=S5_IBXCFGX8" },

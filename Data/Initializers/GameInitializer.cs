@@ -720,7 +720,8 @@ namespace ASP_site.Data.Initializers {
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
           ReleaseDates = [
-            new ReleaseDate{Year = 2005, Month = 11, Day = 15},
+            new ReleaseDate{Year = 2003, Month = 11, Day = 18, Region = Region.NA},
+            new ReleaseDate{Year = 2003, Month = 12, Day = 5, Region = Region.EU},
           ]
         },
         new Game {

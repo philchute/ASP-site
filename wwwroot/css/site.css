@@ -100,3 +100,35 @@ section.grid a:hover {
     background-color: #2aa198; /* Green color - General */
     border-color: #2aa198;
 }
+
+/* Make links white-ish with a hover effect */
+a,
+a:visited {
+  color: #f8f9fa; /* Bootstrap's light color */
+  text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+  color: #adb5bd; /* A dimmer grey for hover */
+}
+
+/* Style links specifically within the main content area */
+main a, main a:visited {
+    color: #f8f9fa; /* Bootstrap 'light' color */
+    text-decoration: none; /* Remove underline */
+}
+
+main a:hover {
+    color: #adb5bd; /* A slightly darker grey for hover */
+}
+
+/* Example for text-decoration (commented out by default) */
+/* 
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+*/

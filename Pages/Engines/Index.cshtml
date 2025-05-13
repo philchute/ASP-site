@@ -17,7 +17,6 @@
     <label class="col-form-label" asp-for="SortField" class="control-label">Sort by:</label>
     <select class="form-control" asp-for="SortField" onchange="this.form.submit();">
       <option value="Year">Year</option>
-      <option value="Name">Name</option>
       <option value="Engine">Engine</option>
     </select>
     </div>
@@ -26,17 +25,15 @@
 
 <section class="grid">
   <div class="row bg-dark text-white fw-bold g-0">
-    <div class="p-1 text-center col-sm-2">Year</div>
-    <div class="p-1 col-sm-3">Engine</div>
-    <div class="p-1 col">Name</div>
+    <div class="p-1 col-sm-4 text-center">Year</div>
+    <div class="p-1 col-sm">Name</div>
   </div>
 
   @if(Model.Engines != null) {
     @foreach (Engine e in Model.Engines) {
       <a class="row g-0 text-decoration-none text-reset border-bottom @Model.EngineClass(e)" asp-page="./Engine" asp-route-EngineID="@e.EngineID">
-        <div class="p-1 text-center col-sm-2">@e.Year</div>
-        <div class="p-1 col-sm-3">@e.EngineID</div>
-        <div class="p-1 col">@e.Name</div>
+        <div class="p-1 col-sm-4 text-center">@e.Year</div>
+        <div class="p-1 col-sm text-white">@e.Name</div>
       </a>
     }
   }

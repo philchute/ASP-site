@@ -7,9 +7,9 @@
     ViewData["Title"] = "Years Timeline";
 }
 
-<div class="jumbotron p-2 d-flex justify-content-between align-items-start">
-    <h2 class="mr-auto display-3 pe-3">Years</h2>
-    <form class="d-flex flex-wrap align-items-start">
+<div class="jumbotron p-2 row align-items-start">
+    <h2 class="col-md-auto mr-auto display-3 pe-3">Years</h2>
+    <form class="col-md d-flex flex-wrap align-items-start justify-content-end">
         <div class="form-group ps-2">
             <label class="col-form-label">Age Appropriateness:</label>
             <div>
@@ -64,41 +64,41 @@
 </p>
 
 <section class="grid mt-3">
-    <div class="d-flex bg-dark text-white fw-bold sticky-top">
-        <div class="p-1 text-center" style="flex:0 0 7%">Year</div>
-        <div class="p-1 text-center" style="flex:0 0 10%">Era</div>
-        <div class="p-1 text-center" style="flex:0 0 10%">Age Group</div>
-        <div class="p-1 text-center" style="flex:0 0 5%">Type</div>
-        <div class="p-1 text-center" style="flex:0 0 10%">Published</div>
-        <div class="p-1 text-start" style="flex:0 0 58%">Title <i>(@(Model.TimelineEntries?.Count ?? 0) shown)</i></div>
+    <div class="row g-0 bg-dark text-white fw-bold sticky-top">
+        <div class="p-1 text-center col-sm-1">Year</div>
+        <div class="p-1 text-center col-sm-2">Era</div>
+        <div class="p-1 text-center col-sm-1">Age Group</div>
+        <div class="p-1 text-center col-sm-1">Type</div>
+        <div class="p-1 text-center col-sm-1">Published</div>
+        <div class="p-1 text-start col-sm">Title <i>(@(Model.TimelineEntries?.Count ?? 0) shown)</i></div>
     </div>
 
     @if(Model.TimelineEntries != null && Model.TimelineEntries.Any()) {
         foreach (var entry in Model.TimelineEntries) { 
             <div class="d-flex border-bottom">
-                <div class="p-1 text-center" style="flex:0 0 7%">
+                <div class="p-1 text-center col-sm-1">
                     @{
                         if (entry.Year < 0) { @($"{Math.Abs(entry.Year)} BC") }
                         else { @($"{entry.Year}") }
                     }
                 </div>
-                <div class="p-1 text-center" style="flex:0 0 10%">@ASP_site.Pages.Years.IndexModel.GetEra(entry.Year)</div>
-                <div class="p-1 text-center" style="flex:0 0 10%">@ASP_site.Pages.Years.IndexModel.GetEnumDisplayName(entry.Age)</div>
-                <div class="p-1 text-center" style="flex:0 0 5%">
+                <div class="p-1 text-center col-sm-2">@ASP_site.Pages.Years.IndexModel.GetEra(entry.Year)</div>
+                <div class="p-1 text-center col-sm-1">@ASP_site.Pages.Years.IndexModel.GetEnumDisplayName(entry.Age)</div>
+                <div class="p-1 text-center col-sm-1">
                     @if (entry.Type.HasValue) {
                         <img src="~/image/@(entry.Type.Value.ToString()).svg" alt="@entry.Type.Value.ToString()" title="@entry.Type.Value.ToString()" style="width: 24px; height: 24px;" />
                     } else {
                         <span>-</span>
                     }
                 </div>
-                <div class="p-1 text-center" style="flex:0 0 10%">
+                <div class="p-1 text-center col-sm-1">
                     @if (!string.IsNullOrEmpty(entry.Published)) {
                         <span>@entry.Published</span>
                     } else {
                         <span>-</span>
                     }
                 </div>
-                <div class="p-1 text-start" style="flex:0 0 58%" title="@(entry.Description + (!string.IsNullOrEmpty(entry.Availability) ? $"\n\nAvailability: {entry.Availability}" : ""))">@(entry.Title ?? "-")</div>
+                <div class="p-1 text-start col-sm text-white" title="@(entry.Description + (!string.IsNullOrEmpty(entry.Availability) ? $"\n\nAvailability: {entry.Availability}" : ""))">@(entry.Title ?? "-")</div>
             </div>
         }
     } else {

@@ -51,7 +51,7 @@
     @foreach (Game g in Model.Games) {
       <a class="row g-0 text-decoration-none text-reset border-bottom @Model.GameClass(g)" asp-page="./Game" asp-route-GameID="@g.GameID">
         <div class="p-1 text-center col-sm-1">@(g.Year?.ToString() ?? "-")</div>
-        <div class="p-1 col-sm-3">
+        <div class="p-1 col-sm-3 text-white">
           @(g.Name ?? "-")
           @if (!string.IsNullOrEmpty(g.ModForGameID))
           {

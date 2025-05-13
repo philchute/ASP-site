@@ -20,7 +20,7 @@ namespace ASP_site.Pages.Engines
     public SelectList? SelectEngines { get; set; }
     [BindProperty(SupportsGet = true)] public string? SearchString { get; set; }
     [BindProperty(SupportsGet = true)] public string? SelectedEngine { get; set; }
-    [BindProperty(SupportsGet = true)] public string SortField { get; set; } = "Engine";
+    [BindProperty(SupportsGet = true)] public string SortField { get; set; } = "Name";
 
     public async Task OnGetAsync()
     {
@@ -41,7 +41,6 @@ namespace ASP_site.Pages.Engines
       switch (SortField) {
         case "Year": engines = engines.OrderBy(e => e.Year).ThenBy(e => e.EngineID); break;
         case "Name": engines = engines.OrderBy(e => e.Name).ThenBy(e => e.EngineID); break;
-        case "Engine": engines = engines.OrderBy(e => e.EngineID).ThenBy(e => e.EngineID); break;
       }
       Engines = await engines.ToListAsync();
     }
