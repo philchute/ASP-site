@@ -44,26 +44,26 @@
     <h3 class="mt-4">Counter-Strike Maps</h3>
     <section class="grid">
         <div class="row bg-dark text-white fw-bold g-0">
-            <div class="p-1 text-center col-1">Comp</div>
-            <div class="p-1 col-2">Map Name</div>
-            <div class="py-1 px-0 text-center col-2">Game Versions</div>
-            <div class="p-1 col-7">Description</div>
+            <div class="p-1 text-center col-sm-1">Comp</div>
+            <div class="p-1 col-sm-2">Map Name</div>
+            <div class="py-1 px-0 text-center col-sm-2">Game Versions</div>
+            <div class="p-1 col-sm-7">Description</div>
         </div>
 
         @foreach (var map in Model.CSMaps) {
             <a class="row g-0 text-decoration-none text-reset" asp-page="./Map" asp-route-id="@map.MapID">
-                <div class="p-1 text-center col-1">@(map.IsCompetitive ? Html.Raw("<img src=\"/image/star.svg\" alt=\"Competitive\" class=\"comp-icon\" title=\"Competitive Map\" />") : "")</div>
-                <div class="p-1 col-2">@map.MapID</div>
-                <div class="py-1 px-0 text-center col-1 d-flex justify-content-around align-items-center">
+                <div class="p-1 text-center col-sm-1">@(map.IsCompetitive ? Html.Raw("<img src=\"/image/star.svg\" alt=\"Competitive\" class=\"comp-icon\" title=\"Competitive Map\" />") : "")</div>
+                <div class="p-1 col-sm-2">@map.MapID</div>
+                <div class="py-1 px-0 text-center col-sm-1 d-flex justify-content-around align-items-center">
                     @(map.GameInfo.Any(g => g.GameID == "CS16") ? Html.Raw("<img src=\"/image/cs16.svg\" alt=\"CS 1.6\" class=\"game-icon\" title=\"Counter-Strike 1.6\" />") : Html.Raw("<span class=\"game-icon\"></span>"))
                     @(map.GameInfo.Any(g => g.GameID == "CSCZ") ? Html.Raw("<img src=\"/image/cscz.svg\" alt=\"CS:CZ\" class=\"game-icon\" title=\"Counter-Strike: Condition Zero\" />") : Html.Raw("<span class=\"game-icon\"></span>"))
                     @(map.GameInfo.Any(g => g.GameID == "CSS") ? Html.Raw("<img src=\"/image/css.svg\" alt=\"CS:Source\" class=\"game-icon\" title=\"Counter-Strike: Source\" />") : Html.Raw("<span class=\"game-icon\"></span>"))
                 </div>
-                <div class="py-1 px-0 text-center col-1 d-flex justify-content-around align-items-center">
+                <div class="py-1 px-0 text-center col-sm-1 d-flex justify-content-around align-items-center">
                     @(map.GameInfo.Any(g => g.GameID == "CSGO") ? Html.Raw("<img src=\"/image/csgo.svg\" alt=\"CS:GO\" class=\"game-icon\" title=\"Counter-Strike: Global Offensive\" />") : Html.Raw("<span class=\"game-icon\"></span>"))
                     @(map.GameInfo.Any(g => g.GameID == "CS2") ? Html.Raw("<img src=\"/image/cs2.svg\" alt=\"CS2\" class=\"game-icon\" title=\"Counter-Strike 2\" />") : Html.Raw("<span class=\"game-icon\"></span>"))
                 </div>
-                <div class="p-1 col-7">@map.Description</div>
+                <div class="p-1 col-sm-7">@map.Description</div>
             </a>
         }
     </section>
@@ -73,25 +73,25 @@
     <h3 class="mt-4">Team Fortress Maps</h3>
     <section class="grid">
         <div class="row bg-dark text-white fw-bold g-0">
-            <div class="p-1 text-center col-1">Comp</div>
-            <div class="p-1 col-2">Map Name</div>
-            <div class="py-1 px-0 text-center col-2">Game Versions</div>
-            <div class="p-1 col-7">Description</div>
+            <div class="p-1 text-center col-sm-1">Comp</div>
+            <div class="p-1 col-sm-2">Map Name</div>
+            <div class="py-1 px-0 text-center col-sm-2">Game Versions</div>
+            <div class="p-1 col-sm-7">Description</div>
         </div>
 
         @foreach (var map in Model.TFMaps) {
             <a class="row g-0 text-decoration-none text-reset" asp-page="./Map" asp-route-id="@map.MapID">
-                <div class="p-1 text-center col-1">@(map.IsCompetitive ? Html.Raw("<img src=\"/image/star.svg\" alt=\"Competitive\" class=\"comp-icon\" title=\"Competitive Map\" />") : "")</div>
-                <div class="p-1 col-2">@map.MapID</div>
-                <div class="py-1 px-0 text-center col-1 d-flex justify-content-around align-items-center">
+                <div class="p-1 text-center col-sm-1">@(map.IsCompetitive ? Html.Raw("<img src=\"/image/star.svg\" alt=\"Competitive\" class=\"comp-icon\" title=\"Competitive Map\" />") : "")</div>
+                <div class="p-1 col-sm-2">@map.MapID</div>
+                <div class="py-1 px-0 text-center col-sm-1 d-flex justify-content-around align-items-center">
                     @(map.GameInfo.Any(g => g.GameID == "QWTF") ? Html.Raw("<img src=\"/image/qwtf.svg\" alt=\"QWTF\" class=\"game-icon\" title=\"QuakeWorld Team Fortress\" />") : Html.Raw("<span class=\"game-icon\"></span>"))
                     @(map.GameInfo.Any(g => g.GameID == "TFC") ? Html.Raw("<img src=\"/image/tfc.svg\" alt=\"TFC\" class=\"game-icon\" title=\"Team Fortress Classic\" />") : Html.Raw("<span class=\"game-icon\"></span>"))
                 </div>
-                <div class="py-1 px-0 text-center col-1 d-flex justify-content-around align-items-center">
+                <div class="py-1 px-0 text-center col-sm-1 d-flex justify-content-around align-items-center">
                     @(map.GameInfo.Any(g => g.GameID == "FF") ? Html.Raw("<img src=\"/image/ff.svg\" alt=\"FF\" class=\"game-icon\" title=\"Fortress Forever\" />") : Html.Raw("<span class=\"game-icon\"></span>"))
                     @(map.GameInfo.Any(g => g.GameID == "TF2") ? Html.Raw("<img src=\"/image/tf2.svg\" alt=\"TF2\" class=\"game-icon\" title=\"Team Fortress 2\" />") : Html.Raw("<span class=\"game-icon\"></span>"))
                 </div>
-                <div class="p-1 col-7">@map.Description</div>
+                <div class="p-1 col-sm-7">@map.Description</div>
             </a>
         }
         </section> 

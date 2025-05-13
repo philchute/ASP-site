@@ -38,28 +38,28 @@
 
 <section class="grid">
   <div class="row bg-dark text-white fw-bold g-0">
-    <div class="p-1 text-end col-1">Year</div>
-    <div class="p-1 col-3">Name</div>
-    <div class="p-1 text-center col-2">Engine</div>
-    <div class="p-1 text-center col-1">Genre</div>
-    <div class="p-1 text-center col-1">Availability</div>
-    <div class="p-1 text-center col-2">Developer</div>
-    <div class="p-1 text-center col-2">Maintenance Status</div>
+    <div class="p-1 text-end col-sm-1">Year</div>
+    <div class="p-1 col-sm-3">Name</div>
+    <div class="p-1 text-center col-sm-2">Engine</div>
+    <div class="p-1 text-center col-sm-1">Genre</div>
+    <div class="p-1 text-center col-sm-1">Availability</div>
+    <div class="p-1 text-center col-sm-2">Developer</div>
+    <div class="p-1 text-center col-sm-2">Maintenance Status</div>
   </div>
 
   @if(Model.Games != null) {
     @foreach (Game g in Model.Games) {
       <a class="row g-0 text-decoration-none text-reset @Model.GameClass(g)" asp-page="./Game" asp-route-GameID="@g.GameID">
-        <div class="p-1 text-end col-1">@(g.Year?.ToString() ?? "-")</div>
-        <div class="p-1 col-3">
+        <div class="p-1 text-end col-sm-1">@(g.Year?.ToString() ?? "-")</div>
+        <div class="p-1 col-sm-3">
           @(g.Name ?? "-")
           @if (!string.IsNullOrEmpty(g.ModForGameID))
           {
             @($" ({g.ModForGameID} mod)")
           }
         </div>
-        <div class="p-1 text-center col-2">@(g.EngineID ?? "-")</div>
-        <div class="p-1 text-center col-1">
+        <div class="p-1 text-center col-sm-2">@(g.EngineID ?? "-")</div>
+        <div class="p-1 text-center col-sm-1">
           @if (g.Genre != null)
           {
             @if (g.Genre == Genre.FPS) { <img src="~/image/fps.svg" alt="@g.Genre" title="First-Person Shooter" /> }
@@ -73,7 +73,7 @@
             @("-")
           }
         </div>
-        <div class="p-1 text-center col-1">
+        <div class="p-1 text-center col-sm-1">
           @if (g.IsOpenSource == true)
           {
             <img src="~/image/opensource.svg" alt="Open Source" title="Free Open Source Software" />
@@ -98,8 +98,8 @@
             }
           }
         </div>
-        <div class="p-1 text-center col-2">@(g.Developer ?? "-")</div>
-        <div class="p-1 text-center col-2">
+        <div class="p-1 text-center col-sm-2">@(g.Developer ?? "-")</div>
+        <div class="p-1 text-center col-sm-2">
           @if (g.RequiresCommunityPatch)
           {
             <img src="~/image/patch.svg" alt="Needs Patches" title="Needs Patches" />

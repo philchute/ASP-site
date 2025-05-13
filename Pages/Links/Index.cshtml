@@ -39,16 +39,16 @@
 
 <section class="grid">
     <div class="row bg-dark text-white fw-bold g-0">
-        <div class="p-1 col-1 text-center">Game</div>
-        <div class="p-1 col-1 text-center">Type</div>
-        <div class="p-1 col-5">Label</div>
-        <div class="p-1 col-5">Description</div>
+        <div class="p-1 col-sm-1 text-center">Game</div>
+        <div class="p-1 col-sm-1 text-center">Type</div>
+        <div class="p-1 col-sm-5">Label</div>
+        <div class="p-1 col-sm-5">Description</div>
     </div>
 
     @if(Model.Links != null) {
         @foreach (Link link in Model.Links) {
             <div class="row g-0">
-                <div class="p-1 col-1 text-center">
+                <div class="p-1 col-sm-1 text-center">
                     @if(!string.IsNullOrEmpty(link.GameID)) {
                         <a asp-page="/Games/Game" asp-route-GameID="@link.GameID">@link.GameID</a>
                     } else if (!string.IsNullOrEmpty(link.MapID)) {
@@ -57,10 +57,10 @@
                         <span>-</span>
                     }
                 </div>
-                <div class="p-1 col-1 text-center">@link.LinkType</div>
-                <a class="col-10 row g-0 text-decoration-none text-reset" href="@link.Url">
-                    <div class="p-1 col-5">@(link.Label ?? "-")</div>
-                    <div class="p-1 col-7">@(link.Description ?? "-")</div>
+                <div class="p-1 col-sm-1 text-center">@link.LinkType</div>
+                <a class="col-sm-10 row g-0 text-decoration-none text-reset" href="@link.Url">
+                    <div class="p-1 col-sm-5">@(link.Label ?? "-")</div>
+                    <div class="p-1 col-sm-7">@(link.Description ?? "-")</div>
                 </a>
             </div>
         }
