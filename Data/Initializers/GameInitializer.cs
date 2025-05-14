@@ -5,6 +5,21 @@ namespace ASP_site.Data.Initializers {
     public static Game[] GetGames() {
       return new Game[] {
         new Game {
+          GameID = "0AD",
+          Name = "0 A.D.",
+          Description = "Free Open Source Real Time Strategy Game set between 500 BC and 500 AD.",
+          EngineID = "Pyrogenesis",
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = true,
+          IsDeveloperMaintained = true,
+          IsCommunityMaintained = true,
+          Genre = Genre.RTS,
+          ReleaseDates = [
+            new ReleaseDate{Year = 2010}
+          ]
+        },
+        new Game {
           GameID = "ActionHalfLife",
           Name = "Action Half-Life",
           Description = "A fast-paced action mod for Half-Life featuring new weapons and gameplay mechanics.",
@@ -26,6 +41,7 @@ namespace ASP_site.Data.Initializers {
             "players switched to AoE2. A Definitive Edition is available on Steam, but it does not receive regular updates anymore. " +
             "The AoE2:DE expansion \"Rise of Rome\" is a remake of AoE1 in the AoE2 engine, which received some additional balance updates.",
           Developer = "Ensemble Studios",
+          EngineID = "Genie",
           SteamID = 878380,
           IsFree = false,
           IsPaid = true,
@@ -43,6 +59,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Age of Empires II",
           Description = "A classic real-time strategy game set in the Middle Ages. The Definitive Edition is available on Steam.",
           Developer = "Ensemble Studios",
+          EngineID = "Genie",
           SteamID = 813780,
           IsFree = false,
           IsPaid = true,
@@ -165,6 +182,20 @@ namespace ASP_site.Data.Initializers {
           Genre = Genre.FPS,
           ReleaseDates = [
             new ReleaseDate{Year = 2020, Month = 3, Day = 6},
+          ]
+        },
+        new Game {
+          GameID = "Bridge",
+          Name = "Bridge",
+          Description = "Bridge is a card game that is played by four players.",
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = true,
+          Genre = Genre.TBS,
+          ReleaseDates = [
+            new ReleaseDate{Year = 1925}
           ]
         },
         new Game {
@@ -1343,6 +1374,17 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
+          GameID = "MvC2",
+          Name = "Marvel vs. Capcom 2",
+          Description = "Marvel vs. Capcom 2 is a fighting game developed by Capcom.",
+          EngineID = "source",
+          Developer = "Capcom",
+          Genre = Genre.Fighting,
+          ReleaseDates = [
+            new ReleaseDate{Year = 2000}
+          ]
+        },
+        new Game {
           GameID = "NaturalSelection",
           Name = "Natural Selection",
           Description = "A unique blend of first-person shooter and real-time strategy where two teams (humans and aliens) fight against each other.",
@@ -1639,6 +1681,48 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
+          GameID = "Shogi",
+          Name = "Shogi",
+          Description = "Shogi is a type of Japense chess. It is played by two players on a board with 10x9 squares.",
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = true,
+          Genre = Genre.TBS,
+          ReleaseDates = [
+            new ReleaseDate{Year = 1500}
+          ]
+        },
+        new Game {
+          GameID = "SC2",
+          Name = "Starcraft 2",
+          Description = "Starcraft 2 is a real-time strategy game developed by Blizzard Entertainment.",
+          EngineID = "source",
+          Developer = "Blizzard Entertainment",
+          SteamID = 1180620,
+          IsFree = true,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = true,
+          IsCommunityMaintained = false,
+          Genre = Genre.RTS,
+          ReleaseDates = [
+            new ReleaseDate{Year = 2010, Month = 7, Day = 27},
+          ]
+        },
+        new Game {
+          GameID = "SF2",
+          Name = "Street Fighter 2",
+          Description = "Street Fighter 2 is a fighting game developed by Capcom.",
+          EngineID = "CPS2",
+          Developer = "Capcom",
+          Genre = Genre.Fighting,
+          ReleaseDates = [
+            new ReleaseDate{Year = 1991, Month = 12, Day = 19}
+          ]
+        },
+        new Game {
           GameID = "SvenCoop",
           Name = "Sven Co-op",
           Description = "A cooperative mod that allows players to fight against computer-controlled enemies together. Can play through the original Half-Life game and its expansions in co-op mode.",
@@ -1774,6 +1858,23 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
+          GameID = "Tribes2",
+          Name = "Tribes 2",
+          Description = "Tribes 2 is a first-person shooter game developed by Dynamix.",
+          EngineID = "CPS2",
+          Developer = "Dynamix",
+          SteamID = 1234560,
+          IsFree = false,
+          IsPaid = false,
+          IsOpenSource = true,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = true,
+          Genre = Genre.FPS,
+          ReleaseDates = [
+            new ReleaseDate{Year = 2001, Month = 12, Day = 1}
+          ]
+        },
+        new Game {
           GameID = "Tribes3",
           Name = "Tribes 3: Rivals",
           Description = "A modern take on the classic Tribes series featuring jetpack-based combat.",
@@ -1835,6 +1936,16 @@ namespace ASP_site.Data.Initializers {
           RequiresCommunityPatch = true,
           ReleaseDates = [
             new ReleaseDate{Year = 1999, Month = 11, Day = 22},
+          ]
+        },
+        new Game {
+          GameID = "Wolf3D",
+          Name = "Wolfenstein 3D",
+          Description = "Wolfenstein 3D is a first-person shooter game developed by id Software.",
+          EngineID = "idtech0",
+          Developer = "id Software",
+          ReleaseDates = [
+            new ReleaseDate{Year = 1992, Month = 5, Day = 5}
           ]
         }
       };

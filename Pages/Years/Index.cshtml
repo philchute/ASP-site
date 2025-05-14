@@ -64,7 +64,7 @@
 </p>
 
 <section class="grid mt-3">
-    <div class="row g-0 bg-dark text-white fw-bold sticky-top">
+    <div class="row g-0 bg-dark text-white fw-bold">
         <div class="p-1 text-center col-sm-1">Year</div>
         <div class="p-1 text-center col-sm-2">Era</div>
         <div class="p-1 text-center col-sm-1">Age Group</div>
@@ -75,7 +75,7 @@
 
     @if(Model.TimelineEntries != null && Model.TimelineEntries.Any()) {
         foreach (var entry in Model.TimelineEntries) { 
-            <div class="d-flex border-bottom">
+            <div class="row g-0 border-bottom">
                 <div class="p-1 text-center col-sm-1">
                     @{
                         if (entry.Year < 0) { @($"{Math.Abs(entry.Year)} BC") }

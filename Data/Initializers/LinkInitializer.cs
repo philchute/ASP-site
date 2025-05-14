@@ -32,6 +32,17 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=3e_W1VYuAME" },
         new Link { GameID = "", Label = "Air control guide by nuki", Description = "Air control guide for Quake, QWTF, goldsrc, and source engine physics",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=QhiRrNedvOs" },
+        new Link { GameID = "", Label = "Play strategy games online", Description = "Play strategy games online for free in this lichess fork",
+          LinkType = LinkType.Community, Url = "https://playstrategy.org/" },
+        new Link { GameID = "", Label = "The Best Thing to Happen to the FGC", Description = "Video essay covering Fightcade 2 and the transition to online play",
+          LinkType = LinkType.Documentary, Url = "https://www.youtube.com/watch?v=yxonhj_YQAY" },
+        new Link { GameID = "", Label = "FGC Discords by game", Description = "Hundreds of Discords for fighting games organized by game",
+          LinkType = LinkType.Community, Url = "https://wiki.supercombo.gg/w/SuperCombo_Wiki:Community_portal/Discords/Game" },
+        new Link { GameID = "", Label = "FGC Discords by region", Description = "Hundreds of Discords for fighting games organized by region",
+          LinkType = LinkType.Community, Url = "https://wiki.supercombo.gg/w/SuperCombo_Wiki:Community_portal/Discords/Region" },
+        new Link { GameID = "", Label = "FGC Discords by platform", Description = "Hundreds of Discords for fighting games organized by platform",
+          LinkType = LinkType.Community, Url = "https://wiki.supercombo.gg/w/SuperCombo_Wiki:Community_portal/Discords/Platform" },
+
 
         // ActionHalfLife
         new Link { GameID = "ActionHalfLife", Label = "Action Half-Life gameplay", Description = "Me playing Action Half-Life on napoli and streets", 
@@ -88,7 +99,7 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Official, Url = "http://www.bgmod.com/" },
 
         // Battlebit
-        new Link { GameID = "Battlebit", Label = "battlebit nighttime train", Description = "Me playing Battlebit on nighttime train", 
+        new Link { GameID = "Battlebit", Label = "Battlebit nighttime train", Description = "Me playing Battlebit on nighttime train", 
           LinkType = LinkType.Gameplay, Url = "https://youtu.be/aUuRIuZR-Ac" },
 
         // BlackMesa
@@ -99,8 +110,22 @@ namespace ASP_site.Data.Initializers {
         new Link { GameID = "BlackMesa", Label = "Black Mesa is Genius, And Here's Why", Description = "Black Mesa video essay",
           LinkType = LinkType.Documentary, Url = "https://youtu.be/-d8KAq78gco" },
 
+        // Bridge
+        new Link { GameID = "Bridge", Label = "Bridge Puzzles and Guides", Description = "Bridge puzzles and guides",
+          LinkType = LinkType.Community, Url = "http://www.rpbridge.net/index.htm" },
+        new Link { GameID = "Bridge", Label = "Point count and distribution trainers", Description = "Point count and distribution trainers",
+          LinkType = LinkType.Community, Url = "https://bridgewinners.com/games/" },
+        new Link { GameID = "Bridge", Label = "Learn-Bridge Android App", Description = "Learn-Bridge Android App, uses programmed learning",
+          LinkType = LinkType.Community, Url = "https://play.google.com/store/apps/details?id=com.wesleymay.bridgeapp" },
+        new Link { GameID = "Bridge", Label = "Bridge Lesson's Basic Lessons Playlist", Description = "Bridge Lesson's Basic Lessons Playlist",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/playlist?list=PLph3TgcRG2u5raaHTuhXPeqPnz1VcnNOQ" },
+        new Link { GameID = "Bridge", Label = "Bridge Lesson's Intermedite and Advanced Topics Playlist", Description = "Bridge Lesson's Intermedite and Advanced Topics Playlist",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/playlist?list=PLph3TgcRG2u7sl7YvyjnLzInKGbPyv3jD" },
+        new Link { GameID = "Bridge", Label = "Bridge Lessons: Standard American Yellow Card Playlist", Description = "Bridge Lessons: Standard American Yellow Card Playlist",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/playlist?list=PLSqWRrPK5TScKMvUKf4YYBzLAcAeYgr31" },
+
         // Bumpercars
-        new Link { GameID = "Bumpercars", Label = "bumpercars", Description = "Me playing Bumpercars on bc_nukeplant", 
+        new Link { GameID = "Bumpercars", Label = "Bumpercars gameplay", Description = "Me playing Bumpercars on bc_nukeplant", 
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=xKBA9KE7DCg" },
         new Link { GameID = "Bumpercars", Label = "Bumpercars on ModDB", Description = "Bumpercars on ModDB",
           LinkType = LinkType.Download, Url = "https://www.moddb.com/mods/bumper-cars/downloads/half-life-bumper-cars-v20" },
@@ -116,6 +141,16 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=fG_wydPhFYg" },
         new Link { GameID = "Chess", Label = "Chess Records", Description = "Chess Records",
           LinkType = LinkType.Community, Url = "https://timkr.home.xs4all.nl/records/recordstxt.htm" },
+        new Link { GameID = "Chess", Label = "30,000+ Chess Problems", Description = "30,000+ Chess Problems",
+          LinkType = LinkType.Community, Url = "https://wtharvey.com/" },
+        new Link { GameID = "Chess", Label = "Play Chess varients on pychess", Description = "Play Chess varients online for free",
+          LinkType = LinkType.Community, Url = "https://www.pychess.org/" },
+        new Link { GameID = "Chess", Label = "Chess variants training", Description = "Chess variants training",
+          LinkType = LinkType.Community, Url = "https://chessvariants.training/" },
+        new Link { GameID = "Chess", Label = "Blitz Tactics", Description = "Blitz Tactics",
+          LinkType = LinkType.Community, Url = "https://blitztactics.com/" },
+        new Link { GameID = "Chess", Label = "Beginner to Chess Master Playlist by Chess Network", Description = "Chess Video Lessons",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/playlist?list=PLQsLDm9Rq9bHKEBnElquF8GuWkI1EJ8Zp" },
 
         // Civ6
         new Link { GameID = "Civ6", Label = "Civilization 6 introduction", Description = "My Civilization 6 overview", 
@@ -156,6 +191,10 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Download, Url = "https://www.moddb.com/mods/cold-ice-remastered/downloads/cold-ice-remastered-beta-3" },
 
         // Deadlock
+        new Link { GameID = "Deadlock", Label = "Neon Prime Gameplay", Description = "Footage from the game before getting the Deadlock theme",
+          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=bhyh1M-HwPg" },
+        new Link { GameID = "Deadlock", Label = "Valve's Neon Prime - All Tutorial Videos", Description = "Valve's Neon Prime - All Tutorial Videos",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=xqJsU0iN_UI" },
         new Link { GameID = "Deadlock", Label = "Deadlock introductory commentary", Description = "My introductory guide to Deadlock", 
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=lk_xrTuIuDw" },
         new Link { GameID = "Deadlock", Label = "Deadlock Map Exploration", Description = "Me walking through (the old 4 lane) street_test", 
@@ -170,6 +209,8 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=Sn-L4-x47Ls" },
         new Link { GameID = "Deadlock", Label = "There can be only one", Description = "Clip of me playing Abrams", 
           LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=isJL6eyceaw" },
+        new Link { GameID = "Deadlock", Label = "Deadlock Movement Guide", Description = "Deadlock Movement Guide", 
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=XiaSTPykOFk" },
 
         // Diabotical
         new Link { GameID = "Diabotical", Label = "Diabotical Rogue", Description = "4v4 Wipeout gameplay", 
@@ -270,6 +311,8 @@ namespace ASP_site.Data.Initializers {
         // Doom The Dark Ages
         new Link { GameID = "DoomDarkAges", Label = "Doom: The Dark Ages Launch Trailer", Description = "Doom: The Dark Ages Launch Trailer",
           LinkType = LinkType.Trailer, Url = "https://www.youtube.com/watch?v=S7IEg0_qNXs" },
+        new Link { GameID = "DoomDarkAges", Label = "Doom: The Dark Ages - DF Deep Dive Review", Description = "DF Deep Dive Review - The id Tech 8 Engine Is Stunning",
+          LinkType = LinkType.Documentary, Url = "https://www.youtube.com/watch?v=Ed4vNNQwCDU" },
 
         // Eleven Table Tennis
         new Link { GameID = "Eleven", Label = "Eleven VR stats", Description = "Eleven VR stats",
@@ -332,12 +375,20 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Guide, Url = "https://www.usgo-archive.org/aga-annotated-bibliography-go-books-english" },
         new Link { GameID = "Go", Label = "Go on Wikipedia", Description = "Go on Wikipedia",
           LinkType = LinkType.Wiki, Url = "https://en.wikipedia.org/wiki/Go_(game)" },
+        new Link { GameID = "Go", Label = "Michael Redmon's beginner Go Lessons Playlist", Description = "Michael Redmon's beginner Go Lessons Playlist",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/playlist?list=PLW5_cMTm0wvamCNX7qNoUqbXxeHt9n67i" },
+        new Link { GameID = "Go", Label = "YoungBlade's must know Go Playlist", Description = "YoungBlade's must know Go Playlist",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/playlist?list=PLFG-jNjCiKSNyAKGZwQ-rCTxf1GroGAQ3" },
+        new Link { GameID = "Go", Label = "Lecture on shape", Description = "Lecture on Shape",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=IkzuAE93-bc" },
+        new Link { GameID = "Go", Label = "AlphaGo - The Movie", Description = "Award winning documentary about AlphaGo",
+          LinkType = LinkType.Documentary, Url = "https://www.youtube.com/watch?v=WXuK6gekU1Y" },
 
         // HalfLife
         new Link { GameID = "HalfLife", Label = "Half-Life Fan Trailer", Description = "Half-Life Fan Trailer",
           LinkType = LinkType.Trailer, Url = "https://www.youtube.com/watch?v=_vHnHSEf_Q0" },
-        new Link { GameID = "HalfLife", Label = "Half-Life: Developer movies", Description = "Behind the scenes of Half-Life Development",
-          LinkType = LinkType.Documentary, Url = "https://youtube.com/playlist?list=PLASWINVvIWaMDkG4KgHtbIZxN2rQhygX-&si=zo-jZI3qXLDyd7Tc" },
+        new Link { GameID = "HalfLife", Label = "Half-life 1 developer videos playlist", Description = "Half-life 1 developer videos playlist",
+          LinkType = LinkType.Documentary, Url = "https://www.youtube.com/playlist?list=PLASWINVvIWaMDkG4KgHtbIZxN2rQhygX-" },
         new Link { GameID = "HalfLife", Label = "RetroAhoy: Half-life", Description = "RetroAhoy: Half-life",
           LinkType = LinkType.Documentary, Url = "https://youtu.be/bp5vOgz8vyI" },
         new Link { GameID = "HalfLife", Label = "Errant Signal: Half-life", Description = "Errant Signal: Half-life",
@@ -358,6 +409,7 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Discord, Url = "https://discord.gg/kr8WWsB" },
         new Link { GameID = "HalfLife", Label = "Goldsrc Saturdays group", Description = "Goldsrc Saturdays group",
           LinkType = LinkType.Community, Url = "https://linktr.ee/gssat" },
+
 
         // HalfLife2
         new Link { GameID = "HalfLife2", Label = "Half-Life 2 Fan Trailer", Description = "Half-Life 2 Fan Trailer",
@@ -386,6 +438,16 @@ namespace ASP_site.Data.Initializers {
         // HellLetLoose
         new Link { GameID = "HellLetLoose", Label = "Welcome to Hell", Description = "My first game of Hell Let Loose, playing as Rifleman on Foy", 
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=XRxRvMa512o" },
+        new Link { GameID = "HellLetLoose", Label = "How to \"Get\" Hell Let Loose", Description = "How to \"Get\" Hell Let Loose",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=1y2DnZ96JjY" },
+        new Link { GameID = "HellLetLoose", Label = "Why you should be playing Hell Let Loose", Description = "Why you should be playing Hell Let Loose",
+          LinkType = LinkType.Documentary, Url = "https://www.youtube.com/watch?v=ae3vaa1cOhU" },
+        new Link { GameID = "HellLetLoose", Label = "Hell Let Loose Cinematic and funny moments", Description = "Hell Let Loose Cinematic and funny moments",
+          LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=O_An91MpwYg" },
+        new Link { GameID = "HellLetLoose", Label = "Hell Let Loose Understanding Warfare vs Offensive", Description = "Understanding Warfare vs Offensive gamemodes",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=Mvvfgk5gxYk" },
+        new Link { GameID = "HellLetLoose", Label = "Hell Let Loose Ultimate Rifleman Guide", Description = "Hell Let Loose Ultimate Rifleman Guide",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=9ENLfg-xOrU" },
 
         //HL:Rally
         new Link { GameID = "HLRally", Label = "HL:Rally source code", Description = "HL:Rally source code",
@@ -426,6 +488,10 @@ namespace ASP_site.Data.Initializers {
         // Midair2
         new Link { GameID = "Midair2", Label = "Midair 2", Description = "Me playing CTF on map crater", 
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=lc269BpmM0I" },
+
+        // Marvel vs Capcom 2
+        new Link { GameID = "MvC2", Label = "Andor's Beginner's Guides Playlist", Description = "Andor's Beginner's Guides Playlist",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/playlist?list=PLzHB9xp8a2w5brG430zngXRvmdsHFTKpm" },
 
         // MCVietnam
         new Link { GameID = "MCVietnam", Label = "MCV Breaking the LAW", Description = "Me playing team deathmatch on map base", 
@@ -607,8 +673,8 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Gameplay, MapID = "ztndm3", Url = "https://youtu.be/dXuw8hzAFho" },
 
         // Quake2
-        new Link { GameID = "Quake2", Label = "", Description = "FFA gameplay", 
-          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=sgPyQ6wUtwY" },
+        new Link { GameID = "Quake2", Label = "FFA gameplay on q2dm1", Description = "FFA gameplay on q2dm1", 
+          LinkType = LinkType.Gameplay, MapID = "q2dm1", Url = "https://www.youtube.com/watch?v=sgPyQ6wUtwY" },
 
         // Quake3
         new Link { GameID = "Quake3", Label = "Quakecon duel retrospectives playlist", Description = "Analysis of duels from Quakecon history",
@@ -659,6 +725,30 @@ namespace ASP_site.Data.Initializers {
         // ScienceAndIndustry
         new Link { GameID = "SAndI", Label = "Science and Industry", Description = "Gameplay on si_deep", 
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=RLS0ilDNsgE" },
+        
+        // Shogi
+        new Link { GameID = "Shogi", Label = "Lishogi", Description = "Play Shogi online for free",
+          LinkType = LinkType.Community, Url = "https://lishogi.org/" },
+
+        // Starcraft
+        new Link { GameID = "SC", Label = "How to get started with Starcraft 2", Description = "Macro tutorial all three races",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=OJs6qS5TQyo" },
+
+        // Street Fighter 2
+        new Link { GameID = "SF2", Label = "Super Street Fighter 2 Turbo is the Ultimate Fighting Game", Description = "Super Street Fighter 2 Turbo is the Ultimate Fighting Game",
+          LinkType = LinkType.Documentary, Url = "https://www.youtube.com/watch?v=RlhK7fNqNE0" },
+        new Link { GameID = "SF2", Label = "David Sirlin's Tutorial Playlist", Description = "David Sirlin's Tutorial Playlist",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/playlist?list=PL5E8E2A6415422B77" },
+        new Link { GameID = "SF2", Label = "Super Turbo Tutorials Playlist", Description = "Super Turbo Tutorials Playlist",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/playlist?list=PLjqLxjAWgCpbcJapyOgY44Ck44lfrb7u6" },
+        new Link { GameID = "SF2", Label = "Super Turbo - How to Reverse Tick Attempts", Description = "How to Reverse Tick Attempts",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=1ZCBiKXKfy0" },
+        new Link { GameID = "SF2", Label = "Street Fighter 2: Mastering Great Combinations & Strategies", Description = "Retro Street Fighter 2 video guide",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=IfS02WjRU8g" },
+        new Link { GameID = "SF2", Label = "Super Puzzle Fighter 2 Turbo Chaining Tutorial", Description = "Super Puzzle Fighter 2 Turbo Chaining Tutorial",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=CwrHWsssgzw" },
+        new Link { GameID = "SF2", Label = "Analysis: The consequences of reducing the skill gap", Description = "Video essay about the diago parry and the evolution of Street Fighter",
+          LinkType = LinkType.Documentary, Url = "https://www.youtube.com/watch?v=iSgA_nK_w3A" },
 
         // TheFinals
         new Link { GameID = "TheFinals", Label = "the finals playtest", Description = "3v3v3 gameplay on stadium", 
@@ -671,6 +761,12 @@ namespace ASP_site.Data.Initializers {
         // Tribes1
         new Link { GameID = "Tribes1", Label = "Tribes1", Description = "Pub gameplay", 
           LinkType = LinkType.Gameplay, Url = "https://youtu.be/SNl4jWwUbaI" },
+        new Link { GameID = "Tribes1", Label = "Starseige Tribes pickups", Description = "Tribes 1 discord and pickup games",
+          LinkType = LinkType.Community, Url = "https://playt1.com/" },
+
+        // Tribes2
+        new Link { GameID = "Tribes2", Label = "Tribes 2 Community Release", Description = "Tribes 2 Community Release and Server info",
+          LinkType = LinkType.Download, Url = "https://www.tribesnext.com/" },
 
         // Tribes3
         new Link { GameID = "Tribes3", Label = "Tribes 3", Description = "Mid gameplay on island", 

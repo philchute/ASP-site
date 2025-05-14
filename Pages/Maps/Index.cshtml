@@ -41,7 +41,7 @@
 </div>
 
 <p class="mt-3">
-    This page lists maps from Counter-Strike and Team Fortress. Competitive maps are highlighted in <span class="text-primary">yellow</span>. Click the row for more details and links for the map.
+    This page lists maps from Counter-Strike and Team Fortress. Competitive maps are highlighted in <span class="text-primary fw-bold">yellow</span>. Click the row for more details and links for the map.
 </p>
 
 @if (Model.CSMaps.Count > 0) {
@@ -55,7 +55,7 @@
 
         @foreach (var map in Model.CSMaps) {
             <a class="row g-0 text-decoration-none text-reset border-bottom" asp-page="./Map" asp-route-id="@map.MapID">
-                <div class="p-1 col-sm-1 @(map.IsCompetitive ? "text-primary" : "text-white")">@map.MapID</div>
+                <div class="p-1 col-sm-1 @(map.IsCompetitive ? "text-primary fw-bold" : "text-white")">@map.MapID</div>
                 <div class="py-1 px-0 text-center col-sm-1 d-flex justify-content-around align-items-center">
                     @(map.GameInfo.Any(g => g.GameID == "CS16") ? Html.Raw("<img src=\"/image/cs16.svg\" alt=\"CS 1.6\" class=\"game-icon\" title=\"Counter-Strike 1.6\" />") : Html.Raw("<span class=\"game-icon\"></span>"))
                     @(map.GameInfo.Any(g => g.GameID == "CSX") ? Html.Raw("<img src=\"/image/csx.svg\" alt=\"CSX\" class=\"game-icon\" title=\"Counter-Strike Xbox Edition (CSX)\" />") : Html.Raw("<span class=\"game-icon\"></span>"))

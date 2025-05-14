@@ -20,7 +20,7 @@ namespace ASP_site.Pages.Engines
     public SelectList? SelectEngines { get; set; }
     [BindProperty(SupportsGet = true)] public string? SearchString { get; set; }
     [BindProperty(SupportsGet = true)] public string? SelectedEngine { get; set; }
-    [BindProperty(SupportsGet = true)] public string SortField { get; set; } = "Name";
+    [BindProperty(SupportsGet = true)] public string SortField { get; set; } = "Year";
 
     public async Task OnGetAsync()
     {

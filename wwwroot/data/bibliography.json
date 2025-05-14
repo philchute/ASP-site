@@ -1,19 +1,43 @@
 [
   {
-    "Title": "Wittgenstein An Introduction",
-    "Author": "Joachim Schulte",
-    "Translator": "William H. Brenner and John F. Holley",
-    "Publisher": "State University of New York Press",
-    "Year": "1992",
-    "ISBN": "0-7914-1081-1, 0-7914-1082-X",
-    "Notes": "Chatper 2 focuses on the Tractatus. 'How to read the Tractatus. Philosophy. World. Signs. Analysis and Picture. Saying and Show - Logic. Limits.' Very critical of perceived contradictions in the Tractatus."
-  },
-  {
     "Title": "Wittgenstein's Tractatus An Introduction",
     "Author": "H.O. Mounce",
     "Publisher": "State University of Chicago Press",
     "Year": "1981",
     "ISBN": "0-226-54318-8, 0-226-54319-6",
     "Notes": ""
+  },
+  {
+    "Title": "Wittgenstein An Introduction",
+    "Author": "Joachim Schulte",
+    "Translator": "William H. Brenner and John F. Holley",
+    "Publisher": "State University of New York Press",
+    "Year": "1992",
+    "ISBN": "0-7914-1081-1, 0-7914-1082-X",
+    "Notes": "Chapter 2 focuses on the Tractatus. 'How to read the Tractatus. Philosophy. World. Signs. Analysis and Picture. Saying and Show - Logic. Limits.' Very critical of perceived contradictions in the Tractatus."
+  },
+  {
+    "Title": "Wittgenstein's Tractatus Logico-Philosophicus Readers Guide",
+    "Author": "Roger M. White",
+    "Publisher": "Continuum",
+    "Year": "2006",
+    "ISBN": "0826486177, 0826486185",
+    "Notes": "Context, Overview of Themes, then largely a reading accompaniment to the Tractatus. Reception and Influence. Further Reading."
+  },
+  {
+    "Title": "Wittgenstein's Tractatus Logico-Philosophicus",
+    "Author": "Ludwig Wittgenstein, Translated by C.K. Ogden",
+    "Publisher": "Dover Publications",
+    "Year": "1922",
+    "ISBN": "0486404455",
+    "Notes": "1922 by Routledge and Kegan Paul Ltd, 1955 Edition includes index and new introduction, 1999 Dover edition"
+  },
+  {
+    "Title": "Philosophical Investigations",
+    "Author": "Ludwig Wittgenstein, Translated by G.E.M. Anscombe",
+    "Publisher": "Blackwell Publishing Ltd.",
+    "Year": "1953",
+    "ISBN": "9780631231271",
+    "Notes": "1953 by Blackwell Publishers, 2nd Edition 1958, 3rd Edition 2001"
   }
 ]

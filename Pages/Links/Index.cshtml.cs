@@ -41,7 +41,7 @@ namespace ASP_site.Pages.Links
 
             // Create base query for links, excluding Steam, SteamDB, and Wiki links
             var links = from l in _context.Links
-                       where l.LinkType != LinkType.Store && l.LinkType != LinkType.SteamDB && l.LinkType != LinkType.Wiki
+                       where l.LinkType != LinkType.Store && l.LinkType != LinkType.SteamDB && l.LinkType != LinkType.Wiki && !l.Label.EndsWith("Map Repo")
                        select l;
 
             // Apply search if provided

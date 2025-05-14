@@ -5,10 +5,16 @@ namespace ASP_site.Data.Initializers {
     public static Engine[] GetEngines() {
       return new Engine[] {
         new Engine {
+          EngineID = "idtech0",
+          Name = "idtech0 (Wolfenstein 3D Engine)",
+          Description = "idtech0 is a game engine developed by id Software, first used in the 1992 first-person shooter game Wolfenstein 3D.",
+          ParentID = "", Year = 1992
+        },
+        new Engine {
           EngineID = "idtech1",
           Name = "idtech1 (Doom Engine)",
           Description = "idtech1 is a game engine developed by id Software, first used in the 1993 first-person shooter game Doom.",
-          ParentID = "", Year = 1993
+          ParentID = "idtech0", Year = 1993
         },
         new Engine {
           EngineID = "idtech2",
