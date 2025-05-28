@@ -21,15 +21,18 @@ public class SteamServerBrowserApiService
     private readonly IMemoryCache _cache;
     private readonly IConfiguration _config;
     private readonly ILogger<SteamServerBrowserApiService> _logger;
+    private readonly IServerBlacklistService _blacklistService;
     private readonly string _apiKey;
     private readonly int _querySize;
+    private readonly TimeSpan _serverListCacheDuration;
     private readonly JsonSerializerSettings _jsonSerializerSettings;
 
-    public SteamServerBrowserApiService(IConfiguration config, IMemoryCache memoryCache, IHttpClientFactory httpClientFactory, ILogger<SteamServerBrowserApiService> logger)
+    public SteamServerBrowserApiService(IConfiguration config, IMemoryCache memoryCache, IHttpClientFactory httpClientFactory, ILogger<SteamServerBrowserApiService> logger, IServerBlacklistService blacklistService)
     {
         _config = config;
         _cache = memoryCache;
         _logger = logger;
+        _blacklistService = blacklistService;
 
         _httpClient = httpClientFactory.CreateClient();
         var steamApiUrl = _config["SteamSettings:Url"];
@@ -44,6 +47,10 @@ public class SteamServerBrowserApiService
              _logger.LogWarning("Steam API Key is not set or is using the default placeholder. Steam Web API calls will fail.");
         }
         _querySize = int.TryParse(_config["QuerySize"], out var size) ? size : 5000;
+
+        // Read cache duration from config, default to 2 minutes
+        _serverListCacheDuration = TimeSpan.FromMinutes(int.TryParse(_config["SteamListCacheMinutes"], out var minutes) && minutes > 0 ? minutes : 2);
+        _logger.LogInformation($"Server list cache duration set to: {_serverListCacheDuration.TotalMinutes} minutes.");
 
         _jsonSerializerSettings = new JsonSerializerSettings
         {
@@ -61,8 +68,8 @@ public class SteamServerBrowserApiService
 
         return await _cache.GetOrCreateAsync(key, async entry =>
         {
-            entry.AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(1);
-            _logger.LogDebug($"Cache miss for {key}. Fetching servers...");
+            entry.AbsoluteExpirationRelativeToNow = _serverListCacheDuration;
+            _logger.LogDebug($"Cache miss for {key}. Fetching servers with cache duration: {_serverListCacheDuration.TotalMinutes} mins.");
 
             List<GameServerItem> servers = [];
             try
@@ -87,6 +94,45 @@ public class SteamServerBrowserApiService
                     var apiUrl = $"IGameServersService/GetServerList/v1/?key={_apiKey}&limit={_querySize}&filter={filters}";
 
                     servers = await FetchAndMapSteamApiServers(apiUrl, game);
+                }
+
+                // Apply blacklist filtering before caching
+                if (servers.Any())
+                {
+                    var blacklistedIps = await _blacklistService.GetBlacklistedIpsAsync();
+                    if (blacklistedIps.Any())
+                    {
+                        int originalCount = servers.Count;
+                        servers = servers.Where(s => s.Address != null && !blacklistedIps.Contains(s.Address.ToString())).ToList();
+                        int removedCount = originalCount - servers.Count;
+                        if (removedCount > 0)
+                        {
+                            _logger.LogInformation($"Filtered out {removedCount} servers based on IP blacklist for game {game.Name}.");
+                        }
+                    }
+
+                    // Apply game-specific filtering rules
+                    int countBeforeGameSpecificFilter = servers.Count;
+                    // Check for GoldSrc games (either by MasterServerType or specific AppId for CS 1.6)
+                    if (game.MasterServer == MasterServerType.GoldSource || game.AppId == 10) // CS 1.6 AppId is 10
+                    {
+                        // GoldSrc: MaxPlayers cannot exceed 32
+                        servers = servers.Where(s => s.MaxPlayers <= 32).ToList();
+                        _logger.LogDebug($"Applied GoldSrc MaxPlayers filter for {game.Name}.");
+                    }
+                    // Check for CS2 (ensure it's not also caught by a potential GoldSource designation if AppId 730 were ever miscategorized)
+                    // Using else if ensures these conditions are mutually exclusive for a single server list processing pass if a game somehow matched both.
+                    else if (game.AppId == 730) // CS2 AppId
+                    {
+                        // CS2: Filter out servers with "graphics_settings" map
+                        servers = servers.Where(s => !string.Equals(s.Map, "graphics_settings", StringComparison.OrdinalIgnoreCase)).ToList();
+                        _logger.LogDebug($"Applied CS2 map filter for {game.Name}.");
+                    }
+                    int removedByGameSpecificFilter = countBeforeGameSpecificFilter - servers.Count;
+                    if (removedByGameSpecificFilter > 0)
+                    {
+                        _logger.LogInformation($"Filtered out {removedByGameSpecificFilter} servers based on game-specific rules for {game.Name}.");
+                    }
                 }
             }
             catch (Exception ex)

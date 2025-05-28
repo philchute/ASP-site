@@ -42,6 +42,11 @@ namespace ASP_site.Data.Initializers
         new Link { GameID = "CSCZ", Label = "CS: CZ func_vehicle maps", Description = "Me playing some nipper func_vehicle maps with GSS", 
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=EOazC0R_nxk" },
 
+
+        //CSS
+        new Link { GameID = "CSS", Label = "CSS: phoon too much for zblock - bunnyhop fragmovie", Description = "The GOAT of CSS highlights", 
+          LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=SNvDUO42Hys" },
+        
         // CSGO
         // General
         new Link { GameID = "CSGO", Label = "The Story of CS:GO: The Game That Never Dies", Description = "CS:GO documentary",
@@ -214,6 +219,9 @@ namespace ASP_site.Data.Initializers
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=u1iwOz8REIw" },
 
         // Other maps
+        // cs_agency
+        new Link { GameID = "CS2", MapID = "agency", Label = "cs_agency movement guide", Description = "cs_agency movement guide",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=D8IWmK0CIAY" },
         // de_cache
         new Link { GameID = "CS2", MapID = "cache", Label = "de_cache AWP guide", Description = "Flom's cache AWP guide",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=X6Slzv5bk-Y" },

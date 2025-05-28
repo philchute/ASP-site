@@ -3,6 +3,9 @@ using ASP_site.GameServerListCommon.Utils;
 using Microsoft.Extensions.Configuration; // Likely needed for file paths
 using Microsoft.Extensions.Hosting; // To get ContentRootPath
 using Microsoft.Extensions.Logging; // For logging errors
+using ASP_site.Data; // Added for GameContext
+using Microsoft.EntityFrameworkCore; // Added for ToListAsync and Include
+using Microsoft.Extensions.DependencyInjection; // Added for IServiceProvider and CreateScope
 
 namespace ASP_site.Helpers;
 
@@ -20,10 +23,12 @@ public class GameDataService : IGameDataService
     private readonly string _dataFolderPath;
     private List<Game> _games = [];
     private bool _isInitialized = false;
+    private readonly IServiceProvider _serviceProvider; // Added
 
-    public GameDataService(ILogger<GameDataService> logger, IHostEnvironment environment)
+    public GameDataService(ILogger<GameDataService> logger, IHostEnvironment environment, IServiceProvider serviceProvider) // Changed context to serviceProvider
     {
         _logger = logger;
+        _serviceProvider = serviceProvider; // Added
         // Construct the absolute path to the Data directory
         _dataFolderPath = Path.Combine(environment.ContentRootPath, "Data");
     }
@@ -32,70 +37,63 @@ public class GameDataService : IGameDataService
     {
         if (_isInitialized) return;
 
-        _logger.LogInformation("Initializing GameDataService...");
+        _logger.LogInformation("Initializing GameDataService from database...");
         try
         {
-            var gamesFilePath = Path.Combine(_dataFolderPath, "games.json");
-            var gameData = await FileUtils.ReadJsonFileAsync<List<Game>>(gamesFilePath);
-
-            if (gameData == null || !gameData.Any())
+            // Create a scope to resolve GameContext
+            using (var scope = _serviceProvider.CreateScope())
             {
-                _logger.LogWarning("games.json could not be loaded or is empty.");
-                _games = [];
+                var context = scope.ServiceProvider.GetRequiredService<GameContext>();
+
+                _logger.LogInformation("Attempting to fetch games from database...");
+                var dbGames = await context.Games
+                                            .OrderBy(g => g.Name)
+                                            .ToListAsync();
+
+                if (dbGames == null || !dbGames.Any())
+                {
+                    _logger.LogWarning("No games found in the database for server browser configuration.");
+                    _games = [];
+                    _isInitialized = true;
+                    return;
+                }
+
+                var browserGames = new List<Game>();
+                // int currentBrowserGameIndex = 0; // For assigning a dense index
+
+                foreach (var dbGame in dbGames) // Changed loop variable name for clarity
+                {
+                    if (dbGame.ServerConfig != null)
+                    {
+                        var browserGame = new Game
+                        {
+                            Name = dbGame.Name,
+                            AppId = dbGame.SteamID,
+                            Icon = dbGame.ServerConfig.IconPath ?? string.Empty,
+                            Gamedir = dbGame.ServerConfig.GameDirectory,
+                            MasterServer = (ASP_site.GameServerListCommon.Model.MasterServerType?)dbGame.ServerConfig.MasterServer,
+                            NoBackgroundService = dbGame.ServerConfig.NoBackgroundService,
+                            UseDefinedServerList = dbGame.ServerConfig.UseDefinedServerList,
+                            Filters = dbGame.ServerConfig.ApiFilters
+                        };
+
+                        browserGames.Add(browserGame);
+                    }
+                    // Games without ServerConfig are intentionally skipped for the server browser list
+                }
+                
+                // Assign dense, sequential Index to the filtered list of browser games
+                for (int idx = 0; idx < browserGames.Count; idx++)
+                {
+                    browserGames[idx].Index = idx;
+                }
+
+                _games = browserGames;
+                _logger.LogInformation($"Loaded {_games.Count} games for server browser.");
+
                 _isInitialized = true;
-                return;
+                _logger.LogInformation("GameDataService initialization complete.");
             }
-
-            _games = gameData.OrderBy(g => g.Name).ToList();
-            _logger.LogInformation($"Loaded {_games.Count} games from games.json.");
-
-            // Assign index and attempt to load specific server lists
-            for (int i = 0; i < _games.Count; i++)
-            {
-                 var game = _games[i];
-                 game.Index = i;
-
-                 // Check if a specific address file exists for this game
-                 if (game.AppId.HasValue)
-                 {
-                     var addressFilePath = Path.Combine(_dataFolderPath, $"{game.AppId}_addresses.json");
-                     if (File.Exists(addressFilePath))
-                     {
-                         _logger.LogInformation($"Found address file for {game.Name} ({game.AppId}). Loading...");
-                         try
-                         {
-                              var serverListData = await FileUtils.ReadJsonFileAsync<List<string>>(addressFilePath);
-                              if (serverListData != null)
-                              {
-                                  game.Servers = serverListData;
-                                  game.UseDefinedServerList = true;
-                                  _logger.LogInformation($"Loaded {serverListData.Count} defined servers for {game.Name}.");
-                              }
-                              else
-                              {
-                                   _logger.LogWarning($"Address file {addressFilePath} for {game.Name} was empty or invalid.");
-                                   game.UseDefinedServerList = false;
-                              }
-                         }
-                         catch (Exception ex)
-                         {
-                              _logger.LogError(ex, $"Error loading address file {addressFilePath} for {game.Name}.");
-                              game.UseDefinedServerList = false;
-                         }
-                     }
-                     else
-                     {
-                         game.UseDefinedServerList = false;
-                     }
-                 }
-                 else
-                 {
-                     game.UseDefinedServerList = false; // Cannot load addresses without AppId
-                 }
-            }
-
-            _isInitialized = true;
-            _logger.LogInformation("GameDataService initialization complete.");
         }
         catch (Exception ex)
         {
@@ -122,8 +120,14 @@ public class GameDataService : IGameDataService
     public Game? GetGameById(string gameId)
     {
          EnsureInitialized();
-         // Find by the compound GameId property (e.g., "70:si" or "320")
-         return _games.FirstOrDefault(g => g.GameId == gameId);
+         // Find by the compound GameId property (e.g., AppId or Gamedir)
+         // The GameId property in GameServerListCommon.Model.Game is AppId?.ToString() ?? Gamedir
+         // So, we search based on that logic.
+         return _games.FirstOrDefault(g => 
+            (g.AppId.HasValue && g.AppId.ToString() == gameId) || 
+            (!g.AppId.HasValue && !string.IsNullOrEmpty(g.Gamedir) && g.Gamedir == gameId) ||
+            (g.Name == gameId) // Fallback to name if gameId might be the name, though less reliable
+         );
     }
 
     private void EnsureInitialized()

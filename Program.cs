@@ -27,9 +27,14 @@ builder.Services.AddSession(options =>
 // Register Game Data Service (Singleton as it holds loaded data)
 builder.Services.AddSingleton<IGameDataService, GameDataService>();
 
+// Register Server Blacklist Service (Singleton as it caches the blacklist)
+builder.Services.AddSingleton<IServerBlacklistService, ServerBlacklistService>();
+
 // Register Application Services
-// Add HttpClient for SteamServerBrowserApiService
-builder.Services.AddHttpClient(); // Registers IHttpClientFactory
+// Add HttpClient for SteamServerBrowserApiService and ServerBlacklistService
+builder.Services.AddHttpClient(); // Registers IHttpClientFactory for default clients
+builder.Services.AddHttpClient("BlacklistFetcher"); // Registers a named client
+
 builder.Services.AddMemoryCache(); // Registers IMemoryCache
 
 // Services making external calls are often Scoped or Transient
@@ -39,13 +44,6 @@ builder.Services.AddScoped<SteamServerBrowserApiService>();
 builder.Services.AddHostedService<GameServerWorker>();
 
 var app = builder.Build();
-
-// Initialize Game Data Service after building the app
-using (var scope = app.Services.CreateScope())
-{
-    var gameDataService = scope.ServiceProvider.GetRequiredService<IGameDataService>();
-    await gameDataService.InitializeAsync();
-}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -62,13 +60,20 @@ app.UseAuthorization();
 app.UseSession();
 app.MapRazorPages();
 
-// Initialize the database
+// Initialize the database FIRST
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
     var context = services.GetRequiredService<GameContext>();
     context.Database.EnsureCreated();
-    DbInitializer.Initialize(context);
+    DbInitializer.Initialize(context); // Data is seeded here
+}
+
+// THEN Initialize Game Data Service (which reads from the DB)
+using (var scope = app.Services.CreateScope())
+{
+    var gameDataService = scope.ServiceProvider.GetRequiredService<IGameDataService>();
+    await gameDataService.InitializeAsync(); // Now it should find the data
 }
 
 app.Run();

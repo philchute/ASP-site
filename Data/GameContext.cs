@@ -17,6 +17,8 @@ namespace ASP_site.Data
     public DbSet<Server> Servers { get; set; }
     public DbSet<Map> Maps { get; set; }
     public DbSet<YearEntry> YearEntries { get; set; }
+    public DbSet<UpdatePost> UpdatePosts { get; set; } = null!;
+    public DbSet<Tag> Tags { get; set; } = null!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -40,11 +42,41 @@ namespace ASP_site.Data
           v => JsonSerializer.Serialize(v, new JsonSerializerOptions()),
           v => JsonSerializer.Deserialize<ReleaseDate[]>(v, new JsonSerializerOptions()) ?? Array.Empty<ReleaseDate>());
 
+      modelBuilder.Entity<Game>()
+        .Property(g => g.ServerConfig)
+        .HasConversion(
+            v => JsonSerializer.Serialize(v, (JsonSerializerOptions?)null),
+            v => JsonSerializer.Deserialize<ServerBrowserConfig>(v, (JsonSerializerOptions?)null));
+
       modelBuilder.Entity<Map>()
         .Property(m => m.GameInfo)
         .HasConversion(
           v => JsonSerializer.Serialize(v, new JsonSerializerOptions()),
           v => JsonSerializer.Deserialize<List<MapGameInfo>>(v, new JsonSerializerOptions()) ?? new List<MapGameInfo>());
+
+      // Configure UpdatePost table
+      modelBuilder.Entity<UpdatePost>().ToTable("UpdatePosts");
+
+      // Configure Tag table
+      modelBuilder.Entity<Tag>().ToTable("Tags");
+
+      // Configure the many-to-many relationship between UpdatePost and Tag
+      // EF Core 5+ can configure this by convention, but explicit configuration is clearer.
+      modelBuilder.Entity<UpdatePost>()
+          .HasMany(p => p.Tags)
+          .WithMany(t => t.UpdatePosts)
+          .UsingEntity<Dictionary<string, object>>(
+              "UpdatePostTag", // Name of the join table
+              j => j
+                  .HasOne<Tag>()
+                  .WithMany()
+                  .HasForeignKey("TagId")
+                  .OnDelete(DeleteBehavior.Cascade),
+              j => j
+                  .HasOne<UpdatePost>()
+                  .WithMany()
+                  .HasForeignKey("UpdatePostId")
+                  .OnDelete(DeleteBehavior.Cascade));
     }
   }
 }

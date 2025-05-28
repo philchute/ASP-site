@@ -21,6 +21,26 @@
     </select>
     </div>
     <div class="form-group ps-2">
+      <label class="col-form-label">Player Count:</label>
+      <div class="d-flex flex-wrap">
+        <div class="form-check pe-2">
+          <input class="form-check-input" type="checkbox" name="SelectedPlayerCounts" value="1" id="player_count_1" checked="@(Model.SelectedPlayerCounts.Contains(1))" onchange="this.form.submit();" />
+          <label class="form-check-label" for="player_count_1">Single Player</label>
+        </div>
+        <div class="form-check pe-2">
+          <input class="form-check-input" type="checkbox" name="SelectedPlayerCounts" value="0" id="player_count_0" checked="@(Model.SelectedPlayerCounts.Contains(0))" onchange="this.form.submit();" />
+          <label class="form-check-label" for="player_count_0">Multiplayer</label>
+        </div>
+        @for (int i = 2; i <= 6; i++)
+        {
+          <div class="form-check pe-2">
+            <input class="form-check-input" type="checkbox" name="SelectedPlayerCounts" value="@i" id="player_count_@i" checked="@(Model.SelectedPlayerCounts.Contains(i))" onchange="this.form.submit();" />
+            <label class="form-check-label" for="player_count_@i">@i</label>
+          </div>
+        }
+      </div>
+    </div>
+    <div class="form-group ps-2">
     <label class="col-form-label" asp-for="SearchString" class="control-label">Name:</label>
     <input class="form-control" type="text" asp-for="SearchString" />
     <input class="form-control" type="submit" value="Search" class="btn btn-primary btn-sm mr-auto" />
@@ -39,12 +59,13 @@
 <section class="grid">
   <div class="row bg-dark text-white fw-bold g-0">
     <div class="p-1 text-center col-sm-1">Year</div>
-    <div class="p-1 col-sm-3">Name</div>
+    <div class="p-1 col-sm-3">Name <i>(@(Model.Games?.Count ?? 0) shown)</i></div>
+    <div class="p-1 text-center col-sm-1">Players</div>
     <div class="p-1 text-center col-sm-2">Engine</div>
     <div class="p-1 text-center col-sm-1">Genre</div>
     <div class="p-1 text-center col-sm-1">Availability</div>
     <div class="p-1 text-center col-sm-2">Developer</div>
-    <div class="p-1 text-center col-sm-2">Maintenance Status</div>
+    <div class="p-1 text-center col-sm-1">Maintenance Status</div>
   </div>
 
   @if(Model.Games != null) {
@@ -53,11 +74,12 @@
         <div class="p-1 text-center col-sm-1">@(g.Year?.ToString() ?? "-")</div>
         <div class="p-1 col-sm-3 text-white">
           @(g.Name ?? "-")
-          @if (!string.IsNullOrEmpty(g.ModForGameID))
+          @*@if (!string.IsNullOrEmpty(g.ModForGameID))
           {
             @($" ({g.ModForGameID} mod)")
-          }
+          }*@
         </div>
+        <div class="p-1 text-center col-sm-1" title="S = Single Player, M = Multiplayer">@Model.FormatPlayerCounts(g.PlayWith)</div>
         <div class="p-1 text-center col-sm-2">@(g.EngineID ?? "-")</div>
         <div class="p-1 text-center col-sm-1">
           @if (g.Genre != null)
@@ -99,7 +121,7 @@
           }
         </div>
         <div class="p-1 text-center col-sm-2">@(g.Developer ?? "-")</div>
-        <div class="p-1 text-center col-sm-2">
+        <div class="p-1 text-center col-sm-1">
           @if (g.RequiresCommunityPatch)
           {
             <img src="~/image/patch.svg" alt="Needs Patches" title="Needs Patches" />

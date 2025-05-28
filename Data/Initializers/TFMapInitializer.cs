@@ -278,6 +278,16 @@ namespace ASP_site.Data.Initializers
         },
         new Map
         {
+          MapID = "brutalist",
+          IsCompetitive = true,
+          Description = "brutalist - new TFC map by Manu",
+          GameInfo = new List<MapGameInfo>
+          {
+            new MapGameInfo { GameID = "TFC", FileName = "brutalist_b6", Author = "Manu", Description = "TFC" }
+          }
+        },
+        new Map
+        {
           MapID = "canal",
           IsCompetitive = true,
           Description = "canal_b7 - Competitive QWTF and FO map",

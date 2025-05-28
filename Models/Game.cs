@@ -1,8 +1,17 @@
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Serialization;
 
 namespace ASP_site.Models {
+  [JsonConverter(typeof(JsonStringEnumConverter<MasterServerType>))]
+  public enum MasterServerType
+  {
+    GoldSource = 0,
+    Source = 1,
+    DarkMessiah = 2
+  }
+
   public class Game {
     public required string GameID { get; set; }
     public required string Name { get; set; }
@@ -12,6 +21,7 @@ namespace ASP_site.Models {
     public string? Developer { get; set; }
     public Genre? Genre { get; set; }
     public int? SteamID { get; set; }
+    public ServerBrowserConfig? ServerConfig { get; set; }
     public int? Year { get; set; }
     public ReleaseDate[] ReleaseDates { get; set; } = [];
     public bool IsReleased { get; set; } = true;
@@ -24,6 +34,7 @@ namespace ASP_site.Models {
     public bool RequiresCommunityPatch { get; set; } = false;
     public List<Game> Mods { get; set; } = new List<Game>();
     public List<Server> Servers { get; set; } = new List<Server>();
+    public List<int> PlayWith { get; set; } = [];
     
     public static Game InitializeYear(Game g, List<Game> allGames) {
       if(g.ReleaseDates.Length > 0) {
@@ -68,7 +79,7 @@ namespace ASP_site.Models {
     }
   }
 
-  public enum Genre { FPS, RTS, TBS, MOBA, Sports, Fighting }
+  public enum Genre { FPS, RTS, TBS, MOBA, Sports, Fighting, Adventure }
   public enum Region { Worldwide, NA, SA, EU, Asia }
   public enum ReleaseVersion { Alpha, Beta, Demo, FullGame, SteamRelease, ReRelease, LatestUpdate }
   

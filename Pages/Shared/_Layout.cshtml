@@ -26,26 +26,28 @@
                 <span class="visually-hidden">(current)</span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link @(ViewData["ActivePage"]?.ToString() == "Maps" ? "active" : "")" asp-area="" asp-page="/Maps/Index">Maps</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link @(ViewData["ActivePage"]?.ToString() == "Games" ? "active" : "")" asp-area="" asp-page="/Games/Index">Games</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link @(ViewData["ActivePage"]?.ToString() == "Engines" ? "active" : "")" asp-area="" asp-page="/Engines/Index">Engines</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link @(ViewData["ActivePage"]?.ToString() == "Links" ? "active" : "")" asp-area="" asp-page="/Links/Index">Links</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link @(ViewData["ActivePage"]?.ToString() == "Servers" ? "active" : "")" asp-area="" asp-page="/Servers/Index">Servers</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMore" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Gaming
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMore">
+                <li><a class="dropdown-item @(ViewData["ActivePage"]?.ToString() == "Games" ? "active" : "")" asp-area="" asp-page="/Games/Index">Games</a></li>
+                <li><a class="dropdown-item @(ViewData["ActivePage"]?.ToString() == "Engines" ? "active" : "")" asp-area="" asp-page="/Engines/Index">Engines</a></li>
+                <li><a class="dropdown-item @(ViewData["ActivePage"]?.ToString() == "Maps" ? "active" : "")" asp-area="" asp-page="/Maps/Index">Maps</a></li>
+                <li><a class="dropdown-item @(ViewData["ActivePage"]?.ToString() == "Servers" ? "active" : "")" asp-area="" asp-page="/Servers/Index">Servers</a></li>
+              </ul>
             </li>
             <li class="nav-item">
               <a class="nav-link @(ViewData["ActivePage"]?.ToString() == "Years" ? "active" : "")" asp-area="" asp-page="/Years/Index">Years</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link @(ViewData["ActivePage"]?.ToString() == "Links" ? "active" : "")" asp-area="" asp-page="/Links/Index">Links</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link @(ViewData["ActivePage"]?.ToString() == "Tractatus" ? "active" : "")" asp-area="" asp-page="/Tractatus/Index">Tractatus</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link @(ViewData["ActivePage"]?.ToString() == "Updates" ? "active" : "")" asp-area="" asp-page="/Updates/Index">Updates</a>
             </li>
             <li class="nav-item">
               <a class="nav-link @(ViewData["ActivePage"]?.ToString() == "About" ? "active" : "")" asp-area="" asp-page="/About">About</a>

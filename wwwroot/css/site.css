@@ -122,13 +122,19 @@ main a:hover {
     color: #adb5bd; /* A slightly darker grey for hover */
 }
 
-/* Example for text-decoration (commented out by default) */
-/* 
-a {
-  text-decoration: none;
+/* Updates Page Specific Styles */
+.update-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.25rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
-a:hover {
-  text-decoration: underline;
+.update-tag-link {
+    color: #ced4da;
 }
-*/
+
+.update-tag-link:hover {
+    text-decoration: underline;
+}

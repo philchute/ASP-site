@@ -11,6 +11,10 @@ namespace ASP_site.Data {
       context.Games.RemoveRange(context.Games);
       context.Engines.RemoveRange(context.Engines);
       context.YearEntries.RemoveRange(context.YearEntries);
+      // Clear UpdatePosts and Tags
+      // context.Database.ExecuteSqlRaw("DELETE FROM UpdatePostTag"); // Removed for in-memory compatibility/simplicity
+      context.UpdatePosts.RemoveRange(context.UpdatePosts);
+      context.Tags.RemoveRange(context.Tags);
       context.SaveChanges();
       
       // Initialize engines
@@ -36,6 +40,7 @@ namespace ASP_site.Data {
           Console.WriteLine($"Failed to add game {game.GameID}: {ex.Message}");
         }
       }
+      context.SaveChanges(); // Persist game entities immediately
       
       // Initialize CS maps
       var csmaps = CSMapInitializer.GetMaps();
@@ -137,6 +142,36 @@ namespace ASP_site.Data {
         catch (Exception ex) {
           Console.WriteLine($"Failed to add year entry (ID: {entry.ID}, Title: {entry.Title}): {ex.Message}");
         }
+      }
+
+      // Initialize Update Posts and Tags
+      var (initialPosts, initialTags) = UpdatePostInitializer.GetInitialData();
+      foreach (var tag in initialTags)
+      {
+          if (!context.Tags.Any(t => t.Id == tag.Id))
+          {
+              context.Tags.Add(tag);
+          }
+      }
+      context.SaveChanges(); // Save tags first to ensure they exist for posts
+
+      foreach (var post in initialPosts)
+      {
+          // Ensure tags are tracked or loaded from context if already existing
+          var tagsForPost = new List<Tag>();
+          foreach (var postTag in post.Tags)
+          {
+              var existingTag = context.Tags.Local.FirstOrDefault(t => t.Id == postTag.Id) ?? context.Tags.Find(postTag.Id);
+              if (existingTag != null) {
+                  tagsForPost.Add(existingTag);
+              } else {
+                 // This case should ideally not happen if GetInitialData provides valid tag references
+                 // Or if all tags were added and saved above correctly.
+                 Console.WriteLine($"Warning: Tag with Id {postTag.Id} not found for post '{post.Title}'.");
+              }
+          }
+          post.Tags = tagsForPost;
+          context.UpdatePosts.Add(post);
       }
       
       context.SaveChanges();

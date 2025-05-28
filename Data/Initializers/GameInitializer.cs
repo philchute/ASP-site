@@ -12,27 +12,89 @@ namespace ASP_site.Data.Initializers {
           IsFree = true,
           IsPaid = false,
           IsOpenSource = true,
-          IsDeveloperMaintained = true,
           IsCommunityMaintained = true,
           Genre = Genre.RTS,
+          PlayWith = new List<int> { 0 , 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 2010}
           ]
+        },
+        new Game {
+          GameID = "3WaveCTF",
+          Name = "3 Wave CTF",
+          Description = "A remake of the Quake 1 CTF mod 3wave in the GoldSource engine.",
+          ModForGameID = "HalfLife",
+          SteamID = 70,
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/hl",
+            GameDirectory = "3wave",
+            MasterServer = MasterServerType.GoldSource
+          }
         },
         new Game {
           GameID = "ActionHalfLife",
           Name = "Action Half-Life",
           Description = "A fast-paced action mod for Half-Life featuring new weapons and gameplay mechanics.",
           ModForGameID = "HalfLife",
+          SteamID = 70,
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/hl",
+            GameDirectory = "action",
+            MasterServer = MasterServerType.GoldSource
+          },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2000}
+          ]
+        },
+        new Game {
+          GameID = "ActionHalfLifeSource",
+          Name = "Action Half-Life: Source",
+          Description = "A fast-paced action mod for Half-Life: Source featuring new weapons and gameplay mechanics.",
+          ModForGameID = "HalfLife2",
+          SteamID = 977050,
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
-          ReleaseDates = [
-            new ReleaseDate{Year = 2000}
-          ]
+          PlayWith = new List<int> { 0 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/actionhls",
+            GameDirectory = "action"
+          }
+        },
+        new Game {
+          GameID = "AoC",
+          Name = "Age of Chivalry",
+          Description = "A fast-paced action mod for Half-Life featuring new weapons and gameplay mechanics.",
+          ModForGameID = "HalfLife",
+          SteamID = 17510,
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/aoc",
+            GameDirectory = "aoc"
+          }
         },
         new Game {
           GameID = "AoE",
@@ -49,6 +111,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = false,
           Genre = Genre.RTS,
+          PlayWith = new List<int> { 0, 1, 2, 3, 4 },
           ReleaseDates = [
             new ReleaseDate{Year = 1997, Month = 11, Day = 19},
             new ReleaseDate{Year = 2019, Month = 8, Day = 19, Region = Region.Worldwide, ReleaseVersion = ReleaseVersion.ReRelease}
@@ -67,6 +130,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = false,
           Genre = Genre.RTS,
+          PlayWith = new List<int> { 0, 1, 2, 3, 4 },
           ReleaseDates = [
             new ReleaseDate{Year = 1999, Month = 9, Day = 30},
             new ReleaseDate{Year = 2019, Month = 11, Day = 14, Region = Region.Worldwide, ReleaseVersion = ReleaseVersion.ReRelease}
@@ -84,6 +148,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = false,
           Genre = Genre.RTS,
+          PlayWith = new List<int> { 0, 1, 2, 3, 4 },
           ReleaseDates = [
             new ReleaseDate{Year = 2005, Month = 10, Day = 25},
             new ReleaseDate{Year = 2020, Month = 10, Day = 15, Region = Region.Worldwide, ReleaseVersion = ReleaseVersion.ReRelease}
@@ -101,6 +166,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = false,
           Genre = Genre.RTS,
+          PlayWith = new List<int> { 0, 1, 2, 3, 4 },
           ReleaseDates = [
             new ReleaseDate{Year = 2021, Month = 10, Day = 28}
           ]
@@ -117,6 +183,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = false,
           Genre = Genre.RTS,
+          PlayWith = new List<int> { 0, 1, 2, 3, 4 },
           ReleaseDates = [
             new ReleaseDate{Year = 2002, Month = 10, Day = 31, Region = Region.NA},
             new ReleaseDate{Year = 2002, Month = 11, Day = 14, Region = Region.EU},
@@ -134,24 +201,26 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ReleaseDates = [
             new ReleaseDate{Year = 2000}
           ]
         },
         new Game {
-          GameID = "BattleGrounds",
-          Name = "Battle Grounds",
-          Description = "A multiplayer mod for Half-Life featuring muskets and other early firearms.",
-          ModForGameID = "HalfLife",
+          GameID = "BaseDefense",
+          Name = "Base Defense",
+          Description = "",
+          SteamID = 632730,
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
           IsDeveloperMaintained = false,
-          IsCommunityMaintained = true,
+          IsCommunityMaintained = false,
           Genre = Genre.FPS,
-          ReleaseDates = [
-            new ReleaseDate{Year = 2000}
-          ]
+          PlayWith = new List<int> { 0 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/bd"
+          }
         },
         new Game {
           GameID = "Battlebit",
@@ -165,9 +234,64 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ReleaseDates = [
             new ReleaseDate{Year = 2023, Month = 6, Day = 15}
           ]
+        },
+        new Game {
+          GameID = "BattleGrounds",
+          Name = "Battle Grounds",
+          Description = "A multiplayer mod for Half-Life featuring muskets and other early firearms.",
+          ModForGameID = "HalfLife",
+          SteamID = 70,
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = true,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/hl",
+            GameDirectory = "bg",
+            MasterServer = MasterServerType.GoldSource
+          },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2000}
+          ]
+        },
+        new Game {
+          GameID = "BattleGrounds2",
+          Name = "Battle Grounds II",
+          Description = "",
+          SteamID = 218,
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/bg2"
+          }
+        },
+        new Game {
+          GameID = "BattleGrounds3",
+          Name = "Battle Grounds III",
+          Description = "",
+          SteamID = 1057700,
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = true,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/bg3"
+          }
         },
         new Game {
           GameID = "BlackMesa",
@@ -180,20 +304,61 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          SteamID = 362890,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/bms"
+          },
           ReleaseDates = [
             new ReleaseDate{Year = 2020, Month = 3, Day = 6},
           ]
         },
         new Game {
+          GameID = "BrainBread",
+          Name = "BrainBread",
+          Description = "A multiplayer mod for Half-Life featuring zombies and other horror elements.",
+          ModForGameID = "HalfLife",
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/bb",
+            GameDirectory = "brainbread",
+            MasterServer = MasterServerType.GoldSource
+          }
+        },
+        new Game {
+          GameID = "BrainBread2",
+          Name = "BrainBread 2",
+          Description = "A multiplayer mod for Half-Life 2 featuring zombies and other horror elements.",
+          ModForGameID = "SDK2013",
+          SteamID = 346330,
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/bb2"
+          }
+        },
+        new Game {
           GameID = "Bridge",
           Name = "Bridge",
-          Description = "Bridge is a card game that is played by four players.",
+          Description = "Bridge is a card game that is played by four players in partners of two, although varients exist for 3 or 5 players.",
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.TBS,
+          PlayWith = new List<int> { 2, 4 },
           ReleaseDates = [
             new ReleaseDate{Year = 1925}
           ]
@@ -209,9 +374,33 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/hl",
+            GameDirectory = "BumperCars",
+            MasterServer = MasterServerType.GoldSource
+          },
           ReleaseDates = [
             new ReleaseDate{Year = 2000}
           ]
+        },
+        new Game {
+          GameID = "BuzzyBots",
+          Name = "BuzzyBots",
+          Description = "",
+          ModForGameID = "HalfLife",
+          SteamID = 70,
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/buzzybots",
+            GameDirectory = "buzzybots"
+          }
         },
         new Game {
           GameID = "Chess",
@@ -224,6 +413,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.TBS,
+          PlayWith = new List<int> { 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 600}
           ]
@@ -240,6 +430,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = false,
           Genre = Genre.TBS,
+          PlayWith = new List<int> { 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 2016, Month = 10, Day = 21}
           ]
@@ -249,7 +440,9 @@ namespace ASP_site.Data.Initializers {
           Name = "Classic Fortress 2",
           Description = "A Source engine mod that brings Team Fortress Classic gameplay to the Source engine.",
           ModForGameID = "TF2",
-          IsOpenSource = true,
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
           ReleaseDates = [
@@ -268,6 +461,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.RTS,
+          PlayWith = new List<int> { 0, 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 1995, Month = 8, Day = 31}
           ]
@@ -284,6 +478,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.RTS,
+          PlayWith = new List<int> { 0, 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 2003, Month = 2, Day = 11}
           ]
@@ -300,6 +495,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.RTS,
+          PlayWith = new List<int> { 0, 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 2000, Month = 10, Day = 23}
           ]
@@ -316,6 +512,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 2002, Month = 2, Day = 26}
           ]
@@ -332,6 +529,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.RTS,
+          PlayWith = new List<int> { 0, 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 1999, Month = 8, Day = 27}
           ]
@@ -349,6 +547,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 2003, Month = 10, Day = 29},
           ]
@@ -368,6 +567,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 2005, Month = 10, Day = 25},
           ]
@@ -385,6 +585,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1, 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 2007, Month = 11, Day = 5},
           ]
@@ -400,6 +601,7 @@ namespace ASP_site.Data.Initializers {
           IsPaid = true,
           IsOpenSource = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1, 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 2014, Month = 11, Day = 4},
           ]
@@ -417,6 +619,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1, 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 2010, Month = 11, Day = 9},
           ]
@@ -434,6 +637,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1, 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 2012, Month = 11, Day = 13},
           ]
@@ -451,6 +655,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1, 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 2015, Month = 11, Day = 6},
           ]
@@ -468,6 +673,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1, 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 2018, Month = 10, Day = 12},
           ]
@@ -483,6 +689,7 @@ namespace ASP_site.Data.Initializers {
           IsPaid = true,
           IsOpenSource = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1, 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 2024, Month = 10, Day = 25},
           ]
@@ -498,6 +705,7 @@ namespace ASP_site.Data.Initializers {
           IsPaid = true,
           IsOpenSource = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1, 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 2020, Month = 11, Day = 13},
           ]
@@ -513,6 +721,7 @@ namespace ASP_site.Data.Initializers {
           IsPaid = true,
           IsOpenSource = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1, 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 2013, Month = 11, Day = 5},
           ]
@@ -528,6 +737,7 @@ namespace ASP_site.Data.Initializers {
           IsPaid = true,
           IsOpenSource = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1, 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 2016, Month = 11, Day = 4},
           ]
@@ -545,6 +755,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1, 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 2009, Month = 11, Day = 10},
           ]
@@ -560,6 +771,7 @@ namespace ASP_site.Data.Initializers {
           IsPaid = true,
           IsOpenSource = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1, 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 2019, Month = 10, Day = 25},
           ]
@@ -575,6 +787,7 @@ namespace ASP_site.Data.Initializers {
           IsPaid = true,
           IsOpenSource = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1, 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 2022, Month = 10, Day = 28},
           ]
@@ -592,6 +805,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1, 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 2011, Month = 11, Day = 8},
           ]
@@ -607,6 +821,7 @@ namespace ASP_site.Data.Initializers {
           IsPaid = true,
           IsOpenSource = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1, 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 2023, Month = 11, Day = 10},
           ]
@@ -622,6 +837,7 @@ namespace ASP_site.Data.Initializers {
           IsPaid = true,
           IsOpenSource = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1, 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 2021, Month = 11, Day = 5},
           ]
@@ -639,6 +855,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1, 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 2008, Month = 11, Day = 11},
           ]
@@ -654,6 +871,7 @@ namespace ASP_site.Data.Initializers {
           IsPaid = true,
           IsOpenSource = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1, 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 2017, Month = 11, Day = 3},
           ]
@@ -671,6 +889,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsReleased = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ReleaseDates = [
             new ReleaseDate{Year = 2020, Month = 3, Day = 10},
           ]
@@ -687,13 +906,24 @@ namespace ASP_site.Data.Initializers {
           IsOpenSource = false,
           IsDeveloperMaintained = true,
           Genre = Genre.FPS,  
+          PlayWith = new List<int> { 0 },
           ReleaseDates = [
             new ReleaseDate{Year = 2022, Month = 11, Day = 16},
           ]
         },
         new Game {
+          GameID = "CodenameCURE",
+          Name = "Codename CURE",
+          Description = "A psychological horror game that puts the player in the shoes of Simon, a paraplegic who writes a book for therapy, and in the process faces the inner demons that plague his thoughts. Features a co-op mode.",
+          SteamID = 355180,
+          Genre = Genre.FPS,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/cure"
+          }
+        },
+        new Game {
           GameID = "ColdIce",
-          Name = "Cold Ice Remastered",
+          Name = "Cold Ice Remastered (beta 5)",
           Description = "A remastered version of the Cold Ice mod for Half-Life.",
           ModForGameID = "HalfLife",
           IsFree = true,
@@ -702,13 +932,29 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/hl",
+            GameDirectory = "ice_beta5",
+            MasterServer = MasterServerType.GoldSource
+          },
           ReleaseDates = [
             new ReleaseDate{Year = 2020}
           ]
         },
         new Game {
-          GameID = "CryOfFear",
-          Name = "Cry of Fear",
+          GameID = "Contagion",
+          Name = "Contagion",
+          Description = "A horror game that puts the player in the shoes of a survivor of a zombie apocalypse.",
+          SteamID = 238430,
+          Genre = Genre.FPS,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/contagion"
+          }
+        },
+        new Game {
+          GameID = "CryOfFearMod",
+          Name = "Cry of Fear (Mod Version)",
           Description = "A psychological horror game that puts the player in the shoes of Simon, a paraplegic who writes a book for therapy, and in the process faces the inner demons that plague his thoughts. Features a co-op mode.",
           ModForGameID = "HalfLife",
           IsFree = true,
@@ -717,9 +963,13 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
-          ReleaseDates = [
-            new ReleaseDate{Year = 2013, Month = 4, Day = 25, Region = Region.Worldwide, ReleaseVersion = ReleaseVersion.SteamRelease},
-          ]
+          PlayWith = new List<int> { 1 },
+          SteamID = 70,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/cof",
+            GameDirectory = "cof",
+            MasterServer = MasterServerType.GoldSource
+          }
         },
         new Game {
           GameID = "CS16",
@@ -734,6 +984,11 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 5 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/cs",
+            GameDirectory = "cstrike"
+          },
           ReleaseDates = [
             new ReleaseDate{Year = 2000, Month = 11, Day = 8},
             new ReleaseDate{Year = 2003, Month = 9, Day = 12, Region = Region.Worldwide, ReleaseVersion = ReleaseVersion.SteamRelease},
@@ -748,8 +1003,9 @@ namespace ASP_site.Data.Initializers {
           IsPlayable = true,
           IsOpenSource = false,
           IsDeveloperMaintained = false,
-          IsCommunityMaintained = true,
+          IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 1, 5 },
           ReleaseDates = [
             new ReleaseDate{Year = 2003, Month = 11, Day = 18, Region = Region.NA},
             new ReleaseDate{Year = 2003, Month = 12, Day = 5, Region = Region.EU},
@@ -768,6 +1024,11 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 1, 5 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/cscz",
+            GameDirectory = "czero"
+          },
           ReleaseDates = [
             new ReleaseDate{Year = 2004, Month = 3, Day = 23},
           ]
@@ -783,6 +1044,11 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 5 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/css",
+            GameDirectory = "cstrike"
+          },
           ReleaseDates = [
             new ReleaseDate{Year = 2004, Month = 11, Day = 18},
           ]
@@ -795,9 +1061,14 @@ namespace ASP_site.Data.Initializers {
           Developer = "Valve Software",
           IsPlayable = false,
           IsOpenSource = false,
-          IsDeveloperMaintained = true,
+          IsDeveloperMaintained = false,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 2, 5 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/csgo",
+            GameDirectory = "csgo"
+          },
           ReleaseDates = [
             new ReleaseDate{Year = 2012, Month = 8, Day = 21},
           ]
@@ -816,6 +1087,10 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 2, 5 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/cs2"
+          },
           ReleaseDates = [
             new ReleaseDate{Year = 2023, Month = 9, Day = 27, Region = Region.Worldwide, ReleaseVersion = ReleaseVersion.ReRelease},
             new ReleaseDate{Year = 2025, Region = Region.Worldwide, ReleaseVersion = ReleaseVersion.LatestUpdate}
@@ -829,9 +1104,30 @@ namespace ASP_site.Data.Initializers {
           IsOpenSource = true,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ReleaseDates = [
             new ReleaseDate{Year = 1996},
           ]
+        },
+        new Game {
+          GameID = "DarkMessiah",
+          Name = "Dark Messiah of Might & Magic",
+          Description = "A fantasy action-RPG, the Xbox version used SDK2007.",
+          SteamID = 2130,
+          ModForGameID = "SDK2006",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/messiah",
+            GameDirectory = "messiah",
+            MasterServer = MasterServerType.DarkMessiah,
+            NoBackgroundService = true
+          }
         },
         new Game {
           GameID = "Deadlock",
@@ -845,6 +1141,7 @@ namespace ASP_site.Data.Initializers {
           IsCommunityMaintained = true,
           IsReleased = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 6 },
           ReleaseDates = []
         },
         new Game {
@@ -858,9 +1155,19 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ReleaseDates = [
             new ReleaseDate{Year = 2020, Month = 9, Day = 3}
           ]
+        },
+        new Game {
+          GameID = "DIPRIP",
+          Name = "D.I.P.R.I.P. Warm Up",
+          Description = "",
+          SteamID = 17530,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/diprip"
+          }
         },
         new Game {
           GameID = "DirtyBomb",
@@ -874,17 +1181,36 @@ namespace ASP_site.Data.Initializers {
           IsPaid = false,
           IsOpenSource = false,
           IsDeveloperMaintained = false,
-          IsCommunityMaintained = true,
+          IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ReleaseDates = [
             new ReleaseDate{Year = 2015, Month = 6, Day = 1},
             new ReleaseDate{Year = 2022, Region = Region.Worldwide, ReleaseVersion = ReleaseVersion.LatestUpdate}
           ]
         },
         new Game {
+          GameID = "DMC",
+          Name = "Deathmatch Classic",
+          Description = "Deathmatch Classic was Valve's port of QuakeWorld Deathmatch to the goldsrc engine.",
+          SteamID = 40,
+          ModForGameID = "HalfLife",
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/dmc",
+            GameDirectory = "dmc"
+          }
+        },
+        new Game {
           GameID = "DMCR",
           Name = "DMC:R",
-          Description = "Deathmatch Classic was Valve's port of Quakeworld Deathmatch to the goldsrc engine."
+          Description = "Deathmatch Classic was Valve's port of QuakeWorld Deathmatch to the goldsrc engine."
             + "DMC:R is a source mod which extends this legacy to the the Half-Life 2 engine.",
           ModForGameID = "HalfLife2",
           Developer = "CoaXioN",
@@ -892,9 +1218,9 @@ namespace ASP_site.Data.Initializers {
           IsPaid = false,
           IsOpenSource = false,
           IsDeveloperMaintained = true,
-          IsCommunityMaintained = true,
           IsReleased = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ReleaseDates = []
         },
         new Game {
@@ -910,9 +1236,42 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 6 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/dod",
+            GameDirectory = "dod"
+          },
           ReleaseDates = [
             new ReleaseDate{Year = 2003, Month = 5, Day = 1, Region = Region.Worldwide, ReleaseVersion = ReleaseVersion.SteamRelease},
           ]
+        },
+        new Game {
+          GameID = "DoDS",
+          Name = "Day of Defeat: Source",
+          Description = "Day of Defeat: Source is a source mod which extends the legacy of Day of Defeat to the Half-Life 2 engine.",
+          ModForGameID = "HalfLife2",
+          Developer = "Valve Software",
+          SteamID = 300,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = true,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 6 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/dods",
+            GameDirectory = "dod"
+          }
+        },
+        new Game {
+          GameID = "DinoD-Day",
+          Name = "Dino D-Day",
+          Description = "",
+          SteamID = 70000,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/dino"
+          }
         },
         new Game {
           GameID = "Doom",
@@ -927,6 +1286,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 1993, Month = 12, Day = 10},
             new ReleaseDate{Year = 2024, Month = 8, Day = 8, Region = Region.Worldwide, ReleaseVersion = ReleaseVersion.ReRelease},
@@ -943,7 +1303,10 @@ namespace ASP_site.Data.Initializers {
           IsFree = false,
           IsPaid = true,
           IsOpenSource = false,
+          IsDeveloperMaintained = true,
+          IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 2016, Month = 5, Day = 13},
           ]
@@ -960,7 +1323,9 @@ namespace ASP_site.Data.Initializers {
           IsPaid = true,
           IsOpenSource = true,
           IsDeveloperMaintained = false,
+          IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 2004, Month = 9, Day = 30},
             new ReleaseDate{Year = 2012, Region = Region.Worldwide, ReleaseVersion = ReleaseVersion.ReRelease},
@@ -969,17 +1334,20 @@ namespace ASP_site.Data.Initializers {
         },
         new Game {
           GameID = "DoomDarkAges",
-          Name = "Doom Dark Ages",
-          Description = "Doom Dark Ages is a first-person shooter game developed by id Software.",
+          Name = "Doom: The Dark Ages",
+          Description = "Doom: The Dark Ages is a first-person shooter game developed by id Software and is the most recent installment in the Doom series.",
           EngineID = "idtech8",
           Developer = "id Software",
           SteamID = 3017860,
           IsReleased = false,
-          IsPlayable = false,
+          IsPlayable = true,
           IsFree = false,
           IsPaid = true,
           IsOpenSource = false,
+          IsDeveloperMaintained = true,
+          IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 2025, Month = 5, Day = 15},
           ]
@@ -994,12 +1362,35 @@ namespace ASP_site.Data.Initializers {
           IsFree = false,
           IsPaid = true,
           IsOpenSource = false,
+          IsDeveloperMaintained = true,
+          IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 2020, Month = 3, Day = 20},
           ]
         },
         new Game {
+          GameID = "DAB",
+          Name = "Double Action: Boogaloo",
+          Description = "",
+          SteamID = 317360,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/dab",
+            GameDirectory = "dab"
+          }
+        },
+        new Game {
+          GameID = "Dystopia",
+          Name = "Dystopia",
+          Description = "",
+          SteamID = 17580,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/dys",
+            GameDirectory = "dys"
+          }
+        },
+       new Game {
           GameID = "Dota2",
           Name = "Dota 2",
           Description = "Dota 2 is a free-to-play multiplayer online battle arena (MOBA) game that evolved from the Warcraft III mod Defense of the Ancients.",
@@ -1012,6 +1403,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = false,
           Genre = Genre.MOBA,
+          PlayWith = new List<int> { 5 },
           ReleaseDates = [
             new ReleaseDate{Year = 2013, Month = 7, Day = 9},
           ]
@@ -1027,6 +1419,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = false,
           Genre = Genre.Sports,
+          PlayWith = new List<int> { 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 2016, Month = 6, Day = 20},
           ]
@@ -1042,9 +1435,32 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          SteamID = 70,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/esf",
+            GameDirectory = "esf",
+            MasterServer = MasterServerType.GoldSource
+          },
           ReleaseDates = [
             new ReleaseDate{Year = 2000}
           ]
+        },
+        new Game {
+          GameID = "EMPIRES",
+          Name = "Empires",
+          Description = "FPS and RTS hybrid source mod.",
+          ModForGameID = "SDK2013",
+          SteamID = 17740,
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/empires"
+          }
         },
         new Game {
           GameID = "ET",
@@ -1062,6 +1478,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ReleaseDates = [
             new ReleaseDate{Year = 2003, Month = 5, Day = 29},
             new ReleaseDate{Year = 2022, Month = 5, Day = 19, Region = Region.Worldwide, ReleaseVersion = ReleaseVersion.SteamRelease}
@@ -1075,15 +1492,89 @@ namespace ASP_site.Data.Initializers {
           IsOpenSource = true,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ReleaseDates = [
             new ReleaseDate{Year = 2003},
           ]
         },
         new Game {
+          GameID = "ES",
+          Name = "Eternal Silence",
+          Description = "FPS and space combat mod for Half-Life 2.",
+          ModForGameID = "SDK2006",
+          SteamID = 215,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/es",
+            GameDirectory = "Eternal-Silence"
+          }
+        },
+        new Game {
+          GameID = "EYE",
+          Name = "E.Y.E: Divine Cybermancy",
+          Description = "",
+          SteamID = 91700,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/eye"
+          }
+        },
+        new Game {
+          GameID = "Firearms",
+          Name = "Firearms",
+          ModForGameID = "HalfLife",
+          Description = "Western-themed half-life mod.",
+          SteamID = 70,
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/hl",
+            GameDirectory = "firearms"
+          }
+        },
+        new Game {
+          GameID = "FirearmsSource",
+          Name = "Firearms: Source",
+          Description = "Source engine sequel to Firearms.",
+          ModForGameID = "HalfLife2",
+          SteamID = 218,
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/fas",
+            GameDirectory = "fas"
+          }
+        },
+        new Game {
+          GameID = "FistfulOfFrags",
+          Name = "Fistful of Frags",
+          Description = "",
+          ModForGameID = "SDK2013",
+          SteamID = 265630,
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/fof"
+          }
+        },
+        new Game {
           GameID = "FF",
           Name = "Fortress Forever",
           Description = "Fortress Forever is a mod for the Source engine that iterated the Team Fortress Classic style gameplay.",
-          ModForGameID = "HalfLife2",
+          ModForGameID = "SDK2006",
           Developer = "Fortress Forever Team",
           SteamID = 253530,
           IsOpenSource = true,
@@ -1092,8 +1583,12 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 4 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/ff"
+          },
           ReleaseDates = [
-            new ReleaseDate{Year = 2007},
+            new ReleaseDate{Year = 2007}
           ]
         },
         new Game {
@@ -1103,6 +1598,8 @@ namespace ASP_site.Data.Initializers {
           ModForGameID = "Quake1",
           IsOpenSource = true,
           IsCommunityMaintained = true,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 4 },
           ReleaseDates = [
             new ReleaseDate{Year = 2019},
             new ReleaseDate{Year = 2024, Region = Region.Worldwide, ReleaseVersion = ReleaseVersion.LatestUpdate}
@@ -1117,11 +1614,86 @@ namespace ASP_site.Data.Initializers {
           IsPaid = false,
           IsOpenSource = false,
           IsDeveloperMaintained = false,
-          IsCommunityMaintained = true,
+          IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/flf",
+            GameDirectory = "frontline",
+            MasterServer = MasterServerType.GoldSource
+          },
           ReleaseDates = [
-            new ReleaseDate{Year = 2001},
+            new ReleaseDate{Year = 2001}
           ]
+        },
+        new Game {
+          GameID = "GMOD",
+          Name = "Garry's Mod",
+          Description = "Source engine sandbox game.",
+          IsFree = false,
+          IsPaid = true,
+          SteamID = 4000,
+          IsOpenSource = false,
+          IsDeveloperMaintained = true,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/gmod",
+            GameDirectory = "garrysmod"
+          }
+        },
+        new Game {
+          GameID = "GMOD9",
+          Name = "Garry's Mod v9",
+          Description = "",
+          ModForGameID = "HalfLife2",
+          SteamID = 215,
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = true,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/gmod",
+            GameDirectory = "gmod9",
+            MasterServer = MasterServerType.Source,
+            NoBackgroundService = true
+          }
+        },
+        new Game {
+          GameID = "GoldenEyeSource",
+          Name = "Golden Eye: Source",
+          Description = "A source mod that recreates the original GoldenEye 007 game.",
+          SteamID = 218,
+          ModForGameID = "SDK2007",
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/ges",
+            GameDirectory = "gesource"
+          }
+        },
+        new Game {
+          GameID = "GunmanChronicles",
+          Name = "Gunman Chronicles",
+          Description = "",
+          ModForGameID = "HalfLife2",
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/gunman"
+          }
         },
         new Game {
           GameID = "HalfLife",
@@ -1136,6 +1708,12 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/hl",
+            GameDirectory = "valve",
+            MasterServer = MasterServerType.GoldSource
+          },
           ReleaseDates = [
             new ReleaseDate{Year = 1998, Month = 11, Day = 19, Region = Region.NA, ReleaseVersion = ReleaseVersion.FullGame},
             new ReleaseDate{Year = 1998, Month = 11, Day = 27, Region = Region.EU, ReleaseVersion = ReleaseVersion.FullGame}, 
@@ -1161,9 +1739,101 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/hl2",
+            GameDirectory = "hl2"
+          },
           ReleaseDates = [
             new ReleaseDate{Year = 2004, Month = 11, Day = 16},
           ]
+        },
+        new Game {
+          GameID = "HalfLife2Deathmatch",
+          Name = "Half-Life 2: Deathmatch",
+          Description = "The multiplayer mode of Half-Life 2 has always been a separate title on Steam and is included with the purchase of Half-Life 2.",
+          SteamID = 320,
+          ModForGameID = "HalfLife2",
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = true,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/hl2"
+          }
+        },
+        new Game {
+          GameID = "HalfLifeAdrenalineGamer",
+          Name = "Half-Life: Adrenaline Gamer",
+          Description = "Fan made pro-mod for Half-Life deathmatch.",
+          SteamID = 70,
+          ModForGameID = "HalfLife",
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/ag"
+          }
+        },
+        new Game {
+          GameID = "HalfLifeOpposingForce",
+          Name = "Half-Life: Opposing Force",
+          Description = "Multiplayer deathmatch component of the Half-Life expansion pack Opposing Force.",
+          SteamID = 50,
+          ModForGameID = "HalfLife",
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/op4",
+            GameDirectory = "gearbox"
+          }
+        },
+        new Game {
+          GameID = "HalfLifeOpposingForceCTF",
+          Name = "Half-Life: Opposing Force CTF",
+          Description = "The CTF mode of Half-Life: Opposing Force expansion.",
+          SteamID = 70,
+          ModForGameID = "HalfLife",
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/op4ctf",
+            GameDirectory = "OpForCTF"
+          }
+        },
+        new Game {
+          GameID = "HalfLifeRally",
+          Name = "Half-Life: Rally",
+          Description = "Half-Life: Rally is a first-person shooter game developed by Valve Software.",
+          EngineID = "goldsrc",
+          ModForGameID = "HalfLife",
+          IsOpenSource = true,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.Sports,
+          PlayWith = new List<int> { 0 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/hl",
+            GameDirectory = "hlrally",
+            MasterServer = MasterServerType.GoldSource
+          }
         },
         new Game {
           GameID = "HalfLifeAlyx",
@@ -1178,8 +1848,42 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 2020, Month = 3, Day = 23},
+          ]
+        },
+        new Game {
+          GameID = "HaloGoldSrc",
+          Name = "Halo: GoldSrc",
+          Description = "Halo themed mod for Half-Life.",
+          SteamID = 70,
+          ModForGameID = "HalfLife",
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/halogs",
+            GameDirectory = "halogs",
+            MasterServer = MasterServerType.GoldSource
+          }
+        },
+        new Game {
+          GameID = "HatInTime",
+          Name = "Hat in Time",
+          Description = "Hat in Time is a 3D platformer with a unique hat-wearing mechanic.",
+          Genre = Genre.Adventure,
+          PlayWith = new List<int> { 1 , 2 },
+          EngineID = "unreal3",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = true,
+          IsCommunityMaintained = true,
+          ReleaseDates = [
+            new ReleaseDate{Year = 2017, Month = 10, Day = 5}
           ]
         },
         new Game {
@@ -1194,19 +1898,29 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ReleaseDates = [
             new ReleaseDate{Year = 2021, Month = 7, Day = 27}
           ]
         },
         new Game {
-          GameID = "HLRally",
-          Name = "Half-Life: Rally",
-          Description = "Half-Life: Rally is a first-person shooter game developed by Valve Software.",
-          EngineID = "source",
-          ModForGameID = "HalfLife",
-          IsOpenSource = true,
+          GameID = "HiddenSource",
+          Name = "Hidden: Source",
+          Description = "",
+          ModForGameID = "HalfLife2",
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
           IsCommunityMaintained = false,
-          Genre = Genre.Sports
+          Genre = Genre.FPS,
+          SteamID = 215,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/hidden",
+            GameDirectory = "hidden",
+            MasterServer = MasterServerType.Source,
+            NoBackgroundService = true
+          }
         },
         new Game {
           GameID = "Holdfast",
@@ -1220,6 +1934,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ReleaseDates = [
             new ReleaseDate{Year = 2017, Month = 12, Day = 19}
           ]
@@ -1236,6 +1951,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 2011, Month = 3, Day = 15}
           ]
@@ -1249,8 +1965,14 @@ namespace ASP_site.Data.Initializers {
           IsPaid = false,
           IsOpenSource = false,
           IsDeveloperMaintained = false,
-          IsCommunityMaintained = false,
-          Genre = Genre.FPS          
+          IsCommunityMaintained = false,  
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/hl",
+            GameDirectory = "hi",
+            MasterServer = MasterServerType.GoldSource
+          }
         },
         new Game {
           GameID = "Go",
@@ -1259,9 +1981,75 @@ namespace ASP_site.Data.Initializers {
           IsFree = true,
           IsPaid = false,
           Genre = Genre.TBS,
+          PlayWith = new List<int> { 2 },
           ReleaseDates = [
             new ReleaseDate{Year = -548}
           ]
+        },
+        new Game {
+          GameID = "Infestus",
+          Name = "Infestus",
+          Description = "",
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          SteamID = 656800,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/infestus"
+          }
+        },
+        new Game {
+          GameID = "Insurgency",
+          Name = "Insurgency",
+          Description = "",
+          SteamID = 222880,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = true,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/ins2"
+          },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2014, Month = 1, Day = 22}
+          ]
+        },
+        new Game {
+          GameID = "InsurgencyModernInfantryCombat",
+          Name = "Insurgency: Modern Infantry Combat",
+          Description = "Insurgency: Modern Infantry Combat is a source mod that features modern warfare.",
+          ModForGameID = "SDK2006",
+          IsFree = true,  
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          SteamID = 17700,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/ins",
+            MasterServer = MasterServerType.Source,
+            NoBackgroundService = true
+          }
+        },
+        new Game {
+          GameID = "IOSoccer",
+          Name = "IOSoccer",
+          Description = "",
+          Genre = Genre.Sports,
+          PlayWith = new List<int> { 0 },
+          SteamID = 673560,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/soccer"
+          }
         },
         new Game {
           GameID = "Isonzo",
@@ -1275,20 +2063,65 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ReleaseDates = [
             new ReleaseDate{Year = 2022, Month = 9, Day = 13}
           ]
+        },
+        new Game {
+          GameID = "JabroniBrawlEpisode3",
+          Name = "Jabroni Brawl: Episode 3",
+          Description = "The modern complete instanity that is Jabroni Brawl.",
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          SteamID = 869480,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/jb3"
+          }
+        },
+        new Game {
+          GameID = "JBMod",
+          Name = "JBMod",
+          Description = "The original Jabroni Brawl mod.",
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          SteamID = 2158860,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/jbmod"
+          }
+        },
+        new Game {
+          GameID = "KingdomsCollide",
+          Name = "Kingdoms Collide",
+          Description = "",
+          SteamID = 218,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/kc",
+            GameDirectory = "KingdomsCollide"
+          }
         },
         new Game {
           GameID = "LambdaFortress",
           Name = "Lambda Fortress",
           Description = "A Source 2 engine mod that brings co-op gameplay to the Team Fortress universe.",
           ModForGameID = "TF2",
+          Developer = "CoaXioN",
           IsOpenSource = true,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ReleaseDates = [
-            new ReleaseDate{Year = 2020},
+            new ReleaseDate{Year = 2025},
           ]
         },
         new Game {
@@ -1306,6 +2139,11 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 1, 4 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/l4d",
+            GameDirectory = "left4dead",
+          },
           ReleaseDates = [
             new ReleaseDate{Year = 2008, Month = 11, Day = 17},
           ]
@@ -1325,9 +2163,35 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 1, 4 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/l4d2",
+            GameDirectory = "left4dead2"
+          },
           ReleaseDates = [
             new ReleaseDate{Year = 2009, Month = 11, Day = 17},
           ]
+        },
+        new Game {
+          GameID = "MasterSwordContinued",
+          Name = "Master Sword: Continued",
+          Description = "Master Sword: Continued is a mod for Half-Life that adds a new campaign and new weapons.",
+          SteamID = 70,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/msr",
+            GameDirectory = "msc",
+            MasterServer = MasterServerType.GoldSource
+          }
+        },
+        new Game {
+          GameID = "MasterSwordRebirth",
+          Name = "Master Sword: Rebirth",
+          Description = "",
+          SteamID = 1961680,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/msr",
+            GameDirectory = "msc"
+          }
         },
         new Game {
           GameID = "MegaTF",
@@ -1337,6 +2201,7 @@ namespace ASP_site.Data.Initializers {
           IsOpenSource = true,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ReleaseDates = [
             new ReleaseDate{Year = 1996},
           ]
@@ -1353,6 +2218,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ReleaseDates = [
             new ReleaseDate{Year = 2023}
           ]
@@ -1360,7 +2226,7 @@ namespace ASP_site.Data.Initializers {
         new Game {
           GameID = "MCVietnam",
           Name = "Military Conflict: Vietnam",
-          Description = "A first-person shooter set during the Vietnam War.",
+          Description = "A first-person shooter set during the Vietnam War, featuring arcade-style deathmatch, gun game, and other modes.",
           Developer = "Antimatter Games",
           SteamID = 1234568,
           IsFree = false,
@@ -1369,17 +2235,31 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/mcv",
+          },
           ReleaseDates = [
             new ReleaseDate{Year = 2023}
           ]
         },
         new Game {
+          GameID = "ModularCombat",
+          Name = "Modular Combat",
+          Description = "",
+          SteamID = 218,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/modcom",
+            GameDirectory = "ModularCombat"
+          }
+        },
+        new Game {
           GameID = "MvC2",
           Name = "Marvel vs. Capcom 2",
           Description = "Marvel vs. Capcom 2 is a fighting game developed by Capcom.",
-          EngineID = "source",
           Developer = "Capcom",
           Genre = Genre.Fighting,
+          PlayWith = new List<int> { 1, 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 2000}
           ]
@@ -1395,9 +2275,102 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 6 },
+          SteamID = 70,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/ns",
+            GameDirectory = "ns"
+          },
           ReleaseDates = [
             new ReleaseDate{Year = 2002},
           ]
+        },
+        new Game {
+          GameID = "NEOTOKYO",
+          Name = "NEOTOKYO",
+          Description = "Source mod with unqiue movement and gameplay mechanics.",
+          SteamID = 218,
+          ModForGameID = "SDK2006",
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/nt",
+            GameDirectory = "NeotokyoSource"
+          }
+        },
+        new Game {
+          GameID = "NoMoreRoomInHell",
+          Name = "No More Room in Hell",
+          Description = "",
+          ModForGameID = "SDK2013",
+          SteamID = 224260,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/nmrih"
+          }
+        },
+        new Game {
+          GameID = "NuclearDawn",
+          Name = "Nuclear Dawn",
+          Description = "A first-person shooter set in a post-apocalyptic world where players must fight against hordes of mutants and other enemies.",
+          SteamID = 17710,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/nd"
+          }
+        },
+        new Game {
+          GameID = "ObsidianConflict",
+          Name = "Obsidian Conflict",
+          Description = "",
+          SteamID = 382110,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/oc"
+          }
+        },
+        new Game {
+          GameID = "ObsidianConflictMod",
+          Name = "Obsidian Conflict (MOD)",
+          Description = "",
+          ModForGameID = "SDK2007",
+          SteamID = 218,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/oc",
+            GameDirectory = "obsidian"
+          }
+        },
+        new Game {
+          GameID = "OccupationCS",
+          Name = "OccupationCS",
+          Description = "",
+          SteamID = 218,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/occupationcs",
+            GameDirectory = "OccupationCS"
+          }
+        },     
+        new Game {
+          GameID = "OpenFortress",
+          Name = "Open Fortress",
+          Description = "",
+          SteamID = 243750,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/tf2",
+            GameDirectory = "open_fortress"
+          }
+        },
+        new Game {
+          GameID = "Orion: Source",
+          Name = "Orion: Source",
+          Description = "",
+          SteamID = 218,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/hl2",
+            GameDirectory = "orion"
+          }
         },
         new Game {
           GameID = "PavlovVR",
@@ -1411,10 +2384,12 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ReleaseDates = [
             new ReleaseDate{Year = 2017, Month = 2, Day = 27}
           ]
         },
+
         new Game {
           GameID = "Portal",
           Name = "Portal",
@@ -1430,6 +2405,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 2007, Month = 10, Day = 10},
           ]
@@ -1450,6 +2426,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 1, 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 2011, Month = 4, Day = 19},
           ]
@@ -1477,9 +2454,47 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          SteamID = 70,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/pvk",
+            GameDirectory = "pvk"
+          },
           ReleaseDates = [
             new ReleaseDate{Year = 2003},
           ]
+        },
+        new Game {
+          GameID = "PVKII",
+          Name = "Pirates, Vikings and Knights II",
+          Description = "Source mod sequel to Pirates, Vikings and Knights.",
+          SteamID = 17570,
+          ModForGameID = "HalfLife2",
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/pvkii",
+          }
+        },
+        new Game {
+          GameID = "PublicEnemy",
+          Name = "Public Enemy",
+          Description = "",
+          SteamID = 70,
+          ModForGameID = "HalfLife2",
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/penemy",
+            GameDirectory = "penemy"
+          }
         },
         new Game {
           GameID = "Q3F",
@@ -1488,6 +2503,7 @@ namespace ASP_site.Data.Initializers {
           ModForGameID = "Quake3",
           IsOpenSource = true,
           IsCommunityMaintained = false,
+          IsDeveloperMaintained = false,
           Genre = Genre.FPS,
           ReleaseDates = [
             new ReleaseDate{Year = 2000},
@@ -1507,6 +2523,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1, 2, 4 },
           ReleaseDates = [
             new ReleaseDate{Year = 1996, Month = 6, Day = 22},
             new ReleaseDate{Year = 2007, Month = 8, Day = 3, Region = Region.Worldwide, ReleaseVersion = ReleaseVersion.SteamRelease},
@@ -1526,6 +2543,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 1997, Month = 12, Day = 9},
             new ReleaseDate{Year = 2007, Month = 8, Day = 3, Region = Region.Worldwide, ReleaseVersion = ReleaseVersion.SteamRelease},
@@ -1547,6 +2565,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 1999, Month = 12, Day = 2},
           ] 
@@ -1563,6 +2582,7 @@ namespace ASP_site.Data.Initializers {
           IsOpenSource = true,
           IsDeveloperMaintained = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 2005, Month = 10, Day = 18},
           ]
@@ -1580,6 +2600,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 2017, Month = 8, Day = 22},
           ]
@@ -1597,6 +2618,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 2010, Month = 8, Day = 6},
             new ReleaseDate{Year = 2014, Month = 9, Day = 14, Region = Region.Worldwide, ReleaseVersion = ReleaseVersion.SteamRelease},
@@ -1610,6 +2632,7 @@ namespace ASP_site.Data.Initializers {
           IsOpenSource = true,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 4 },
           ReleaseDates = [
             new ReleaseDate{Year = 1996},
           ]
@@ -1627,9 +2650,30 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 2011, Month = 10, Day = 4},
           ]
+        },
+        new Game {
+          GameID = "ResidentEvilColdBlood",
+          Name = "Resident Evil: Cold Blood",
+          Description = "",
+          SteamID = 70,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/recb",
+            GameDirectory = "recb"
+          }
+        },
+        new Game {
+          GameID = "ResistanceandLiberation",
+          Name = "Resistance and Liberation",
+          Description = "",
+          SteamID = 218,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/rnl",
+            GameDirectory = "RnLBeta"
+          }
         },
         new Game {
           GameID = "Ricochet",
@@ -1644,8 +2688,24 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 }, 
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/ricochet",
+            GameDirectory = "ricochet"
+          },
           ReleaseDates = [
             new ReleaseDate{Year = 2000},
+          ]
+        },
+        new Game {
+          GameID = "RocketLeague",
+          Name = "Rocket League",
+          Description = "Rocket League is a vehicular soccer game developed by Psyonix.",
+          Genre = Genre.Sports,
+          PlayWith = new List<int> { 3 },
+          EngineID = "unreal3",
+          ReleaseDates = [	
+            new ReleaseDate{Year = 2015, Month = 7, Day = 7}
           ]
         },
         new Game {
@@ -1661,6 +2721,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 2001, Month = 11, Day = 20}
           ]
@@ -1676,6 +2737,28 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 6 },
+          SteamID = 70,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/sai",
+            GameDirectory = "sai",
+            MasterServer = MasterServerType.GoldSource
+          },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2002},
+          ]
+        },
+        new Game {
+          GameID = "ScientistHunt",
+          Name = "Scientist Hunt",
+          ModForGameID = "HalfLife",
+          Description = "",
+          SteamID = 70,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/sh",
+            GameDirectory = "scihunt",
+            MasterServer = MasterServerType.GoldSource
+          },
           ReleaseDates = [
             new ReleaseDate{Year = 2002},
           ]
@@ -1690,12 +2773,96 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.TBS,
+          PlayWith = new List<int> { 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 1500}
           ]
         },
         new Game {
-          GameID = "SC2",
+          GameID = "SituationOutbreak",
+          Name = "Situation Outbreak",
+          Description = "",
+          SteamID = 218,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/so",
+            GameDirectory = "so"
+          }
+        },
+        new Game {
+          GameID = "SituationOutbreak2",
+          Name = "Situation Outbreak 2",
+          Description = "",
+          SteamID = 218,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/so",
+            GameDirectory = "so2"
+          }
+        },
+        new Game {
+          GameID = "Smashball",
+          Name = "Smashball",
+          Description = "",
+          SteamID = 17730,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/smashball",
+          }
+        },
+        new Game {
+          GameID = "SMODTroopers",
+          Name = "SMOD Troopers",
+          Description = "",
+          SteamID = 215,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/hl2",
+            GameDirectory = "SmodTroopers",
+            MasterServer = MasterServerType.Source,
+            NoBackgroundService = true
+          }
+        },
+        new Game {
+          GameID = "SDK2006",
+          Name = "Source SDK Base 2006",
+          Description = "",
+          SteamID = 215,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/sdk",
+            GameDirectory = "hl2mp"
+          }
+        },
+        new Game {
+          GameID = "SDK2007",
+          Name = "Source SDK Base 2007",
+          Description = "",
+          SteamID = 218,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/sdk",
+            GameDirectory = "sourcetest"
+          }
+        },
+        new Game {
+          GameID = "SDK2013",
+          Name = "Source SDK Base 2013 Multiplayer",
+          Description = "",
+          SteamID = 243750,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/sdk"
+          }
+        },
+        new Game {
+          GameID = "Starcraft",
+          Name = "Starcraft",
+          Description = "Starcraft is a real-time strategy game developed by Blizzard Entertainment.",
+          Genre = Genre.RTS,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          PlayWith = new List<int> { 1, 2, 3, 4 },
+          Developer = "Blizzard Entertainment",
+        },
+        new Game {
+          GameID = "Starcraft2",
           Name = "Starcraft 2",
           Description = "Starcraft 2 is a real-time strategy game developed by Blizzard Entertainment.",
           EngineID = "source",
@@ -1707,6 +2874,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = false,
           Genre = Genre.RTS,
+          PlayWith = new List<int> { 1, 2, 3, 4 },
           ReleaseDates = [
             new ReleaseDate{Year = 2010, Month = 7, Day = 27},
           ]
@@ -1718,6 +2886,7 @@ namespace ASP_site.Data.Initializers {
           EngineID = "CPS2",
           Developer = "Capcom",
           Genre = Genre.Fighting,
+          PlayWith = new List<int> { 1, 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 1991, Month = 12, Day = 19}
           ]
@@ -1733,10 +2902,43 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          SteamID = 225840,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/sven"
+          },
           ReleaseDates = [
-            new ReleaseDate{Year = 2016, Region = Region.Worldwide, ReleaseVersion = ReleaseVersion.SteamRelease},
-            new ReleaseDate{Year = 1999, Month =1},
+            new ReleaseDate{Year = 2016, Region = Region.Worldwide, ReleaseVersion = ReleaseVersion.SteamRelease}
           ]
+        },
+        new Game {
+          GameID = "SvenCoopClassic",
+          Name = "Sven Co-op Classic",
+          Description = "A cooperative mod that allows players to fight against computer-controlled enemies together. Can play through the original Half-Life game and its expansions in co-op mode.",
+          ModForGameID = "HalfLife",
+          IsOpenSource = true,
+          IsCommunityMaintained = true,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          SteamID = 70,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/sven",
+            GameDirectory = "svencoop",
+            MasterServer = MasterServerType.GoldSource
+          }
+        },
+        new Game {
+          GameID = "Synergy",
+          Name = "Synergy",
+          Description = "",
+          ModForGameID = "SDK2013",
+          EngineID = "source",
+          Developer = "",
+          SteamID = 17520,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/synergy",
+            GameDirectory = "synergy"
+          }
         },
         new Game {
           GameID = "Tannenberg",
@@ -1768,6 +2970,11 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 6 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/tf2",
+            GameDirectory = "tf"
+          },
           ReleaseDates = [
             new ReleaseDate{Year = 2007, Month = 10, Day = 10},
           ]
@@ -1780,6 +2987,10 @@ namespace ASP_site.Data.Initializers {
           IsOpenSource = true,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/tf2",
+            GameDirectory = "tf2classic"
+          },
           ReleaseDates = [
             new ReleaseDate{Year = 2008},
           ]
@@ -1821,8 +3032,13 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 4 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/tfc",
+            GameDirectory = "tfc"
+          },
           ReleaseDates = [
-            new ReleaseDate{Year = 1999},
+            new ReleaseDate{Year = 1999}
           ]
         },
         new Game {
@@ -1838,9 +3054,57 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 3 },
           ReleaseDates = [
             new ReleaseDate{Year = 2023, Month = 12, Day = 8}
           ]
+        },
+        new Game {
+          GameID = "TheSpecialists",
+          Name = "The Specialists",
+          Description = "",
+          SteamID = 70,
+          ModForGameID = "HalfLife",
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/hl",
+            GameDirectory = "ts",
+            MasterServer = MasterServerType.GoldSource
+          }
+        },
+        new Game {
+          GameID = "TheTrenches",
+          Name = "The Trenches",
+          Description = "",
+          SteamID = 70,
+          ModForGameID = "HalfLife",
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/hl",
+            GameDirectory = "tt",
+            MasterServer = MasterServerType.GoldSource
+          }
+        },
+        new Game {
+          GameID = "Treason",
+          Name = "Treason",
+          Description = "",
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/treason",
+            GameDirectory = "treason"
+          }
         },
         new Game {
           GameID = "Tribes1",
@@ -1853,6 +3117,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ReleaseDates = [
             new ReleaseDate{Year = 1998, Month = 12, Day = 1}
           ]
@@ -1861,7 +3126,7 @@ namespace ASP_site.Data.Initializers {
           GameID = "Tribes2",
           Name = "Tribes 2",
           Description = "Tribes 2 is a first-person shooter game developed by Dynamix.",
-          EngineID = "CPS2",
+          EngineID = "",
           Developer = "Dynamix",
           SteamID = 1234560,
           IsFree = false,
@@ -1870,6 +3135,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ReleaseDates = [
             new ReleaseDate{Year = 2001, Month = 12, Day = 1}
           ]
@@ -1886,9 +3152,37 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ReleaseDates = [
             new ReleaseDate{Year = 2024}
           ]
+        },
+        new Game {
+          GameID = "TribesAscend",
+          Name = "Tribes: Ascend",
+          Description = "Tribes: Ascend was delisted from Steam but still accessible through the link.",
+          EngineID = "unreal3",
+          Developer = "Hi-Rez Studios",
+          SteamID = 17080,
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2012, Month = 4, Day = 12}
+          ]
+        },
+        new Game {
+          GameID = "UnderworldBloodline",
+          Name = "Underworld: Bloodline",
+          Description = "",
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/underworld",
+            GameDirectory = "underworld"
+          }
         },
         new Game {
           GameID = "UT2k",
@@ -1897,6 +3191,8 @@ namespace ASP_site.Data.Initializers {
           EngineID = "unreal2",
           Developer = "Epic Games",
           RequiresCommunityPatch = true,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ReleaseDates = [
             new ReleaseDate{Year = 2002, Month = 9, Day = 30, Region = Region.NA}
           ]
@@ -1908,6 +3204,8 @@ namespace ASP_site.Data.Initializers {
           EngineID = "unreal3",
           Developer = "Epic Games",
           RequiresCommunityPatch = true,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ReleaseDates = [
             new ReleaseDate{Year = 2007, Month = 11, Day = 19, Region = Region.NA}
           ]
@@ -1925,6 +3223,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           RequiresCommunityPatch = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ReleaseDates = []
         },
         new Game {
@@ -1934,9 +3233,53 @@ namespace ASP_site.Data.Initializers {
           EngineID = "unreal",
           Developer = "Epic Games",
           RequiresCommunityPatch = true,
+          PlayWith = new List<int> { 0, 1 },
           ReleaseDates = [
-            new ReleaseDate{Year = 1999, Month = 11, Day = 22},
+            new ReleaseDate{Year = 1999, Month = 11, Day = 22}
           ]
+        },
+        new Game {
+          GameID = "VampireSlayer",
+          Name = "Vampire Slayer",
+          Description = "",
+          SteamID = 70,
+          ModForGameID = "HalfLife",
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/hl",
+            GameDirectory = "vs"
+          }
+        },
+        new Game {
+          GameID = "Wanted",
+          Name = "Wanted!",
+          Description = "",
+          SteamID = 70,
+          ModForGameID = "HalfLife",
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/wanted",
+            GameDirectory = "wantedsp"
+          }
+        },
+        new Game {
+          GameID = "WizardWars",
+          Name = "Wizard Wars",
+          Description = "",
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/ww",
+            GameDirectory = "wizardwars"
+          }
         },
         new Game {
           GameID = "Wolf3D",
@@ -1944,9 +3287,61 @@ namespace ASP_site.Data.Initializers {
           Description = "Wolfenstein 3D is a first-person shooter game developed by id Software.",
           EngineID = "idtech0",
           Developer = "id Software",
+          IsFree = true,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 1992, Month = 5, Day = 5}
           ]
+        },
+        new Game {
+          GameID = "ZombieMaster",
+          Name = "Zombie Master (CLASSIC)",
+          Description = "",
+          SteamID = 215,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/zmaster",
+            GameDirectory = "zombie_master",
+            MasterServer = MasterServerType.Source,
+            NoBackgroundService = true
+          }
+        },
+        new Game {
+          GameID = "ZombieMasterReborn",
+          Name = "Zombie Master: Reborn",
+          Description = "",
+          SteamID = 243750,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/zmr",
+            GameDirectory = "zombie_master_reborn"
+          }
+        },
+        new Game {
+          GameID = "ZombiePanic",
+          Name = "Zombie Panic!",
+          Description = "",
+          SteamID = 70,
+          ModForGameID = "HalfLife",
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/zp",
+            GameDirectory = "zp",
+            MasterServer = MasterServerType.GoldSource
+          }
+        },
+        new Game {
+          GameID = "ZombiePanicSource",
+          Name = "Zombie Panic! Source",
+          Description = "",
+          ModForGameID = "SDK2013",
+          SteamID = 17500,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/zps",
+            GameDirectory = "zps"
+          }
         }
       };
     }

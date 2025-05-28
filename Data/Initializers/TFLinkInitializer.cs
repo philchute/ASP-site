@@ -67,7 +67,9 @@ namespace ASP_site.Data.Initializers
           LinkType = LinkType.Official, Url = "http://quake.midioz.com/" },
 
         // MegaTF
-        new Link { GameID = "MegaTF", Label = "Mega Fortress Wiki", Description = "Mega Fortress Wiki",
+        new Link { GameID = "MegaTF", Label = "Introduction to MegaTF", Description = "Introduction to MegaTF",
+          LinkType = LinkType.Guide, Url = "http://www.campu.org/infinity/index.html" },
+        new Link { GameID = "MegaTF", Label = "The Mega Team Fortress Wiki", Description = "The Mega Team Fortress Wiki",
           LinkType = LinkType.Wiki, Url = "https://wiki.megateamfortress.com/Main_Page" },
 
         // FortressOne
@@ -77,6 +79,16 @@ namespace ASP_site.Data.Initializers
           LinkType = LinkType.Discord, Url = "https://discord.fortressone.org" },
         new Link { GameID = "FortressOne", Label = "FortressOne Latest Release", Description = "FortressOne Latest Release",
           LinkType = LinkType.Download, Url = "https://github.com/FortressOne/windows-installer/releases/latest" },
+        
+        // Guides
+        new Link { GameID = "FortressOne", Label = "FortressOne for TFC Players", Description = "FortressOne for TFC Players",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=cMw33Q5ETnI" },
+        new Link { GameID = "FortressOne", Label = "FortressOne for Quake 1 Players", Description = "FortressOne for Quake 1 Players",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=sxUJPt5sRRU" },
+        new Link { GameID = "FortressOne", Label = "FortressOne for TF2 Players", Description = "FortressOne for TF2 Players",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=NE1HIKNjk_k" },
+        
+        // Gameplay
         new Link { GameID = "FortressOne", Label = "schtop snoozer stall", Description = "Me playing on ff-schtop", 
           LinkType = LinkType.Gameplay, MapID = "schtop", Url = "https://www.youtube.com/watch?v=gUqfgc7jS98" },
         new Link { GameID = "FortressOne", Label = "prelude in phantom", Description = "Me playing on ff-phantom", 
@@ -137,8 +149,18 @@ namespace ASP_site.Data.Initializers
           LinkType = LinkType.Download, Url = "https://tfcmaps.net/" },
         new Link { GameID = "TFC", Label = "TFC Pugs", Description = "TFC Pugs website which I run",
           LinkType = LinkType.Community, Url = "https://tfpugs.com/" },
+        new Link { GameID = "TFC", Label = "TFC Stats", Description = "TFC Pug and 1v1 stats",
+          LinkType = LinkType.Community, Url = "https://tfcstats.com/" },
         new Link { GameID = "TFC", Label = "TFC Pugs Discord", Description = "TFC Pugs Discord",
           LinkType = LinkType.Discord, Url = "https://discord.gg/MmZeyPUH6q" },
+
+        // Maps
+
+        // Brutalist
+        new Link { GameID = "TFC", Label = "Brutalist map trailer by Manu", Description = "Brutalist map trailer by Manu",
+          LinkType = LinkType.Trailer, MapID = "brutalist", Url = "https://www.youtube.com/watch?v=M7wmZ8JspDc" },
+
+
 
         // TF2
         new Link { GameID = "TF2", Label = "Errant Signal: Social Spaces & Payload Races", Description = "Compares the social experience of TF2 and Overwatch",
@@ -161,18 +183,20 @@ namespace ASP_site.Data.Initializers
         // Gameplay
         new Link { GameID = "FF", Label = "Fortress Forever 2015 League Playlist", Description = "Playlist of competitive Fortress Forever games from 2015",
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/playlist?list=PLBzS1GxpbitIfytSZSUhh2JloX-YxKtgG" },
+        new Link { GameID = "FF", Label = "Fortress Forever League Casts by NeonLight", Description = "Fortress Forever League Casts by NeonLight",
+          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/playlist?list=PLBzS1GxpbitI2F9bZXfClFCb35z7ozN8r" },
         new Link { GameID = "FF", Label = "FFpickup Community Frag Video", Description = "Maybe the best frag video in FF",
-          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=fYLKJ3UZNa0" },
+          LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=fYLKJ3UZNa0" },
         new Link { GameID = "FF", Label = "Make squeek", Description = "Fortress Forever compilation by squeek",
-          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=NtqUaR5P_ck" },
+          LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=NtqUaR5P_ck" },
         new Link { GameID = "FF", Label = "Recover - A Fortress Forever Montage by NeoNLight", Description = "FF Frag movie by NeoNLight",
-          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=XBLpfAMvunE" },
+          LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=XBLpfAMvunE" },
         new Link { GameID = "FF", Label = "FF - Robosonic by FDA", Description = "Frag movie by FDA",
-          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=k8yF40_R5fI" },
+          LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=k8yF40_R5fI" },
         new Link { GameID = "FF", Label = "FF - I shoot things by FDA", Description = "Frag movie by FDA",
-          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=N1zELbk4qqs" },
+          LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=N1zELbk4qqs" },
         new Link { GameID = "FF", Label = "FF - It's always sunny in ksour", Description = "Frag movie by FDA",
-          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=rv2cbtJXbcg" },
+          LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=rv2cbtJXbcg" },
         // Guides
         new Link { GameID = "FF", Label = "Fortress Forever Fan Page", Description = "Fortress Forever Fan Page",
           LinkType = LinkType.Guide, Url = "https://sites.google.com/view/fortress-forever-fan-page/guide" },

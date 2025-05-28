@@ -8,17 +8,27 @@
     <h1 class="my-4">Game Server Browser</h1>
     <p>
         This was adapted from <a href="https://github.com/BerntA/GameServerBrowser/" target="_blank">https://github.com/BerntA/GameServerBrowser/</a>
-        which was not being hosted. I made this page to supplement the other tools available. 
-        <a href="https://www.gametracker.com/search/cs/">gametracker.com</a> shows many titles but I can add additional third party mods here. 
-        <a href="https://cs2browser.com/">cs2browser.com</a> is a good interface for browsing CS2 servers which allows filtering by game mode.
+        which was not being hosted. I also implemented the blacklist from <a href="https://github.com/Ch0wW/goldsrc-fake-servers-firewall" target="_blank">https://github.com/Ch0wW/goldsrc-fake-servers-firewall</a> 
+        to prevent some of the fake servers from being shown. This is still not a good browser for popular titles; I made this page to supplement the other tools that are available. 
+        <a href="https://www.gametracker.com/search/cs/">gametracker.com</a> is a better interface for many popular titles but I can add any arbitrary third-party mod here. 
+        <a href="https://cs2browser.com/">cs2browser.com</a> is a good interface for browsing Counter-Strike servers, and includes additional filters for game modes.
     </p>
 
     <form method="get">
         <div class="row g-3 align-items-end mb-3">
             <div class="col-md-4">
                 <label asp-for="SelectedGameIndex" class="form-label">Game:</label>
+                @{
+                    var gameCount = Model.GamesList?.Count() ?? 0;
+                    var selectGameText = $"-- Select a Game ({gameCount} available) --";
+                    if (gameCount == 0 && Model.SelectedGameIndex == null && !Model.IsLoading) { // If no games at all, and nothing selected or loading
+                        selectGameText = "-- No games available for browser --";
+                    } else if (gameCount == 0 && Model.SelectedGameIndex != null) { // If a game *was* selected but list is now 0 (unlikely scenario)
+                         selectGameText = "-- Select a Game --"; // Fallback
+                    }
+                }
                 <select name="SelectedGameIndex" class="form-select" asp-for="SelectedGameIndex" asp-items="@(new SelectList(Model.GamesList, "Index", "Name"))" onchange="this.form.submit();">
-                    <option value="">-- Select a Game --</option>
+                    <option value="">@selectGameText</option>
                 </select>
             </div>
 
