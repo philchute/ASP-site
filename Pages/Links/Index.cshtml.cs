@@ -27,10 +27,12 @@ namespace ASP_site.Pages.Links
         {
             ViewData["ActivePage"] = "Links";
             // Create select list for games filter
-            IQueryable<string> gameQuery = from g in _context.Games
-                                         orderby g.Name
-                                         select g.Name;
-            Games = new SelectList(await gameQuery.Distinct().ToListAsync());
+            var gamesData = await _context.Games
+                                         .OrderBy(g => g.Name)
+                                         .Select(g => new { g.GameID, g.Name })
+                                         .Distinct()
+                                         .ToListAsync();
+            Games = new SelectList(gamesData, "GameID", "Name");
 
             // Create select list for link types filter (excluding Steam and SteamDB)
             var linkTypesList = Enum.GetValues(typeof(LinkType))

@@ -623,6 +623,8 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Documentary, Url = "https://www.youtube.com/watch?v=mp12k6LOgV0" },
         new Link { GameID = "Quake1", Label = "Quake launch event 1996", Description = "Quake launch event 1996",
           LinkType = LinkType.Documentary, Url = "https://www.youtube.com/watch?v=LXw6BkZ-gdY" },
+        new Link { GameID = "Quake1", Label = "In-browser shareware Quake", Description = "In-browser shareware Quake",
+          LinkType = LinkType.Download, Url = "https://www.netquake.io/" },
         new Link { GameID = "Quake1", Label = "EzQuake", Description = "EzQuake Multiplayer Client",
           LinkType = LinkType.Download, Url = "http://www.ezquake.com/" },
         new Link { GameID = "Quake1", Label = "NQuake", Description = "NQuake (EzQuake Installer)",
@@ -879,6 +881,8 @@ namespace ASP_site.Data.Initializers {
         // Tribes2
         new Link { GameID = "Tribes2", Label = "Tribes 2 Community Release", Description = "Tribes 2 Community Release and Server info",
           LinkType = LinkType.Download, Url = "https://www.tribesnext.com/" },
+        new Link { GameID = "Tribes2", Label = "Tribes 2: yavor - Travel ", Description = "One of my all time favorite gaming montages. Low quality on youtube but there's a dl link.",
+          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=qXC3tezqwrA" },
 
         // Tribes3
         new Link { GameID = "Tribes3", Label = "Tribes 3", Description = "Mid gameplay on island", 
@@ -887,10 +891,22 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=CnNYf6Oc1zw" },
         new Link { GameID = "Tribes3", Label = "Tribes 3 12s", Description = "Mid gameplay on mountain", 
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=o9oP8EwTBeQ" },
+        new Link { GameID = "Tribes3", Label = "Through the Fire and the Fury - Tribes 3 Mortar Montage", Description = "Through the Fire and the Fury - Tribes 3 Mortar Montage",
+          LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=nC-7XQThY38" },
         
         //TribesAscend
-        new Link { GameID = "TribesAscend", Label = "Fast Movers - A Tribes: Ascend Montage", Description = "Probably my favorite Tribes Ascend montage",
+        new Link { GameID = "TribesAscend", Label = "TRIBES ASCEND Korean Fan Trailer 'Give me the flag'", Description = "TRIBES ASCEND Korean Fan Trailer 'Give me the flag'",
+          LinkType = LinkType.Trailer, Url = "https://www.youtube.com/watch?v=TOtuw4qq4gA" },
+        new Link { GameID = "TribesAscend", Label = "Fast Movers - A Tribes: Ascend Montage", Description = "My favorite Tribes Ascend montage",
           LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=_FBfV55tDQo" },
+        new Link { GameID = "TribesAscend", Label = "Best Of OOTB | Tribes : Ascend Community Montage", Description = "Best Of OOTB | Tribes : Ascend Community Montage",
+          LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=Kb8UmlLodao" },
+        new Link { GameID = "TribesAscend", Label = "Best Of OOTB 2 | Tribes : Ascend Community Montage", Description = "Tribes : Ascend Community Montage",
+          LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=GzTIDaRmocg" },
+        new Link { GameID = "TribesAscend", Label = "Best Of OOTB 3 | The Final Tribes : Ascend Community Montage", Description = "The Final Tribes : Ascend Community Montage",
+          LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=-DBU8upBip4" },
+        new Link { GameID = "TribesAscend", Label = "Tribes Ascend | Team Flag Passing", Description = "Tribes Ascend | Team Flag Passing",
+          LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=lXhvwHYxmwk" },
 
         // Unreal Tournament
         new Link { GameID = "UT", Label = "UT99 in browser", Description = "Unreal Tournament 99 in browser",
