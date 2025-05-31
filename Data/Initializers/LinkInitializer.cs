@@ -83,6 +83,9 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Community, Url = "https://liquipedia.net/ageofempires/Age_of_Empires_II/Tournaments/2024-25" },
 
 
+        new Link { GameID = "0ad", Label = "0ad", Description = "0ad is a free, open-source, real-time strategy game",
+          LinkType = LinkType.Download, Url = "https://play0ad.com/" },
+
         // AoE4
         new Link { GameID = "AoE4", Label = "Age of Empires 4 Overview", Description = "My overview of Age of Empires 4 in its current state", 
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=9GTc1nfHehg" },
@@ -169,6 +172,8 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=qtTeJlAm-94" },
 
         // CnCGenerals
+        new Link { GameID = "CnCGenerals", Label = "CnC Online replacement online service", Description = "CnC Online replacement online service", 
+          LinkType = LinkType.Community, Url = "https://cnc-online.net/en/" },
         new Link { GameID = "CnCGenerals", Label = "CnC Generals online", Description = "My CnC Generals online video guide", 
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=zkY1-a1r6AQ" },
         new Link { GameID = "CnCGenerals", Label = "CnC Generals mods", Description = "My CnC Generals mods video guide", 
@@ -251,6 +256,8 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Community, Url = "https://quakelife.ru/diabotical/race/" },
         new Link { GameID = "Diabotical", Label = "Diabotical guide", Description = "Diabotical guide",
           LinkType = LinkType.Guide, Url = "https://www.district.wiki/home" },
+        new Link { GameID = "Diabotical", Label = "Diabotical beginners guide", Description = "Diabotical beginners guide",
+          LinkType = LinkType.Guide, Url = "https://www.twitch.tv/videos/1413376600" },
 
         // DirtyBomb
         new Link { GameID = "DirtyBomb", Label = "Dirty Bomb Official Site", Description = "Dirty Bomb official website",
@@ -837,26 +844,40 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=OJs6qS5TQyo" },
 
         // Street Fighter 2
-        new Link { GameID = "SF2", Label = "Super Street Fighter 2 Turbo is the Ultimate Fighting Game", Description = "Super Street Fighter 2 Turbo is the Ultimate Fighting Game",
-          LinkType = LinkType.Documentary, Url = "https://www.youtube.com/watch?v=RlhK7fNqNE0" },
-        new Link { GameID = "SF2", Label = "David Sirlin's Tutorial Playlist", Description = "David Sirlin's Tutorial Playlist",
-          LinkType = LinkType.Guide, Url = "https://www.youtube.com/playlist?list=PL5E8E2A6415422B77" },
-        new Link { GameID = "SF2", Label = "Super Turbo Tutorials Playlist", Description = "Super Turbo Tutorials hosted by Sergjiev and eltrouble",
-          LinkType = LinkType.Guide, Url = "https://www.youtube.com/playlist?list=PLjqLxjAWgCpbcJapyOgY44Ck44lfrb7u6" },
-        new Link { GameID = "SF2", Label = "Super Turbo - How to Reverse Tick Attempts", Description = "How to Reverse Tick Attempts",
-          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=1ZCBiKXKfy0" },
-        new Link { GameID = "SF2", Label = "Street Fighter 2: Mastering Great Combinations & Strategies", Description = "Retro Street Fighter 2 video guide",
+        new Link { GameID = "SSF2T", Label = "Street Fighter 2: Mastering Great Combinations & Strategies", Description = "Retro Street Fighter 2 video guide",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=IfS02WjRU8g" },
-        new Link { GameID = "SF2", Label = "Super Puzzle Fighter 2 Turbo Chaining Tutorial", Description = "Super Puzzle Fighter 2 Turbo Chaining Tutorial",
-          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=CwrHWsssgzw" },
-        new Link { GameID = "SF2", Label = "Analysis: The consequences of reducing the skill gap", Description = "Video essay about the diago parry and the evolution of Street Fighter",
-          LinkType = LinkType.Documentary, Url = "https://www.youtube.com/watch?v=iSgA_nK_w3A" },
-        new Link { GameID = "SF2", Label = "Super Turbo is broken", Description = "Some broken things about Super Turbo",
-          LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=2s-gOeLbANM" },
-        new Link { GameID = "SF2", Label = "CvS2 is broken", Description = "Some broken things about Capcom vs. SNK 2",
+        new Link { GameID = "SSF2T", Label = "CvS2 is broken", Description = "Some broken things about Capcom vs. SNK 2",
           LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=6bsHoIAZRBc" },
-        new Link { GameID = "SF2", Label = "Fight Kingdom 2025 - ST Top 8", Description = "Super Turbo Tournament Finals",
+        new Link { GameID = "SSF2T", Label = "Analysis: The consequences of reducing the skill gap", Description = "Video essay about the diago parry and the evolution of Street Fighter",
+          LinkType = LinkType.Documentary, Url = "https://www.youtube.com/watch?v=iSgA_nK_w3A" },
+
+        // Super Street Fighter 2 Turbo
+        new Link { GameID = "SSF2T", Label = "Super Street Fighter 2 Turbo is the Ultimate Fighting Game", Description = "Super Street Fighter 2 Turbo is the Ultimate Fighting Game",
+          LinkType = LinkType.Documentary, Url = "https://www.youtube.com/watch?v=RlhK7fNqNE0" },
+        new Link { GameID = "SSF2T", Label = "David Sirlin's Tutorial Playlist", Description = "David Sirlin's Tutorial Playlist",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/playlist?list=PL5E8E2A6415422B77" },
+        new Link { GameID = "SSF2T", Label = "Super Turbo Tutorials Playlist", Description = "Super Turbo Tutorials hosted by Sergjiev and eltrouble",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/playlist?list=PLjqLxjAWgCpbcJapyOgY44Ck44lfrb7u6" },
+        new Link { GameID = "SSF2T", Label = "Super Turbo - How to Reverse Tick Attempts", Description = "How to Reverse Tick Attempts",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=1ZCBiKXKfy0" },
+        new Link { GameID = "SSF2T", Label = "Super Turbo is broken", Description = "Some broken things about Super Turbo",
+          LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=2s-gOeLbANM" },
+        new Link { GameID = "SSF2T", Label = "Fight Kingdom 2025 - ST Top 8", Description = "Super Turbo Tournament Finals",
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=4QiQ-fHugG8" },
+        new Link { GameID = "SSF2T", Label = "Super Street Fighter 2 Turbo Wiki", Description = "Super Street Fighter 2 Turbo Wiki",
+          LinkType = LinkType.Community, Url = "https://wiki.supercombo.gg/w/Super_Street_Fighter_2_Turbo" },
+        new Link { GameID = "SSF2T", Label = "Super Street Fighter 2 Turbo FAQ", Description = "Super Street Fighter 2 Turbo FAQ",
+          LinkType = LinkType.Community, Url = "https://wiki.supercombo.gg/w/Super_Street_Fighter_2_Turbo/FAQ" },
+        new Link { GameID = "SSF2T", Label = "Super Street Fighter 2 Turbo Moves", Description = "Super Street Fighter 2 Turbo Moves",
+          LinkType = LinkType.Community, Url = "https://strategywiki.org/wiki/Super_Street_Fighter_II_Turbo/Moves" },
+        
+        // Super Puzzle Fighter 2 Turbo 
+        new Link { GameID = "SPF2T", Label = "Super Puzzle Fighter 2 Turbo Chaining Tutorial", Description = "Super Puzzle Fighter 2 Turbo Chaining Tutorial",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=CwrHWsssgzw" },
+
+        // Syndicate Black Ops
+        new Link { GameID = "SyndicateBlackOps", Label = "Syndicate Black Ops on ModDB", Description = "Syndicate Black Ops on ModDB",
+          LinkType = LinkType.Download, Url = "https://www.moddb.com/mods/syndicate-black-ops" },
 
         // TheFinals
         new Link { GameID = "TheFinals", Label = "the finals playtest", Description = "3v3v3 gameplay on stadium", 

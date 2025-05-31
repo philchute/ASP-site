@@ -24,6 +24,7 @@ namespace ASP_site.Data.Initializers {
           Name = "3 Wave CTF",
           Description = "A remake of the Quake 1 CTF mod 3wave in the GoldSource engine.",
           ModForGameID = "HalfLife",
+          EngineID = "goldsrc",
           SteamID = 70,
           IsFree = true,
           IsPaid = false,
@@ -43,6 +44,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Action Half-Life",
           Description = "A fast-paced action mod for Half-Life featuring new weapons and gameplay mechanics.",
           ModForGameID = "HalfLife",
+          EngineID = "goldsrc",
           SteamID = 70,
           IsFree = true,
           IsPaid = false,
@@ -65,6 +67,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Action Half-Life: Source",
           Description = "A fast-paced action mod for Half-Life: Source featuring new weapons and gameplay mechanics.",
           ModForGameID = "HalfLife2",
+          EngineID = "source",
           SteamID = 977050,
           IsFree = true,
           IsPaid = false,
@@ -82,7 +85,8 @@ namespace ASP_site.Data.Initializers {
           GameID = "AoC",
           Name = "Age of Chivalry",
           Description = "A fast-paced action mod for Half-Life featuring new weapons and gameplay mechanics.",
-          ModForGameID = "HalfLife",
+          ModForGameID = "HalfLife",  
+          EngineID = "goldsrc",
           SteamID = 17510,
           IsFree = true,
           IsPaid = false,
@@ -244,6 +248,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Battle Grounds",
           Description = "A multiplayer mod for Half-Life featuring muskets and other early firearms.",
           ModForGameID = "HalfLife",
+          EngineID = "GoldSource",
           SteamID = 70,
           IsFree = true,
           IsPaid = false,
@@ -265,6 +270,7 @@ namespace ASP_site.Data.Initializers {
           GameID = "BattleGrounds2",
           Name = "Battle Grounds II",
           Description = "",
+          EngineID = "source", 
           SteamID = 218,
           IsFree = true,
           IsPaid = false,
@@ -280,7 +286,8 @@ namespace ASP_site.Data.Initializers {
         new Game {
           GameID = "BattleGrounds3",
           Name = "Battle Grounds III",
-          Description = "",
+          Description = "", 
+          EngineID = "source",
           SteamID = 1057700,
           IsFree = true,
           IsPaid = false,
@@ -298,6 +305,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Black Mesa",
           Description = "A fan-made remake of the original Half-Life using the Source engine, featuring updated graphics and some new music and game mechanics.",
           ModForGameID = "HalfLife2",
+          EngineID = "source",
           IsFree = false,
           IsPaid = true,
           IsOpenSource = false,
@@ -318,6 +326,7 @@ namespace ASP_site.Data.Initializers {
           Name = "BrainBread",
           Description = "A multiplayer mod for Half-Life featuring zombies and other horror elements.",
           ModForGameID = "HalfLife",
+          EngineID = "goldsrc",
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
@@ -336,6 +345,7 @@ namespace ASP_site.Data.Initializers {
           Name = "BrainBread 2",
           Description = "A multiplayer mod for Half-Life 2 featuring zombies and other horror elements.",
           ModForGameID = "SDK2013",
+          EngineID = "source",
           SteamID = 346330,
           IsFree = true,
           IsPaid = false,
@@ -368,6 +378,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Bumpercars",
           Description = "A multiplayer mod for Half-Life featuring vehicle-based combat.",
           ModForGameID = "HalfLife",
+          EngineID = "goldsrc",
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
@@ -389,6 +400,7 @@ namespace ASP_site.Data.Initializers {
           Name = "BuzzyBots",
           Description = "",
           ModForGameID = "HalfLife",
+          EngineID = "goldsrc",
           SteamID = 70,
           IsFree = true,
           IsPaid = false,
@@ -440,6 +452,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Classic Fortress 2",
           Description = "A Source engine mod that brings Team Fortress Classic gameplay to the Source engine.",
           ModForGameID = "TF2",
+          EngineID = "source",
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
@@ -915,6 +928,7 @@ namespace ASP_site.Data.Initializers {
           GameID = "CodenameCURE",
           Name = "Codename CURE",
           Description = "A psychological horror game that puts the player in the shoes of Simon, a paraplegic who writes a book for therapy, and in the process faces the inner demons that plague his thoughts. Features a co-op mode.",
+          EngineID = "source",
           SteamID = 355180,
           Genre = Genre.FPS,
           ServerConfig = new ServerBrowserConfig {
@@ -926,6 +940,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Cold Ice Remastered (beta 5)",
           Description = "A remastered version of the Cold Ice mod for Half-Life.",
           ModForGameID = "HalfLife",
+          EngineID = "goldsrc",
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
@@ -947,6 +962,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Contagion",
           Description = "A horror game that puts the player in the shoes of a survivor of a zombie apocalypse.",
           SteamID = 238430,
+          EngineID = "source",
           Genre = Genre.FPS,
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/contagion"
@@ -957,6 +973,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Cry of Fear (Mod Version)",
           Description = "A psychological horror game that puts the player in the shoes of Simon, a paraplegic who writes a book for therapy, and in the process faces the inner demons that plague his thoughts. Features a co-op mode.",
           ModForGameID = "HalfLife",
+          EngineID = "goldsrc",
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
@@ -976,6 +993,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Counter-Strike 1.6",
           Description = "The classic version of Counter-Strike that defined competitive FPS gaming. Features tactical gameplay between terrorists and counter-terrorists.",
           ModForGameID = "HalfLife",
+          EngineID = "goldsrc",
           Developer = "Valve Software",
           SteamID = 10,
           IsFree = false,
@@ -998,7 +1016,7 @@ namespace ASP_site.Data.Initializers {
           GameID = "CSX",
           Name = "Counter-Strike: Xbox",
           Description = "Counter-Strike was released on Xbox in 2005.",
-          EngineID = "source",
+          EngineID = "goldsrc",
           Developer = "Valve Software",
           IsPlayable = true,
           IsOpenSource = false,
@@ -1016,6 +1034,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Counter-Strike: Condition Zero",
           Description = "A spin-off of Counter-Strike featuring single-player missions and additional multiplayer content.",
           ModForGameID = "HalfLife",
+          EngineID = "goldsrc",
           Developer = "Valve Software",
           SteamID = 80,
           IsFree = false,
@@ -1097,10 +1116,20 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
+          GameID = "CrazyTaxi",
+          Name = "Crazy Taxi",
+          Description = "Crazy Taxi is a racing game developed by Sega.",
+          EngineID = "NAOMI",
+          ReleaseDates = [
+            new ReleaseDate{Year = 1999, Month = 2, ReleaseVersion = ReleaseVersion.Dreamcast, Region = Region.Worldwide},
+          ]
+        },
+        new Game {
           GameID = "CustomTF",
           Name = "CustomTF",
           Description = "CustomTF allows for co-op and pub gameplay with customizable classes which you choose within a budget of money for equipment. CustomTF is played in a weekly pub game every Saturday at 7 pm EST on gamehost2.tastyspleen.net:27507",
           ModForGameID = "Quake1",
+          EngineID = "idtech2",
           IsOpenSource = true,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
@@ -1115,6 +1144,7 @@ namespace ASP_site.Data.Initializers {
           Description = "A fantasy action-RPG, the Xbox version used SDK2007.",
           SteamID = 2130,
           ModForGameID = "SDK2006",
+          EngineID = "source",
           IsFree = false,
           IsPaid = true,
           IsOpenSource = false,
@@ -1130,10 +1160,21 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
+          GameID = "DS",
+          Name = "Darkstalkers",
+          Description = "Darkstalkers is a fighting game developed by Capcom.",
+          EngineID = "CPS-2",
+          Genre = Genre.Fighting,
+          ReleaseDates = [
+            new ReleaseDate{Year = 1994, Month = 7, Day = 5}
+          ]
+        },
+        new Game {
           GameID = "Deadlock",
           Name = "Deadlock",
           Description = "Valve's latest title, still in development, is a MOBA with hero shooter mechanics.",
           SteamID = 1422450,
+          EngineID = "source2",
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
@@ -1176,6 +1217,7 @@ namespace ASP_site.Data.Initializers {
             + " The game features modern class-based gameplay on progressive mixed-objective maps with 23 playable 'mercs' filling five roles: medic, engineer, assault, fire support, and recon."
             + " No longer actively developed, the game is now completely free on Steam and as of 2025 still has consistently full 8v8 pubs.",
           Developer = "Splash Damage",
+          EngineID = "unreal3",
           SteamID = 333930,
           IsFree = true,
           IsPaid = false,
@@ -1195,6 +1237,7 @@ namespace ASP_site.Data.Initializers {
           Description = "Deathmatch Classic was Valve's port of QuakeWorld Deathmatch to the goldsrc engine.",
           SteamID = 40,
           ModForGameID = "HalfLife",
+          EngineID = "goldsrc",
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
@@ -1213,6 +1256,7 @@ namespace ASP_site.Data.Initializers {
           Description = "Deathmatch Classic was Valve's port of QuakeWorld Deathmatch to the goldsrc engine."
             + "DMC:R is a source mod which extends this legacy to the the Half-Life 2 engine.",
           ModForGameID = "HalfLife2",
+          EngineID = "source",
           Developer = "CoaXioN",
           IsFree = true,
           IsPaid = false,
@@ -1228,6 +1272,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Day of Defeat",
           Description = "A World War II first-person shooter that was originally a mod and later became a commercially released game.",
           ModForGameID = "HalfLife",
+          EngineID = "goldsrc",
           Developer = "Valve Software",
           SteamID = 300,
           IsFree = false,
@@ -1250,6 +1295,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Day of Defeat: Source",
           Description = "Day of Defeat: Source is a source mod which extends the legacy of Day of Defeat to the Half-Life 2 engine.",
           ModForGameID = "HalfLife2",
+          EngineID = "source",
           Developer = "Valve Software",
           SteamID = 300,
           IsFree = false,
@@ -1268,6 +1314,7 @@ namespace ASP_site.Data.Initializers {
           GameID = "DinoD-Day",
           Name = "Dino D-Day",
           Description = "",
+          EngineID = "source",
           SteamID = 70000,
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/dino"
@@ -1374,6 +1421,7 @@ namespace ASP_site.Data.Initializers {
           GameID = "DAB",
           Name = "Double Action: Boogaloo",
           Description = "",
+          EngineID = "source",
           SteamID = 317360,
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/dab",
@@ -1384,6 +1432,7 @@ namespace ASP_site.Data.Initializers {
           GameID = "Dystopia",
           Name = "Dystopia",
           Description = "",
+          EngineID = "source",
           SteamID = 17580,
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/dys",
@@ -1429,6 +1478,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Earth's Special Forces",
           Description = "A Dragon Ball Z mod for Half-Life featuring unique combat mechanics.",
           ModForGameID = "HalfLife",
+          EngineID = "goldsrc",
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
@@ -1451,6 +1501,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Empires",
           Description = "FPS and RTS hybrid source mod.",
           ModForGameID = "SDK2013",
+          EngineID = "source",
           SteamID = 17740,
           IsFree = true,
           IsPaid = false,
@@ -1489,6 +1540,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Enemy Territory Fortress",
           Description = "ETF is a port of Q3F to Enemy Territory. This game is currently playable though no one is playing that I know of.",
           ModForGameID = "ET",
+          EngineID = "idtech3",
           IsOpenSource = true,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
@@ -1502,6 +1554,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Eternal Silence",
           Description = "FPS and space combat mod for Half-Life 2.",
           ModForGameID = "SDK2006",
+          EngineID = "source",
           SteamID = 215,
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/es",
@@ -1512,6 +1565,7 @@ namespace ASP_site.Data.Initializers {
           GameID = "EYE",
           Name = "E.Y.E: Divine Cybermancy",
           Description = "",
+          EngineID = "source",
           SteamID = 91700,
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/eye"
@@ -1522,6 +1576,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Firearms",
           ModForGameID = "HalfLife",
           Description = "Western-themed half-life mod.",
+          EngineID = "goldsrc",
           SteamID = 70,
           IsFree = true,
           IsPaid = false,
@@ -1540,6 +1595,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Firearms: Source",
           Description = "Source engine sequel to Firearms.",
           ModForGameID = "HalfLife2",
+          EngineID = "source",
           SteamID = 218,
           IsFree = true,
           IsPaid = false,
@@ -1558,6 +1614,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Fistful of Frags",
           Description = "",
           ModForGameID = "SDK2013",
+          EngineID = "source",
           SteamID = 265630,
           IsFree = true,
           IsPaid = false,
@@ -1575,6 +1632,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Fortress Forever",
           Description = "Fortress Forever is a mod for the Source engine that iterated the Team Fortress Classic style gameplay.",
           ModForGameID = "SDK2006",
+          EngineID = "source",
           Developer = "Fortress Forever Team",
           SteamID = 253530,
           IsOpenSource = true,
@@ -1596,6 +1654,7 @@ namespace ASP_site.Data.Initializers {
           Name = "FortressOne",
           Description = "FortressOne is a free and open source mod for QuakeWorld that brings Team Fortress to the modern era.",
           ModForGameID = "Quake1",
+          EngineID = "idtech2",
           IsOpenSource = true,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
@@ -1610,6 +1669,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Frontline Force",
           Description = "A team-oriented first person shooter mod in which players are divided into 2 teams: Attackers and Defenders.",
           ModForGameID = "HalfLife",
+          EngineID = "goldsrc",
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
@@ -1630,6 +1690,7 @@ namespace ASP_site.Data.Initializers {
           GameID = "GMOD",
           Name = "Garry's Mod",
           Description = "Source engine sandbox game.",
+          EngineID = "source",
           IsFree = false,
           IsPaid = true,
           SteamID = 4000,
@@ -1648,6 +1709,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Garry's Mod v9",
           Description = "",
           ModForGameID = "HalfLife2",
+          EngineID = "source",
           SteamID = 215,
           IsFree = true,
           IsPaid = false,
@@ -1669,6 +1731,7 @@ namespace ASP_site.Data.Initializers {
           Description = "A source mod that recreates the original GoldenEye 007 game.",
           SteamID = 218,
           ModForGameID = "SDK2007",
+          EngineID = "source",
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
@@ -1686,6 +1749,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Gunman Chronicles",
           Description = "",
           ModForGameID = "HalfLife2",
+          EngineID = "source",
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
@@ -1754,6 +1818,7 @@ namespace ASP_site.Data.Initializers {
           Description = "The multiplayer mode of Half-Life 2 has always been a separate title on Steam and is included with the purchase of Half-Life 2.",
           SteamID = 320,
           ModForGameID = "HalfLife2",
+          EngineID = "source",
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
@@ -1771,6 +1836,7 @@ namespace ASP_site.Data.Initializers {
           Description = "Fan made pro-mod for Half-Life deathmatch.",
           SteamID = 70,
           ModForGameID = "HalfLife",
+          EngineID = "goldsrc",
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
@@ -1788,6 +1854,7 @@ namespace ASP_site.Data.Initializers {
           Description = "Multiplayer deathmatch component of the Half-Life expansion pack Opposing Force.",
           SteamID = 50,
           ModForGameID = "HalfLife",
+          EngineID = "goldsrc", 
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
@@ -1805,7 +1872,8 @@ namespace ASP_site.Data.Initializers {
           Name = "Half-Life: Opposing Force CTF",
           Description = "The CTF mode of Half-Life: Opposing Force expansion.",
           SteamID = 70,
-          ModForGameID = "HalfLife",
+          ModForGameID = "HalfLife",  
+          EngineID = "goldsrc",
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
@@ -1859,6 +1927,7 @@ namespace ASP_site.Data.Initializers {
           Description = "Halo themed mod for Half-Life.",
           SteamID = 70,
           ModForGameID = "HalfLife",
+          EngineID = "goldsrc",
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
@@ -1908,6 +1977,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Hidden: Source",
           Description = "",
           ModForGameID = "HalfLife2",
+          EngineID = "source",
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
@@ -1961,6 +2031,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Hostile Intent",
           Description = "Hostile Intent is a goldsrc mod featuring tactical round based gameplay similar to Counterstrike with some hardcore mechanics.",
           ModForGameID = "HalfLife",
+          EngineID = "goldsrc",
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
@@ -1973,6 +2044,23 @@ namespace ASP_site.Data.Initializers {
             GameDirectory = "hi",
             MasterServer = MasterServerType.GoldSource
           }
+        },
+        new Game {
+          GameID = "HouseOfTheDead2",
+          Name = "House of the Dead 2",
+          Description = "House of the Dead 2 is a shooting game developed by Sega.",
+          Genre = Genre.LightGun,
+          EngineID = "NAOMI",
+          ReleaseDates = [
+            new ReleaseDate{Year = 1998, Month = 11, Day = 20, ReleaseVersion = ReleaseVersion.Arcade, Region = Region.JP},
+            new ReleaseDate{Year = 1998, Month = 12, Day = 19, ReleaseVersion = ReleaseVersion.Arcade, Region = Region.NA},
+            new ReleaseDate{Year = 1999, Month = 3, Day = 25, ReleaseVersion = ReleaseVersion.Dreamcast, Region = Region.JP},
+            new ReleaseDate{Year = 1999, Month = 9, Day = 9, ReleaseVersion = ReleaseVersion.Dreamcast, Region = Region.NA},
+            new ReleaseDate{Year = 1999, Month = 11, Day = 5, ReleaseVersion = ReleaseVersion.Dreamcast, Region = Region.EU},
+            new ReleaseDate{Year = 2001, Month = 7, Day = 6, ReleaseVersion = ReleaseVersion.FullGame, Region = Region.NA},
+            new ReleaseDate{Year = 2008, Month = 3, Day = 27, ReleaseVersion = ReleaseVersion.Wii, Region = Region.AU},
+            new ReleaseDate{Year = 2008, Month = 3, Day = 28, ReleaseVersion = ReleaseVersion.Wii, Region = Region.EU},
+          ]
         },
         new Game {
           GameID = "Go",
@@ -1990,6 +2078,7 @@ namespace ASP_site.Data.Initializers {
           GameID = "Infestus",
           Name = "Infestus",
           Description = "",
+          EngineID = "source",
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
@@ -2006,6 +2095,7 @@ namespace ASP_site.Data.Initializers {
           GameID = "Insurgency",
           Name = "Insurgency",
           Description = "",
+          EngineID = "source",
           SteamID = 222880,
           IsFree = false,
           IsPaid = true,
@@ -2026,6 +2116,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Insurgency: Modern Infantry Combat",
           Description = "Insurgency: Modern Infantry Combat is a source mod that features modern warfare.",
           ModForGameID = "SDK2006",
+          EngineID = "source",
           IsFree = true,  
           IsPaid = false,
           IsOpenSource = false,
@@ -2044,6 +2135,7 @@ namespace ASP_site.Data.Initializers {
           GameID = "IOSoccer",
           Name = "IOSoccer",
           Description = "",
+          EngineID = "source",
           Genre = Genre.Sports,
           PlayWith = new List<int> { 0 },
           SteamID = 673560,
@@ -2072,6 +2164,7 @@ namespace ASP_site.Data.Initializers {
           GameID = "JabroniBrawlEpisode3",
           Name = "Jabroni Brawl: Episode 3",
           Description = "The modern complete instanity that is Jabroni Brawl.",
+          EngineID = "source",
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
@@ -2088,6 +2181,7 @@ namespace ASP_site.Data.Initializers {
           GameID = "JBMod",
           Name = "JBMod",
           Description = "The original Jabroni Brawl mod.",
+          EngineID = "source",
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
@@ -2101,10 +2195,31 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
+          GameID = "JoJo",
+          Name = "JoJo's Bizarre Adventure",
+          Description = "JoJo's Bizarre Adventure (ジョジョの奇妙な冒険) is a fighting game developed by Capcom.",
+          EngineID = "CPS-3",
+          Genre = Genre.Fighting,
+          ReleaseDates = [
+            new ReleaseDate{Year = 1998, Month = 12, Day = 2}
+          ]
+        },  
+        new Game {
+          GameID = "JoJo:Heritage",
+          Name = "JoJo's Bizarre Adventure: Heritage for the Future",
+          Description = "JoJo's Bizarre Adventure: Heritage for the Future (ジョジョの奇妙な冒険 未来への遺産) is a fighting game developed by Capcom.",
+          EngineID = "CPS-3",
+          Genre = Genre.Fighting,
+          ReleaseDates = [
+            new ReleaseDate{Year = 1999, Month = 9, Day = 13}
+          ]
+        },
+        new Game {
           GameID = "KingdomsCollide",
           Name = "Kingdoms Collide",
           Description = "",
           SteamID = 218,
+          EngineID = "source",
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/kc",
             GameDirectory = "KingdomsCollide"
@@ -2115,6 +2230,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Lambda Fortress",
           Description = "A Source 2 engine mod that brings co-op gameplay to the Team Fortress universe.",
           ModForGameID = "TF2",
+          EngineID = "source2",
           Developer = "CoaXioN",
           IsOpenSource = true,
           IsCommunityMaintained = true,
@@ -2172,11 +2288,39 @@ namespace ASP_site.Data.Initializers {
             new ReleaseDate{Year = 2009, Month = 11, Day = 17},
           ]
         },
+                new Game {  
+          GameID = "MvsSF",
+          Name = "Marvel vs. Street Fighter",
+          Description = "Marvel vs. Street Fighter is a fighting game developed by Capcom.",
+          EngineID = "CPS-2",
+          ReleaseDates = [
+            new ReleaseDate{Year = 1997, Month = 6, Day = 20}
+          ]
+        },
+        new Game {  
+          GameID = "MvsC",
+          Name = "Marvel vs. Capcom",
+          Description = "Marvel vs. Capcom is a fighting game developed by Capcom.",
+          EngineID = "CPS-2",
+          ReleaseDates = [
+            new ReleaseDate{Year = 1998, Month = 1, Day = 12}
+          ]
+        },
+        new Game {
+          GameID = "MvsC2",
+          Name = "Marvel vs. Capcom 2: New Age of Heroes",
+          Description = "Marvel vs. Capcom 2: New Age of Heroes is a crossover fighting game developed and published by Capcom.",
+          EngineID = "NAOMI",
+          ReleaseDates = [
+            new ReleaseDate{Year = 2000, Month = 3, Day = 23}
+          ]
+        },
         new Game {
           GameID = "MasterSwordContinued",
           Name = "Master Sword: Continued",
           Description = "Master Sword: Continued is a mod for Half-Life that adds a new campaign and new weapons.",
           SteamID = 70,
+          EngineID = "goldsrc",
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/msr",
             GameDirectory = "msc",
@@ -2186,6 +2330,7 @@ namespace ASP_site.Data.Initializers {
         new Game {
           GameID = "MasterSwordRebirth",
           Name = "Master Sword: Rebirth",
+          EngineID = "source",
           Description = "",
           SteamID = 1961680,
           ServerConfig = new ServerBrowserConfig {
@@ -2198,6 +2343,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Mega Team Fortress",
           Description = "Mega Team Fortress features expanded and extended abilities for the nine classes, and was the most widely played form of QWTF until replaced by the streamlined FortressOne. MegaTF is still played on a weekly Friday night game at 7pm EST on gamehost2.tastyspleen.net:27502",
           ModForGameID = "Quake1",
+          EngineID = "idtech2",
           IsOpenSource = true,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
@@ -2228,6 +2374,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Military Conflict: Vietnam",
           Description = "A first-person shooter set during the Vietnam War, featuring arcade-style deathmatch, gun game, and other modes.",
           Developer = "Antimatter Games",
+          EngineID = "source",
           SteamID = 1234568,
           IsFree = false,
           IsPaid = true,
@@ -2247,6 +2394,7 @@ namespace ASP_site.Data.Initializers {
           GameID = "ModularCombat",
           Name = "Modular Combat",
           Description = "",
+          EngineID = "source",
           SteamID = 218,
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/modcom",
@@ -2269,6 +2417,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Natural Selection",
           Description = "A unique blend of first-person shooter and real-time strategy where two teams (humans and aliens) fight against each other.",
           ModForGameID = "HalfLife",
+          EngineID = "goldsrc",
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
@@ -2291,6 +2440,7 @@ namespace ASP_site.Data.Initializers {
           Description = "Source mod with unqiue movement and gameplay mechanics.",
           SteamID = 218,
           ModForGameID = "SDK2006",
+          EngineID = "source",
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
@@ -2308,6 +2458,7 @@ namespace ASP_site.Data.Initializers {
           Name = "No More Room in Hell",
           Description = "",
           ModForGameID = "SDK2013",
+          EngineID = "source",
           SteamID = 224260,
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/nmrih"
@@ -2317,6 +2468,7 @@ namespace ASP_site.Data.Initializers {
           GameID = "NuclearDawn",
           Name = "Nuclear Dawn",
           Description = "A first-person shooter set in a post-apocalyptic world where players must fight against hordes of mutants and other enemies.",
+          EngineID = "source",
           SteamID = 17710,
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/nd"
@@ -2326,6 +2478,7 @@ namespace ASP_site.Data.Initializers {
           GameID = "ObsidianConflict",
           Name = "Obsidian Conflict",
           Description = "",
+          EngineID = "source",
           SteamID = 382110,
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/oc"
@@ -2336,6 +2489,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Obsidian Conflict (MOD)",
           Description = "",
           ModForGameID = "SDK2007",
+          EngineID = "source",
           SteamID = 218,
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/oc",
@@ -2346,6 +2500,7 @@ namespace ASP_site.Data.Initializers {
           GameID = "OccupationCS",
           Name = "OccupationCS",
           Description = "",
+          EngineID = "source",
           SteamID = 218,
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/occupationcs",
@@ -2356,6 +2511,7 @@ namespace ASP_site.Data.Initializers {
           GameID = "OpenFortress",
           Name = "Open Fortress",
           Description = "",
+          EngineID = "source",
           SteamID = 243750,
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/tf2",
@@ -2366,6 +2522,7 @@ namespace ASP_site.Data.Initializers {
           GameID = "Orion: Source",
           Name = "Orion: Source",
           Description = "",
+          EngineID = "source",
           SteamID = 218,
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/hl2",
@@ -2432,10 +2589,45 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
+          GameID = "PowerStone",
+          Name = "Power Stone",
+          Description = "Power Stone is a fighting game developed by Capcom.",
+          EngineID = "NAOMI",
+          ReleaseDates = [
+            new ReleaseDate{Year = 1999, Month = 2, ReleaseVersion = ReleaseVersion.Arcade, Region = Region.JP},
+            new ReleaseDate{Year = 1999, Month = 3, ReleaseVersion = ReleaseVersion.Arcade, Region = Region.NA},
+            new ReleaseDate{Year = 1999, Month = 2, Day = 25, ReleaseVersion = ReleaseVersion.Dreamcast, Region = Region.JP},
+            new ReleaseDate{Year = 1999, Month = 9, Day = 9, ReleaseVersion = ReleaseVersion.Dreamcast, Region = Region.NA},
+            new ReleaseDate{Year = 1999, Month = 10, Day = 14, ReleaseVersion = ReleaseVersion.Dreamcast, Region = Region.EU},
+            new ReleaseDate{Year = 2006, Month = 10, Day = 20, ReleaseVersion = ReleaseVersion.PSP, Region = Region.EU},
+            new ReleaseDate{Year = 2006, Month = 10, Day = 25, ReleaseVersion = ReleaseVersion.PSP, Region = Region.AU},
+            new ReleaseDate{Year = 2006, Month = 10, Day = 31, ReleaseVersion = ReleaseVersion.PSP, Region = Region.NA},
+            new ReleaseDate{Year = 2006, Month = 11, Day = 30, ReleaseVersion = ReleaseVersion.PSP, Region = Region.JP},
+          ]
+        },
+        new Game {
+          GameID = "PowerStone2",
+          Name = "Power Stone 2",
+          Description = "Power Stone 2 is a fighting game developed by Capcom.",
+          EngineID = "NAOMI",
+          ReleaseDates = [
+            new ReleaseDate{Year = 2000, Month = 4, Day = 20, ReleaseVersion = ReleaseVersion.Arcade, Region = Region.Worldwide},
+            new ReleaseDate{Year = 2000, Month = 4, Day = 27, ReleaseVersion = ReleaseVersion.Arcade, Region = Region.JP},
+            new ReleaseDate{Year = 2000, Month = 8, Day = 23, ReleaseVersion = ReleaseVersion.Dreamcast, Region = Region.NA},
+            new ReleaseDate{Year = 2000, Month = 8, Day = 24, ReleaseVersion = ReleaseVersion.Dreamcast, Region = Region.EU},
+            new ReleaseDate{Year = 2000, Month = 9, Day = 15, ReleaseVersion = ReleaseVersion.Dreamcast, Region = Region.UK},
+            new ReleaseDate{Year = 2006, Month = 10, Day = 20, ReleaseVersion = ReleaseVersion.PSP, Region = Region.EU},
+            new ReleaseDate{Year = 2006, Month = 10, Day = 25, ReleaseVersion = ReleaseVersion.PSP, Region = Region.AU},
+            new ReleaseDate{Year = 2006, Month = 10, Day = 31, ReleaseVersion = ReleaseVersion.PSP, Region = Region.NA},
+            new ReleaseDate{Year = 2006, Month = 11, Day = 30, ReleaseVersion = ReleaseVersion.PSP, Region = Region.JP},
+          ]
+        },
+        new Game {
           GameID = "PreFortress2",
           Name = "Pre-Fortress 2",
           Description = "A Source engine mod that recreates the beta era of Team Fortress 2.",
           ModForGameID = "TF2",
+          EngineID = "source",
           IsOpenSource = true,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
@@ -2448,6 +2640,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Pirates, Vikings and Knights",
           Description = "A unique team-based combat game where three factions battle each other with period-appropriate weapons and abilities.",
           ModForGameID = "HalfLife",
+          EngineID = "goldsrc",
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
@@ -2470,6 +2663,7 @@ namespace ASP_site.Data.Initializers {
           Description = "Source mod sequel to Pirates, Vikings and Knights.",
           SteamID = 17570,
           ModForGameID = "HalfLife2",
+          EngineID = "source",
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
@@ -2486,6 +2680,7 @@ namespace ASP_site.Data.Initializers {
           Description = "",
           SteamID = 70,
           ModForGameID = "HalfLife2",
+          EngineID = "source",
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
@@ -2501,6 +2696,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Quake 3 Fortress",
           Description = "Q3F was created in 2000 by the team that would become Splash Damage Studios. It was last updated in 2003 and to my knowledge there are no servers and the mod is not currently playable.",
           ModForGameID = "Quake3",
+          EngineID = "idtech3",
           IsOpenSource = true,
           IsCommunityMaintained = false,
           IsDeveloperMaintained = false,
@@ -2629,6 +2825,7 @@ namespace ASP_site.Data.Initializers {
           Name = "QuakeWorld Team Fortress",
           Description = "The original Team Fortress, released as a mod in 1996. This team was hired by Valve to make TFC.",
           ModForGameID = "Quake1",
+          EngineID = "idtech2",
           IsOpenSource = true,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
@@ -2659,6 +2856,7 @@ namespace ASP_site.Data.Initializers {
           GameID = "ResidentEvilColdBlood",
           Name = "Resident Evil: Cold Blood",
           Description = "",
+          EngineID = "goldsrc",
           SteamID = 70,
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/recb",
@@ -2669,6 +2867,7 @@ namespace ASP_site.Data.Initializers {
           GameID = "ResistanceandLiberation",
           Name = "Resistance and Liberation",
           Description = "",
+          EngineID = "goldsrc",
           SteamID = 218,
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/rnl",
@@ -2679,7 +2878,7 @@ namespace ASP_site.Data.Initializers {
           GameID = "Ricochet",
           Name = "Ricochet",
           Description = "Ricochet is a fast-paced first-person shooter with a unique focus on precision and accuracy.",
-          EngineID = "source",
+          EngineID = "goldsrc",
           Developer = "Valve Software",
           SteamID = 60,
           IsFree = false,
@@ -2731,6 +2930,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Science and Industry",
           Description = "A team-based multiplayer mod in which players take the roles of security guards at two competing research firms. Features a weapons research system.",
           ModForGameID = "HalfLife",
+          EngineID = "goldsrc",
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
@@ -2753,6 +2953,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Scientist Hunt",
           ModForGameID = "HalfLife",
           Description = "",
+          EngineID = "goldsrc",
           SteamID = 70,
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/sh",
@@ -2783,6 +2984,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Situation Outbreak",
           Description = "",
           SteamID = 218,
+          EngineID = "goldsrc",
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/so",
             GameDirectory = "so"
@@ -2793,6 +2995,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Situation Outbreak 2",
           Description = "",
           SteamID = 218,
+          EngineID = "goldsrc",
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/so",
             GameDirectory = "so2"
@@ -2803,6 +3006,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Smashball",
           Description = "",
           SteamID = 17730,
+          EngineID = "source",
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/smashball",
           }
@@ -2812,6 +3016,7 @@ namespace ASP_site.Data.Initializers {
           Name = "SMOD Troopers",
           Description = "",
           SteamID = 215,
+          EngineID = "goldsrc",
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/hl2",
             GameDirectory = "SmodTroopers",
@@ -2824,6 +3029,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Source SDK Base 2006",
           Description = "",
           SteamID = 215,
+          EngineID = "source",
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/sdk",
             GameDirectory = "hl2mp"
@@ -2834,6 +3040,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Source SDK Base 2007",
           Description = "",
           SteamID = 218,
+          EngineID = "source",
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/sdk",
             GameDirectory = "sourcetest"
@@ -2844,6 +3051,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Source SDK Base 2013 Multiplayer",
           Description = "",
           SteamID = 243750,
+          EngineID = "source",
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/sdk"
           }
@@ -2880,15 +3088,125 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "SF2",
-          Name = "Street Fighter 2",
-          Description = "Street Fighter 2 is a fighting game developed by Capcom.",
-          EngineID = "CPS2",
+          GameID = "SF2:WW",
+          Name = "Street Fighter 2: The World Warrior",
+          Description = "Capcom's sequel to Street Fighter, this game launched the fighting game genre.",
+          EngineID = "CPS-1",
           Developer = "Capcom",
           Genre = Genre.Fighting,
           PlayWith = new List<int> { 1, 2 },
           ReleaseDates = [
-            new ReleaseDate{Year = 1991, Month = 12, Day = 19}
+            new ReleaseDate{Year = 1991, Month = 2, Day = 6}
+          ]
+        },
+        new Game {
+          GameID = "SF2:CE",
+          Name = "Street Fighter 2: Champion Edition",
+          Description = "'Street Fighter Dash' in Japan, the first update to The World Warrior, this version added the 4 bosses as playable characters and allowed for mirror matches.",
+          EngineID = "CPS-1",
+          Genre = Genre.Fighting,
+          ReleaseDates = [
+            new ReleaseDate{Year = 1992, Month = 3, Day = 13}
+          ]
+        },
+        new Game {
+          GameID = "SF2:HF",
+          Name = "Street Fighter 2: Hyper Fighting Edition",
+          Description = "The second update to The World Warrior, this version added faster gameplay and some new moves.",
+          EngineID = "CPS-1",
+          Genre = Genre.Fighting,
+          ReleaseDates = [
+            new ReleaseDate{Year = 1992, Month = 12, Day = 9}
+          ]
+        },
+        new Game {
+          GameID = "SF2:NC",
+          Name = "Super Street Fighter 2: The New Challengers",
+          Description = "The third update to The World Warrior, this version was a graphics overhaul and added four new characters: Cammy, Fei Long, Dee Jay, and T. Hawk.",
+          EngineID = "CPS-2",
+          Genre = Genre.Fighting,
+          ReleaseDates = [
+            new ReleaseDate{Year = 1993, Month = 9, Day = 10}
+          ]
+        },
+        new Game {
+          GameID = "SF2:T",
+          Name = "Super Street Fighter 2: Turbo",
+          Description = "The fourth update to The World Warrior, this version added super moves and Akuma as a playable character.",
+          EngineID = "CPS-2",
+          Genre = Genre.Fighting,
+          ReleaseDates = [
+            new ReleaseDate{Year = 1994, Month = 2, Day = 23}
+          ]
+        },
+        new Game {
+          GameID = "SFAlpha",
+          Name = "Street Fighter Alpha",
+          Description = "Street Fighter Alpha (ストリートファイターZERO) is a fighting game developed by Capcom.",
+          EngineID = "CPS-2",
+          Genre = Genre.Fighting,
+          ReleaseDates = [
+            new ReleaseDate{Year = 1995, Month = 6, Day = 5}
+          ]
+        },
+        new Game {
+          GameID = "SFAlpha2",
+          Name = "Street Fighter Alpha 2",
+          Description = "Street Fighter Alpha 2 (ストリートファイターZERO2) is a fighting game developed by Capcom.",
+          EngineID = "CPS-2",
+          Genre = Genre.Fighting,
+          ReleaseDates = [
+            new ReleaseDate{Year = 1996, Month = 2, Day = 27}
+          ]
+        },
+        new Game {
+          GameID = "SPF2T",
+          Name = "Super Puzzle Fighter II Turbo",
+          Description = "Super Puzzle Fighter II Turbo (スーパーパズルファイターIIX) is a fighting game developed by Capcom.",
+          EngineID = "CPS-2",
+          Genre = Genre.Fighting,
+          ReleaseDates = [
+            new ReleaseDate{Year = 1996, Month = 5, Day = 29}
+          ]
+        },
+        new Game {
+          GameID = "SFAlpha3",
+          Name = "Street Fighter Alpha 3",
+          Description = "Street Fighter Alpha 3 (ストリートファイターZERO3) is a fighting game developed by Capcom.",
+          EngineID = "CPS-2",
+          Genre = Genre.Fighting,
+          ReleaseDates = [
+            new ReleaseDate{Year = 1998, Month = 6, Day = 29}
+          ]
+        },
+        new Game {
+          GameID = "SF3",
+          Name = "Street Fighter 3",
+          Description = "Street Fighter 3 (ストリートファイターIII) is a fighting game developed by Capcom.",
+          EngineID = "CPS-3",
+          Genre = Genre.Fighting,
+          ReleaseDates = [
+            new ReleaseDate{Year = 1997, Month = 2, Day = 4}
+          ]
+        },
+        new Game {
+          GameID = "SF3:2ndImpact",
+          Name = "Street Fighter 3: 2nd Impact",
+          Description = "Street Fighter 3: 2nd Impact (ストリートファイターIII 2nd Impact) is a fighting game developed by Capcom.",
+          EngineID = "CPS-3",
+          Genre = Genre.Fighting,
+          ReleaseDates = [
+            new ReleaseDate{Year = 1997, Month = 9, Day = 30}
+          ]
+        },
+        new Game {
+          GameID = "SF3:3rdStrike",
+          Name = "Street Fighter 3: 3rd Strike",
+          Description = "Street Fighter 3: 3rd Strike (ストリートファイターIII 3rd Strike) is a fighting game developed by Capcom.",
+          EngineID = "CPS-3",
+          Genre = Genre.Fighting,
+          ReleaseDates = [
+            new ReleaseDate{Year = 1999, Month = 5, Day = 12}
           ]
         },
         new Game {
@@ -2896,6 +3214,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Sven Co-op",
           Description = "A cooperative mod that allows players to fight against computer-controlled enemies together. Can play through the original Half-Life game and its expansions in co-op mode.",
           ModForGameID = "HalfLife",
+          EngineID = "goldsrc",
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
@@ -2916,6 +3235,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Sven Co-op Classic",
           Description = "A cooperative mod that allows players to fight against computer-controlled enemies together. Can play through the original Half-Life game and its expansions in co-op mode.",
           ModForGameID = "HalfLife",
+          EngineID = "goldsrc",
           IsOpenSource = true,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
@@ -2925,6 +3245,23 @@ namespace ASP_site.Data.Initializers {
             IconPath = "img/icons/sven",
             GameDirectory = "svencoop",
             MasterServer = MasterServerType.GoldSource
+          }
+        },
+        new Game {
+          GameID = "SyndicateBlackOps",
+          Name = "Syndicate Black Ops",
+          Description = "",
+          ModForGameID = "HalfLife",
+          EngineID = "goldsrc",
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = true,
+          IsCommunityMaintained = true,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ServerConfig = new ServerBrowserConfig {
+            GameDirectory = "syndicate"
           }
         },
         new Game {
@@ -2984,6 +3321,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Team Fortress 2 Classic",
           Description = "A Source engine mod that recreates the 2008 era of Team Fortress 2.",
           ModForGameID = "TF2",
+          EngineID = "source",
           IsOpenSource = true,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
@@ -3000,6 +3338,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Team Fortress 2: Source",
           Description = "A Source 2 engine mod that recreates the early era of Team Fortress 2.",
           ModForGameID = "TF2",
+          EngineID = "source",
           IsOpenSource = true,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
@@ -3012,6 +3351,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Team Fortress 2: Vintage",
           Description = "A Source engine mod that recreates the 2010 era of Team Fortress 2.",
           ModForGameID = "TF2",
+          EngineID = "source",
           IsOpenSource = true,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
@@ -3024,6 +3364,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Team Fortress Classic",
           Description = "Team Fortress Classic is a mod for Half-Life that ported QWTF to the goldsrc engine.",
           ModForGameID = "HalfLife",
+          EngineID = "goldsrc",
           Developer = "Valve Software",
           SteamID = 20,
           IsOpenSource = false,
@@ -3063,6 +3404,7 @@ namespace ASP_site.Data.Initializers {
           GameID = "TheSpecialists",
           Name = "The Specialists",
           Description = "",
+          EngineID = "goldsrc",
           SteamID = 70,
           ModForGameID = "HalfLife",
           IsFree = true,
@@ -3084,6 +3426,7 @@ namespace ASP_site.Data.Initializers {
           Description = "",
           SteamID = 70,
           ModForGameID = "HalfLife",
+          EngineID = "goldsrc",
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
@@ -3101,6 +3444,7 @@ namespace ASP_site.Data.Initializers {
           GameID = "Treason",
           Name = "Treason",
           Description = "",
+          EngineID = "goldsrc",
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/treason",
             GameDirectory = "treason"
@@ -3178,6 +3522,7 @@ namespace ASP_site.Data.Initializers {
         new Game {
           GameID = "UnderworldBloodline",
           Name = "Underworld: Bloodline",
+          EngineID = "goldsrc",
           Description = "",
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/underworld",
@@ -3255,12 +3600,40 @@ namespace ASP_site.Data.Initializers {
             GameDirectory = "vs"
           }
         },
+        new Game {  
+          GameID = "VS",
+          Name = "Vampire Savior",
+          Description = "Vampire Savior (ヴァンパイアセイヴァー) is a fighting game developed by Capcom.",
+          EngineID = "CPS-2",
+          ReleaseDates = [
+            new ReleaseDate{Year = 1997, Month = 5, Day = 19}
+          ]
+        },
+        new Game {  
+          GameID = "VH2",
+          Name = "Vampire Hunter 2",
+          Description = "Vampire Hunter 2 (ヴァンパイアハンター2) is a fighting game developed by Capcom.",
+          EngineID = "CPS-2",
+          ReleaseDates = [
+            new ReleaseDate{Year = 1997, Month = 9, Day = 13}
+          ]
+          },
+        new Game {  
+          GameID = "VS2",
+          Name = "Vampire Savior 2",
+          Description = "Vampire Savior 2 (ヴァンパイアセイヴァー2) is a fighting game developed by Capcom.",
+          EngineID = "CPS-2",
+          ReleaseDates = [
+            new ReleaseDate{Year = 1997, Month = 9, Day = 13}
+          ]
+        },
         new Game {
           GameID = "Wanted",
           Name = "Wanted!",
           Description = "",
           SteamID = 70,
           ModForGameID = "HalfLife",
+          EngineID = "goldsrc",
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
@@ -3276,6 +3649,7 @@ namespace ASP_site.Data.Initializers {
           GameID = "WizardWars",
           Name = "Wizard Wars",
           Description = "",
+          EngineID = "goldsrc",
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/ww",
             GameDirectory = "wizardwars"
@@ -3299,10 +3673,31 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
+          GameID = "X-Men",
+          Name = "X-Men: Children of the Atom",
+          Description = "X-Men: Children of the Atom is a fighting game developed by Capcom.",
+          EngineID = "CPS-2",
+          Genre = Genre.Fighting,
+          ReleaseDates = [
+            new ReleaseDate{Year = 1994, Month = 12, Day = 8}
+          ]
+        },
+        new Game {
+          GameID = "XvsSF",
+          Name = "X-Men vs. Street Fighter",
+          Description = "X-Men vs. Street Fighter is a fighting game developed by Capcom.",
+          EngineID = "CPS-2",
+          Genre = Genre.Fighting,
+          ReleaseDates = [
+            new ReleaseDate{Year = 1996, Month = 9, Day = 9}
+          ]
+        },
+        new Game {
           GameID = "ZombieMaster",
           Name = "Zombie Master (CLASSIC)",
           Description = "",
           SteamID = 215,
+          EngineID = "source",
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/zmaster",
             GameDirectory = "zombie_master",
@@ -3315,6 +3710,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Zombie Master: Reborn",
           Description = "",
           SteamID = 243750,
+          EngineID = "source",
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/zmr",
             GameDirectory = "zombie_master_reborn"
@@ -3326,6 +3722,7 @@ namespace ASP_site.Data.Initializers {
           Description = "",
           SteamID = 70,
           ModForGameID = "HalfLife",
+          EngineID = "goldsrc",
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/zp",
             GameDirectory = "zp",
@@ -3338,6 +3735,7 @@ namespace ASP_site.Data.Initializers {
           Description = "",
           ModForGameID = "SDK2013",
           SteamID = 17500,
+          EngineID = "source",
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/zps",
             GameDirectory = "zps"

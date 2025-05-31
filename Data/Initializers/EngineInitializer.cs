@@ -172,6 +172,30 @@ namespace ASP_site.Data.Initializers {
           Name = "Unreal Engine 5",
           Description = "Unreal Engine 5 is a game engine developed by Epic Games.",
           ParentID = "unreal4", Year = 2022
+        }, 
+        new Engine {
+          EngineID = "CPS-1",
+          Name = "CPS-1",
+          Description = "CPS-1 is an arcade system board developed by Capcom.",
+          ParentID = "", Year = 1988
+        },
+        new Engine {
+          EngineID = "CPS-2",
+          Name = "CPS-2",
+          Description = "CPS-2 is an arcade system board developed by Capcom.",
+          ParentID = "CPS-1", Year = 1993
+        },
+        new Engine {
+          EngineID = "CPS-3",
+          Name = "CPS-3",
+          Description = "CPS-3 is an arcade system board developed by Capcom.",
+          ParentID = "CPS-2", Year = 1996       
+        },
+        new Engine {
+          EngineID = "NAOMI",
+          Name = "NAOMI",
+          Description = "NAOMI is an arcade system board developed by SEGA based on the Dreamcast hardware.",
+          ParentID = "CPS-3", Year = 1998
         }
       };
     }

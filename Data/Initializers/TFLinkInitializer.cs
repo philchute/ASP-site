@@ -180,6 +180,9 @@ namespace ASP_site.Data.Initializers
           LinkType = LinkType.Discord, Url = "https://discord.gg/jCphsAE" },
         new Link { GameID = "FF", Label = "Fortress Forever Official Wiki", Description = "Fortress Forever Official Wiki",
           LinkType = LinkType.Guide, Url = "http://www.fortress-forever.com/wiki/index.php?title=Main_Page" },
+        new Link { GameID = "FF", Label = "Fortress Forever Maps on GitHub", Description = "Fortress Forever Maps on GitHub",
+          LinkType = LinkType.Download, Url = "https://github.com/fortressforever/fortressforever-maps" },
+        
         // Gameplay
         new Link { GameID = "FF", Label = "Fortress Forever 2015 League Playlist", Description = "Playlist of competitive Fortress Forever games from 2015",
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/playlist?list=PLBzS1GxpbitIfytSZSUhh2JloX-YxKtgG" },
