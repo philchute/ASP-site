@@ -360,7 +360,10 @@ namespace ASP_site.Data.Initializers {
           IsCommunityMaintained = false,
           Genre = Genre.Lightgun,
           PlayWith = new List<int> { 1 },
-          IsPlayable = false
+          IsPlayable = false,
+          ReleaseDates = [
+            new ReleaseDate{Year = 2025}
+          ]
         },
           new Game {
           GameID = "BlackMesa",
@@ -2258,7 +2261,7 @@ namespace ASP_site.Data.Initializers {
           Description = "House of the Dead 3 is abandonware and playable with a lightgun with community patches.",
           SteamID = 1087700,
           IsFree = false,
-          IsPaid = true,
+          IsPaid = false,
           IsOpenSource = false,
           IsDeveloperMaintained = false,
           IsCommunityMaintained = false,

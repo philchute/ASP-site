@@ -37,7 +37,7 @@ namespace ASP_site.Data.Initializers
                 {
                     Id = 3,
                     Title = "New philosophy page, and other updates",
-                    Content = "<p>I added a new base philosophy page for the Tractatus explorer to link from, in addition to some other information I'll continue to fill in. I'm not entirely sure what the final form will be. I've also added all the lightgun games I know of from Steam to the games page, let me know if you know of any other games that work with the Sinden lightguns or other lightguns. I also slightly changed the url routing of the individual game, map, and engine pages, sorry if that breaks any bookmarks or anything, but I wanted to get that change in to clean up the urls.</p>",
+                    Content = "<p>I added a new base philosophy page for the Tractatus explorer to link from, in addition to some other information I'll continue to fill in. I'm not entirely sure what the final form will be. I've also added all the good lightgun games I know of from Steam to the games page, let me know if you know of any other games that work with the Sinden lightguns or other lightguns. I also slightly changed the url routing of the individual game, map, and engine pages, sorry if that breaks any bookmarks or anything, but I wanted to get that change in to clean up the urls.</p>",
                     PostedDate = new DateTime(2025, 6, 21, 12, 0, 0, DateTimeKind.Utc), Author = "Phil",
                     Tags = new List<Tag> { tags.Single(t => t.Name == "Website Update") }
                 }
