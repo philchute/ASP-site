@@ -4,36 +4,15 @@
     ViewData["Title"] = "Tractatus Logico-Philosophicus";
 }
 
-<link rel="stylesheet" href="~/css/tractatus.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/philosophy.css" asp-append-version="true" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
 
-<div class="jumbotron p-2 d-flex justify-content-between mb-3">
+<div class="jumbotron p-2 d-flex justify-content-between">
     <h2 class="mr-auto display-3">@ViewData["Title"]</h2>
     @* Add any controls or info here if needed, similar to the Links page forms *@
 </div>
 
-<div id="introduction-section">
-    <div class="custom-introduction mb-4 p-3" style="background-color: #073642; border: 1px solid #586e75; border-radius: .25rem;">
-        <h3 style="color: #2aa198;">Introduction</h3>
-        <p style="color: #93a1a1;">
-            I was a Philosophy minor in college, and one of the reasons I did not continue academic Philosophy was that I discovered this book, 
-            <i>The Tractatus Logico-Philosophicus</i>, by Ludwig Wittgenstein, which in my view ended all philosophical debate and study. 
-            Although Wittgenstein himself countered some of these ideas later in life, I still find the Tractatus to be a thought provoking and 
-            foundational view from which to approach philosophy; it is the ladder which you climb out of the philosophical cave. 
-            Wittgenstein died in 1951, so the Tractatus and his other published works entered the public domain January 1, 2022. 
-            <a href="https://www.wittgensteinproject.org/">The Wittgenstein Project</a> publishes Wittgenstein's works, including the Tractatus, 
-            in a well structured format which made building the page possible including new translations. 
-            Please refer to that site for further information regarding the translations, the copyright, or other works by Wittgenstein.
-            It is my goal in making this page to present the Tractatus in a new way, as understandable as possible. 
-            In the words of the original preface, its object would be attained if there were one person who read it with understanding and to whom it afforded pleasure.
-        </p>
-    </div>
-    <div style="text-align: center; margin-bottom: 20px;">
-        <button id="start-explorer-button" class="btn btn-primary btn-lg" style="background-color: #2aa198; border-color: #2aa198; color: #002b36;">Start Tractatus Explorer</button>
-    </div>
-</div>
-
-<div id="tractatus-app-container" class="initially-hidden">
+<div id="tractatus-app-container">
     <noscript>
         You need to enable JavaScript to run this application.
     </noscript>
@@ -68,39 +47,3 @@
 
 <!-- Your React application bundle -->
 <script type="text/babel" src="~/js/tractatus.js" asp-append-version="true"></script> 
-
-<!-- Script to toggle introduction and app visibility -->
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const introSection = document.getElementById('introduction-section');
-        const appContainer = document.getElementById('tractatus-app-container');
-        const startButton = document.getElementById('start-explorer-button');
-
-        function showExplorer() {
-            if (introSection) introSection.style.display = 'none';
-            if (appContainer) {
-                appContainer.classList.remove('initially-hidden');
-                // If #tractatus-app-container itself needs a specific display style other than 'block'
-                // (e.g. 'flex'), set it here. For now, block is fine.
-            }
-        }
-
-        function showIntroduction() {
-            if (introSection) introSection.style.display = 'block';
-            if (appContainer) appContainer.classList.add('initially-hidden');
-        }
-
-        if (startButton && introSection && appContainer) {
-            if (window.location.hash === '#explorer') {
-                showExplorer();
-            } else {
-                showIntroduction();
-            }
-
-            startButton.addEventListener('click', function() {
-                showExplorer();
-                window.location.hash = '#explorer'; // Set hash for potential refresh/bookmark
-            });
-        }
-    });
-</script> 

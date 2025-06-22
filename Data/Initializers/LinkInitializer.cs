@@ -52,6 +52,8 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Community, Url = "https://wiki.supercombo.gg/w/SuperCombo_Wiki:Community_portal/Discords/Game" },
         new Link { GameID = "", Label = "FGC Discords by region", Description = "Hundreds of Discords for fighting games organized by region",
           LinkType = LinkType.Community, Url = "https://wiki.supercombo.gg/w/SuperCombo_Wiki:Community_portal/Discords/Region" },
+        new Link { GameID = "", Label = "Every Fighting Game Type Explained", Description = "Every Fighting Game Type Explained",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=b4Kc1p6Iat8" },
 
 
         // ActionHalfLife
@@ -214,6 +216,8 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=u9IQAKBMVKk" },
         new Link { GameID = "CoD2", Label = "COD2 | tek9 - eSuba [Luboshmir]", Description = "COD2 | tek9 - eSuba [Luboshmir]", 
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=njNIEUxTjVI" },
+        new Link { GameID = "CoD2", Label = "COD2 - The good old days (Frag Movie)", Description = "COD2 - The good old days (Frag Movie)", 
+          LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=jzDT6fJ0E1w" },
 
         // ColdIce
         new Link { GameID = "ColdIce", Label = "Cold Ice", Description = "Me playing Horde mode on snowcross", 
@@ -472,6 +476,10 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Discord, Url = "https://discord.gg/kr8WWsB" },
         new Link { GameID = "HalfLife", Label = "Goldsrc Saturdays group", Description = "Goldsrc Saturdays group",
           LinkType = LinkType.Community, Url = "https://linktr.ee/gssat" },
+        new Link { GameID = "HalfLife", Label = "goldsrc Forever", Description = "A Half-life 20th Anniversary Tribute",
+          LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=OY2_53oydbM" },
+        new Link { GameID = "HalfLife", Label = "Lambda Generation", Description = "Half-life community",
+          LinkType = LinkType.Community, Url = "https://community.lambdageneration.com/" },
 
 
         // HalfLife2
@@ -491,6 +499,8 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Download, Url = "https://store.steampowered.com/app/658920/HalfLife_2_VR_Mod/" },
         new Link { GameID = "HalfLife2", Label = "When you play Half-life 2 way too much", Description = "Funny clips and bugs in Half-Life 2",
           LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=1wROIlgTwjE" },
+        new Link { GameID = "HalfLife2", Label = "source 1 forever", Description = "source engine tribute",
+          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=v6LI-QA-OvQ" },
 
         // HalfLifeAlyx
         new Link { GameID = "HalfLifeAlyx", Label = "Half-life: Alyx Trailer", Description = "Half-life: Alyx Trailer",
@@ -543,6 +553,10 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=bmqgHsAh2w0" },
         new Link { GameID = "HostileIntent", Label = "Client.dll file fix", Description = "Client.dll file fix",
           LinkType = LinkType.Download, Url = "https://www.moddb.com/mods/hostile-intent/downloads/hostile-intent-16-missing-nvidia-files" },
+
+        // House of the Dead 3
+        new Link { GameID = "HouseOfTheDead3", Label = "House of the Dead 3 PC Mod", Description = "Makes House of the Dead 3 playable with a lightgun",
+          LinkType = LinkType.Download, Url = "https://github.com/argonlefou/Hotd3pc_ArcadeMod" },
 
         // Isonzo
         new Link { GameID = "Isonzo", Label = "Isonzo", Description = "Me playing Isonzo as Rifleman on piana", 
@@ -928,6 +942,8 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=-DBU8upBip4" },
         new Link { GameID = "TribesAscend", Label = "Tribes Ascend | Team Flag Passing", Description = "Tribes Ascend | Team Flag Passing",
           LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=lXhvwHYxmwk" },
+        new Link { GameID = "TribesAscend", Label = "I Am King [Tribes Ascend Frag Video]", Description = "I Am King [Tribes Ascend Frag Video]",
+          LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=ZmKMw5cn_bw" },
 
         // Unreal Tournament
         new Link { GameID = "UT", Label = "UT99 in browser", Description = "Unreal Tournament 99 in browser",

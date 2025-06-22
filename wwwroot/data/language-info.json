@@ -49,10 +49,10 @@
   },
   {
     "LanguageKey": "userNotes",
-    "DisplayName": "My Notes & Commentary",
-    "SourceInfo": "My notes and commentary",
+    "DisplayName": "Phil's Notes & Commentary",
+    "SourceInfo": "Phil's notes and commentary",
     "DataFile": "notes.json",
     "Tier": 3,
-    "IsDefaultInTier": false
+    "IsDefaultInTier": true
   }
 ]

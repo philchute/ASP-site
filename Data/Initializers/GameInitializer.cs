@@ -211,6 +211,22 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
+          GameID = "BangBangPewPew",
+          Name = "Bang Bang Pew Pew",
+          Description = "Bang Bang Pew Pew is a lightgun game available on Steam featuring online multiplayer minigames.",
+          SteamID = 1818880,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.Lightgun,
+          PlayWith = new List<int> { 0 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2022, Month = 4, Day = 8}
+          ]
+        },
+        new Game {
           GameID = "BaseDefense",
           Name = "Base Defense",
           Description = "",
@@ -301,6 +317,52 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
+          GameID = "BigBuckHunter",
+          Name = "Big Buck Hunter Arcade",
+          Description = "Big Buck Hunter Arcade is a lightgun hunting game available on Steam.",
+          SteamID = 455700,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.Lightgun,
+          PlayWith = new List<int> { 1, 2 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2008, Month = 10, Day = 25}
+          ]
+        },
+        new Game {
+          GameID = "BioCrisis",
+          Name = "BioCrisis",
+          Description = "BioCrisis is a retro lightgun game available on Steam.",
+          SteamID = 1448800,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.Lightgun,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2020, Month = 11, Day = 9}
+          ]
+        },
+        new Game {
+          GameID = "BioCrisisReturn2TheLab",
+          Name = "BioCrisis: Return 2 the Lab",
+          Description = "BioCrisis: Return 2 the Lab is a lightgun game to be released on Steam.",
+          SteamID = 1835570,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.Lightgun,
+          PlayWith = new List<int> { 1 },
+          IsPlayable = false
+        },
+          new Game {
           GameID = "BlackMesa",
           Name = "Black Mesa",
           Description = "A fan-made remake of the original Half-Life using the Source engine, featuring updated graphics and some new music and game mechanics.",
@@ -319,6 +381,22 @@ namespace ASP_site.Data.Initializers {
           },
           ReleaseDates = [
             new ReleaseDate{Year = 2020, Month = 3, Day = 6},
+          ]
+        },
+        new Game {
+          GameID = "BlueEstate",
+          Name = "Blue Estate The Game",
+          Description = "Blue Estate is a rail shooter available on Steam.",
+          SteamID = 305380,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.Lightgun,
+          PlayWith = new List<int> { 1, 2 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2015, Month = 4, Day = 8}
           ]
         },
         new Game {
@@ -969,6 +1047,22 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
+          GameID = "CorpseKiller",
+          Name = "Corpse Killer",
+          Description = "Corpse Killer is a full motion video lightgun game now available on Steam.",
+          SteamID = 1087700,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2019, Month = 7, Day = 30}
+          ]
+        },
+          new Game {
           GameID = "CryOfFearMod",
           Name = "Cry of Fear (Mod Version)",
           Description = "A psychological horror game that puts the player in the shoes of Simon, a paraplegic who writes a book for therapy, and in the process faces the inner demons that plague his thoughts. Features a co-op mode.",
@@ -1311,6 +1405,38 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
+          GameID = "DCOP",
+          Name = "DCOP",
+          Description = "DCOP is a full motion video lightgun game available on Steam.",
+          SteamID = 2542320,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.Lightgun,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2023, Month = 10, Day = 20}
+          ]
+        },
+        new Game {
+          GameID = "DeadContainment",
+          Name = "Dead Containment",
+          Description = "Dead Containment is an on-rails lightgun game available on Steam with online play.",
+          SteamID = 1302230,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = true,
+          IsCommunityMaintained = false,
+          Genre = Genre.Lightgun,
+          PlayWith = new List<int> { 0, 1, 2 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2022, Month = 10, Day = 21}
+          ]
+        },
+        new Game {
           GameID = "DinoD-Day",
           Name = "Dino D-Day",
           Description = "",
@@ -1550,7 +1676,23 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "ES",
+          GameID = "Epoch",
+          Name = "Epoch",
+          Description = "Epoch is a cover-based lightgun game developed by Epoch Games.",
+          SteamID = 270510,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.Lightgun,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2014, Month = 6, Day = 5}
+          ]
+        },
+        new Game {
+          GameID = "EternalSilence",
           Name = "Eternal Silence",
           Description = "FPS and space combat mod for Half-Life 2.",
           ModForGameID = "SDK2006",
@@ -1956,6 +2098,38 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
+          GameID = "HeavyFireAfghanistan",
+          Name = "Heavy Fire: Afghanistan",
+          Description = "Heavy Fire: Afghanistan is a lightgun game available on Steam.",
+          SteamID = 305980,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 1, 2, 3, 4 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2014, Month = 8, Day = 15}
+          ]
+        },
+        new Game {
+          GameID = "HeavyFireShatteredSpear",
+          Name = "Heavy Fire: Shattered Spear",
+          Description = "Heavy Fire: Shattered Spear is a lightgun game available on Steam. It is a sequel to Heavy Fire: Afghanistan.",
+          SteamID = 385600,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 1, 2, 3, 4 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2015, Month = 10, Day = 23}
+          ]
+        },
+        new Game {
           GameID = "HellLetLoose",
           Name = "Hell Let Loose",
           Description = "A realistic World War II first-person shooter featuring large-scale battles.",
@@ -2046,10 +2220,26 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
+          GameID = "HouseOfTheDeadRemake",
+          Name = "The House of the Dead Remake",
+          Description = "The House of the Dead Remake is a lightgun game available on Steam.",
+          SteamID = 1694600,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.Lightgun,
+          PlayWith = new List<int> { 1, 2 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2022, Month = 4, Day = 28}
+          ]
+        },
+        new Game {
           GameID = "HouseOfTheDead2",
           Name = "House of the Dead 2",
           Description = "House of the Dead 2 is a shooting game developed by Sega.",
-          Genre = Genre.LightGun,
+          Genre = Genre.Lightgun,
           EngineID = "NAOMI",
           ReleaseDates = [
             new ReleaseDate{Year = 1998, Month = 11, Day = 20, ReleaseVersion = ReleaseVersion.Arcade, Region = Region.JP},
@@ -2060,6 +2250,22 @@ namespace ASP_site.Data.Initializers {
             new ReleaseDate{Year = 2001, Month = 7, Day = 6, ReleaseVersion = ReleaseVersion.FullGame, Region = Region.NA},
             new ReleaseDate{Year = 2008, Month = 3, Day = 27, ReleaseVersion = ReleaseVersion.Wii, Region = Region.AU},
             new ReleaseDate{Year = 2008, Month = 3, Day = 28, ReleaseVersion = ReleaseVersion.Wii, Region = Region.EU},
+          ]
+        },
+        new Game {
+          GameID = "HouseOfTheDead3",
+          Name = "House of the Dead 3",
+          Description = "House of the Dead 3 is abandonware and playable with a lightgun with community patches.",
+          SteamID = 1087700,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.Lightgun,
+          PlayWith = new List<int> { 1, 2 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2002}
           ]
         },
         new Game {
@@ -2132,6 +2338,22 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
+          GameID = "Intake",
+          Name = "Intake",
+          Description = "Intake is a lightgun game available on Steam inspired by Dr. Mario.",
+          SteamID = 237760,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.Lightgun,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2013, Month = 11, Day = 5}
+          ]
+        },
+          new Game {
           GameID = "IOSoccer",
           Name = "IOSoccer",
           Description = "",
@@ -2288,8 +2510,40 @@ namespace ASP_site.Data.Initializers {
             new ReleaseDate{Year = 2009, Month = 11, Day = 17},
           ]
         },
-                new Game {  
-          GameID = "MvsSF",
+        new Game {  
+          GameID = "MadBullets",
+          Name = "Mad Bullets",
+          Description = "Mad Bullets is a lightgun game available on Steam, inspired by classic range games like Hogan's Alley.",
+          SteamID = 452860,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.Lightgun,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2016, Month = 6, Day = 10}
+          ]
+        },
+        new Game {
+          GameID = "MajorMayhem",
+          Name = "Major Mayhem",
+          Description = "Major Mayhem is a cover-based lightgun game available on Steam, inspired by classic arcade games like Time Crisis.",
+          SteamID = 264340,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.Lightgun,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2014, Month = 2, Day = 24}
+          ]
+        },
+        new Game {
+          GameID = "MvSF",
           Name = "Marvel vs. Street Fighter",
           Description = "Marvel vs. Street Fighter is a fighting game developed by Capcom.",
           EngineID = "CPS-2",
@@ -2298,7 +2552,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {  
-          GameID = "MvsC",
+          GameID = "MvC",
           Name = "Marvel vs. Capcom",
           Description = "Marvel vs. Capcom is a fighting game developed by Capcom.",
           EngineID = "CPS-2",
@@ -2307,10 +2561,13 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "MvsC2",
+          GameID = "MvC2",
           Name = "Marvel vs. Capcom 2: New Age of Heroes",
           Description = "Marvel vs. Capcom 2: New Age of Heroes is a crossover fighting game developed and published by Capcom.",
           EngineID = "NAOMI",
+          Developer = "Capcom",
+          Genre = Genre.Fighting,
+          PlayWith = new List<int> { 1, 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 2000, Month = 3, Day = 23}
           ]
@@ -2391,6 +2648,22 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
+          GameID = "MissileCommandRecharged",
+          Name = "Missile Command Recharged",
+          Description = "Missile Command Recharged is a remake of the classic 1980s arcade game Missile Command and is playable with a lightgun.",
+          SteamID = 2114990,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.Lightgun,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2022, Month = 11, Day = 1}
+          ]
+        },
+        new Game {
           GameID = "ModularCombat",
           Name = "Modular Combat",
           Description = "",
@@ -2400,17 +2673,6 @@ namespace ASP_site.Data.Initializers {
             IconPath = "img/icons/modcom",
             GameDirectory = "ModularCombat"
           }
-        },
-        new Game {
-          GameID = "MvC2",
-          Name = "Marvel vs. Capcom 2",
-          Description = "Marvel vs. Capcom 2 is a fighting game developed by Capcom.",
-          Developer = "Capcom",
-          Genre = Genre.Fighting,
-          PlayWith = new List<int> { 1, 2 },
-          ReleaseDates = [
-            new ReleaseDate{Year = 2000}
-          ]
         },
         new Game {
           GameID = "NaturalSelection",
@@ -2853,6 +3115,22 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
+          GameID = "Railbreak",
+          Name = "Reload",
+          Description = "Reload is a lightgun game available on Steam with a classic 90s Area 51 style.",
+          SteamID = 330370,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 1, 2, 3, 4 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2015, Month = 2, Day = 13}
+          ]
+        },
+        new Game {
           GameID = "ResidentEvilColdBlood",
           Name = "Resident Evil: Cold Blood",
           Description = "",
@@ -2873,6 +3151,22 @@ namespace ASP_site.Data.Initializers {
             IconPath = "img/icons/rnl",
             GameDirectory = "RnLBeta"
           }
+        },
+        new Game {
+          GameID = "RezInfinite",
+          Name = "Rez Infinite",
+          Description = "Rez Infinite is a remake of the original Rez game available on Steam and is playable with a lightgun.",
+          SteamID = 636450,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.Lightgun,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2017, Month = 8, Day = 9}
+          ]
         },
         new Game {
           GameID = "Ricochet",
@@ -3441,6 +3735,22 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
+          GameID = "TouhouCrisis",
+          Name = "Touhou Crisis",
+          Description = "Touhou Crisis is a free cover-based lightgun game available on Steam, inspired by the anime series and Time Crisis.",
+          SteamID = 1989990,
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1, 2 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2022, Month = 5, Day = 26}
+          ]
+        },
+        new Game {
           GameID = "Treason",
           Name = "Treason",
           Description = "",
@@ -3517,6 +3827,22 @@ namespace ASP_site.Data.Initializers {
           PlayWith = new List<int> { 0 },
           ReleaseDates = [
             new ReleaseDate{Year = 2012, Month = 4, Day = 12}
+          ]
+        },
+        new Game {
+          GameID = "TypingOfTheDead",
+          Name = "The Typing of the Dead: Overkill",
+          Description = "The Typing of the Dead: Overkill is a typing trainer available on Steam in the style of House of the Dead. This release includes the original House of the Dead playable with a lightgun.",
+          SteamID = 246580,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.Sports,
+          PlayWith = new List<int> { 1, 2 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2010, Month = 10, Day = 12}
           ]
         },
         new Game {
@@ -3683,7 +4009,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "XvsSF",
+          GameID = "XvSF",
           Name = "X-Men vs. Street Fighter",
           Description = "X-Men vs. Street Fighter is a fighting game developed by Capcom.",
           EngineID = "CPS-2",
@@ -3740,6 +4066,22 @@ namespace ASP_site.Data.Initializers {
             IconPath = "img/icons/zps",
             GameDirectory = "zps"
           }
+          },
+      new Game {
+        GameID = "ZombiePanicInWonderlandDX",
+          Name = "Zombie Panic! In Wonderland DX",
+          Description = "Zombie Panic! In Wonderland DX is a gallery style lightgun game available on Steam.",
+          SteamID = 1173850,  
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.Lightgun,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2019, Month = 11, Day = 6}
+          ]
         }
       };
     }

@@ -145,16 +145,22 @@ namespace ASP_site.Data.Initializers
           LinkType = LinkType.Highlights, Url = "https://youtu.be/V3Qu_47uUxI" },
         new Link { GameID = "TFC", Label = "One for the Road", Description = "One for the Road by J",
           LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=dMSfZGML8N4" },
-        new Link { GameID = "TFC", Label = "TFC Maps", Description = "TFC Maps",
-          LinkType = LinkType.Download, Url = "https://tfcmaps.net/" },
         new Link { GameID = "TFC", Label = "TFC Pugs", Description = "TFC Pugs website which I run",
           LinkType = LinkType.Community, Url = "https://tfpugs.com/" },
         new Link { GameID = "TFC", Label = "TFC Stats", Description = "TFC Pug and 1v1 stats",
           LinkType = LinkType.Community, Url = "https://tfcstats.com/" },
         new Link { GameID = "TFC", Label = "TFC Pugs Discord", Description = "TFC Pugs Discord",
           LinkType = LinkType.Discord, Url = "https://discord.gg/MmZeyPUH6q" },
+        new Link { GameID = "TFC", Label = "Hampalyzer — TFC Statistics", Description = "TFC log parser",
+          LinkType = LinkType.Community, Url = "http://app.hampalyzer.com/" },
+        new Link { GameID = "TFC", Label = "Foxbot github", Description = "Foxbot github",
+          LinkType = LinkType.Download, Url = "https://github.com/APGRoboCop/foxbot" },
 
         // Maps
+        new Link { GameID = "TFC", Label = "TFC Maps", Description = "TFC Maps",
+          LinkType = LinkType.Download, Url = "https://tfcmaps.net/" },
+        new Link { GameID = "TFC", Label = "TFC Demo Database", Description = "TFC Demo Database",
+          LinkType = LinkType.Download, Url = "https://tfc-database.com/index.php" },
 
         // Brutalist
         new Link { GameID = "TFC", Label = "Brutalist map trailer by Manu", Description = "Brutalist map trailer by Manu",

@@ -50,7 +50,7 @@ namespace ASP_site.Pages.Games
       // create a base query that retrieves all players
       var games = from g in _context.Games select g;
       // modify the query if the user is searching or filtering
-      if (!string.IsNullOrEmpty(SearchString)) { games = games.Where(g => g.Name.Contains(SearchString)); }
+      if (!string.IsNullOrEmpty(SearchString)) { games = games.Where(g => g.Name.ToUpper().Contains(SearchString.ToUpper())); }
       if (!string.IsNullOrEmpty(SelectedEngine)) { games = games.Where(g => g.EngineID == SelectedEngine); }
       if (!string.IsNullOrEmpty(SelectedGenre)) { games = games.Where(g => g.Genre.ToString() == SelectedGenre); }
 
