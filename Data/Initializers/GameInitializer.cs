@@ -921,10 +921,10 @@ namespace ASP_site.Data.Initializers {
           ReleaseDates = [
             new ReleaseDate{Year = 2003, Month = 10, Day = 29},
           ],
-          ServerConfig = new ServerBrowserConfig {
-            QueryProtocol = "GameSpy",
-            MasterServerKey = "CallOfDuty"
-          }
+          //ServerConfig = new ServerBrowserConfig {
+          //  QueryProtocol = "GameSpy",
+          //  MasterServerKey = "CallOfDuty"
+          //}
         },
         new Game {
           GameID = "COD2",
@@ -1566,6 +1566,45 @@ namespace ASP_site.Data.Initializers {
           ReleaseDates = []
         },
         new Game {
+          GameID = "deusex",
+          Name = "Deus Ex",
+          Description = "Deus Ex is a first-person shooter game developed by Ion Storm.",
+          EngineID = "unreal",
+          Developer = "Ion Storm",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2000, Month = 6, Day = 23, Region = Region.Worldwide}
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "333networks",
+            QueryProtocol = "GameSpy",
+          }
+        },
+        new Game {
+          GameID = "DeusExInvisibleWar",
+          Name = "Deus Ex: Invisible War",
+          Description = "Deus Ex: Invisible War is a first-person shooter game developed by Ion Storm.",
+          EngineID = "unreal2",
+          Developer = "Ion Storm",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2003, Month = 12, Day = 2, Region = Region.NA},
+            new ReleaseDate{Year = 2004, Month = 3, Day = 5, Region = Region.EU},
+          ]
+        },
+        new Game {
           GameID = "Diabotical",
           Name = "Diabotical",
           Description = "Diabotical is an original arena shooter using mechanics from Quake 3 and Unreal Tournament.",
@@ -1838,6 +1877,28 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/dab",
             GameDirectory = "dab"
+          }
+        },
+        new Game {
+          GameID = "dnf",
+          Name = "Duke Nukem Forever",
+          Description = "Duke Nukem Forever is a first-person shooter game developed by 3D Realms.",
+          EngineID = "unreal",
+          Developer = "3D Realms",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2011, Month = 6, Day = 10, Region = Region.EU},
+            new ReleaseDate{Year = 2011, Month = 6, Day = 14, Region = Region.NA},
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "333networks",
+            QueryProtocol = "GameSpy",
           }
         },
         new Game {
@@ -2154,6 +2215,28 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
+          GameID = "globalops",
+          Name = "Global Operations",
+          Description = "Global Operations is a first-person shooter game developed by Barking Dog Studios.",
+          EngineID = "unreal",
+          Developer = "Barking Dog Studios",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2002, Month = 3, Day = 25, Region = Region.NA},
+            new ReleaseDate{Year = 2002, Month = 5, Day = 10, Region = Region.EU},
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "333networks",
+            QueryProtocol = "GameSpy",
+          }
+        },
+        new Game {
           GameID = "GoldenEyeSource",
           Name = "Golden Eye: Source",
           Description = "A source mod that recreates the original GoldenEye 007 game.",
@@ -2430,6 +2513,65 @@ namespace ASP_site.Data.Initializers {
           PlayWith = new List<int> { 0 },
           ReleaseDates = [
             new ReleaseDate{Year = 2021, Month = 7, Day = 27}
+          ]
+        },
+        new Game {
+          GameID = "heretic",
+          Name = "Heretic",
+          Description = "Heretic is a first-person shooter game developed by Raven Software.",
+          EngineID = "idtech1",
+          Developer = "Raven Software",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 1994, Month = 12, Day = 29, Region = Region.NA},
+            new ReleaseDate{Year = 1996, Month = 3, Day = 22, Region = Region.NA},
+            new ReleaseDate{Year = 1996, Month = 3, Day = 31, Region = Region.EU},
+          ]
+        },
+        new Game {
+          GameID = "heretic2",
+          Name = "Heretic 2",
+          Description = "Heretic 2 is a first-person shooter game developed by Raven Software.",
+          EngineID = "idtech3",
+          Developer = "Raven Software",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 1998, Month = 11, Day = 24, Region = Region.NA},
+            new ReleaseDate{Year = 1998, Month = 12, Day = 4, Region = Region.EU},
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "333networks",
+            QueryProtocol = "GameSpy",
+          }
+        },
+        new Game {
+          GameID = "hexen",
+          Name = "Hexen",
+          Description = "Hexen is a first-person shooter game developed by Raven Software.",
+          EngineID = "idtech1",
+          Developer = "Raven Software",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 1995, Month = 10, Day = 30, Region = Region.NA},
+            new ReleaseDate{Year = 1996, Month = 3, Day = 22, Region = Region.EU},
           ]
         },
         new Game {
@@ -2734,6 +2876,29 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
+          GameID = "kingpin",
+          Name = "Kingpin: Life of Crime",
+          Description = "Kingpin: Life of Crime is a first-person shooter game developed by Xatrix Entertainment.",
+          EngineID = "idtech3",
+          Developer = "Xatrix Entertainment",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 1999, Month = 6, Day = 28, Region = Region.NA},
+            new ReleaseDate{Year = 1999, Month = 7, Day = 9, Region = Region.EU},
+            new ReleaseDate{Year = 1999, Month = 1, Day = 1, Region = Region.AU},
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "333networks",
+            QueryProtocol = "GameSpy",
+          }
+        },
+        new Game {
           GameID = "LambdaFortress",
           Name = "Lambda Fortress",
           Description = "A Source 2 engine mod that brings co-op gameplay to the Team Fortress universe.",
@@ -2950,13 +3115,57 @@ namespace ASP_site.Data.Initializers {
             new ReleaseDate{Year = 2002, Month = 1, Day = 22, Region = Region.NA},
             new ReleaseDate{Year = 2002, Month = 2, Day = 15, Region = Region.EU},
           ],
-          //ServerConfig = new ServerBrowserConfig {
-          //  MasterServerKey = "OpenSpy",
-          //  QueryProtocol = "GameSpy"
-          //}
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "333networks",
+            QueryProtocol = "GameSpy",
+          }
         },
         new Game {
-          GameID = "reborn",
+          GameID = "mohaas",
+          Name = "Medal of Honor: Allied Assault Spearhead",
+          Description = "Standalone expansion pack for Medal of Honor: Allied Assault.",
+          EngineID = "idtech3",
+          Developer = "EA Los Angeles",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2002, Month = 1, Day = 22, Region = Region.NA},
+            new ReleaseDate{Year = 2002, Month = 2, Day = 15, Region = Region.EU},
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "333networks",
+            QueryProtocol = "GameSpy",
+          }
+        },
+        new Game {
+          GameID = "mohaab",
+          Name = "Medal of Honor: Allied Assault Breakthrough",
+          Description = "Standalone expansion pack for Medal of Honor: Allied Assault.",
+          EngineID = "idtech3",
+          Developer = "EA Los Angeles",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2002, Month = 1, Day = 22, Region = Region.NA},
+            new ReleaseDate{Year = 2002, Month = 2, Day = 15, Region = Region.EU},
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "333networks",
+            QueryProtocol = "GameSpy",
+          }
+        },
+        new Game {
+          GameID = "mohaareborn",
           Name = "Medal of Honor: Allied Assault Reborn",
           Description = "Developed by 2015 Inc and published by Electronic Arts, Medal of Honor: Allied Assault was the first Medal of Honor title available on PC. Two Expansion Packs were released, Spearhead and Breakthrough. Default game port is 12203.",
           EngineID = "idtech3",
@@ -2972,10 +3181,10 @@ namespace ASP_site.Data.Initializers {
             new ReleaseDate{Year = 2002, Month = 1, Day = 22, Region = Region.NA},
             new ReleaseDate{Year = 2002, Month = 2, Day = 15, Region = Region.EU},
           ],
-          ServerConfig = new ServerBrowserConfig {
-            MasterServerKey = "Reborn",
-            QueryProtocol = "GameSpy"
-          }
+          //ServerConfig = new ServerBrowserConfig {
+          //  MasterServerKey = "Reborn",
+          //  QueryProtocol = "GameSpy"
+          //}
         },
         new Game {
           GameID = "MedalOfHonorPacificAssault",
@@ -3068,6 +3277,28 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
+          GameID = "mobileforces",
+          Name = "Mobile Forces",
+          Description = "Mobile Forces is a first-person shooter game developed by Rage Games.",
+          EngineID = "unreal",
+          Developer = "Rage Games",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2002, Month = 5, Day = 31, Region = Region.EU},
+            new ReleaseDate{Year = 2002, Month = 8, Day = 16, Region = Region.NA},
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "333networks",
+            QueryProtocol = "GameSpy",
+          }
+        },
+        new Game {
           GameID = "ModularCombat",
           Name = "Modular Combat",
           Description = "",
@@ -3117,6 +3348,28 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/nt",
             GameDirectory = "NeotokyoSource"
+          }
+        },
+        new Game {
+          GameID = "nerfarena",
+          Name = "Nerf Arena",
+          Description = "Nerf Arena is a first-person shooter game developed by Visionary Media Inc.",
+          EngineID = "unreal",
+          Developer = "Visionary Media Inc.",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 1999, Month = 11, Day = 2, Region = Region.NA},
+            new ReleaseDate{Year = 2000, Month = 3, Day = 10, Region = Region.UK},
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "333networks",
+            QueryProtocol = "GameSpy",
           }
         },
         new Game {
@@ -3255,7 +3508,84 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "PowerStone",
+          GameID = "postal",
+          Name = "Postal",
+          Description = "Postal is a first-person shooter game developed by Running With Scissors.",
+          Developer = "Running With Scissors",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 1997, Month = 9, Day = 24, Region = Region.Worldwide}
+          ]
+        },
+        new Game {
+          GameID = "postal2",
+          Name = "Postal 2",
+          Description = "Postal 2 is a first-person shooter game developed by Running With Scissors.",
+          EngineID = "unreal2",
+          Developer = "Running With Scissors",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2003, Month = 4, Day = 14, Region = Region.NA},
+            new ReleaseDate{Year = 2003, Month = 4, Day = 17, Region = Region.EU},
+            new ReleaseDate{Year = 2003, Month = 4, Day = 17, Region = Region.JP},
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "333networks",
+            QueryProtocol = "GameSpy",
+          }
+        },
+        new Game {
+          GameID = "postal3",
+          Name = "Postal 3",
+          Description = "Postal 3 is a first-person shooter game developed by Running With Scissors.",
+          EngineID = "source",
+          Developer = "Running With Scissors",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2005, Month = 10, Day = 11, Region = Region.NA},
+            new ReleaseDate{Year = 2005, Month = 10, Day = 14, Region = Region.EU},
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/pvkii",
+          }
+        },
+        new Game {
+          GameID = "postal4",
+          Name = "Postal 4",
+          Description = "Postal 4 is a first-person shooter game developed by Running With Scissors.",
+          EngineID = "unreal4",
+          Developer = "Running With Scissors",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2022, Month = 4, Day = 20, Region = Region.Worldwide}
+          ]
+        },
+        new Game {
+          GameID = "powerstone",
           Name = "Power Stone",
           Description = "Power Stone is a fighting game developed by Capcom.",
           EngineID = "NAOMI",
@@ -3272,7 +3602,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "PowerStone2",
+          GameID = "powerstone2",
           Name = "Power Stone 2",
           Description = "Power Stone 2 is a fighting game developed by Capcom.",
           EngineID = "NAOMI",
@@ -3289,7 +3619,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "PreFortress2",
+          GameID = "prefortress2",
           Name = "Pre-Fortress 2",
           Description = "A Source engine mod that recreates the beta era of Team Fortress 2.",
           ModForGameID = "TF2",
@@ -3302,7 +3632,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "PVK",
+          GameID = "pvk",
           Name = "Pirates, Vikings and Knights",
           Description = "A unique team-based combat game where three factions battle each other with period-appropriate weapons and abilities.",
           ModForGameID = "HalfLife",
@@ -3324,7 +3654,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "PVKII",
+          GameID = "pvkii",
           Name = "Pirates, Vikings and Knights II",
           Description = "Source mod sequel to Pirates, Vikings and Knights.",
           SteamID = 17570,
@@ -3341,7 +3671,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "PublicEnemy",
+          GameID = "penemy",
           Name = "Public Enemy",
           Description = "",
           SteamID = 70,
@@ -3358,7 +3688,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "Q3F",
+          GameID = "q3f",
           Name = "Quake 3 Fortress",
           Description = "Q3F was created in 2000 by the team that would become Splash Damage Studios. It was last updated in 2003 and to my knowledge there are no servers and the mod is not currently playable.",
           ModForGameID = "Quake3",
@@ -3372,7 +3702,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "Quake1",
+          GameID = "quake1",
           Name = "Quake",
           Description = "Quake remaster is available on Steam which includes the original game, original expansions and new content, along with the Trent Reznor soundtrack. " +
                         "Free open source versions of the game are also available. Community source ports are used for speed running and competitive deathmatching.",
@@ -3394,7 +3724,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "Quake2",
+          GameID = "quake2",
           Name = "Quake 2",
           Description = "Quake 2 remaster is available on Steam which includes the original game, original expansions and new content.",
           EngineID = "idtech2",
@@ -3414,7 +3744,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "Quake3",
+          GameID = "quake3",
           Name = "Quake 3 Arena",
           Description = "Quake 3 Arena was released in 1999 and the expansion Quake 3: Team Arena was released in 2000. "
             + "Quake 3 Arena has largely been replaced by the Quake Live Remake but maintains a small player base, particularly in DeFrag movement servers.",
@@ -3433,7 +3763,7 @@ namespace ASP_site.Data.Initializers {
           ] 
         },
         new Game {
-          GameID = "Quake4",
+          GameID = "quake4",
           Name = "Quake 4",
           Description = "Quake 4 is a first-person shooter game developed by id Software.",
           EngineID = "idtech4",
@@ -3450,7 +3780,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "QC",
+          GameID = "qc",
           Name = "Quake Champions",
           Description = "A free-to-play arena shooter that brings the classic Quake gameplay to the modern era with unique champion abilities.",
           EngineID = "idtech6",
@@ -3468,7 +3798,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "QuakeLive",
+          GameID = "quakelive",
           Name = "Quake Live",
           Description = "Quake Live is a first-person shooter game developed by id Software. It was originally a free to play game but converted to a paid title in 2015.",
           EngineID = "idtech3",
@@ -3624,6 +3954,28 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
+          GameID = "rune",
+          Name = "Rune",
+          Description = "Rune is a first-person shooter game developed by Human Head Studios.",
+          EngineID = "unreal",
+          Developer = "Human Head Studios",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2000, Month = 10, Day = 27, Region = Region.NA},
+            new ReleaseDate{Year = 2000, Month = 11, Day = 3, Region = Region.EU},
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "333networks",
+            QueryProtocol = "GameSpy",
+          }
+        },
+        new Game {
           GameID = "SAndI",
           Name = "Science and Industry",
           Description = "A team-based multiplayer mod in which players take the roles of security guards at two competing research firms. Features a weapons research system.",
@@ -3660,6 +4012,100 @@ namespace ASP_site.Data.Initializers {
           },
           ReleaseDates = [
             new ReleaseDate{Year = 2002},
+          ]
+        },
+        new Game {
+          GameID = "serioussam",
+          Name = "Serious Sam: The First Encounter",
+          Description = "Serious Sam: The First Encounter is a first-person shooter game developed by Croteam.",
+          EngineID = "seriousengine",
+          Developer = "Croteam",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2001, Month = 3, Day = 21 }
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "333networks",
+            QueryProtocol = "GameSpy",
+          }
+        },
+        new Game {
+          GameID = "serioussamse",
+          Name = "Serious Sam: The Second Encounter",
+          Description = "Serious Sam: The Second Encounter is a first-person shooter game developed by Croteam.",
+          EngineID = "seriousengine",
+          Developer = "Croteam",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2002, Month = 2, Day = 5, Region = Region.Worldwide}
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "333networks",
+            QueryProtocol = "GameSpy",
+          }
+        },
+        new Game {
+          GameID = "serioussam2",
+          Name = "Serious Sam 2",
+          Description = "Serious Sam 2 is a first-person shooter game developed by Croteam.",
+          EngineID = "seriousengine2",
+          Developer = "Croteam",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2005, Month = 10, Day = 11, Region = Region.NA},
+            new ReleaseDate{Year = 2005, Month = 10, Day = 14, Region = Region.EU},
+          ]
+        },
+        new Game {
+          GameID = "serioussam3",
+          Name = "Serious Sam 3: BFE",
+          Description = "Serious Sam 3: BFE is a first-person shooter game developed by Croteam.",
+          EngineID = "seriousengine3",
+          Developer = "Croteam",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [	
+            new ReleaseDate{Year = 2011, Month = 11, Day = 22, Region = Region.Worldwide}
+          ]
+        },
+        new Game {
+          GameID = "serioussam4",
+          Name = "Serious Sam 4",
+          Description = "Serious Sam 4 is a first-person shooter game developed by Croteam.",
+          EngineID = "seriousengine4",
+          Developer = "Croteam",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2020, Month = 9, Day = 24, Region = Region.Worldwide}
           ]
         },
         new Game {
@@ -3723,7 +4169,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "sof",
+          GameID = "sofretail",
           Name = "Soldier of Fortune",
           Description = "",
           EngineID = "idtech2",
@@ -3737,7 +4183,11 @@ namespace ASP_site.Data.Initializers {
           ReleaseDates = [
             new ReleaseDate{Year = 2000, Month = 3, Day = 28, Region = Region.NA},
             new ReleaseDate{Year = 2000, Month = 4, Day = 1, Region = Region.EU},
-          ]
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "333networks",
+            QueryProtocol = "GameSpy",
+          }
         },
         new Game {
           GameID = "sof2",
@@ -3754,10 +4204,7 @@ namespace ASP_site.Data.Initializers {
           ReleaseDates = [
             new ReleaseDate{Year = 2002, Month = 5, Day = 21, Region = Region.NA},
             new ReleaseDate{Year = 2002, Month = 5, Day = 31, Region = Region.EU},
-          ],
-          ServerConfig = new ServerBrowserConfig {
-            MasterServerKey = "SOF2"
-          }
+          ]
         },
         new Game {
           GameID = "SDK2006",
@@ -3789,6 +4236,27 @@ namespace ASP_site.Data.Initializers {
           EngineID = "source",
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/sdk"
+          }
+        },
+        new Game {
+          GameID = "southpark",
+          Name = "South Park",
+          Description = "South Park is a first-person shooter game developed by Iguana Entertainment.",
+          Developer = "Iguana Entertainment",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 1999, Month = 3, Day = 1, Region = Region.NA},
+            new ReleaseDate{Year = 1999, Month = 3, Day = 5, Region = Region.EU},
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "333networks",
+            QueryProtocol = "GameSpy",
           }
         },
         new Game {
@@ -4011,6 +4479,42 @@ namespace ASP_site.Data.Initializers {
             IconPath = "img/icons/synergy",
             GameDirectory = "synergy"
           }
+        },
+        new Game {
+          GameID = "TheTalosPrinciple",
+          Name = "The Talos Principle",
+          Description = "The Talos Principle is a first-person puzzle game developed by Croteam.",
+          EngineID = "seriousengine4",
+          Developer = "Croteam",
+          SteamID = 257510,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.Puzzle,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2014, Month = 12, Day = 11, Region = Region.Worldwide}
+          ]
+        },
+        new Game {
+          GameID = "TheTalosPrinciple2",
+          Name = "The Talos Principle 2",
+          Description = "The Talos Principle 2 is a first-person puzzle game developed by Croteam.",
+          EngineID = "unreal5",
+          Developer = "Croteam",
+          SteamID = 835960,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.Puzzle,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2023, Month = 11, Day = 2, Region = Region.Worldwide}
+          ]
         },
         new Game {
           GameID = "Tannenberg",
@@ -4297,9 +4801,69 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "UT2k",
-          Name = "Unreal Tournament 2003 and 2004",
-          Description = "Unreal Tournament 2003 and 2004.",
+          GameID = "undying",
+          Name = "Clive Barker's Undying",
+          Description = "Clive Barker's Undying is a first-person shooter game developed by EA Los Angeles.",
+          EngineID = "unreal",
+          Developer = "EA Los Angeles",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2001, Month = 2, Day = 20, Region = Region.NA},
+            new ReleaseDate{Year = 2001, Month = 3, Day = 16, Region = Region.EU},
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "333networks",
+            QueryProtocol = "GameSpy",
+          }
+        },
+        new Game {
+          GameID = "unreal",
+          Name = "Unreal",
+          Description = "Unreal is a first-person shooter game developed by Epic Games.",
+          EngineID = "unreal",
+          Developer = "Epic Games",
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 1998, Month = 5, Day = 22, Region = Region.NA},
+            new ReleaseDate{Year = 1998, Month = 6, Day = 12, Region = Region.UK}
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "333networks",
+            QueryProtocol = "GameSpy",
+          }
+        },
+        new Game {
+          GameID = "ut",
+          Name = "Unreal Tournament 99",
+          Description = "Unreal Tournament 99 is a free-to-play arena shooter that brings the classic Quake gameplay to the modern era with unique champion abilities.",
+          EngineID = "unreal",
+          Developer = "Epic Games",
+          RequiresCommunityPatch = true,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 1999, Month = 11, Day = 22}
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "333networks",
+            QueryProtocol = "GameSpy",
+          }
+        },
+        new Game {
+          GameID = "ut2003",
+          Name = "Unreal Tournament 2003",
+          Description = "Unreal Tournament 2003.",
           EngineID = "unreal2",
           Developer = "Epic Games",
           RequiresCommunityPatch = true,
@@ -4308,6 +4872,24 @@ namespace ASP_site.Data.Initializers {
           ReleaseDates = [
             new ReleaseDate{Year = 2002, Month = 9, Day = 30, Region = Region.NA}
           ]
+        },
+        new Game {
+          GameID = "ut2004",
+          Name = "Unreal Tournament 2004",
+          Description = "Unreal Tournament 2004.",
+          EngineID = "unreal2",
+          Developer = "Epic Games",
+          RequiresCommunityPatch = true,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2004, Month = 3, Day = 16, Region = Region.NA},
+            new ReleaseDate{Year = 2004, Month = 3, Day = 19, Region = Region.EU}
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "333networks",
+            QueryProtocol = "GameSpy",
+          }
         },
         new Game {
           GameID = "UT3",
@@ -4337,23 +4919,6 @@ namespace ASP_site.Data.Initializers {
           Genre = Genre.FPS,
           PlayWith = new List<int> { 0 },
           ReleaseDates = []
-        },
-        new Game {
-          GameID = "ut",
-          Name = "Unreal Tournament 99",
-          Description = "Unreal Tournament 99 is a free-to-play arena shooter that brings the classic Quake gameplay to the modern era with unique champion abilities.",
-          EngineID = "unreal",
-          Developer = "Epic Games",
-          RequiresCommunityPatch = true,
-          PlayWith = new List<int> { 0, 1 },
-          ReleaseDates = [
-            new ReleaseDate{Year = 1999, Month = 11, Day = 22}
-          ],
-          ServerConfig = new ServerBrowserConfig {
-            MasterServerKey = "ut",
-            QueryProtocol = "GameSpyV0",
-            SecretKey = "\\_))pU@'"
-          }
         },
         new Game {
           GameID = "VampireSlayer",
@@ -4415,6 +4980,28 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/wanted",
             GameDirectory = "wantedsp"
+          }
+        },
+        new Game {
+          GameID = "wot",
+          Name = "Wheel of Time",
+          Description = "Wheel of Time is a first-person shooter based on the Wheel of Time series.",
+          EngineID = "unreal",
+          Developer = "Legend Entertainment",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 1999, Month = 11, Day = 9, Region = Region.NA},
+            new ReleaseDate{Year = 1999, Month = 11, Day = 25, Region = Region.EU},
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "333networks",
+            QueryProtocol = "GameSpy",
           }
         },
         new Game {

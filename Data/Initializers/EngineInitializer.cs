@@ -180,15 +180,39 @@ namespace ASP_site.Data.Initializers {
           ParentID = "frostbite2", Year = 2013
         },
         new Engine {
+          EngineID = "seriousengine",
+          Name = "Serious Engine",
+          Description = "Serious Engine is a game engine developed by Croteam, first used in Serious Sam: The First Encounter.",
+          ParentID = "", Year = 2001
+        },
+        new Engine {
+          EngineID = "seriousengine2",
+          Name = "Serious Engine 2",
+          Description = "Serious Engine 2 is a game engine developed by Croteam, first used in Serious Sam 2.",
+          ParentID = "seriousengine", Year = 2009
+        },
+        new Engine {
+          EngineID = "seriousengine3",
+          Name = "Serious Engine 3",
+          Description = "Serious Engine 3 is a game engine developed by Croteam, first used in Serious Sam 3: BFE.",
+          ParentID = "seriousengine2", Year = 2011
+        },
+        new Engine {
+          EngineID = "seriousengine4",
+          Name = "Serious Engine 4",
+          Description = "Serious Engine 4 is a game engine developed by Croteam, first used in The Talos Principle.",
+          ParentID = "seriousengine3", Year = 2014
+        },
+        new Engine {
           EngineID = "unreal",
           Name = "Unreal Engine",
-          Description = "Unreal Engine is a game engine developed by Epic Games, first used in Unreal Tournament.",
+          Description = "Unreal Engine is a game engine developed by Epic Games, first used in 1998's Unreal.",
           ParentID = "", Year = 1998
         },
         new Engine {
           EngineID = "unreal2",
           Name = "Unreal Engine 2",
-          Description = "Unreal Engine 2 is a game engine developed by Epic Games, used in Unreal Tournament 2004.",
+          Description = "Unreal Engine 2 is a game engine developed by Epic Games, first used in Unreal Tournament 2k3.",
           ParentID = "unreal", Year = 2004
         },
         new Engine {

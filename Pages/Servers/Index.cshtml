@@ -10,8 +10,9 @@
         This was adapted from <a href="https://github.com/BerntA/GameServerBrowser/" target="_blank">https://github.com/BerntA/GameServerBrowser/</a>
         which was not being hosted. I also implemented the blacklist from <a href="https://github.com/Ch0wW/goldsrc-fake-servers-firewall" target="_blank">https://github.com/Ch0wW/goldsrc-fake-servers-firewall</a> 
         to prevent some of the fake servers from being shown. This is still not a good browser for popular titles; I made this page to supplement the other tools that are available. 
-        <a href="https://www.gametracker.com/search/cs/">gametracker.com</a> is a better interface for many popular titles but I can add any arbitrary third-party mod here. 
-        <a href="https://cs2browser.com/">cs2browser.com</a> is a good interface for browsing Counter-Strike servers, and includes additional filters for game modes.
+        <a href="https://www.gametracker.com/search/cs/">gametracker.com</a> is a better interface for CS 1.6 and some popular titles but I can add any arbitrary third-party mod here. 
+        <a href="https://cs2browser.com/">cs2browser.com</a> is a better interface for browsing CS2 servers, and includes additional filters for game modes. 
+        I'm adding in some former GameSpy titles now, using the <a href="https://master.333networks.com/">333Networks replacement master servers</a>.
     </p>
 
     <form method="get">
@@ -132,7 +133,7 @@
                                             <span title="Mac">M</span>
                                             break;
                                         default:
-                                            <span>?</span>
+                                            <span title="Unknown OS">?</span>
                                             break;
                                     }
                                 </td>
@@ -149,28 +150,36 @@
                                              <span title="SourceTV Proxy">P</span>
                                             break;
                                         default:
-                                            <span>?</span>
+                                            <span title="Unknown type">?</span>
                                             break;
                                     }
                                 </td>
                                 <td class="text-center">
-                                    @if (server.RequiresVAC)
+                                    @switch (server.RequiresVAC)
                                     {
-                                        <span title="VAC Secured">Y</span>
-                                    }
-                                    else
-                                    {
-                                        <span title="Not VAC Secured">N</span>
+                                        case true:
+                                            <span title="VAC Secured">Y</span>
+                                            break;
+                                        case false:
+                                            <span title="Not VAC Secured">N</span>
+                                            break;
+                                        default:
+                                            <span title="Unknown status">?</span>
+                                            break;
                                     }
                                 </td>
                                 <td class="text-center">
-                                     @if (server.PasswordProtected)
+                                    @switch (server.PasswordProtected)
                                     {
-                                        <span title="Password Protected">Y</span>
-                                    }
-                                    else
-                                    {
-                                        <span title="No Password">N</span>
+                                        case true:
+                                            <span title="Password Protected">Y</span>
+                                            break;
+                                        case false:
+                                            <span title="No Password">N</span>
+                                            break;
+                                        default:
+                                            <span title="Unknown status">?</span>
+                                            break;
                                     }
                                 </td>
                             </tr>

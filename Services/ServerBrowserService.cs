@@ -7,7 +7,6 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using OpenGSQ.Protocols;
 using System.Collections.Concurrent;
 using System.Net;
 using System.Net.Http;
@@ -22,22 +21,20 @@ namespace ASP_site.Services
         private readonly ILogger<ServerBrowserService> _logger;
         private readonly IServerBlacklistService _blacklistService;
         private readonly MasterServerSettings _masterServerSettings;
-        private readonly GameSpyQuery _gameSpyQuery;
-        private readonly ThreeThreeThreeQuery _threeThreeThreeQuery;
+        private readonly ThreeNetworksQuery _threeNetworksQuery;
         private readonly string _apiKey;
         private readonly int _querySize;
         private readonly TimeSpan _serverListCacheDuration;
         private readonly JsonSerializerSettings _jsonSerializerSettings;
 
-        public ServerBrowserService(IConfiguration config, IMemoryCache memoryCache, IHttpClientFactory httpClientFactory, ILogger<ServerBrowserService> logger, IServerBlacklistService blacklistService, IOptions<MasterServerSettings> masterServerSettings, GameSpyQuery gameSpyQuery, ThreeThreeThreeQuery threeThreeThreeQuery)
+        public ServerBrowserService(IConfiguration config, IMemoryCache memoryCache, IHttpClientFactory httpClientFactory, ILogger<ServerBrowserService> logger, IServerBlacklistService blacklistService, IOptions<MasterServerSettings> masterServerSettings, ThreeNetworksQuery threeNetworksQuery)
         {
             _config = config;
             _cache = memoryCache;
             _logger = logger;
             _blacklistService = blacklistService;
             _masterServerSettings = masterServerSettings.Value;
-            _gameSpyQuery = gameSpyQuery;
-            _threeThreeThreeQuery = threeThreeThreeQuery;
+            _threeNetworksQuery = threeNetworksQuery;
 
             _httpClient = httpClientFactory.CreateClient();
             var steamApiUrl = _config["SteamSettings:Url"];
@@ -98,22 +95,9 @@ namespace ASP_site.Services
                                 servers = await QueryServerListByAddress(game, addresses, 1500);
                             }
                         }
-                        else if (masterServer.Protocol == "GameSpy")
+                        else if (masterServer.Protocol == "ThreeNetworksAPI")
                         {
-                            var serverAddresses = await _gameSpyQuery.QueryMasterServerAsync(masterServer.Address, game.GameID);
-                            if (serverAddresses.Any())
-                            {
-                                _logger.LogInformation($"Received {serverAddresses.Count} server addresses from master server. Querying individual servers...");
-                                servers = await QueryServerListByAddress(game, serverAddresses, 1500);
-                            }
-                        }
-                        else if (masterServer.Protocol == "GameSpyV0")
-                        {
-                            var masterServerEndpoint = GetIPEndPoint(masterServer.Address);
-                            if (masterServerEndpoint != null)
-                            {
-                                servers = await _threeThreeThreeQuery.QueryServerListByAddress(masterServerEndpoint, game, _logger);
-                            }
+                            servers = await _threeNetworksQuery.QueryServerList(game);
                         }
                     }
                     else
@@ -280,13 +264,6 @@ namespace ASP_site.Services
                             if (IsServerValid(game, a2sServerInfo))
                             {
                                 serverItem = a2sServerInfo!.MapToGameServerItem(game, ip, port);
-                            }
-                            break;
-                        case "GameSpy":
-                            var gameSpyServerInfo = await _gameSpyQuery.QueryServerInfoAsync(address);
-                            if (gameSpyServerInfo != null) // Simplified check, actual validation would be needed
-                            {
-                                // serverItem = gameSpyServerInfo.MapToGameServerItem(game, ip, port);
                             }
                             break;
                     }

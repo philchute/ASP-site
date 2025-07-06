@@ -48,6 +48,13 @@ namespace ASP_site.Data.Initializers
                     Content = "<p>I added a new books page with all of Robert A. Heinlein's books. I think I'll do a few other authors and sets of books where I feel the information could be organized better. I also did some more work to unify the server browser into the site rather than being tacked on. The site evolves but that's intentional, who can say what it will be in a few years?</p>",
                     PostedDate = new DateTime(2025, 7, 5, 12, 0, 0, DateTimeKind.Utc), Author = "Phil",
                     Tags = new List<Tag> { tags.Single(t => t.Name == "Website Update") }
+                },
+                new UpdatePost
+                {
+                    Id = 5,
+                    Title = "New games added to the server browser",
+                    Content = "<p>I've begun adding GameSpy based games to the server browser. 333Networks runs a replacement master server so I was able to get from them the info for unreal engine based games including UT99 and MoH:AA and several others. Hope to add even more classic games to the browser.</p>",
+                    PostedDate = new DateTime(2025, 7, 6, 12, 0, 0, DateTimeKind.Utc), Author = "Phil",
                 }
             };
             return (posts, tags);

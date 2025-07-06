@@ -39,8 +39,7 @@ builder.Services.AddSingleton<IServerBlacklistService, ServerBlacklistService>()
 // Register Application Services
 // Add HttpClient for ServerBrowserService and ServerBlacklistService
 builder.Services.AddHttpClient();
-builder.Services.AddSingleton<GameSpyQuery>();
-builder.Services.AddSingleton<ThreeThreeThreeQuery>();
+builder.Services.AddSingleton<ThreeNetworksQuery>();
 
 builder.Services.AddMemoryCache();
 

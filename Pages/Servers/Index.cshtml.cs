@@ -92,9 +92,9 @@ namespace ASP_site.Pages.Servers
                             IEnumerable<GameServerItem> filteredList = rawServerList;
 
                             if (VacFilter == "yes")
-                                filteredList = filteredList.Where(s => s.RequiresVAC);
+                                filteredList = filteredList.Where(s => s.RequiresVAC == true);
                             else if (VacFilter == "no")
-                                filteredList = filteredList.Where(s => !s.RequiresVAC);
+                                filteredList = filteredList.Where(s => s.RequiresVAC == false);
 
                             // Apply Population Filter
                             if (PopulationFilter == "hide_empty") 
@@ -108,9 +108,9 @@ namespace ASP_site.Pages.Servers
                             // "all" case requires no action here
 
                             if (PasswordFilter == "yes")
-                                filteredList = filteredList.Where(s => s.PasswordProtected);
+                                filteredList = filteredList.Where(s => s.PasswordProtected == true);
                             else if (PasswordFilter == "no")
-                                filteredList = filteredList.Where(s => !s.PasswordProtected);
+                                filteredList = filteredList.Where(s => s.PasswordProtected == false);
 
                             // Apply Sorting
                             switch (SortBy?.ToLowerInvariant())

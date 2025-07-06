@@ -18,13 +18,13 @@ namespace ASP_site.Models.ServerBrowser
 
         public int Ping { get; set; } = -1;
 
-        public bool PasswordProtected { get; set; }
+        public bool? PasswordProtected { get; set; }
 
-        public bool RequiresVAC { get; set; }
+        public bool? RequiresVAC { get; set; }
 
-        public byte Players { get; set; }
+        public int Players { get; set; }
 
-        public byte MaxPlayers { get; set; }
+        public int MaxPlayers { get; set; }
 
         public byte Bots { get; set; }
 
