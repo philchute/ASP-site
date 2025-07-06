@@ -2936,7 +2936,29 @@ namespace ASP_site.Data.Initializers {
         new Game {
           GameID = "mohaa",
           Name = "Medal of Honor: Allied Assault",
-          Description = "Developed by 2015 Inc and published by Electronic Arts, Medal of Honor: Allied Assault was the first Medal of Honor title available on PC. Two Expansion Packs were released, Spearhead and Breakthrough.",
+          Description = "Developed by 2015 Inc and published by Electronic Arts, Medal of Honor: Allied Assault was the first Medal of Honor title available on PC. Two Expansion Packs were released, Spearhead and Breakthrough. Default game port is 12203.",
+          EngineID = "idtech3",
+          Developer = "EA Los Angeles",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2002, Month = 1, Day = 22, Region = Region.NA},
+            new ReleaseDate{Year = 2002, Month = 2, Day = 15, Region = Region.EU},
+          ],
+          //ServerConfig = new ServerBrowserConfig {
+          //  MasterServerKey = "OpenSpy",
+          //  QueryProtocol = "GameSpy"
+          //}
+        },
+        new Game {
+          GameID = "reborn",
+          Name = "Medal of Honor: Allied Assault Reborn",
+          Description = "Developed by 2015 Inc and published by Electronic Arts, Medal of Honor: Allied Assault was the first Medal of Honor title available on PC. Two Expansion Packs were released, Spearhead and Breakthrough. Default game port is 12203.",
           EngineID = "idtech3",
           Developer = "EA Los Angeles",
           IsFree = false,
@@ -2951,7 +2973,8 @@ namespace ASP_site.Data.Initializers {
             new ReleaseDate{Year = 2002, Month = 2, Day = 15, Region = Region.EU},
           ],
           ServerConfig = new ServerBrowserConfig {
-            MasterServerKey = "OpenSpy"
+            MasterServerKey = "Reborn",
+            QueryProtocol = "GameSpy"
           }
         },
         new Game {
@@ -3700,6 +3723,43 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
+          GameID = "sof",
+          Name = "Soldier of Fortune",
+          Description = "",
+          EngineID = "idtech2",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2000, Month = 3, Day = 28, Region = Region.NA},
+            new ReleaseDate{Year = 2000, Month = 4, Day = 1, Region = Region.EU},
+          ]
+        },
+        new Game {
+          GameID = "sof2",
+          Name = "Soldier of Fortune 2",
+          Description = "",
+          EngineID = "idtech3",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2002, Month = 5, Day = 21, Region = Region.NA},
+            new ReleaseDate{Year = 2002, Month = 5, Day = 31, Region = Region.EU},
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "SOF2"
+          }
+        },
+        new Game {
           GameID = "SDK2006",
           Name = "Source SDK Base 2006",
           Description = "",
@@ -4290,7 +4350,9 @@ namespace ASP_site.Data.Initializers {
             new ReleaseDate{Year = 1999, Month = 11, Day = 22}
           ],
           ServerConfig = new ServerBrowserConfig {
-            MasterServerKey = "OpenSpy"
+            MasterServerKey = "ut",
+            QueryProtocol = "GameSpyV0",
+            SecretKey = "\\_))pU@'"
           }
         },
         new Game {

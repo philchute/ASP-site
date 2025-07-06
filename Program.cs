@@ -25,10 +25,10 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 
-// Manually create and register MasterServerSettings
-var masterServerSettings = new MasterServerSettings();
-builder.Configuration.GetSection("MasterServers").Bind(masterServerSettings.Servers);
-builder.Services.AddSingleton(masterServerSettings);
+// Configure MasterServerSettings using the options pattern
+builder.Services.Configure<MasterServerSettings>(settings => {
+    builder.Configuration.GetSection("MasterServers").Bind(settings.Servers);
+});
 
 // Register Game Data Service (Singleton as it holds loaded data)
 builder.Services.AddSingleton<IGameDataService, GameDataService>();
@@ -39,6 +39,8 @@ builder.Services.AddSingleton<IServerBlacklistService, ServerBlacklistService>()
 // Register Application Services
 // Add HttpClient for ServerBrowserService and ServerBlacklistService
 builder.Services.AddHttpClient();
+builder.Services.AddSingleton<GameSpyQuery>();
+builder.Services.AddSingleton<ThreeThreeThreeQuery>();
 
 builder.Services.AddMemoryCache();
 

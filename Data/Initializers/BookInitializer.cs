@@ -773,6 +773,14 @@ namespace ASP_site.Data.Initializers
                 },
                 new Book
                 {
+                    Title = "The Notebooks of Lazarus Long",
+                    Author = "Robert A. Heinlein",
+                    PublicationYear = 1978,
+                    Type = BookType.ShortStory,
+                    Description = "Exceprts from the novel Time Enough for Love."
+                },
+                new Book
+                {
                     Title = "Nothing Ever Happens on the Moon",
                     Author = "Robert A. Heinlein",
                     PublicationYear = 1949,

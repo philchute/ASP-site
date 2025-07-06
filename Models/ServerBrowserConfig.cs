@@ -27,5 +27,8 @@ namespace ASP_site.Models
 
         // URL for a custom master server, used for non-Steam games
         public string? MasterServerUrl { get; set; }
+
+        // Secret key for some master servers
+        public string? SecretKey { get; set; }
     }
 } 
