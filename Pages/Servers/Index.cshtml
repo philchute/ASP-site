@@ -28,7 +28,7 @@
                          selectGameText = "-- Select a Game --"; // Fallback
                     }
                 }
-                <select name="SelectedGameIndex" class="form-select" asp-for="SelectedGameIndex" asp-items="@(new SelectList(Model.GamesList.Select((game, index) => new { Index = index, Name = game.Name }), "Index", "Name"))" onchange="this.form.submit();">
+                <select name="SelectedGameIndex" class="form-select" asp-for="SelectedGameIndex" asp-items="@(new SelectList((Model.GamesList ?? new List<Game>()).Select((game, index) => new { Index = index, Name = game.Name }), "Index", "Name"))" onchange="this.form.submit();">
                     <option value="">@selectGameText</option>
                 </select>
             </div>

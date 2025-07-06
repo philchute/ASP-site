@@ -13,13 +13,13 @@ namespace ASP_site.Helpers
 {
     public class ThreeNetworksServer
     {
-        public string Ip { get; set; }
+        public string? Ip { get; set; }
         public ushort Hostport { get; set; }
-        public string Hostname { get; set; }
-        public string Mapname { get; set; }
+        public string? Hostname { get; set; }
+        public string? Mapname { get; set; }
         public int Numplayers { get; set; }
         public int Maxplayers { get; set; }
-        public string Gamever { get; set; }
+        public string? Gamever { get; set; }
     }
 
     public class ThreeNetworksQuery

@@ -227,7 +227,7 @@ namespace ASP_site.Services
 
         private static bool IsServerValid(Game game, ServerInfo? server)
         {
-            if (server is null)
+            if (server is null || game.ServerConfig is null)
                 return false;
 
             if (server.MaxPlayers > 128 || server.MaxPlayers <= 1 || server.Players > server.MaxPlayers)
