@@ -27,8 +27,11 @@ namespace ASP_site.Pages.Updates
         {
             ViewData["ActivePage"] = "Updates";
 
-            // Load all available tags for filtering UI
-            AllTags = await _context.Tags.OrderBy(t => t.Name).ToDictionaryAsync(t => t.Id, t => t.Name);
+            // Load only tags that are actually used in at least one UpdatePost
+            AllTags = await _context.Tags
+                .Where(t => t.UpdatePosts.Any())
+                .OrderBy(t => t.Name)
+                .ToDictionaryAsync(t => t.Id, t => t.Name);
 
             IQueryable<UpdatePost> postsQuery = _context.UpdatePosts
                                                  .Include(p => p.Tags)

@@ -36,7 +36,7 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/hl",
             GameDirectory = "3wave",
-            MasterServer = MasterServerType.GoldSource
+            MasterServerKey = "GoldSource"
           }
         },
         new Game {
@@ -56,7 +56,7 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/hl",
             GameDirectory = "action",
-            MasterServer = MasterServerType.GoldSource
+            MasterServerKey = "GoldSource"
           },
           ReleaseDates = [
             new ReleaseDate{Year = 2000}
@@ -260,6 +260,282 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
+          GameID = "battlefield1942",
+          Name = "Battlefield 1942",
+          Description = "A first-person shooter game set during World War II.",
+          Developer = "Electronic Arts",
+          EngineID = "refractor1",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2002, Month = 9, Day = 10, Region = Region.NA},
+            new ReleaseDate{Year = 2002, Month = 9, Day = 20, Region = Region.EU}
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "OpenSpy"
+          }
+        },
+        new Game {
+          GameID = "battlefieldvietnam",
+          Name = "Battlefield Vietnam",
+          Description = "A first-person shooter game set during the Vietnam War.",
+          Developer = "Electronic Arts",
+          EngineID = "refractor1",
+          IsFree = false,
+          IsPaid = true,  
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ReleaseDates = [  
+            new ReleaseDate{Year = 2004 }
+          ]
+        },
+        new Game {
+          GameID = "battlefield2",
+          Name = "Battlefield 2",
+          Description = "A first-person shooter game set during the Vietnam War.",
+          Developer = "Electronic Arts",
+          EngineID = "refractor2",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2005}
+          ]
+        },
+        new Game {
+          GameID = "battlefield2142",
+          Name = "Battlefield 2142",
+          Description = "A first-person shooter game set during the Vietnam War.",
+          Developer = "Electronic Arts",
+          EngineID = "refractor2",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 }, 
+          ReleaseDates = [
+            new ReleaseDate{Year = 2006}
+          ]
+        },
+        new Game {
+          GameID = "battlefieldbadcompany", 
+          Name = "Battlefield: Bad Company",
+          Description = "A first-person shooter game set during the Vietnam War.",
+          Developer = "Electronic Arts",
+          EngineID = "frostbite1",
+          IsFree = false,
+          IsPaid = true,  
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ReleaseDates = [  
+            new ReleaseDate{Year = 2008}
+          ]
+        },
+        new Game {
+          GameID = "battlefieldheroes",
+          Name = "Battlefield Heroes",  
+          Description = "A first-person shooter game set during the Vietnam War.",
+          Developer = "Electronic Arts",
+          EngineID = "refractor2",
+          IsFree = false,
+          IsPaid = true,  
+          IsOpenSource = false, 
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2009}
+          ]
+        },
+        new Game {
+          GameID = "battlefield1943",
+          Name = "Battlefield 1943",
+          Description = "A first-person shooter game set during World War II.",
+          Developer = "Electronic Arts",
+          EngineID = "frostbite15",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2009}
+          ]
+        },
+        new Game {
+          GameID = "battlefieldbadcompany2",
+          Name = "Battlefield: Bad Company 2",
+          Description = "A first-person shooter game set during the Vietnam War.",
+          Developer = "Electronic Arts",
+          EngineID = "frostbite15",
+          IsFree = false,
+          IsPaid = true,  
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2010}
+          ]
+        },
+        new Game {
+          GameID = "battlefieldonline",
+          Name = "Battlefield Online",
+          Description = "A first-person shooter game set during the Vietnam War.",
+          Developer = "Electronic Arts",
+          EngineID = "refractor2",
+          IsFree = false,
+          IsPaid = true,  
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2010}
+          ]
+        },
+        new Game {
+          GameID = "battlefieldplay4free",
+          Name = "Battlefield Play4Free",
+          Description = "A first-person shooter game set during the Vietnam War.",
+          Developer = "Electronic Arts",
+          EngineID = "refractor2",
+          IsFree = true,
+          IsPaid = false,  
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2011}
+          ]
+        },
+        new Game {
+          GameID = "battlefield3",
+          Name = "Battlefield 3",
+          Description = "A first-person shooter game set during the Vietnam War.",
+          Developer = "Electronic Arts",
+          EngineID = "frostbite2",
+          IsFree = false,
+          IsPaid = true,  
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2011}
+          ]
+        },
+        new Game {
+          GameID = "battlefield4",
+          Name = "Battlefield 4",
+          Description = "A first-person shooter game set during the Vietnam War.",
+          Developer = "Electronic Arts",
+          EngineID = "frostbite3",
+          IsFree = false,
+          IsPaid = true,  
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2013}
+          ]
+        },
+        new Game {
+          GameID = "battlefieldhardline",
+          Name = "Battlefield Hardline",
+          Description = "A first-person shooter game set during the Vietnam War.",
+          Developer = "Electronic Arts",
+          EngineID = "frostbite3",
+          IsFree = false,
+          IsPaid = true,  
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2013}
+          ]
+        },
+        new Game {
+          GameID = "battlefield1",
+          Name = "Battlefield 1",
+          Description = "A first-person shooter game set during World War I.",
+          Developer = "Electronic Arts",
+          EngineID = "frostbite3",
+          IsFree = false,
+          IsPaid = true,  
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2016}    
+          ]
+        },
+        new Game {
+          GameID = "battlefieldv",
+          Name = "Battlefield V",
+          Description = "A first-person shooter game set during World War II.", 
+          Developer = "Electronic Arts",
+          EngineID = "Frostbite3",
+          IsFree = false,
+          IsPaid = true,  
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2018}
+          ]
+        },
+        new Game {
+          GameID = "battlefield2042",
+          Name = "Battlefield 2042",
+          Description = "A first-person shooter game set during the future.",
+          Developer = "Electronic Arts",
+          EngineID = "frostbite3",
+          IsFree = false,
+          IsPaid = true,  
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2021}
+          ]
+        },
+        new Game {
           GameID = "BattleGrounds",
           Name = "Battle Grounds",
           Description = "A multiplayer mod for Half-Life featuring muskets and other early firearms.",
@@ -276,7 +552,7 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/hl",
             GameDirectory = "bg",
-            MasterServer = MasterServerType.GoldSource
+            MasterServerKey = "GoldSource"
           },
           ReleaseDates = [
             new ReleaseDate{Year = 2000}
@@ -418,7 +694,7 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/bb",
             GameDirectory = "brainbread",
-            MasterServer = MasterServerType.GoldSource
+            MasterServerKey = "GoldSource"
           }
         },
         new Game {
@@ -470,7 +746,7 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/hl",
             GameDirectory = "BumperCars",
-            MasterServer = MasterServerType.GoldSource
+            MasterServerKey = "GoldSource"
           },
           ReleaseDates = [
             new ReleaseDate{Year = 2000}
@@ -629,7 +905,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "COD1",
+          GameID = "callofduty",
           Name = "Call of Duty",
           Description = "The original Call of Duty, set during World War II, featuring campaigns from American, British, and Soviet perspectives.",
           EngineID = "idtech3",
@@ -644,7 +920,11 @@ namespace ASP_site.Data.Initializers {
           PlayWith = new List<int> { 0, 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 2003, Month = 10, Day = 29},
-          ]
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            QueryProtocol = "GameSpy",
+            MasterServerKey = "CallOfDuty"
+          }
         },
         new Game {
           GameID = "COD2",
@@ -1032,7 +1312,7 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/hl",
             GameDirectory = "ice_beta5",
-            MasterServer = MasterServerType.GoldSource
+            MasterServerKey = "GoldSource"
           },
           ReleaseDates = [
             new ReleaseDate{Year = 2020}
@@ -1082,7 +1362,7 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/cof",
             GameDirectory = "cof",
-            MasterServer = MasterServerType.GoldSource
+            MasterServerKey = "GoldSource"
           }
         },
         new Game {
@@ -1252,9 +1532,12 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/messiah",
             GameDirectory = "messiah",
-            MasterServer = MasterServerType.DarkMessiah,
+            MasterServerKey = "DarkMessiah",
             NoBackgroundService = true
-          }
+          },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2006, Month = 10, Day = 25}
+          ]
         },
         new Game {
           GameID = "DS",
@@ -1619,7 +1902,7 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/esf",
             GameDirectory = "esf",
-            MasterServer = MasterServerType.GoldSource
+            MasterServerKey = "GoldSource"
           },
           ReleaseDates = [
             new ReleaseDate{Year = 2000}
@@ -1825,7 +2108,7 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/flf",
             GameDirectory = "frontline",
-            MasterServer = MasterServerType.GoldSource
+            MasterServerKey = "GoldSource"
           },
           ReleaseDates = [
             new ReleaseDate{Year = 2001}
@@ -1866,7 +2149,7 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/gmod",
             GameDirectory = "gmod9",
-            MasterServer = MasterServerType.Source,
+            MasterServerKey = "Source",
             NoBackgroundService = true
           }
         },
@@ -1921,7 +2204,7 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/hl",
             GameDirectory = "valve",
-            MasterServer = MasterServerType.GoldSource
+            MasterServerKey = "GoldSource"
           },
           ReleaseDates = [
             new ReleaseDate{Year = 1998, Month = 11, Day = 19, Region = Region.NA, ReleaseVersion = ReleaseVersion.FullGame},
@@ -2045,7 +2328,7 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/hl",
             GameDirectory = "hlrally",
-            MasterServer = MasterServerType.GoldSource
+            MasterServerKey = "GoldSource"
           }
         },
         new Game {
@@ -2081,7 +2364,7 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/halogs",
             GameDirectory = "halogs",
-            MasterServer = MasterServerType.GoldSource
+            MasterServerKey = "GoldSource"
           }
         },
         new Game {
@@ -2165,7 +2448,7 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/hidden",
             GameDirectory = "hidden",
-            MasterServer = MasterServerType.Source,
+            MasterServerKey = "Source",
             NoBackgroundService = true
           }
         },
@@ -2219,7 +2502,7 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/hl",
             GameDirectory = "hi",
-            MasterServer = MasterServerType.GoldSource
+            MasterServerKey = "GoldSource"
           }
         },
         new Game {
@@ -2336,7 +2619,7 @@ namespace ASP_site.Data.Initializers {
           SteamID = 17700,
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/ins",
-            MasterServer = MasterServerType.Source,
+            MasterServerKey = "Source",
             NoBackgroundService = true
           }
         },
@@ -2584,7 +2867,7 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/msr",
             GameDirectory = "msc",
-            MasterServer = MasterServerType.GoldSource
+            MasterServerKey = "GoldSource"
           }
         },
         new Game {
@@ -2648,6 +2931,101 @@ namespace ASP_site.Data.Initializers {
           },
           ReleaseDates = [
             new ReleaseDate{Year = 2023}
+          ]
+        },
+        new Game {
+          GameID = "mohaa",
+          Name = "Medal of Honor: Allied Assault",
+          Description = "Developed by 2015 Inc and published by Electronic Arts, Medal of Honor: Allied Assault was the first Medal of Honor title available on PC. Two Expansion Packs were released, Spearhead and Breakthrough.",
+          EngineID = "idtech3",
+          Developer = "EA Los Angeles",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2002, Month = 1, Day = 22, Region = Region.NA},
+            new ReleaseDate{Year = 2002, Month = 2, Day = 15, Region = Region.EU},
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "OpenSpy"
+          }
+        },
+        new Game {
+          GameID = "MedalOfHonorPacificAssault",
+          Name = "Medal of Honor: Pacific Assault",
+          Description = "Medal of Honor: Pacific Assault is a first-person shooter game set during the Pacific War.",
+          EngineID = "idtech3",
+          Developer = "EA Los Angeles",
+          IsFree = false, 
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2004, Month = 11, Day = 4, Region = Region.NA},
+            new ReleaseDate{Year = 2004, Month = 11, Day = 19, Region = Region.EU}
+          ]
+        },
+        new Game {
+          GameID = "MedalOfHonorAirborne",
+          Name = "Medal of Honor: Airborne",
+          Description = "Medal of Honor: Airborne is a first-person shooter game set during the Pacific War.",
+          EngineID = "unreal3",
+          Developer = "EA Los Angeles",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2007, Month = 8, Day = 28 },
+          ]
+        },
+        new Game {
+          GameID = "MedalOfHonor2010",
+          Name = "Medal of Honor (2010)",
+          Description = "Medal of Honor (2010) is a first-person shooter game set during World War II.",
+          EngineID = "unreal3",
+          Developer = "DICE",
+          IsFree = false,
+          SteamID = 47790,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2010, Month = 10, Day = 12, Region = Region.NA},
+            new ReleaseDate{Year = 2010, Month = 10, Day = 14, Region = Region.AU},
+            new ReleaseDate{Year = 2010, Month = 10, Day = 15, Region = Region.EU}
+          ]
+        },
+        new Game {
+          GameID = "MedalOfHonorWartfighter",
+          Name = "Medal of Honor: Warfighter",
+          Description = "Medal of Honor: Warfighter is a first-person shooter game set during the Pacific War.",
+          EngineID = "frostbite2",
+          Developer = "Danger Close Games",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2012, Month = 10, Day = 23, Region = Region.NA},
+            new ReleaseDate{Year = 2012, Month = 10, Day = 25, Region = Region.AU},
+            new ReleaseDate{Year = 2012, Month = 10, Day = 26, Region = Region.EU}
           ]
         },
         new Game {
@@ -3239,7 +3617,7 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/sai",
             GameDirectory = "sai",
-            MasterServer = MasterServerType.GoldSource
+            MasterServerKey = "GoldSource"
           },
           ReleaseDates = [
             new ReleaseDate{Year = 2002},
@@ -3255,7 +3633,7 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/sh",
             GameDirectory = "scihunt",
-            MasterServer = MasterServerType.GoldSource
+            MasterServerKey = "GoldSource"
           },
           ReleaseDates = [
             new ReleaseDate{Year = 2002},
@@ -3317,7 +3695,7 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/hl2",
             GameDirectory = "SmodTroopers",
-            MasterServer = MasterServerType.Source,
+            MasterServerKey = "Source",
             NoBackgroundService = true
           }
         },
@@ -3541,7 +3919,7 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/sven",
             GameDirectory = "svencoop",
-            MasterServer = MasterServerType.GoldSource
+            MasterServerKey = "GoldSource"
           }
         },
         new Game {
@@ -3714,7 +4092,7 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/hl",
             GameDirectory = "ts",
-            MasterServer = MasterServerType.GoldSource
+            MasterServerKey = "GoldSource"
           }
         },
         new Game {
@@ -3734,7 +4112,7 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/hl",
             GameDirectory = "tt",
-            MasterServer = MasterServerType.GoldSource
+            MasterServerKey = "GoldSource"
           }
         },
         new Game {
@@ -3901,7 +4279,7 @@ namespace ASP_site.Data.Initializers {
           ReleaseDates = []
         },
         new Game {
-          GameID = "UT99",
+          GameID = "ut",
           Name = "Unreal Tournament 99",
           Description = "Unreal Tournament 99 is a free-to-play arena shooter that brings the classic Quake gameplay to the modern era with unique champion abilities.",
           EngineID = "unreal",
@@ -3910,7 +4288,10 @@ namespace ASP_site.Data.Initializers {
           PlayWith = new List<int> { 0, 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 1999, Month = 11, Day = 22}
-          ]
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "OpenSpy"
+          }
         },
         new Game {
           GameID = "VampireSlayer",
@@ -4030,7 +4411,7 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/zmaster",
             GameDirectory = "zombie_master",
-            MasterServer = MasterServerType.Source,
+            MasterServerKey = "Source",
             NoBackgroundService = true
           }
         },
@@ -4055,7 +4436,7 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/zp",
             GameDirectory = "zp",
-            MasterServer = MasterServerType.GoldSource
+            MasterServerKey = "GoldSource"
           }
         },
         new Game {

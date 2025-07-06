@@ -10,8 +10,8 @@ namespace ASP_site.Models
         // Corresponds to 'gamedir' in games.json
         public string? GameDirectory { get; set; }
 
-        // Corresponds to 'masterServer' in games.json
-        public MasterServerType? MasterServer { get; set; }
+        // Key to look up the master server in appsettings.json
+        public string? MasterServerKey { get; set; }
 
         // Corresponds to 'noBackgroundService' in games.json
         public bool? NoBackgroundService { get; set; }
@@ -21,5 +21,11 @@ namespace ASP_site.Models
 
         // Corresponds to 'filters' in games.json for Steam API
         public string? ApiFilters { get; set; }
+
+        // Protocol to use for querying individual servers (e.g., "A2S", "GameSpy")
+        public string QueryProtocol { get; set; } = "A2S";
+
+        // URL for a custom master server, used for non-Steam games
+        public string? MasterServerUrl { get; set; }
     }
 } 

@@ -1,34 +1,38 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using ASP_site.GameServerListCommon.Model;
+using ASP_site.Models;
 using ASP_site.Helpers;
-using ASP_site.GameServerListCommon.Services;
+using ASP_site.Services;
+using ASP_site.Models.ServerBrowser;
+using Microsoft.Extensions.Logging;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace ASP_site.Pages.Servers
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
+        private readonly ServerBrowserService _serverBrowserService;
         private readonly IGameDataService _gameDataService;
-        private readonly SteamServerBrowserApiService _serverBrowserService;
+        private readonly ILogger<IndexModel> _logger;
 
         public IndexModel(
-            ILogger<IndexModel> logger,
+            ServerBrowserService serverBrowserService,
             IGameDataService gameDataService,
-            SteamServerBrowserApiService serverBrowserService
+            ILogger<IndexModel> logger
             )
         {
-            _logger = logger;
-            _gameDataService = gameDataService;
             _serverBrowserService = serverBrowserService;
-            GamesList = new List<ASP_site.GameServerListCommon.Model.Game>(); // Initialize lists
+            _gameDataService = gameDataService;
+            _logger = logger;
+            GamesList = new List<Game>(); // Initialize lists
             ServerList = new List<GameServerItem>();
         }
 
         // Properties to hold data for the view
-        public List<ASP_site.GameServerListCommon.Model.Game> GamesList { get; set; }
+        public List<Game> GamesList { get; set; }
         public List<GameServerItem> ServerList { get; set; }
-        public ASP_site.GameServerListCommon.Model.Game? SelectedGame { get; set; }
+        public Game? SelectedGame { get; set; }
         public bool IsLoading { get; set; }
         public string? ErrorMessage { get; set; }
 

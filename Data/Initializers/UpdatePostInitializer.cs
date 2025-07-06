@@ -40,6 +40,14 @@ namespace ASP_site.Data.Initializers
                     Content = "<p>I added a new base philosophy page for the Tractatus explorer to link from, in addition to some other information I'll continue to fill in. I'm not entirely sure what the final form will be. I've also added all the good lightgun games I know of from Steam to the games page, let me know if you know of any other games that work with the Sinden lightguns or other lightguns. I also slightly changed the url routing of the individual game, map, and engine pages, sorry if that breaks any bookmarks or anything, but I wanted to get that change in to clean up the urls.</p>",
                     PostedDate = new DateTime(2025, 6, 21, 12, 0, 0, DateTimeKind.Utc), Author = "Phil",
                     Tags = new List<Tag> { tags.Single(t => t.Name == "Website Update") }
+                }, 
+                new UpdatePost
+                {
+                    Id = 4,
+                    Title = "New books page",
+                    Content = "<p>I added a new books page with all of Robert A. Heinlein's books. I think I'll do a few other authors and sets of books where I feel the information could be organized better. I also did some more work to unify the server browser into the site rather than being tacked on. The site evolves but that's intentional, who can say what it will be in a few years?</p>",
+                    PostedDate = new DateTime(2025, 7, 5, 12, 0, 0, DateTimeKind.Utc), Author = "Phil",
+                    Tags = new List<Tag> { tags.Single(t => t.Name == "Website Update") }
                 }
             };
             return (posts, tags);

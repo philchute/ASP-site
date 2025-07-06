@@ -1,0 +1,142 @@
+@page
+@model ASP_site.Pages.Books.Heinlein.IndexModel
+@using ASP_site.Models
+
+@{
+    ViewData["Title"] = "Robert A. Heinlein";
+    ViewData["ActivePage"] = "Heinlein";
+}
+
+<form class="mb-4">
+    <div class="row align-items-end">
+        <div class="col-md-5">
+            <h2 class="display-3">Robert A. Heinlein</h2>
+        </div>
+        <div class="col-md-7">
+            <div class="d-flex justify-content-end align-items-end">
+                <div class="form-group me-2">
+                    <label class="form-label" for="search-input">Search:</label>
+                    <div class="input-group">
+                        <input id="search-input" class="form-control" type="text" asp-for="SearchString" />
+                        <button class="btn btn-secondary" type="submit">Search</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="sort-select">Sort by:</label>
+                    <select id="sort-select" class="form-control" asp-for="SortField" asp-items="Model.SortOptions" onchange="this.form.submit();"></select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="row mt-3">
+        <div class="col-md-2">
+            <label class="form-label fw-bold">Type:</label>
+            @foreach (var type in Model.AllBookTypes)
+            {
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="SelectedBookTypes" value="@type.Key" id="type_@type.Key.GetHashCode()" checked="@(Model.SelectedBookTypes.Contains(type.Key))" onchange="this.form.submit();" />
+                    <label class="form-check-label" for="type_@type.Key.GetHashCode()">@type.Value</label>
+                </div>
+            }
+        </div>
+        <div class="col-md-2">
+            <label class="form-label fw-bold">Tags:</label>
+            @foreach (var tag in Model.AllTags)
+            {
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="SelectedTags" value="@tag.Key" id="tag_@tag.Key.GetHashCode()" checked="@(Model.SelectedTags.Contains(tag.Key))" onchange="this.form.submit();" />
+                    <label class="form-check-label" for="tag_@tag.Key.GetHashCode()">@tag.Value</label>
+                </div>
+            }
+        </div>
+        <div class="col-md-8">
+            <label class="form-label fw-bold">Collections:</label>
+            <div class="row">
+                @foreach (var chunk in Model.AllCollections.Select((value, i) => new { i, value }).GroupBy(x => x.i / (int)Math.Ceiling((double)Model.AllCollections.Count / 3)))
+                {
+                    <div class="col-4">
+                        @foreach (var item in chunk)
+                        {
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="SelectedCollections" value="@item.value.Key" id="coll_@item.value.Key.GetHashCode()" checked="@(Model.SelectedCollections.Contains(item.value.Key))" onchange="this.form.submit();" />
+                                <label class="form-check-label" for="coll_@item.value.Key.GetHashCode()">@item.value.Value</label>
+                            </div>
+                        }
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</form>
+
+<p>
+    <a href="https://en.wikipedia.org/wiki/Robert_A._Heinlein">Robert A. Heinlein</a> (1907-1988) was a prolific writer, publishing 32 novels, 59 short stories, and several non-fiction books and articles.
+    I created this page to organize and display his works. There were a lot of anthologies published during his lifetime and after, 
+    some completely obsolete others, and some have confusing titles. Hopefully this organized list will help explore his works.
+ </p>
+ <p>
+    Heinlein spent a lot of career writing short science fiction novels for boys, known as his 'juveniles'.
+    Heinlein's more mature works were often connected in a 'Future History' depicting the rise and fall of future technologically advanced civilizations.
+    Heinlein's later novels were significantly more mature in content and themes, and some of the last few were connected in a 'World as Myth' setting.
+</p>
+<p>
+    Any of his juveniles are a good introduction, though they are generally quite pulpy and shallow, 
+    although they began to feature more intesting plots and deeper themes. 
+    'Starship Troopers' is a good example of this, and was the source material for the 1997 movie.
+    His later novels are really his best and most thought-provoking writing.
+    'Stranger in a Strange Land' is his most famous book, followed by 'Time Enough For Love'. 
+    'The Moon Is a Harsh Mistress' is one of my favorites, and 'Friday' is a great novel for mature readers. 
+    My recommendation for short stories is the collection of 'Future History' stories,
+    <a href="https://en.wikipedia.org/wiki/The_Past_Through_Tomorrow">The Past Through Tomorrow</a>,
+    which is available in hardcover and paperback, and is common to find in used book stores.
+    <a href="https://en.wikipedia.org/wiki/Revolt_in_2100">Revolt in 2100</a>, 
+    <a href="https://en.wikipedia.org/wiki/Assignment_in_Eternity">Assignment in Eternity</a>, 
+    and <a href="https://en.wikipedia.org/wiki/A_Heinlein_Trio">A Heinlein Trio</a> 
+    are all banger collections of stories and novels.
+    <a href="https://en.wikipedia.org/wiki/Expanded_Universe_(book)">Expanded Universe</a>
+    is very expansive, sometimes published as one volume and sometimes split into two volumes.
+</p>
+
+<section class="grid mt-3">
+    <div class="row g-0 bg-dark text-white fw-bold">
+        <div class="p-1 text-center col-1">Year</div>
+        <div class="p-1 text-center col-1">Type</div>
+        <div class="p-1 text-start col-3">Title <i>(@(Model.Books?.Count ?? 0) shown)</i></div>
+        <div class="p-1 text-start col-2">Tags</div>
+        <div class="p-1 text-start col-5">Collections</div>
+    </div>
+
+    @if(Model.Books != null && Model.Books.Any()) {
+        foreach (var book in Model.Books) { 
+            var collections = book.Tags.Where(t => t.Name.StartsWith("Collection: ")).ToList();
+            var generalTags = book.Tags.Where(t => !t.Name.StartsWith("Collection: ")).ToList();
+
+            <a asp-page="../Book" asp-route-BookTitle="@book.Title" class="row g-0 text-decoration-none text-reset border-bottom table-row-hover">
+                <div class="p-1 text-center col-1">@book.PublicationYear</div>
+                <div class="p-1 text-center col-1">@book.Type</div>
+                <div class="p-1 text-start col-3 text-white">@book.Title</div>
+                <div class="p-1 text-start col-2">
+                    @foreach (var tag in generalTags)
+                    {
+                        <span class="badge bg-secondary me-1">@tag.Name</span>
+                    }
+                </div>
+                <div class="p-1 text-start col-5 d-flex flex-wrap align-content-start">
+                    @foreach (var collection in collections)
+                    {
+                        <span class="badge bg-secondary me-1 mb-1">@collection.Name.Replace("Collection: ", "")</span>
+                    }
+                </div>
+            </a>
+        }
+    } else {
+        <p class="p-2">No books found matching your criteria.</p>
+    }
+</section> 
+
+<style>
+    .table-row-hover:hover {
+        background-color: #303030;
+    }
+</style> 

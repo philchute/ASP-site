@@ -37,11 +37,13 @@
                 <li><a class="dropdown-item @(ViewData["ActivePage"]?.ToString() == "Servers" ? "active" : "")" asp-area="" asp-page="/Servers/Index">Servers</a></li>
               </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link @(ViewData["ActivePage"]?.ToString() == "Years" ? "active" : "")" asp-area="" asp-page="/Years/Index">Years</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link @(ViewData["ActivePage"]?.ToString() == "Links" ? "active" : "")" asp-area="" asp-page="/Links/Index">Links</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBooks" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Books
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownBooks">
+                <li><a class="dropdown-item @(ViewData["ActivePage"]?.ToString() == "Heinlein" ? "active" : "")" asp-area="" asp-page="/Books/Heinlein/Index">Robert A. Heinlein</a></li>
+              </ul>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMore" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -51,6 +53,12 @@
                 <li><a class="dropdown-item @(ViewData["ActivePage"]?.ToString() == "Main Page" ? "active" : "")" asp-area="" asp-page="/Philosophy/Index">Main Page</a></li>
                 <li><a class="dropdown-item @(ViewData["ActivePage"]?.ToString() == "Tractatus" ? "active" : "")" asp-area="" asp-page="/Tractatus/Index">Tractatus</a></li>
               </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link @(ViewData["ActivePage"]?.ToString() == "Years" ? "active" : "")" asp-area="" asp-page="/Years/Index">Years</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link @(ViewData["ActivePage"]?.ToString() == "Links" ? "active" : "")" asp-area="" asp-page="/Links/Index">Links</a>
             </li>
             <li class="nav-item">
               <a class="nav-link @(ViewData["ActivePage"]?.ToString() == "Updates" ? "active" : "")" asp-area="" asp-page="/Updates/Index">Updates</a>

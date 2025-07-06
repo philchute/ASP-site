@@ -144,6 +144,42 @@ namespace ASP_site.Data.Initializers {
           ParentID = "iw6", Year = 2014
         },
         new Engine {
+          EngineID = "refractor1",
+          Name = "Refractor 1",
+          Description = "Refractor 1 is a game engine developed by Electronic Arts, first used in Battlefield 1942.",
+          ParentID = "", Year = 2002
+        },
+        new Engine {
+          EngineID = "refractor2",
+          Name = "Refractor 2",
+          Description = "Refractor 2 is a game engine developed by Electronic Arts, first used in Battlefield 2.",
+          ParentID = "refractor1", Year = 2005
+        },
+        new Engine {
+          EngineID = "frostbite1",
+          Name = "Frostbite 1",
+          Description = "Frostbite 1 is a game engine developed by Electronic Arts, first used in Battlefield: Bad Company.",
+          ParentID = "refractor2", Year = 2008
+        },
+        new Engine {
+          EngineID = "frostbite15",
+          Name = "Frostbite 1.5",
+          Description = "Frostbite 1.5 added destructable environments, first used in Battlefield 1943.",
+          ParentID = "frostbite1", Year = 2009
+        },
+        new Engine {
+          EngineID = "frostbite2",
+          Name = "Frostbite 2",
+          Description = "Frostbite 2 is a game engine developed by Electronic Arts, first used in Battlefield 3.",
+          ParentID = "frostbite15", Year = 2011
+        },
+        new Engine {
+          EngineID = "frostbite3",
+          Name = "Frostbite 3",
+          Description = "Frostbite 3 is a game engine developed by Electronic Arts, first used in Battlefield 4.",
+          ParentID = "frostbite2", Year = 2013
+        },
+        new Engine {
           EngineID = "unreal",
           Name = "Unreal Engine",
           Description = "Unreal Engine is a game engine developed by Epic Games, first used in Unreal Tournament.",

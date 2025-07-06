@@ -97,6 +97,8 @@ namespace ASP_site.Data.Initializers
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=3rMQ3YxADaY" },
         new Link { GameID = "CS2", Label = "CS2 Scancodes", Description = "guide to using scancodes for keybinds in CS2", 
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=6E1FOMlyN-w" },
+        new Link { GameID = "CS2", Label = "How to Play Every Map at a High Level in CS2", Description = "How to Play Every Map at a High Level in CS2",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=zjx4UfZcUuU" },
         new Link { GameID = "CS2", Label = "1 in a million CS2 moments", Description = "CS2 moments", 
           LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=4qEdIXLdxMo" },
         new Link { GameID = "CS2", Label = "CS2 Community Server Browser", Description = "CS2 community server browser",
@@ -222,6 +224,8 @@ namespace ASP_site.Data.Initializers
         // cs_agency
         new Link { GameID = "CS2", MapID = "agency", Label = "cs_agency movement guide", Description = "cs_agency movement guide",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=D8IWmK0CIAY" },
+        new Link { GameID = "CS2", MapID = "agency", Label = "CS2 New Agency Analyzed", Description = "CS2 New Agency Analyzed",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=ZGi9YyBPUQU" },
         // de_cache
         new Link { GameID = "CS2", MapID = "cache", Label = "de_cache AWP guide", Description = "Flom's cache AWP guide",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=X6Slzv5bk-Y" },

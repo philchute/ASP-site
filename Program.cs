@@ -1,7 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using ASP_site.Data;
 using ASP_site.Helpers;
-using ASP_site.GameServerListCommon.Services;
+using ASP_site.Services;
+using ASP_site.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,6 +25,11 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 
+// Manually create and register MasterServerSettings
+var masterServerSettings = new MasterServerSettings();
+builder.Configuration.GetSection("MasterServers").Bind(masterServerSettings.Servers);
+builder.Services.AddSingleton(masterServerSettings);
+
 // Register Game Data Service (Singleton as it holds loaded data)
 builder.Services.AddSingleton<IGameDataService, GameDataService>();
 
@@ -31,14 +37,13 @@ builder.Services.AddSingleton<IGameDataService, GameDataService>();
 builder.Services.AddSingleton<IServerBlacklistService, ServerBlacklistService>();
 
 // Register Application Services
-// Add HttpClient for SteamServerBrowserApiService and ServerBlacklistService
-builder.Services.AddHttpClient(); // Registers IHttpClientFactory for default clients
-builder.Services.AddHttpClient("BlacklistFetcher"); // Registers a named client
+// Add HttpClient for ServerBrowserService and ServerBlacklistService
+builder.Services.AddHttpClient();
 
-builder.Services.AddMemoryCache(); // Registers IMemoryCache
+builder.Services.AddMemoryCache();
 
-// Services making external calls are often Scoped or Transient
-builder.Services.AddScoped<SteamServerBrowserApiService>();
+// Register application services
+builder.Services.AddSingleton<ServerBrowserService>();
 
 // Register Background Worker
 builder.Services.AddHostedService<GameServerWorker>();

@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System; // Required for TimeSpan, HashSet
 
-namespace ASP_site.GameServerListCommon.Services
+namespace ASP_site.Services
 {
     // Models for deserializing the blacklist JSON
     // These can be moved to a separate file if desired, e.g., BlacklistModels.cs

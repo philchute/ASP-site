@@ -1,9 +1,9 @@
-using ASP_site.GameServerListCommon.Model.A2S; // Adjusted using
+using ASP_site.Models;
 using System.Net.Sockets;
 using System.Net;
 using System.Text;
-using ASP_site.GameServerListCommon.Utils; // Adjusted using
-using ASP_site.GameServerListCommon.Model; // Adjusted using
+using ASP_site.Helpers;
+using ASP_site.Models.ServerBrowser;
 
 namespace ASP_site.Helpers; // Adjusted namespace
 
@@ -12,20 +12,52 @@ public static class A2SQuery
     private static readonly byte[] ServerRequest = { 0xFF, 0xFF, 0xFF, 0xFF, 0x54, 0x53, 0x6F, 0x75, 0x72, 0x63, 0x65, 0x20, 0x45, 0x6E, 0x67, 0x69, 0x6E, 0x65, 0x20, 0x51, 0x75, 0x65, 0x72, 0x79, 0x00 };
     private static readonly byte[] PlayerRequest = { 0xFF, 0xFF, 0xFF, 0xFF, 0x55, 0xFF, 0xFF, 0xFF, 0xFF };
 
-    // TODO: Consider moving these master server lists to configuration
-    public static readonly string[] SourceMasterServer = ["208.64.200.65:27015"];
-    public static readonly string[] GoldSrcMasterServer = ["208.78.164.209:27011"];
-    public static readonly string[] DarkMessiahMasterServer = ["195.154.173.68:27010", "135.125.202.170:27010"];
-
-    public static string[] GetMasterServerAddress(MasterServerType masterServer)
+    public static async Task<List<IPEndPoint>> QueryServerList(IPEndPoint masterServer, Game game)
     {
-        return masterServer switch
+        var serverList = new List<IPEndPoint>();
+
+        using var udpClient = new UdpClient();
+        using var cancellationToken = new CancellationTokenSource(15000);
+
+        try
         {
-            MasterServerType.Source => SourceMasterServer,
-            MasterServerType.GoldSource => GoldSrcMasterServer,
-            MasterServerType.DarkMessiah => DarkMessiahMasterServer,
-            _ => throw new ArgumentException("Invalid master server!"),
-        };
+            string currentSeed = "0.0.0.0:0"; // Start with the initial seed
+            bool isLastBatch = false;
+
+            do
+            {
+                var bytes = GetMasterQueryRequest(currentSeed, game);
+                var buffer = await SendAndReceiveAsync(udpClient, masterServer, bytes, cancellationToken.Token);
+
+                using var ms = new MemoryStream(buffer);
+                using var br = new BinaryReader(ms, Encoding.UTF8);
+                ms.Seek(6, SeekOrigin.Begin); // Skip header
+
+                while (ms.Position < ms.Length)
+                {
+                    var info = ParseSingleMasterServer(br);
+                    currentSeed = $"{info.Address}:{info.Port}"; // Update seed for next request
+
+                    if (currentSeed == "0.0.0.0:0") // Check if it's the last batch signal
+                    {
+                       isLastBatch = true;
+                       break;
+                    }
+                    serverList.Add(new IPEndPoint(info.Address, info.Port));
+                }
+            } while (!isLastBatch);
+
+            return serverList;
+        }
+        catch (Exception ex) // Catch specific exceptions
+        {
+             Console.WriteLine($"Error querying master server {masterServer}: {ex.Message}");
+             return serverList; // Return potentially empty list
+        }
+        finally
+        {
+            udpClient.Close(); // Close needed?
+        }
     }
 
     // NOTE: QueryServerInfo needs the parsing logic from ServerInfo constructor
@@ -37,26 +69,44 @@ public static class A2SQuery
         try
         {
             var endpoint = GetIPEndPoint(address);
-            // QueryServerAsync extension method is missing, call SendAndReceive directly for now
-            // var buffer = await udpClient.QueryServerAsync(endpoint, ServerRequest, cancellationToken.Token);
             var buffer = await SendAndReceiveAsync(udpClient, endpoint, ServerRequest, cancellationToken.Token);
+
+            // Check for challenge response from server and resend if necessary
+            if (buffer.Length > 4 && buffer[4] == 0x41) // 'A' for challenge
+            {
+                var challengeBytes = new byte[4];
+                Buffer.BlockCopy(buffer, 5, challengeBytes, 0, 4);
+
+                var payloadWithChallenge = new List<byte>(ServerRequest);
+                payloadWithChallenge.AddRange(challengeBytes);
+                
+                buffer = await SendAndReceiveAsync(udpClient, endpoint, payloadWithChallenge.ToArray(), cancellationToken.Token);
+            }
 
             using var ms = new MemoryStream(buffer);
             using var br = new BinaryReader(ms, Encoding.UTF8);
-            ms.Seek(4, SeekOrigin.Begin); // Skip header
+            
+            // The first 4 bytes of the response are always -1 (0xFF).
+            // The 5th byte is the actual response header. We must seek past the first 4 bytes.
+            if (ms.Length > 4)
+            {
+                ms.Seek(4, SeekOrigin.Begin);
+            }
+            else
+            {
+                // If the response is too short, it's invalid.
+                throw new InvalidDataException("Received an invalid or incomplete server response.");
+            }
 
-            // ServerInfo constructor needs BinaryReader argument - Add this constructor
-            // return new ServerInfo(address, br);
-            return ParseInfoResponse(address, br); // Replace with call to parsing logic
+            return ParseInfoResponse(address, br);
         }
-        catch (Exception ex) // Catch specific exceptions
+        catch (Exception ex)
         {
-            Console.WriteLine($"Error querying server info for {address}: {ex.Message}");
+            if (!(ex is OperationCanceledException || ex is InvalidDataException))
+            {
+                Console.WriteLine($"Error querying server info for {address}: {ex.Message}");
+            }
             return null;
-        }
-        finally
-        {
-            udpClient.Close(); // Close needed?
         }
     }
 
@@ -107,71 +157,6 @@ public static class A2SQuery
         }
     }
 
-    // NOTE: QueryServerList needs the parsing logic from MasterInfo constructor
-    public static async Task<List<MasterInfo>> QueryServerList(MasterServerType masterServer, Game targetGame, int timeout = 15000) // Adjusted enum type
-    {
-        var masterServerAddresses = GetMasterServerAddress(masterServer);
-        var queries = await Task.WhenAll(masterServerAddresses.Select(s => QueryServerList(s, targetGame, timeout)));
-        var servers = queries.SelectMany(s => s).DistinctBy(s => $"{s.Address}:{s.Port}").ToList(); // Use Address/Port properties
-        return servers;
-    }
-
-    // NOTE: Needs MasterInfo constructor logic
-    public static async Task<List<MasterInfo>> QueryServerList(string masterServerAddress, Game targetGame, int timeout = 15000)
-    {
-        using var udpClient = new UdpClient();
-        using var cancellationToken = new CancellationTokenSource(timeout);
-        var servers = new List<MasterInfo>();
-
-        try
-        {
-            string currentSeed = "0.0.0.0:0"; // Start with the initial seed
-            bool isLastBatch = false;
-            // MasterInfo constructor needs BinaryReader arg and IsSeed property
-            // var info = new MasterInfo { Address = "0.0.0.0:0", IsSeed = false };
-
-            var endpoint = GetIPEndPoint(masterServerAddress);
-
-            do
-            {
-                var bytes = GetMasterQueryRequest(currentSeed, targetGame);
-                // SendAndReceiveAsync extension method is missing
-                // var buffer = await udpClient.SendAndReceiveAsync(endpoint, bytes, cancellationToken.Token);
-                var buffer = await SendAndReceiveAsync(udpClient, endpoint, bytes, cancellationToken.Token);
-
-                using var ms = new MemoryStream(buffer);
-                using var br = new BinaryReader(ms, Encoding.UTF8);
-                ms.Seek(6, SeekOrigin.Begin); // Skip header
-
-                while (ms.Position < ms.Length)
-                {
-                    // MasterInfo constructor needs BinaryReader argument - Add this constructor
-                    // info = new MasterInfo(br);
-                    var info = ParseSingleMasterServer(br); // Replace with call to parsing logic
-                    currentSeed = $"{info.Address}:{info.Port}"; // Update seed for next request
-
-                    if (currentSeed == "0.0.0.0:0") // Check if it's the last batch signal
-                    {
-                       isLastBatch = true;
-                       break;
-                    }
-                    servers.Add(info);
-                }
-            } while (!isLastBatch);
-
-            return servers;
-        }
-        catch (Exception ex) // Catch specific exceptions
-        {
-             Console.WriteLine($"Error querying master server {masterServerAddress}: {ex.Message}");
-             return servers; // Return potentially empty list
-        }
-        finally
-        {
-            udpClient.Close(); // Close needed?
-        }
-    }
-
     // Helper to parse IP:Port string
     private static IPEndPoint GetIPEndPoint(string address)
     {
@@ -210,21 +195,21 @@ public static class A2SQuery
     // Builds the filter string for master server query
     private static byte[] GetMasterQueryFilters(Game game)
     {
-        if (game is null)
-            return []; // Return empty byte array if no game provided
+        if (game?.ServerConfig is null)
+            return []; // Return empty byte array if no game or config provided
 
         var bldr = new StringBuilder();
 
         // Required: AppId
-        bldr.Append($"\\appid\\{game.AppId}");
+        bldr.Append($"\\appid\\{game.SteamID}");
 
         // Optional: Gamedir
-        if (!string.IsNullOrEmpty(game.Gamedir)) // Use Gamedir property
-            bldr.Append($"\\gamedir\\{game.Gamedir}");
+        if (!string.IsNullOrEmpty(game.ServerConfig.GameDirectory))
+            bldr.Append($"\\gamedir\\{game.ServerConfig.GameDirectory}");
 
-        // TODO: Add support for game.Filters if needed later
-        // if (!string.IsNullOrEmpty(game.Filters))
-        //    bldr.Append(game.Filters);
+        // Optional: ApiFilters
+        if (!string.IsNullOrEmpty(game.ServerConfig.ApiFilters))
+           bldr.Append(game.ServerConfig.ApiFilters);
 
         return Encoding.UTF8.GetBytes(bldr.ToString());
     }
@@ -361,9 +346,13 @@ public static class A2SQuery
     // Parsing Logic placeholders - NEED IMPLEMENTATION based on A2S protocol spec
     private static ServerInfo ParseInfoResponse(string address, BinaryReader br)
     {
-        byte header = PacketUtils.ReadByte(br); // Should be 0x49 for Info response
-        if (header != 0x49)
+        // At this point, the response should have a valid header.
+        byte header = PacketUtils.ReadByte(br);
+        
+        if (header != 0x49 && header != 0x6D) // 'I' or 'm' for info
+        {
             throw new InvalidDataException($"Unexpected A2S_INFO response header: {header:X}");
+        }
 
         var serverInfo = new ServerInfo
         {
@@ -376,8 +365,8 @@ public static class A2SQuery
             Players = PacketUtils.ReadByte(br),
             MaxPlayers = PacketUtils.ReadByte(br),
             Bots = PacketUtils.ReadByte(br),
-            ServerType = (ServerType)PacketUtils.ReadByte(br),
-            Environment = (ASP_site.GameServerListCommon.Model.A2S.Environment)PacketUtils.ReadByte(br),
+            ServerType = (ASP_site.Models.ServerBrowser.ServerType)PacketUtils.ReadByte(br),
+            Environment = (ASP_site.Models.ServerBrowser.Environment)PacketUtils.ReadByte(br),
             Visibility = (Visibility)PacketUtils.ReadByte(br),
             VAC = (VAC)PacketUtils.ReadByte(br),
             Version = PacketUtils.ReadString(br)

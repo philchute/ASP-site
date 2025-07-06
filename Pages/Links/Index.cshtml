@@ -9,8 +9,8 @@
     <h2 class="mr-auto display-3">Links List</h2>
     <form class="d-flex">
         <div class="form-group ps-2">
-            <label class="col-form-label" asp-for="SelectedGame" class="control-label">Game:</label>
-            <select class="form-control" asp-for="SelectedGame" asp-items="Model.Games" onchange="this.form.submit();">
+            <label class="col-form-label" asp-for="SelectedTopic" class="control-label">Topic:</label>
+            <select class="form-control" asp-for="SelectedTopic" asp-items="Model.Topics" onchange="this.form.submit();">
                 <option value="">All</option>
             </select>
         </div>
@@ -28,7 +28,7 @@
         <div class="form-group ps-2">
             <label class="col-form-label" asp-for="SortField" class="control-label">Sort by:</label>
             <select class="form-control" asp-for="SortField" onchange="this.form.submit();">
-                <option value="Game">Game</option>
+                <option value="Topic">Topic</option>
                 <option value="Type">Type</option>
                 <option value="Label">Label</option>
                 <option value="Description">Description</option>
@@ -39,7 +39,7 @@
 
 <section class="grid">
     <div class="row bg-dark text-white fw-bold g-0">
-        <div class="p-1 col-sm-1 text-center">Game</div>
+        <div class="p-1 col-sm-1 text-center">Topic</div>
         <div class="p-1 col-sm-1 text-center">Type</div>
         <div class="p-1 col-sm-5">Label <i>(@(Model.Links?.Count ?? 0) shown)</i></div>
         <div class="p-1 col-sm-5">Description</div>
@@ -49,7 +49,9 @@
         @foreach (Link link in Model.Links) {
             <div class="row g-0 border-bottom">
                 <div class="p-1 col-sm-1 text-center">
-                    @if(!string.IsNullOrEmpty(link.GameID)) {
+                    @if(!string.IsNullOrEmpty(link.BookTitle)) {
+                        <a asp-page="/Books/Book" asp-route-BookTitle="@link.BookTitle">@link.BookTitle</a>
+                    } else if(!string.IsNullOrEmpty(link.GameID)) {
                         <a asp-page="/Games/Game" asp-route-GameID="@link.GameID">@link.GameID</a>
                     } else if (!string.IsNullOrEmpty(link.MapID)) {
                         <a asp-page="/Maps/Map" asp-route-MapID="@link.MapID">@link.MapID</a>
@@ -58,7 +60,7 @@
                     }
                 </div>
                 <div class="p-1 col-sm-1 text-center">@link.LinkType</div>
-                <a class="col-sm-10 row g-0 text-decoration-none text-reset" href="@link.Url">
+                <a class="col-sm-10 row g-0 text-decoration-none text-reset" href="@link.Url" target="_blank">
                     <div class="p-1 col-sm-5 text-white">@(link.Label ?? "-")</div>
                     <div class="p-1 col-sm-7">@(link.Description ?? "-")</div>
                 </a>

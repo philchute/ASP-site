@@ -149,6 +149,10 @@ namespace ASP_site.Data.Initializers {
         new Link { GameID = "Bumpercars", Label = "Archived Bumpercars website", Description = "Bumpercars website",
           LinkType = LinkType.Official, Url = "https://web.archive.org/web/20031002104542/http://www.planethalflife.com/bumpercars/" },
 
+        // Capcom vs SNK 2
+        new Link { GameID = "CapcomVsSNK2", Label = "Capcom Vs SNK 2 is broken", Description = "Capcom Vs SNK 2 is broken",
+          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=6bsHoIAZRBc" },
+
         // Chess
         new Link { GameID = "Chess", Label = "Chess on Lichess", Description = "My profile on lichess", 
           LinkType = LinkType.Community, Url = "https://lichess.org/user/philchute" },
@@ -199,14 +203,14 @@ namespace ASP_site.Data.Initializers {
         new Link { GameID = "CnCTS", Label = "CnC Tiberian Sun", Description = "My CnC: Tiberian Sun video guide", 
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=EMWNDDsaROw" },
 
-        //CoD
-        new Link { GameID = "CoD", Label = "COD | compLexity - ready up [NightFaLL]", Description = "COD | compLexity - ready up [NightFaLL]", 
+        //callofduty
+        new Link { GameID = "callofduty", Label = "COD | compLexity - ready up [NightFaLL]", Description = "COD | compLexity - ready up [NightFaLL]", 
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=SJ7EkXhF7Dg" },
-        new Link { GameID = "CoD", Label = "COD | united5 - 3D [crzg]", Description = "COD | united5 - 3D [crzg]", 
+        new Link { GameID = "callofduty", Label = "COD | united5 - 3D [crzg]", Description = "COD | united5 - 3D [crzg]", 
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=IJTZ52dASfc" },
-        new Link { GameID = "CoD", Label = "CoD: United Offensive on Steam", Description = "CoD: United Offensive Stand Alone expansion on Steam", 
+        new Link { GameID = "callofduty", Label = "CoD: United Offensive on Steam", Description = "CoD: United Offensive Stand Alone expansion on Steam", 
           LinkType = LinkType.Store, Url = "https://store.steampowered.com/app/2640/Call_of_Duty_United_Offensive/" },
-        new Link { GameID = "CoD", Label = "CoD UO Wars 2 - United Offensive frag movie", Description = "CoD UO Wars 2 - United Offensive frag movie", 
+        new Link { GameID = "callofduty", Label = "CoD UO Wars 2 - United Offensive frag movie", Description = "CoD UO Wars 2 - United Offensive frag movie", 
           LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=LFZIRZoLi94" },
 
         //CoD2
@@ -444,6 +448,8 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=IkzuAE93-bc" },
         new Link { GameID = "Go", Label = "AlphaGo - The Movie", Description = "Award winning documentary about AlphaGo",
           LinkType = LinkType.Documentary, Url = "https://www.youtube.com/watch?v=WXuK6gekU1Y" },
+        new Link { GameID = "Go", Label = "Lee Sedol vs. AlphaGo: What Really Happened in the Match", Description = "Lee Sedol vs. AlphaGo: What Really Happened in the Match",
+          LinkType = LinkType.Documentary, Url = "https://www.youtube.com/watch?v=Pd-kOPyVvRc" },
         new Link { GameID = "Go", Label = "Go games with English commentary playlist", Description = "Go games with English commentary playlist",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/playlist?list=PLLoPXkTJconpvyrTeBzW5IK1A1CPKsMCG" },
 
@@ -460,6 +466,8 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Documentary, Url = "https://youtu.be/_bsIXA8lNZc" },
         new Link { GameID = "HalfLife", Label = "Glitches and Tricks in Half-life 1", Description = "Glitches and Tricks in Half-life 1",
           LinkType = LinkType.Guide, Url = "https://youtu.be/zX5AHYZ5NJM" },
+        new Link { GameID = "HalfLife", Label = "Half-Life 2 Sound Design Facts you have 0 chance knowing about", Description = "Half-Life 2 Sound Design Facts you have 0 chance knowing about",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=3NEq3Z588iY" },
         new Link { GameID = "HalfLife", Label = "Half-life Adrenaline Gamer frag movie by Alex", Description = "Half-life Adrenaline Gamer frag movie by Alex",
           LinkType = LinkType.Highlights, Url = "https://youtu.be/c745LBQTmz0" },
         new Link { GameID = "HalfLife", Label = "Half-life: Opposing Force Trailer (Remake)", Description = "Half-life: Opposing Force Trailer (Remake)",
@@ -865,6 +873,10 @@ namespace ASP_site.Data.Initializers {
         new Link { GameID = "SSF2T", Label = "Analysis: The consequences of reducing the skill gap", Description = "Video essay about the diago parry and the evolution of Street Fighter",
           LinkType = LinkType.Documentary, Url = "https://www.youtube.com/watch?v=iSgA_nK_w3A" },
 
+        // Street Fighter 3 
+        new Link { GameID = "SSF3", Label = "Street Fighter 3: 3rd Strike is broken", Description = "3rd Strike is broken",
+          LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=iOuVA1wYMic" },
+
         // Super Street Fighter 2 Turbo
         new Link { GameID = "SSF2T", Label = "Super Street Fighter 2 Turbo is the Ultimate Fighting Game", Description = "Super Street Fighter 2 Turbo is the Ultimate Fighting Game",
           LinkType = LinkType.Documentary, Url = "https://www.youtube.com/watch?v=RlhK7fNqNE0" },
@@ -953,7 +965,9 @@ namespace ASP_site.Data.Initializers {
 
         // Wolfenstein 3D
         new Link { GameID = "Wolf3D", Label = "RetroAhoy: Wolfenstein 3D", Description = "Documentary about Wolfenstein 3D",
-          LinkType = LinkType.Documentary, Url = "https://www.youtube.com/watch?v=BSb87DC-PtA" }
+          LinkType = LinkType.Documentary, Url = "https://www.youtube.com/watch?v=BSb87DC-PtA" },
+        new Link { GameID = "Wolf3D", Label = "Pro Wolfenstein 3D", Description = "Pro Wolfenstein 3D Analysis",
+          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=U-tNx4-p2qM" },
     };
   }
 }

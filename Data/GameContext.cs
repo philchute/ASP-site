@@ -19,6 +19,7 @@ namespace ASP_site.Data
     public DbSet<YearEntry> YearEntries { get; set; }
     public DbSet<UpdatePost> UpdatePosts { get; set; } = null!;
     public DbSet<Tag> Tags { get; set; } = null!;
+    public DbSet<Book> Books { get; set; } = null!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -27,14 +28,29 @@ namespace ASP_site.Data
       modelBuilder.Entity<Link>().ToTable("Links");
       modelBuilder.Entity<Server>().ToTable("Servers");
       modelBuilder.Entity<Map>().ToTable("Maps");
+      modelBuilder.Entity<Book>().ToTable("Books");
+
+      // Configure the many-to-many relationship between Book and Tag
+      modelBuilder.Entity<Book>()
+          .HasMany(p => p.Tags)
+          .WithMany(t => t.Books)
+          .UsingEntity<Dictionary<string, object>>(
+              "BookTag",
+              j => j.HasOne<Tag>().WithMany().HasForeignKey("TagId").OnDelete(DeleteBehavior.Cascade),
+              j => j.HasOne<Book>().WithMany().HasForeignKey("BookTitle").OnDelete(DeleteBehavior.Cascade));
 
       // Configure composite key for Link
       modelBuilder.Entity<Link>()
-        .HasKey(l => new { l.Url, l.GameID });
+        .HasKey(l => new { l.Url, l.GameID, l.BookTitle, l.MapID });
 
       // Configure composite key for Map
       modelBuilder.Entity<Map>()
         .HasKey(m => new { m.MapID, m.GameInfo });
+
+      modelBuilder.Entity<Game>()
+        .HasMany(g => g.Servers)
+        .WithOne()
+        .HasForeignKey(s => s.GameID);
 
       modelBuilder.Entity<Game>()
         .Property(g => g.ReleaseDates)
@@ -45,8 +61,8 @@ namespace ASP_site.Data
       modelBuilder.Entity<Game>()
         .Property(g => g.ServerConfig)
         .HasConversion(
-            v => JsonSerializer.Serialize(v, (JsonSerializerOptions?)null),
-            v => JsonSerializer.Deserialize<ServerBrowserConfig>(v, (JsonSerializerOptions?)null));
+            v => JsonSerializer.Serialize(v, new JsonSerializerOptions()),
+            v => JsonSerializer.Deserialize<ServerBrowserConfig>(v, new JsonSerializerOptions()));
 
       modelBuilder.Entity<Map>()
         .Property(m => m.GameInfo)

@@ -1,6 +1,6 @@
 @page
 @model ASP_site.Pages.Servers.IndexModel
-@using ASP_site.GameServerListCommon.Model.A2S
+@using ASP_site.Models.ServerBrowser
 
 @{ ViewData["Title"] = "Servers"; }
 
@@ -27,7 +27,7 @@
                          selectGameText = "-- Select a Game --"; // Fallback
                     }
                 }
-                <select name="SelectedGameIndex" class="form-select" asp-for="SelectedGameIndex" asp-items="@(new SelectList(Model.GamesList, "Index", "Name"))" onchange="this.form.submit();">
+                <select name="SelectedGameIndex" class="form-select" asp-for="SelectedGameIndex" asp-items="@(new SelectList(Model.GamesList.Select((game, index) => new { Index = index, Name = game.Name }), "Index", "Name"))" onchange="this.form.submit();">
                     <option value="">@selectGameText</option>
                 </select>
             </div>
@@ -122,13 +122,13 @@
                                 <td class="text-center">
                                     @switch (server.Environment)
                                     {
-                                        case ASP_site.GameServerListCommon.Model.A2S.Environment.Linux:
+                                        case ASP_site.Models.ServerBrowser.Environment.Linux:
                                             <span title="Linux">L</span>
                                             break;
-                                        case ASP_site.GameServerListCommon.Model.A2S.Environment.Windows:
+                                        case ASP_site.Models.ServerBrowser.Environment.Windows:
                                             <span title="Windows">W</span>
                                             break;
-                                        case ASP_site.GameServerListCommon.Model.A2S.Environment.Mac:
+                                        case ASP_site.Models.ServerBrowser.Environment.Mac:
                                             <span title="Mac">M</span>
                                             break;
                                         default:
@@ -139,13 +139,13 @@
                                 <td class="text-center">
                                      @switch (server.ServerType)
                                     {
-                                        case ASP_site.GameServerListCommon.Model.A2S.ServerType.Dedicated:
+                                        case ASP_site.Models.ServerBrowser.ServerType.Dedicated:
                                             <span title="Dedicated">D</span>
                                             break;
-                                        case ASP_site.GameServerListCommon.Model.A2S.ServerType.Listen:
+                                        case ASP_site.Models.ServerBrowser.ServerType.Listen:
                                             <span title="Listen">L</span>
                                             break;
-                                        case ASP_site.GameServerListCommon.Model.A2S.ServerType.SourceTV:
+                                        case ASP_site.Models.ServerBrowser.ServerType.SourceTV:
                                              <span title="SourceTV Proxy">P</span>
                                             break;
                                         default:

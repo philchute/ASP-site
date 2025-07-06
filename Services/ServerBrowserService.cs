@@ -1,38 +1,38 @@
-// using ASP_site.GameServerListCommon.External; // Removed - Namespace no longer exists
-using ASP_site.GameServerListCommon.Model;
-using ASP_site.GameServerListCommon.Model.A2S;
-using ASP_site.GameServerListCommon.Model.Steam;
+using ASP_site.Helpers;
+using ASP_site.Models;
+using ASP_site.Models.ServerBrowser;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System.Collections.Concurrent;
 using System.Net;
-using ASP_site.Helpers;
-using Microsoft.Extensions.Logging;
 using System.Net.Http;
-// using System.Text.Json; // Removed - Causes ambiguity
 
-namespace ASP_site.GameServerListCommon.Services;
+namespace ASP_site.Services;
 
-public class SteamServerBrowserApiService
+public class ServerBrowserService
 {
     private readonly HttpClient _httpClient;
     private readonly IMemoryCache _cache;
     private readonly IConfiguration _config;
-    private readonly ILogger<SteamServerBrowserApiService> _logger;
+    private readonly ILogger<ServerBrowserService> _logger;
     private readonly IServerBlacklistService _blacklistService;
+    private readonly MasterServerSettings _masterServerSettings;
     private readonly string _apiKey;
     private readonly int _querySize;
     private readonly TimeSpan _serverListCacheDuration;
     private readonly JsonSerializerSettings _jsonSerializerSettings;
 
-    public SteamServerBrowserApiService(IConfiguration config, IMemoryCache memoryCache, IHttpClientFactory httpClientFactory, ILogger<SteamServerBrowserApiService> logger, IServerBlacklistService blacklistService)
+    public ServerBrowserService(IConfiguration config, IMemoryCache memoryCache, IHttpClientFactory httpClientFactory, ILogger<ServerBrowserService> logger, IServerBlacklistService blacklistService, IOptions<MasterServerSettings> masterServerSettings)
     {
         _config = config;
         _cache = memoryCache;
         _logger = logger;
         _blacklistService = blacklistService;
+        _masterServerSettings = masterServerSettings.Value;
 
         _httpClient = httpClientFactory.CreateClient();
         var steamApiUrl = _config["SteamSettings:Url"];
@@ -64,7 +64,7 @@ public class SteamServerBrowserApiService
         if (game is null)
             return [];
 
-        var key = $"Servers-{game.AppId}-{game.Name}".ToUpper();
+        var key = $"Servers-{game.SteamID}-{game.Name}".ToUpper();
 
         return await _cache.GetOrCreateAsync(key, async entry =>
         {
@@ -74,23 +74,32 @@ public class SteamServerBrowserApiService
             List<GameServerItem> servers = [];
             try
             {
-                if (game.UseDefinedServerList ?? false)
+                if (game.ServerConfig.UseDefinedServerList ?? false)
                 {
                     _logger.LogInformation($"Game {game.Name} uses defined server list. Querying via A2S...");
-                    servers = await QueryServerListByAddress(game, game.Servers ?? [], 1500);
+                    var serverAddresses = (game.Servers ?? []).Select(s => s.IPAddress).ToList();
+                    servers = await QueryServerListByAddress(game, serverAddresses, 1500);
                 }
-                else if (game.MasterServer.HasValue)
+                else if (!string.IsNullOrEmpty(game.ServerConfig.MasterServerKey) && _masterServerSettings.Servers.TryGetValue(game.ServerConfig.MasterServerKey, out var masterServer))
                 {
-                    _logger.LogInformation($"Game {game.Name} uses master server {game.MasterServer}. Querying master list via A2S...");
-                    var masterList = await A2SQuery.QueryServerList(game.MasterServer.Value, game);
-                    var addresses = masterList.Select(s => $"{s.Address}:{s.Port}").ToList();
-                    servers = await QueryServerListByAddress(game, addresses, 1500);
+                    _logger.LogInformation($"Game '{game.Name}' uses master server key '{game.ServerConfig.MasterServerKey}' -> {masterServer.Address} ({masterServer.Protocol})");
+
+                    if (masterServer.Protocol == "A2S")
+                    {
+                        var masterEndpoint = GetIPEndPoint(masterServer.Address);
+                        if(masterEndpoint is not null)
+                        {
+                            var masterList = await A2SQuery.QueryServerList(masterEndpoint, game);
+                            var addresses = masterList.Select(s => $"{s.Address}:{s.Port}").ToList();
+                            servers = await QueryServerListByAddress(game, addresses, 1500);
+                        }
+                    }
                 }
                 else
                 {
                     _logger.LogInformation($"Game {game.Name} uses Steam Web API. Fetching...");
-                    var gamedirFilter = string.IsNullOrEmpty(game.Gamedir) ? string.Empty : $"\\gamedir\\{game.Gamedir}";
-                    var filters = $"\\appid\\{game.AppId}{gamedirFilter}{game.Filters ?? string.Empty}";
+                    var gamedirFilter = string.IsNullOrEmpty(game.ServerConfig.GameDirectory) ? string.Empty : $"\\gamedir\\{game.ServerConfig.GameDirectory}";
+                    var filters = $"\\appid\\{game.SteamID}{gamedirFilter}{game.ServerConfig.ApiFilters ?? string.Empty}";
                     var apiUrl = $"IGameServersService/GetServerList/v1/?key={_apiKey}&limit={_querySize}&filter={filters}";
 
                     servers = await FetchAndMapSteamApiServers(apiUrl, game);
@@ -114,7 +123,7 @@ public class SteamServerBrowserApiService
                     // Apply game-specific filtering rules
                     int countBeforeGameSpecificFilter = servers.Count;
                     // Check for GoldSrc games (either by MasterServerType or specific AppId for CS 1.6)
-                    if (game.MasterServer == MasterServerType.GoldSource || game.AppId == 10) // CS 1.6 AppId is 10
+                    if ((!string.IsNullOrEmpty(game.ServerConfig.MasterServerKey) && game.ServerConfig.MasterServerKey == "GoldSource") || game.SteamID == 10) // CS 1.6 AppId is 10
                     {
                         // GoldSrc: MaxPlayers cannot exceed 32
                         servers = servers.Where(s => s.MaxPlayers <= 32).ToList();
@@ -122,7 +131,7 @@ public class SteamServerBrowserApiService
                     }
                     // Check for CS2 (ensure it's not also caught by a potential GoldSource designation if AppId 730 were ever miscategorized)
                     // Using else if ensures these conditions are mutually exclusive for a single server list processing pass if a game somehow matched both.
-                    else if (game.AppId == 730) // CS2 AppId
+                    else if (game.SteamID == 730) // CS2 AppId
                     {
                         // CS2: Filter out servers with "graphics_settings" map
                         servers = servers.Where(s => !string.Equals(s.Map, "graphics_settings", StringComparison.OrdinalIgnoreCase)).ToList();
@@ -187,13 +196,13 @@ public class SteamServerBrowserApiService
                     RequiresVAC = apiServer.Secure,
                     PasswordProtected = !apiServer.Dedicated,
                     Version = apiServer.Version,
-                    ServerType = apiServer.Dedicated ? Model.A2S.ServerType.Dedicated : Model.A2S.ServerType.Listen,
+                    ServerType = apiServer.Dedicated ? Models.ServerBrowser.ServerType.Dedicated : Models.ServerBrowser.ServerType.Listen,
                     Environment = apiServer.OS.ToLowerInvariant() switch
                     {
-                        "w" => Model.A2S.Environment.Windows,
-                        "l" => Model.A2S.Environment.Linux,
-                        "m" or "o" => Model.A2S.Environment.Mac,
-                        _ => Model.A2S.Environment.Linux
+                        "w" => Models.ServerBrowser.Environment.Windows,
+                        "l" => Models.ServerBrowser.Environment.Linux,
+                        "m" or "o" => Models.ServerBrowser.Environment.Mac,
+                        _ => Models.ServerBrowser.Environment.Linux
                     }
                 };
                 mappedServers.Add(gameServer);
@@ -226,7 +235,7 @@ public class SteamServerBrowserApiService
         if (server.MaxPlayers > 128 || server.MaxPlayers <= 1 || server.Players > server.MaxPlayers)
             return false;
 
-        if (game.MasterServer.HasValue && game.MasterServer.Value == MasterServerType.GoldSource && (server.Version == null || !server.Version.EndsWith("/Stdio")))
+        if ((!string.IsNullOrEmpty(game.ServerConfig.MasterServerKey) && game.ServerConfig.MasterServerKey == "GoldSource") && (server.Version == null || !server.Version.EndsWith("/Stdio")))
              return false;
 
         return true;
@@ -261,5 +270,24 @@ public class SteamServerBrowserApiService
             }
         });
         return items.ToList();
+    }
+
+    // Helper to parse IP:Port string
+    private static IPEndPoint? GetIPEndPoint(string address)
+    {
+        var items = address.Split(':');
+        if (items.Length != 2)
+        {
+            // Log error or handle invalid format
+            return null;
+        }
+
+        if (!IPAddress.TryParse(items[0], out var ip) || !ushort.TryParse(items[1], out var port))
+        {
+            // Log error or handle invalid format
+            return null;
+        }
+
+        return new IPEndPoint(ip, port);
     }
 } 

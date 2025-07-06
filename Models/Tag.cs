@@ -13,5 +13,6 @@ namespace ASP_site.Models
 
         // Navigation property for many-to-many relationship
         public ICollection<UpdatePost> UpdatePosts { get; set; } = new List<UpdatePost>();
+        public ICollection<Book> Books { get; set; } = new List<Book>();
     }
 } 

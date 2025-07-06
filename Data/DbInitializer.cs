@@ -15,6 +15,8 @@ namespace ASP_site.Data {
       // context.Database.ExecuteSqlRaw("DELETE FROM UpdatePostTag"); // Removed for in-memory compatibility/simplicity
       context.UpdatePosts.RemoveRange(context.UpdatePosts);
       context.Tags.RemoveRange(context.Tags);
+      context.Books.RemoveRange(context.Books);
+
       context.SaveChanges();
       
       // Initialize engines
@@ -172,6 +174,41 @@ namespace ASP_site.Data {
           }
           post.Tags = tagsForPost;
           context.UpdatePosts.Add(post);
+      }
+      
+      // Initialize Books and their Tags
+      var (books, bookLinks) = BookInitializer.GetData();
+      context.Links.AddRange(bookLinks);
+      var allBookTags = books.SelectMany(b => b.Tags).Select(t => t.Name).Distinct();
+
+      foreach (var tagName in allBookTags)
+      {
+          if (!context.Tags.Any(t => t.Name == tagName))
+          {
+              context.Tags.Add(new Tag { Name = tagName });
+          }
+      }
+      context.SaveChanges();
+
+      var tagsFromDb = context.Tags.ToList();
+
+      foreach (var book in books)
+      {
+          var tagsForBook = new List<Tag>();
+          if (book.Tags != null && book.Tags.Any())
+          {
+              var tagNamesForBook = book.Tags.Select(t => t.Name);
+              tagsForBook.AddRange(tagsFromDb.Where(t => tagNamesForBook.Contains(t.Name)));
+          }
+          book.Tags = tagsForBook;
+          context.Books.Add(book);
+      }
+      
+      context.SaveChanges();
+
+      foreach (var book in books.Where(b => b.ParentCollectionTitle != null))
+      {
+          book.ParentCollection = context.Books.SingleOrDefault(b => b.Title == book.ParentCollectionTitle);
       }
       
       context.SaveChanges();

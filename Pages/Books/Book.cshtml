@@ -1,0 +1,34 @@
+@page "/Books/{BookTitle}"
+@model ASP_site.Pages.Books.BookModel
+
+@{
+    ViewData["Title"] = @Model.Book?.Title;
+}
+<div class="jumbotron p-2">
+  <h1 class="display-4">
+    @Model.Book?.Title <small class="text-muted">- @Model.Book?.Author - @Model.Book?.PublicationYear</small>
+  </h1>
+</div>
+<hr/>
+@if(Model.Book?.Description != null)
+{
+  <div>@Model.Book.Description</div>
+  <hr/>
+}
+
+@if(Model.BookLinks.Any()) 
+{
+    <div>
+        <h4>Links:</h4>
+        <ul>
+          @foreach(var link in Model.BookLinks)
+          {
+            <li>@link.LinkType: <a href="@link.Url" target="_blank">@link.Label</a> - @link.Description</li>
+          }
+        </ul>
+    </div>
+    <hr/>
+} else { 
+    <div>No links available.</div>
+    <hr/>
+} 

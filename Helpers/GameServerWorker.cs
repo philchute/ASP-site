@@ -1,5 +1,5 @@
-using ASP_site.GameServerListCommon.Model; // Adjusted using
-using ASP_site.GameServerListCommon.Services; // Adjusted using
+using ASP_site.Models;
+using ASP_site.Services;
 using Microsoft.Extensions.DependencyInjection; // For DI
 using Microsoft.Extensions.Hosting; // For BackgroundService
 using Microsoft.Extensions.Logging; // For Logging
@@ -43,7 +43,7 @@ public class GameServerWorker : BackgroundService
                  {
                      var gameDataService = scope.ServiceProvider.GetRequiredService<IGameDataService>();
                      // SteamServerBrowserApiService might need IHttpClientFactory, etc., injected
-                     var serverBrowserService = scope.ServiceProvider.GetRequiredService<SteamServerBrowserApiService>();
+                     var serverBrowserService = scope.ServiceProvider.GetRequiredService<ServerBrowserService>();
 
                      // Ensure game data is loaded before proceeding
                      await gameDataService.InitializeAsync(); // Ensure initialized (safe to call multiple times)

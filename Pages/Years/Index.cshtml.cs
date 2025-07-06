@@ -85,7 +85,7 @@ namespace ASP_site.Pages.Years
             // Check count against total number of AgeAppropriateness enum values
             if (SelectedAgeAppropriateness != null && SelectedAgeAppropriateness.Any() && SelectedAgeAppropriateness.Count < Enum.GetNames(typeof(AgeAppropriateness)).Length)
             {
-                entriesQuery = entriesQuery.Where(e => SelectedAgeAppropriateness.Contains(e.Age.ToString()));
+                entriesQuery = entriesQuery.Where(e => e.Age.HasValue && SelectedAgeAppropriateness.Contains(e.Age.Value.ToString()));
             }
 
 
