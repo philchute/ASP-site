@@ -18,17 +18,17 @@
     <form method="get">
         <div class="row g-3 align-items-end mb-3">
             <div class="col-md-4">
-                <label asp-for="SelectedGameIndex" class="form-label">Game:</label>
+                <label asp-for="GameId" class="form-label">Game:</label>
                 @{
                     var gameCount = Model.GamesList?.Count() ?? 0;
                     var selectGameText = $"-- Select a Game ({gameCount} available) --";
-                    if (gameCount == 0 && Model.SelectedGameIndex == null && !Model.IsLoading) { // If no games at all, and nothing selected or loading
+                    if (gameCount == 0 && Model.GameId == null && !Model.IsLoading) { // If no games at all, and nothing selected or loading
                         selectGameText = "-- No games available for browser --";
-                    } else if (gameCount == 0 && Model.SelectedGameIndex != null) { // If a game *was* selected but list is now 0 (unlikely scenario)
+                    } else if (gameCount == 0 && Model.GameId != null) { // If a game *was* selected but list is now 0 (unlikely scenario)
                          selectGameText = "-- Select a Game --"; // Fallback
                     }
                 }
-                <select name="SelectedGameIndex" class="form-select" asp-for="SelectedGameIndex" asp-items="@(new SelectList((Model.GamesList ?? new List<Game>()).Select((game, index) => new { Index = index, Name = game.Name }), "Index", "Name"))" onchange="this.form.submit();">
+                <select name="GameId" class="form-select" asp-for="GameId" asp-items="@(new SelectList(Model.GamesList, "GameID", "Name"))" onchange="this.form.submit();">
                     <option value="">@selectGameText</option>
                 </select>
             </div>
@@ -189,7 +189,7 @@
             </div>
         }
     }
-    else if (Model.SelectedGameIndex != null && !Model.IsLoading)
+    else if (Model.GameId != null && !Model.IsLoading)
     {
          <p>Select a game from the list above to view its servers.</p>
     }

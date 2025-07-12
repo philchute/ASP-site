@@ -16,8 +16,8 @@ namespace ASP_site.Data.Initializers
           Description = "One of the original two assassination maps in Counterstrike, Oilrig was released in Counterstrike beta 6.",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CS16", Author = "Chris \"MacMan\" Ashton ", Description = "1.6", FileName = "as_oilrig" },
-            new MapGameInfo { GameID = "CSCZ", Author = "Chris \"MacMan\" Ashton ", Description = "CSCZ", FileName = "as_oilrig" }
+            new MapGameInfo { GameID = "cs16", Author = "Chris \"MacMan\" Ashton ", Description = "1.6", FileName = "as_oilrig" },
+            new MapGameInfo { GameID = "cscz", Author = "Chris \"MacMan\" Ashton ", Description = "CSCZ", FileName = "as_oilrig" }
           }
         },
 
@@ -29,8 +29,8 @@ namespace ASP_site.Data.Initializers
           Description = "Small hostage rescue map set inside a 747 airplane",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CS16", Author = "Leon Nieuwoudt, Stephen Superville", Description = "1.6", FileName = "cs_747" },
-            new MapGameInfo { GameID = "CSCZ", Author = "Leon Nieuwoudt, Stephen Superville", Description = "CSCZ", FileName = "cs_747" }
+            new MapGameInfo { GameID = "cs16", Author = "Leon Nieuwoudt, Stephen Superville", Description = "1.6", FileName = "cs_747" },
+            new MapGameInfo { GameID = "cscz", Author = "Leon Nieuwoudt, Stephen Superville", Description = "CSCZ", FileName = "cs_747" }
           }
         },
         new Map
@@ -40,8 +40,8 @@ namespace ASP_site.Data.Initializers
           Description = "Small hostage rescue map set inside an office building, was added back to CS2 on 5/7/2025",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CSGO", Author = "Chris Ashton", Description = "CS:GO", FileName = "cs_agency" },
-            new MapGameInfo { GameID = "CS2", Author = "", Description = "CS2", FileName = "cs_agency" }
+            new MapGameInfo { GameID = "csgo", Author = "Chris Ashton", Description = "CS:GO", FileName = "cs_agency" },
+            new MapGameInfo { GameID = "cs2", Author = "", Description = "CS2", FileName = "cs_agency" }
           }
         },
         new Map
@@ -51,9 +51,9 @@ namespace ASP_site.Data.Initializers
           Description = "Classic warehouse themed hostage rescue map first added in Counterstrike beta 1.1",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CS16", Author = "Lari Muuriaisniemi", Description = "1.6", FileName = "cs_assault" },
-            new MapGameInfo { GameID = "CSS", Author = "Jess Cliffe, Valve Corporation", Description = "CSS", FileName = "cs_assault" },
-            new MapGameInfo { GameID = "CSGO", Author = "Hidden Path Entertainment, Valve Corporation", Description = "CS:GO", FileName = "cs_assault" }
+            new MapGameInfo { GameID = "cs16", Author = "Lari Muuriaisniemi", Description = "1.6", FileName = "cs_assault" },
+            new MapGameInfo { GameID = "css", Author = "Jess Cliffe, Valve Corporation", Description = "CSS", FileName = "cs_assault" },
+            new MapGameInfo { GameID = "csgo", Author = "Hidden Path Entertainment, Valve Corporation", Description = "CS:GO", FileName = "cs_assault" }
           }
         },
         new Map
@@ -63,8 +63,8 @@ namespace ASP_site.Data.Initializers
           Description = "Back alley themed hostage rescue map first added in Counterstrike beta 5",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CS16", Author = "Jamie Mactaggart (Barking Dog Studios)", Description = "1.6", FileName = "cs_backalley" },
-            new MapGameInfo { GameID = "CSCZ", Author = "Jamie Mactaggart (Barking Dog Studios)", Description = "CSCZ", FileName = "cs_backalley" }
+            new MapGameInfo { GameID = "cs16", Author = "Jamie Mactaggart (Barking Dog Studios)", Description = "1.6", FileName = "cs_backalley" },
+            new MapGameInfo { GameID = "cscz", Author = "Jamie Mactaggart (Barking Dog Studios)", Description = "CSCZ", FileName = "cs_backalley" }
           }
         },
         new Map
@@ -74,7 +74,7 @@ namespace ASP_site.Data.Initializers
           Description = "Compound themed map",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CSS", Author = "", Description = "CSS", FileName = "cs_compound" }
+            new MapGameInfo { GameID = "css", Author = "", Description = "CSS", FileName = "cs_compound" }
           }
         },
         new Map
@@ -84,7 +84,7 @@ namespace ASP_site.Data.Initializers
           Description = "Downed themed map",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CSCZ", Author = "", Description = "CSCZ", FileName = "cs_downed_cz" }
+            new MapGameInfo { GameID = "cscz", Author = "", Description = "CSCZ", FileName = "cs_downed_cz" }
           }
         },
         new Map
@@ -94,7 +94,7 @@ namespace ASP_site.Data.Initializers
           Description = "Estate themed map",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CS16", Author = "", Description = "1.6", FileName = "cs_estate" }
+            new MapGameInfo { GameID = "cs16", Author = "", Description = "1.6", FileName = "cs_estate" }
           }
         },
         new Map
@@ -104,10 +104,10 @@ namespace ASP_site.Data.Initializers
           Description = "Cuban themed hostage rescue map",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CS16", Author = "", Description = "1.6", FileName = "cs_havana" },
-            new MapGameInfo { GameID = "CSX", Author = "", Description = "Xbox", FileName = "cs_havana" },
-            new MapGameInfo { GameID = "CSCZ", Author = "", Description = "CSCZ", FileName = "cs_havana_cz" },
-            new MapGameInfo { GameID = "CSS", Author = "", Description = "CSS", FileName = "cs_havana" }
+            new MapGameInfo { GameID = "cs16", Author = "", Description = "1.6", FileName = "cs_havana" },
+            new MapGameInfo { GameID = "csx", Author = "", Description = "Xbox", FileName = "cs_havana" },
+            new MapGameInfo { GameID = "cscz", Author = "", Description = "CSCZ", FileName = "cs_havana_cz" },
+            new MapGameInfo { GameID = "css", Author = "", Description = "CSS", FileName = "cs_havana" }
           }
         },
         new Map
@@ -117,12 +117,12 @@ namespace ASP_site.Data.Initializers
           Description = "Classic hostage rescue map set in an Italian town",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CS16", Author = "", Description = "1.6", FileName = "cs_italy" },
-            new MapGameInfo { GameID = "CSX", Author = "", Description = "Xbox", FileName = "cs_italy" },
-            new MapGameInfo { GameID = "CSCZ", Author = "", Description = "CSCZ", FileName = "cs_italy_cz" },
-            new MapGameInfo { GameID = "CSS", Author = "", Description = "CSS", FileName = "cs_italy" },
-            new MapGameInfo { GameID = "CSGO", Author = "", Description = "CS:GO", FileName = "cs_italy" },
-            new MapGameInfo { GameID = "CS2", Author = "", Description = "CS2", FileName = "cs_italy" }
+            new MapGameInfo { GameID = "cs16", Author = "", Description = "1.6", FileName = "cs_italy" },
+            new MapGameInfo { GameID = "csx", Author = "", Description = "Xbox", FileName = "cs_italy" },
+            new MapGameInfo { GameID = "cscz", Author = "", Description = "CSCZ", FileName = "cs_italy_cz" },
+            new MapGameInfo { GameID = "css", Author = "", Description = "CSS", FileName = "cs_italy" },
+            new MapGameInfo { GameID = "csgo", Author = "", Description = "CS:GO", FileName = "cs_italy" },
+            new MapGameInfo { GameID = "cs2", Author = "", Description = "CS2", FileName = "cs_italy" }
           }
         },
         new Map
@@ -132,7 +132,7 @@ namespace ASP_site.Data.Initializers
           Description = "Miami themed hostage rescue map",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CSX", Author = "", Description = "Xbox", FileName = "cs_miami" }
+            new MapGameInfo { GameID = "csx", Author = "", Description = "Xbox", FileName = "cs_miami" }
           }
         },
         new Map
@@ -142,11 +142,11 @@ namespace ASP_site.Data.Initializers
           Description = "Militia themed hostage rescue map",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CS16", Author = "", Description = "1.6", FileName = "cs_militia" },
-            new MapGameInfo { GameID = "CSX", Author = "", Description = "Xbox", FileName = "cs_militia" },
-            new MapGameInfo { GameID = "CSCZ", Author = "", Description = "CSCZ", FileName = "cs_militia_cz" },
-            new MapGameInfo { GameID = "CSS", Author = "", Description = "CSS", FileName = "cs_militia" },
-            new MapGameInfo { GameID = "CSGO", Author = "", Description = "CS:GO", FileName = "cs_militia" }
+            new MapGameInfo { GameID = "cs16", Author = "", Description = "1.6", FileName = "cs_militia" },
+            new MapGameInfo { GameID = "csx", Author = "", Description = "Xbox", FileName = "cs_militia" },
+            new MapGameInfo { GameID = "cscz", Author = "", Description = "CSCZ", FileName = "cs_militia_cz" },
+            new MapGameInfo { GameID = "css", Author = "", Description = "CSS", FileName = "cs_militia" },
+            new MapGameInfo { GameID = "csgo", Author = "", Description = "CS:GO", FileName = "cs_militia" }
           }
         },
         new Map
@@ -156,12 +156,12 @@ namespace ASP_site.Data.Initializers
           Description = "Classic hostage rescue map set in an office building",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CS16", Author = "", Description = "1.6", FileName = "cs_office" },
-            new MapGameInfo { GameID = "CSX", Author = "", Description = "Xbox", FileName = "cs_office" },
-            new MapGameInfo { GameID = "CSCZ", Author = "", Description = "CSCZ", FileName = "cs_office_cz" },
-            new MapGameInfo { GameID = "CSS", Author = "", Description = "CSS", FileName = "cs_office" },
-            new MapGameInfo { GameID = "CSGO", Author = "", Description = "CS:GO", FileName = "cs_office" },
-            new MapGameInfo { GameID = "CS2", Author = "", Description = "CS2", FileName = "cs_office" }
+            new MapGameInfo { GameID = "cs16", Author = "", Description = "1.6", FileName = "cs_office" },
+            new MapGameInfo { GameID = "csx", Author = "", Description = "Xbox", FileName = "cs_office" },
+            new MapGameInfo { GameID = "cscz", Author = "", Description = "CSCZ", FileName = "cs_office_cz" },
+            new MapGameInfo { GameID = "css", Author = "", Description = "CSS", FileName = "cs_office" },
+            new MapGameInfo { GameID = "csgo", Author = "", Description = "CS:GO", FileName = "cs_office" },
+            new MapGameInfo { GameID = "cs2", Author = "", Description = "CS2", FileName = "cs_office" }
           }
         },
         new Map
@@ -171,7 +171,7 @@ namespace ASP_site.Data.Initializers
           Description = "Siege themed hostage rescue map",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CS16", Author = "", Description = "1.6", FileName = "cs_siege" }
+            new MapGameInfo { GameID = "cs16", Author = "", Description = "1.6", FileName = "cs_siege" }
           }
         },
 
@@ -183,9 +183,9 @@ namespace ASP_site.Data.Initializers
           Description = "Airport themed map",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CS16", Author = "", Description = "1.6", FileName = "de_airstrip" },
-            new MapGameInfo { GameID = "CSX", Author = "", Description = "Xbox", FileName = "de_airstrip" },
-            new MapGameInfo { GameID = "CSCZ", Author = "", Description = "CSCZ", FileName = "de_airstrip_cz" }
+            new MapGameInfo { GameID = "cs16", Author = "", Description = "1.6", FileName = "de_airstrip" },
+            new MapGameInfo { GameID = "csx", Author = "", Description = "Xbox", FileName = "de_airstrip" },
+            new MapGameInfo { GameID = "cscz", Author = "", Description = "CSCZ", FileName = "de_airstrip_cz" }
           }
         },
         new Map
@@ -195,8 +195,8 @@ namespace ASP_site.Data.Initializers
           Description = "Map set in a Mayan temple complex",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CSGO", Author = "", Description = "CS:GO", FileName = "de_ancient" },
-            new MapGameInfo { GameID = "CS2", Author = "", Description = "CS2", FileName = "de_ancient" }
+            new MapGameInfo { GameID = "csgo", Author = "", Description = "CS:GO", FileName = "de_ancient" },
+            new MapGameInfo { GameID = "cs2", Author = "", Description = "CS2", FileName = "de_ancient" }
           }
         },
         new Map
@@ -206,8 +206,8 @@ namespace ASP_site.Data.Initializers
           Description = "Egyptian themed map",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CSGO", Author = "", Description = "CS:GO", FileName = "de_anubis" },
-            new MapGameInfo { GameID = "CS2", Author = "", Description = "CS2", FileName = "de_anubis" }
+            new MapGameInfo { GameID = "csgo", Author = "", Description = "CS:GO", FileName = "de_anubis" },
+            new MapGameInfo { GameID = "cs2", Author = "", Description = "CS2", FileName = "de_anubis" }
           }
         },
         new Map
@@ -217,10 +217,10 @@ namespace ASP_site.Data.Initializers
           Description = "Ancient Aztec temple themed map",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CS16", Author = "", Description = "1.6", FileName = "de_aztec" },
-            new MapGameInfo { GameID = "CSX", Author = "", Description = "Xbox", FileName = "de_aztec" },
-            new MapGameInfo { GameID = "CSCZ", Author = "", Description = "CSCZ", FileName = "de_aztec_cz" },
-            new MapGameInfo { GameID = "CSS", Author = "", Description = "CSS", FileName = "de_aztec" }
+            new MapGameInfo { GameID = "cs16", Author = "", Description = "1.6", FileName = "de_aztec" },
+            new MapGameInfo { GameID = "csx", Author = "", Description = "Xbox", FileName = "de_aztec" },
+            new MapGameInfo { GameID = "cscz", Author = "", Description = "CSCZ", FileName = "de_aztec_cz" },
+            new MapGameInfo { GameID = "css", Author = "", Description = "CSS", FileName = "de_aztec" }
           }
         },
         new Map
@@ -230,7 +230,7 @@ namespace ASP_site.Data.Initializers
           Description = "Modern map set in a warehouse district",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CSGO", Author = "", Description = "CS:GO", FileName = "de_cache" }
+            new MapGameInfo { GameID = "csgo", Author = "", Description = "CS:GO", FileName = "de_cache" }
           }
         },
         new Map
@@ -240,7 +240,7 @@ namespace ASP_site.Data.Initializers
           Description = "Venetian canals themed map",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CSGO", Author = "", Description = "CS:GO", FileName = "de_canals" }
+            new MapGameInfo { GameID = "csgo", Author = "", Description = "CS:GO", FileName = "de_canals" }
           }
         },
         new Map
@@ -250,11 +250,11 @@ namespace ASP_site.Data.Initializers
           Description = "Cobblestone castle themed map",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CS16", Author = "", Description = "1.6", FileName = "de_cbble" },
-            new MapGameInfo { GameID = "CSX", Author = "", Description = "Xbox", FileName = "de_cbble" },
-            new MapGameInfo { GameID = "CSCZ", Author = "", Description = "CSCZ", FileName = "de_cbble_cz" },
-            new MapGameInfo { GameID = "CSS", Author = "", Description = "CSS", FileName = "de_cbble" },
-            new MapGameInfo { GameID = "CSGO", Author = "", Description = "CS:GO", FileName = "de_cbble" }
+            new MapGameInfo { GameID = "cs16", Author = "", Description = "1.6", FileName = "de_cbble" },
+            new MapGameInfo { GameID = "csx", Author = "", Description = "Xbox", FileName = "de_cbble" },
+            new MapGameInfo { GameID = "cscz", Author = "", Description = "CSCZ", FileName = "de_cbble_cz" },
+            new MapGameInfo { GameID = "css", Author = "", Description = "CSS", FileName = "de_cbble" },
+            new MapGameInfo { GameID = "csgo", Author = "", Description = "CS:GO", FileName = "de_cbble" }
           }
         },
         new Map
@@ -264,10 +264,10 @@ namespace ASP_site.Data.Initializers
           Description = "French chateau themed map",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CS16", Author = "", Description = "1.6", FileName = "de_chateau" },
-            new MapGameInfo { GameID = "CSX", Author = "", Description = "Xbox", FileName = "de_chateau" },
-            new MapGameInfo { GameID = "CSCZ", Author = "", Description = "CSCZ", FileName = "de_chateau_cz" },
-            new MapGameInfo { GameID = "CSS", Author = "", Description = "CSS", FileName = "de_chateau" }
+            new MapGameInfo { GameID = "cs16", Author = "", Description = "1.6", FileName = "de_chateau" },
+            new MapGameInfo { GameID = "csx", Author = "", Description = "Xbox", FileName = "de_chateau" },
+            new MapGameInfo { GameID = "cscz", Author = "", Description = "CSCZ", FileName = "de_chateau_cz" },
+            new MapGameInfo { GameID = "css", Author = "", Description = "CSS", FileName = "de_chateau" }
           }
         },
         new Map
@@ -277,8 +277,8 @@ namespace ASP_site.Data.Initializers
           Description = "Industrial themed map",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CSX", Author = "", Description = "Xbox", FileName = "de_corruption" },
-            new MapGameInfo { GameID = "CSCZ", Author = "", Description = "CSCZ", FileName = "de_corruption_cz" }
+            new MapGameInfo { GameID = "csx", Author = "", Description = "Xbox", FileName = "de_corruption" },
+            new MapGameInfo { GameID = "cscz", Author = "", Description = "CSCZ", FileName = "de_corruption_cz" }
           }
         },
         new Map
@@ -288,10 +288,10 @@ namespace ASP_site.Data.Initializers
           Description = "Classic desert themed map",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CS16", Author = "", Description = "1.6", FileName = "de_dust" },
-            new MapGameInfo { GameID = "CSX", Author = "", Description = "Xbox", FileName = "de_dust" },
-            new MapGameInfo { GameID = "CSCZ", Author = "", Description = "CSCZ", FileName = "de_dust_cz" },
-            new MapGameInfo { GameID = "CSS", Author = "", Description = "CSS", FileName = "de_dust" }
+            new MapGameInfo { GameID = "cs16", Author = "", Description = "1.6", FileName = "de_dust" },
+            new MapGameInfo { GameID = "csx", Author = "", Description = "Xbox", FileName = "de_dust" },
+            new MapGameInfo { GameID = "cscz", Author = "", Description = "CSCZ", FileName = "de_dust_cz" },
+            new MapGameInfo { GameID = "css", Author = "", Description = "CSS", FileName = "de_dust" }
           }
         },
         new Map
@@ -301,12 +301,12 @@ namespace ASP_site.Data.Initializers
           Description = "Iconic Counter-Strike map set in a Middle Eastern town",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CS16", Author = "David Johnston, Chris Ashton", Description = "1.6", FileName = "de_dust2" },
-            new MapGameInfo { GameID = "CSX", Author = "Ritual Entertainment, Turtle Rock Studios", Description = "Xbox", FileName = "de_dust2" },
-            new MapGameInfo { GameID = "CSCZ", Author = "Ritual Entertainment, Turtle Rock Studios", Description = "CSCZ", FileName = "de_dust2_cz" },
-            new MapGameInfo { GameID = "CSS", Author = "Valve Corporation", Description = "CSS", FileName = "de_dust2" },
-            new MapGameInfo { GameID = "CSGO", Author = "Valve Corporation, Hidden Path Entertainment", Description = "CS:GO", FileName = "de_dust2" },
-            new MapGameInfo { GameID = "CS2", Author = "Valve Corporation", Description = "CS2", FileName = "de_dust2" }
+            new MapGameInfo { GameID = "cs16", Author = "David Johnston, Chris Ashton", Description = "1.6", FileName = "de_dust2" },
+            new MapGameInfo { GameID = "csx", Author = "Ritual Entertainment, Turtle Rock Studios", Description = "Xbox", FileName = "de_dust2" },
+            new MapGameInfo { GameID = "cscz", Author = "Ritual Entertainment, Turtle Rock Studios", Description = "CSCZ", FileName = "de_dust2_cz" },
+            new MapGameInfo { GameID = "css", Author = "Valve Corporation", Description = "CSS", FileName = "de_dust2" },
+            new MapGameInfo { GameID = "csgo", Author = "Valve Corporation, Hidden Path Entertainment", Description = "CS:GO", FileName = "de_dust2" },
+            new MapGameInfo { GameID = "cs2", Author = "Valve Corporation", Description = "CS2", FileName = "de_dust2" }
           }
         },
         new Map
@@ -316,8 +316,8 @@ namespace ASP_site.Data.Initializers
           Description = "Highway themed map",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CSX", Author = "", Description = "Xbox", FileName = "de_fastline" },
-            new MapGameInfo { GameID = "CSCZ", Author = "", Description = "CSCZ", FileName = "de_fastline_cz" }
+            new MapGameInfo { GameID = "csx", Author = "", Description = "Xbox", FileName = "de_fastline" },
+            new MapGameInfo { GameID = "cscz", Author = "", Description = "CSCZ", FileName = "de_fastline_cz" }
           }
         },
         new Map
@@ -327,12 +327,12 @@ namespace ASP_site.Data.Initializers
           Description = "Classic map set in an Italian village",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CS16", Author = "", Description = "1.6", FileName = "de_inferno" },
-            new MapGameInfo { GameID = "CSX", Author = "", Description = "Xbox", FileName = "de_inferno" },
-            new MapGameInfo { GameID = "CSCZ", Author = "", Description = "CSCZ", FileName = "de_inferno_cz" },
-            new MapGameInfo { GameID = "CSS", Author = "", Description = "CSS", FileName = "de_inferno" },
-            new MapGameInfo { GameID = "CSGO", Author = "", Description = "CS:GO", FileName = "de_inferno" },
-            new MapGameInfo { GameID = "CS2", Author = "", Description = "CS2", FileName = "de_inferno" }
+            new MapGameInfo { GameID = "cs16", Author = "", Description = "1.6", FileName = "de_inferno" },
+            new MapGameInfo { GameID = "csx", Author = "", Description = "Xbox", FileName = "de_inferno" },
+            new MapGameInfo { GameID = "cscz", Author = "", Description = "CSCZ", FileName = "de_inferno_cz" },
+            new MapGameInfo { GameID = "css", Author = "", Description = "CSS", FileName = "de_inferno" },
+            new MapGameInfo { GameID = "csgo", Author = "", Description = "CS:GO", FileName = "de_inferno" },
+            new MapGameInfo { GameID = "cs2", Author = "", Description = "CS2", FileName = "de_inferno" }
           }
         },
         new Map
@@ -342,8 +342,8 @@ namespace ASP_site.Data.Initializers
           Description = "Popular map set in a Middle Eastern city",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CSGO", Author = "", Description = "CS:GO", FileName = "de_mirage" },
-            new MapGameInfo { GameID = "CS2", Author = "", Description = "CS2", FileName = "de_mirage" }
+            new MapGameInfo { GameID = "csgo", Author = "", Description = "CS:GO", FileName = "de_mirage" },
+            new MapGameInfo { GameID = "cs2", Author = "", Description = "CS2", FileName = "de_mirage" }
           }
         },
         new Map
@@ -353,11 +353,11 @@ namespace ASP_site.Data.Initializers
           Description = "One of the original defusal maps, has been continuously updated and is one of the most challenging maps to play.",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CS16", Author = "", Description = "1.6", FileName = "de_nuke" },
-            new MapGameInfo { GameID = "CSCZ", Author = "", Description = "CSCZ", FileName = "de_nuke_cz" },
-            new MapGameInfo { GameID = "CSS", Author = "", Description = "CSS", FileName = "de_nuke" },
-            new MapGameInfo { GameID = "CSGO", Author = "", Description = "CS:GO", FileName = "de_nuke" },
-            new MapGameInfo { GameID = "CS2", Author = "", Description = "CS2", FileName = "de_nuke" }
+            new MapGameInfo { GameID = "cs16", Author = "", Description = "1.6", FileName = "de_nuke" },
+            new MapGameInfo { GameID = "cscz", Author = "", Description = "CSCZ", FileName = "de_nuke_cz" },
+            new MapGameInfo { GameID = "css", Author = "", Description = "CSS", FileName = "de_nuke" },
+            new MapGameInfo { GameID = "csgo", Author = "", Description = "CS:GO", FileName = "de_nuke" },
+            new MapGameInfo { GameID = "cs2", Author = "", Description = "CS2", FileName = "de_nuke" }
           }
         },
         new Map
@@ -367,8 +367,8 @@ namespace ASP_site.Data.Initializers
           Description = "Modern map set in Berlin",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CSGO", Author = "", Description = "CS:GO", FileName = "de_overpass" },
-            new MapGameInfo { GameID = "CS2", Author = "", Description = "CS2", FileName = "de_overpass" }
+            new MapGameInfo { GameID = "csgo", Author = "", Description = "CS:GO", FileName = "de_overpass" },
+            new MapGameInfo { GameID = "cs2", Author = "", Description = "CS2", FileName = "de_overpass" }
           }
         },
         new Map
@@ -378,10 +378,10 @@ namespace ASP_site.Data.Initializers
           Description = "Italian themed map",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CS16", Author = "", Description = "1.6", FileName = "de_piranesi" },
-            new MapGameInfo { GameID = "CSX", Author = "", Description = "Xbox", FileName = "de_piranesi" },
-            new MapGameInfo { GameID = "CSCZ", Author = "", Description = "CSCZ", FileName = "de_piranesi_cz" },
-            new MapGameInfo { GameID = "CSS", Author = "", Description = "CSS", FileName = "de_piranesi" }
+            new MapGameInfo { GameID = "cs16", Author = "", Description = "1.6", FileName = "de_piranesi" },
+            new MapGameInfo { GameID = "csx", Author = "", Description = "Xbox", FileName = "de_piranesi" },
+            new MapGameInfo { GameID = "cscz", Author = "", Description = "CSCZ", FileName = "de_piranesi_cz" },
+            new MapGameInfo { GameID = "css", Author = "", Description = "CSS", FileName = "de_piranesi" }
           }
         },
         new Map
@@ -391,7 +391,7 @@ namespace ASP_site.Data.Initializers
           Description = "Port themed map",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CSS", Author = "", Description = "CSS", FileName = "de_port" }
+            new MapGameInfo { GameID = "css", Author = "", Description = "CSS", FileName = "de_port" }
           }
         },
         new Map
@@ -401,10 +401,10 @@ namespace ASP_site.Data.Initializers
           Description = "Industrial themed map",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CS16", Author = "", Description = "1.6", FileName = "de_prodigy" },
-            new MapGameInfo { GameID = "CSX", Author = "", Description = "Xbox", FileName = "de_prodigy" },
-            new MapGameInfo { GameID = "CSCZ", Author = "", Description = "CSCZ", FileName = "de_prodigy_cz" },
-            new MapGameInfo { GameID = "CSS", Author = "", Description = "CSS", FileName = "de_prodigy" }
+            new MapGameInfo { GameID = "cs16", Author = "", Description = "1.6", FileName = "de_prodigy" },
+            new MapGameInfo { GameID = "csx", Author = "", Description = "Xbox", FileName = "de_prodigy" },
+            new MapGameInfo { GameID = "cscz", Author = "", Description = "CSCZ", FileName = "de_prodigy_cz" },
+            new MapGameInfo { GameID = "css", Author = "", Description = "CSS", FileName = "de_prodigy" }
           }
         },
         new Map
@@ -414,7 +414,7 @@ namespace ASP_site.Data.Initializers
           Description = "Italian themed map",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CSCZ", Author = "", Description = "CSCZ", FileName = "de_sienna_cz" }
+            new MapGameInfo { GameID = "cscz", Author = "", Description = "CSCZ", FileName = "de_sienna_cz" }
           }
         },
         new Map
@@ -424,8 +424,8 @@ namespace ASP_site.Data.Initializers
           Description = "Stadium themed map",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CSX", Author = "", Description = "Xbox", FileName = "de_stadium" },
-            new MapGameInfo { GameID = "CSCZ", Author = "", Description = "CSCZ", FileName = "de_stadium_cz" }
+            new MapGameInfo { GameID = "csx", Author = "", Description = "Xbox", FileName = "de_stadium" },
+            new MapGameInfo { GameID = "cscz", Author = "", Description = "CSCZ", FileName = "de_stadium_cz" }
           }
         },
         new Map
@@ -435,7 +435,7 @@ namespace ASP_site.Data.Initializers
           Description = "Storm themed map",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CS16", Author = "", Description = "1.6", FileName = "de_storm" }
+            new MapGameInfo { GameID = "cs16", Author = "", Description = "1.6", FileName = "de_storm" }
           }
         },
         new Map
@@ -445,7 +445,7 @@ namespace ASP_site.Data.Initializers
           Description = "Survival themed map",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CS16", Author = "", Description = "1.6", FileName = "de_survivor" }
+            new MapGameInfo { GameID = "cs16", Author = "", Description = "1.6", FileName = "de_survivor" }
           }
         },
         new Map
@@ -455,9 +455,9 @@ namespace ASP_site.Data.Initializers
           Description = "Tides themed map",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CSX", Author = "", Description = "Xbox", FileName = "de_tides" },
-            new MapGameInfo { GameID = "CSCZ", Author = "", Description = "CSCZ", FileName = "de_tides_cz" },
-            new MapGameInfo { GameID = "CSS", Author = "", Description = "CSS", FileName = "de_tides" }
+            new MapGameInfo { GameID = "csx", Author = "", Description = "Xbox", FileName = "de_tides" },
+            new MapGameInfo { GameID = "cscz", Author = "", Description = "CSCZ", FileName = "de_tides_cz" },
+            new MapGameInfo { GameID = "css", Author = "", Description = "CSS", FileName = "de_tides" }
           }
         },
         new Map
@@ -467,8 +467,8 @@ namespace ASP_site.Data.Initializers
           Description = "Torn themed map",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CS16", Author = "", Description = "1.6", FileName = "de_torn" },
-            new MapGameInfo { GameID = "CSCZ", Author = "", Description = "CSCZ", FileName = "de_torn_cz" }
+            new MapGameInfo { GameID = "cs16", Author = "", Description = "1.6", FileName = "de_torn" },
+            new MapGameInfo { GameID = "cscz", Author = "", Description = "CSCZ", FileName = "de_torn_cz" }
           }
         },
         new Map
@@ -478,11 +478,11 @@ namespace ASP_site.Data.Initializers
           Description = "Train yard themed map",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CS16", Author = "", Description = "1.6", FileName = "de_train" },
-            new MapGameInfo { GameID = "CSCZ", Author = "", Description = "CSCZ", FileName = "de_train_cz" },
-            new MapGameInfo { GameID = "CSS", Author = "", Description = "CSS", FileName = "de_train" },
-            new MapGameInfo { GameID = "CSGO", Author = "", Description = "CS:GO", FileName = "de_train" },
-            new MapGameInfo { GameID = "CS2", Author = "", Description = "CS2", FileName = "de_train" }
+            new MapGameInfo { GameID = "cs16", Author = "", Description = "1.6", FileName = "de_train" },
+            new MapGameInfo { GameID = "cscz", Author = "", Description = "CSCZ", FileName = "de_train_cz" },
+            new MapGameInfo { GameID = "css", Author = "", Description = "CSS", FileName = "de_train" },
+            new MapGameInfo { GameID = "csgo", Author = "", Description = "CS:GO", FileName = "de_train" },
+            new MapGameInfo { GameID = "cs2", Author = "", Description = "CS2", FileName = "de_train" }
           }
         },
         new Map
@@ -492,8 +492,8 @@ namespace ASP_site.Data.Initializers
           Description = "Truth themed map",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CSX", Author = "", Description = "Xbox", FileName = "de_truth" },
-            new MapGameInfo { GameID = "CSCZ", Author = "", Description = "CSCZ", FileName = "de_truth_cz" }
+            new MapGameInfo { GameID = "csx", Author = "", Description = "Xbox", FileName = "de_truth" },
+            new MapGameInfo { GameID = "cscz", Author = "", Description = "CSCZ", FileName = "de_truth_cz" }
           }
         },
         new Map
@@ -503,7 +503,7 @@ namespace ASP_site.Data.Initializers
           Description = "Italian themed map",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CSGO", Author = "", Description = "CS:GO", FileName = "de_tuscan" }
+            new MapGameInfo { GameID = "csgo", Author = "", Description = "CS:GO", FileName = "de_tuscan" }
           }
         },
         new Map
@@ -513,10 +513,10 @@ namespace ASP_site.Data.Initializers
           Description = "Skyscraper construction site map",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CS16", Author = "", Description = "1.6", FileName = "de_vertigo" },
-            new MapGameInfo { GameID = "CSCZ", Author = "", Description = "CSCZ", FileName = "de_vertigo" },
-            new MapGameInfo { GameID = "CSGO", Author = "", Description = "CS:GO", FileName = "de_vertigo" },
-            new MapGameInfo { GameID = "CS2", Author = "", Description = "CS2", FileName = "de_vertigo" }
+            new MapGameInfo { GameID = "cs16", Author = "", Description = "1.6", FileName = "de_vertigo" },
+            new MapGameInfo { GameID = "cscz", Author = "", Description = "CSCZ", FileName = "de_vertigo" },
+            new MapGameInfo { GameID = "csgo", Author = "", Description = "CS:GO", FileName = "de_vertigo" },
+            new MapGameInfo { GameID = "cs2", Author = "", Description = "CS2", FileName = "de_vertigo" }
           }
         },
         new Map
@@ -526,8 +526,8 @@ namespace ASP_site.Data.Initializers
           Description = "Russian themed map",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "CSX", Author = "", Description = "Xbox", FileName = "de_vostok" },
-            new MapGameInfo { GameID = "CSCZ", Author = "", Description = "CSCZ", FileName = "de_vostok_cz" }
+            new MapGameInfo { GameID = "csx", Author = "", Description = "Xbox", FileName = "de_vostok" },
+            new MapGameInfo { GameID = "cscz", Author = "", Description = "CSCZ", FileName = "de_vostok_cz" }
           }
         }
       };

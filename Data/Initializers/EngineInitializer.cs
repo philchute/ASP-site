@@ -204,6 +204,12 @@ namespace ASP_site.Data.Initializers {
           ParentID = "seriousengine3", Year = 2014
         },
         new Engine {
+          EngineID = "build",
+          Name = "Build Engine",
+          Description = "Build Engine is a first-person shooter engine created by Ken Silverman, author of Ken's Labyrinth, for 3D Realms.",
+          ParentID = "", Year = 1995
+        },
+        new Engine {
           EngineID = "unreal",
           Name = "Unreal Engine",
           Description = "Unreal Engine is a game engine developed by Epic Games, first used in 1998's Unreal.",

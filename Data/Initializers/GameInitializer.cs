@@ -5,7 +5,7 @@ namespace ASP_site.Data.Initializers {
     public static Game[] GetGames() {
       return new Game[] {
         new Game {
-          GameID = "0AD",
+          GameID = "0ad",
           Name = "0 A.D.",
           Description = "Free Open Source Real Time Strategy Game set between 500 BC and 500 AD.",
           EngineID = "Pyrogenesis",
@@ -20,10 +20,10 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "3WaveCTF",
+          GameID = "3wavectf",
           Name = "3 Wave CTF",
           Description = "A remake of the Quake 1 CTF mod 3wave in the GoldSource engine.",
-          ModForGameID = "HalfLife",
+          ModForGameID = "halflife",
           EngineID = "goldsrc",
           SteamID = 70,
           IsFree = true,
@@ -40,10 +40,10 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "ActionHalfLife",
+          GameID = "actionhalflife",
           Name = "Action Half-Life",
           Description = "A fast-paced action mod for Half-Life featuring new weapons and gameplay mechanics.",
-          ModForGameID = "HalfLife",
+          ModForGameID = "halflife",
           EngineID = "goldsrc",
           SteamID = 70,
           IsFree = true,
@@ -63,10 +63,10 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "ActionHalfLifeSource",
+          GameID = "actionhalflifesource",
           Name = "Action Half-Life: Source",
           Description = "A fast-paced action mod for Half-Life: Source featuring new weapons and gameplay mechanics.",
-          ModForGameID = "HalfLife2",
+          ModForGameID = "halflife2",
           EngineID = "source",
           SteamID = 977050,
           IsFree = true,
@@ -82,10 +82,10 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "AoC",
+          GameID = "aoc",
           Name = "Age of Chivalry",
           Description = "A fast-paced action mod for Half-Life featuring new weapons and gameplay mechanics.",
-          ModForGameID = "HalfLife",  
+          ModForGameID = "halflife",  
           EngineID = "goldsrc",
           SteamID = 17510,
           IsFree = true,
@@ -101,13 +101,13 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "AoE",
+          GameID = "aoe",
           Name = "Age of Empires",
           Description = "The original title in the Age of Empires series. The original title maintains a competitive scene in Vietnam, but most " +
             "players switched to AoE2. A Definitive Edition is available on Steam, but it does not receive regular updates anymore. " +
             "The AoE2:DE expansion \"Rise of Rome\" is a remake of AoE1 in the AoE2 engine, which received some additional balance updates.",
           Developer = "Ensemble Studios",
-          EngineID = "Genie",
+          EngineID = "genie",
           SteamID = 878380,
           IsFree = false,
           IsPaid = true,
@@ -122,11 +122,11 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "AoE2",
+          GameID = "aoe2",
           Name = "Age of Empires II",
           Description = "A classic real-time strategy game set in the Middle Ages. The Definitive Edition is available on Steam.",
           Developer = "Ensemble Studios",
-          EngineID = "Genie",
+          EngineID = "genie",
           SteamID = 813780,
           IsFree = false,
           IsPaid = true,
@@ -141,7 +141,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "AoE3",
+          GameID = "aoe3",
           Name = "Age of Empires III",
           Description = "The third entry in the Age of Empires series, which also received a Definitive Edition on Steam.",
           Developer = "Ensemble Studios",
@@ -159,7 +159,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "AoE4",
+          GameID = "aoe4",
           Name = "Age of Empires IV",
           Description = "The latest entry in the Age of Empires series, featuring improved graphics and new civilizations.",
           Developer = "Relic Entertainment",
@@ -176,7 +176,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "AoM",
+          GameID = "aom",
           Name = "Age of Mythology",
           Description = "A spin-off of the Age of Empires series, which received a \"Retold\" edition on Steam.",
           Developer = "Ensemble Studios",
@@ -195,10 +195,10 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "AttackersGoRed",
+          GameID = "attackersgored",
           Name = "Attackers Go Red",
           Description = "A team-based multiplayer mod for Quake.",
-          ModForGameID = "Quake1",
+          ModForGameID = "quake1",
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
@@ -211,7 +211,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "BangBangPewPew",
+          GameID = "bangbangpewpew",
           Name = "Bang Bang Pew Pew",
           Description = "Bang Bang Pew Pew is a lightgun game available on Steam featuring online multiplayer minigames.",
           SteamID = 1818880,
@@ -227,7 +227,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "BaseDefense",
+          GameID = "basedefense",
           Name = "Base Defense",
           Description = "",
           SteamID = 632730,
@@ -243,7 +243,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "Battlebit",
+          GameID = "battlebit",
           Name = "BattleBit Remastered",
           Description = "A low-poly multiplayer FPS featuring large-scale battles and modern combat mechanics.",
           Developer = "SgtOkiDoki",
@@ -506,7 +506,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Battlefield V",
           Description = "A first-person shooter game set during World War II.", 
           Developer = "Electronic Arts",
-          EngineID = "Frostbite3",
+          EngineID = "frostbite3",
           IsFree = false,
           IsPaid = true,  
           IsOpenSource = false,
@@ -536,11 +536,11 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "BattleGrounds",
+          GameID = "battlegrounds",
           Name = "Battle Grounds",
           Description = "A multiplayer mod for Half-Life featuring muskets and other early firearms.",
-          ModForGameID = "HalfLife",
-          EngineID = "GoldSource",
+          ModForGameID = "halflife",
+          EngineID = "goldsrc",
           SteamID = 70,
           IsFree = true,
           IsPaid = false,
@@ -559,7 +559,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "BattleGrounds2",
+          GameID = "battlegrounds2",
           Name = "Battle Grounds II",
           Description = "",
           EngineID = "source", 
@@ -576,7 +576,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "BattleGrounds3",
+          GameID = "battlegrounds3",
           Name = "Battle Grounds III",
           Description = "", 
           EngineID = "source",
@@ -593,7 +593,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "BigBuckHunter",
+          GameID = "bigbuckhunter",
           Name = "Big Buck Hunter Arcade",
           Description = "Big Buck Hunter Arcade is a lightgun hunting game available on Steam.",
           SteamID = 455700,
@@ -609,7 +609,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "BioCrisis",
+          GameID = "biocrisis",
           Name = "BioCrisis",
           Description = "BioCrisis is a retro lightgun game available on Steam.",
           SteamID = 1448800,
@@ -625,7 +625,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "BioCrisisReturn2TheLab",
+          GameID = "biocrisisreturn2thelab",
           Name = "BioCrisis: Return 2 the Lab",
           Description = "BioCrisis: Return 2 the Lab is a lightgun game to be released on Steam.",
           SteamID = 1835570,
@@ -642,10 +642,10 @@ namespace ASP_site.Data.Initializers {
           ]
         },
           new Game {
-          GameID = "BlackMesa",
+          GameID = "blackmesa",
           Name = "Black Mesa",
           Description = "A fan-made remake of the original Half-Life using the Source engine, featuring updated graphics and some new music and game mechanics.",
-          ModForGameID = "HalfLife2",
+          ModForGameID = "halflife2",
           EngineID = "source",
           IsFree = false,
           IsPaid = true,
@@ -663,7 +663,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "BlueEstate",
+          GameID = "blueestate",
           Name = "Blue Estate The Game",
           Description = "Blue Estate is a rail shooter available on Steam.",
           SteamID = 305380,
@@ -679,10 +679,10 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "BrainBread",
+          GameID = "brainbread",
           Name = "BrainBread",
           Description = "A multiplayer mod for Half-Life featuring zombies and other horror elements.",
-          ModForGameID = "HalfLife",
+          ModForGameID = "halflife",
           EngineID = "goldsrc",
           IsFree = true,
           IsPaid = false,
@@ -698,10 +698,10 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "BrainBread2",
+          GameID = "brainbread2",
           Name = "BrainBread 2",
           Description = "A multiplayer mod for Half-Life 2 featuring zombies and other horror elements.",
-          ModForGameID = "SDK2013",
+          ModForGameID = "sdk2013",
           EngineID = "source",
           SteamID = 346330,
           IsFree = true,
@@ -716,7 +716,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "Bridge",
+          GameID = "bridge",
           Name = "Bridge",
           Description = "Bridge is a card game that is played by four players in partners of two, although varients exist for 3 or 5 players.",
           IsFree = true,
@@ -731,10 +731,10 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "Bumpercars",
+          GameID = "bumpercars",
           Name = "Bumpercars",
           Description = "A multiplayer mod for Half-Life featuring vehicle-based combat.",
-          ModForGameID = "HalfLife",
+          ModForGameID = "halflife",
           EngineID = "goldsrc",
           IsFree = true,
           IsPaid = false,
@@ -753,10 +753,10 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "BuzzyBots",
+          GameID = "buzzybots",
           Name = "BuzzyBots",
           Description = "",
-          ModForGameID = "HalfLife",
+          ModForGameID = "halflife",
           EngineID = "goldsrc",
           SteamID = 70,
           IsFree = true,
@@ -772,7 +772,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "Chess",
+          GameID = "chess",
           Name = "Chess",
           Description = "A classic board game available on various platforms.",
           Developer = "Various",
@@ -788,7 +788,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "Civ6",
+          GameID = "civ6",
           Name = "Civilization VI",
           Description = "The latest entry in the Civilization series, featuring turn-based strategy gameplay.",
           Developer = "Firaxis Games",
@@ -805,10 +805,10 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "ClassicFortress2",
+          GameID = "classicfortress2",
           Name = "Classic Fortress 2",
           Description = "A Source engine mod that brings Team Fortress Classic gameplay to the Source engine.",
-          ModForGameID = "TF2",
+          ModForGameID = "tf2",
           EngineID = "source",
           IsFree = true,
           IsPaid = false,
@@ -820,8 +820,8 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "CnC",
-          Name = "Command & Conquer: Tiberian Dawn",
+          GameID = "cnc",
+          Name = "C&C: Tiberian Dawn",
           Description = "The original Command & Conquer game, a groundbreaking real-time strategy title.",
           Developer = "Westwood Studios",
           SteamID = 2229830,
@@ -837,8 +837,8 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "CnCGenerals",
-          Name = "Command & Conquer: Generals",
+          GameID = "cncgenerals",
+          Name = "C&C: Generals",
           Description = "A modern take on the Command & Conquer series featuring contemporary warfare.",
           Developer = "EA Pacific",
           SteamID = 2229870,
@@ -854,8 +854,8 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "CnCRA2",
-          Name = "Command & Conquer: Red Alert 2",
+          GameID = "cncra2",
+          Name = "C&C: Red Alert 2",
           Description = "A classic entry in the Red Alert series featuring alternate history and unique factions.",
           Developer = "Westwood Studios",
           SteamID = 2229850,
@@ -871,8 +871,8 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "CnCRenegade",
-          Name = "Command & Conquer: Renegade",
+          GameID = "cncrenegade",
+          Name = "C&C: Renegade",
           Description = "A first-person shooter spin-off of the Command & Conquer series.",
           Developer = "Westwood Studios",
           SteamID = 2229890,
@@ -888,8 +888,8 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "CnCTS",
-          Name = "Command & Conquer: Tiberian Sun",
+          GameID = "cncts",
+          Name = "C&C: Tiberian Sun",
           Description = "A sequel to Tiberian Dawn, featuring new factions and improved graphics.",
           Developer = "Westwood Studios",
           SteamID = 2229880,
@@ -927,7 +927,7 @@ namespace ASP_site.Data.Initializers {
           //}
         },
         new Game {
-          GameID = "COD2",
+          GameID = "cod2",
           Name = "Call of Duty 2",
           Description = "The sequel to Call of Duty, featuring improved graphics and gameplay mechanics while maintaining the World War II setting."
             + " There was a standalone expansion called Call of Duty: United Offensive, which was released in 2004."
@@ -947,7 +947,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "COD4",
+          GameID = "cod4",
           Name = "Call of Duty 4: Modern Warfare",
           Description = "A groundbreaking entry that moved the series to modern combat, introducing iconic characters and multiplayer features.",
           EngineID = "iw3",
@@ -965,7 +965,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "CODAW",
+          GameID = "codaw",
           Name = "Call of Duty: Advanced Warfare",
           Description = "A futuristic entry introducing exoskeleton movement and advanced technology.",
           EngineID = "sledgehammer",
@@ -981,7 +981,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "CODBO1",
+          GameID = "codbo1",
           Name = "Call of Duty: Black Ops",
           Description = "The first Black Ops game, featuring a Cold War-era campaign and expanding the Zombies mode.",
           EngineID = "treyarch",
@@ -999,7 +999,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "CODBO2",
+          GameID = "codbo2",
           Name = "Call of Duty: Black Ops II",
           Description = "A futuristic entry in the Black Ops series, featuring branching storylines and new multiplayer features.",
           EngineID = "treyarch",
@@ -1017,7 +1017,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "CODBO3",
+          GameID = "codbo3",
           Name = "Call of Duty: Black Ops III",
           Description = "A far-future entry featuring advanced movement systems and a complex campaign.",
           EngineID = "treyarch2",
@@ -1035,7 +1035,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "CODBO4",
+          GameID = "codbo4",
           Name = "Call of Duty: Black Ops 4",
           Description = "The first main series entry without a traditional campaign, focusing on multiplayer and battle royale.",
           EngineID = "treyarch2",
@@ -1053,7 +1053,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "CODBO6",
+          GameID = "codbo6",
           Name = "Call of Duty: Black Ops 6",
           Description = "The sixth entry in the Black Ops series, featuring a new story and characters.",
           EngineID = "iw9",
@@ -1069,7 +1069,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "CODBOCW",
+          GameID = "codbocw",
           Name = "Call of Duty: Black Ops Cold War",
           Description = "A return to the Cold War era, featuring a campaign that connects to the original Black Ops.",
           EngineID = "treyarch2",
@@ -1085,7 +1085,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "CODGHOSTS",
+          GameID = "codghosts",
           Name = "Call of Duty: Ghosts",
           Description = "A standalone entry featuring a new story and characters, introducing dynamic map events.",
           EngineID = "iw6",
@@ -1101,7 +1101,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "CODIW",
+          GameID = "codiw",
           Name = "Call of Duty: Infinite Warfare",
           Description = "A space combat entry featuring space battles and zero-gravity combat.",
           EngineID = "iw7",
@@ -1117,7 +1117,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "CODMW2",
+          GameID = "codmw2",
           Name = "Call of Duty: Modern Warfare 2",
           Description = "The sequel to Modern Warfare, featuring an intense campaign and revolutionary multiplayer mechanics.",
           EngineID = "iw4",
@@ -1135,7 +1135,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "CODMW2019",
+          GameID = "codmw2019",
           Name = "Call of Duty: Modern Warfare",
           Description = "A reboot of the Modern Warfare series, featuring realistic combat and a new engine.",
           EngineID = "iw8",
@@ -1151,7 +1151,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "CODMW2R",
+          GameID = "codmw2r",
           Name = "Call of Duty: Modern Warfare II",
           Description = "The sequel to the Modern Warfare reboot, featuring new multiplayer mechanics and a continuation of the story.",
           EngineID = "iw9",
@@ -1167,7 +1167,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "CODMW3",
+          GameID = "codmw3",
           Name = "Call of Duty: Modern Warfare 3",
           Description = "The conclusion to the Modern Warfare trilogy, featuring the final confrontation between Task Force 141 and Makarov.",
           EngineID = "iw5",
@@ -1185,7 +1185,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "CODMW3R",
+          GameID = "codmw3r",
           Name = "Call of Duty: Modern Warfare III",
           Description = "The latest entry in the Modern Warfare series, featuring a continuation of the reboot storyline.",
           EngineID = "iw9",
@@ -1201,7 +1201,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "CODV",
+          GameID = "codv",
           Name = "Call of Duty: Vanguard",
           Description = "Another World War II entry, focusing on special forces operations across different theaters of war.",
           EngineID = "iw8",
@@ -1217,7 +1217,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "CODWAW",
+          GameID = "codwaw",
           Name = "Call of Duty: World at War",
           Description = "A return to World War II, featuring the Pacific Theater and the introduction of the Zombies mode.",
           EngineID = "treyarch",
@@ -1235,7 +1235,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "CODWWII",
+          GameID = "codwwii",
           Name = "Call of Duty: WWII",
           Description = "A return to World War II, featuring the European Theater and a new social space called Headquarters.",
           EngineID = "sledgehammer",
@@ -1251,7 +1251,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "CODWZ",
+          GameID = "codwz",
           Name = "Call of Duty: Warzone",
           Description = "A battle royale game that was released in 2020, replaced by Call of Duty: Warzone 2.",
           EngineID = "iw8",
@@ -1269,7 +1269,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "CODWZ2",
+          GameID = "codwz2",
           Name = "Call of Duty: Warzone 2",
           Description = "The sequel to Call of Duty: Warzone, released in 2022.",
           EngineID = "iw9",
@@ -1286,7 +1286,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "CodenameCURE",
+          GameID = "codenamecure",
           Name = "Codename CURE",
           Description = "A psychological horror game that puts the player in the shoes of Simon, a paraplegic who writes a book for therapy, and in the process faces the inner demons that plague his thoughts. Features a co-op mode.",
           EngineID = "source",
@@ -1297,10 +1297,10 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "ColdIce",
+          GameID = "coldice",
           Name = "Cold Ice Remastered (beta 5)",
           Description = "A remastered version of the Cold Ice mod for Half-Life.",
-          ModForGameID = "HalfLife",
+          ModForGameID = "halflife",
           EngineID = "goldsrc",
           IsFree = true,
           IsPaid = false,
@@ -1319,7 +1319,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "Contagion",
+          GameID = "contagion",
           Name = "Contagion",
           Description = "A horror game that puts the player in the shoes of a survivor of a zombie apocalypse.",
           SteamID = 238430,
@@ -1330,7 +1330,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "CorpseKiller",
+          GameID = "corpsekiller",
           Name = "Corpse Killer",
           Description = "Corpse Killer is a full motion video lightgun game now available on Steam.",
           SteamID = 1087700,
@@ -1346,10 +1346,10 @@ namespace ASP_site.Data.Initializers {
           ]
         },
           new Game {
-          GameID = "CryOfFearMod",
+          GameID = "cryoffearmod",
           Name = "Cry of Fear (Mod Version)",
           Description = "A psychological horror game that puts the player in the shoes of Simon, a paraplegic who writes a book for therapy, and in the process faces the inner demons that plague his thoughts. Features a co-op mode.",
-          ModForGameID = "HalfLife",
+          ModForGameID = "halflife",
           EngineID = "goldsrc",
           IsFree = true,
           IsPaid = false,
@@ -1366,10 +1366,10 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "CS16",
+          GameID = "cs16",
           Name = "Counter-Strike 1.6",
           Description = "The classic version of Counter-Strike that defined competitive FPS gaming. Features tactical gameplay between terrorists and counter-terrorists.",
-          ModForGameID = "HalfLife",
+          ModForGameID = "halflife",
           EngineID = "goldsrc",
           Developer = "Valve Software",
           SteamID = 10,
@@ -1390,7 +1390,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "CSX",
+          GameID = "csx",
           Name = "Counter-Strike: Xbox",
           Description = "Counter-Strike was released on Xbox in 2005.",
           EngineID = "goldsrc",
@@ -1407,10 +1407,10 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "CSCZ",
+          GameID = "cscz",
           Name = "Counter-Strike: Condition Zero",
           Description = "A spin-off of Counter-Strike featuring single-player missions and additional multiplayer content.",
-          ModForGameID = "HalfLife",
+          ModForGameID = "halflife",
           EngineID = "goldsrc",
           Developer = "Valve Software",
           SteamID = 80,
@@ -1430,7 +1430,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "CSS",
+          GameID = "css",
           Name = "Counter-Strike: Source",
           Description = "Counter-Strike: Source was released in 2004 as a paid title and converted to free to play, then replaced by CS2.",
           EngineID = "source",
@@ -1450,8 +1450,8 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "CSGO",
-          Name = "Counter-Strike: Global Offensive",
+          GameID = "csgo",
+          Name = "CS:GO",
           Description = "Counter-Strike: Global Offensive was released in 2012 as a paid title and converted to free to play, then replaced by CS2.", 
           EngineID = "source",
           Developer = "Valve Software",
@@ -1470,7 +1470,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "CS2",
+          GameID = "cs2",
           Name = "Counter-Strike 2",
           Description = "Counter-Strike: Global Offensive was released in 2012 as a paid title and converted to free to play, then replaced by CS2." + 
             " Counter-Strike 2 is the latest iteration of the Counter-Strike series, built on the Source 2 engine.",
@@ -1493,7 +1493,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "CrazyTaxi",
+          GameID = "crazytaxi",
           Name = "Crazy Taxi",
           Description = "Crazy Taxi is a racing game developed by Sega.",
           EngineID = "NAOMI",
@@ -1502,10 +1502,10 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "CustomTF",
+          GameID = "customtf",
           Name = "CustomTF",
           Description = "CustomTF allows for co-op and pub gameplay with customizable classes which you choose within a budget of money for equipment. CustomTF is played in a weekly pub game every Saturday at 7 pm EST on gamehost2.tastyspleen.net:27507",
-          ModForGameID = "Quake1",
+          ModForGameID = "quake1",
           EngineID = "idtech2",
           IsOpenSource = true,
           IsCommunityMaintained = true,
@@ -1516,11 +1516,11 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "DarkMessiah",
+          GameID = "darkmessiah",
           Name = "Dark Messiah of Might & Magic",
           Description = "A fantasy action-RPG, the Xbox version used SDK2007.",
           SteamID = 2130,
-          ModForGameID = "SDK2006",
+          ModForGameID = "sdk2006",
           EngineID = "source",
           IsFree = false,
           IsPaid = true,
@@ -1540,7 +1540,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "DS",
+          GameID = "ds",
           Name = "Darkstalkers",
           Description = "Darkstalkers is a fighting game developed by Capcom.",
           EngineID = "CPS-2",
@@ -1550,7 +1550,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "Deadlock",
+          GameID = "deadlock",
           Name = "Deadlock",
           Description = "Valve's latest title, still in development, is a MOBA with hero shooter mechanics.",
           SteamID = 1422450,
@@ -1587,7 +1587,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "DeusExInvisibleWar",
+          GameID = "deusexinvisiblewar",
           Name = "Deus Ex: Invisible War",
           Description = "Deus Ex: Invisible War is a first-person shooter game developed by Ion Storm.",
           EngineID = "unreal2",
@@ -1605,7 +1605,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "Diabotical",
+          GameID = "diabotical",
           Name = "Diabotical",
           Description = "Diabotical is an original arena shooter using mechanics from Quake 3 and Unreal Tournament.",
           Developer = "The GD Studio",
@@ -1621,7 +1621,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "DIPRIP",
+          GameID = "diprip",
           Name = "D.I.P.R.I.P. Warm Up",
           Description = "",
           SteamID = 17530,
@@ -1630,7 +1630,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "DirtyBomb",
+          GameID = "dirtybomb",
           Name = "Dirty Bomb",
           Description = "Dirty Bomb is an original IP from Splash Damage Studios, the creators of Enemy Territory."
             + " The game features modern class-based gameplay on progressive mixed-objective maps with 23 playable 'mercs' filling five roles: medic, engineer, assault, fire support, and recon."
@@ -1651,11 +1651,11 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "DMC",
+          GameID = "dmc",
           Name = "Deathmatch Classic",
           Description = "Deathmatch Classic was Valve's port of QuakeWorld Deathmatch to the goldsrc engine.",
           SteamID = 40,
-          ModForGameID = "HalfLife",
+          ModForGameID = "halflife",
           EngineID = "goldsrc",
           IsFree = true,
           IsPaid = false,
@@ -1670,11 +1670,11 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "DMCR",
+          GameID = "dmcr",
           Name = "DMC:R",
           Description = "Deathmatch Classic was Valve's port of QuakeWorld Deathmatch to the goldsrc engine."
             + "DMC:R is a source mod which extends this legacy to the the Half-Life 2 engine.",
-          ModForGameID = "HalfLife2",
+          ModForGameID = "halflife2",
           EngineID = "source",
           Developer = "CoaXioN",
           IsFree = true,
@@ -1687,10 +1687,10 @@ namespace ASP_site.Data.Initializers {
           ReleaseDates = []
         },
         new Game {
-          GameID = "DoD",
+          GameID = "dod",
           Name = "Day of Defeat",
           Description = "A World War II first-person shooter that was originally a mod and later became a commercially released game.",
-          ModForGameID = "HalfLife",
+          ModForGameID = "halflife",
           EngineID = "goldsrc",
           Developer = "Valve Software",
           SteamID = 300,
@@ -1710,10 +1710,10 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "DoDS",
+          GameID = "dods",
           Name = "Day of Defeat: Source",
           Description = "Day of Defeat: Source is a source mod which extends the legacy of Day of Defeat to the Half-Life 2 engine.",
-          ModForGameID = "HalfLife2",
+          ModForGameID = "halflife2",
           EngineID = "source",
           Developer = "Valve Software",
           SteamID = 300,
@@ -1730,7 +1730,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "DCOP",
+          GameID = "dcop",
           Name = "DCOP",
           Description = "DCOP is a full motion video lightgun game available on Steam.",
           SteamID = 2542320,
@@ -1746,7 +1746,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "DeadContainment",
+          GameID = "deadcontainment",
           Name = "Dead Containment",
           Description = "Dead Containment is an on-rails lightgun game available on Steam with online play.",
           SteamID = 1302230,
@@ -1762,7 +1762,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "DinoD-Day",
+          GameID = "dinod-day",
           Name = "Dino D-Day",
           Description = "",
           EngineID = "source",
@@ -1772,7 +1772,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "Doom",
+          GameID = "doom",
           Name = "Doom and Doom 2",
           Description = "Doom and Doom 2 are now sold as a combined package on Steam including the original expansions and new episodes.",
           EngineID = "idtech1",
@@ -1792,7 +1792,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "Doom2016",
+          GameID = "doom2016",
           Name = "Doom 2016",
           Description = "Doom 2016 is a first-person shooter game developed by id Software.",
           EngineID = "idtech6",
@@ -1810,7 +1810,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "Doom3",
+          GameID = "doom3",
           Name = "Doom 3",
           Description = "2004's Doom 3, the Resurrection of Evil expansion, and the 2012 remaster Doom 3: BFG Edition are now sold as a combined package"
             + " on Steam. This game holds up well as a horror FPS classic and is playable on VR headsets.",
@@ -1831,7 +1831,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "DoomDarkAges",
+          GameID = "doomdarkages",
           Name = "Doom: The Dark Ages",
           Description = "Doom: The Dark Ages is a first-person shooter game developed by id Software and is the most recent installment in the Doom series.",
           EngineID = "idtech8",
@@ -1851,7 +1851,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "DoomEternal",
+          GameID = "doometernal",
           Name = "Doom Eternal",
           Description = "Doom Eternal is a first-person shooter game developed by id Software.",
           EngineID = "idtech7",
@@ -1869,7 +1869,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "DAB",
+          GameID = "dab",
           Name = "Double Action: Boogaloo",
           Description = "",
           EngineID = "source",
@@ -1878,6 +1878,23 @@ namespace ASP_site.Data.Initializers {
             IconPath = "img/icons/dab",
             GameDirectory = "dab"
           }
+        },
+        new Game {
+          GameID = "duke3d",
+          Name = "Duke Nukem 3D",
+          Description = "Duke Nukem 3D is a first-person shooter game developed by Apogee Software.",
+          EngineID = "build",
+          Developer = "Apogee Software",
+          IsFree = true,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 1996, Month = 1, Day = 29}
+          ]
         },
         new Game {
           GameID = "dnf",
@@ -1902,7 +1919,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "Dystopia",
+          GameID = "dystopia",
           Name = "Dystopia",
           Description = "",
           EngineID = "source",
@@ -1913,7 +1930,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
        new Game {
-          GameID = "Dota2",
+          GameID = "dota2",
           Name = "Dota 2",
           Description = "Dota 2 is a free-to-play multiplayer online battle arena (MOBA) game that evolved from the Warcraft III mod Defense of the Ancients.",
           EngineID = "source2",
@@ -1931,7 +1948,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "Eleven",
+          GameID = "eleven",
           Name = "Eleven",
           Description = "Eleven is an accurate and competitive table tennis game for VR hardware.",
           IsFree = false,
@@ -1947,10 +1964,10 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "ESF",
+          GameID = "esf",
           Name = "Earth's Special Forces",
           Description = "A Dragon Ball Z mod for Half-Life featuring unique combat mechanics.",
-          ModForGameID = "HalfLife",
+          ModForGameID = "halflife",
           EngineID = "goldsrc",
           IsFree = true,
           IsPaid = false,
@@ -1970,10 +1987,10 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "EMPIRES",
+          GameID = "empires",
           Name = "Empires",
           Description = "FPS and RTS hybrid source mod.",
-          ModForGameID = "SDK2013",
+          ModForGameID = "sdk2013",
           EngineID = "source",
           SteamID = 17740,
           IsFree = true,
@@ -1987,7 +2004,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "ET",
+          GameID = "et",
           Name = "Enemy Territory",
           Description = "Wolfenstein: Enemy Territory is a free multiplayer first-person shooter game developed by Splash Damage and"
             + " published by Activision. Originally intended as an expansion pack for Return to Castle Wolfenstein, it was released as a standalone game"
@@ -2009,10 +2026,10 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "ETF",
+          GameID = "etf",
           Name = "Enemy Territory Fortress",
           Description = "ETF is a port of Q3F to Enemy Territory. This game is currently playable though no one is playing that I know of.",
-          ModForGameID = "ET",
+          ModForGameID = "et",
           EngineID = "idtech3",
           IsOpenSource = true,
           IsCommunityMaintained = false,
@@ -2023,7 +2040,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "Epoch",
+          GameID = "epoch",
           Name = "Epoch",
           Description = "Epoch is a cover-based lightgun game developed by Epoch Games.",
           SteamID = 270510,
@@ -2039,10 +2056,10 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "EternalSilence",
+          GameID = "eternalsilence",
           Name = "Eternal Silence",
           Description = "FPS and space combat mod for Half-Life 2.",
-          ModForGameID = "SDK2006",
+          ModForGameID = "sdk2006",
           EngineID = "source",
           SteamID = 215,
           ServerConfig = new ServerBrowserConfig {
@@ -2051,7 +2068,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "EYE",
+          GameID = "eye",
           Name = "E.Y.E: Divine Cybermancy",
           Description = "",
           EngineID = "source",
@@ -2061,9 +2078,9 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "Firearms",
+          GameID = "firearms",
           Name = "Firearms",
-          ModForGameID = "HalfLife",
+          ModForGameID = "halflife",
           Description = "Western-themed half-life mod.",
           EngineID = "goldsrc",
           SteamID = 70,
@@ -2080,10 +2097,10 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "FirearmsSource",
+          GameID = "firearmssource",
           Name = "Firearms: Source",
           Description = "Source engine sequel to Firearms.",
-          ModForGameID = "HalfLife2",
+          ModForGameID = "halflife2",
           EngineID = "source",
           SteamID = 218,
           IsFree = true,
@@ -2099,10 +2116,10 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "FistfulOfFrags",
+          GameID = "fistfuloffrags",
           Name = "Fistful of Frags",
           Description = "",
-          ModForGameID = "SDK2013",
+          ModForGameID = "sdk2013",
           EngineID = "source",
           SteamID = 265630,
           IsFree = true,
@@ -2117,10 +2134,10 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "FF",
+          GameID = "ff",
           Name = "Fortress Forever",
           Description = "Fortress Forever is a mod for the Source engine that iterated the Team Fortress Classic style gameplay.",
-          ModForGameID = "SDK2006",
+          ModForGameID = "sdk2006",
           EngineID = "source",
           Developer = "Fortress Forever Team",
           SteamID = 253530,
@@ -2139,10 +2156,10 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "FortressOne",
+          GameID = "fortressone",
           Name = "FortressOne",
           Description = "FortressOne is a free and open source mod for QuakeWorld that brings Team Fortress to the modern era.",
-          ModForGameID = "Quake1",
+          ModForGameID = "quake1",
           EngineID = "idtech2",
           IsOpenSource = true,
           IsCommunityMaintained = true,
@@ -2154,10 +2171,10 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "FLF",
+          GameID = "flf",
           Name = "Frontline Force",
           Description = "A team-oriented first person shooter mod in which players are divided into 2 teams: Attackers and Defenders.",
-          ModForGameID = "HalfLife",
+          ModForGameID = "halflife",
           EngineID = "goldsrc",
           IsFree = true,
           IsPaid = false,
@@ -2176,7 +2193,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "GMOD",
+          GameID = "gmod",
           Name = "Garry's Mod",
           Description = "Source engine sandbox game.",
           EngineID = "source",
@@ -2194,10 +2211,10 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "GMOD9",
+          GameID = "gmod9",
           Name = "Garry's Mod v9",
           Description = "",
-          ModForGameID = "HalfLife2",
+          ModForGameID = "halflife2",
           EngineID = "source",
           SteamID = 215,
           IsFree = true,
@@ -2237,11 +2254,11 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "GoldenEyeSource",
+          GameID = "goldeneyesource",
           Name = "Golden Eye: Source",
           Description = "A source mod that recreates the original GoldenEye 007 game.",
           SteamID = 218,
-          ModForGameID = "SDK2007",
+          ModForGameID = "sdk2007",
           EngineID = "source",
           IsFree = true,
           IsPaid = false,
@@ -2256,10 +2273,10 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "GunmanChronicles",
+          GameID = "gunmanchronicles",
           Name = "Gunman Chronicles",
           Description = "",
-          ModForGameID = "HalfLife2",
+          ModForGameID = "halflife2",
           EngineID = "source",
           IsFree = true,
           IsPaid = false,
@@ -2271,7 +2288,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "HalfLife",
+          GameID = "halflife",
           Name = "Half-Life",
           Description = "Half-Life set the bar for action adventure first person shooters.",
           EngineID = "goldsrc",
@@ -2297,7 +2314,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "HalfLife2",
+          GameID = "halflife2",
           Name = "Half-Life 2",
           Description = "Half-Life 2 raised the bar for action adventure first person shooters. At the time of its release it was considered"
             + " one of the best games ever made. It still holds up well today although the remaster 'Black Mesa' offers a more modern experience."
@@ -2324,11 +2341,11 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "HalfLife2Deathmatch",
+          GameID = "halflife2deathmatch",
           Name = "Half-Life 2: Deathmatch",
           Description = "The multiplayer mode of Half-Life 2 has always been a separate title on Steam and is included with the purchase of Half-Life 2.",
           SteamID = 320,
-          ModForGameID = "HalfLife2",
+          ModForGameID = "halflife2",
           EngineID = "source",
           IsFree = true,
           IsPaid = false,
@@ -2342,11 +2359,11 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "HalfLifeAdrenalineGamer",
+          GameID = "halflifeadrenalinegamer",
           Name = "Half-Life: Adrenaline Gamer",
           Description = "Fan made pro-mod for Half-Life deathmatch.",
           SteamID = 70,
-          ModForGameID = "HalfLife",
+          ModForGameID = "halflife",
           EngineID = "goldsrc",
           IsFree = true,
           IsPaid = false,
@@ -2360,11 +2377,11 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "HalfLifeOpposingForce",
+          GameID = "halflifeopposingforce",
           Name = "Half-Life: Opposing Force",
           Description = "Multiplayer deathmatch component of the Half-Life expansion pack Opposing Force.",
           SteamID = 50,
-          ModForGameID = "HalfLife",
+          ModForGameID = "halflife",
           EngineID = "goldsrc", 
           IsFree = true,
           IsPaid = false,
@@ -2379,11 +2396,11 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "HalfLifeOpposingForceCTF",
+          GameID = "halflifeopposingforcectf",
           Name = "Half-Life: Opposing Force CTF",
           Description = "The CTF mode of Half-Life: Opposing Force expansion.",
           SteamID = 70,
-          ModForGameID = "HalfLife",  
+          ModForGameID = "halflife",  
           EngineID = "goldsrc",
           IsFree = true,
           IsPaid = false,
@@ -2398,11 +2415,11 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "HalfLifeRally",
+          GameID = "halfliferally",
           Name = "Half-Life: Rally",
           Description = "Half-Life: Rally is a first-person shooter game developed by Valve Software.",
           EngineID = "goldsrc",
-          ModForGameID = "HalfLife",
+          ModForGameID = "halflife",
           IsOpenSource = true,
           IsDeveloperMaintained = false,
           IsCommunityMaintained = false,
@@ -2415,7 +2432,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "HalfLifeAlyx",
+          GameID = "halflifealyx",
           Name = "Half-Life: Alyx",
           Description = "Half-Life: Alyx is a virtual reality first-person shooter set between Half-Life and Half-Life 2.",
           EngineID = "source2",
@@ -2433,11 +2450,11 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "HaloGoldSrc",
+          GameID = "halogoldsrc",
           Name = "Halo: GoldSrc",
           Description = "Halo themed mod for Half-Life.",
           SteamID = 70,
-          ModForGameID = "HalfLife",
+          ModForGameID = "halflife",
           EngineID = "goldsrc",
           IsFree = true,
           IsPaid = false,
@@ -2451,7 +2468,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "HatInTime",
+          GameID = "hatintime",
           Name = "Hat in Time",
           Description = "Hat in Time is a 3D platformer with a unique hat-wearing mechanic.",
           Genre = Genre.Adventure,
@@ -2467,7 +2484,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "HeavyFireAfghanistan",
+          GameID = "heavyfireafghanistan",
           Name = "Heavy Fire: Afghanistan",
           Description = "Heavy Fire: Afghanistan is a lightgun game available on Steam.",
           SteamID = 305980,
@@ -2483,7 +2500,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "HeavyFireShatteredSpear",
+          GameID = "heavyfireshatteredspear",
           Name = "Heavy Fire: Shattered Spear",
           Description = "Heavy Fire: Shattered Spear is a lightgun game available on Steam. It is a sequel to Heavy Fire: Afghanistan.",
           SteamID = 385600,
@@ -2499,7 +2516,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "HellLetLoose",
+          GameID = "hellletloose",
           Name = "Hell Let Loose",
           Description = "A realistic World War II first-person shooter featuring large-scale battles.",
           Developer = "Black Matter",
@@ -2575,10 +2592,10 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "HiddenSource",
+          GameID = "hiddensource",
           Name = "Hidden: Source",
           Description = "",
-          ModForGameID = "HalfLife2",
+          ModForGameID = "halflife2",
           EngineID = "source",
           IsFree = true,
           IsPaid = false,
@@ -2595,7 +2612,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "Holdfast",
+          GameID = "holdfast",
           Name = "Holdfast: Nations at War",
           Description = "A multiplayer first-person shooter set during the Napoleonic Wars.",
           Developer = "Anvil Game Studios",
@@ -2612,7 +2629,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "Homefront",
+          GameID = "homefront",
           Name = "Homefront",
           Description = "A first-person shooter set in an alternate history where North Korea invades the United States.",
           Developer = "Kaos Studios",
@@ -2629,10 +2646,10 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "HostileIntent",
+          GameID = "hostileintent",
           Name = "Hostile Intent",
           Description = "Hostile Intent is a goldsrc mod featuring tactical round based gameplay similar to Counterstrike with some hardcore mechanics.",
-          ModForGameID = "HalfLife",
+          ModForGameID = "halflife",
           EngineID = "goldsrc",
           IsFree = true,
           IsPaid = false,
@@ -2648,7 +2665,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "HouseOfTheDeadRemake",
+          GameID = "houseofthedeadremake",
           Name = "The House of the Dead Remake",
           Description = "The House of the Dead Remake is a lightgun game available on Steam.",
           SteamID = 1694600,
@@ -2664,7 +2681,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "HouseOfTheDead2",
+          GameID = "houseofthedead2",
           Name = "House of the Dead 2",
           Description = "House of the Dead 2 is a shooting game developed by Sega.",
           Genre = Genre.Lightgun,
@@ -2681,7 +2698,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "HouseOfTheDead3",
+          GameID = "houseofthedead3",
           Name = "House of the Dead 3",
           Description = "House of the Dead 3 is abandonware and playable with a lightgun with community patches.",
           SteamID = 1087700,
@@ -2697,7 +2714,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "Go",
+          GameID = "go",
           Name = "Go",
           Description = "Go is a board game for two players.",
           IsFree = true,
@@ -2709,7 +2726,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "Infestus",
+          GameID = "infestus",
           Name = "Infestus",
           Description = "",
           EngineID = "source",
@@ -2726,7 +2743,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "Insurgency",
+          GameID = "insurgency",
           Name = "Insurgency",
           Description = "",
           EngineID = "source",
@@ -2746,10 +2763,10 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "InsurgencyModernInfantryCombat",
+          GameID = "insurgencymoderninfantrycombat",
           Name = "Insurgency: Modern Infantry Combat",
           Description = "Insurgency: Modern Infantry Combat is a source mod that features modern warfare.",
-          ModForGameID = "SDK2006",
+          ModForGameID = "sdk2006",
           EngineID = "source",
           IsFree = true,  
           IsPaid = false,
@@ -2766,7 +2783,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "Intake",
+          GameID = "intake",
           Name = "Intake",
           Description = "Intake is a lightgun game available on Steam inspired by Dr. Mario.",
           SteamID = 237760,
@@ -2782,7 +2799,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
           new Game {
-          GameID = "IOSoccer",
+          GameID = "iosoccer",
           Name = "IOSoccer",
           Description = "",
           EngineID = "source",
@@ -2794,7 +2811,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "Isonzo",
+          GameID = "isonzo",
           Name = "Isonzo",
           Description = "A World War I first-person shooter focusing on the Italian Front.",
           Developer = "BlackMill Games",
@@ -2811,7 +2828,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "JabroniBrawlEpisode3",
+          GameID = "jabronibrawlepisode3",
           Name = "Jabroni Brawl: Episode 3",
           Description = "The modern complete instanity that is Jabroni Brawl.",
           EngineID = "source",
@@ -2828,7 +2845,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "JBMod",
+          GameID = "jbmod",
           Name = "JBMod",
           Description = "The original Jabroni Brawl mod.",
           EngineID = "source",
@@ -2845,7 +2862,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "JoJo",
+          GameID = "jojo",
           Name = "JoJo's Bizarre Adventure",
           Description = "JoJo's Bizarre Adventure (ジョジョの奇妙な冒険) is a fighting game developed by Capcom.",
           EngineID = "CPS-3",
@@ -2855,7 +2872,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },  
         new Game {
-          GameID = "JoJo:Heritage",
+          GameID = "jojo:heritage",
           Name = "JoJo's Bizarre Adventure: Heritage for the Future",
           Description = "JoJo's Bizarre Adventure: Heritage for the Future (ジョジョの奇妙な冒険 未来への遺産) is a fighting game developed by Capcom.",
           EngineID = "CPS-3",
@@ -2865,7 +2882,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "KingdomsCollide",
+          GameID = "kingdomscollide",
           Name = "Kingdoms Collide",
           Description = "",
           SteamID = 218,
@@ -2899,10 +2916,10 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "LambdaFortress",
+          GameID = "lambdafortress",
           Name = "Lambda Fortress",
           Description = "A Source 2 engine mod that brings co-op gameplay to the Team Fortress universe.",
-          ModForGameID = "TF2",
+          ModForGameID = "tf2",
           EngineID = "source2",
           Developer = "CoaXioN",
           IsOpenSource = true,
@@ -2914,7 +2931,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "Left4Dead",
+          GameID = "left4dead",
           Name = "Left 4 Dead",
           Description = "Left 4 Dead is a 4 player cooperative first-person shooter where players work together to survive against hordes of zombies."
             + " Valve invented the co-op zombie survival genre with this title, and it's still a lot of fun to play today. Left 4 Dead can be purchased as a standalone title,"
@@ -2938,7 +2955,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "Left4Dead2",
+          GameID = "left4dead2",
           Name = "Left 4 Dead 2",
           Description = "Left 4 Dead 2 is a cooperative first-person shooter that expands on the original with new weapons, enemies, and campaigns."
           + " Left 4 Dead 2 is still played 4v4 online, and is a great 4 player survival game. This is available as part of the Valve Complete Pack,"
@@ -2962,7 +2979,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {  
-          GameID = "MadBullets",
+          GameID = "madbullets",
           Name = "Mad Bullets",
           Description = "Mad Bullets is a lightgun game available on Steam, inspired by classic range games like Hogan's Alley.",
           SteamID = 452860,
@@ -2978,7 +2995,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "MajorMayhem",
+          GameID = "majormayhem",
           Name = "Major Mayhem",
           Description = "Major Mayhem is a cover-based lightgun game available on Steam, inspired by classic arcade games like Time Crisis.",
           SteamID = 264340,
@@ -2994,7 +3011,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "MvSF",
+          GameID = "mvsf",
           Name = "Marvel vs. Street Fighter",
           Description = "Marvel vs. Street Fighter is a fighting game developed by Capcom.",
           EngineID = "CPS-2",
@@ -3003,7 +3020,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {  
-          GameID = "MvC",
+          GameID = "mvc",
           Name = "Marvel vs. Capcom",
           Description = "Marvel vs. Capcom is a fighting game developed by Capcom.",
           EngineID = "CPS-2",
@@ -3012,8 +3029,8 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "MvC2",
-          Name = "Marvel vs. Capcom 2: New Age of Heroes",
+          GameID = "mvc2",
+          Name = "Marvel vs. Capcom 2",
           Description = "Marvel vs. Capcom 2: New Age of Heroes is a crossover fighting game developed and published by Capcom.",
           EngineID = "NAOMI",
           Developer = "Capcom",
@@ -3024,7 +3041,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "MasterSwordContinued",
+          GameID = "masterswordcontinued",
           Name = "Master Sword: Continued",
           Description = "Master Sword: Continued is a mod for Half-Life that adds a new campaign and new weapons.",
           SteamID = 70,
@@ -3036,7 +3053,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "MasterSwordRebirth",
+          GameID = "masterswordrebirth",
           Name = "Master Sword: Rebirth",
           EngineID = "source",
           Description = "",
@@ -3047,10 +3064,10 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "MegaTF",
+          GameID = "megatf",
           Name = "Mega Team Fortress",
           Description = "Mega Team Fortress features expanded and extended abilities for the nine classes, and was the most widely played form of QWTF until replaced by the streamlined FortressOne. MegaTF is still played on a weekly Friday night game at 7pm EST on gamehost2.tastyspleen.net:27502",
-          ModForGameID = "Quake1",
+          ModForGameID = "quake1",
           EngineID = "idtech2",
           IsOpenSource = true,
           IsCommunityMaintained = true,
@@ -3061,7 +3078,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "Midair2",
+          GameID = "midair2",
           Name = "Midair 2",
           Description = "A modern arena shooter featuring jetpack-based combat.",
           Developer = "Archetype Studios",
@@ -3078,7 +3095,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "MCVietnam",
+          GameID = "mcvietnam",
           Name = "Military Conflict: Vietnam",
           Description = "A first-person shooter set during the Vietnam War, featuring arcade-style deathmatch, gun game, and other modes.",
           Developer = "Antimatter Games",
@@ -3187,7 +3204,7 @@ namespace ASP_site.Data.Initializers {
           //}
         },
         new Game {
-          GameID = "MedalOfHonorPacificAssault",
+          GameID = "medalofhonorpacificassault",
           Name = "Medal of Honor: Pacific Assault",
           Description = "Medal of Honor: Pacific Assault is a first-person shooter game set during the Pacific War.",
           EngineID = "idtech3",
@@ -3205,7 +3222,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "MedalOfHonorAirborne",
+          GameID = "medalofhonorairborne",
           Name = "Medal of Honor: Airborne",
           Description = "Medal of Honor: Airborne is a first-person shooter game set during the Pacific War.",
           EngineID = "unreal3",
@@ -3222,7 +3239,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "MedalOfHonor2010",
+          GameID = "medalofhonor2010",
           Name = "Medal of Honor (2010)",
           Description = "Medal of Honor (2010) is a first-person shooter game set during World War II.",
           EngineID = "unreal3",
@@ -3242,7 +3259,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "MedalOfHonorWartfighter",
+          GameID = "medalofhonorwartfighter",
           Name = "Medal of Honor: Warfighter",
           Description = "Medal of Honor: Warfighter is a first-person shooter game set during the Pacific War.",
           EngineID = "frostbite2",
@@ -3261,7 +3278,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "MissileCommandRecharged",
+          GameID = "missilecommandrecharged",
           Name = "Missile Command Recharged",
           Description = "Missile Command Recharged is a remake of the classic 1980s arcade game Missile Command and is playable with a lightgun.",
           SteamID = 2114990,
@@ -3299,7 +3316,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "ModularCombat",
+          GameID = "modularcombat",
           Name = "Modular Combat",
           Description = "",
           EngineID = "source",
@@ -3310,10 +3327,10 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "NaturalSelection",
+          GameID = "naturalselection",
           Name = "Natural Selection",
           Description = "A unique blend of first-person shooter and real-time strategy where two teams (humans and aliens) fight against each other.",
-          ModForGameID = "HalfLife",
+          ModForGameID = "halflife",
           EngineID = "goldsrc",
           IsFree = true,
           IsPaid = false,
@@ -3332,11 +3349,11 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "NEOTOKYO",
+          GameID = "neotokyo",
           Name = "NEOTOKYO",
           Description = "Source mod with unqiue movement and gameplay mechanics.",
           SteamID = 218,
-          ModForGameID = "SDK2006",
+          ModForGameID = "sdk2006",
           EngineID = "source",
           IsFree = true,
           IsPaid = false,
@@ -3373,10 +3390,10 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "NoMoreRoomInHell",
+          GameID = "nomoreroominhell",
           Name = "No More Room in Hell",
           Description = "",
-          ModForGameID = "SDK2013",
+          ModForGameID = "sdk2013",
           EngineID = "source",
           SteamID = 224260,
           ServerConfig = new ServerBrowserConfig {
@@ -3384,7 +3401,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "NuclearDawn",
+          GameID = "nucleardawn",
           Name = "Nuclear Dawn",
           Description = "A first-person shooter set in a post-apocalyptic world where players must fight against hordes of mutants and other enemies.",
           EngineID = "source",
@@ -3394,7 +3411,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "ObsidianConflict",
+          GameID = "obsidianconflict",
           Name = "Obsidian Conflict",
           Description = "",
           EngineID = "source",
@@ -3404,10 +3421,10 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "ObsidianConflictMod",
+          GameID = "obsidianconflictmod",
           Name = "Obsidian Conflict (MOD)",
           Description = "",
-          ModForGameID = "SDK2007",
+          ModForGameID = "sdk2007",
           EngineID = "source",
           SteamID = 218,
           ServerConfig = new ServerBrowserConfig {
@@ -3416,7 +3433,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "OccupationCS",
+          GameID = "occupationcs",
           Name = "OccupationCS",
           Description = "",
           EngineID = "source",
@@ -3427,7 +3444,7 @@ namespace ASP_site.Data.Initializers {
           }
         },     
         new Game {
-          GameID = "OpenFortress",
+          GameID = "openfortress",
           Name = "Open Fortress",
           Description = "",
           EngineID = "source",
@@ -3438,7 +3455,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "Orion: Source",
+          GameID = "orion: source",
           Name = "Orion: Source",
           Description = "",
           EngineID = "source",
@@ -3449,7 +3466,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "PavlovVR",
+          GameID = "pavlovvr",
           Name = "Pavlov VR",
           Description = "A virtual reality first-person shooter featuring realistic weapon handling and multiplayer modes.",
           Developer = "Vankrupt Games",
@@ -3467,7 +3484,7 @@ namespace ASP_site.Data.Initializers {
         },
 
         new Game {
-          GameID = "Portal",
+          GameID = "portal",
           Name = "Portal",
           Description = "Portal is a puzzle-platform game that introduced innovative gameplay mechanics and dark humor."
             + " Portal can be purchased as a standalone title, part of the Orange Box, or as part of the Valve Complete Pack,"
@@ -3487,7 +3504,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "Portal2",
+          GameID = "portal2",
           Name = "Portal 2",
           Description = "Portal 2 is a puzzle-platform game that expanded on the original Portal's mechanics with new features and a longer campaign."
             + " Portal 2 is one of Valve's best titles, and one of the best games of all time. It can be purchased as a standalone title,"
@@ -3622,7 +3639,7 @@ namespace ASP_site.Data.Initializers {
           GameID = "prefortress2",
           Name = "Pre-Fortress 2",
           Description = "A Source engine mod that recreates the beta era of Team Fortress 2.",
-          ModForGameID = "TF2",
+          ModForGameID = "tf2",
           EngineID = "source",
           IsOpenSource = true,
           IsCommunityMaintained = true,
@@ -3635,7 +3652,7 @@ namespace ASP_site.Data.Initializers {
           GameID = "pvk",
           Name = "Pirates, Vikings and Knights",
           Description = "A unique team-based combat game where three factions battle each other with period-appropriate weapons and abilities.",
-          ModForGameID = "HalfLife",
+          ModForGameID = "halflife",
           EngineID = "goldsrc",
           IsFree = true,
           IsPaid = false,
@@ -3658,7 +3675,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Pirates, Vikings and Knights II",
           Description = "Source mod sequel to Pirates, Vikings and Knights.",
           SteamID = 17570,
-          ModForGameID = "HalfLife2",
+          ModForGameID = "halflife2",
           EngineID = "source",
           IsFree = true,
           IsPaid = false,
@@ -3675,7 +3692,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Public Enemy",
           Description = "",
           SteamID = 70,
-          ModForGameID = "HalfLife2",
+          ModForGameID = "halflife2",
           EngineID = "source",
           IsFree = true,
           IsPaid = false,
@@ -3691,7 +3708,7 @@ namespace ASP_site.Data.Initializers {
           GameID = "q3f",
           Name = "Quake 3 Fortress",
           Description = "Q3F was created in 2000 by the team that would become Splash Damage Studios. It was last updated in 2003 and to my knowledge there are no servers and the mod is not currently playable.",
-          ModForGameID = "Quake3",
+          ModForGameID = "quake3",
           EngineID = "idtech3",
           IsOpenSource = true,
           IsCommunityMaintained = false,
@@ -3817,10 +3834,10 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "QWTF",
+          GameID = "qwtf",
           Name = "QuakeWorld Team Fortress",
           Description = "The original Team Fortress, released as a mod in 1996. This team was hired by Valve to make TFC.",
-          ModForGameID = "Quake1",
+          ModForGameID = "quake1",
           EngineID = "idtech2",
           IsOpenSource = true,
           IsCommunityMaintained = true,
@@ -3831,7 +3848,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "Rage",
+          GameID = "rage",
           Name = "Rage",
           Description = "Rage is a first-person shooter game developed by id Software.",
           EngineID = "idtech5",
@@ -3849,7 +3866,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "Railbreak",
+          GameID = "railbreak",
           Name = "Reload",
           Description = "Reload is a lightgun game available on Steam with a classic 90s Area 51 style.",
           SteamID = 330370,
@@ -3865,7 +3882,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "ResidentEvilColdBlood",
+          GameID = "residentevilcoldblood",
           Name = "Resident Evil: Cold Blood",
           Description = "",
           EngineID = "goldsrc",
@@ -3876,7 +3893,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "ResistanceandLiberation",
+          GameID = "resistanceandliberation",
           Name = "Resistance and Liberation",
           Description = "",
           EngineID = "goldsrc",
@@ -3887,7 +3904,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "RezInfinite",
+          GameID = "rezinfinite",
           Name = "Rez Infinite",
           Description = "Rez Infinite is a remake of the original Rez game available on Steam and is playable with a lightgun.",
           SteamID = 636450,
@@ -3903,7 +3920,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "Ricochet",
+          GameID = "ricochet",
           Name = "Ricochet",
           Description = "Ricochet is a fast-paced first-person shooter with a unique focus on precision and accuracy.",
           EngineID = "goldsrc",
@@ -3925,7 +3942,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "RocketLeague",
+          GameID = "rocketleague",
           Name = "Rocket League",
           Description = "Rocket League is a vehicular soccer game developed by Psyonix.",
           Genre = Genre.Sports,
@@ -3936,7 +3953,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "RTCW",
+          GameID = "rtcw",
           Name = "Return to Castle Wolfenstein",
           Description = "A World War II first-person shooter featuring supernatural elements.",
           Developer = "id Software",
@@ -3976,10 +3993,10 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "SAndI",
+          GameID = "sandi",
           Name = "Science and Industry",
           Description = "A team-based multiplayer mod in which players take the roles of security guards at two competing research firms. Features a weapons research system.",
-          ModForGameID = "HalfLife",
+          ModForGameID = "halflife",
           EngineID = "goldsrc",
           IsFree = true,
           IsPaid = false,
@@ -3999,9 +4016,9 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "ScientistHunt",
+          GameID = "scientisthunt",
           Name = "Scientist Hunt",
-          ModForGameID = "HalfLife",
+          ModForGameID = "halflife",
           Description = "",
           EngineID = "goldsrc",
           SteamID = 70,
@@ -4109,7 +4126,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "Shogi",
+          GameID = "shogi",
           Name = "Shogi",
           Description = "Shogi is a type of Japense chess. It is played by two players on a board with 10x9 squares.",
           IsFree = true,
@@ -4124,7 +4141,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "SituationOutbreak",
+          GameID = "situationoutbreak",
           Name = "Situation Outbreak",
           Description = "",
           SteamID = 218,
@@ -4135,7 +4152,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "SituationOutbreak2",
+          GameID = "situationoutbreak2",
           Name = "Situation Outbreak 2",
           Description = "",
           SteamID = 218,
@@ -4146,7 +4163,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "Smashball",
+          GameID = "smashball",
           Name = "Smashball",
           Description = "",
           SteamID = 17730,
@@ -4156,7 +4173,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "SMODTroopers",
+          GameID = "smodtroopers",
           Name = "SMOD Troopers",
           Description = "",
           SteamID = 215,
@@ -4207,7 +4224,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "SDK2006",
+          GameID = "sdk2006",
           Name = "Source SDK Base 2006",
           Description = "",
           SteamID = 215,
@@ -4218,7 +4235,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "SDK2007",
+          GameID = "sdk2007",
           Name = "Source SDK Base 2007",
           Description = "",
           SteamID = 218,
@@ -4229,7 +4246,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "SDK2013",
+          GameID = "sdk2013",
           Name = "Source SDK Base 2013 Multiplayer",
           Description = "",
           SteamID = 243750,
@@ -4260,7 +4277,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "Starcraft",
+          GameID = "starcraft",
           Name = "Starcraft",
           Description = "Starcraft is a real-time strategy game developed by Blizzard Entertainment.",
           Genre = Genre.RTS,
@@ -4273,7 +4290,7 @@ namespace ASP_site.Data.Initializers {
           Developer = "Blizzard Entertainment",
         },
         new Game {
-          GameID = "Starcraft2",
+          GameID = "starcraft2",
           Name = "Starcraft 2",
           Description = "Starcraft 2 is a real-time strategy game developed by Blizzard Entertainment.",
           EngineID = "source",
@@ -4291,7 +4308,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "SF2:WW",
+          GameID = "sf2ww",
           Name = "Street Fighter 2: The World Warrior",
           Description = "Capcom's sequel to Street Fighter, this game launched the fighting game genre.",
           EngineID = "CPS-1",
@@ -4303,7 +4320,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "SF2:CE",
+          GameID = "sf2ce",
           Name = "Street Fighter 2: Champion Edition",
           Description = "'Street Fighter Dash' in Japan, the first update to The World Warrior, this version added the 4 bosses as playable characters and allowed for mirror matches.",
           EngineID = "CPS-1",
@@ -4313,7 +4330,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "SF2:HF",
+          GameID = "sf2hf",
           Name = "Street Fighter 2: Hyper Fighting Edition",
           Description = "The second update to The World Warrior, this version added faster gameplay and some new moves.",
           EngineID = "CPS-1",
@@ -4323,7 +4340,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "SF2:NC",
+          GameID = "ssf2nc",
           Name = "Super Street Fighter 2: The New Challengers",
           Description = "The third update to The World Warrior, this version was a graphics overhaul and added four new characters: Cammy, Fei Long, Dee Jay, and T. Hawk.",
           EngineID = "CPS-2",
@@ -4333,7 +4350,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "SF2:T",
+          GameID = "ssf2t",
           Name = "Super Street Fighter 2: Turbo",
           Description = "The fourth update to The World Warrior, this version added super moves and Akuma as a playable character.",
           EngineID = "CPS-2",
@@ -4343,7 +4360,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "SFAlpha",
+          GameID = "sfalpha",
           Name = "Street Fighter Alpha",
           Description = "Street Fighter Alpha (ストリートファイターZERO) is a fighting game developed by Capcom.",
           EngineID = "CPS-2",
@@ -4353,7 +4370,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "SFAlpha2",
+          GameID = "sfalpha2",
           Name = "Street Fighter Alpha 2",
           Description = "Street Fighter Alpha 2 (ストリートファイターZERO2) is a fighting game developed by Capcom.",
           EngineID = "CPS-2",
@@ -4363,7 +4380,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "SPF2T",
+          GameID = "spf2t",
           Name = "Super Puzzle Fighter II Turbo",
           Description = "Super Puzzle Fighter II Turbo (スーパーパズルファイターIIX) is a fighting game developed by Capcom.",
           EngineID = "CPS-2",
@@ -4373,7 +4390,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "SFAlpha3",
+          GameID = "sfalpha3",
           Name = "Street Fighter Alpha 3",
           Description = "Street Fighter Alpha 3 (ストリートファイターZERO3) is a fighting game developed by Capcom.",
           EngineID = "CPS-2",
@@ -4383,7 +4400,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "SF3",
+          GameID = "sf3",
           Name = "Street Fighter 3",
           Description = "Street Fighter 3 (ストリートファイターIII) is a fighting game developed by Capcom.",
           EngineID = "CPS-3",
@@ -4393,7 +4410,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "SF3:2ndImpact",
+          GameID = "sf32ndimpact",
           Name = "Street Fighter 3: 2nd Impact",
           Description = "Street Fighter 3: 2nd Impact (ストリートファイターIII 2nd Impact) is a fighting game developed by Capcom.",
           EngineID = "CPS-3",
@@ -4403,7 +4420,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "SF3:3rdStrike",
+          GameID = "sf33rdstrike",
           Name = "Street Fighter 3: 3rd Strike",
           Description = "Street Fighter 3: 3rd Strike (ストリートファイターIII 3rd Strike) is a fighting game developed by Capcom.",
           EngineID = "CPS-3",
@@ -4413,10 +4430,10 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "SvenCoop",
+          GameID = "svencoop",
           Name = "Sven Co-op",
           Description = "A cooperative mod that allows players to fight against computer-controlled enemies together. Can play through the original Half-Life game and its expansions in co-op mode.",
-          ModForGameID = "HalfLife",
+          ModForGameID = "halflife",
           EngineID = "goldsrc",
           IsFree = true,
           IsPaid = false,
@@ -4434,10 +4451,10 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "SvenCoopClassic",
+          GameID = "svencoopclassic",
           Name = "Sven Co-op Classic",
           Description = "A cooperative mod that allows players to fight against computer-controlled enemies together. Can play through the original Half-Life game and its expansions in co-op mode.",
-          ModForGameID = "HalfLife",
+          ModForGameID = "halflife",
           EngineID = "goldsrc",
           IsOpenSource = true,
           IsCommunityMaintained = true,
@@ -4451,10 +4468,10 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "SyndicateBlackOps",
+          GameID = "syndicateblackops",
           Name = "Syndicate Black Ops",
           Description = "",
-          ModForGameID = "HalfLife",
+          ModForGameID = "halflife",
           EngineID = "goldsrc",
           IsFree = true,
           IsPaid = false,
@@ -4468,10 +4485,10 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "Synergy",
+          GameID = "synergy",
           Name = "Synergy",
           Description = "",
-          ModForGameID = "SDK2013",
+          ModForGameID = "sdk2013",
           EngineID = "source",
           Developer = "",
           SteamID = 17520,
@@ -4481,7 +4498,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "TheTalosPrinciple",
+          GameID = "thetalosprinciple",
           Name = "The Talos Principle",
           Description = "The Talos Principle is a first-person puzzle game developed by Croteam.",
           EngineID = "seriousengine4",
@@ -4499,7 +4516,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "TheTalosPrinciple2",
+          GameID = "thetalosprinciple2",
           Name = "The Talos Principle 2",
           Description = "The Talos Principle 2 is a first-person puzzle game developed by Croteam.",
           EngineID = "unreal5",
@@ -4517,7 +4534,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "Tannenberg",
+          GameID = "tannenberg",
           Name = "Tannenberg",
           Description = "A large scale WW1 squad based shooter allowing up to 64 players on a server.",
           Developer = "M2H, Black Mill Games",
@@ -4532,7 +4549,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "TF2",
+          GameID = "tf2",
           Name = "Team Fortress 2",
           Description = "Team Fortress 2 is a team-based first-person shooter with unique character classes and cartoon-style graphics."
             + " TF2 was originally released as part of the Orange Box and as a standalone title, but it was converted to free to play."
@@ -4556,10 +4573,10 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "TF2Classic",
+          GameID = "tf2classic",
           Name = "Team Fortress 2 Classic",
           Description = "A Source engine mod that recreates the 2008 era of Team Fortress 2.",
-          ModForGameID = "TF2",
+          ModForGameID = "tf2",
           EngineID = "source",
           IsOpenSource = true,
           IsCommunityMaintained = true,
@@ -4573,10 +4590,10 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "TF2Source",
+          GameID = "tf2source",
           Name = "Team Fortress 2: Source",
           Description = "A Source 2 engine mod that recreates the early era of Team Fortress 2.",
-          ModForGameID = "TF2",
+          ModForGameID = "tf2",
           EngineID = "source",
           IsOpenSource = true,
           IsCommunityMaintained = true,
@@ -4586,10 +4603,10 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "TF2Vintage",
+          GameID = "tf2vintage",
           Name = "Team Fortress 2: Vintage",
           Description = "A Source engine mod that recreates the 2010 era of Team Fortress 2.",
-          ModForGameID = "TF2",
+          ModForGameID = "tf2",
           EngineID = "source",
           IsOpenSource = true,
           IsCommunityMaintained = true,
@@ -4599,10 +4616,10 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "TFC",
+          GameID = "tfc",
           Name = "Team Fortress Classic",
           Description = "Team Fortress Classic is a mod for Half-Life that ported QWTF to the goldsrc engine.",
-          ModForGameID = "HalfLife",
+          ModForGameID = "halflife",
           EngineID = "goldsrc",
           Developer = "Valve Software",
           SteamID = 20,
@@ -4622,7 +4639,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "TheFinals",
+          GameID = "thefinals",
           Name = "The Finals",
           Description = "A free-to-play first-person shooter featuring destructible environments and unique gameplay mechanics.",
           Developer = "Embark Studios",
@@ -4640,12 +4657,12 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "TheSpecialists",
+          GameID = "thespecialists",
           Name = "The Specialists",
           Description = "",
           EngineID = "goldsrc",
           SteamID = 70,
-          ModForGameID = "HalfLife",
+          ModForGameID = "halflife",
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
@@ -4660,11 +4677,11 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "TheTrenches",
+          GameID = "thetrenches",
           Name = "The Trenches",
           Description = "",
           SteamID = 70,
-          ModForGameID = "HalfLife",
+          ModForGameID = "halflife",
           EngineID = "goldsrc",
           IsFree = true,
           IsPaid = false,
@@ -4680,7 +4697,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "TouhouCrisis",
+          GameID = "touhoucrisis",
           Name = "Touhou Crisis",
           Description = "Touhou Crisis is a free cover-based lightgun game available on Steam, inspired by the anime series and Time Crisis.",
           SteamID = 1989990,
@@ -4696,7 +4713,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "Treason",
+          GameID = "treason",
           Name = "Treason",
           Description = "",
           EngineID = "goldsrc",
@@ -4706,7 +4723,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "Tribes1",
+          GameID = "tribes1",
           Name = "Starsiege: Tribes",
           Description = "A groundbreaking multiplayer first-person shooter featuring jetpack-based combat.",
           Developer = "Dynamix",
@@ -4722,7 +4739,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "Tribes2",
+          GameID = "tribes2",
           Name = "Tribes 2",
           Description = "Tribes 2 is a first-person shooter game developed by Dynamix.",
           EngineID = "",
@@ -4740,7 +4757,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "Tribes3",
+          GameID = "tribes3",
           Name = "Tribes 3: Rivals",
           Description = "A modern take on the classic Tribes series featuring jetpack-based combat.",
           Developer = "Prophecy Games",
@@ -4757,7 +4774,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "TribesAscend",
+          GameID = "tribesascend",
           Name = "Tribes: Ascend",
           Description = "Tribes: Ascend was delisted from Steam but still accessible through the link.",
           EngineID = "unreal3",
@@ -4775,7 +4792,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "TypingOfTheDead",
+          GameID = "typingofthedead",
           Name = "The Typing of the Dead: Overkill",
           Description = "The Typing of the Dead: Overkill is a typing trainer available on Steam in the style of House of the Dead. This release includes the original House of the Dead playable with a lightgun.",
           SteamID = 246580,
@@ -4791,7 +4808,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "UnderworldBloodline",
+          GameID = "underworldbloodline",
           Name = "Underworld: Bloodline",
           EngineID = "goldsrc",
           Description = "",
@@ -4892,7 +4909,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "UT3",
+          GameID = "ut3",
           Name = "Unreal Tournament 3",
           Description = "Unreal Tournament 3.",
           EngineID = "unreal3",
@@ -4905,7 +4922,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "UT4",
+          GameID = "ut4",
           Name = "Unreal Tournament 4",
           Description = "",
           Developer = "Epic Games",
@@ -4921,11 +4938,11 @@ namespace ASP_site.Data.Initializers {
           ReleaseDates = []
         },
         new Game {
-          GameID = "VampireSlayer",
+          GameID = "vampireslayer",
           Name = "Vampire Slayer",
           Description = "",
           SteamID = 70,
-          ModForGameID = "HalfLife",
+          ModForGameID = "halflife",
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
@@ -4938,7 +4955,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {  
-          GameID = "VS",
+          GameID = "vs",
           Name = "Vampire Savior",
           Description = "Vampire Savior (ヴァンパイアセイヴァー) is a fighting game developed by Capcom.",
           EngineID = "CPS-2",
@@ -4947,7 +4964,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {  
-          GameID = "VH2",
+          GameID = "vh2",
           Name = "Vampire Hunter 2",
           Description = "Vampire Hunter 2 (ヴァンパイアハンター2) is a fighting game developed by Capcom.",
           EngineID = "CPS-2",
@@ -4956,7 +4973,7 @@ namespace ASP_site.Data.Initializers {
           ]
           },
         new Game {  
-          GameID = "VS2",
+          GameID = "vs2",
           Name = "Vampire Savior 2",
           Description = "Vampire Savior 2 (ヴァンパイアセイヴァー2) is a fighting game developed by Capcom.",
           EngineID = "CPS-2",
@@ -4965,11 +4982,11 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "Wanted",
+          GameID = "wanted",
           Name = "Wanted!",
           Description = "",
           SteamID = 70,
-          ModForGameID = "HalfLife",
+          ModForGameID = "halflife",
           EngineID = "goldsrc",
           IsFree = true,
           IsPaid = false,
@@ -5005,7 +5022,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "WizardWars",
+          GameID = "wizardwars",
           Name = "Wizard Wars",
           Description = "",
           EngineID = "goldsrc",
@@ -5015,7 +5032,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "Wolf3D",
+          GameID = "wolf3d",
           Name = "Wolfenstein 3D",
           Description = "Wolfenstein 3D is a first-person shooter game developed by id Software.",
           EngineID = "idtech0",
@@ -5032,7 +5049,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "X-Men",
+          GameID = "x-men",
           Name = "X-Men: Children of the Atom",
           Description = "X-Men: Children of the Atom is a fighting game developed by Capcom.",
           EngineID = "CPS-2",
@@ -5042,7 +5059,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "XvSF",
+          GameID = "xvsf",
           Name = "X-Men vs. Street Fighter",
           Description = "X-Men vs. Street Fighter is a fighting game developed by Capcom.",
           EngineID = "CPS-2",
@@ -5052,7 +5069,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "ZombieMaster",
+          GameID = "zombiemaster",
           Name = "Zombie Master (CLASSIC)",
           Description = "",
           SteamID = 215,
@@ -5065,7 +5082,7 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "ZombieMasterReborn",
+          GameID = "zombiemasterreborn",
           Name = "Zombie Master: Reborn",
           Description = "",
           SteamID = 243750,
@@ -5076,11 +5093,11 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "ZombiePanic",
+          GameID = "zombiepanic",
           Name = "Zombie Panic!",
           Description = "",
           SteamID = 70,
-          ModForGameID = "HalfLife",
+          ModForGameID = "halflife",
           EngineID = "goldsrc",
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/zp",
@@ -5089,10 +5106,10 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "ZombiePanicSource",
+          GameID = "zombiepanicsource",
           Name = "Zombie Panic! Source",
           Description = "",
-          ModForGameID = "SDK2013",
+          ModForGameID = "sdk2013",
           SteamID = 17500,
           EngineID = "source",
           ServerConfig = new ServerBrowserConfig {
@@ -5101,7 +5118,7 @@ namespace ASP_site.Data.Initializers {
           }
           },
       new Game {
-        GameID = "ZombiePanicInWonderlandDX",
+        GameID = "zombiepanicinwonderlanddx",
           Name = "Zombie Panic! In Wonderland DX",
           Description = "Zombie Panic! In Wonderland DX is a gallery style lightgun game available on Steam.",
           SteamID = 1173850,  

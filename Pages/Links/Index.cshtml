@@ -39,31 +39,36 @@
 
 <section class="grid">
     <div class="row bg-dark text-white fw-bold g-0">
-        <div class="p-1 col-sm-1 text-center">Topic</div>
+        <div class="p-1 col-sm-2 text-center">Topic</div>
         <div class="p-1 col-sm-1 text-center">Type</div>
-        <div class="p-1 col-sm-5">Label <i>(@(Model.Links?.Count ?? 0) shown)</i></div>
+        <div class="p-1 col-sm-4">Label <i>(@(Model.DisplayLinks?.Count ?? 0) shown)</i></div>
         <div class="p-1 col-sm-5">Description</div>
     </div>
 
-    @if(Model.Links != null) {
-        @foreach (Link link in Model.Links) {
+    @if(Model.DisplayLinks != null) {
+        @foreach (var link in Model.DisplayLinks) {
             <div class="row g-0 border-bottom">
-                <div class="p-1 col-sm-1 text-center">
-                    @if(!string.IsNullOrEmpty(link.BookTitle)) {
-                        <a asp-page="/Books/Book" asp-route-BookTitle="@link.BookTitle">@link.BookTitle</a>
-                    } else if(!string.IsNullOrEmpty(link.GameID)) {
-                        <a asp-page="/Games/Game" asp-route-GameID="@link.GameID">@link.GameID</a>
-                    } else if (!string.IsNullOrEmpty(link.MapID)) {
-                        <a asp-page="/Maps/Map" asp-route-MapID="@link.MapID">@link.MapID</a>
-                    } else {
+                <div class="p-1 col-sm-2 text-center">
+                    @if(!string.IsNullOrEmpty(link.TopicUrl)) {
+                        <a href="@link.TopicUrl">@link.Topic</a>
+                    } else if (!string.IsNullOrEmpty(link.Topic)) {
+                        @link.Topic
+                    }
+                    else {
                         <span>-</span>
                     }
                 </div>
                 <div class="p-1 col-sm-1 text-center">@link.LinkType</div>
-                <a class="col-sm-10 row g-0 text-decoration-none text-reset" href="@link.Url" target="_blank">
-                    <div class="p-1 col-sm-5 text-white">@(link.Label ?? "-")</div>
-                    <div class="p-1 col-sm-7">@(link.Description ?? "-")</div>
-                </a>
+                <div class="p-1 col-sm-4 text-white">
+                    <a class="text-decoration-none text-reset" href="@link.Url" target="_blank">
+                        @(link.Label ?? "-")
+                    </a>
+                </div>
+                <div class="p-1 col-sm-5">
+                     <a class="text-decoration-none text-reset" href="@link.Url" target="_blank">
+                        @(link.Description ?? "-")
+                    </a>
+                </div>
             </div>
         }
     }
