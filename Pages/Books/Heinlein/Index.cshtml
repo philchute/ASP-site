@@ -1,6 +1,7 @@
 @page
 @model ASP_site.Pages.Books.Heinlein.IndexModel
 @using ASP_site.Models
+@using ASP_site.Helpers
 
 @{
     ViewData["Title"] = "Robert A. Heinlein";
@@ -16,9 +17,9 @@
             <div class="d-flex justify-content-end align-items-end">
                 <div class="form-group me-2">
                     <label class="form-label" for="search-input">Search:</label>
-                    <div class="input-group">
+                    <div class="d-flex">
                         <input id="search-input" class="form-control" type="text" asp-for="SearchString" />
-                        <button class="btn btn-secondary" type="submit">Search</button>
+                        <button class="btn btn-primary ms-1" type="submit">Search</button>
                     </div>
                 </div>
                 <div class="form-group">
@@ -83,25 +84,26 @@
     some completely obsolete others, and some have confusing titles. Hopefully this organized list will help explore his works.
  </p>
  <p>
-    My recommendation for short stories is the collection of 'Future History' stories,
+    My recommendation for short stories is the collection of '<a href="https://en.wikipedia.org/wiki/Future_History_(Heinlein)">Future History</a>' stories,
     <a href="https://en.wikipedia.org/wiki/The_Past_Through_Tomorrow">The Past Through Tomorrow</a>,
     which is out of print but available in hardcover and paperback, and is common to find in used book stores. 
-    The paperback actually has a few more stories than the hardcover.
+    The paperback actually has a few more stories than the hardcover. <a href="https://en.wikipedia.org/wiki/Off_the_Main_Sequence">Off the Main Sequence</a>
+    collects most of the short stories outside of the Future History chronology, including the ones from  
     <a href="https://en.wikipedia.org/wiki/Assignment_in_Eternity">Assignment in Eternity</a>
-    is a great collection of short stories, often found in used paperback,
-    and <a href="https://en.wikipedia.org/wiki/A_Heinlein_Trio">A Heinlein Trio</a> 
+    which is probably my favorite Heinlein collection of short stories, often found in cheap used paperback.
+    <a href="https://en.wikipedia.org/wiki/A_Heinlein_Trio">A Heinlein Trio</a> 
     is a hardcover collection of three great novels, but you can often find the paperbacks easier and cheaper. 
     <a href="https://en.wikipedia.org/wiki/Expanded_Universe_(book)">Expanded Universe</a>
-    is less introductory and more varied, sometimes published as one volume and sometimes split into two volumes.
+    is less introductory and more expansive and varied, sometimes published as one volume and sometimes split into two volumes.
 </p>
 
 <section class="grid mt-3">
     <div class="row g-0 bg-dark text-white fw-bold">
-        <div class="p-1 text-center col-1">Year</div>
-        <div class="p-1 text-center col-1">Type</div>
-        <div class="p-1 text-start col-3">Title <i>(@(Model.Books?.Count ?? 0) shown)</i></div>
-        <div class="p-1 text-start col-2">Tags</div>
-        <div class="p-1 text-start col-5">Collections</div>
+        <div class="p-1 text-center col-1 col-sm-1">Year</div>
+        <div class="p-1 text-center col-1 col-sm-1">Type</div>
+        <div class="p-1 text-start col-5 col-sm-3">Title <i>(@(Model.Books?.Count ?? 0) shown)</i></div>
+        <div class="p-1 text-start col-2 col-sm-2">Tags</div>
+        <div class="p-1 text-start col-3 col-sm-5">Collections</div>
     </div>
 
     @if(Model.Books != null && Model.Books.Any()) {
@@ -110,16 +112,22 @@
             var generalTags = book.Tags.Where(t => !t.Name.StartsWith("Collection: ")).ToList();
 
             <a asp-page="../Book" asp-route-BookTitle="@book.Title" class="row g-0 text-decoration-none text-reset border-bottom table-row-hover">
-                <div class="p-1 text-center col-1">@book.PublicationYear</div>
-                <div class="p-1 text-center col-1">@book.Type</div>
-                <div class="p-1 text-start col-3 text-white">@book.Title</div>
-                <div class="p-1 text-start col-2">
+                <div class="p-1 text-center col-12 col-sm-1">
+                    @if (book.PublicationMonth.HasValue)
+                    {
+                        <span>@ViewHelper.GetMonthName(book.PublicationMonth), </span>
+                    }
+                    @book.PublicationYear
+                </div>
+                <div class="p-1 text-center col-12 col-sm-1">@book.Type</div>
+                <div class="p-1 text-start col-12 col-sm-3 text-white">@book.Title</div>
+                <div class="p-1 text-start col-12 col-sm-2">
                     @foreach (var tag in generalTags)
                     {
                         <span class="badge bg-secondary me-1">@tag.Name</span>
                     }
                 </div>
-                <div class="p-1 text-start col-5 d-flex flex-wrap align-content-start">
+                <div class="p-1 text-start col-12 col-sm-5 d-flex flex-wrap align-content-start">
                     @foreach (var collection in collections)
                     {
                         <span class="badge bg-secondary me-1 mb-1">@collection.Name.Replace("Collection: ", "")</span>

@@ -26,6 +26,8 @@ namespace ASP_site.Models
 
         public int? PublicationYear { get; set; }
 
+        public int? PublicationMonth { get; set; }
+
         public BookType Type { get; set; }
         
         public string? Description { get; set; }

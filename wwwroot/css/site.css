@@ -45,47 +45,8 @@ section.grid a:hover {
   font-weight: bold;
 }
 
-.favorite {
-  background-color: gold;
-}
-
 .games-list a {
   padding: 0.25rem 0.5rem;  /* Add some padding */
-}
-
-/* Engine Tree */
-.engine-tree {
-  max-width: 800px;
-  margin: 2rem auto;
-}
-
-.tree-line {
-  font-size: 1.5rem;
-  color: #666;
-  margin: 0.5rem 0;
-}
-
-.current-engine {
-  padding: 1rem;
-  position: relative;
-}
-
-.parent-engine {
-  padding: 0.5rem;
-}
-
-.children-engines {
-  padding: 1rem;
-}
-
-.current-engine .games-list {
-  position: absolute;
-  left: 100%;
-  top: 50%;
-  transform: translateY(-50%);
-  min-width: 300px;
-  display: flex;
-  align-items: center;
 }
 
 .comp-icon,
@@ -137,4 +98,36 @@ main a:hover {
 
 .update-tag-link:hover {
     text-decoration: underline;
+}
+
+.tractatus-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* CCGs Page Table Styling for Dark Theme - Vertically Compressed */
+.markdown-content .table {
+    border-collapse: collapse;
+}
+
+.markdown-content .table thead {
+    border-bottom: 1px solid #495057; /* Thinner header border */
+}
+
+.markdown-content .table th,
+.markdown-content .table td {
+    border-top: none;
+    border-bottom: none; /* Removed all row dividers */
+    padding: 0.1rem 0.75rem; /* Minimal vertical padding */
+}
+
+/* Responsive wrapper for tables */
+.table-responsive-wrapper {
+    overflow-x: auto;
+}
+
+/* Multi-column list for Engine page */
+.multi-column-list {
+  column-width: 250px;
+  column-gap: 1.5rem;
 }

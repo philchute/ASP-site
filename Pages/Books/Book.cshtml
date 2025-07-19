@@ -1,12 +1,21 @@
 @page "/Books/{BookTitle}"
 @model ASP_site.Pages.Books.BookModel
+@using ASP_site.Helpers
 
 @{
     ViewData["Title"] = @Model.Book?.Title;
 }
 <div class="jumbotron p-2">
   <h1 class="display-4">
-    @Model.Book?.Title <small class="text-muted">- @Model.Book?.Author - @Model.Book?.PublicationYear</small>
+    @Model.Book?.Title 
+    <small class="text-muted">
+        - @Model.Book?.Author - 
+        @if (Model.Book?.PublicationMonth.HasValue ?? false)
+        {
+            <span>@ViewHelper.GetMonthName(Model.Book.PublicationMonth), </span>
+        }
+        @Model.Book?.PublicationYear
+    </small>
   </h1>
 </div>
 <hr/>
@@ -14,6 +23,36 @@
 {
   <div>@Model.Book.Description</div>
   <hr/>
+}
+
+@if(Model.Book?.Tags != null && Model.Book.Tags.Any())
+{
+    var collections = Model.Book.Tags.Where(t => t.Name.StartsWith("Collection: ")).ToList();
+    var generalTags = Model.Book.Tags.Where(t => !t.Name.StartsWith("Collection: ")).ToList();
+
+    if (generalTags.Any())
+    {
+        <div>
+            <h4>Tags:</h4>
+            @foreach (var tag in generalTags)
+            {
+                <span class="badge bg-secondary me-1">@tag.Name</span>
+            }
+        </div>
+        <hr/>
+    }
+
+    if (collections.Any())
+    {
+        <div>
+            <h4>Collections:</h4>
+            @foreach (var collection in collections)
+            {
+                <span class="badge bg-secondary me-1 mb-1">@collection.Name.Replace("Collection: ", "")</span>
+            }
+        </div>
+        <hr/>
+    }
 }
 
 @if(Model.BookLinks.Any()) 

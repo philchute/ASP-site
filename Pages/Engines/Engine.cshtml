@@ -16,7 +16,7 @@
   <hr/>
 }
 
-<div class="d-flex align-items-center justify-content-center">
+<div>
   <div class="engine-tree">
     @if(Model.Engine?.ParentID != null && Model.Engine.ParentID != "") {
       <div class="parent-engine text-center mb-3">
@@ -30,10 +30,9 @@
       @if(Model.Engine?.Games.Count > 0) {
         <div class="games-list">
           <div class="d-flex align-items-center">
-            <div class="me-2">→</div>
-            <div class="flex-grow-1">
+            <div class="flex-grow-1 multi-column-list">
               @{
-                var maxGamesToShow = 10;
+                var maxGamesToShow = 43;
                 var games = Model.Engine.Games.OrderBy(g => g.Year).ToList();
                 var gamesToShow = games.Take(maxGamesToShow);
               }

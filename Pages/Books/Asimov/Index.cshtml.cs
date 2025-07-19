@@ -7,8 +7,9 @@ using Microsoft.EntityFrameworkCore;
 using ASP_site.Data;
 using ASP_site.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
 
-namespace ASP_site.Pages.Books.Clarke
+namespace ASP_site.Pages.Books.Asimov
 {
     public class IndexModel : PageModel
     {
@@ -52,7 +53,7 @@ namespace ASP_site.Pages.Books.Clarke
         public async Task OnGetAsync()
         {
             var booksIQ = _context.Books
-                .Where(b => b.Author == "Arthur C. Clarke")
+                .Where(b => b.Author == "Isaac Asimov")
                 .Include(b => b.Tags)
                 .AsQueryable();
 
@@ -62,13 +63,12 @@ namespace ASP_site.Pages.Books.Clarke
             
             AllBookTypes = Enum.GetValues(typeof(BookType))
                 .Cast<BookType>()
-                .Where(e => e != BookType.Poem)
                 .ToDictionary(e => e.ToString(), e => e.ToString());
 
             // Set default selections if none are provided
             if (!SelectedBookTypes.Any())
             {
-                SelectedBookTypes = new List<string> { "Novel", "ShortStory", "NonFiction" };
+                SelectedBookTypes = new List<string> { "Novel", "ShortStory", "NonFiction", "Poem" };
             }
 
             AllCollections = allBooks

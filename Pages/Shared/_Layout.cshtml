@@ -7,9 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="~/css/timeline.css" asp-append-version="true" />
   <link rel="stylesheet" href="~/lib/bootstrap-5.3.3-dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="~/css/site.css" />
+  <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 </head>
 <body>
   <header>
@@ -31,6 +30,7 @@
                 Gaming
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMore">
+                <li><a class="dropdown-item @(ViewData["ActivePage"]?.ToString() == "CCGs" ? "active" : "")" asp-area="" asp-page="/CCGs/Index">CCGs</a></li>
                 <li><a class="dropdown-item @(ViewData["ActivePage"]?.ToString() == "Games" ? "active" : "")" asp-area="" asp-page="/Games/Index">Games</a></li>
                 <li><a class="dropdown-item @(ViewData["ActivePage"]?.ToString() == "Engines" ? "active" : "")" asp-area="" asp-page="/Engines/Index">Engines</a></li>
                 <li><a class="dropdown-item @(ViewData["ActivePage"]?.ToString() == "Maps" ? "active" : "")" asp-area="" asp-page="/Maps/Index">Maps</a></li>
@@ -42,8 +42,9 @@
                 Books
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownBooks">
-                <li><a class="dropdown-item @(ViewData["ActivePage"]?.ToString() == "Heinlein" ? "active" : "")" asp-area="" asp-page="/Books/Heinlein/Index">Robert A. Heinlein</a></li>
+                <li><a class="dropdown-item @(ViewData["ActivePage"]?.ToString() == "Asimov" ? "active" : "")" asp-area="" asp-page="/Books/Asimov/Index">Isaac Asimov</a></li>
                 <li><a class="dropdown-item @(ViewData["ActivePage"]?.ToString() == "Clarke" ? "active" : "")" asp-area="" asp-page="/Books/Clarke/Index">Arthur C. Clarke</a></li>
+                <li><a class="dropdown-item @(ViewData["ActivePage"]?.ToString() == "Heinlein" ? "active" : "")" asp-area="" asp-page="/Books/Heinlein/Index">Robert A. Heinlein</a></li>
               </ul> 
             </li>
             <li class="nav-item dropdown">

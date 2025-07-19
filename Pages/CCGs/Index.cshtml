@@ -1,0 +1,18 @@
+@page
+@model ASP_site.Pages.CCGs.IndexModel
+
+@{
+    ViewData["Title"] = "CCGs";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="display-4">Collectible Card Games</h1>
+            <hr />
+            <div class="markdown-content" style="max-width: 800px; margin: 0 auto;">
+                @Html.Raw(Model.Content)
+            </div>
+        </div>
+    </div>
+</div>

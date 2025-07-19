@@ -83,7 +83,7 @@ namespace ASP_site.Pages.Books.Heinlein
             // Apply filters to the query
             if (!string.IsNullOrEmpty(SearchString))
             {
-                booksIQ = booksIQ.Where(s => s.Title.Contains(SearchString) || (s.Description != null && s.Description.Contains(SearchString)));
+                booksIQ = booksIQ.Where(s => s.Title.Contains(SearchString, StringComparison.OrdinalIgnoreCase) || (s.Description != null && s.Description.Contains(SearchString, StringComparison.OrdinalIgnoreCase)));
             }
 
             if (SelectedBookTypes.Any())
@@ -108,7 +108,7 @@ namespace ASP_site.Pages.Books.Heinlein
                     booksIQ = booksIQ.OrderBy(b => b.Title);
                     break;
                 default: // "Year"
-                    booksIQ = booksIQ.OrderBy(b => b.PublicationYear).ThenBy(b => b.Title);
+                    booksIQ = booksIQ.OrderBy(b => b.PublicationYear).ThenBy(b => b.PublicationMonth).ThenBy(b => b.Title);
                     break;
             }
 

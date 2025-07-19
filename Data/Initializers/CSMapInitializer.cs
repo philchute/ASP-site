@@ -202,7 +202,7 @@ namespace ASP_site.Data.Initializers
         new Map
         {
           MapID = "anubis",
-          IsCompetitive = true,
+          IsCompetitive = false,
           Description = "Egyptian themed map",
           GameInfo = new List<MapGameInfo>
           {
@@ -363,7 +363,7 @@ namespace ASP_site.Data.Initializers
         new Map
         {
           MapID = "overpass",
-          IsCompetitive = false,
+          IsCompetitive = true,
           Description = "Modern map set in Berlin",
           GameInfo = new List<MapGameInfo>
           {
