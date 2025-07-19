@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <!-- Puzzle piece -->
+  <rect width="24" height="24" rx="3" ry="3" fill="#333333"/>
+  
+  <!-- Main puzzle piece body -->
+  <path d="M6 6 L18 6 L18 12 Q18 14 16 14 Q14 14 14 12 L14 18 L12 18 Q12 16 10 16 Q8 16 8 18 L6 18 Z" fill="white"/>
+  
+  <!-- Top knob -->
+  <circle cx="12" cy="6" r="2" fill="white"/>
+  
+  <!-- Right indent -->
+  <path d="M18 10 Q20 10 20 12 Q20 14 18 14" fill="#E0E0E0"/>
+</svg> 

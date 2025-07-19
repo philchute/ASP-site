@@ -25,6 +25,15 @@
   <div>Mod for: <a class="" asp-page="./Game" asp-route-GameID="@Model.Game.ModForGameID">@Model.Game.ModForGameID</a></div>
   <hr/>
 }
+@if(Model.Game?.ServerConfig != null)
+{
+    <div>
+        <a class="btn btn-secondary" asp-page="/Servers/Index" asp-route-GameId="@Model.Game.GameID">
+            View in Server Browser
+        </a>
+    </div>
+    <hr/>
+}
 @if(Model.GameLinks.Count > 0) 
 {
     <div>

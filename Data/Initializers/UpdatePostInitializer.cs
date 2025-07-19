@@ -55,13 +55,21 @@ namespace ASP_site.Data.Initializers
                     Title = "New games added to the server browser",
                     Content = "<p>I've begun adding GameSpy based games to the server browser. 333Networks runs a replacement master server so I was able to get from them the info for unreal engine based games including UT99 and MoH:AA and several others. Hope to add even more classic games to the browser.</p>",
                     PostedDate = new DateTime(2025, 7, 6, 12, 0, 0, DateTimeKind.Utc), Author = "Phil",
-                    Tags = new List<Tag> { tags.Single(t => t.Name == "Website Update") }
+                    Tags = new List<Tag> { tags.Single(t => t.Name == "Website Update"), tags.Single(t => t.Name == "Gaming Update") }
                 },
                 new UpdatePost
                 {
                     Id = 6,
                     Title = "New CCG page, more authors added to the books section",
                     Content = "<p>I've added a new CCG page with the current status of all of the CCGs in NA that I know of. I've also added Arthur C. Clarke and Isaac Asimov to the books page, completing the 'big three' of golden age science fiction. I'm going to add a few more authors and fill in some more information. Like a lot of pages here, I'm hoping that is more of a beginning scaffolding than a completed project.</p>",
+                    PostedDate = new DateTime(2025, 7, 19, 12, 0, 0, DateTimeKind.Utc), Author = "Phil",
+                    Tags = new List<Tag> { tags.Single(t => t.Name == "Website Update"), tags.Single(t => t.Name == "Gaming Update") }
+                },
+                new UpdatePost
+                {
+                    Id = 7,
+                    Title = "More updates",
+                    Content = "<p>Changed the server page url to be based on ID rather than position in the list. Added more icons to the Games page, and an icon to signify and link to the Server Browser for that game, and added a link on the Game Info page to the Server Browser for that game. Fixed an issue with the maps not displaying on the Maps page, updated the competitive maps for season 3 of CS2, minor changes to the Engine info page.</p>",
                     PostedDate = new DateTime(2025, 7, 19, 12, 0, 0, DateTimeKind.Utc), Author = "Phil",
                     Tags = new List<Tag> { tags.Single(t => t.Name == "Website Update"), tags.Single(t => t.Name == "Gaming Update") }
                 }

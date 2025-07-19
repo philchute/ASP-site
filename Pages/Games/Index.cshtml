@@ -60,11 +60,9 @@
   <div class="row bg-dark text-white fw-bold g-0">
     <div class="p-1 text-center col-sm-1">Year</div>
     <div class="p-1 col-sm-3">Name <i>(@(Model.Games?.Count ?? 0) shown)</i></div>
-    <div class="p-1 text-center col-sm-2">Players</div>
-    <div class="p-1 text-center col-sm-2">Engine</div>
-    <div class="p-1 text-center col-sm-1">Genre</div>
-    <div class="p-1 text-center col-sm-1">Availability</div>
+    <div class="p-1 text-center col-sm-4">Info</div>
     <div class="p-1 text-center col-sm-2">Developer</div>
+    <div class="p-1 text-center col-sm-2">Engine</div>
   </div>
 
   @if(Model.Games != null) {
@@ -75,76 +73,94 @@
           @(g.Name ?? "-")
           <a asp-page="./Game" asp-route-GameID="@g.GameID" class="stretched-link"></a>
         </div>
-        <div class="p-1 col-sm-2 d-flex justify-content-center align-items-center" title="S = Single Player, M = Multiplayer">
-            <span>@Model.FormatPlayerCounts(g.PlayWith)</span>
+        <div class="p-1 text-center col-sm-4">
+          <div class="d-flex justify-content-start align-items-center gap-1">
+            @* Genre Icon (moved to first position) *@
+            @if (g.Genre != null)
+            {
+              @if (g.Genre == Genre.FPS) { <span data-bs-toggle="tooltip" data-bs-title="First-Person Shooter" class="position-relative" style="z-index: 1;"><img src="~/image/fps.svg" alt="FPS" /></span> }
+              else if (g.Genre == Genre.RTS) { <span data-bs-toggle="tooltip" data-bs-title="Real-Time Strategy" class="position-relative" style="z-index: 1;"><img src="~/image/rts.svg" alt="RTS" /></span> }
+              else if (g.Genre == Genre.MOBA) { <span data-bs-toggle="tooltip" data-bs-title="Multiplayer Online Battle Arena" class="position-relative" style="z-index: 1;"><img src="~/image/moba.svg" alt="MOBA" /></span> }
+              else if (g.Genre == Genre.TBS) { <span data-bs-toggle="tooltip" data-bs-title="Turn-Based Strategy" class="position-relative" style="z-index: 1;"><img src="~/image/tbs.svg" alt="TBS" /></span> }
+              else if (g.Genre == Genre.Fighting) { <span data-bs-toggle="tooltip" data-bs-title="Fighting Game" class="position-relative" style="z-index: 1;"><img src="~/image/fighting.svg" alt="Fighting" /></span> }
+              else if (g.Genre == Genre.Adventure) { <span data-bs-toggle="tooltip" data-bs-title="Adventure Game" class="position-relative" style="z-index: 1;"><img src="~/image/adventure.svg" alt="Adventure" /></span> }
+              else if (g.Genre == Genre.Lightgun) { <span data-bs-toggle="tooltip" data-bs-title="Lightgun Game" class="position-relative" style="z-index: 1;"><img src="~/image/lightgun.svg" alt="Lightgun" /></span> }
+              else if (g.Genre == Genre.Puzzle) { <span data-bs-toggle="tooltip" data-bs-title="Puzzle Game" class="position-relative" style="z-index: 1;"><img src="~/image/puzzle.svg" alt="Puzzle" /></span> }
+              else if (g.Genre == Genre.Racing) { <span data-bs-toggle="tooltip" data-bs-title="Racing Game" class="position-relative" style="z-index: 1;"><img src="~/image/racing.svg" alt="Racing" /></span> }
+              else if (g.Genre == Genre.Sports) { <span data-bs-toggle="tooltip" data-bs-title="Sports Game" class="position-relative" style="z-index: 1;"><img src="~/image/sports.svg" alt="Sports" /></span> }
+            }
+            
+            @* Player Count Icons *@
+            @if (g.PlayWith != null)
+            {
+              @if (g.PlayWith.Contains(1)) { <span data-bs-toggle="tooltip" data-bs-title="Single Player" class="position-relative" style="z-index: 1;"><img src="~/image/sp.svg" alt="SP" /></span> }
+              @if (g.PlayWith.Contains(0)) { <span data-bs-toggle="tooltip" data-bs-title="Multiplayer" class="position-relative" style="z-index: 1;"><img src="~/image/mp.svg" alt="MP" /></span> }
+              @if (g.PlayWith.Contains(2)) { <span data-bs-toggle="tooltip" data-bs-title="2 Players" class="position-relative" style="z-index: 1;"><img src="~/image/2.svg" alt="2P" /></span> }
+              @if (g.PlayWith.Contains(3)) { <span data-bs-toggle="tooltip" data-bs-title="3 Players" class="position-relative" style="z-index: 1;"><img src="~/image/3.svg" alt="3P" /></span> }
+              @if (g.PlayWith.Contains(4)) { <span data-bs-toggle="tooltip" data-bs-title="4 Players" class="position-relative" style="z-index: 1;"><img src="~/image/4.svg" alt="4P" /></span> }
+              @if (g.PlayWith.Contains(5)) { <span data-bs-toggle="tooltip" data-bs-title="5 Players" class="position-relative" style="z-index: 1;"><img src="~/image/5.svg" alt="5P" /></span> }
+              @if (g.PlayWith.Contains(6)) { <span data-bs-toggle="tooltip" data-bs-title="6 Players" class="position-relative" style="z-index: 1;"><img src="~/image/6.svg" alt="6P" /></span> }
+            }
+            
+            @* Server Browser Icon *@
             @if (g.ServerConfig != null)
             {
-                <a asp-page="/Servers/Index" asp-route-GameId="@g.GameID" class="ps-1 position-relative" style="z-index: 1;">
-                    <img src="~/image/Game.svg" alt="Server Browser" title="View Server Browser" style="height: 1em;" />
+                <a asp-page="/Servers/Index" asp-route-GameId="@g.GameID" class="position-relative" style="z-index: 1;" data-bs-toggle="tooltip" data-bs-title="Server Browser Available">
+                    <img src="~/image/serverbrowser.svg" alt="SB" />
                 </a>
             }
+            
+            @* Availability Icons *@
+            @if (g.IsOpenSource == true)
+            {
+              <span data-bs-toggle="tooltip" data-bs-title="Free Open Source Software" class="position-relative" style="z-index: 1;"><img src="~/image/opensource.svg" alt="Open Source" /></span>
+              @if (g.IsPaid == true)
+              {
+                <span data-bs-toggle="tooltip" data-bs-title="Paid Title" class="position-relative" style="z-index: 1;"><img src="~/image/paid.svg" alt="Paid" /></span>
+              }
+            }
+            else
+            {
+              @if (g.IsFree == true)
+              {
+                <span data-bs-toggle="tooltip" data-bs-title="Free to Play" class="position-relative" style="z-index: 1;"><img src="~/image/free.svg" alt="Free" /></span>
+              }
+              @if (g.IsPaid == true)
+              {
+                <span data-bs-toggle="tooltip" data-bs-title="Paid Title" class="position-relative" style="z-index: 1;"><img src="~/image/paid.svg" alt="Paid" /></span>
+              }
+            }
+            
+            @* Development Status Icons *@
+            @if (g.RequiresCommunityPatch)
+            {
+                <span data-bs-toggle="tooltip" data-bs-title="Needs Community Patches" class="position-relative" style="z-index: 1;"><img src="~/image/patch.svg" alt="Patch" /></span>
+            }
+            else
+            {
+                @if (g.IsDeveloperMaintained == true)
+                {
+                <span data-bs-toggle="tooltip" data-bs-title="Developer Maintained" class="position-relative" style="z-index: 1;"><img src="~/image/dev.svg" alt="Dev" /></span>
+                }
+                @if (g.IsCommunityMaintained == true)
+                {
+                <span data-bs-toggle="tooltip" data-bs-title="Community Maintained" class="position-relative" style="z-index: 1;"><img src="~/image/comm.svg" alt="Com" /></span>
+                }
+            }
+          </div>
         </div>
-        <div class="p-1 text-center col-sm-2">@(g.EngineID ?? "-")</div>
-        <div class="p-1 text-center col-sm-1">
-          @if (g.Genre != null)
+        <div class="p-1 text-center col-sm-2">
+            @(g.Developer ?? "-")
+        </div>
+        <div class="p-1 text-center col-sm-2">
+          @if (g.EngineID != null)
           {
-            @if (g.Genre == Genre.FPS) { <img src="~/image/fps.svg" alt="@g.Genre" title="First-Person Shooter" /> }
-            else if (g.Genre == Genre.RTS) { <img src="~/image/rts.svg" alt="@g.Genre" title="Real-Time Strategy" /> }
-            else if (g.Genre == Genre.MOBA) { <img src="~/image/moba.svg" alt="@g.Genre" title="Multiplayer Online Battle Arena" /> }
-            else if (g.Genre == Genre.TBS) { <img src="~/image/tbs.svg" alt="@g.Genre" title="Turn-Based Strategy" /> }
-            else { @g.Genre.ToString() }
+            <a asp-page="/Engines/Engine" asp-route-EngineID="@g.EngineID" class="position-relative" style="z-index: 1;">@g.EngineID</a>
           }
           else
           {
             @("-")
           }
-        </div>
-        <div class="p-1 text-center col-sm-1">
-          @if (g.IsOpenSource == true)
-          {
-            <img src="~/image/opensource.svg" alt="Open Source" title="Free Open Source Software" />
-            @if (g.IsPaid == true)
-            {
-              <img src="~/image/paid.svg" alt="Paid" title="Paid Title" />
-            }
-          }
-          else
-          {
-            @if (g.IsFree == true)
-            {
-              <img src="~/image/free.svg" alt="Free" title="Free to Play" />
-            }
-            @if (g.IsPaid == true)
-            {
-              <img src="~/image/paid.svg" alt="Paid" title="Paid Title" />
-            }
-            @if (g.IsFree != true && g.IsPaid != true)
-            {
-              @("-")
-            }
-          }
-        </div>
-        <div class="p-1 text-center col-sm-2">
-            <div class="d-flex justify-content-center align-items-center">
-                <span class="pe-1">@(g.Developer ?? "-")</span>
-                <span>
-                @if (g.RequiresCommunityPatch)
-                {
-                    <img src="~/image/patch.svg" alt="Needs Patches" title="Needs Patches" style="height: 1em;" />
-                }
-                else
-                {
-                    @if (g.IsDeveloperMaintained == true)
-                    {
-                    <img src="~/image/dev.svg" alt="Dev Maintained" title="Developer Maintained" style="height: 1em;" />
-                    }
-                    @if (g.IsCommunityMaintained == true)
-                    {
-                    <img src="~/image/comm.svg" alt="Community Maintained" title="Community Maintained" style="height: 1em;" />
-                    }
-                }
-                </span>
-            </div>
         </div>
       </div>
     }

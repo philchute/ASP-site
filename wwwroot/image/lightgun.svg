@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gun icon -->
+  <rect width="24" height="24" rx="3" ry="3" fill="#333333"/>
+  <g transform="rotate(45 12 12)">
+    <!-- Barrel -->
+    <rect x="6" y="10" width="10" height="4" rx="2" fill="white"/>
+    <!-- Grip -->
+    <rect x="16" y="11" width="3" height="6" rx="1" fill="white"/>
+    <!-- Sight -->
+    <rect x="6" y="9" width="1" height="2" fill="white"/>
+  </g>
+</svg> 

@@ -815,6 +815,7 @@ namespace ASP_site.Data.Initializers {
           IsOpenSource = false,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ReleaseDates = [
             new ReleaseDate{Year = 2007},
           ]
@@ -1497,6 +1498,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Crazy Taxi",
           Description = "Crazy Taxi is a racing game developed by Sega.",
           EngineID = "NAOMI",
+          PlayWith = new List<int> { 1 },
           Genre = Genre.Racing,
           ReleaseDates = [
             new ReleaseDate{Year = 1999, Month = 2, ReleaseVersion = ReleaseVersion.Dreamcast, Region = Region.Worldwide},
@@ -1545,6 +1547,9 @@ namespace ASP_site.Data.Initializers {
           Name = "Darkstalkers",
           Description = "Darkstalkers is a fighting game developed by Capcom.",
           EngineID = "CPS-2",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
           Genre = Genre.Fighting,
           PlayWith = new List<int> { 1, 2 },
           ReleaseDates = [
@@ -1627,6 +1632,8 @@ namespace ASP_site.Data.Initializers {
           Name = "D.I.P.R.I.P. Warm Up",
           Description = "",
           SteamID = 17530,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/diprip"
           }
@@ -1878,6 +1885,8 @@ namespace ASP_site.Data.Initializers {
           Description = "",
           EngineID = "source",
           SteamID = 317360,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/dab",
             GameDirectory = "dab"
@@ -1928,6 +1937,8 @@ namespace ASP_site.Data.Initializers {
           Description = "",
           EngineID = "source",
           SteamID = 17580,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/dys",
             GameDirectory = "dys"
@@ -1946,7 +1957,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = false,
           Genre = Genre.MOBA,
-          PlayWith = new List<int> { 5 },
+          PlayWith = new List<int> { 0,5 },
           ReleaseDates = [
             new ReleaseDate{Year = 2013, Month = 7, Day = 9},
           ]
@@ -1962,7 +1973,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = false,
           Genre = Genre.Sports,
-          PlayWith = new List<int> { 2 },
+          PlayWith = new List<int> { 0, 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 2016, Month = 6, Day = 20},
           ]
@@ -2003,6 +2014,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/empires"
           }
@@ -2066,6 +2078,8 @@ namespace ASP_site.Data.Initializers {
           ModForGameID = "sdk2006",
           EngineID = "source",
           SteamID = 215,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/es",
             GameDirectory = "Eternal-Silence"
@@ -2077,6 +2091,8 @@ namespace ASP_site.Data.Initializers {
           Description = "",
           EngineID = "source",
           SteamID = 91700,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/eye"
           }
@@ -2282,6 +2298,7 @@ namespace ASP_site.Data.Initializers {
           Description = "",
           ModForGameID = "halflife2",
           EngineID = "source",
+          Genre = Genre.FPS,
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
@@ -2691,6 +2708,7 @@ namespace ASP_site.Data.Initializers {
           Description = "House of the Dead 2 is a shooting game developed by Sega.",
           Genre = Genre.Lightgun,
           EngineID = "NAOMI",
+          PlayWith = new List<int> { 1, 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 1998, Month = 11, Day = 20, ReleaseVersion = ReleaseVersion.Arcade, Region = Region.JP},
             new ReleaseDate{Year = 1998, Month = 12, Day = 19, ReleaseVersion = ReleaseVersion.Arcade, Region = Region.NA},
@@ -2871,6 +2889,9 @@ namespace ASP_site.Data.Initializers {
           Name = "JoJo's Bizarre Adventure",
           Description = "JoJo's Bizarre Adventure (ジョジョの奇妙な冒険) is a fighting game developed by Capcom.",
           EngineID = "CPS-3",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
           Genre = Genre.Fighting,
           PlayWith = new List<int> { 1, 2 },
           ReleaseDates = [
@@ -2882,6 +2903,9 @@ namespace ASP_site.Data.Initializers {
           Name = "JoJo's Bizarre Adventure: Heritage for the Future",
           Description = "JoJo's Bizarre Adventure: Heritage for the Future (ジョジョの奇妙な冒険 未来への遺産) is a fighting game developed by Capcom.",
           EngineID = "CPS-3",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
           Genre = Genre.Fighting,
           PlayWith = new List<int> { 1, 2 },
           ReleaseDates = [
@@ -2894,6 +2918,8 @@ namespace ASP_site.Data.Initializers {
           Description = "",
           SteamID = 218,
           EngineID = "source",
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/kc",
             GameDirectory = "KingdomsCollide"
@@ -3023,6 +3049,9 @@ namespace ASP_site.Data.Initializers {
           Description = "Marvel vs. Street Fighter is a fighting game developed by Capcom.",
           EngineID = "CPS-2",
           Developer = "Capcom",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
           Genre = Genre.Fighting,
           PlayWith = new List<int> { 1, 2 },
           ReleaseDates = [
@@ -3035,6 +3064,9 @@ namespace ASP_site.Data.Initializers {
           Description = "Marvel vs. Capcom is a fighting game developed by Capcom.",
           EngineID = "CPS-2",
           Developer = "Capcom",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
           Genre = Genre.Fighting,
           PlayWith = new List<int> { 1, 2 },
           ReleaseDates = [
@@ -3047,6 +3079,9 @@ namespace ASP_site.Data.Initializers {
           Description = "Marvel vs. Capcom 2: New Age of Heroes is a crossover fighting game developed and published by Capcom.",
           EngineID = "NAOMI",
           Developer = "Capcom",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
           Genre = Genre.Fighting,
           PlayWith = new List<int> { 1, 2 },
           ReleaseDates = [
@@ -3060,6 +3095,7 @@ namespace ASP_site.Data.Initializers {
           SteamID = 70,
           EngineID = "goldsrc",
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/msr",
             GameDirectory = "msc",
@@ -3073,6 +3109,7 @@ namespace ASP_site.Data.Initializers {
           EngineID = "source",
           Description = "",
           SteamID = 1961680,
+          PlayWith = new List<int> { 0 },
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/msr",
             GameDirectory = "msc"
@@ -3336,6 +3373,7 @@ namespace ASP_site.Data.Initializers {
           Description = "",
           EngineID = "source",
           SteamID = 218,
+          Genre = Genre.FPS,
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/modcom",
             GameDirectory = "ModularCombat"
@@ -3412,6 +3450,7 @@ namespace ASP_site.Data.Initializers {
           EngineID = "source",
           SteamID = 224260,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/nmrih"
           }
@@ -3423,6 +3462,7 @@ namespace ASP_site.Data.Initializers {
           EngineID = "source",
           SteamID = 17710,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/nd"
           }
@@ -3434,6 +3474,7 @@ namespace ASP_site.Data.Initializers {
           EngineID = "source",
           SteamID = 382110,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/oc"
           }
@@ -3446,6 +3487,7 @@ namespace ASP_site.Data.Initializers {
           EngineID = "source",
           SteamID = 218,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/oc",
             GameDirectory = "obsidian"
@@ -3458,6 +3500,7 @@ namespace ASP_site.Data.Initializers {
           EngineID = "source",
           SteamID = 218,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/occupationcs",
             GameDirectory = "OccupationCS"
@@ -3469,7 +3512,8 @@ namespace ASP_site.Data.Initializers {
           Description = "",
           EngineID = "source",
           SteamID = 243750,
-          Genre = Genre.FPS,
+          Genre = Genre.FPS,  
+          PlayWith = new List<int> { 0 },
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/tf2",
             GameDirectory = "open_fortress"
@@ -3482,6 +3526,7 @@ namespace ASP_site.Data.Initializers {
           EngineID = "source",
           SteamID = 218,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/hl2",
             GameDirectory = "orion"
@@ -3627,6 +3672,10 @@ namespace ASP_site.Data.Initializers {
           GameID = "powerstone",
           Name = "Power Stone",
           Description = "Power Stone is a fighting game developed by Capcom.",
+          Developer = "Capcom",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
           EngineID = "NAOMI",
           Genre = Genre.Fighting,
           PlayWith = new List<int> { 1, 2 },
@@ -3647,6 +3696,10 @@ namespace ASP_site.Data.Initializers {
           Name = "Power Stone 2",
           Description = "Power Stone 2 is a fighting game developed by Capcom.",
           EngineID = "NAOMI",
+          Developer = "Capcom",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
           Genre = Genre.Fighting,
           PlayWith = new List<int> { 1, 2 },
           ReleaseDates = [
@@ -3670,6 +3723,7 @@ namespace ASP_site.Data.Initializers {
           IsOpenSource = true,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ReleaseDates = [
             new ReleaseDate{Year = 2007},
           ]
@@ -3709,6 +3763,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/pvkii",
           }
@@ -3741,6 +3796,7 @@ namespace ASP_site.Data.Initializers {
           IsCommunityMaintained = false,
           IsDeveloperMaintained = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 4 },
           ReleaseDates = [
             new ReleaseDate{Year = 2000},
           ]
@@ -4051,6 +4107,7 @@ namespace ASP_site.Data.Initializers {
           Description = "",
           EngineID = "goldsrc",
           SteamID = 70,
+          Genre = Genre.FPS,
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/sh",
             GameDirectory = "scihunt",
@@ -4176,6 +4233,7 @@ namespace ASP_site.Data.Initializers {
           SteamID = 218,
           EngineID = "goldsrc",
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/so",
             GameDirectory = "so"
@@ -4188,6 +4246,7 @@ namespace ASP_site.Data.Initializers {
           SteamID = 218,
           EngineID = "goldsrc",
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/so",
             GameDirectory = "so2"
@@ -4200,6 +4259,7 @@ namespace ASP_site.Data.Initializers {
           SteamID = 17730,
           EngineID = "source",
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/smashball",
           }
@@ -4211,6 +4271,7 @@ namespace ASP_site.Data.Initializers {
           SteamID = 215,
           EngineID = "goldsrc",
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/hl2",
             GameDirectory = "SmodTroopers",
@@ -4262,6 +4323,7 @@ namespace ASP_site.Data.Initializers {
           Description = "",
           SteamID = 215,
           EngineID = "source",
+          Genre = Genre.FPS,
           Developer = "Valve",
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/sdk",
@@ -4274,6 +4336,7 @@ namespace ASP_site.Data.Initializers {
           Description = "",
           SteamID = 218,
           EngineID = "source",
+          Genre = Genre.FPS,
           Developer = "Valve",
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/sdk",
@@ -4286,6 +4349,8 @@ namespace ASP_site.Data.Initializers {
           Description = "",
           SteamID = 243750,
           EngineID = "source",
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           Developer = "Valve",
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/sdk"
@@ -4349,6 +4414,9 @@ namespace ASP_site.Data.Initializers {
           Description = "Capcom's sequel to Street Fighter, this game launched the fighting game genre.",
           EngineID = "CPS-1",
           Developer = "Capcom",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
           Genre = Genre.Fighting,
           PlayWith = new List<int> { 1, 2 },
           ReleaseDates = [
@@ -4361,6 +4429,9 @@ namespace ASP_site.Data.Initializers {
           Description = "'Street Fighter Dash' in Japan, the first update to The World Warrior, this version added the 4 bosses as playable characters and allowed for mirror matches.",
           EngineID = "CPS-1",
           Developer = "Capcom",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
           Genre = Genre.Fighting,
           PlayWith = new List<int> { 1, 2 },
           ReleaseDates = [
@@ -4373,6 +4444,9 @@ namespace ASP_site.Data.Initializers {
           Description = "The second update to The World Warrior, this version added faster gameplay and some new moves.",
           EngineID = "CPS-1",
           Developer = "Capcom",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
           Genre = Genre.Fighting,
           PlayWith = new List<int> { 1, 2 },
           ReleaseDates = [
@@ -4385,6 +4459,9 @@ namespace ASP_site.Data.Initializers {
           Description = "The third update to The World Warrior, this version was a graphics overhaul and added four new characters: Cammy, Fei Long, Dee Jay, and T. Hawk.",
           EngineID = "CPS-2",
           Developer = "Capcom",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
           Genre = Genre.Fighting,
           PlayWith = new List<int> { 1, 2 },
           ReleaseDates = [
@@ -4397,6 +4474,9 @@ namespace ASP_site.Data.Initializers {
           Description = "The fourth update to The World Warrior, this version added super moves and Akuma as a playable character.",
           EngineID = "CPS-2",
           Developer = "Capcom",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
           Genre = Genre.Fighting,
           PlayWith = new List<int> { 1, 2 },
           ReleaseDates = [
@@ -4409,6 +4489,9 @@ namespace ASP_site.Data.Initializers {
           Description = "Street Fighter Alpha (ストリートファイターZERO) is a fighting game developed by Capcom.",
           EngineID = "CPS-2",
           Developer = "Capcom",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
           Genre = Genre.Fighting,
           PlayWith = new List<int> { 1, 2 },
           ReleaseDates = [
@@ -4421,6 +4504,9 @@ namespace ASP_site.Data.Initializers {
           Description = "Street Fighter Alpha 2 (ストリートファイターZERO2) is a fighting game developed by Capcom.",
           EngineID = "CPS-2",
           Developer = "Capcom",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
           Genre = Genre.Fighting,
           PlayWith = new List<int> { 1, 2 },
           ReleaseDates = [
@@ -4433,6 +4519,9 @@ namespace ASP_site.Data.Initializers {
           Description = "Super Puzzle Fighter II Turbo (スーパーパズルファイターIIX) is a fighting game developed by Capcom.",
           EngineID = "CPS-2",
           Developer = "Capcom",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
           Genre = Genre.Fighting,
           PlayWith = new List<int> { 1, 2 },
           ReleaseDates = [
@@ -4445,6 +4534,9 @@ namespace ASP_site.Data.Initializers {
           Description = "Street Fighter Alpha 3 (ストリートファイターZERO3) is a fighting game developed by Capcom.",
           EngineID = "CPS-2",
           Developer = "Capcom",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
           Genre = Genre.Fighting,
           PlayWith = new List<int> { 1, 2 },
           ReleaseDates = [
@@ -4457,6 +4549,9 @@ namespace ASP_site.Data.Initializers {
           Description = "Street Fighter 3 (ストリートファイターIII) is a fighting game developed by Capcom.",
           EngineID = "CPS-3",
           Developer = "Capcom",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
           Genre = Genre.Fighting,
           PlayWith = new List<int> { 1, 2 },
           ReleaseDates = [
@@ -4469,6 +4564,9 @@ namespace ASP_site.Data.Initializers {
           Description = "Street Fighter 3: 2nd Impact (ストリートファイターIII 2nd Impact) is a fighting game developed by Capcom.",
           EngineID = "CPS-3",
           Developer = "Capcom",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
           Genre = Genre.Fighting,
           PlayWith = new List<int> { 1, 2 },
           ReleaseDates = [
@@ -4481,6 +4579,9 @@ namespace ASP_site.Data.Initializers {
           Description = "Street Fighter 3: 3rd Strike (ストリートファイターIII 3rd Strike) is a fighting game developed by Capcom.",
           EngineID = "CPS-3",
           Developer = "Capcom",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
           Genre = Genre.Fighting,
           PlayWith = new List<int> { 1, 2 },
           ReleaseDates = [
@@ -4548,6 +4649,8 @@ namespace ASP_site.Data.Initializers {
           Description = "",
           ModForGameID = "sdk2013",
           EngineID = "source",
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           Developer = "",
           SteamID = 17520,
           ServerConfig = new ServerBrowserConfig {
@@ -4602,6 +4705,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ReleaseDates = [
             new ReleaseDate{Year = 2019, Month = 2, Day = 13, Region = Region.Worldwide}
           ]
@@ -4639,6 +4743,7 @@ namespace ASP_site.Data.Initializers {
           IsOpenSource = true,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/tf2",
             GameDirectory = "tf2classic"
@@ -4656,6 +4761,7 @@ namespace ASP_site.Data.Initializers {
           IsOpenSource = true,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ReleaseDates = [
             new ReleaseDate{Year = 2007},
           ]
@@ -4669,6 +4775,7 @@ namespace ASP_site.Data.Initializers {
           IsOpenSource = true,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ReleaseDates = [
             new ReleaseDate{Year = 2010},
           ]
@@ -4687,7 +4794,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
-          PlayWith = new List<int> { 4 },
+          PlayWith = new List<int> { 0, 4 },
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/tfc",
             GameDirectory = "tfc"
@@ -4775,6 +4882,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Treason",
           Description = "",
           EngineID = "goldsrc",
+          Genre = Genre.FPS,
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/treason",
             GameDirectory = "treason"
@@ -4869,6 +4977,7 @@ namespace ASP_site.Data.Initializers {
           GameID = "underworldbloodline",
           Name = "Underworld: Bloodline",
           EngineID = "goldsrc",
+          Genre = Genre.FPS,
           Description = "",
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/underworld",
@@ -5019,6 +5128,9 @@ namespace ASP_site.Data.Initializers {
           Description = "Vampire Savior (ヴァンパイアセイヴァー) is a fighting game developed by Capcom.",
           EngineID = "CPS-2",
           Developer = "Capcom",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
           Genre = Genre.Fighting,
           PlayWith = new List<int> { 1, 2 },
           ReleaseDates = [
@@ -5031,6 +5143,9 @@ namespace ASP_site.Data.Initializers {
           Description = "Vampire Hunter 2 (ヴァンパイアハンター2) is a fighting game developed by Capcom.",
           EngineID = "CPS-2",
           Developer = "Capcom",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
           Genre = Genre.Fighting,
           PlayWith = new List<int> { 1, 2 },
           ReleaseDates = [
@@ -5043,6 +5158,9 @@ namespace ASP_site.Data.Initializers {
           Description = "Vampire Savior 2 (ヴァンパイアセイヴァー2) is a fighting game developed by Capcom.",
           EngineID = "CPS-2",
           Developer = "Capcom",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
           Genre = Genre.Fighting,
           PlayWith = new List<int> { 1, 2 },
           ReleaseDates = [
@@ -5062,6 +5180,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/wanted",
             GameDirectory = "wantedsp"
@@ -5094,6 +5213,8 @@ namespace ASP_site.Data.Initializers {
           Name = "Wizard Wars",
           Description = "",
           EngineID = "goldsrc",
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/ww",
             GameDirectory = "wizardwars"
@@ -5122,6 +5243,9 @@ namespace ASP_site.Data.Initializers {
           Description = "X-Men: Children of the Atom is a fighting game developed by Capcom.",
           EngineID = "CPS-2",
           Developer = "Capcom",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
           Genre = Genre.Fighting,
           PlayWith = new List<int> { 1, 2 },
           ReleaseDates = [
@@ -5134,6 +5258,9 @@ namespace ASP_site.Data.Initializers {
           Description = "X-Men vs. Street Fighter is a fighting game developed by Capcom.",
           EngineID = "CPS-2",
           Developer = "Capcom",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
           Genre = Genre.Fighting,
           PlayWith = new List<int> { 1, 2 },
           ReleaseDates = [
