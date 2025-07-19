@@ -394,8 +394,9 @@ namespace ASP_site.Data.Initializers
                     Author = "Robert A. Heinlein",
                     WrittenAs = "Anson MacDonald",
                     PublicationYear = 1942,
+                    PublicationMonth = 3,
                     Type = BookType.ShortStory,
-                    Description = "2018 Hugo Award (Retro Hugos: Novelette): Nominated",
+                    Description = "Two men are trapped by an alien at the bottom of the ocean. 2018 Hugo Award (Retro Hugos: Novelette): Nominated",
                     Tags = new List<Tag>
                     {
                         new Tag { Name = "Collection: The Menace from Earth" },
@@ -4559,7 +4560,7 @@ namespace ASP_site.Data.Initializers
                     {
                         new Tag { Name = "Collection: Asimov's Mysteries" },
                         new Tag { Name = "Collection: The Best of Isaac Asimov" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" }
+                        new Tag { Name = "Collection: The Asimov Chronicles" }
                     }
                 },
                 new Book
@@ -4654,7 +4655,7 @@ namespace ASP_site.Data.Initializers
                         new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: I, Robot" },
                         new Tag { Name = "Collection: The Complete Robot" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" },
+                        new Tag { Name = "Collection: The Asimov Chronicles" },
                         new Tag { Name = "Collection: Robot Visions" }
                     }
                 },
@@ -4771,7 +4772,7 @@ namespace ASP_site.Data.Initializers
                         new Tag { Name = "Adapted for Radio" },
                         new Tag { Name = "Collection: Nightfall and Other Stories" },
                         new Tag { Name = "Collection: The Best of Isaac Asimov" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" },
+                        new Tag { Name = "Collection: The Asimov Chronicles" },
                         new Tag { Name = "Collection: The Complete Stories, Volume 1" },
                         new Tag { Name = "Collection: The Edge of Tomorrow" }
                     }
@@ -4846,7 +4847,7 @@ namespace ASP_site.Data.Initializers
                         new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: I, Robot" },
                         new Tag { Name = "Collection: The Complete Robot" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" },
+                        new Tag { Name = "Collection: The Asimov Chronicles" },
                         new Tag { Name = "Collection: Robot Visions" }
                     }
                 },
@@ -4978,7 +4979,7 @@ namespace ASP_site.Data.Initializers
                     Tags = new List<Tag>
                     {
                         new Tag { Name = "Collection: The Early Asimov" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" },
+                        new Tag { Name = "Collection: The Asimov Chronicles" },
                         new Tag { Name = "Collection: The Complete Stories, Volume 2" }
                     }
                 },
@@ -4996,7 +4997,7 @@ namespace ASP_site.Data.Initializers
                         new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: I, Robot" },
                         new Tag { Name = "Collection: The Complete Robot" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" }
+                        new Tag { Name = "Collection: The Asimov Chronicles" }
                     }
                 },
                 new Book
@@ -5044,7 +5045,7 @@ namespace ASP_site.Data.Initializers
                         new Tag { Name = "Galactic Empire" },
                         new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: The Early Asimov" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" },
+                        new Tag { Name = "Collection: The Asimov Chronicles" },
                         new Tag { Name = "Collection: The Complete Stories, Volume 2" }
                     }
                 },
@@ -5108,7 +5109,7 @@ namespace ASP_site.Data.Initializers
                         new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: I, Robot" },
                         new Tag { Name = "Collection: The Complete Robot" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" },
+                        new Tag { Name = "Collection: The Asimov Chronicles" },
                         new Tag { Name = "Collection: Robot Visions" },
                         new Tag { Name = "Collection: The Complete Stories, Volume 2" }
                     }
@@ -5129,7 +5130,7 @@ namespace ASP_site.Data.Initializers
                         new Tag { Name = "Adapted for Radio" },
                         new Tag { Name = "Collection: I, Robot" },
                         new Tag { Name = "Collection: The Complete Robot" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" },
+                        new Tag { Name = "Collection: The Asimov Chronicles" },
                         new Tag { Name = "Collection: Robot Dreams" },
                         new Tag { Name = "Collection: Robot Visions" }
                     }
@@ -5174,7 +5175,7 @@ namespace ASP_site.Data.Initializers
                     Tags = new List<Tag>
                     {
                         new Tag { Name = "Collection: The Early Asimov" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" }
+                        new Tag { Name = "Collection: The Asimov Chronicles" }
                     }
                 },
                 new Book
@@ -5188,7 +5189,7 @@ namespace ASP_site.Data.Initializers
                     Tags = new List<Tag>
                     {
                         new Tag { Name = "Collection: The Early Asimov" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" },
+                        new Tag { Name = "Collection: The Asimov Chronicles" },
                         new Tag { Name = "Collection: The Complete Stories, Volume 2" }
                     }
                 },
@@ -5288,7 +5289,7 @@ namespace ASP_site.Data.Initializers
                     Tags = new List<Tag>
                     {
                         new Tag { Name = "Collection: Nightfall and Other Stories" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" },
+                        new Tag { Name = "Collection: The Asimov Chronicles" },
                         new Tag { Name = "Collection: The Complete Stories, Volume 2" }
                     }
                 },
@@ -5354,7 +5355,7 @@ namespace ASP_site.Data.Initializers
                         new Tag { Name = "Collection: Nightfall and Other Stories" },
                         new Tag { Name = "Collection: The Edge of Tomorrow" },
                         new Tag { Name = "Collection: Robot Dreams" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" },
+                        new Tag { Name = "Collection: The Asimov Chronicles" },
                         new Tag { Name = "Collection: The Complete Stories, Volume 1" }
                     }
                 },
@@ -5429,7 +5430,7 @@ namespace ASP_site.Data.Initializers
                         new Tag { Name = "Collection: Earth Is Room Enough" },
                         new Tag { Name = "Collection: The Best of Isaac Asimov" },
                         new Tag { Name = "Collection: The Best Science Fiction of Isaac Asimov" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" },
+                        new Tag { Name = "Collection: The Asimov Chronicles" },
                         new Tag { Name = "Collection: The Complete Stories, Volume 1" }
                     }
                 },
@@ -5473,7 +5474,7 @@ namespace ASP_site.Data.Initializers
                         new Tag { Name = "Collection: The Martian Way and Other Stories" },
                         new Tag { Name = "Collection: The Best of Isaac Asimov" },
                         new Tag { Name = "Collection: Robot Dreams" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" },
+                        new Tag { Name = "Collection: The Asimov Chronicles" },
                         new Tag { Name = "Collection: The Complete Stories, Volume 2" }
                     }
                 },
@@ -5548,7 +5549,7 @@ namespace ASP_site.Data.Initializers
                         new Tag { Name = "Collection: Nightfall and Other Stories" },
                         new Tag { Name = "Collection: The Complete Robot" },
                         new Tag { Name = "Collection: Robot Dreams" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" },
+                        new Tag { Name = "Collection: The Asimov Chronicles" },
                         new Tag { Name = "Collection: The Complete Stories, Volume 1" }
                     }
                 },
@@ -5778,7 +5779,7 @@ namespace ASP_site.Data.Initializers
                         new Tag { Name = "Collection: Earth Is Room Enough" },
                         new Tag { Name = "Collection: Robot Dreams" },
                         new Tag { Name = "Collection: The Best Science Fiction of Isaac Asimov" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" },
+                        new Tag { Name = "Collection: The Asimov Chronicles" },
                         new Tag { Name = "Collection: The Complete Stories, Volume 1" }
                     }
                 },
@@ -6033,7 +6034,7 @@ namespace ASP_site.Data.Initializers
                         new Tag { Name = "Collection: The Edge of Tomorrow" },
                         new Tag { Name = "Collection: Robot Dreams" },
                         new Tag { Name = "Collection: The Best Science Fiction of Isaac Asimov" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" },
+                        new Tag { Name = "Collection: The Asimov Chronicles" },
                         new Tag { Name = "Collection: The Complete Stories, Volume 1" }
                     }
                 },
@@ -6161,7 +6162,7 @@ namespace ASP_site.Data.Initializers
                     Tags = new List<Tag>
                     {
                         new Tag { Name = "Collection: Nine Tomorrows" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" },
+                        new Tag { Name = "Collection: The Asimov Chronicles" },
                         new Tag { Name = "Collection: The Complete Stories, Volume 1" }
                     }
                 },
@@ -6391,7 +6392,7 @@ namespace ASP_site.Data.Initializers
                         new Tag { Name = "Collection: The Edge of Tomorrow" },
                         new Tag { Name = "Collection: Robot Dreams" },
                         new Tag { Name = "Collection: The Best Science Fiction of Isaac Asimov" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" },
+                        new Tag { Name = "Collection: The Asimov Chronicles" },
                         new Tag { Name = "Collection: The Complete Stories, Volume 1" }
                     }
                 },
@@ -6437,7 +6438,7 @@ namespace ASP_site.Data.Initializers
                     {
                         new Tag { Name = "Collection: Nightfall and Other Stories" },
                         new Tag { Name = "Collection: The Best Science Fiction of Isaac Asimov" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" },
+                        new Tag { Name = "Collection: The Asimov Chronicles" },
                         new Tag { Name = "Collection: The Complete Stories, Volume 1" }
                     }
                 },
@@ -6505,7 +6506,7 @@ namespace ASP_site.Data.Initializers
                     Tags = new List<Tag>
                     {
                         new Tag { Name = "Collection: Opus 100" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" }
+                        new Tag { Name = "Collection: The Asimov Chronicles" }
                     }
                 },
                 new Book
@@ -6535,7 +6536,7 @@ namespace ASP_site.Data.Initializers
                         new Tag { Name = "Multivac" },
                         new Tag { Name = "Collection: Nightfall and Other Stories" },
                         new Tag { Name = "Collection: Robot Dreams" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" },
+                        new Tag { Name = "Collection: The Asimov Chronicles" },
                         new Tag { Name = "Collection: The Complete Stories, Volume 1" }
                     }
                 },
@@ -6552,7 +6553,7 @@ namespace ASP_site.Data.Initializers
                         new Tag { Name = "Multivac" },
                         new Tag { Name = "Collection: Nightfall and Other Stories" },
                         new Tag { Name = "Collection: The Best Science Fiction of Isaac Asimov" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" },
+                        new Tag { Name = "Collection: The Asimov Chronicles" },
                         new Tag { Name = "Collection: The Complete Stories, Volume 1" }
                     }
                 },
@@ -6581,7 +6582,7 @@ namespace ASP_site.Data.Initializers
                     Tags = new List<Tag>
                     {
                         new Tag { Name = "Collection: The Early Asimov" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" }
+                        new Tag { Name = "Collection: The Asimov Chronicles" }
                     }
                 },
                 new Book
@@ -6598,7 +6599,7 @@ namespace ASP_site.Data.Initializers
                         new Tag { Name = "Collection: Robot Dreams" },
                         new Tag { Name = "Collection: The Best Science Fiction of Isaac Asimov" },
                         new Tag { Name = "Collection: Science Fiction by Asimov" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" },
+                        new Tag { Name = "Collection: The Asimov Chronicles" },
                         new Tag { Name = "Collection: The Complete Stories, Volume 1" }
                     }
                 },
@@ -6637,7 +6638,7 @@ namespace ASP_site.Data.Initializers
                     {
                         new Tag { Name = "Collection: Asimov's Mysteries" },
                         new Tag { Name = "Collection: The Best Mysteries of Isaac Asimov" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" },
+                        new Tag { Name = "Collection: The Asimov Chronicles" },
                         new Tag { Name = "Collection: The Complete Stories, Volume 2" }
                     }
                 },
@@ -6668,7 +6669,7 @@ namespace ASP_site.Data.Initializers
                         new Tag { Name = "Collection: The Best of Isaac Asimov" },
                         new Tag { Name = "Collection: The Edge of Tomorrow" },
                         new Tag { Name = "Collection: Robot Dreams" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" },
+                        new Tag { Name = "Collection: The Asimov Chronicles" },
                         new Tag { Name = "Collection: The Complete Stories, Volume 2" }
                     }
                 },
@@ -6700,7 +6701,7 @@ namespace ASP_site.Data.Initializers
                     Tags = new List<Tag>
                     {
                         new Tag { Name = "Collection: Buy Jupiter and Other Stories" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" },
+                        new Tag { Name = "Collection: The Asimov Chronicles" },
                         new Tag { Name = "Collection: The Complete Stories, Volume 2" }
                     }
                 },
@@ -6759,7 +6760,7 @@ namespace ASP_site.Data.Initializers
                         new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: The Bicentennial Man and Other Stories" },
                         new Tag { Name = "Collection: The Complete Robot" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" },
+                        new Tag { Name = "Collection: The Asimov Chronicles" },
                         new Tag { Name = "Collection: Robot Visions" },
                         new Tag { Name = "Collection: The Complete Stories, Volume 2" }
                     }
@@ -6788,7 +6789,7 @@ namespace ASP_site.Data.Initializers
                     Tags = new List<Tag>
                     {
                         new Tag { Name = "Collection: The Best Mysteries of Isaac Asimov" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" },
+                        new Tag { Name = "Collection: The Asimov Chronicles" },
                     }
                 },
                 new Book
@@ -6857,7 +6858,7 @@ namespace ASP_site.Data.Initializers
                         new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: The Best of Isaac Asimov" },
                         new Tag { Name = "Collection: The Complete Robot" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" },
+                        new Tag { Name = "Collection: The Asimov Chronicles" },
                         new Tag { Name = "Collection: Robot Visions" },
                         new Tag { Name = "Collection: The Complete Stories, Volume 2" }
                     }
@@ -6997,7 +6998,7 @@ namespace ASP_site.Data.Initializers
                         new Tag { Name = "Collection: Opus 200" },
                         new Tag { Name = "Collection: The Complete Robot" },
                         new Tag { Name = "Collection: Robot Dreams" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" },
+                        new Tag { Name = "Collection: The Asimov Chronicles" },
                         new Tag { Name = "Collection: The Complete Stories, Volume 2" }
                     }
                 },
@@ -7124,7 +7125,7 @@ namespace ASP_site.Data.Initializers
                         new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: The Bicentennial Man and Other Stories" },
                         new Tag { Name = "Collection: The Complete Robot" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" },
+                        new Tag { Name = "Collection: The Asimov Chronicles" },
                         new Tag { Name = "Collection: The Complete Stories, Volume 2" }
                     }
                 },
@@ -7328,7 +7329,7 @@ namespace ASP_site.Data.Initializers
                     {
                         new Tag { Name = "Collection: More Tales of the Black Widowers" },
                         new Tag { Name = "Collection: Opus 200" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" }
+                        new Tag { Name = "Collection: The Asimov Chronicles" }
                     }
                 },
                 new Book
@@ -7449,7 +7450,7 @@ namespace ASP_site.Data.Initializers
                         new Tag { Name = "Collection: The Bicentennial Man and Other Stories" },
                         new Tag { Name = "Collection: Opus 200" },
                         new Tag { Name = "Collection: The Complete Robot" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" },
+                        new Tag { Name = "Collection: The Asimov Chronicles" },
                         new Tag { Name = "Collection: The Complete Stories, Volume 2" }
                     }
                 },
@@ -7592,7 +7593,7 @@ namespace ASP_site.Data.Initializers
                         new Tag { Name = "Collection: 3 by Asimov" },
                         new Tag { Name = "Collection: The Complete Robot" },
                         new Tag { Name = "Collection: Robot Dreams" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" }
+                        new Tag { Name = "Collection: The Asimov Chronicles" }
                     }
                 },
                 new Book
@@ -7717,7 +7718,7 @@ namespace ASP_site.Data.Initializers
                         new Tag { Name = "Collection: The Winds of Change and Other Stories" },
                         new Tag { Name = "Collection: The Edge of Tomorrow" },
                         new Tag { Name = "Collection: The Best Science Fiction of Isaac Asimov" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" }
+                        new Tag { Name = "Collection: The Asimov Chronicles" }
                     }
                 },
                 new Book
@@ -7753,7 +7754,7 @@ namespace ASP_site.Data.Initializers
                     Tags = new List<Tag>
                     {
                         new Tag { Name = "Collection: The Winds of Change and Other Stories" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" }
+                        new Tag { Name = "Collection: The Asimov Chronicles" }
                     }
                 },
                 new Book
@@ -7906,7 +7907,7 @@ namespace ASP_site.Data.Initializers
                     Tags = new List<Tag>
                     {
                         new Tag { Name = "Collection: The Winds of Change and Other Stories" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" }
+                        new Tag { Name = "Collection: The Asimov Chronicles" }
                     }
                 },
                 new Book
@@ -8273,7 +8274,7 @@ namespace ASP_site.Data.Initializers
                     Tags = new List<Tag>
                     {
                         new Tag { Name = "Collection: The Winds of Change and Other Stories" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" }
+                        new Tag { Name = "Collection: The Asimov Chronicles" }
                     }
                 },
                 new Book
@@ -8317,7 +8318,7 @@ namespace ASP_site.Data.Initializers
                     {
                         new Tag { Name = "Collection: The Winds of Change and Other Stories" },
                         new Tag { Name = "Collection: Robot Dreams" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" }
+                        new Tag { Name = "Collection: The Asimov Chronicles" }
                     }
                 },
                 new Book
@@ -8715,7 +8716,7 @@ namespace ASP_site.Data.Initializers
                     Tags = new List<Tag>
                     {
                         new Tag { Name = "Collection: Azazel" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" }
+                        new Tag { Name = "Collection: The Asimov Chronicles" }
                     }
                 },
                 new Book
@@ -8782,7 +8783,7 @@ namespace ASP_site.Data.Initializers
                     Tags = new List<Tag>
                     {
                         new Tag { Name = "Collection: Banquets of the Black Widowers" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" }
+                        new Tag { Name = "Collection: The Asimov Chronicles" }
                     }
                 },
                 new Book
@@ -8952,7 +8953,7 @@ namespace ASP_site.Data.Initializers
                     Tags = new List<Tag>
                     {
                         new Tag { Name = "Collection: Puzzles of the Black Widowers" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" }
+                        new Tag { Name = "Collection: The Asimov Chronicles" }
                     }
                 },
                 new Book
@@ -9095,7 +9096,7 @@ namespace ASP_site.Data.Initializers
                     Tags = new List<Tag>
                     {
                         new Tag { Name = "Collection: Azazel" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" }
+                        new Tag { Name = "Collection: The Asimov Chronicles" }
                     }
                 },
                 new Book
@@ -9350,7 +9351,7 @@ namespace ASP_site.Data.Initializers
                     Tags = new List<Tag>
                     {
                         new Tag { Name = "Collection: Puzzles of the Black Widowers" },
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" }
+                        new Tag { Name = "Collection: The Asimov Chronicles" }
                     }
                 },
                 new Book
@@ -9429,7 +9430,7 @@ namespace ASP_site.Data.Initializers
                     Description = "First published in Isaac Asimov's Science Fiction Magazine in November, 1988.",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Collection: The Asimov Chronicles: Fifty Years of Isaac Asimov" }
+                        new Tag { Name = "Collection: The Asimov Chronicles" }
                     }
                 },
                 new Book
@@ -12575,14 +12576,6 @@ namespace ASP_site.Data.Initializers
                     {
                         new Tag { Name = "Juvenile" }
                     }
-                },
-                new Book
-                {
-                    Title = "The Asimov Chronicles: Fifty Years of Isaac Asimov",
-                    Author = "Isaac Asimov",
-                    PublicationYear = 1989,
-                    Type = BookType.Novel,
-                    Description = "First published by Dark Harvest in 1989."
                 },
                 new Book
                 {

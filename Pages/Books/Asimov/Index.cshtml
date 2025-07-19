@@ -91,11 +91,11 @@
 
 <section class="grid mt-3">
     <div class="row g-0 bg-dark text-white fw-bold">
-        <div class="p-1 text-center col-1 col-sm-1">Year</div>
+        <div class="p-1 text-center col-1 col-sm-2">Year</div>
         <div class="p-1 text-center col-1 col-sm-1">Type</div>
         <div class="p-1 text-start col-5 col-sm-3">Title <i>(@(Model.Books?.Count ?? 0) shown)</i></div>
         <div class="p-1 text-start col-2 col-sm-2">Tags</div>
-        <div class="p-1 text-start col-3 col-sm-5">Collections</div>
+        <div class="p-1 text-start col-3 col-sm-4">Collections</div>
     </div>
 
     @if(Model.Books != null && Model.Books.Any()) {
@@ -104,7 +104,7 @@
             var generalTags = book.Tags.Where(t => !t.Name.StartsWith("Collection: ")).ToList();
 
             <a asp-page="../Book" asp-route-BookTitle="@book.Title" class="row g-0 text-decoration-none text-reset border-bottom table-row-hover">
-                <div class="p-1 text-center col-12 col-sm-1">
+                <div class="p-1 text-center col-12 col-sm-2">
                     @if (book.PublicationMonth.HasValue)
                     {
                         <span>@ViewHelper.GetMonthName(book.PublicationMonth), </span>
@@ -119,7 +119,7 @@
                         <span class="badge bg-secondary me-1">@tag.Name</span>
                     }
                 </div>
-                <div class="p-1 text-start col-12 col-sm-5 d-flex flex-wrap align-content-start">
+                <div class="p-1 text-start col-12 col-sm-4 d-flex flex-wrap align-content-start">
                     @foreach (var collection in collections)
                     {
                         <span class="badge bg-secondary me-1 mb-1">@collection.Name.Replace("Collection: ", "")</span>

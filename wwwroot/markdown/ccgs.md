@@ -174,7 +174,7 @@ Current formats:
 
 ### Yu-Gi-Oh
 
-Yu-Gi-Oh! is another legacy CCG that is still around after many years. Created in 1999 by Konami, it was originally quite similar to MtG but has evolved in its own way. It has a reputation for more complicated mechanics than other CCGs, with complicated cards and decks. Nearly every deck in Yu-Gi-Oh plays like a combo deck in other games. Card draw is a major resource in Yu-Gi-Oh, so you are often strongest on your first turn, when you have the most cards, rather than in MtG where you build up to more powerful plays. The game recently made the 'Time Wizard' format official, where the legal cards are based on a previous time, for example 2009 or 2014.
+Yu-Gi-Oh! is another legacy CCG that is still around after many years. Created in 1999 by Konami, it was originally quite similar to MtG but has evolved in its own way. Card draw is a major resource in Yu-Gi-Oh, so you are often strongest on your first turn, when you have the most cards, rather than in MtG where you build up to more powerful plays. It has a reputation for more complicated mechanics than other CCGs, with complicated cards and decks; nearly every deck in Yu-Gi-Oh plays like a combo deck in other games. Somewhat uniquely, the game does not have card rotation, so power creep has made modern decks absurdly powerful. Konami recently made the 'Time Wizard' format official, where the legal cards are based on a previous time, for example '[goat](https://formatlibrary.com/formats/goat)' format from 2005 or '[edison](https://formatlibrary.com/formats/edison)' format from 2010.
 
 | Name                          | Release           |
 |-------------------------------|-------------------|
@@ -999,13 +999,13 @@ The following games are no longer in print, and are just here for reference.
 | Bratz Fashion Party Fever Game    | 2004  | Upper Deck                 | Not in print |
 | Buffy the Vampire Slayer CCG      | 2001  | Score Entertainment        | Not in print |
 | Bumblings - The funtasy card game | 2014  | Gernilex Bt.               | Not in print |
-| C-23                               | 1998  | Wizards of the Coast       | Not in print |
-| Call of Cthulhu CCG                | 2004  | Fantasy Flight Games       | Not in print |
-| Captain Tsubasa TCG                | 2002  | Konami                     | Not in print |
-| Cardcaptors TCG                    | 2001  | Upper Deck                 | Not in print |
-| Case Closed TCG                    | 2005  | Score Entertainment        | Not in print |
-| The Caster Chronicles TCG          | 2017  | Force of Will Ltd.         | Website down |
-| Champions                         | 1995  | F.X. Schmid/Gibsons Games | Not in print |
+| C-23                              | 1998  | Wizards of the Coast       | Not in print |
+| Call of Cthulhu: The Card Game    | 2004-2015  | Fantasy Flight Games       | [Became an LCG in 2008, stopped in 2015](https://en.wikipedia.org/wiki/Call_of_Cthulhu:_The_Card_Game) |
+| Captain Tsubasa TCG               | 2002  | Konami                     | Not in print |
+| Cardcaptors TCG                   | 2001  | Upper Deck                 | Not in print |
+| Case Closed TCG                   | 2005  | Score Entertainment        | Not in print |
+| The Caster Chronicles TCG         | 2017  | Force of Will Ltd.         | Force of Will spin-off |
+| Champions                         | 1995  | F.X. Schmid/Gibsons Games  | Not in print |
 | Chaos TCG                         | ?     | Bushiroad                  | Not in print |
 | Chaotic TCG                       | 2007  | 4Kids Entertainment        | Not in print |
 | City of Heroes CCG                | 2006  | AEG                        | [Discontinued in 2007](https://en.wikipedia.org/wiki/City_of_Heroes_Collectible_Card_Game) |
@@ -1051,7 +1051,7 @@ The following games are no longer in print, and are just here for reference.
 | The Dragon's Wrath                  | 1995  | Naipes Heraclio Fournier    | Not in print |
 | Draim Arena                         | 2007  | Draim                       | Not in print |
 | Dredd: The Card Game                | 2000  | Round Table Productions     | Not in print |
-| Dune                                | 1997  | Last Unicorn Games/Five Rings/WotC | Not in print |
+| Dune (Eye of the Storm)             | 1997-1998  | Last Unicorn Games/Five Rings/WotC | [Cancelled in 1998](https://en.wikipedia.org/wiki/Dune_(card_game)) |
 | Eagles                              | 1995  | Columbia Games              | Not in print |
 | Echelons of Fire                    | 1995  | Medallion Simulations      | Not in print |
 | Echelons of Fury                    | 1995  | Medallion Simulations      | Not in print |
@@ -1078,7 +1078,7 @@ The following games are no longer in print, and are just here for reference.
 | Future Card Buddyfight             | 2013  | Bushiroad                  | Not in print |
 | G.I. Joe Trading Card Game         | 2004  | Wizards of the Coast       | Not in print |
 | Galactic Empires                   | 1994  | Companion Games            | Not in print |
-| A Game of Thrones                  | 2002  | Fantasy Flight Games       | Not in print |
+| A Game of Thrones                  | 2002  | Fantasy Flight Games       | [Converted to LCG in 2008, 2nd Edition in 2015, stopped in 2020](https://en.wikipedia.org/wiki/A_Game_of_Thrones_(card_game)) |
 | The Garbage Gang                   | 2008  | Topps                      | Not in print |
 | Gasaraki Mission Director          | 1999  | Bandai                     | Not in print |
 | Geek Fight!                        | 2008  | Diving Dragon Games        | In print, no new sets |
@@ -1086,7 +1086,7 @@ The following games are no longer in print, and are just here for reference.
 | Gridiron Fantasy Football          | 1995  | Upper Deck                 | Not in print |
 | Guardians                          | 1995  | FPG, Inc.                 | Not in print |
 | Gundam M.S. War TCG                | 2001  | Bandai                     | Not in print |
-| Gundam War: Mobile Suit Gundam     | 2005  | Bandai                     | Not in print |
+| Gundam War: Mobile Suit Gundam CCG | 2005  | Bandai                     | [Lasted 1999-2018 in Japan, 45 sets](https://en.wikipedia.org/wiki/Gundam_War_Collectible_Card_Game) |
 | Gundam War Nex-A                   | 2011  | Bandai                     | Not in print |
 | Gundam Cross War                   | 2015  | Bandai                     | Not in print |
 | Gwiezdna Kohorta                    | 2005  | Wydawnictwo Imperium      | Not in print |
@@ -1099,7 +1099,7 @@ The following games are no longer in print, and are just here for reference.
 | High Stakes Drifter                 | 2005  | WizKids                   | Not in print |
 | Highlander: The Card Game           | 1995  | Thunder Castle Games      | Not in print |
 | Highlander: The Card Game 2E        | 2006  | Rapidpod                  | Not in print |
-| Horus Heresy                        | 2003  | Sabertooth Games          | Not in print |
+| Horus Heresy                        | 2003-2008  | Sabertooth Games          | [Stopped in 2008](https://en.wikipedia.org/wiki/Horus_Heresy_(card_game)) |
 | Hot Wheels Acceleracers CCG         | 2005  | Mattel                   | Not in print |
 | Humaliens Collectible Card Game     | 2003  | AEG                       | Not in print |
 | HumanKind                           | 2005  | SALO                      | Not in print |
@@ -1256,6 +1256,8 @@ The following games are no longer in print, and are just here for reference.
 | Warcardz                               | 2008  | Warmoves Inc.             | Not in print |
 | WarCry                                 | 2003  | Sabertooth Games          | Not in print |
 | Warhammer 40,000 CCG                   | 2001  | Sabertooth Games          | Not in print |
+| Warhammer 40,000: Conquest             | 2014-2017 | Fantasy Flight Games  | [LCG stopped in 2017](https://en.wikipedia.org/wiki/Warhammer_40,000:_Conquest) |
+| Warhammer: Invasion                   | 2009-2013 | Fantasy Flight Games  | [LCG stopped in 2013](https://en.wikipedia.org/wiki/Warhammer:_Invasion) |
 | Warhammer AoS: Champions               | 2018  | PlayFusion Limited/Games Workshop | Not in print |
 | Warlords                               | 1997  | Iron Crown Enterprises    | [Not in print](https://en.wikipedia.org/wiki/Warlords_(card_game) Based on WarLords III) |
 | Wars of the Past                        | 2021  | Finople Games/Finople Games | Website down |

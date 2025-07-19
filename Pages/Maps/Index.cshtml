@@ -57,14 +57,14 @@
             <a class="row g-0 text-decoration-none text-reset border-bottom" asp-page="./Map" asp-route-id="@map.MapID">
                 <div class="p-1 col-sm-1 @(map.IsCompetitive ? "text-primary fw-bold" : "text-white")">@map.MapID</div>
                 <div class="py-1 px-0 text-center col-sm-1 d-flex justify-content-around align-items-center">
-                    @(map.GameInfo.Any(g => g.GameID == "CS16") ? Html.Raw("<img src=\"/image/cs16.svg\" alt=\"CS 1.6\" class=\"game-icon\" title=\"Counter-Strike 1.6\" />") : Html.Raw("<span class=\"game-icon\"></span>"))
-                    @(map.GameInfo.Any(g => g.GameID == "CSX") ? Html.Raw("<img src=\"/image/csx.svg\" alt=\"CSX\" class=\"game-icon\" title=\"Counter-Strike Xbox Edition (CSX)\" />") : Html.Raw("<span class=\"game-icon\"></span>"))
-                    @(map.GameInfo.Any(g => g.GameID == "CSCZ") ? Html.Raw("<img src=\"/image/cscz.svg\" alt=\"CS:CZ\" class=\"game-icon\" title=\"Counter-Strike: Condition Zero\" />") : Html.Raw("<span class=\"game-icon\"></span>"))
+                    @(map.GameInfo.Any(g => g.GameID == "cs16") ? Html.Raw("<img src=\"/image/cs16.svg\" alt=\"CS 1.6\" class=\"game-icon\" title=\"Counter-Strike 1.6\" />") : Html.Raw("<span class=\"game-icon\"></span>"))
+                    @(map.GameInfo.Any(g => g.GameID == "csx") ? Html.Raw("<img src=\"/image/csx.svg\" alt=\"CSX\" class=\"game-icon\" title=\"Counter-Strike Xbox Edition (CSX)\" />") : Html.Raw("<span class=\"game-icon\"></span>"))
+                    @(map.GameInfo.Any(g => g.GameID == "cscz") ? Html.Raw("<img src=\"/image/cscz.svg\" alt=\"CS:CZ\" class=\"game-icon\" title=\"Counter-Strike: Condition Zero\" />") : Html.Raw("<span class=\"game-icon\"></span>"))
                 </div>
                 <div class="py-1 px-0 text-center col-sm-1 d-flex justify-content-around align-items-center">
-                    @(map.GameInfo.Any(g => g.GameID == "CSS") ? Html.Raw("<img src=\"/image/css.svg\" alt=\"CSS\" class=\"game-icon\" title=\"Counter-Strike: Source\" />") : Html.Raw("<span class=\"game-icon\"></span>"))
-                    @(map.GameInfo.Any(g => g.GameID == "CSGO") ? Html.Raw("<img src=\"/image/csgo.svg\" alt=\"CS:GO\" class=\"game-icon\" title=\"Counter-Strike: Global Offensive\" />") : Html.Raw("<span class=\"game-icon\"></span>"))
-                    @(map.GameInfo.Any(g => g.GameID == "CS2") ? Html.Raw("<img src=\"/image/cs2.svg\" alt=\"CS2\" class=\"game-icon\" title=\"Counter-Strike 2\" />") : Html.Raw("<span class=\"game-icon\"></span>"))
+                    @(map.GameInfo.Any(g => g.GameID == "css") ? Html.Raw("<img src=\"/image/css.svg\" alt=\"CSS\" class=\"game-icon\" title=\"Counter-Strike: Source\" />") : Html.Raw("<span class=\"game-icon\"></span>"))
+                    @(map.GameInfo.Any(g => g.GameID == "csgo") ? Html.Raw("<img src=\"/image/csgo.svg\" alt=\"CS:GO\" class=\"game-icon\" title=\"Counter-Strike: Global Offensive\" />") : Html.Raw("<span class=\"game-icon\"></span>"))
+                    @(map.GameInfo.Any(g => g.GameID == "cs2") ? Html.Raw("<img src=\"/image/cs2.svg\" alt=\"CS2\" class=\"game-icon\" title=\"Counter-Strike 2\" />") : Html.Raw("<span class=\"game-icon\"></span>"))
                 </div>
                 <div class="p-1 col-sm">@map.Description</div>
             </a>
@@ -85,12 +85,12 @@
             <a class="row g-0 text-decoration-none text-reset border-bottom" asp-page="./Map" asp-route-id="@map.MapID">
                 <div class="p-1 col-sm-1 @(map.IsCompetitive ? "text-primary fw-bold" : "text-white")">@map.MapID</div>
                 <div class="py-1 px-0 text-center col-sm-1 d-flex justify-content-around align-items-center">
-                    @(map.GameInfo.Any(g => g.GameID == "QWTF") ? Html.Raw("<img src=\"/image/qwtf.svg\" alt=\"QWTF\" class=\"game-icon\" title=\"QuakeWorld Team Fortress\" />") : Html.Raw("<span class=\"game-icon\"></span>"))
-                    @(map.GameInfo.Any(g => g.GameID == "TFC") ? Html.Raw("<img src=\"/image/tfc.svg\" alt=\"TFC\" class=\"game-icon\" title=\"Team Fortress Classic\" />") : Html.Raw("<span class=\"game-icon\"></span>"))
+                    @(map.GameInfo.Any(g => g.GameID == "qwtf") ? Html.Raw("<img src=\"/image/qwtf.svg\" alt=\"QWTF\" class=\"game-icon\" title=\"QuakeWorld Team Fortress\" />") : Html.Raw("<span class=\"game-icon\"></span>"))
+                    @(map.GameInfo.Any(g => g.GameID == "tfc") ? Html.Raw("<img src=\"/image/tfc.svg\" alt=\"TFC\" class=\"game-icon\" title=\"Team Fortress Classic\" />") : Html.Raw("<span class=\"game-icon\"></span>"))
                 </div>
                 <div class="py-1 px-0 text-center col-sm-1 d-flex justify-content-around align-items-center">
-                    @(map.GameInfo.Any(g => g.GameID == "FF") ? Html.Raw("<img src=\"/image/ff.svg\" alt=\"FF\" class=\"game-icon\" title=\"Fortress Forever\" />") : Html.Raw("<span class=\"game-icon\"></span>"))
-                    @(map.GameInfo.Any(g => g.GameID == "TF2") ? Html.Raw("<img src=\"/image/tf2.svg\" alt=\"TF2\" class=\"game-icon\" title=\"Team Fortress 2\" />") : Html.Raw("<span class=\"game-icon\"></span>"))
+                    @(map.GameInfo.Any(g => g.GameID == "ff") ? Html.Raw("<img src=\"/image/ff.svg\" alt=\"FF\" class=\"game-icon\" title=\"Fortress Forever\" />") : Html.Raw("<span class=\"game-icon\"></span>"))
+                    @(map.GameInfo.Any(g => g.GameID == "tf2") ? Html.Raw("<img src=\"/image/tf2.svg\" alt=\"TF2\" class=\"game-icon\" title=\"Team Fortress 2\" />") : Html.Raw("<span class=\"game-icon\"></span>"))
                 </div>
                 <div class="p-1 col-sm">@map.Description</div>
             </a>

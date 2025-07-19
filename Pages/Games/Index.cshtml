@@ -60,26 +60,30 @@
   <div class="row bg-dark text-white fw-bold g-0">
     <div class="p-1 text-center col-sm-1">Year</div>
     <div class="p-1 col-sm-3">Name <i>(@(Model.Games?.Count ?? 0) shown)</i></div>
-    <div class="p-1 text-center col-sm-1">Players</div>
+    <div class="p-1 text-center col-sm-2">Players</div>
     <div class="p-1 text-center col-sm-2">Engine</div>
     <div class="p-1 text-center col-sm-1">Genre</div>
     <div class="p-1 text-center col-sm-1">Availability</div>
     <div class="p-1 text-center col-sm-2">Developer</div>
-    <div class="p-1 text-center col-sm-1">Maintenance</div>
   </div>
 
   @if(Model.Games != null) {
     @foreach (Game g in Model.Games) {
-      <a class="row g-0 text-decoration-none text-reset border-bottom @Model.GameClass(g)" asp-page="./Game" asp-route-GameID="@g.GameID">
+      <div class="row g-0 text-decoration-none text-reset border-bottom @Model.GameClass(g) position-relative">
         <div class="p-1 text-center col-sm-1">@(g.Year?.ToString() ?? "-")</div>
         <div class="p-1 col-sm-3 text-white">
           @(g.Name ?? "-")
-          @*@if (!string.IsNullOrEmpty(g.ModForGameID))
-          {
-            @($" ({g.ModForGameID} mod)")
-          }*@
+          <a asp-page="./Game" asp-route-GameID="@g.GameID" class="stretched-link"></a>
         </div>
-        <div class="p-1 text-center col-sm-1" title="S = Single Player, M = Multiplayer">@Model.FormatPlayerCounts(g.PlayWith)</div>
+        <div class="p-1 col-sm-2 d-flex justify-content-center align-items-center" title="S = Single Player, M = Multiplayer">
+            <span>@Model.FormatPlayerCounts(g.PlayWith)</span>
+            @if (g.ServerConfig != null)
+            {
+                <a asp-page="/Servers/Index" asp-route-GameId="@g.GameID" class="ps-1 position-relative" style="z-index: 1;">
+                    <img src="~/image/Game.svg" alt="Server Browser" title="View Server Browser" style="height: 1em;" />
+                </a>
+            }
+        </div>
         <div class="p-1 text-center col-sm-2">@(g.EngineID ?? "-")</div>
         <div class="p-1 text-center col-sm-1">
           @if (g.Genre != null)
@@ -120,29 +124,29 @@
             }
           }
         </div>
-        <div class="p-1 text-center col-sm-2">@(g.Developer ?? "-")</div>
-        <div class="p-1 text-center col-sm-1">
-          @if (g.RequiresCommunityPatch)
-          {
-            <img src="~/image/patch.svg" alt="Needs Patches" title="Needs Patches" />
-          }
-          else
-          {
-            @if (g.IsDeveloperMaintained == true)
-            {
-              <img src="~/image/dev.svg" alt="Dev Maintained" title="Developer Maintained" />
-            }
-            @if (g.IsCommunityMaintained == true)
-            {
-              <img src="~/image/comm.svg" alt="Community Maintained" title="Community Maintained" />
-            }
-            @if (g.IsDeveloperMaintained != true && g.IsCommunityMaintained != true)
-            {
-              @("-")
-            }
-          }
+        <div class="p-1 text-center col-sm-2">
+            <div class="d-flex justify-content-center align-items-center">
+                <span class="pe-1">@(g.Developer ?? "-")</span>
+                <span>
+                @if (g.RequiresCommunityPatch)
+                {
+                    <img src="~/image/patch.svg" alt="Needs Patches" title="Needs Patches" style="height: 1em;" />
+                }
+                else
+                {
+                    @if (g.IsDeveloperMaintained == true)
+                    {
+                    <img src="~/image/dev.svg" alt="Dev Maintained" title="Developer Maintained" style="height: 1em;" />
+                    }
+                    @if (g.IsCommunityMaintained == true)
+                    {
+                    <img src="~/image/comm.svg" alt="Community Maintained" title="Community Maintained" style="height: 1em;" />
+                    }
+                }
+                </span>
+            </div>
         </div>
-      </a>
+      </div>
     }
   }
 </section>

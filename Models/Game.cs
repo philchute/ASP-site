@@ -79,7 +79,7 @@ namespace ASP_site.Models {
     }
   }
 
-  public enum Genre { FPS, RTS, TBS, MOBA, Sports, Fighting, Adventure, Lightgun, Puzzle }
+  public enum Genre { FPS, RTS, TBS, MOBA, Sports, Fighting, Adventure, Lightgun, Puzzle, Racing }
   public enum Region { Worldwide, NA, SA, EU, UK, JP, AU, Asia }
   public enum ReleaseVersion { Alpha, Beta, Demo, FullGame, SteamRelease, ReRelease, LatestUpdate, Arcade, Dreamcast, GameCube, Xbox, PSP, PS1, PS2, PS3, PS4, PS5, Xbox360, Wii, WiiU, Switch, Mobile, VR }
   

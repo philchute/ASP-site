@@ -55,26 +55,26 @@ namespace ASP_site.Pages.Maps
             if (GameType == "Counterstrike")
             {
                 CSMaps = maps.Where(m => m.GameInfo.Any(g => 
-                    g.GameID == "CS16" || g.GameID == "CSCZ" || g.GameID == "CSS" || 
-                    g.GameID == "CSGO" || g.GameID == "CS2")).ToList();
+                    g.GameID == "cs16" || g.GameID == "cscz" || g.GameID == "css" || 
+                    g.GameID == "csgo" || g.GameID == "cs2" || g.GameID == "csx")).ToList();
                 TFMaps = new();
             }
             else if (GameType == "Team Fortress")
             {
                 TFMaps = maps.Where(m => m.GameInfo.Any(g => 
-                    g.GameID == "QWTF" || g.GameID == "TFC" || g.GameID == "FF")).ToList();
+                    g.GameID == "qwtf" || g.GameID == "tfc" || g.GameID == "ff" || g.GameID == "tf2")).ToList();
                 CSMaps = new();
             }
             else
             {
                 // Filter CS maps
                 CSMaps = maps.Where(m => m.GameInfo.Any(g => 
-                    g.GameID == "CS16" || g.GameID == "CSCZ" || g.GameID == "CSS" || 
-                    g.GameID == "CSGO" || g.GameID == "CS2")).ToList();
+                    g.GameID == "cs16" || g.GameID == "cscz" || g.GameID == "css" || 
+                    g.GameID == "csgo" || g.GameID == "cs2" || g.GameID == "csx")).ToList();
                 
                 // Filter TF maps
                 TFMaps = maps.Where(m => m.GameInfo.Any(g => 
-                    g.GameID == "QWTF" || g.GameID == "TFC" || g.GameID == "FF")).ToList();
+                    g.GameID == "qwtf" || g.GameID == "tfc" || g.GameID == "ff" || g.GameID == "tf2")).ToList();
             }
         }
     }
