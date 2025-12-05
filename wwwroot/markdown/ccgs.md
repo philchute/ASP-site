@@ -1,6 +1,6 @@
 # Customizable Card Games (CCGs)
 
-This page provides an overview of active Customizable Card Games (CCGs) in North America as of July 2025 and some links to resources.
+This page provides an overview of active Customizable Card Games (CCGs) in North America as of December 2025 and some links to resources.
 This is as much to organize my own thoughts as it is to provide as service to others, but I hope you are able to find this useful. 
 In some ways this is a better organized version of the [wikipedia list of CCGS](https://en.wikipedia.org/wiki/List_of_collectible_card_games).
 Most of the upcoming release dates are gathered from this [article](https://www.vintageccg.com/ccg-news/tcg-release-schedule-2024/).
@@ -13,17 +13,17 @@ A lot of vintage rulebooks are available as PDFs [here](https://www.vintageccg.c
   - [Yu-Gi-Oh!](#yu-gi-oh)
 - [Tier 2: The Big Contenders](#tier-2-the-big-contenders)
   - [Disney Lorcana](#disney-lorcana)
+  - [League of Legends: Riftbound](#league-of-legends-riftbound)
   - [One Piece Card Game](#one-piece-card-game)
   - [Star Wars: Unlimited](#star-wars-unlimited)
 - [Tier 3: The Medium Ones](#tier-3-the-medium-ones)
   - [Digimon](#digimon)
   - [Dragon Ball Super Card Game: Masters](#dragon-ball-super-card-game-masters)
   - [Dragon Ball Super Card Game: Fusion World](#dragon-ball-super-card-game-fusion-world)
-  - [Elestrals](#elestrals)
   - [Flesh and Blood](#flesh-and-blood)
   - [Gundam Card Game](#gundam-card-game)
   - [Keyforge](#keyforge)
-  - [League of Legends: Riftbound](#league-of-legends-riftbound)
+  - [Union Arena](#union-arena)
   - [UniVersus](#universus)
 - [Tier 4: The Small Ones](#tier-4-the-small-ones)
   - [Alpha Clash](#alpha-clash)
@@ -31,19 +31,19 @@ A lot of vintage rulebooks are available as PDFs [here](https://www.vintageccg.c
   - [Battle Spirits Saga](#battle-spirits-saga)
   - [Cardfight!! Vanguard](#cardfight-vanguard)
   - [Cookie Run: Braverse](#cookie-run-braverse)
+  - [Elestrals](#elestrals)
   - [Final Fantasy](#final-fantasy)
   - [Force of Will](#force-of-will)
+  - [Godzilla Card Game](#godzilla-card-game)
   - [Grand Archive](#grand-archive)
+  - [Hololive Official Card Game](#hololive-official-card-game)
   - [Shadowverse: Evolve](#shadowverse-evolve)
   - [Sorcery: Contested Realm](#sorcery-contested-realm)
-  - [Union Arena](#union-arena)
-  - [Universe of Legends](#universe-of-legends)
 - [Tier 5: The Obscure Ones](#tier-5-the-obscure-ones)
   - [Animo](#animo)
   - [Cannabeast Trading Card Game](#cannabeast-trading-card-game)
   - [Cryptid Camp](#cryptid-camp)
   - [Gate Ruler](#gate-ruler)
-  - [Hololive Official Card Game](#hololive-official-card-game)
   - [OshiPush](#oshipush)
   - [Round Table](#round-table)
   - [Redemption](#redemption)
@@ -52,6 +52,8 @@ A lot of vintage rulebooks are available as PDFs [here](https://www.vintageccg.c
   - [Time Vault Soccer Football Card Game](#time-vault-soccer-football-card-game)
   - [Ward](#ward)
   - [Wixoss](#wixoss)
+  - [Universe of Legends](#universe-of-legends)
+  - [Vibes TCG](#vibes-tcg)
 - [Tier 6: Back from the dead](#tier-6-back-from-the-dead)
   - [Star Wars CCG](#star-wars-ccg)
   - [Star Wars TCG](#star-wars-tcg)
@@ -81,7 +83,6 @@ A lot of vintage rulebooks are available as PDFs [here](https://www.vintageccg.c
   - [Arkham Horror: The Card Game](#arkham-horror-the-card-game)
   - [Lord of the Rings: The Card Game](#lord-of-the-rings-the-card-game)
   - [Marvel Champions: The Card Game](#marvel-champions-the-card-game)
-  - [Star Trek: Star Realms](#star-trek-star-realms)
   - [Vampire: The Eternal Struggle](#vampire-the-eternal-struggle)
   - [Ashes Reborn](#ashes-reborn)
 - [Boxed Card Games](#boxed-card-games)
@@ -89,6 +90,8 @@ A lot of vintage rulebooks are available as PDFs [here](https://www.vintageccg.c
   - [Dominion](#dominion)
   - [Gwent](#gwent)
   - [Legendary Encounters](#legendary-encounters)
+  - [Star Realms](#star-realms)
+  - [Star Trek: Star Realms](#star-trek-star-realms)
   - [Zu Tiles](#zu-tiles)
 
 ---
@@ -123,12 +126,13 @@ Events: [Magic Event Locator](https://locator.wizards.com/search?searchType=magi
 | Set | Name                       | Prerelease        | Release           |  
 |-----|----------------------------|-------------------|-------------------|  
 | FIN | Final Fantasy              | June 6, 2025      | June 13, 2025     |  
-| EOE | Edge of Eternities         | August 1, 2025    | TBA               |  
-| SPM | Marvel's Spider-Man        | September 26, 2025| TBA               |  
-| TLA | Avatar: The Last Airbender | November 21, 2025 | TBA               |  
-| TBA | Lorwyn Eclipsed            | January 23, 2026  | TBA               |  
+| EOE | Edge of Eternities         | July 25, 2025     | August 1, 2025    |  
+| SPM | Marvel's Spider-Man        | September 26, 2025| September 26, 2025|  
+| TLA | Avatar: The Last Airbender | November 21, 2025 | November 21, 2025 |
+|     | MTGxPlaystation            | December 18, 2025 | December 18, 2025 |
+| ECL | Lorwyn Eclipsed            | January 23, 2026  | January 23, 2026  |  
 | TBA | Secrets of Strixhaven      | Q2 2026           | Q2 2026           |  
-| TBA | Event set                  | Q3 2026           | Q3 2026           |  
+| TBA | Reality Fracture           | Q3 2026           | Q3 2026           |  
 | TBA | Amsterdam                  | Q1 2027           | Q1 2027           |  
 | TBA | Berlin                     | Q2 2027           | Q2 2027           |  
 | TBA | Cairo                      | Q3 2027           | Q3 2027           |  
@@ -170,16 +174,62 @@ Current formats:
 | BLK | Scarlet & Violet–Black Bolt            | Special Expansion     | July 18, 2025     |
 | WHT | Scarlet & Violet–White Flare           | Special Expansion     | July 18, 2025     |
 | MEG | Mega Evolution                         | Main Series Expansion | September 26, 2025|
+| PHA | Mega Evolution–Phantasmal Flames         | Main Series Expansion | November 14, 2025|
+| AHE | Mega Evolution–Ascended Heroes           | Main Series Expansion | January 30, 2026|
 
 
 ### Yu-Gi-Oh
 
 Yu-Gi-Oh! is another legacy CCG that is still around after many years. Created in 1999 by Konami, it was originally quite similar to MtG but has evolved in its own way. Card draw is a major resource in Yu-Gi-Oh, so you are often strongest on your first turn, when you have the most cards, rather than in MtG where you build up to more powerful plays. It has a reputation for more complicated mechanics than other CCGs, with complicated cards and decks; nearly every deck in Yu-Gi-Oh plays like a combo deck in other games. Somewhat uniquely, the game does not have card rotation, so power creep has made modern decks absurdly powerful. Konami recently made the 'Time Wizard' format official, where the legal cards are based on a previous time, for example '[goat](https://formatlibrary.com/formats/goat)' format from 2005 or '[edison](https://formatlibrary.com/formats/edison)' format from 2010.
 
-| Name                          | Release           |
-|-------------------------------|-------------------|
-| 2025 Mega Pack Bundle         | September 4, 2025 |
-| Doom of Dimensions            | September 25, 2025|
+Packs are 8 commons and 1 rare card. Rares are 1/6 Ultra Rare, 1/12 Secret Rare, otherwise Super Rare. 24 packs per box.  
+[Ban List](https://yugipedia.com/wiki/Historic_TCG_Limitations_Chart/2021%E2%80%93)  
+[Set List](https://yugipedia.com/wiki/Set_chronology#TCG)
+
+| Set | Name                                  | Type                     | Release           |
+|-----|---------------------------------------|--------------------------|-------------------|
+| LEDE| Legacy of Destruction                 | Booster Pack             | April 25, 2024    |
+| RA02| 25th Anniversary Rarity Collection II | Booster Pack             | May 24, 2024      |
+| BLTR| Battles of Legend: Terminal Revenge   | Booster Pack             | June 21, 2024     |
+| INFO| The Infinite Forbidden                | Booster Pack             | July 19, 2024     |
+| MP24| 25th Anniversary Tin Dueling Mirrors  | Mega Pack                | September 19, 2024|
+| ROTA| Rage of the Abyss                     | Booster Pack             | October 11, 2024  |
+| OP26| OTS Tournament Pack 26                | Tournament Pack          | October 16, 2024  |
+| RA03| Quarter Century Bonanza               | Booster Pack             | November 7, 2024  |
+| CRBR| Crossover Breakers                    | Deck-Build Pack          | December 6, 2024  |
+| SBC2| Battle City Finals Collector's Set    | Speed Duel               | December 13, 2024 |
+| SUDA| Supreme Darkness                      | Booster Pack             | January 23, 2025  |
+| SDWD| Blue-Eyes White Destiny               | Structure Deck           | February 14, 2025 |
+| OP27| OTS Tournament Pack 27                | Tournament Pack          | February 26, 2025 |
+| MZTM| Maze of the Master                    | Booster Pack             | March 14, 2025    |
+| RA04| Quarter Century Stampede              | Booster Pack             | April 11, 2025    |
+| ALIN| Alliance Insight                      | Booster Pack             | May 2, 2025       |
+| BLMM| Battles of Legend: Monster Mayhem     | Booster Pack             | June 13, 2025     |
+| OP28| OTS Tournament Pack 28                | Tournament Pack          | June 18, 2025     |
+| DUAD| Duelist's Advance                     | Booster Pack             | July 4, 2025      |
+|     | 2025 Mega Pack Bundle                 | Booster Pack             | September 4, 2025 |
+|     | Doom of Dimensions                    | Booster Pack             | September 25, 2025|
+|     | Legendary Collection Kaiba Reprint    | Booster Pack             | October 9, 2025   |
+|     | The Fallen & The Virtuous             | Structure Deck           | October 23, 2025  |
+|     | Legendary 5D's Deck                   | Collector's Deck         | November 6, 2025  |
+|     | Burst Protocol                        | Booster Pack             | January 22, 2026  |
+
+
+Yu-Gi-Oh! World Championship 2024  - September 7-8, 2024
+North America World Championship Qualifier 2025 - July 11-13, 2025 - Indiana Convention Center, Indianapolis, IN
+World Championship 2025 - August 29-31, 2025 - Paris, France  - TCG, Master Duel (digital game), and Duel Links (short digitial game)
+Yu-Gi-Oh! Championship Series - Vancouver, BC 2025 - August 16-17, 2025
+Yu-Gi-Oh! Championship Series - Lima, Peru - September 27-28, 2025
+Yu-Gi-Oh! Championship Series - Anaheim, CA 2025 - October 4-5, 2025
+Yu-Gi-Oh! Championship Series - São Paulo, Brazil 2025 - October 11-12, 2025
+Yu-Gi-Oh! Championship Series - Pittsburgh, PA 2025 - November 8-9, 2025
+Yu-Gi-Oh! Championship Series - Mérida, Mexico 2025 - November 29-30, 2025
+North America Remote Duel Yu-Gi-Oh! Championship Series - December 6-7, 2025
+
+Regional Qualifiers - [Regional locations](https://www.yugioh-card.com/en/events/regional-locations/)
+
+Duelists receive World Qualifier Points (WQP) by earning a World Championship Qualifier (WCQ) invite from the following events: Regional Qualifiers, Dragon Duels, OTS Championships, Nationals in Latin America, and the Yu-Gi-Oh! Championship Series. Duelists that make the Top Cut at the WCQ will also earn WQP for the following year’s WQP Playoff.
+
 
 
 ---
@@ -211,7 +261,7 @@ Current formats:
 |   2   |   7 | Archazia's Island    | March 7, 2025     | March 21, 2025    |
 |   2   |   8 | Reign of Jafar       | May 30, 2025      | June 6, 2025      |
 |   3   |   9 | Fabled               | August 29, 2025   | September 5, 2025 |
-|   3   |  10 | Whispers in the Well | Q4 2025           | Q4 2025           |
+|   3   |  10 | Whispers in the Well | November 6, 2025  | November 14, 2025 |
 
 Season 2 North American Challenge Events: (Other events in EU, Asia, Australia, and Brazil)
 * October 25-26, 2025 Milwaukee, WI
@@ -219,6 +269,22 @@ Season 2 North American Challenge Events: (Other events in EU, Asia, Australia, 
 * June 20-21, 2026 Indianapolis, IN
 * August 28-30, 2026 NA Championship, Location TBA (Top 32 from each Challenge Event)
 * Winner of each event and top 8 from NA Championship qualify for World Championships
+
+
+### League of Legends: Riftbound
+
+League of Legends: Riftbound was released in China earlier in 2025 and on October 31, 2025 in the US. The game hit with an immediate commetitive scene developing, leading to a run on available product and a bubble in single card prices. The next release is scheduled for February 2026 as the US releases catch up to the Chinese releases. Hopefully this game can live through the intial growing pains but it seems Riot Games is in for the long haul.
+
+The game features many innovative mechanics. Players choose a legend which grants an ability and determines the deck colors and available champion cards and signature spells. Players start with one champion available for play and each player selects a battlefield. Players play their creatures to their base and must move them to one of the two battlefields to score points. 
+
+These new gameplay mechanics and distinct feeling for many different decks has made the game very popular and that has been it's biggest flaw so far. 
+
+| Set | Name                                                                      | Release          |
+|-----|---------------------------------------------------------------------------|------------------|
+| OGN | Origins Booster Set (377 card set, 14 card packs: 7C, 3U, 3 Foil, 1 Token)| October 31, 2025 |
+| OGN | Lee Sin, Jinx, Annie, and Viktor Starter Decks                            | October 31, 2025 |
+| OGS | Origins: Proving Grounds (24 new cards in 4 decks: Yi, Garen, Lux, Annie) | October 31, 2025 |
+|     | Spiritforged                                                              | February 27, 2026 |
 
 
 ### One Piece Card Game
@@ -246,6 +312,13 @@ Based on the anime 'One Piece'. Since it was published in 2022 by [Bandai](https
 |  3  | PRB02 | The Best vol.2 Premium Booster                | October 1, 2025   |
 |  3  | LD01  | Learn To Play Deck Set                        | October 3, 2025   |
 |  4  | OP13  | OP13 Booster Set                              | November 7, 2025  |
+|  4  | DF03  | Devil Fruits Collection Vol.3                 | November 14, 2025 |
+|  4  | IB05  | Illustration Box IB-05                        | January 16, 2026  |
+|  4  | IB06  | Illustration Box IB-06                        | January 16, 2026  |
+|  4  | EB03  | Extra Booster                                | February 20, 2026 |
+|  4  | PB05  | Premium Card Collection -Best Selection Vol.5 | February 27, 2026 |
+|  4  | JAP01 | Japanese 3rd Anniversary Set                 | March 27, 2026   |
+|  4  | ST30  | Starter Deck ST-30                           | June 12, 2026   |
 
 
 ### Star Wars: Unlimited
@@ -279,14 +352,21 @@ Events: [Digimon Card Game Official Events](https://world.digimoncard.com/event/
 
 |Block| Set | Name                                  | Release            |
 |-----|-----|---------------------------------------|--------------------|
-|  5  |BT-21| Booster World Convergence             | April 25, 2025     |
-|  5  |EX-09| Extra Booster Versus Monsters         | June 26, 2025      |
-|  5  |BT-22| Booster Cyber Eden                    | July 25, 2025      |
-|  5  |EX-10| Sinister Order                        | September 29, 2025 |
-|  5  |BT-23| Booster Hackers Slumber               | October 18, 2025   |
-|  5  |PB-21| Tamer's Evolution Box Rise Of Digimon | December 26, 2025  |
-|  5  |BT-24| Time Stranger                         | January 23, 2026   |
-|  5  |PB-22| Digimon Liberator Debuggers Set       | February 6, 2026   |
+|  5  |BT21| Booster World Convergence             | April 25, 2025     |
+|  5  |EX09| Extra Booster Versus Monsters         | June 26, 2025      |
+|  5  |BT22| Booster Cyber Eden                    | July 25, 2025      |
+|  5  |EX10| Sinister Order                        | September 29, 2025 |
+|  5  |BT23| Booster Hackers Slumber               | October 18, 2025   |
+|  5  |LM06| Limited Card Pack Billion Bullet      | October 24, 2025 |
+|  5  |    | Amethyst Mandala Advanced Deck        | December 5, 2025   |
+|  5  |PB21| Tamer's Evolution Box Rise Of Digimon | December 26, 2025  |
+|  5  |BT24| Time Stranger                         | January 23, 2026   |
+|  5  |PB22| Digimon Liberator Debuggers Set       | February 6, 2026   |
+|  5  |PB23| Premium Heroines Set Ver. 2           | March 20, 2026    |
+|  5  |AD01| DIGIMON GENERATION AD-01 Advanced     | March 27, 2026    |
+|  5  |LM07| Limited Card Pack Another Knight      | March 27, 2026    |
+|  5  |    | Dual revolution. Starter Decks: Data Squad and Beatbreak! | May 22, 2026    |
+
 
 
 ### Dragon Ball Super Card Game: Masters
@@ -329,6 +409,8 @@ Events: [Digimon Card Game Official Events](https://world.digimoncard.com/event/
 | BT26 | ZENKAI Series EX Set 09       | Ultimate Advent Booster Set               | October 11, 2024   |
 | BT27 | ZENKAI Series EX Set 10       | History of Z Booster Set                  | March 7, 2025      |
 | BT28 | New Series Set 01             | New Series Booster Set                    | September 5, 2025  |
+| BT29 |                               | Ultra-Bout Series Set 02                  | November 21, 2025  |
+| BT30 |                               | Ultra-Bout Series Set 03                  | March 27, 2026    |
 
 
 ### Dragon Ball Super Card Game: Fusion World
@@ -349,27 +431,16 @@ Events: [Digimon Card Game Official Events](https://world.digimoncard.com/event/
 | FB05| New Adventure Booster Box                | February 8, 2025  |
 | FS06| Son Goku: Mini Starter Deck              | November 8, 2024  |
 | FS07| Vegeta: Mini Starter Deck                | November 8, 2024  |
-| FS08| Vegeta: Mini Super Saiyan 3 Starter Deck | April 26, 2025 |
+| FS08| Vegeta: Mini Super Saiyan 3 Starter Deck | April 26, 2025    |
 | FB06| Rivals Clash Booster Box                 | April 26, 2025    |
 | FS09| Ex Shallot Starter Deck                  | June 14, 2025     |
 | FS10| Ex Giblet Starter Deck                   | June 14, 2025     |
 | SB01| Manga Booster 01 Booster Box             | July 27, 2025     |
 | FB07| Wish for Shenron Booster Box             | September 19, 2025|
-|     | Fusion World Manga                       | November 14, 2025 |
-
-
-### Elestrals
-
-[Elestrals](https://www.elestrals.com/) is a new CCG from Elestrals LLC in 2022, already developing a competitive scene.
-
-| Block            | Name                        | Release           |
-|------------------|-----------------------------|-------------------|
-| First Edition    | Base                        | March 15, 2024    |
-| First Edition    | Frostfall                   | May 15, 2024      |
-| First Edition    | Daybreak                    | August 16, 2024   |
-| First Edition    | Moonrise                    | January 21, 2025  |
-| Divine Champions | Firestorm                   | May 23, 2025      |
-| Divine Champions | Lifestream                  | July 31, 2025     |
+| FB08| Fusion World Manga                       | November 14, 2025 |
+| FS11| Fusion World FS11 Starter Deck           | March 13, 2026    |
+| FS12| Fusion World FS12 Starter Deck           | March 13, 2026    |
+| FB09| Fusion World - FB09                       | March 20, 2026    |
 
 
 ### Flesh and Blood
@@ -397,12 +468,13 @@ Events: [Digimon Card Game Official Events](https://world.digimoncard.com/event/
 | 15 | HNT | The Hunted           | January 31, 2025  |
 | 16 | SEA | High Seas            | June 6, 2025      |
 | 17 | MPG | Mastery Pack Guardian| August 8, 2025    |
-| 18 |     | Smash Palace         | August 29, 2025   |
+|    |     | Smash Palace         | August 29, 2025   |
+|    |     | Silver Age: Chapter 1 and Chapter 2 | February 13, 2026 |
 
 
 ### Gundam Card Game
 
-Gundam Card Game is a brand new CCG based on the Gundam Franchise and published by [Bandai](https://www.bandai.com/en-us/). Combat mechanics are a refinement of other Bandai CCGs, where attacks occur one at a time at any point during the turn, targetting a specific tapped creature or the player's sheilds, where there is a chance the shield card could be drawn or have another effect with a 'Burst' mechanic. There is also an innovative 'Pilot' system which allows Pilot cards to be played as upgrades to Gundam creature cards, giving them additional stats and abilities. The resource system is a relatively simple seperate deck of energy cards drawn once per turn, although the predictability does allow for some fine tuned balance. The second player starts with an additional 'EX' energy card which can only be used once.
+Gundam Card Game is a brand new CCG based on the Gundam Franchise and published by [Bandai](https://www.bandai.com/en-us/). Combat mechanics are a refinement of other Bandai CCGs, where attacks occur one at a time at any point during the turn, targetting a specific tapped creature or the player's shields, where there is a chance the shield card could be drawn or have another effect with a 'Burst' mechanic. There is also an innovative 'Pilot' system which allows Pilot cards to be played as upgrades to Gundam creature cards, giving them additional stats and abilities. The resource system is a relatively simple seperate deck of energy cards drawn once per turn, although the predictability does allow for some fine tuned balance. The second player starts with an additional 'EX' energy card which can only be used once.
 
 | Name                                      | Release           |
 |-------------------------------------------|-------------------|
@@ -414,6 +486,10 @@ Gundam Card Game is a brand new CCG based on the Gundam Franchise and published 
 | ST07 Celestial Drive Starter Deck         | January 16, 2026  |
 | ST08 Flash of Brilliance Starter Deck     | January 16, 2026  |
 | GD03 TBA                                  | January 31, 2026  |
+|      Gundam Assemble Premium Collection   | February 27, 2026 |
+|      Ultimate Deck 01                     | March 27, 2026    |
+| GD04 TBA                                  | April 24, 2026    |
+
 
 
 ### Keyforge
@@ -433,26 +509,51 @@ Gundam Card Game is a brand new CCG based on the Gundam Franchise and published 
 | 9   | Tokens of Change     | February 2025     |
 
 
-### League of Legends: Riftbound
+## Union Arena
 
-Riftbound is an upcoming CCG based on Riot Games' League of Legends. A competitive scene is expected.
+[Union Arena](https://www.unionarena-tcg.com/) is ananime themed CCG from [Bandai](https://www.bandai.com/en-us/) which has been popular in Japan. The Japanese releases have been ahead of the US releases so there have been a rapid pace of releases in the US to catch up. Union Arena is unique in that decks are built from a particular franchise, so new sets can be bought or ignored depending on your interest in the franchise.
 
-| Set | Name                                                                      | Release          |
-|-----|---------------------------------------------------------------------------|------------------|
-| OGN | Origins Booster Set (377 card set, 14 card packs: 7C, 3U, 3 Foil, 1 Token)| October 15, 2025 |
-| OGN | Lee Sin, Jinx, Annie, and Viktor Starter Decks                            | October 15, 2025 |
-| OGS | Origins: Proving Grounds (24 new cards in 4 decks: Yi, Garen, Lux, Annie) | October 15, 2025 |
-| ARC | Arcane Expansion                                                          |             2026 |
+The game features a two line mechanic where players play cards to their energy line, and move them forward to the battle line to do combat. Player skill involves moving cards between the lines in the optimal way. 
+
+
+| Name                                                   | Release           |
+|--------------------------------------------------------|-------------------|
+| FULLMETAL ALCHEMIST Starter Deck                       | July 18, 2025     |
+| FULLMETAL ALCHEMIST Booster Pack                       | July 25, 2025     |
+| CODE GEASS Lelouch of the Rebellion Vol.2 Starter Deck | August 29, 2025   |
+| CODE GEASS Lelouch of the Rebellion Vol.2 Booster Pack | August 29, 2025   |
+| Attack on Titan Starter Deck                           | August 29, 2025   |
+| Attack on Titan Booster Pack                           | August 29, 2025   |
+| Rurouni Kenshin Starter Deck                           | September 26, 2025|
+| Rurouni Kenshin Booster Pack                           | September 26, 2025|
+| Hunter X Hunter Vol.2 Booster Pack                     | September 26, 2025|
+| Kaiju No. 8 Booster Pack                               | October 31, 2025  |
+| Yu Yu Hakusho: Ghost Files Booster Pack                | October 31, 2025  |
+| GODDESS OF VICTORY: NIKKE Booster Pack                 | November 28, 2025 |
+| Demon Slayer: Kimetsu no Yaiba Vol.2 Booster Pack      | December 12, 2025 |
+| Evangelion: New Theatrical Edition Starter Deck        | January 30, 2026  |
+| Evangelion: New Theatrical Edition Booster Pack        | January 30, 2026  |
 
 
 ### UniVersus
 
 UniVersus, previously known as the Universal Fighting System, was created in 2006 by Ryan Miller of Sabertooth Games. Fantasy Flight aquired the game in 2008, and in 2021 the system was renamed to [UniVersus](https://uvsgames.com/universus).
 
+Formats:  
+* Sealed Deck (build your deck from 6 packs)
+* Booster Draft (pick one card and pass the remainder of the pack for 6 packs)
+* Spotlight (current block of cards)
+* Standard (last two years of cards)
+* Retro (all cards from Universal Fighting System, My Hero Academia, and UniVersus)
+
+
 | Name                          | Release           |
 |-------------------------------|-------------------|
 | Street Fighter 6 Challenger   | July 18, 2025     |
 | Teenage Mutant Ninja Turtles  | August 15, 2025   |
+| Guilty Gear - Strive          | November 28, 2025 |
+| The King of Fighters XV       | January 30, 2026  |
+| Godzilla: Reign of Kaiju      | March 13, 2026   |
 
 
 ---
@@ -488,7 +589,7 @@ UniVersus, previously known as the Universal Fighting System, was created in 200
 ### Battle Spirits Saga
 
 The original Battle Spirits CCG from 2009 never caught on in the US and was discontinued here although it still continues in Asia.  
-Battle Spirits Saga is [Bandai](https://www.bandai.com/en-us/)'s new attempt to bring the game back to the US.
+Battle Spirits Saga is [Bandai](https://www.bandai.com/en-us/)'s new attempt to bring the game back to the US. However this seems to have also failed as the game only has a small number of events in the US.
 
 
 ### Cardfight!! Vanguard
@@ -502,19 +603,39 @@ Battle Spirits Saga is [Bandai](https://www.bandai.com/en-us/)'s new attempt to 
 | 8   | Knights of Rebirth            | June 27, 2025     |
 | 9   | Super Brave Detonation        | August 29, 2025   |
 | 10  | Dragonsoul Resonance          | October 24, 2025  |
-| 11  | Procession of Ardent Splendor | TBA               |
+|     | Procession of Ardent Splendor | TBA               |
+|     | Lyrical Monasterio Season of Wonders | January 30, 2026 |
+|     | Chasm of Lost Souls                 | February 27, 2026 |
 
 
 ### Cookie Run: Braverse
 
 New CCG in 2025 by [Devsisters](https://www.devsisters.com/), creators of the popular mobile game 'Cookie Run'.  
-Currently Asia is ahead of US in releases.
-ST1–5 and BS1+2 launch simultaneously in July 2025.  
-BS3+4 in October 2025
-BS5+6 in January 2026.  
-ST6–7 and BS7+8 release in March 2026, just in time for the Championship.  
-
+Currently Asia is ahead of US in releases but NA releases started in July 2025. World Championships are planned for March 2026.  
 Events: [https://play.cookieruntcg.com/](https://play.cookieruntcg.com/)
+
+| Set | Name                          | Release           |
+|-----|-------------------------------|-------------------|
+| ST1-5 | Starter Decks 1-5           | July 2025         |
+| BS1-2 | Booster Sets 1-2            | July 2025         |
+| BS3-4 | Booster Sets 3-4            | October 2025      |
+| BS5-6 | Booster Sets 5-6            | January 2026      |
+| ST6-7 | Starter Decks 6-7           | March 2026        |
+| BS7-8 | Booster Sets 7-8            | March 2026        |
+
+
+### Elestrals
+
+[Elestrals](https://www.elestrals.com/) is a new CCG from Elestrals LLC in 2022, already developing a competitive scene.
+
+| Block            | Name                        | Release           |
+|------------------|-----------------------------|-------------------|
+| First Edition    | Base                        | March 15, 2024    |
+| First Edition    | Frostfall                   | May 15, 2024      |
+| First Edition    | Daybreak                    | August 16, 2024   |
+| First Edition    | Moonrise                    | January 21, 2025  |
+| Divine Champions | Firestorm                   | May 23, 2025      |
+| Divine Champions | Lifestream                  | July 31, 2025     |
 
 
 ### Final Fantasy
@@ -530,6 +651,7 @@ Events: [https://play.cookieruntcg.com/](https://play.cookieruntcg.com/)
 | World Champion Decks 2024 |                   | August 29, 2025 |
 | Starter Deck 2025 Volume 1 & 2 |         | October 3, 2025   |
 | Journey Of Discovery |                   | November 14, 2025 |
+| Dreamlike Oceans     |                   | March 27, 2026    |
 
 
 ### Force of Will
@@ -548,6 +670,14 @@ Events: [https://play.cookieruntcg.com/](https://play.cookieruntcg.com/)
 | Trinity Cluster 4th Booster Pack "Ten Oaths of Protopaterpolis' War"  | May 30, 2025      |
 
 
+### Godzilla Card Game
+
+The first two sets were released in 2025 and the third set is scheduled for 2026.
+
+| Name                          | Release           |
+|-------------------------------|-------------------|
+| Resonance of Rivals          | January 31, 2026  |
+
 ### Grand Archive
 
 [Grand Archive](https://www.gatcg.com/) is a CCG published in 2023 by Weebs of the Shore LLC that describes itself as an anime TCG with western game design.
@@ -561,7 +691,19 @@ Events: [https://play.cookieruntcg.com/](https://play.cookieruntcg.com/)
 | Mortal Ambition (Standard Set)             | October 11th, 2024|
 | Abyssal Heaven (Expansion Set)             | March 7th, 2025   |
 | Distorted Reflections (Standard Set)       | July 25th, 2025   |
+| Merlin Re:Collection - Brilliant Vestige   | December 5, 2025  |
+| Phantom Monarchs 1st Edition               | December 5, 2025  |
 
+
+## Hololive Official Card Game
+
+Hololive Official Card Game is a V-tuber themed CCG that is being ported to English later this year.
+
+| Name                           | Release           |
+|--------------------------------|-------------------|
+| Start Deck Purple Yuzuki Choco | October 17, 2025  |
+| Start Deck Blue Nekomata Okayu | October 17, 2025  |
+| Curious Universe                | February 20, 2026 |
 
 ### Shadowverse: Evolve
 
@@ -600,35 +742,6 @@ Published in 2023 by [Bushiroad](https://www.bushiroad.com/)
 | 1   | Beta Edition                  | November 2023     |
 | 2   | Arthurian Legends             | October 2024      |
 | 3   | Dragonlord                    | August 2, 2025    |
-
-
-## Union Arena
-
-[Union Arena](https://www.unionarena-tcg.com/) is a new anime themed CCG from [Bandai](https://www.bandai.com/en-us/) which is probably more popular in Japan but is available in the US and sees some play.
-
-
-| Name                                                   | Release           |
-|--------------------------------------------------------|-------------------|
-| FULLMETAL ALCHEMIST Starter Deck                       | July 18, 2025     |
-| FULLMETAL ALCHEMIST Booster Pack                       | July 25, 2025     |
-| CODE GEASS Lelouch of the Rebellion Vol.2 Starter Deck | August 29, 2025   |
-| CODE GEASS Lelouch of the Rebellion Vol.2 Booster Pack | August 29, 2025   |
-| Attack on Titan Starter Deck                           | August 29, 2025   |
-| Attack on Titan Booster Pack                           | August 29, 2025   |
-| Rurouni Kenshin Starter Deck                           | September 26, 2025|
-| Rurouni Kenshin Booster Pack                           | September 26, 2025|
-| Hunter X Hunter Vol.2 Booster Pack                     | September 26, 2025|
-| Kaiju No. 8 Booster Pack                               | October 31, 2025  |
-| Yu Yu Hakusho: Ghost Files Booster Pack                | October 31, 2025  |
-| GODDESS OF VICTORY: NIKKE Booster Pack                 | November 28, 2025 |
-| Demon Slayer: Kimetsu no Yaiba Vol.2 Booster Pack      | December 12, 2025 |
-| Evangelion: New Theatrical Edition Starter Deck        | January 30, 2026  |
-| Evangelion: New Theatrical Edition Booster Pack        | January 30, 2026  |
-
-
-### Universe of Legends
-
-[Universe of Legends](https://www.universe-of-legends-tcg.com/) is a fantasy themed CCG created by UrbanTCG Entertainment in 2024 where players play as a 'D-Ranger' casting spells.
 
 
 ---
@@ -678,16 +791,6 @@ Unlike some other biblical CCGs, Animo uses traditional CCG packaging and produc
 | 6   | The Demonic & the Divine        | May 24th, 2024     |
 
 
-## Hololive Official Card Game
-
-Hololive Official Card Game is a V-tuber themed CCG that is being ported to English later this year.
-
-| Name                           | Release           |
-|--------------------------------|-------------------|
-| Start Deck Purple Yuzuki Choco | October 17, 2025  |
-| Start Deck Blue Nekomata Okayu | October 17, 2025  |
-
-
 ### OshiPush
 
 [OshiPush](https://oshipush.com) is a new CCG from Japanime Games, featuring vtubers, launching in 2025.
@@ -727,6 +830,17 @@ and still sees some releases.
 
 [Time Vault Soccer](https://timevaultsoccer.com/) is a British retro-soccer themed CCG created by Silo 10 Games in 2018.
 
+
+### Universe of Legends
+
+[Universe of Legends](https://www.universe-of-legends-tcg.com/) is a fantasy themed CCG created by UrbanTCG Entertainment in 2024 where players play as a 'D-Ranger' casting spells.
+
+
+### Vibes TCG
+
+| Name                          | Release           |
+|-------------------------------|-------------------|
+| Legend of the Lil             | November 30, 2025 |
 
 ### Ward
 
@@ -791,7 +905,7 @@ Recent Fan Releases:
 ### Star Trek CCG
 
 Star Trek CCG was an early CCG which was published by [Decipher](http://www.decipher.com/) in 1994. After several expansions there was a second edition 2002 to reboot the rules and improve the mechanics. The second edition went out of print in 2007 after several more expansions. 
-A Player's Committee formed to continue the game and has been releasing new sets since then. 
+A [Player's Committee](https://www.trekcc.org/) formed to continue the game and has been releasing new sets since then. 
 
 | Name                               | Release           |
 |------------------------------------|-------------------|
@@ -813,7 +927,7 @@ The game is governed by [The Council of Elrond](https://councilofelrond.org/).
 ### The Lord of the Rings Trading Card Game
 
 The Lord of the Rings TCG was created by [Decipher](http://www.decipher.com/) in 2001. After 19 expansions the game went out of print in 2007.
-Finally in 2020 an unoffical Player's Committee formed to continue the game
+Finally in 2020 an unoffical Player's Committee formed to continue the game.
 More information can be found on the [website](https://lotrtcgpc.net).
 
 Official Releases:
@@ -923,6 +1037,11 @@ Trok is a game created in 2019 in Argentina I think.
 
 Weiß Schwarz is a Japanese anime themed CCG created in 2007 by Bushiroad.
 
+| Name                          | Release           |
+|-------------------------------|-------------------|
+| Persona 3 Reload Reprint      | December 31, 2025 |
+| Fairy Tail 100 Years Quest    | March 13, 2026   |
+
 ## ZX Zillions of enemy X
 
 Z/X Zillions of enemy X is a Japanese anime themed CCG created in 2013 by Broccoli and Nippon Ichi Software. Might be out of print now.
@@ -953,7 +1072,7 @@ The following games are no longer in print, and are just here for reference.
 | Aldnoah Zero                    | 2015  | Movic                        | Not in print |
 | Alice x Cross                   | 2008  | Bushiroad                    | Not in print |
 | Alien Attax                     | 2013  | Topps                        | Not in print |
-| Alien Predator CCG              | 1997  | Precedence/HarperCollins | [Unique 3 player game, 3 expansions](https://en.wikipedia.org/wiki/Aliens_Predator_Customizable_Card_Game) |
+| Aliens Predator CCG             | 1997  | Precedence/HarperCollins | [Unique 3 player game, 3 expansions](https://en.wikipedia.org/wiki/Aliens_Predator_Customizable_Card_Game) |
 | Allegiance: War of Factions     | 2004  | Lucid Raven Productions      | Not in print |
 | Álomfogó                        | 2007  | Beholder Kft.               | Not in print |
 | Alteil                          | 2004  | ?                           | Not in print |
@@ -1042,8 +1161,8 @@ The following games are no longer in print, and are just here for reference.
 | Doomtrooper                         | 1995  | Target Games                 | Not in print |
 | Doomtown                            | 1998  | Five Rings/WotC/AEG         | Not in print |
 | The Dozens                          | 2005  | Topps                         | Not in print |
-| Dragon Ball CCG                     | 2008  | Bandai                        | Not in print |
-| Dragon Ball Z CCG                   | 2005  | Score Entertainment           | Not in print |
+| Dragon Ball CCG                     | 2008-2009  | Bandai                        | Not in print |
+| Dragon Ball Z CCG                   | 2000-2006  | Score Entertainment           | Not in print |
 | Dragon Booster TCG                  | 2004  | Score Entertainment           | Not in print |
 | Dragoborne: Rise to Supremacy       | 2017  | Bushiroad, Ltd.              | Not in print |
 | Dragon Dynasty CCG                  | 2001  | Romancing Cathay             | Not in print |
@@ -1254,7 +1373,7 @@ The following games are no longer in print, and are just here for reference.
 | Wakfu Trading Card Game                | 2011  | Ankama Games/Upper Deck  | Not in print |
 | Warcards                               | 2005  | SC Patiart SRL            | Not in print |
 | Warcardz                               | 2008  | Warmoves Inc.             | Not in print |
-| WarCry                                 | 2003  | Sabertooth Games          | Not in print |
+| WarCry (Warhammer Fantasy CCG)         | 2003-2007  | Sabertooth Games          | [Not in print](https://en.wikipedia.org/wiki/WarCry_(game)) |
 | Warhammer 40,000 CCG                   | 2001  | Sabertooth Games          | Not in print |
 | Warhammer 40,000: Conquest             | 2014-2017 | Fantasy Flight Games  | [LCG stopped in 2017](https://en.wikipedia.org/wiki/Warhammer_40,000:_Conquest) |
 | Warhammer: Invasion                   | 2009-2013 | Fantasy Flight Games  | [LCG stopped in 2013](https://en.wikipedia.org/wiki/Warhammer:_Invasion) |
@@ -1370,6 +1489,7 @@ Null Signal Games releases:
 | Borealis    | Parhelion                   | December 2022 |
 | Liberation  | The Automata Initiative     | July 2023     |
 | Liberation  | Rebellion Without Rehearsal | March 2024    |
+| Elevation   | Elevation                   | April 2025    |
 
 Formats:  
 * Standard: The last few years of releases, with a banned list. The release of Elevation in April 2025 caused the Red Sand Cycle and the Kitara Cycle to rotate from the format. With this release, Standard contains no more cards from the FFG area. 
@@ -1383,41 +1503,40 @@ Formats:
 ### Arkham Horror: The Card Game
 
 [Arkham Horror: The Card Game](https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/) is a LCG based on the board game 'Arkham Horror' created by [Fantasy Flight Games](https://www.fantasyflightgames.com/) in 2016 and is still printing new expansions although many older ones are out of print.
+A new second edition was recently announced coming in 2026 which promises to be backwards compatible with first edition expansions.
 
 | Name                             | Release            |
 |----------------------------------|--------------------|
 | Film Fatale Scenario Pack        | August 15, 2025    |
+| Arkham Horror: Chapter Two       | March 20, 2026     |
 
 
 ### Lord of the Rings: The Card Game
 
 In 2011 [Fantasy Flight Games](https://www.fantasyflightgames.com/) released a Lord of the Rings card game in their 'Living Card Game' format, with non-random expansions.  
-In 2021 they released a revised version of the game. Some expansions are still in print.  
+In 2021 they released a revised version of the game in large boxes. Some are still in print.  
 In 2017 a digital version of the game was created, called 'The Lord of the Rings: The Adventure Card Game'. I don't think it's available anywhere now.
 
 
 ### Marvel Champions: The Card Game
 
-[Marvel Champions: The Card Game](https://www.fantasyflightgames.com/en/products/marvel-champions-the-card-game/) is a LCG based on the Marvel universe created by [Fantasy Flight Games](https://www.fantasyflightgames.com/) in 2018 and is still printing new expansions although some older ones are out of print.
+[Marvel Champions: The Card Game](https://www.fantasyflightgames.com/en/products/marvel-champions-the-card-game/) is a cooperative LCG based on the Marvel universe created by [Fantasy Flight Games](https://www.fantasyflightgames.com/) in 2018 and is still printing new expansions although some older ones are already out of print.
 
 | Name                             | Release            |
 |----------------------------------|--------------------|
 | Trickster Takeover Scenario Pack | August 15, 2025    |
 | Civil War Expansion              | September 19, 2025 |
+| Synthezoid Smackdown Scenario Pack | November 21, 2025 |
 
 
-### Star Realms
+### Sentinels of the Multiverse
 
-Star Realms is a card-based deck-building science-fiction tabletop game, designed by Rob Dougherty and Darwin Kastle and published in 2014 by Wise Wizard Games. The game started out as a Kickstarter campaign in 2013. There has been several expansions since then.
-
-
-### Star Trek: Star Realms
-
-The 'Star Realms' game reskinned for Star Trek. 
-
-| Name                             | Release            |
+[Sentinels of the Multiverse: Definitive Edition](https://boardgamegeek.com/boardgame/335212/sentinels-of-the-multiverse-definitive-edition) is an LCG based on clasic comic book heroes, similar to Marvel Champions: The Card Game, but without customizable decks. Released in 2022 it is a remake of an earlier LCG which ran from 2011. Overall it is a similar but smaller game for a much cheaper price than Marvel Champions.
+	
+| Expansion Name                   | Release            |
 |----------------------------------|--------------------|
-| Borg Invasion expansion          | October 31, 2025   |
+| Rook City Renegades              | 2023               |
+| Disparation                      | 2025               |
 
 
 ### Vampire: The Eternal Struggle 
@@ -1556,9 +1675,23 @@ Legendary: A Marvel Deck Building Game is a cooperative deck building game publi
 | 2nd Edition                                           | TBA               |
 
 
+### Star Realms
+
+Star Realms is a card-based deck-building science-fiction tabletop game, designed by Rob Dougherty and Darwin Kastle and published in 2014 by Wise Wizard Games. The game started out as a Kickstarter campaign in 2013. There has been several expansions since then.
+
+
+### Star Trek: Star Realms
+
+The 'Star Realms' game reskinned for Star Trek. The Borg Invasion expansion adds new mechanics, a borg opponent for solo or co-op play, and other new cards.
+
+| Name                             | Release            |
+|----------------------------------|--------------------|
+| Borg Invasion expansion          | October 31, 2025   |
+
+
 ### Star Wars: The Deckbuilding Game
 
-[Star Wars: The Deckbuilding Game](https://en.wikipedia.org/wiki/Star_Wars:_The_Deckbuilding_Game) is a boxed CCG designed by Caleb Grace and published by Fantasy Flight Games in 2023.
+[Star Wars: The Deckbuilding Game](https://en.wikipedia.org/wiki/Star_Wars:_The_Deckbuilding_Game) is a boxed CCG designed by Caleb Grace and published by Fantasy Flight Games in 2023. Several expansions have been released since then.
 
 
 ### ZU Tiles: Hime

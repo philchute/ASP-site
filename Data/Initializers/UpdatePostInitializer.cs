@@ -72,6 +72,14 @@ namespace ASP_site.Data.Initializers
                     Content = "<p>Changed the server page url to be based on ID rather than position in the list. Added more icons to the Games page, and an icon to signify and link to the Server Browser for that game, and added a link on the Game Info page to the Server Browser for that game. Fixed an issue with the maps not displaying on the Maps page, updated the competitive maps for season 3 of CS2, minor changes to the Engine info page.</p>",
                     PostedDate = new DateTime(2025, 7, 19, 12, 0, 0, DateTimeKind.Utc), Author = "Phil",
                     Tags = new List<Tag> { tags.Single(t => t.Name == "Website Update"), tags.Single(t => t.Name == "Gaming Update") }
+                },
+                new UpdatePost
+                {
+                    Id = 8,
+                    Title = "And we're back",
+                    Content = "<p>PC issues put me offline for more time than I expected. Ultimately bought a new PC but we're back now. Small update here to get back into the swing of things. CCG page has new information and some slight reorganization.</p>",
+                    PostedDate = new DateTime(2025, 12, 5, 12, 0, 0, DateTimeKind.Utc), Author = "Phil",
+                    Tags = new List<Tag> { tags.Single(t => t.Name == "Personal Update"), tags.Single(t => t.Name == "Website Update") }
                 }
             };
             return (posts, tags);
