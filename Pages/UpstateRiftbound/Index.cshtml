@@ -1,0 +1,19 @@
+@page
+@model ASP_site.Pages.UpstateRiftbound.IndexModel
+
+@{
+    ViewData["Title"] = "Upstate Riftbound";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="display-4">Upstate Riftbound</h1>
+            <hr />
+            <div class="markdown-content" style="max-width: 800px; margin: 0 auto;">
+                @Html.Raw(Model.Content)
+            </div>
+        </div>
+    </div>
+</div>
+

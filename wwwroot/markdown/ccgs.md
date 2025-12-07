@@ -1,7 +1,7 @@
 # Customizable Card Games (CCGs)
 
-This page provides an overview of active Customizable Card Games (CCGs) in North America as of December 2025 and some links to resources.
-This is as much to organize my own thoughts as it is to provide as service to others, but I hope you are able to find this useful. 
+This page provides an overview of active Customizable Card Games (CCGs), also known as Trading Card Games (TCGs), in North America as of December 2025 along with some links and resources. There is also some information about games that are not available, as well as some boxed and living card games which share some CCG elements.
+This is as much to organize my own thoughts as it is to provide as service to others, but I hope you find this useful. 
 In some ways this is a better organized version of the [wikipedia list of CCGS](https://en.wikipedia.org/wiki/List_of_collectible_card_games).
 Most of the upcoming release dates are gathered from this [article](https://www.vintageccg.com/ccg-news/tcg-release-schedule-2024/).
 A lot of vintage rulebooks are available as PDFs [here](https://www.vintageccg.com/download-rulebooks/).
@@ -124,21 +124,29 @@ Current formats:
 
 Events: [Magic Event Locator](https://locator.wizards.com/search?searchType=magic-events)  
 
-| Set | Name                       | Prerelease        | Release           |  
-|-----|----------------------------|-------------------|-------------------|  
-| FIN | Final Fantasy              | June 6, 2025      | June 13, 2025     |  
-| EOE | Edge of Eternities         | July 25, 2025     | August 1, 2025    |  
-| SPM | Marvel's Spider-Man        | September 26, 2025| September 26, 2025|  
-| TLA | Avatar: The Last Airbender | November 21, 2025 | November 21, 2025 |
-|     | MTGxPlaystation            | December 18, 2025 | December 18, 2025 |
-| ECL | Lorwyn Eclipsed            | January 23, 2026  | January 23, 2026  |  
-| TBA | Secrets of Strixhaven      | Q2 2026           | Q2 2026           |  
-| TBA | Reality Fracture           | Q3 2026           | Q3 2026           |  
-| TBA | Amsterdam                  | Q1 2027           | Q1 2027           |  
-| TBA | Berlin                     | Q2 2027           | Q2 2027           |  
-| TBA | Cairo                      | Q3 2027           | Q3 2027           |  
-| TBA | Dublin                     | Q1 2028           | Q1 2028           |  
-| TBA | Edmonton                   | Q2 2028           | Q2 2028           |  
+Sets currently in Standard: 
+
+| Set | Name                        | Prerelease         | Release            |  
+|-----|-----------------------------|--------------------|--------------------| 
+| WOE | Wilds of Eldraine           | September 1, 2023  | September 8, 2023  | 
+| LCI | The Lost Caverns of Ixalan  | November 10, 2023  | November 17, 2023  | 
+| MKM | Murders at Karlov Manor     | February 2, 2024   | February 9, 2024   | 
+| OTJ | Outlaws of Thunder Junction | April 12, 2024     | April 19, 2024     | 
+| BLB | Bloomburrow                 | July 26, 2024      | August 2, 2024     | 
+| DSK | Duskmourn: House of Horror  | September 20, 2024 | September 27, 2024 | 
+| FDN | Foundations (core set)      |                    | November 15, 2024  | 
+| DFT | Aetherdrift                 | February 7, 2025   | February 14, 2025  | 
+| TDM | Tarkir: Dragonstorm         | April 4, 2025      | April 11, 2025     | 
+| FIN | Final Fantasy               | June 6, 2025       | June 13, 2025      |  
+| EOE | Edge of Eternities          | July 25, 2025      | August 1, 2025     |  
+| SPM | Marvel's Spider-Man         | September 26, 2025 | September 26, 2025 |  
+| TLA | Avatar: The Last Airbender  | November 21, 2025  | November 21, 2025  |
+| ECL | Lorwyn Eclipsed             | January 23, 2026   | January 23, 2026   |  
+| TBA | Secrets of Strixhaven       | Q2 2026            | Q2 2026            |  
+| TBA | Reality Fracture            | Q3 2026            | Q3 2026            |  
+| TBA | TBA                         | Q1 2027            | Q1 2027            |  
+| TBA | TBA                         | Q2 2027            | Q2 2027            |  
+| TBA | TBA                         | Q3 2027            | Q3 2027            |  
 
 
 ### Pokemon Trading Card Game
@@ -175,8 +183,8 @@ Current formats:
 | BLK | Scarlet & Violet–Black Bolt            | Special Expansion     | July 18, 2025     |
 | WHT | Scarlet & Violet–White Flare           | Special Expansion     | July 18, 2025     |
 | MEG | Mega Evolution                         | Main Series Expansion | September 26, 2025|
-| PHA | Mega Evolution–Phantasmal Flames         | Main Series Expansion | November 14, 2025|
-| AHE | Mega Evolution–Ascended Heroes           | Main Series Expansion | January 30, 2026|
+| PHA | Mega Evolution–Phantasmal Flames       | Main Series Expansion | November 14, 2025 |
+| AHE | Mega Evolution–Ascended Heroes         | Main Series Expansion | January 30, 2026  |
 
 
 ### Yu-Gi-Oh
@@ -232,7 +240,6 @@ Regional Qualifiers - [Regional locations](https://www.yugioh-card.com/en/events
 Duelists receive World Qualifier Points (WQP) by earning a World Championship Qualifier (WCQ) invite from the following events: Regional Qualifiers, Dragon Duels, OTS Championships, Nationals in Latin America, and the Yu-Gi-Oh! Championship Series. Duelists that make the Top Cut at the WCQ will also earn WQP for the following year’s WQP Playoff.
 
 
-
 ---
 
 ## Tier 2: The Big Contenders
@@ -263,6 +270,8 @@ Current formats:
 |   2   |   8 | Reign of Jafar       | May 30, 2025      | June 6, 2025      |
 |   3   |   9 | Fabled               | August 29, 2025   | September 5, 2025 |
 |   3   |  10 | Whispers in the Well | November 6, 2025  | November 14, 2025 |
+|   3   |  11 | Winterspell          | Q1 2026           | Q1 2026           |
+|   3   |  12 | Wilds Unknown        | Q2 2026           | Q2 2026           |
 
 Season 2 North American Challenge Events: (Other events in EU, Asia, Australia, and Brazil)
 * October 25-26, 2025 Milwaukee, WI
@@ -278,14 +287,19 @@ League of Legends: Riftbound was released in China earlier in 2025 and on Octobe
 
 The game features many innovative mechanics. Players choose a legend which grants an ability and determines the deck colors and available champion cards and signature spells. Players start with one champion available for play and each player selects a battlefield. Players play their creatures to their base and must move them to one of the two battlefields to score points. 
 
-These new gameplay mechanics and distinct feeling for many different decks has made the game very popular and that has been it's biggest flaw so far. 
+These new gameplay mechanics and distinct feeling for many different decks has made the game very popular and that has been it's biggest flaw so far in that product has been unavailable.
 
-| Set | Name                                                                      | Release          |
-|-----|---------------------------------------------------------------------------|------------------|
-| OGN | Origins Booster Set (377 card set, 14 card packs: 7C, 3U, 3 Foil, 1 Token)| October 31, 2025 |
-| OGN | Lee Sin, Jinx, Annie, and Viktor Starter Decks                            | October 31, 2025 |
-| OGS | Origins: Proving Grounds (24 new cards in 4 decks: Yi, Garen, Lux, Annie) | October 31, 2025 |
+[Link to my local information page](/UpstateRiftbound)
+
+| Set | Name                                                                      | Release           |
+|-----|---------------------------------------------------------------------------|-------------------|
+| OGN | Origins Booster Set (377 card set, 14 card packs: 7C, 3U, 3 Foil, 1 Token)| October 31, 2025  |
+| OGN | Lee Sin, Jinx, Annie, and Viktor Starter Decks                            | October 31, 2025  |
+| OGS | Origins: Proving Grounds (24 new cards in 4 decks: Yi, Garen, Lux, Annie) | October 31, 2025  |
 |     | Spiritforged                                                              | February 27, 2026 |
+|     | Unleashed                                                                 | May 2026          |
+|     | Vendetta                                                                  | Q3 2026           |
+|     | Radiance                                                                  | Q4 2026           |
 
 
 ### One Piece Card Game
@@ -316,25 +330,27 @@ Based on the anime 'One Piece'. Since it was published in 2022 by [Bandai](https
 |  4  | DF03  | Devil Fruits Collection Vol.3                 | November 14, 2025 |
 |  4  | IB05  | Illustration Box IB-05                        | January 16, 2026  |
 |  4  | IB06  | Illustration Box IB-06                        | January 16, 2026  |
-|  4  | EB03  | Extra Booster                                | February 20, 2026 |
+|  4  | EB03  | Extra Booster                                 | February 20, 2026 |
 |  4  | PB05  | Premium Card Collection -Best Selection Vol.5 | February 27, 2026 |
-|  4  | JAP01 | Japanese 3rd Anniversary Set                 | March 27, 2026   |
-|  4  | ST30  | Starter Deck ST-30                           | June 12, 2026   |
+|  4  | JAP01 | Japanese 3rd Anniversary Set                  | March 27, 2026    |
+|  4  | ST30  | Starter Deck ST-30                            | June 12, 2026     |
 
 
 ### Star Wars: Unlimited
 
-Star Wars: Unlimited is the latest of several Star Wars CCGs published by [Fantasy Flight Games](https://www.fantasyflightgames.com/en/index.html). This CCG is a reboot of previous Star Wars CCGs in 2024 featuring graphic novel style art. This game has an innovative one-action-per-turn mechanic and is been very popular.
+Star Wars: Unlimited is the latest of several Star Wars CCGs published by [Fantasy Flight Games](https://www.fantasyflightgames.com/en/index.html). This CCG is a reboot of previous Star Wars CCGs in 2024 featuring graphic novel style art. This game has an innovative one-action-per-turn mechanic and is been somewhatpopular. Starting in March 2026 the game will feature a set rotation where the first 3 sets will rotate out of standard and an eternal format will be introduced.
 
-| Set | Name                    | Release          |
-|-----|-------------------------|------------------|
-| 1   | Spark of Rebellion      | March 8, 2024    |
-| 2   | Shadows of the Galaxy   | July 12, 2024    |
-| 3   | Twilight of the Republic| November 8, 2024 |
-| 4   | Jump to Lightspeed      | March 14, 2025   |
-| 5   | Legends of the Force    | July 11, 2025    |
-| 6   | Secrets of Power        | November, 2025   |
-
+| Block | Set | Name                    | Release          |
+|-------|-----|-------------------------|------------------|
+| 1     | 1   | Spark of Rebellion      | March 8, 2024    |
+| 1     | 2   | Shadows of the Galaxy   | July 12, 2024    |
+| 1     | 3   | Twilight of the Republic| November 8, 2024 |
+| 2     | 4   | Jump to Lightspeed      | March 14, 2025   |
+| 2     | 5   | Legends of the Force    | July 11, 2025    |
+| 2     | 6   | Secrets of Power        | November 7, 2025 |
+| 3     | 7   | A Lawless Time          | March 13, 2026   |
+| 3     | 8   | Ashes of the Empire     | July 2026        |
+| 3     | 9   | Homeworlds              | November 2026    |
 
 ---
 
@@ -353,21 +369,20 @@ Events: [Digimon Card Game Official Events](https://world.digimoncard.com/event/
 
 |Block| Set | Name                                  | Release            |
 |-----|-----|---------------------------------------|--------------------|
-|  5  |BT21| Booster World Convergence             | April 25, 2025     |
-|  5  |EX09| Extra Booster Versus Monsters         | June 26, 2025      |
-|  5  |BT22| Booster Cyber Eden                    | July 25, 2025      |
-|  5  |EX10| Sinister Order                        | September 29, 2025 |
-|  5  |BT23| Booster Hackers Slumber               | October 18, 2025   |
-|  5  |LM06| Limited Card Pack Billion Bullet      | October 24, 2025 |
-|  5  |    | Amethyst Mandala Advanced Deck        | December 5, 2025   |
-|  5  |PB21| Tamer's Evolution Box Rise Of Digimon | December 26, 2025  |
-|  5  |BT24| Time Stranger                         | January 23, 2026   |
-|  5  |PB22| Digimon Liberator Debuggers Set       | February 6, 2026   |
-|  5  |PB23| Premium Heroines Set Ver. 2           | March 20, 2026    |
-|  5  |AD01| DIGIMON GENERATION AD-01 Advanced     | March 27, 2026    |
-|  5  |LM07| Limited Card Pack Another Knight      | March 27, 2026    |
-|  5  |    | Dual revolution. Starter Decks: Data Squad and Beatbreak! | May 22, 2026    |
-
+|  5  |BT21| Booster World Convergence              | April 25, 2025     |
+|  5  |EX09| Extra Booster Versus Monsters          | June 26, 2025      |
+|  5  |BT22| Booster Cyber Eden                     | July 25, 2025      |
+|  5  |EX10| Sinister Order                         | September 29, 2025 |
+|  5  |BT23| Booster Hackers Slumber                | October 18, 2025   |
+|  5  |LM06| Limited Card Pack Billion Bullet       | October 24, 2025   |
+|  5  |    | Amethyst Mandala Advanced Deck         | December 5, 2025   |
+|  5  |PB21| Tamer's Evolution Box Rise Of Digimon  | December 26, 2025  |
+|  5  |BT24| Time Stranger                          | January 23, 2026   |
+|  5  |PB22| Digimon Liberator Debuggers Set        | February 6, 2026   |
+|  5  |PB23| Premium Heroines Set Ver. 2            | March 20, 2026     |
+|  5  |AD01| DIGIMON GENERATION AD-01 Advanced      | March 27, 2026     |
+|  5  |LM07| Limited Card Pack Another Knight       | March 27, 2026     |
+|  5  |    | Data Squad and Beatbreak Starter Decks | May 22, 2026       |
 
 
 ### Dragon Ball Super Card Game: Masters
@@ -409,9 +424,9 @@ Events: [Digimon Card Game Official Events](https://world.digimoncard.com/event/
 | BT25 | ZENKAI Series EX Set 08       | Legend of the Dragon Balls Booster Set    | July 19, 2024      |
 | BT26 | ZENKAI Series EX Set 09       | Ultimate Advent Booster Set               | October 11, 2024   |
 | BT27 | ZENKAI Series EX Set 10       | History of Z Booster Set                  | March 7, 2025      |
-| BT28 | New Series Set 01             | New Series Booster Set                    | September 5, 2025  |
-| BT29 |                               | Ultra-Bout Series Set 02                  | November 21, 2025  |
-| BT30 |                               | Ultra-Bout Series Set 03                  | March 27, 2026    |
+| BT28 | Ultra-Bout Series Set 01      | Prismatic Clash                           | September 5, 2025  |
+| BT29 | Ultra-Bout Series Set 02      | Gathering of Strong Rivals                | January 2026       |
+
 
 
 ### Dragon Ball Super Card Game: Fusion World
@@ -429,19 +444,20 @@ Events: [Digimon Card Game Official Events](https://world.digimoncard.com/event/
 | FS05| Bardock Starter Deck                     | August 9, 2024    |
 | FB03| Raging Roar Booster Box                  | August 9, 2024    |
 | FB04| Ultra Limit Booster Box                  | November 8, 2024  |
-| FB05| New Adventure Booster Box                | February 8, 2025  |
 | FS06| Son Goku: Mini Starter Deck              | November 8, 2024  |
 | FS07| Vegeta: Mini Starter Deck                | November 8, 2024  |
+| FB05| New Adventure Booster Box                | February 8, 2025  |
 | FS08| Vegeta: Mini Super Saiyan 3 Starter Deck | April 26, 2025    |
 | FB06| Rivals Clash Booster Box                 | April 26, 2025    |
 | FS09| Ex Shallot Starter Deck                  | June 14, 2025     |
 | FS10| Ex Giblet Starter Deck                   | June 14, 2025     |
 | SB01| Manga Booster 01 Booster Box             | July 27, 2025     |
 | FB07| Wish for Shenron Booster Box             | September 19, 2025|
-| FB08| Fusion World Manga                       | November 14, 2025 |
+| SB02| Fusion World Manga Booster Box 02        | November 14, 2025 |
+| FB08| Saiyan's Pride                           | December 12, 2025 |
 | FS11| Fusion World FS11 Starter Deck           | March 13, 2026    |
 | FS12| Fusion World FS12 Starter Deck           | March 13, 2026    |
-| FB09| Fusion World - FB09                       | March 20, 2026    |
+| FB09| Fusion World - FB09                      | March 20, 2026    |
 
 
 ### Flesh and Blood
@@ -477,22 +493,22 @@ Events: [Digimon Card Game Official Events](https://world.digimoncard.com/event/
 
 Gundam Card Game is a brand new CCG based on the Gundam Franchise and published by [Bandai](https://www.bandai.com/en-us/). Combat mechanics are a refinement of other Bandai CCGs, where attacks occur one at a time at any point during the turn, targetting a specific tapped creature or the player's shields, where there is a chance the shield card could be drawn or have another effect with a 'Burst' mechanic. There is also an innovative 'Pilot' system which allows Pilot cards to be played as upgrades to Gundam creature cards, giving them additional stats and abilities. The resource system is a relatively simple seperate deck of energy cards drawn once per turn, although the predictability does allow for some fine tuned balance. The second player starts with an additional 'EX' energy card which can only be used once.
 
-| Name                                      | Release           |
-|-------------------------------------------|-------------------|
-| ST01 Heroic Beginnings Starter Deck       | July 11, 2025     |
-| ST02 Wings of Advance Starter Deck        | July 11, 2025     |
-| ST03 Zeon Rush Starter Deck               | July 11, 2025     |
-| ST04 SEED Strike Starter Deck             | July 11, 2025     |
-| GD01 New Type Rising Booster Box          | July 25, 2025     |
-| ST05 Iron Bloom Starter Deck              | September 26, 2025|
-| GD02 Dual Impact Booster Box              | October 24, 2025  |
-| ST06 Clan Unity Starter Deck              | October 24, 2025  |
-| ST07 Celestial Drive Starter Deck         | January 16, 2026  |
-| ST08 Flash of Brilliance Starter Deck     | January 16, 2026  |
-| GD03 TBA                                  | January 31, 2026  |
-|      Gundam Assemble Premium Collection   | February 27, 2026 |
-|      Ultimate Deck 01                     | March 27, 2026    |
-| GD04 TBA                                  | April 24, 2026    |
+| Set  | Name                                 | Release            |
+|------|--------------------------------------|--------------------|
+| ST01 | Heroic Beginnings Starter Deck       | July 11, 2025      |
+| ST02 | Wings of Advance Starter Deck        | July 11, 2025      |
+| ST03 | Zeon Rush Starter Deck               | July 11, 2025      |
+| ST04 | SEED Strike Starter Deck             | July 11, 2025      |
+| GD01 | New Type Rising Booster Box          | July 25, 2025      |
+| ST05 | Iron Bloom Starter Deck              | September 26, 2025 |
+| GD02 | Dual Impact Booster Box              | October 24, 2025   |
+| ST06 | Clan Unity Starter Deck              | October 24, 2025   |
+| ST07 | Celestial Drive Starter Deck         | January 16, 2026   |
+| ST08 | Flash of Brilliance Starter Deck     | January 16, 2026   |
+| GD03 | TBA                                  | January 31, 2026   |
+|      | Gundam Assemble Premium Collection   | February 27, 2026  |
+|      | Ultimate Deck 01                     | March 27, 2026     |
+| GD04 | TBA                                  | April 24, 2026     |
 
 
 
@@ -500,17 +516,18 @@ Gundam Card Game is a brand new CCG based on the Gundam Franchise and published 
 
 [Keyforge](http://www.keyforging.com/) was designed by Richard Garfield and published by [Fantasy Flight Games](https://www.fantasyflightgames.com/) since 2018. It is technically not a CCG because you buy the entire deck and cannot swap cards with another deck, as an attempt to solve problem of chasing individual cards on the secondary market in other CCGs. Keyforge is sold at big box retailers and seems to sell well but doesn't often see play at game stores.
 
-| Set | Name                 | Release           |
-|-----|----------------------|-------------------|
-| 1   | Call of the Archons  | November 15, 2018 |
-| 2   | Age of Ascension     | May 30, 2019      |
-| 3   | Worlds Collide       | November 8, 2019  |
-| 4   | Mass Mutation        | May 29, 2020      |
-| 5   | Dark Tidings         | March 12, 2021    |
-| 6   | Winds of Exchange    | September 15, 2023|
-| 7   | Grim Reminders       | March 1, 2024     |
-| 8   | Æmber Skies          | September 2024    |
-| 9   | Tokens of Change     | February 2025     |
+| Set | Name                 | Release            |
+|-----|----------------------|--------------------|
+| 1   | Call of the Archons  | November 15, 2018  |
+| 2   | Age of Ascension     | May 30, 2019       |
+| 3   | Worlds Collide       | November 8, 2019   |
+| 4   | Mass Mutation        | May 29, 2020       |
+| 5   | Dark Tidings         | March 12, 2021     |
+| 6   | Winds of Exchange    | September 15, 2023 |
+| 7   | Grim Reminders       | March 1, 2024      |
+| 8   | Æmber Skies          | October 18, 2024   |
+| 9   | Prophetic Visions    | July 18, 2025      |
+| 10  | Draconian Measures   | Early 2026         |
 
 
 ## Union Arena
@@ -607,24 +624,25 @@ Battle Spirits Saga is [Bandai](https://www.bandai.com/en-us/)'s new attempt to 
 
 ### Cardfight!! Vanguard
 
-[Cardfight!! Vanguard](https://en.cf-vanguard.com/) is a CCG based on the anime 'Cardfight!! Vanguard' created by Bushiroad in 2011.
+[Cardfight!! Vanguard](https://en.cf-vanguard.com/) is an anime themed CCG created by Bushiroad in 2011.
 
-| Set | Name                          | Release           |
-|-----|-------------------------------|-------------------|
-| 6   | Generation Dragenesis         | February 28, 2025 |
-| 7   | Moon Fangs & Cerulean Blaze   | April 25, 2025    |
-| 8   | Knights of Rebirth            | June 27, 2025     |
-| 9   | Super Brave Detonation        | August 29, 2025   |
-| 10  | Dragonsoul Resonance          | October 24, 2025  |
-|     | Procession of Ardent Splendor | TBA               |
-|     | Lyrical Monasterio Season of Wonders | January 30, 2026 |
-|     | Chasm of Lost Souls                 | February 27, 2026 |
+| Set | Name                                 | Release           |
+|-----|--------------------------------------|-------------------|
+| 6   | Generation Dragenesis                | February 28, 2025 |
+| 7   | Moon Fangs & Cerulean Blaze          | April 25, 2025    |
+| 8   | Knights of Rebirth                   | June 27, 2025     |
+| 9   | Super Brave Detonation               | August 29, 2025   |
+| 10  | Dragonsoul Resonance                 | October 24, 2025  |
+| 11  | Symphony of Might & Bloom            | December 19, 2025 |
+|     | Lyrical Monasterio Season of Wonders | January 30, 2026  |
+| 12  | Chasm of Lost Souls                  | February 27, 2026 |
+| 13  | Parallactic Clash                    | May 8, 2026       |
 
 
 ### Cookie Run: Braverse
 
 New CCG in 2025 by [Devsisters](https://www.devsisters.com/), creators of the popular mobile game 'Cookie Run'.  
-Currently Asia is ahead of US in releases but NA releases started in July 2025. World Championships are planned for March 2026.  
+Currently Asia is ahead of US in releases but NA releases started in July 2025 and are being rushed to catch up. World Championships are planned for March 2026.  
 Events: [https://play.cookieruntcg.com/](https://play.cookieruntcg.com/)
 
 | Set | Name                          | Release           |
@@ -655,16 +673,16 @@ Events: [https://play.cookieruntcg.com/](https://play.cookieruntcg.com/)
 
 [Final Fantasy](https://www.finalfantasy.com/) is a CCG based on the Final Fantasy franchise published by [Square Enix](https://www.square-enix.com/en_US/) since 2011. The mechanics are similar to MtG, with an innovative 'party' combat system. I believe this is also more popular in Japan, but it is available in the US at some game stores.
 
-| Name                 | Prerelease        | Release          |
-|----------------------|-------------------|-------------------|
-| Hidden Hope          | March 15, 2024    | March 22, 2024    |
-| Hidden Trials        | July 26, 2024     | August 2, 2024    |
-| Hidden Legends       | November 8, 2024  | November 15, 2024 |
-| Tears of the Planet  | March 21, 2025    | March 28, 2025    |
-| World Champion Decks 2024 |                   | August 29, 2025 |
-| Starter Deck 2025 Volume 1 & 2 |         | October 3, 2025   |
-| Journey Of Discovery |                   | November 14, 2025 |
-| Dreamlike Oceans     |                   | March 27, 2026    |
+| Name                      | Prerelease       | Release           |
+|---------------------------|------------------|-------------------|
+| Hidden Hope               | March 15, 2024   | March 22, 2024    |
+| Hidden Trials             | July 26, 2024    | August 2, 2024    |
+| Hidden Legends            | November 8, 2024 | November 15, 2024 |
+| Tears of the Planet       | March 21, 2025   | March 28, 2025    |
+| World Champion Decks 2024 |                  | August 29, 2025   |
+| Starter Decks 2025        |                  | October 3, 2025   |
+| Journey Of Discovery      |                  | November 14, 2025 |
+| Dreamlike Oceans          |                  | March 27, 2026    |
 
 
 ### Force of Will
@@ -696,6 +714,7 @@ This is a new card game published by BushiRoad in 2025.
 | Resonance of Rivals                | January 31, 2026  |
 | Dual Starter Deck Set              | February 21, 2026 |
 
+
 ### Grand Archive
 
 [Grand Archive](https://www.gatcg.com/) is a CCG published in 2023 by Weebs of the Shore LLC that describes itself as an anime TCG with western game design.
@@ -717,11 +736,17 @@ This is a new card game published by BushiRoad in 2025.
 
 Hololive Official Card Game is a V-tuber themed CCG that was ported to English in 2025.
 
-| Name                           | Release           |
-|--------------------------------|-------------------|
-| Start Deck Purple Yuzuki Choco | October 17, 2025  |
-| Start Deck Blue Nekomata Okayu | October 17, 2025  |
-| Curious Universe               | February 20, 2026 |
+| Name                             | Release           |
+|----------------------------------|-------------------|
+| Blooming Radiance (Set 1)        | July 11, 2025     |
+| Start Deck Purple Yuzuki Choco   | October 17, 2025  |
+| Start Deck Blue Nekomata Okayu   | October 17, 2025  |
+| Quintet Spectrum (Set 2)         | October 17, 2025  |
+| Elite Spark (Set 3)              | December 19, 2025 |
+| Start Deck White Todoroki Hajime | December 19, 2025 |
+| Start Deck Green Kazama Iroha    | December 19, 2025 |
+| Start Deck Yellow Shiranui Flare | December 19, 2025 |
+
 
 ### Shadowverse: Evolve
 
@@ -1075,36 +1100,36 @@ Z/X Zillions of enemy X is a Japanese anime themed CCG created in 2013 by Brocco
 
 The following games are no longer in print, and are just here for reference.
 
-| Name                          |Release| Publisher                    | Notes                |
-|-------------------------------|-------|------------------------------|----------------------|
-| .hack//Enemy                  | 2003  | Decipher, Inc.               | Not in print |
-| 007 Spy Cards                 | 2008  | GE Fabbri                    | Not in print |
-| 24: Trading Card Game         | 2007  | Press Pass, Inc.             | Not in print |
-| 7th Sea                       | 1999  | Alderac Entertainment Group  | Maybe revived as an LCG? |
-| Adventure Time Card Wars      | 2014  | Cryptozoic Entertainment     | Not in print |
-| Afterworld                    | 2016  | Panini                       | Not in print |
+| Name                            |Release| Publisher                    | Notes                |
+|---------------------------------|-------|------------------------------|----------------------|
+| .hack//Enemy                    | 2003  | Decipher, Inc.               | Not in print |
+| 007 Spy Cards                   | 2008  | GE Fabbri                    | Not in print |
+| 24: Trading Card Game           | 2007  | Press Pass, Inc.             | Not in print |
+| 7th Sea                         | 1999  | Alderac Entertainment Group  | Maybe revived as an LCG? |
+| Adventure Time Card Wars        | 2014  | Cryptozoic Entertainment     | Not in print |
+| Afterworld                      | 2016  | Panini                       | Not in print |
 | Age of Empires II Expandable CG | 2000  | Journeyman Press/USPCC       | Not in print |
-| AGE: The Amazing Goal Era       | 2009  | RCS MediaGroup                | Not in print |
+| AGE: The Amazing Goal Era       | 2009  | RCS MediaGroup               | Not in print |
 | Ah! My Goddess                  | 2009  | Upper Deck                   | Not in print |
 | Air TCG                         | 2001  | Leaf fight TCG               | Not in print |
 | Aldnoah Zero                    | 2015  | Movic                        | Not in print |
 | Alice x Cross                   | 2008  | Bushiroad                    | Not in print |
 | Alien Attax                     | 2013  | Topps                        | Not in print |
-| Aliens Predator CCG             | 1997  | Precedence/HarperCollins | [Unique 3 player game, 3 expansions](https://en.wikipedia.org/wiki/Aliens_Predator_Customizable_Card_Game) |
+| Aliens Predator CCG             | 1997  | Precedence/HarperCollins     | [Unique 3 player game, 3 expansions](https://en.wikipedia.org/wiki/Aliens_Predator_Customizable_Card_Game) |
 | Allegiance: War of Factions     | 2004  | Lucid Raven Productions      | Not in print |
-| Álomfogó                        | 2007  | Beholder Kft.               | Not in print |
-| Alteil                          | 2004  | ?                           | Not in print |
-| American Idol CCG               | 2004  | Fleer/SkyBox International | Not in print |
-| Ange-Vierges                    | 2013  | media Factory               | Not in print |
-| Angelic Layer                   | ?     | Amada Printing/Clamp        | Not in print |
+| Álomfogó                        | 2007  | Beholder Kft.                | Not in print |
+| Alteil                          | 2004  | ?                            | Not in print |
+| American Idol CCG               | 2004  | Fleer/SkyBox International   | Not in print |
+| Ange-Vierges                    | 2013  | media Factory                | Not in print |
+| Angelic Layer                   | ?     | Amada Printing/Clamp         | Not in print |
 | Ani-Mayhem                      | 1996  | Pioneer Entertainment        | Not in print |
-| Animum Saxis                    | ?     | Showmans                    | Not in print |
-| Aniołowie                       | 2005  | Wydawnictwo Wieszcze        | Not in print |
-| Aquarian Age                    | 2000  | Broccoli                    | Not in print |
-| Arc the Lad Generation          | 2004  | Sony                       | Not in print |
-| Arcadia                         | 1996  | White Wolf Publishing       | Not in print |
-| Arcadia Tribe                   | 2015  | Kadokawa                   | Not in print |
-| Arcana Strikes                  | ?     | ?                          | Not in print |
+| Animum Saxis                    | ?     | Showmans                     | Not in print |
+| Aniołowie                       | 2005  | Wydawnictwo Wieszcze         | Not in print |
+| Aquarian Age                    | 2000  | Broccoli                     | Not in print |
+| Arc the Lad Generation          | 2004  | Sony                         | Not in print |
+| Arcadia                         | 1996  | White Wolf Publishing        | Not in print |
+| Arcadia Tribe                   | 2015  | Kadokawa                     | Not in print |
+| Arcana Strikes                  | ?     | ?                            | Not in print |
 | Arkna: Trading Card Game         | 2010  | IguanaBee                  | Not in print |
 | Asura System                     | 2004  | Terranetz                  | Not in print |
 | Austin Powers CCG                | 1999  | Decipher, Inc.             | Not in print |
@@ -1374,7 +1399,7 @@ The following games are no longer in print, and are just here for reference.
 | Terror                                 | 1996  | Kris Silver                | Not in print |
 | Thorgal Kolekcjonerska Gra Karciana    | 2002  | Egmont Polksa              | Not in print |
 | Timestream: The Remnant                | 2002  | Cahaba Productions Inc.    | Not in print |
-| Tomb Raider CCG                        | 1999  | Precedence Entertainment | [Not in print](https://en.wikipedia.org/wiki/Tomb_Raider_Collectible_Card_Game) Received 2 expansions in 1999 and 2000 but the 3rd was never released. |
+| Tomb Raider CCG                        | 1999  | Precedence Entertainment   | [Not in print](https://en.wikipedia.org/wiki/Tomb_Raider_Collectible_Card_Game) Received 2 expansions in 1999 and 2000 but the 3rd was never released. |
 | Top of the Order                       | 1995  | Donruss                   | Not in print |
 | Towers in Time                         | 1995  | Thunder Castle Games      | Not in print |
 | Transformers                           | 2018  | Wizards of the Coast      | Stopped after Wave 5 in 2020 |
@@ -1394,9 +1419,9 @@ The following games are no longer in print, and are just here for reference.
 | WarCry (Warhammer Fantasy CCG)         | 2003-2007  | Sabertooth Games          | [Not in print](https://en.wikipedia.org/wiki/WarCry_(game)) |
 | Warhammer 40,000 CCG                   | 2001  | Sabertooth Games          | Not in print |
 | Warhammer 40,000: Conquest             | 2014-2017 | Fantasy Flight Games  | [LCG stopped in 2017](https://en.wikipedia.org/wiki/Warhammer_40,000:_Conquest) |
-| Warhammer: Invasion                    | 2009-2013 | Fantasy Flight Games  | [LCG stopped in 2013](https://en.wikipedia.org/wiki/Warhammer:_Invasion) |
-| Warhammer AoS: Champions               | 2018  | PlayFusion Limited/Games Workshop | Not in print |
-| Warlords                               | 1997  | Iron Crown Enterprises    | [Not in print](https://en.wikipedia.org/wiki/Warlords_(card_game) Based on WarLords III) |
+| Warhammer: Invasion                     | 2009 | Fantasy Flight Games  | [LCG stopped in 2013](https://en.wikipedia.org/wiki/Warhammer:_Invasion) |
+| Warhammer AoS: Champions                | 2018  | PlayFusion Limited/Games Workshop | Not in print |
+| Warlords                                | 1997  | Iron Crown Enterprises      | [Not in print](https://en.wikipedia.org/wiki/Warlords_(card_game) Based on WarLords III) |
 | Wars of the Past                        | 2021  | Finople Games/Finople Games | Website down |
 | WARS Trading Card Game                  | 2004  | Decipher, Inc.              | Not in print |
 | WCW Nitro                               | 2000  | Wizards of the Coast        | Not in print |
@@ -1407,7 +1432,7 @@ The following games are no longer in print, and are just here for reference.
 | Winx Club Collectible Card Game         | 2006  | Rainbow Games/Upper Deck    | Not in print |
 | Wizard in Training                      | 2000  | Upper Deck                  | Not in print |
 | Wizards of Mickey                       | 2008  | New Media Publishing        | Not in print |
-| World of Warcraft TCG                   | 2006  | Upper Deck/Cryptozoic Entertainment | Not in print 21 expansions and several raids and dungeons were released. Somewhat successful for its time. |
+| World of Warcraft TCG                   | 2006  | Upper Deck/Cryptozoic       | 21 expansions and several raids and dungeons were released. Somewhat successful for its time. |
 | WWE Face Off                            | 2007  | Topps                        | Not in print |
 | Wyvern                                  | 1995  | U.S. Games Systems           | Not in print |
 | The X-Files Collectible Card Game       | 1996  | Voyager Promotions           | Not in print |
@@ -1569,51 +1594,52 @@ A new second edition was recently announced coming in 2026 which promises to be 
 
 | Name                           | Release           |
 |--------------------------------|-------------------|
-| Compile: Main 1                | 2024              |
-| Compile: Aux 1                 | 2024              |
-| Compile: Aux 2                 | 2025              |
-| Compile: Main 2                | 2025              |
+| Compile: Main 1 (Base Set)     | 2024              |
+| Compile: Aux 1 (Expansion)     | 2024              |
+| Compile: Aux 2 (Expansion)     | 2025              |
+| Compile: Main 2 (Base Set)     | 2025              |
 
 
 ### Dominion 
 
 Dominion plays a lot like a CCG but is designed to be a boxed deckbuilding game. 
 
-| Expansion                       | Release date  | Mechanics                                                                |
-|---------------------------------|---------------|--------------------------------------------------------------------------|
+| Expansion                       | Release date  | Mechanics                                                                          |
+|---------------------------------|---------------|------------------------------------------------------------------------------------|
 | Dominion                        | October 2008  | Basic card types and standard mechanics. Includes Basic cards for up to 4 players. |
-| Intrigue 	                      | July 2009     | Multi-typed Victory cards, and cards that allow a player to choose between multiple effects. The first edition of Intrigue was also a standalone game and came with its own set of Basic cards. |
-| Seaside                         | October 2009  | Duration cards and other cards that can have effects on other turns.     |
-| Alchemy                         | May 2010      | Potion and P–cost cards.                                                 |
+| Intrigue                        | July 2009     | Originally a stand-alone game with basic cards. Multi-typed Victory cards and cards with multiple effects. |
+| Seaside                         | October 2009  | Duration cards and other cards that can have effects on other turns.               |
+| Alchemy                         | May 2010      | Potion and P–cost cards.                                                           |
 | Prosperity                      |  October 2010 | Platinum and Colony, expensive cards,  VP tokens, and Treasure cards with effects. |
-| Cornucopia                      |  June 2011    | Cards that reward or increase diversity in players' hands and decks. Since June 2015, sold as "Guilds & Cornucopia". |
-| Hinterlands                     | October 2011  | Cards that have when-gain effects, filtering, and Reaction cards.        |
-| Dark Ages                       | August 2012   | Trashing, when-trash effects, Shelters, and Ruins.                       |
-| Guilds 	                        | June 2013     | Coffers and overpaying. Since June 2015, sold as "Guilds & Cornucopia".  |
-| Adventures 	                    | April 2015    | Reserve cards, Events, bonus tokens, Travellers, and Duration cards.     |
-| Empires 	                      | June 2016     | Debt, split piles, Landmarks, Gathering cards, Events, and  VP tokens.   |
-| Dominion 2nd Edition            |	October 2016  | Removed 6 Kingdom cards. Added 7 new cards.                              |
-| Intrigue 2nd Edition            |	October 2016  | Removed the Basic cards, and replaced 6 Kingdom cards with 7 new ones.   |
-| Nocturne 	                      | November 2017 | Night cards, Heirlooms, Boons, Hexes, and non-Kingdom cards.             |
-| Renaissance 	                  | November 2018 | Villagers, Projects, Artifacts, and Coffers.                             |
-| Menagerie 	                    | March 2020    | Exile, Horses, Ways, alternative costs, and Events.                      |
-| Allies 	                        | March 2022    | Favors and rotating split piles.                                         |
-| Seaside 2nd Edition             | June 2022     | Removed 8 Kingdom cards and most blank cards. Added 9 new cards.         |
-| Prosperity 2nd Edition          | June 2022     | Removed 9 Kingdom cards. Added 9 new cards.                              |
-| Hinterlands 2nd Edition         | July 2022     | Removed 9 Kingdom cards. Added 9 new cards.                              |
-| Plunder 	                      | December 2022 | Traits, Loot, Events, Treasures, and Duration cards.                     |
-| Cornucopia & Guilds 2nd Edition | March 2024    | Second Edition replaced five Cornucopia Kingdom cards.                   |
-| Rising Sun                    	| August 2024   | Prophecies, Shadows, Events, and Debt.                                   |
+| Cornucopia                      |  June 2011    | Cards that reward or increase diversity in players' hands and decks.               |
+| Hinterlands                     | October 2011  | Cards that have when-gain effects, filtering, and Reaction cards.                  |
+| Dark Ages                       | August 2012   | Trashing, when-trash effects, Shelters, and Ruins.                                 |
+| Guilds 	                        | June 2013     | Coffers and overpaying.                                                            |
+| Guilds & Cornucopia             | June 2015     | Guilds and Cornucopia expansions combined.                                         |
+| Adventures 	                    | April 2015    | Reserve cards, Events, bonus tokens, Travellers, and Duration cards.               |
+| Empires 	                      | June 2016     | Debt, split piles, Landmarks, Gathering cards, Events, and  VP tokens.             |
+| Dominion 2nd Edition            |	October 2016  | Removed 6 Kingdom cards. Added 7 new cards.                                        |
+| Intrigue 2nd Edition            |	October 2016  | Removed the Basic cards, and replaced 6 Kingdom cards with 7 new ones.             |
+| Nocturne 	                      | November 2017 | Night cards, Heirlooms, Boons, Hexes, and non-Kingdom cards.                       |
+| Renaissance 	                  | November 2018 | Villagers, Projects, Artifacts, and Coffers.                                       |
+| Menagerie 	                    | March 2020    | Exile, Horses, Ways, alternative costs, and Events.                                |
+| Allies 	                        | March 2022    | Favors and rotating split piles.                                                   |
+| Seaside 2nd Edition             | June 2022     | Removed 8 Kingdom cards and most blank cards. Added 9 new cards.                   |
+| Prosperity 2nd Edition          | June 2022     | Removed 9 Kingdom cards. Added 9 new cards.                                        |
+| Hinterlands 2nd Edition         | July 2022     | Removed 9 Kingdom cards. Added 9 new cards.                                        |
+| Plunder 	                      | December 2022 | Traits, Loot, Events, Treasures, and Duration cards.                               |
+| Cornucopia & Guilds 2nd Edition | March 2024    | Second Edition replaced five Cornucopia Kingdom cards.                             |
+| Rising Sun                    	| August 2024   | Prophecies, Shadows, Events, and Debt.                                             |
 
 
 ### Earthborne Rangers
 
-[Earthborne Rangers](https://boardgamegeek.com/boardgame/342900/earthborne-rangers) is a customizable cooperative card game publiushed by Earthborne Games in 2023 with several expansions released since then.  It is a similar story-based game to Arkham Horror: The Card Game.
+[Earthborne Rangers](https://boardgamegeek.com/boardgame/342900/earthborne-rangers) is a customizable cooperative card game publiushed by Earthborne Games in 2023 with several expansions released since then.  It is a similar story-based game to Arkham Horror: The Card Game with a far future exploration theme.
 
 
 ### Gwent 
 
-Gwent is based on a minigame within the Witcher series of of video games. There was a digital version of the game but a physical version of Gwent is being released in 2025.
+Gwent is based on a minigame within the Witcher series of of video games and now a physical version of the game has been released. This is a boxed CCG where players can form decks from the available cards.
 
 | Name                           | Release           |
 |--------------------------------|-------------------|
@@ -1685,6 +1711,14 @@ In 2021 they released a revised version of the card game in large boxes. Some ar
 | Trickster Takeover Scenario Pack   | August 15, 2025    |
 | Civil War Expansion                | September 19, 2025 |
 | Synthezoid Smackdown Scenario Pack | November 21, 2025  |
+| Hero Pack	Wonder Man               | February 2026      |
+| Hero Pack	Hercules                 | February 2026      |
+| Fear No Evil Campaign box          | Summer 2026        |
+| Hero Pack	Jessica Jones            | Summer 2026        |
+| Hero Pack	Luke Cage                | Summer 2026        |
+| Scenario Pack	Shadowlands          | Fall 2026          |
+| Hero Pack	Elektra	                 | Winter 2026        |
+| Hero Pack	Iron Fist	               | Winter 2026        |
 
 
 ### Sentinels of the Multiverse
@@ -1704,11 +1738,7 @@ Star Realms is a card-based deck-building science-fiction tabletop game, designe
 
 ### Star Trek: Star Realms
 
-The 'Star Realms' game reskinned 1:1 for Star Trek. The Borg Invasion expansion adds new mechanics, a Borg opponent for solo or co-op play, and other new cards.
-
-| Name                             | Release            |
-|----------------------------------|--------------------|
-| Borg Invasion expansion          | October 31, 2025   |
+The 'Star Realms' game reskinned 1:1 for Star Trek. The Borg Invasion expansion released in October 2025 added new mechanics, a Borg opponent for solo or co-op play, and other new cards.
 
 
 ### Star Wars: The Deckbuilding Game
@@ -1721,7 +1751,7 @@ The 'Star Realms' game reskinned 1:1 for Star Trek. The Borg Invasion expansion 
 Vampire: The Eternal Struggle (originally titled Jyhad) is a CCG originally designed by Richard Garfield and published by Wizards of the Coast in 1994, then White Wolf Publishing from 1996 to 2010. Then in 2018 [Black Chantry Productions](https://www.blackchantry.com/) took over the publishing rights and has been printing new expansions as a living card game.
 
 
-### ZU Tiles: Hime
+### ZU Tiles
 ZU Tiles: Hime is a boxed CCG-like game created in 2020 by ZU Studios, LLC.
 
 

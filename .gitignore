@@ -58,3 +58,6 @@ appsettings.Development.json
 
 # Temporary external code
 external/
+
+# VScode
+.vscode/
