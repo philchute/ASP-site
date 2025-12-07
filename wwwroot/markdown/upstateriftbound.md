@@ -67,7 +67,7 @@ Manathril Williamston have some singles?
 
 ### Thursday
 
-6:00 pm Card game night at Boarderlands Greenville (some people going for Riftbound?)
+6:00 pm Card game night at Borderlands Greenville (some people going for Riftbound?)
 
 ### Friday
 
@@ -139,7 +139,7 @@ Houston, Texas	December 5-7, 2025
 | Cheerful Games Spartanburg    | Friday February 6th, 2026 5:00 pm     | TBD |
 | Lake Hartwell Collectibles    | Friday February 6th, 2026 6:00 pm     | TBD |
 | Card Universe Boiling Springs | Friday February 6th, 2026 6:00 pm     | TBD |
-| Upstate TCG                   | Friday February 6th, 2026 6:00 pm     | TBD |
+| Upstate TCG Spartanburg       | Friday February 6th, 2026 6:00 pm     | TBD |
 | Empire Games Anderson         | Friday February 6th, 2026 6:00 pm     | TBD |
 | Borderlands Greenville        | Friday February 6th, 2026 6:00 pm     | TBD. currently showing full |
 | Toon Gaming Greenville        | Friday February 6th, 2026 7:30 pm     | TBD |
@@ -147,11 +147,11 @@ Houston, Texas	December 5-7, 2025
 | Boardwalk Greenville          | Saturday February 7th, 2026 12:00 pm  | TBD. currently showing invite only |
 | Epic Battlegrounds            | Saturday February 7th, 2026 12:00 pm  | TBD |
 | Manathril Williamston         | Saturday February 7th, 2026 12:30 pm  | TBD |
-| Tapstart Games                | Saturday February 7th, 2026 1:00 pm   | TBD |
+| Tapstart Games Westminster    | Saturday February 7th, 2026 1:00 pm   | TBD |
 | Empire Games Anderson         | Saturday February 7th, 2026 1:00 pm   | TBD |
 | Limit Break Fountain Inn      | Saturday February 7th, 2026 1:00 pm   | TBD |
 | Decks and Dice Seneca         | Saturday February 7th, 2026 2:30 pm   | TBD |
-| The Deck Box                  | Saturday February 7th, 2026 4:00 pm   | TBD |
+| The Deck Box, Fletcher NC     | Saturday February 7th, 2026 4:00 pm   | TBD |
 | Game Kastle Greenville        | Sunday February 8th, 2026 4:00 pm     | TBD |
 
 

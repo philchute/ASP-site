@@ -532,7 +532,7 @@ Gundam Card Game is a brand new CCG based on the Gundam Franchise and published 
 
 ## Union Arena
 
-[Union Arena](https://www.unionarena-tcg.com/) is ananime themed CCG from [Bandai](https://www.bandai.com/en-us/) which has been popular in Japan. The Japanese releases have been ahead of the US releases so there have been a rapid pace of releases in the US to catch up. Union Arena is unique in that decks are built from a particular franchise, so new sets can be bought or ignored depending on your interest in the franchise.
+[Union Arena](https://www.unionarena-tcg.com/) is an anime-themed CCG from [Bandai](https://www.bandai.com/en-us/) which has been popular in Japan. The Japanese releases have been ahead of the US releases so there have been a rapid pace of releases in the US to catch up. Union Arena is unique in that decks are built from a particular franchise, so new sets can be bought or ignored depending on your interest in the franchise.
 
 The game features a two line mechanic where players play cards to their energy line, and move them forward to the battle line to do combat. Player skill involves moving cards between the lines in the optimal way. 
 
