@@ -80,6 +80,14 @@ namespace ASP_site.Data.Initializers
                     Content = "<p>PC issues put me offline for more time than I expected. Ultimately bought a new PC but we're back now. Small update here to get back into the swing of things. CCG page has new information and some slight reorganization.</p>",
                     PostedDate = new DateTime(2025, 12, 5, 12, 0, 0, DateTimeKind.Utc), Author = "Phil",
                     Tags = new List<Tag> { tags.Single(t => t.Name == "Personal Update"), tags.Single(t => t.Name == "Website Update") }
+                },
+                new UpdatePost
+                {
+                    Id = 9,
+                    Title = "Game Server Browser Update",
+                    Content = "<p>Added proper domain name support for the server browser, fixing an issue with some old IPs which now won't need to be replaced. Fixed issue where Day of Defeat was showing DoD:Source servers.</p>",
+                    PostedDate = new DateTime(2025, 12, 7, 12, 0, 0, DateTimeKind.Utc), Author = "Phil",
+                    Tags = new List<Tag> { tags.Single(t => t.Name == "Website Update"), tags.Single(t => t.Name == "Gaming Update") }
                 }
             };
             return (posts, tags);

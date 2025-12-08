@@ -87,7 +87,7 @@ namespace ASP_site.Services
 
                         if (masterServer.Protocol == "A2S")
                         {
-                            var masterEndpoint = GetIPEndPoint(masterServer.Address);
+                            var masterEndpoint = await ResolveToIPEndPointAsync(masterServer.Address);
                             if (masterEndpoint is not null)
                             {
                                 var masterList = await A2SQuery.QueryServerList(masterEndpoint, game);
@@ -279,6 +279,41 @@ namespace ASP_site.Services
                 }
             });
             return items.ToList();
+        }
+
+        private async Task<IPEndPoint?> ResolveToIPEndPointAsync(string address)
+        {
+            var items = address.Split(':');
+            if (items.Length != 2)
+            {
+                return null;
+            }
+
+            if (!ushort.TryParse(items[1], out var port))
+            {
+                return null;
+            }
+
+            if (IPAddress.TryParse(items[0], out var ip))
+            {
+                return new IPEndPoint(ip, port);
+            }
+
+            try
+            {
+                var ips = await Dns.GetHostAddressesAsync(items[0]);
+                if (ips.Length > 0)
+                {
+                    var ipv4 = ips.FirstOrDefault(x => x.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork);
+                    return new IPEndPoint(ipv4 ?? ips[0], port);
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Error resolving hostname {items[0]}");
+            }
+
+            return null;
         }
 
         private static IPEndPoint? GetIPEndPoint(string address)

@@ -1534,7 +1534,7 @@ namespace ASP_site.Data.Initializers {
           PlayWith = new List<int> { 0 },
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/messiah",
-            GameDirectory = "messiah",
+            GameDirectory = "darkmessiah",
             MasterServerKey = "DarkMessiah",
             NoBackgroundService = true
           },
@@ -1702,7 +1702,7 @@ namespace ASP_site.Data.Initializers {
           ModForGameID = "halflife",
           EngineID = "goldsrc",
           Developer = "Valve Software",
-          SteamID = 300,
+          SteamID = 30,
           IsFree = false,
           IsPaid = true,
           IsOpenSource = false,

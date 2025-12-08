@@ -189,7 +189,7 @@ Current formats:
 
 ### Yu-Gi-Oh
 
-Yu-Gi-Oh! is another legacy CCG that is still around after many years. Created in 1999 by Konami, it was originally quite similar to MtG but has evolved in its own way. Card draw is a major resource in Yu-Gi-Oh, so you are often strongest on your first turn, when you have the most cards, rather than in MtG where you build up to more powerful plays. It has a reputation for more complicated mechanics than other CCGs, with complicated cards and decks; nearly every deck in Yu-Gi-Oh plays like a combo deck in other games. Somewhat uniquely, the game does not have card rotation, so power creep has made modern decks absurdly powerful. Konami recently made the 'Time Wizard' format official, where the legal cards are based on a previous time, for example '[goat](https://formatlibrary.com/formats/goat)' format from 2005 or '[edison](https://formatlibrary.com/formats/edison)' format from 2010.
+Yu-Gi-Oh! is another legacy CCG that is still around after many years. Created in 1999 by Konami, it was originally quite similar to MtG but has evolved in its own way. Card draw is a major resource in Yu-Gi-Oh, so you are often strongest on your first turn, when you have the most cards, rather than in MtG where you build up to more powerful plays. It has a reputation for more complicated mechanics than other CCGs, with complicated cards and decks; nearly every deck in Yu-Gi-Oh plays like a combo deck in other games. Somewhat uniquely, the game does not have card rotation, so power creep has made modern decks absurdly powerful. There is now an unoffical 'Time Wizard' format where the legal cards are based on a previous time, for example '[goat](https://formatlibrary.com/formats/goat)' format from 2005 or '[edison](https://formatlibrary.com/formats/edison)' format from 2010. Konami has recently introduced a 'Genysis' format where strong cards are assigned a point value and decks must be built under a points limit, typically 100 points.
 
 Packs are 8 commons and 1 rare card. Rares are 1/6 Ultra Rare, 1/12 Secret Rare, otherwise Super Rare. 24 packs per box.  
 [Ban List](https://yugipedia.com/wiki/Historic_TCG_Limitations_Chart/2021%E2%80%93)  
@@ -208,7 +208,7 @@ Packs are 8 commons and 1 rare card. Rares are 1/6 Ultra Rare, 1/12 Secret Rare,
 | CRBR| Crossover Breakers                    | Deck-Build Pack          | December 6, 2024  |
 | SBC2| Battle City Finals Collector's Set    | Speed Duel               | December 13, 2024 |
 | SUDA| Supreme Darkness                      | Booster Pack             | January 23, 2025  |
-| SDWD| Blue-Eyes White Destiny               | Structure Deck           | February 14, 2025 |
+| SDWD| Blue-Eyes White Destiny               | Preconstructed Deck      | February 14, 2025 |
 | OP27| OTS Tournament Pack 27                | Tournament Pack          | February 26, 2025 |
 | MZTM| Maze of the Master                    | Booster Pack             | March 14, 2025    |
 | RA04| Quarter Century Stampede              | Booster Pack             | April 11, 2025    |
@@ -216,13 +216,23 @@ Packs are 8 commons and 1 rare card. Rares are 1/6 Ultra Rare, 1/12 Secret Rare,
 | BLMM| Battles of Legend: Monster Mayhem     | Booster Pack             | June 13, 2025     |
 | OP28| OTS Tournament Pack 28                | Tournament Pack          | June 18, 2025     |
 | DUAD| Duelist's Advance                     | Booster Pack             | July 4, 2025      |
-|     | 2025 Mega Pack Bundle                 | Booster Pack             | September 4, 2025 |
-|     | Doom of Dimensions                    | Booster Pack             | September 25, 2025|
-|     | Legendary Collection Kaiba Reprint    | Booster Pack             | October 9, 2025   |
-|     | The Fallen & The Virtuous             | Structure Deck           | October 23, 2025  |
-|     | Legendary 5D's Deck                   | Collector's Deck         | November 6, 2025  |
-|     | Burst Protocol                        | Booster Pack             | January 22, 2026  |
-
+| JUSH| Justice Hunters                       | Deck-Build Pack          | August 1, 2025    |
+| 25LP| Limited Pack World Championship 2025  | Booster Pack             | August 30, 2025   |
+| 2025| Yu-Gi-Oh! World Championship 2025     | Tournament promotion     | August 31, 2025   |
+| MP25| 2025 Mega-Pack Tin                    | Tin                      | September 4, 2025 |
+| NKC1| Nike collaboration cards              | Promotional card         | September 12, 2025|
+| DOOD| Doom of Dimensions                    | Core Booster             | September 25, 2025|
+| EFC1| EFootball collaboration cards         | Promotional card         | September 27, 2025|
+| OP29| OTS Tournament Pack 29                | Tournament Pack          | October 15, 2025  |
+| CH01| The Fallen & The Virtuous (All-Foil)  | Preconstructed Deck      | October 23, 2025  |
+| L5DD| Legendary 5D's Decks                  | Collector's Set          | November 6, 2025  |
+| PHRE| Phantom Revenge                       | Deck-Build Pack          | December 4, 2025  |
+| CH02| Spirit Charmers (All-Foil)            | Preconstructed Deck      | January 22, 2026  |
+| BPRO| Burst Protocol                        | Core Booster             | February 5, 2026  |
+| OP30| OTS Tournament Pack 30                | Tournament Pack          | February 11, 2026 |
+| MZMU| Maze of Muertos                       | Booster Pack             | February 19, 2026 |
+| L26D| Legendary Modern Decks 2026           | Collector's Set          | March 13, 2026    |
+| RA05| Rarity Collection 5                   | Booster pack             | April 9, 2026     |
 
 Yu-Gi-Oh! World Championship 2024  - September 7-8, 2024
 North America World Championship Qualifier 2025 - July 11-13, 2025 - Indiana Convention Center, Indianapolis, IN
@@ -264,7 +274,7 @@ Current formats:
 |   1   |   2 | Rise of the Floodborn| November 17, 2023 | December 1, 2023  |
 |   1   |   3 | Into the Inklands    | February 23, 2024 | March 8, 2024     |
 |   1   |   4 | Ursula's Return      | May 17, 2024      | May 31, 2024      |
-|   1   |   5 | Shimmering Skies     | August 9, 2024    | August 23, 2024   |
+|   2   |   5 | Shimmering Skies     | August 9, 2024    | August 23, 2024   |
 |   2   |   6 | Azurite Sea          | November 15, 2024 | November 29, 2024 |
 |   2   |   7 | Archazia's Island    | March 7, 2025     | March 21, 2025    |
 |   2   |   8 | Reign of Jafar       | May 30, 2025      | June 6, 2025      |
@@ -464,29 +474,29 @@ Events: [Digimon Card Game Official Events](https://world.digimoncard.com/event/
 
 [Flesh and Blood](https://fabtcg.com/) is a new CCG created in 2019 by former Magic players at Legend Story Studios. The game has been well received and has a Pro Tour circuit forming.
 
-| #  | Set | Name                 | Release           |  
-|----|-----|----------------------|-------------------|
-|  1 | WTR | Welcome to Rathe     | October 11, 2019  |
-|  2 | ARC | Arcane Rising        | March 27, 2020    |
-|  3 | CRU | Crucible of War      | August 28, 2020   |
-|  4 | MON | Monarch              | May 7, 2021       |
-|  5 | ELE | Tales of Aria        | September 24, 2021|
-|  6 | EVR | Everfest             | February 4, 2022  |
-|    | 1HP | History Pack 1       | May 6, 2022       |
-|  7 | UPR | Uprising             | June 24, 2022     |
-|  8 | DYN | Dynasty              | November 11, 2022 |
-|    | 2HP | History Pack 2       | February 24, 2023 |
-|  9 | OUT | Outsiders            | March 24, 2023    |
-| 10 | DTD | Dusk till Dawn       | July 14, 2023     |
-| 11 | EVO | Bright Lights        | October 6, 2023   | 
-| 12 | HVY | Heavy Hitters        | February 2, 2024  |
-| 13 | MST | Part the Mistveil    | May 31, 2024      |
-| 14 | ROS | Rosetta              | September 20, 2024|
-| 15 | HNT | The Hunted           | January 31, 2025  |
-| 16 | SEA | High Seas            | June 6, 2025      |
-| 17 | MPG | Mastery Pack Guardian| August 8, 2025    |
-|    |     | Smash Palace         | August 29, 2025   |
-|    |     | Silver Age: Chapter 1 and Chapter 2 | February 13, 2026 |
+| #  | Set | Name                        | Release           |  
+|----|-----|-----------------------------|-------------------|
+|  1 | WTR | Welcome to Rathe            | October 11, 2019  |
+|  2 | ARC | Arcane Rising               | March 27, 2020    |
+|  3 | CRU | Crucible of War             | August 28, 2020   |
+|  4 | MON | Monarch                     | May 7, 2021       |
+|  5 | ELE | Tales of Aria               | September 24, 2021|
+|  6 | EVR | Everfest                    | February 4, 2022  |
+|    | 1HP | History Pack 1              | May 6, 2022       |
+|  7 | UPR | Uprising                    | June 24, 2022     |
+|  8 | DYN | Dynasty                     | November 11, 2022 |
+|    | 2HP | History Pack 2              | February 24, 2023 |
+|  9 | OUT | Outsiders                   | March 24, 2023    |
+| 10 | DTD | Dusk till Dawn              | July 14, 2023     |
+| 11 | EVO | Bright Lights               | October 6, 2023   | 
+| 12 | HVY | Heavy Hitters               | February 2, 2024  |
+| 13 | MST | Part the Mistveil           | May 31, 2024      |
+| 14 | ROS | Rosetta                     | September 20, 2024|
+| 15 | HNT | The Hunted                  | January 31, 2025  |
+| 16 | SEA | High Seas                   | June 6, 2025      |
+| 17 | MPG | Mastery Pack Guardian       | August 8, 2025    |
+|    |     | Smash Palace                | August 29, 2025   |
+|    |     | Silver Age: Chapter 1 and 2 | February 13, 2026 |
 
 
 ### Gundam Card Game
@@ -509,7 +519,6 @@ Gundam Card Game is a brand new CCG based on the Gundam Franchise and published 
 |      | Gundam Assemble Premium Collection   | February 27, 2026  |
 |      | Ultimate Deck 01                     | March 27, 2026     |
 | GD04 | TBA                                  | April 24, 2026     |
-
 
 
 ### Keyforge
@@ -918,7 +927,7 @@ Recent Fan Releases:
 | Set 22               | October 2, 2023   |
 | Set 23               | July 22, 2024     |
 | Set 24               | December 30, 2024 |
-| Set 25 Preview       | April 14, 2025    |
+| Set 25               | August 8, 2025    |
 
 
 ### Star Wars TCG
@@ -943,6 +952,7 @@ Recent Fan Releases:
 | Union Full Set                       | May 4, 2024        |
 | Obi-Wan Kenobi Full Set              | February 1, 2025   |
 | Vader - Shadows and Secrets Mini-Set | April 26, 2025     | 
+| Halloween Mini-Set                   | October 31, 2025   |
 
 
 ### Star Trek CCG
@@ -950,7 +960,8 @@ Recent Fan Releases:
 Star Trek CCG was an early CCG which was published by [Decipher](http://www.decipher.com/) in 1994. After several expansions there was a second edition 2002 to reboot the rules and improve the mechanics. The second edition went out of print in 2007 after several more expansions. 
 A [Player's Committee](https://www.trekcc.org/) formed to continue the game and has been releasing new sets since then. 
 
-| Name                               | Release           |
+Recent First Edition Expansions:
+| Name                               | Date              |
 |------------------------------------|-------------------|
 | Nemesis                            | February 10, 2023 |
 | Showdown: Four Lights Supplemental | December 8, 2023  |
@@ -958,6 +969,18 @@ A [Player's Committee](https://www.trekcc.org/) formed to continue the game and 
 | Alternate Universe: Twilight       | October 25, 2024  |
 | Premiere Remastered                | January 24, 2025  |
 | Dramatis Personae                  | June 6, 2025      |
+| All Good Things Traditional        | November 7, 2025  |
+| All Good Things Remastered         | December 5, 2025  |
+
+Recent Second Edition Expansions:
+| Set | Name                          | Date              |
+|-----|-------------------------------|-------------------|
+| 61  | Second Chances                | June 9, 2023      |
+| 62  | Continuing Mission            | March 1, 2024     |
+| 63  | Phage                         | July 26, 2024     |
+|     | Finding Our Way (Reprint Set) | January 16, 2025  |
+| 64  | Realm of Fear                 | April 25, 2025    |
+| 65  | Where No One Has Gone Before  | June 20, 2025     |
 
 
 ### Middle-earth: CCG
@@ -1130,11 +1153,11 @@ The following games are no longer in print, and are just here for reference.
 | Arcadia                         | 1996  | White Wolf Publishing        | Not in print |
 | Arcadia Tribe                   | 2015  | Kadokawa                     | Not in print |
 | Arcana Strikes                  | ?     | ?                            | Not in print |
-| Arkna: Trading Card Game         | 2010  | IguanaBee                  | Not in print |
-| Asura System                     | 2004  | Terranetz                  | Not in print |
-| Austin Powers CCG                | 1999  | Decipher, Inc.             | Not in print |
-| Avatar: The Last Airbender TCG    | 2006  | Upper Deck                 | Not in print |
-| B B-daman'                        | ?     | Takara                     | Not in print |
+| Arkna: Trading Card Game          | 2010  | IguanaBee                  | Not in print |
+| Asura System                      | 2004  | Terranetz                  | Not in print |
+| Austin Powers CCG                 | 1999  | Decipher, Inc.             | Not in print |
+| Avatar: The Last Airbender TCG    | 2006  | Upper Deck                | Not in print |
+| B B-daman'                        | ?     | Takara                    | Not in print |
 | Babylon 5 Collectible Card Game   | 1997  | Precedence Entertainment  | Not in print |
 | Bakugan: Battle Brawlers TCG      | 2010  | Giochi Preziosi           | Not in print |
 | Banemaster: The Adventure         | 1995  | Chessex                   | Not in print |
@@ -1142,8 +1165,8 @@ The following games are no longer in print, and are just here for reference.
 | Baseball 3010                     | 2002  | ImagiNation Sports, LLC.  | Not in print |
 | Baseball Heroes                   | 2005  | Konami                    | Not in print |
 | Bass Mania X                      | ?     | Creek                     | Not in print |
-| Battlelords                       | 1995  | New Millennium Entertainment | Early CCG, only one set ever released |
-| Battlestar Galactica CCG          | 2006  | WizKids                    | Not in print |
+| Battlelords                       | 1995  | New Millennium            | Early CCG, only one set ever released |
+| Battlestar Galactica CCG          | 2006  | WizKids                   | Not in print |
 | BattleTech                        | 1996  | Wizards of the Coast      | Not in print |
 | Battlez                           | 2004  | Illektron                 | Not in print |
 | Beast Clans                       | 2017  | Beast Clans LLC           | Website down |
@@ -1162,7 +1185,7 @@ The following games are no longer in print, and are just here for reference.
 | Buffy the Vampire Slayer CCG      | 2001  | Score Entertainment        | Not in print |
 | Bumblings - The funtasy card game | 2014  | Gernilex Bt.               | Not in print |
 | C-23                              | 1998  | Wizards of the Coast       | Not in print |
-| Call of Cthulhu: The Card Game    | 2004-2015  | Fantasy Flight Games       | [Became an LCG in 2008, stopped in 2015](https://en.wikipedia.org/wiki/Call_of_Cthulhu:_The_Card_Game) |
+| Call of Cthulhu: The Card Game    | 2004  | Fantasy Flight Games       | [Became an LCG in 2008, stopped in 2015](https://en.wikipedia.org/wiki/Call_of_Cthulhu:_The_Card_Game) |
 | Captain Tsubasa TCG               | 2002  | Konami                     | Not in print |
 | Cardcaptors TCG                   | 2001  | Upper Deck                 | Not in print |
 | Case Closed TCG                   | 2005  | Score Entertainment        | Not in print |
@@ -1178,11 +1201,11 @@ The following games are no longer in print, and are just here for reference.
 | Conan CCG                         | 2006  | Comic Images/Tempo Games   | Not in print |
 | Corunea                           | 2008  | Insight Games              | Not in print |
 | Cricket Attax                     | 2017  | ToppsIndia                 | Website down |
-| The Crow                          | 1995  | Target Games/Heartbreaker Hobbies | Not in print |
-| Crystalicum: Kryształowa Gra Karciana | 2005  | Wolf Fang P.H.                | Not in print |
-| Cyberpunk: The CCG                 | 2003  | Social Games/R. Talsorian Games | Not in print |
-| Daikaijuu Monogatari               | 1997  | Amada Printing               | Not in print |
-| Dark Age                           | 1996  | FPG, Inc.                    | Not in print |
+| The Crow                          | 1995  | Target Games/Heartbreaker Hobbies  | Not in print |
+| Crystalicum: Kryształowa Gra Karciana | 2005  | Wolf Fang P.H.                 | Not in print |
+| Cyberpunk: The CCG                 | 2003  | Social Games/R. Talsorian Games   | Not in print |
+| Daikaijuu Monogatari               | 1997  | Amada Printing                    | Not in print |
+| Dark Age                           | 1996  | FPG, Inc.                         | Not in print |
 | Dark Eden                          | 1997  | Target Games/Heartbreaker Hobbies | Not in print |
 | Dark Force (card game)             | 1994  | Schmidt Spiele               | Not in print |
 | Dark Millennium                    | 2005  | Sabertooth Games             | Not in print |
@@ -1198,26 +1221,26 @@ The following games are no longer in print, and are just here for reference.
 | Dixie                              | 1994  | Columbia Games               | Not in print |
 | Doctor Who – Battles in Time       | 2006  | GE Fabbri                    | Not in print |
 | Doctor Who Monster Invasion        | 2011  | BBC Worldwide                | Not in print |
-| Doctor Who: The Collectible TCG    | 1996  | M.M.G. Ltd.                 | Not in print |
+| Doctor Who: The Collectible TCG    | 1996  | M.M.G. Ltd.                  | Not in print |
 | Don: Continuing Criminal Enterprise | 2002  | MythIntentions, LLC.        | Not in print |
-| Donkey Kong card game               | 1999  | Nintendo                     | Not in print |
-| Doomtrooper                         | 1995  | Target Games                 | Not in print |
+| Donkey Kong card game               | 1999  | Nintendo                    | Not in print |
+| Doomtrooper                         | 1995  | Target Games                | Not in print |
 | Doomtown                            | 1998  | Five Rings/WotC/AEG         | Not in print |
-| The Dozens                          | 2005  | Topps                         | Not in print |
-| Dragon Ball CCG                     | 2008-2009  | Bandai                        | Not in print |
-| Dragon Ball Z CCG                   | 2000-2006  | Score Entertainment           | Not in print |
-| Dragon Booster TCG                  | 2004  | Score Entertainment           | Not in print |
-| Dragoborne: Rise to Supremacy       | 2017  | Bushiroad, Ltd.              | Not in print |
-| Dragon Dynasty CCG                  | 2001  | Romancing Cathay             | Not in print |
+| The Dozens                          | 2005  | Topps                       | Not in print |
+| Dragon Ball CCG                     | 2008-2009  | Bandai                 | Not in print |
+| Dragon Ball Z CCG                   | 2000-2006  | Score Entertainment    | Not in print |
+| Dragon Booster TCG                  | 2004  | Score Entertainment         | Not in print |
+| Dragoborne: Rise to Supremacy       | 2017  | Bushiroad, Ltd.             | Not in print |
+| Dragon Dynasty CCG                  | 2001  | Romancing Cathay            | Not in print |
 | Dragon Quest TCG                    | 2000  | Enix/Tenky                  | Not in print |
 | The Dragon's Wrath                  | 1995  | Naipes Heraclio Fournier    | Not in print |
 | Draim Arena                         | 2007  | Draim                       | Not in print |
 | Dredd: The Card Game                | 2000  | Round Table Productions     | Not in print |
-| Dune (Eye of the Storm)             | 1997-1998  | Last Unicorn Games/Five Rings/WotC | [Cancelled in 1998](https://en.wikipedia.org/wiki/Dune_(card_game)) |
+| Dune (Eye of the Storm)             | 1997  | Last Unicorn/Five Rings/WotC | [Cancelled in 1998](https://en.wikipedia.org/wiki/Dune_(card_game)) |
 | Eagles                              | 1995  | Columbia Games              | Not in print |
-| Echelons of Fire                    | 1995  | Medallion Simulations      | Not in print |
-| Echelons of Fury                    | 1995  | Medallion Simulations      | Not in print |
-| Election Quest CCG                  | 2004  | Bro! Novelties             | Not in print |
+| Echelons of Fire                    | 1995  | Medallion Simulations       | Not in print |
+| Echelons of Fury                    | 1995  | Medallion Simulations       | Not in print |
+| Election Quest CCG                  | 2004  | Bro! Novelties              | Not in print |
 | Elementeo                           | 2009  | Alchemist Empire            | Not in print |
 | EooT Tactical Card Game             | 2024  | Ryan Kelly                  | Website down |
 | Epic Battles                        | 2005  | Score Entertainment         | [Out of print](https://en.wikipedia.org/wiki/Epic_Battles) Mortal Kombat, Street Fighter, and Tekken, plus an unreleased Darkstalkers set. |
@@ -1246,14 +1269,14 @@ The following games are no longer in print, and are just here for reference.
 | Geek Fight!                        | 2008  | Diving Dragon Games        | In print, no new sets |
 | Gensō Suikoden Card Stories        | 2001  | Konami                     | Not in print |
 | Gridiron Fantasy Football          | 1995  | Upper Deck                 | Not in print |
-| Guardians                          | 1995  | FPG, Inc.                 | Not in print |
+| Guardians                          | 1995  | FPG, Inc.                  | Not in print |
 | Gundam M.S. War TCG                | 2001  | Bandai                     | Not in print |
 | Gundam War: Mobile Suit Gundam CCG | 2005  | Bandai                     | [Lasted 1999-2018 in Japan, 45 sets](https://en.wikipedia.org/wiki/Gundam_War_Collectible_Card_Game) |
 | Gundam War Nex-A                   | 2011  | Bandai                     | Not in print |
 | Gundam Cross War                   | 2015  | Bandai                     | Not in print |
 | Gwiezdna Kohorta                    | 2005  | Wydawnictwo Imperium      | Not in print |
-| Harry Potter TCG                    | 2001  | Wizards of the Coast       | Not in print |
-| Hayate the Combat Butler TCG        | 2009  | Konami                     | Not in print |
+| Harry Potter TCG                    | 2001  | Wizards of the Coast      | Not in print |
+| Hayate the Combat Butler TCG        | 2009  | Konami                    | Not in print |
 | Hecatomb                            | 2005  | Wizards of the Coast      | Not in print |
 | Hercules: The Legendary Journeys    | 1998  | Wizards of the Coast      | Not in print |
 | Hero Attax (Marvel Topps Game)      | 2016? | Topps                     | Might still be digital |
@@ -1261,16 +1284,16 @@ The following games are no longer in print, and are just here for reference.
 | High Stakes Drifter                 | 2005  | WizKids                   | Not in print |
 | Highlander: The Card Game           | 1995  | Thunder Castle Games      | Not in print |
 | Highlander: The Card Game 2E        | 2006  | Rapidpod                  | Not in print |
-| Horus Heresy                        | 2003-2008  | Sabertooth Games          | [Stopped in 2008](https://en.wikipedia.org/wiki/Horus_Heresy_(card_game)) |
+| Horus Heresy                        | 2003  | Sabertooth Games          | [Stopped in 2008](https://en.wikipedia.org/wiki/Horus_Heresy_(card_game)) |
 | Hot Wheels Acceleracers CCG         | 2005  | Mattel                    | Not in print |
 | Humaliens Collectible Card Game     | 2003  | AEG                       | Not in print |
 | HumanKind                           | 2005  | SALO                      | Not in print |
 | HunTik                              | 2009  | Upper Deck                | Not in print |
-| Hyborian Gates                     | 1995  | CARDZ                      | Not in print |
-| Illuminati: New World Order        | 1994  | Steve Jackson Games        | Not in print |
-| Imajica                            | 1997  | Harper Prism/Clive Barker  | Not in print |
-| Inazuma Eleven TCG                 | 2008  | Tomy                       | Not in print |
-| Initial D Collectible Card Game    | 2003  | AEG                        | Not in print |
+| Hyborian Gates                      | 1995  | CARDZ                     | Not in print |
+| Illuminati: New World Order         | 1994  | Steve Jackson Games       | Not in print |
+| Imajica                             | 1997  | Harper Prism/Clive Barker | Not in print |
+| Inazuma Eleven TCG                  | 2008  | Tomy                      | Not in print |
+| Initial D Collectible Card Game     | 2003  | AEG                       | Not in print |
 | Inuyasha Trading Card Game          | 2004  | Score Entertainment       | Not in print |
 | James Bond 007                      | 1995  | Target Games/Heartbreaker Hobbies | Not in print |
 | Jedi Knights Trading Card Game      | 2001  | Decipher, Inc.            | Not in print |
@@ -1284,11 +1307,11 @@ The following games are no longer in print, and are just here for reference.
 | Knights of the Zodiac CCG           | 2004  | Bandai/Amada Printing     | Not in print |
 | Kult                                | 1995  | Target Games/Heartbreaker Hobbies | Not in print |
 | Langrisser                          | 1999  | NCS                       | Not in print |
-| The Last Crusade                    | 1995  | Pinnacle Entertainment Group | Not in print |
+| The Last Crusade                    | 1995  | Pinnacle Entertainment    | Not in print |
 | Leaf fight TCG                      | 1999  | Tea Ice Tokyo             | Not in print |
 | Legend of the Burning Sands         | 1998  | Wizards of the Coast      | [Unsuccessful spin-off of the Legend of the Five Rings CCG](https://en.wikipedia.org/wiki/Legend_of_the_Burning_Sands) |
-| Legend of the Five Rings CCG        | 1995-2015  | Five Rings/WotC/AEG | [Ended in 2015](https://en.wikipedia.org/wiki/Legend_of_the_Five_Rings_(collectible_card_game)) |
-| Legend of the Five Rings: The Card Game | 2017-2021 | Fantasy Flight Games | [LCG sequel to the CCG](https://en.wikipedia.org/wiki/Legend_of_the_Five_Rings:_The_Card_Game) |
+| Legend of the Five Rings CCG        | 1995  | Five Rings/WotC/AEG       | [Ended in 2015](https://en.wikipedia.org/wiki/Legend_of_the_Five_Rings_(collectible_card_game)) |
+| Legend of the Five Rings: The Card Game | 2017 | Fantasy Flight Games   | [LCG sequel to the CCG, ended in 2021](https://en.wikipedia.org/wiki/Legend_of_the_Five_Rings:_The_Card_Game) |
 | Lego: Ninjago Spinjitzu Card Game    | 2016  | Blue Ocean Entertainment  | Not in print |
 | Level Neo                            | 2014  | Movic                     | Not in print |
 | Lightseekers Trading Card Game       | 2017  | PlayFusion Ltd            | Not in print |
@@ -1318,29 +1341,29 @@ The following games are no longer in print, and are just here for reference.
 | Mortal Kombat Kard Game              | 1996  | Brady Games               | Not in print |
 | My Little Pony CCG                   | 2013  | Enterplay                 | Not in print |
 | Mystical Empire                      | 2005  | Northeast Games, Inc.     | Not in print |
-| Mythos                               | 1996  | Chaosium                   | Not in print |
+| Mythos                               | 1996  | Chaosium                  | Not in print |
 | Myths and Legends                    | 2000  | Salo S.A / Klu            | Not in print |
-| Naruto Collectible Card Game         | 2006  | Bandai                     | Not in print |
-| NBA Adrenalyn XL                     | 2010  | Panini Games               | Not in print |
+| Naruto Collectible Card Game         | 2006  | Bandai                    | Not in print |
+| NBA Adrenalyn XL                     | 2010  | Panini Games              | Not in print |
 | NBA Showdown                         | 2002  | Wizards of the Coast      | Not in print |
-| Neon Genesis Evangelion              | 1998  | Bandai                     | Not in print |
+| Neon Genesis Evangelion              | 1998  | Bandai                    | Not in print |
 | Neopets Trading Card Game            | 2003  | Wizards of the Coast      | [Discontinued 2006](https://en.wikipedia.org/wiki/Neopets_Trading_Card_Game) |
 | Nerve                                | 1999  | Cell Entertainment AB     | Not in print |
 | Netrunner                            | 1996  | Wizards of the Coast      | Not in print |
-| NFL Adrenalyn XL                     | 2010  | Panini Games               | Not in print |
+| NFL Adrenalyn XL                     | 2010  | Panini Games              | Not in print |
 | NFL Showdown                         | 2002  | Wizards of the Coast      | Not in print |
-| The Nightmare Before Christmas TCG   | 2005  | NECA                       | Not in print |
-| Number Busters                       | 2009  | Little Tikes               | Not in print |
+| The Nightmare Before Christmas TCG   | 2005  | NECA                      | Not in print |
+| Number Busters                       | 2009  | Little Tikes              | Not in print |
 | Oligarchy                            | 2016  | Entropic Games            | Not in print |
 | On the Edge                          | 1994  | Atlas Games                | Not in print |
 | One-On-One Hockey Challenge CCG      | 1997  | Playoff Inc                | Not in print |
 | One Piece CCG                        | 2003  | Bandai                     | Not in print |
 | Ophidian 2350                        | 2003  | SkyBox International/Fleer | Not in print |
 | OverPower                            | 1995  | Fleer                     | [Comics based CCG, might be relaunching?](https://en.wikipedia.org/wiki/OverPower) |
-| Perry Rhodan Sammelkartenspiel       | 1996  | Fanpro/Between the Stars | Not in print |
+| Perry Rhodan Sammelkartenspiel       | 1996  | Fanpro/Between the Stars  | Not in print |
 | Pez Card Game                        | 2000  | U.S. Games Systems        | Not in print |
 | Pirates of the Caribbean TCG         | 2006  | Upper Deck                | Not in print |
-| Pk cards                             | 2008  | PKXL Cards, Inc.         | Not in print |
+| Pk cards                             | 2008  | PKXL Cards, Inc.          | Not in print |
 | Power Rangers Action Card Game       | 2013  | Bandai                    | Not in print |
 | Power Rangers CCG                    | 2008  | Bandai                    | Not in print |
 | PowerCardz                           | 1995  | Caliber Games Systems     | Not in print |
@@ -1348,7 +1371,7 @@ The following games are no longer in print, and are just here for reference.
 | Prism Connect TCG                    | 2011  | Ensky/Movic               | Not in print |
 | Project: Utopia                      | 2009  | Dragstarr Games           | Not in print |
 | Queen's Blade: The Duel              | 2008  | Mega House                | Not in print |
-| Quest for the Grail                  | 1995  | Stone Ring Games/Horizon Games | Not in print |
+| Quest for the Grail                  | 1995  | Stone Ring/Horizon Games  | Not in print |
 | QuickStrike                          | 2006  | Upper Deck                | Not in print |
 | Racial Wars                          | 2012  | Pentakl Publishing        | Not in print |
 | Racing Challenge                     | 2000  | WotC/White Wolf Publishing | Not in print |
@@ -1378,10 +1401,10 @@ The following games are no longer in print, and are just here for reference.
 | Star Quest                             | 1995  | Comic Images              | Not in print |
 | Star Sisterz                           | 2003  | Wizards of the Coast      | Not in print |
 | Star Trek: The Card Game               | 1996  | Fleer/SkyBox International | Not in print |
-| Star Wars: Destiny                     | 2016  | Fantasy Flight Games      | Not in print |
-| Stargate Trading Card Game             | 2007  | Comic Images              | Not in print |
-| Stoked! Skateboarding Must Die         | 2005  | Sir Mantraplay            | Not in print |
-| Street Proz                            | 2004  | Game On Sports, Inc.      | Not in print |
+| Star Wars: Destiny                     | 2016  | Fantasy Flight Games       | Not in print |
+| Stargate Trading Card Game             | 2007  | Comic Images               | Not in print |
+| Stoked! Skateboarding Must Die         | 2005  | Sir Mantraplay             | Not in print |
+| Street Proz                            | 2004  | Game On Sports, Inc.       | Not in print |
 | Street Warriors CCG                    | 2005  | Lethal Entertainment, Inc. | Not in print |
 | Super Deck!                            | 1994  | Card Sharks, Inc.          | [Early super hero based CCG](https://en.wikipedia.org/wiki/Super_Deck!) |
 | Super Heat Skateboard TCG              | 2011  | Super Heat Games           | Not in print |
@@ -1395,7 +1418,7 @@ The following games are no longer in print, and are just here for reference.
 | Teen Titans Collectible Card Game      | 2005  | Bandai                     | Not in print |
 | Teenage Mutant Ninja Turtles TCG       | 2004  | Upper Deck                 | Not in print |
 | Tempest of the Gods                    | 1995  | Black Dragon Press         | Not in print |
-| The Terminator                         | 2000  | Precedence Entertainment  | Not in print |
+| The Terminator                         | 2000  | Precedence Entertainment   | Not in print |
 | Terror                                 | 1996  | Kris Silver                | Not in print |
 | Thorgal Kolekcjonerska Gra Karciana    | 2002  | Egmont Polksa              | Not in print |
 | Timestream: The Remnant                | 2002  | Cahaba Productions Inc.    | Not in print |
@@ -1405,7 +1428,7 @@ The following games are no longer in print, and are just here for reference.
 | Transformers                           | 2018  | Wizards of the Coast      | Stopped after Wave 5 in 2020 |
 | True Megami Reincarnation TCG          | 1997  | Enterbrain                | Japanese only anime CCG, stopped in 2003, except a special edition in 2022 |
 | Ultimate Combat!                       | 1995  | Ultimate Games            | Not in print |
-| Ultimate Muscle: The Kinnikuman Legacy Battle | 2003 | Bandai | Not in print |
+| Ultimate Muscle: The Kinnikuman Legacy Battle | 2003 | Bandai              | Not in print |
 | Unlimited VS                           | 2014  | SK Japan                  | Not in print |
 | Vandaria Arkana                        | 2013  | Vandaria                  | Not in print |
 | Vandaria Wars Trading Card Game        | 2006  | GameQuarters              | Not in print |
@@ -1413,12 +1436,12 @@ The following games are no longer in print, and are just here for reference.
 | Vortium                                | 2014  | Domo Sur SRL              | Website down |
 | Vrooom!                                | 1998  | Ikon Games                | Not in print |
 | VS System                              | 2004  | Upper Deck                | [18 expansions, 2004-2008](https://en.wikipedia.org/wiki/Vs._System) |
-| Wakfu Trading Card Game                | 2011  | Ankama Games/Upper Deck  | Not in print |
+| Wakfu Trading Card Game                | 2011  | Ankama Games/Upper Deck   | Not in print |
 | Warcards                               | 2005  | SC Patiart SRL            | Not in print |
 | Warcardz                               | 2008  | Warmoves Inc.             | Not in print |
-| WarCry (Warhammer Fantasy CCG)         | 2003-2007  | Sabertooth Games          | [Not in print](https://en.wikipedia.org/wiki/WarCry_(game)) |
+| WarCry (Warhammer Fantasy CCG)         | 2003  | Sabertooth Games          | [Stopped in 2007](https://en.wikipedia.org/wiki/WarCry_(game)) |
 | Warhammer 40,000 CCG                   | 2001  | Sabertooth Games          | Not in print |
-| Warhammer 40,000: Conquest             | 2014-2017 | Fantasy Flight Games  | [LCG stopped in 2017](https://en.wikipedia.org/wiki/Warhammer_40,000:_Conquest) |
+| Warhammer 40,000: Conquest             | 2014  | Fantasy Flight Games  | [LCG stopped in 2017](https://en.wikipedia.org/wiki/Warhammer_40,000:_Conquest) |
 | Warhammer: Invasion                     | 2009 | Fantasy Flight Games  | [LCG stopped in 2013](https://en.wikipedia.org/wiki/Warhammer:_Invasion) |
 | Warhammer AoS: Champions                | 2018  | PlayFusion Limited/Games Workshop | Not in print |
 | Warlords                                | 1997  | Iron Crown Enterprises      | [Not in print](https://en.wikipedia.org/wiki/Warlords_(card_game) Based on WarLords III) |
@@ -1441,7 +1464,7 @@ The following games are no longer in print, and are just here for reference.
 | Xeko                                    | 2005  | Matter Group                 | Not in print |
 | Xena: Warrior Princess                  | 1998  | Wizards of the Coast         | Not in print |
 | Xiaolin Showdown TCG                    | 2005  | Wizards of the Coast         | Not in print | 
-| XXXenophile                             | 1996  | Slag-Blah Entertainment/Studio Foglio | Not in print |
+| XXXenophile                             | 1996  | Slag-Blah/Studio Foglio      | Not in print |
 | Young Jedi Collectible Card Game        | 1999  | Decipher, Inc.               | Not in print |
 | Yu Yu Hakusho Trading Card Game         | 2003  | Score Entertainment          | Not in print |
 | Zatch Bell! The Card Battle             | 2005  | Bandai                       | Not in print |
@@ -1517,7 +1540,6 @@ Fantasy Flight Games releases:
 | Kitara      | Whispers in Nalubaale        | May 2018       |
 | Kitara      | Kampala Ascendent            | May 31, 2018   |
 | Deluxe      | Reign and Reverie            | June 2018      |
-
 
 Null Signal Games releases:
 
