@@ -9,7 +9,7 @@ namespace ASP_site.Pages.CCGs
     public class IndexModel : PageModel
     {
         private readonly IWebHostEnvironment _hostingEnvironment;
-        public string? Content { get; private set; }
+        public string? MarkdownHtml { get; private set; }
 
         public IndexModel(IWebHostEnvironment hostingEnvironment)
         {
@@ -24,11 +24,11 @@ namespace ASP_site.Pages.CCGs
                 var markdownContent = await System.IO.File.ReadAllTextAsync(markdownFilePath);
                 var marked = new Marked();
                 var html = marked.Parse(markdownContent);
-                Content = html.Replace("<table>", "<table class=\"table\">");
+                MarkdownHtml = html.Replace("<table>", "<table class=\"table\">");
             }
             else
             {
-                Content = "<p>Markdown file not found.</p>";
+                MarkdownHtml = "<p>Markdown file not found.</p>";
             }
         }
     }

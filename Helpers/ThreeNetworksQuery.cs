@@ -60,15 +60,15 @@ namespace ASP_site.Helpers
                 {
                     foreach (var server in servers)
                     {
-                        if (IPAddress.TryParse(server.Ip.Replace("::ffff:", ""), out var ipAddress))
+                        if (server.Ip != null && IPAddress.TryParse(server.Ip.Replace("::ffff:", ""), out var ipAddress))
                         {
                             serverList.Add(new GameServerItem(ipAddress, server.Hostport, game)
                             {
-                                Name = server.Hostname,
-                                Map = server.Mapname,
+                                Name = server.Hostname ?? "Unknown Server",
+                                Map = server.Mapname ?? "Unknown Map",
                                 Players = server.Numplayers,
                                 MaxPlayers = server.Maxplayers,
-                                Version = server.Gamever
+                                Version = server.Gamever ?? "Unknown"
                             });
                         }
                     }

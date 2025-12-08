@@ -257,7 +257,7 @@ namespace ASP_site.Services
 
                     GameServerItem? serverItem = null;
 
-                    switch (game.ServerConfig.QueryProtocol)
+                    switch (game.ServerConfig?.QueryProtocol)
                     {
                         case "A2S":
                             var a2sServerInfo = await A2SQuery.QueryServerInfo(address, timeout);
