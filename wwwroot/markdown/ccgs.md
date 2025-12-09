@@ -51,6 +51,7 @@ A lot of vintage rulebooks are available as PDFs [here](https://www.vintageccg.c
   - [Super Showdown](#super-showdown)
   - [Time Vault Soccer Football Card Game](#time-vault-soccer-football-card-game)
   - [Ward](#ward)
+  - [Weiß Schwarz](#weiss-schwarz)
   - [Wixoss](#wixoss)
   - [Universe of Legends](#universe-of-legends)
   - [Vibes TCG](#vibes-tcg)
@@ -75,7 +76,6 @@ A lot of vintage rulebooks are available as PDFs [here](https://www.vintageccg.c
   - [Precious Memories TCG](#precious-memories-tcg)
   - [Siegkrone TCG](#siegkrone-tcg)
   - [Trok](#trok)
-  - [Weiß Schwarz](#weiss-schwarz)
   - [Z/X Zillions of enemy X](#zx-zillions-of-enemy-x)
 - [Tier 8: Not in print](#tier-8-not-in-print)
 - [Boxed and Living Card Games](#boxed-and-living-card-games)
@@ -899,6 +899,16 @@ and still sees some releases.
 [Ward](https://www.ward-cardgame.com/) is a comic book themed CCG created by Ward Trading Card Company LLC in 2023.
 
 
+### Weiss Schwarz
+
+Weiß Schwarz is a Japanese anime themed CCG created in 2007 by Bushiroad and some sets are available in English.
+
+| Name                          | Release           |
+|-------------------------------|-------------------|
+| Persona 3 Reload Reprint      | December 31, 2025 |
+| Fairy Tail 100 Years Quest    | March 13, 2026    |
+
+
 ### Wixoss
 
 [Wixoss](https://www.wixoss.com/) is a anime themed CCG created by Takara Tomy in 2014 and was brought to English speaking countries
@@ -1049,13 +1059,16 @@ Fan Releases:
 
 Russian Game Берсерк, created in 2003. Might be out of print now.
 
+
 ## Bluthelden
 
 Bluthelden is an upcoming German game releasing September 5th, 2025.
 
+
 ## Build Divide TCG
 
 Build Divide TCG is a Japanese anime themed CCG created in 2020 by Bandai Namco.
+
 
 ## Duel Masters Trading Card Game
 
@@ -1063,50 +1076,52 @@ Duel Masters Trading Card Game is a Japanese game created in 2004 by Wizards of 
 Originally Duel Masters was an anime version of MtG, then became its own game, but did not catch on outside of Japan. 
 The mechanics formed the basis for modern Bandai style mechanics, and I think the game is still in print in Japan.
 
+
 ## Generals Order
 
 Generals Order is a Chinese anime themed CCG created in 2007 by Strategy Entertainment. Might be out of print now.
+
 
 ## Genius invokation TCG
 
 Genius invokation TCG is a Chinese Genshin Impact themed CCG created in 2024 by miHoYo and ShiningSoul.
 
+
 ## Hatalom Kartyai Kartyajatek
 
 Hatalom Kártyái Kártyajáték (AKA Power Cards Card Game) is a Hungarian game created in 1995 by Beholder Kft. Might be out of print now.
+
 
 ## Kivalasztottak, a M.A.G.U.S. kartyajatek
 
 Kiválasztottak, a M.A.G.U.S. kártyajáték is a Hungarian CCG created in 1997. Might be out of print now.
 
+
 ## Love Live! Official Card Game
 
 Love Live! Official Card Game is a Japanese anime themed CCG created in 2025 by Bushiroad.
 
+
 ## Lycèe Trading Card Game
 
+
 Lycèe Trading Card Game is a Japanese anime themed CCG created in 2005 by SilverBlitz.
+
 
 ## Precious Memories TCG
 
 Precious Memories TCG is a Japanese anime themed CCG created in 2011 by Kadokawa.
 
+
 ## Siegkrone TCG
 
 Siegkrone TCG is a Japanese anime themed CCG created in 2013 by Gree.
+
 
 ## Trok
 
 Trok is a game created in 2019 in Argentina I think.
 
-## Weiss Schwarz
-
-Weiß Schwarz is a Japanese anime themed CCG created in 2007 by Bushiroad.
-
-| Name                          | Release           |
-|-------------------------------|-------------------|
-| Persona 3 Reload Reprint      | December 31, 2025 |
-| Fairy Tail 100 Years Quest    | March 13, 2026   |
 
 ## ZX Zillions of enemy X
 
@@ -1469,7 +1484,6 @@ The following games are no longer in print, and are just here for reference.
 | Yu Yu Hakusho Trading Card Game         | 2003  | Score Entertainment          | Not in print |
 | Zatch Bell! The Card Battle             | 2005  | Bandai                       | Not in print |
 | Z-G                                     | 2001  | Automoton                    | Not in print |
-
 
 
 ---

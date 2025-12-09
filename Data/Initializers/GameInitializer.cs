@@ -260,7 +260,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "battlefield1942",
+          GameID = "bfield1942",
           Name = "Battlefield 1942",
           Description = "A first-person shooter game set during World War II.",
           Developer = "Electronic Arts",
@@ -277,11 +277,12 @@ namespace ASP_site.Data.Initializers {
             new ReleaseDate{Year = 2002, Month = 9, Day = 20, Region = Region.EU}
           ],
           ServerConfig = new ServerBrowserConfig {
-            MasterServerKey = "OpenSpy"
+            MasterServerKey = "333networks",
+            QueryProtocol = "GameSpy",
           }
         },
         new Game {
-          GameID = "battlefieldvietnam",
+          GameID = "bfvietnam",
           Name = "Battlefield Vietnam",
           Description = "A first-person shooter game set during the Vietnam War.",
           Developer = "Electronic Arts",
@@ -315,7 +316,7 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "battlefield2142",
+          GameID = "bf2142",
           Name = "Battlefield 2142",
           Description = "A first-person shooter game set during the Vietnam War.",
           Developer = "Electronic Arts",
@@ -1534,7 +1535,7 @@ namespace ASP_site.Data.Initializers {
           PlayWith = new List<int> { 0 },
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/messiah",
-            GameDirectory = "darkmessiah",
+            GameDirectory = "mm",
             MasterServerKey = "DarkMessiah",
             NoBackgroundService = true
           },

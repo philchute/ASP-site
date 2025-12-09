@@ -1,7 +1,7 @@
 # Upstate Riftbound
 
 This page has information about the Riftbound scene in Upstate South Carolina as of December 6, 2025.
-Nothing is guaranteed to be accurate or up to date, be sure to preregister on the [Riftbound Events Locator](https://locator.riftbound.uvsgames.com/events), and validate the dates and times with the store, especially if traveling.
+Nothing is guaranteed to be accurate or up to date, be sure to preregister on the [Riftbound Events Locator](https://locator.riftbound.uvsgames.com/events), and validate the dates and times with the store, especially if traveling. To my knowledge, every store has been able to accomidate every player that's shown up to every event, so definitely go ahead of time even if the event is showing full.
 Let me know if you find any errors or if you have any updates.
 
 ## Table of Contents
@@ -40,9 +40,9 @@ Let me know if you find any errors or if you have any updates.
 
 There is essentially no retail product available anywhere. Your best bet is actually finding it on the shelf at Walmart, which gets random restocks.  
 Most people are trading for their decks or buying online.  
-Game Kastle Greenville had some commons in their bulk bins.  
+Game Kastle Greenville have some commons in their bulk bins.  
 Borderlands Greenville have a limited amount of singles.  
-Toon Gaming Greenville have some singles?  
+Toon Gaming Greenville have some singles? Now open Friday-Monday 
 Limit Break Fountain Inn have some singles?  
 Manathril Williamston have some singles?  
 
@@ -106,15 +106,15 @@ Houston, Texas	December 5-7, 2025
 
 ### Origins Summoner Skirmish 1
 
-| Event                         | Date                                  | Winner                                                                 |
-|-------------------------------|---------------------------------------|------------------------------------------------------------------------|
-| Toon Gaming Greenville        | Friday December 5th, 2025 7:30 pm     | [Leonard Routh](https://locator.riftbound.uvsgames.com/events/217626)  |
-| Borderlands Greenville        | Saturday December 6th, 2025 12:00 pm  | [bearinmind](https://locator.riftbound.uvsgames.com/events/227667)     |
-| Lake Hartwell Collectibles    | Saturday December 6th, 2025 4:00 pm   | [GrimD3X](https://locator.riftbound.uvsgames.com/events/228157)        |
-| Boardwalk Greenville          | Sunday December 7th, 2025 11:00 am    | TBD |
-| Game Kastle Greenville        | Sunday December 7th, 2025 2:00 pm     | TBD |
-| Cheerful Games Spartanburg    | Sunday December 7th, 2025 2:00 pm     | TBD |
-| Limit Break Fountain Inn      | Sunday December 7th, 2025 2:00 pm     | TBD |
+| Event                         | Date                                  | Winner                                                                           |
+|-------------------------------|---------------------------------------|----------------------------------------------------------------------------------|
+| Toon Gaming Greenville        | Friday December 5th, 2025 7:30 pm     | 19 players [Leonard Routh](https://locator.riftbound.uvsgames.com/events/217626) |
+| Borderlands Greenville        | Saturday December 6th, 2025 12:00 pm  | 13 players [bearinmind](https://locator.riftbound.uvsgames.com/events/227667)    |
+| Lake Hartwell Collectibles    | Saturday December 6th, 2025 4:00 pm   | 8 players [GrimD3X](https://locator.riftbound.uvsgames.com/events/228157)        |
+| Boardwalk Greenville          | Sunday December 7th, 2025 11:00 am    | 15 players [Alienboy414](https://locator.riftbound.uvsgames.com/events/227227)   |
+| Game Kastle Greenville        | Sunday December 7th, 2025 2:00 pm     | 7 players [immortnight12](https://locator.riftbound.uvsgames.com/events/233784)  |
+| Cheerful Games Spartanburg    | Sunday December 7th, 2025 2:00 pm     | 8 players [jefticles](https://locator.riftbound.uvsgames.com/events/236280)      |
+| Limit Break Fountain Inn      | Sunday December 7th, 2025 2:00 pm     | 12 players [N3gation](https://locator.riftbound.uvsgames.com/events/224695)      |
 | Epic Battlegrounds Cowpens    | Saturday December 13th, 2025 12:00 pm | TBD |
 | Empire Games Anderson         | Saturday December 13th, 2025 1:00 pm  | TBD |
 | Decks and Dice Seneca         | Saturday December 13th, 2025 2:30 pm  | TBD |
