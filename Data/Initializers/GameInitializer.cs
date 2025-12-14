@@ -229,7 +229,7 @@ namespace ASP_site.Data.Initializers {
         new Game {
           GameID = "basedefense",
           Name = "Base Defense",
-          Description = "",
+          Description = "Base Defense is a solo or co-op hoarde survival mod for half-life 1, available on Steam.",
           SteamID = 632730,
           IsFree = true,
           IsPaid = false,
@@ -3379,6 +3379,20 @@ namespace ASP_site.Data.Initializers {
             IconPath = "img/icons/modcom",
             GameDirectory = "ModularCombat"
           }
+        },
+        new Game {
+          GameID = "momentummod",
+          Name = "Momentum Mod",
+          Description = "Momentum Mod is a movement mode platform with several different modes available. Currently in open beta testing.",
+          ModForGameID = "halflife2",
+          EngineID = "source",
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = true,
+          IsCommunityMaintained = true,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 }
         },
         new Game {
           GameID = "naturalselection",

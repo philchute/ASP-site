@@ -791,10 +791,11 @@ Published in 2023 by [Bushiroad](https://www.bushiroad.com/)
 
 | Set | Name                          | Release           |
 |-----|-------------------------------|-------------------|
-| 1   | Beta Edition                  | November 2023     |
-| 2   | Arthurian Legends             | October 2024      |
-| 3   | Dragonlord                    | August 2, 2025    |
-
+|     | Alpha Edition (Kickstarter)   | June 2023         |
+|     | Beta Edition                  | November 2023     |
+| 1   | Arthurian Legends             | October 2024      |
+| 2   | Dragonlord                    | August 2, 2025    |
+| 3   | Gothic                        | December 2025     |
 
 ---
 

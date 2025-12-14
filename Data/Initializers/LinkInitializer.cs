@@ -108,6 +108,9 @@ namespace ASP_site.Data.Initializers {
         new Link { GameID = "aoe4", Label = "AoE4 Tournaments List", Description = "AoE4 tournaments list",
           LinkType = LinkType.Community, Url = "https://liquipedia.net/ageofempires/Age_of_Empires_IV/Tournaments" },
 
+        // Base Defense
+        new Link { GameID = "basedefense", Label = "Base Defense Gameplay", Description = "Me playing Base Defense with GoldSource Saturdays", 
+          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=nQOoBNpz9Q0" },
 
         // BattleGrounds
         new Link { GameID = "battlegrounds", Label = "Battlegrounds", Description = "Me playing Battlegrounds on bg_bridge", 
@@ -577,6 +580,8 @@ namespace ASP_site.Data.Initializers {
         // LambdaFortress
         new Link { GameID = "lambdafortress", Label = "Lambda Fortress", Description = "Me playing Lambda Fortress as Medic on Half-Life 2: Episode 2", 
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=Roa8lmfpR4Q" },
+        new Link { GameID = "lambdafortress", Label = "Lambda Fortress", Description = "Me playing Lambda Fortress as Demoman on Half-Life 2: Episode 2",
+          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=-zptVQGm8sk" },
 
         // Midair2
         new Link { GameID = "midair2", Label = "Midair 2", Description = "Me playing CTF on map crater", 
@@ -599,8 +604,9 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=xJ6WapkO81U" },
 
         // Momentum
-        new Link { GameID = "momentum", Label = "Momentum Mod showcase", Description = "Momentum Mod showcase and current status", 
-          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=RdetcTpKe0k" },
+        new Link { GameID = "momentum", Label = "Momentum Mod showcase", Description = "Momentum Mod showcase and current status updated 12/12/25.", 
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=uHCqfhH1Ah0" },
+
 
         // NaturalSelection
         new Link { GameID = "naturalselection", Label = "Natural Selection", Description = "Gameplay footage", 
