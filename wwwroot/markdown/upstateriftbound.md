@@ -117,7 +117,7 @@ Houston, Texas	December 5-7, 2025
 | Limit Break Fountain Inn      | Sunday December 7th, 2025 2:00 pm     | 12 players [N3gation](https://locator.riftbound.uvsgames.com/events/224695)      |
 | Epic Battlegrounds Cowpens    | Saturday December 13th, 2025 12:00 pm | 4 Players [TooTawl](https://locator.riftbound.uvsgames.com/events/233220)       |
 | Empire Games Anderson         | Saturday December 13th, 2025 1:00 pm  | 8 players [KeeblerX](https://locator.riftbound.uvsgames.com/events/219142)      |
-| Decks and Dice Seneca         | Sunday December 14th, 2025 3:00 pm  | [TBD](https://locator.riftbound.uvsgames.com/events/234389) |
+| Decks and Dice Seneca         | Sunday December 14th, 2025 3:00 pm  | 6 players[Moemmoth](https://locator.riftbound.uvsgames.com/events/234389) |
 
 
 ### Origins Summoner Skirmish 2
