@@ -13231,6 +13231,347 @@ namespace ASP_site.Data.Initializers
                     {
                         new Tag { Name = "Union Club" }
                     }
+                },
+                new Book
+                {
+                    Title = "Tower of Babylon",
+                    Author = "Ted Chiang",
+                    PublicationYear = 1990,
+                    PublicationMonth = 11,
+                    Type = BookType.ShortStory,
+                    Description = "Chiang's first published story, originally published in Omni Magazine in November 1990. Nominated for the 1991 Locus Award for Best Novelette. Nominated for the 1991 Hugo Award for Best Novelette. Won the 1991 Nebula Award for Best Novelette. Won the 1992 Astounding Award for Best New Writer.",
+                    Tags = new List<Tag>
+                    {
+                        new Tag { Name = "Collection: Stories of Your Life and Others" }
+                    }
+                },
+                new Book
+                {
+                    Title = "Understand",
+                    Author = "Ted Chiang",
+                    PublicationYear = 1991,
+                    PublicationMonth = 8,
+                    Type = BookType.ShortStory,
+                    Description = "Originally published in Asimov's Science Fiction Magazine in August 1991. Won the 1991 Asimov's Readers' Poll for Best Novelette. Nominated for the 1992 Locus Award for Best Novelette. Nominated for the 1992 Hugo Award for Best Novelette.",
+                    Tags = new List<Tag>
+                    {
+                        new Tag { Name = "Collection: Stories of Your Life and Others" },
+                        new Tag { Name = "Adapted for Radio" }
+                    }
+                },
+                new Book
+                {
+                    Title = "Division by Zero",
+                    Author = "Ted Chiang",
+                    PublicationYear = 1991,
+                    PublicationMonth = 5,
+                    Type = BookType.ShortStory,
+                    Description = "Originally published in the anthology 'Full Spectrum 3' in May 1991. Nominated for the 1992 Locus Award for Best Short Story.",
+                    Tags = new List<Tag>
+                    {
+                        new Tag { Name = "Collection: Stories of Your Life and Others" }
+                    }
+                },
+                new Book
+                {
+                    Title = "Story of Your Life",
+                    Author = "Ted Chiang",
+                    PublicationYear = 1998,
+                    PublicationMonth = 11,
+                    Type = BookType.ShortStory,
+                    Description = "Adapted for screen as the 2016 film 'Arrival' (nominated for eight Academy Awards, won Ray Bradbury Award and a Hugo for Best Dramatic Presenation). Originally published in the anthology 'Starlight 2' in November 1998. Won the 1998 Otherwise Award for Best Short Story. Nominated for the 1998 HOMer Award for Best Novelette. Nominated for the 1999 Locus Award for Best Novelette. Nominated for the 1999 Hugo Award for Best Novelette. Won the 1999 Theodore Sturgeon Award for Best Short Story. Won the 2000 Nebula Award for Best Novelette.",
+                    Tags = new List<Tag>
+                    {
+                        new Tag { Name = "Collection: Stories of Your Life and Others" },
+                        new Tag { Name = "Adapted for Screen" }
+                    }
+                },
+                new Book
+                {
+                    Title = "Seventy-Two Letters",
+                    Author = "Ted Chiang",
+                    PublicationYear = 2000,
+                    PublicationMonth = 6,
+                    Type = BookType.ShortStory,
+                    Description = "Originally published in the anthology 'Vanishing Act' in June 2000. Won the 2000 Sidewise Award for Alternate History for Best Short Form. Nominated for the 2001 Theodore Sturgeon Award for Best Short Science Fiction. Nominated for the 2001 World Fantasy Award for Best Novella. Nominated for the 2001 Hugo Award for Best Novella. Nominated for the 2001 Locus Award for Best Novella.",
+                    Tags = new List<Tag>
+                    {
+                        new Tag { Name = "Collection: Stories of Your Life and Others" }
+                    }
+                },
+                new Book
+                {
+                    Title = "The Evolution of Human Science",
+                    Author = "Ted Chiang",
+                    PublicationYear = 2000,
+                    PublicationMonth = 6,
+                    Type = BookType.ShortStory,
+                    Description = "Originally titled 'Catching Crumbs from the Table' and published in Nature Magazine in June 2000. Nominated for the 2001 Locus Award for Best Short Story.",
+                    Tags = new List<Tag>
+                    {
+                        new Tag { Name = "Collection: Stories of Your Life and Others" }
+                    }
+                },
+                new Book
+                {
+                    Title = "Hell Is the Absence of God",
+                    Author = "Ted Chiang",
+                    PublicationYear = 2001,
+                    PublicationMonth = 7,
+                    Type = BookType.ShortStory,
+                    Description = "Originally published in the anthology 'Starlight 3' in July 2001. Won the 2002 Hugo Award for Best Novelette. Won the 2002 Locus Award for Best Novelette. Won the 2003 Nebula Award for Best Novelette.",
+                    Tags = new List<Tag>
+                    {
+                        new Tag { Name = "Collection: Stories of Your Life and Others" }
+                    }
+                },
+                new Book
+                {
+                    Title = "Liking What You See: A Documentary",
+                    Author = "Ted Chiang",
+                    PublicationYear = 2002,
+                    Type = BookType.ShortStory,
+                    Description = "Originally published in the collection 'Stories of Your Life and Others' in 2002. Chiang withdrew a nomination for the 2003 Hugo Award for Best Novelette.",
+                    Tags = new List<Tag>
+                    {
+                        new Tag { Name = "Collection: Stories of Your Life and Others" }
+                    }
+                },
+                new Book
+                {
+                    Title = "The Merchant and the Alchemist's Gate",
+                    Author = "Ted Chiang",
+                    PublicationYear = 2007,
+                    PublicationMonth = 7,
+                    Type = BookType.ShortStory,
+                    Description = "Nominated for the 2007 BSFA Award for Short Fiction, Won the 2008 Hugo Award for Best Novelette. Won the 2008 Nebula Award for Best Novelette. Nominated for the 2008 Locus Award for Best Novelette.",
+                    Tags = new List<Tag>
+                    {
+                        new Tag { Name = "Collection: Exhalation Stories" }
+                    }
+                },
+                new Book
+                {
+                    Title = "Exhalation",
+                    Author = "Ted Chiang",
+                    PublicationYear = 2008,
+                    PublicationMonth = 11,
+                    Type = BookType.ShortStory,
+                    Description = "Originally published in the anthology 'Eclipse 2' in November 2008. Won the 2008 BSFA Award for Short Fiction. Won the 2009 Hugo Award for Best Short Story. Won the 2009 Locus Award for Best Short Story.",
+                    Tags = new List<Tag>
+                    {
+                        new Tag { Name = "Collection: Exhalation Stories" }
+                    }
+                },
+                new Book
+                {
+                    Title = "What's Expected of Us",
+                    Author = "Ted Chiang",
+                    PublicationYear = 2005,
+                    PublicationMonth = 7,
+                    Type = BookType.ShortStory,
+                    Description = "Originally published in Nature Magazine in July 2005. Included in the 2006 anthology Year's Best SF 11 and in the 2019 collection Exhalation: Stories.",
+                    Tags = new List<Tag>
+                    {
+                        new Tag { Name = "Collection: Exhalation Stories" }
+                    }
+                },
+                new Book
+                {
+                    Title = "The Lifecycle of Software Objects",
+                    Author = "Ted Chiang",
+                    PublicationYear = 2010,
+                    Type = BookType.ShortStory,
+                    Description = "Won the 2011 Hugo Award for Best Novella. Nominated for the 2011 Nebula Award for Best Novella. Won the 2011 Locus Award for Best Novella.",
+                    Tags = new List<Tag>
+                    {
+                        new Tag { Name = "Collection: Exhalation Stories" }
+                    }
+                },
+                new Book
+                {
+                    Title = "Dacey's Patent Automatic Nanny",
+                    Author = "Ted Chiang",
+                    PublicationYear = 2011,
+                    PublicationMonth = 6,
+                    Type = BookType.ShortStory,
+                    Description = "Originally published in the anthology 'The Thackery T. Lambshead Cabinet of Curiosities' in 2011. Included in the 2019 collection Exhalation: Stories.",
+                    Tags = new List<Tag>
+                    {
+                        new Tag { Name = "Collection: Exhalation Stories" }
+                    }
+                },
+                new Book
+                {
+                    Title = "The Truth of Fact, the Truth of Feeling",
+                    Author = "Ted Chiang",
+                    PublicationYear = 2013,
+                    Type = BookType.ShortStory,
+                    Description = "Nominated for the 2014 Locus Award for Best Novelette. Nominated for the 2014 Hugo Award for Best Novelette.",
+                    Tags = new List<Tag>
+                    {
+                        new Tag { Name = "Collection: Exhalation Stories" }
+                    }
+                },
+                new Book
+                {
+                    Title = "The Great Silence",
+                    Author = "Ted Chiang",
+                    PublicationYear = 2015,
+                    Type = BookType.ShortStory,
+                    Description = "Originally published in the anthology 'e-flux Journal' in May 2015. Included in the 2016 anthology The Best American Short Stories and in the 2019 collection Exhalation: Stories.",
+                    Tags = new List<Tag>
+                    {
+                        new Tag { Name = "Collection: Exhalation Stories" }
+                    }
+                },
+                new Book
+                {
+                    Title = "Omphalos",
+                    Author = "Ted Chiang",
+                    PublicationYear = 2019,
+                    PublicationMonth = 5,
+                    Type = BookType.ShortStory,
+                    Description = "First published in the collection 'Exhalation: Stories' in May 2019. Nominated for the 2020 Hugo Award for Best Novelette. Won the 2020 Locus Award for Best Novelette.",
+                    Tags = new List<Tag>
+                    {
+                        new Tag { Name = "Collection: Exhalation Stories" }
+                    }
+                },
+                new Book
+                {
+                    Title = "Anxiety Is the Dizziness of Freedom",
+                    Author = "Ted Chiang",
+                    PublicationYear = 2019,
+                    PublicationMonth = 5,
+                    Type = BookType.ShortStory,
+                    Description = "First published in the collection 'Exhalation: Stories' in May 2019. Nominated for the 2020 Hugo Award for Best Novella. Nominated for the 2020 Nebula Award for Best Novella. Nominated for the 2020 Locus Award for Best Novella.",
+                    Tags = new List<Tag>
+                    {
+                        new Tag { Name = "Collection: Exhalation Stories" }
+                    }
+                },
+                new Book
+                {
+                    Title = "It's 2059, and the Rich Kids are Still Winning",
+                    Author = "Ted Chiang",
+                    PublicationYear = 2019,
+                    PublicationMonth = 5,
+                    Type = BookType.ShortStory,
+                    Description = "First published in the New York Times in May 2019 and then in 'The Year's Best Science Fiction 2020'. Nominated for the 2020 Locus Award for Best Short Story."
+                },
+                new Book
+                {
+                    Title = "Frankenstein's Daughter by Maureen McHugh: An Appreciation",
+                    Author = "Ted Chiang",
+                    PublicationYear = 2005,
+                    PublicationMonth = 12,
+                    Type = BookType.NonFiction,
+                    Description = "First published in the The Ellen Datlow/SCI FICTION Project in December 2005."
+                },
+                new Book
+                {
+                    Title = "The Problem of the Traveling Salesman",
+                    Author = "Ted Chiang",
+                    PublicationYear = 2008,
+                    PublicationMonth = 11,
+                    Type = BookType.NonFiction,
+                    Description = "First published in the Lady Churchill's Rosebud Wristlet #23 in November 2008."
+                },
+                new Book
+                {
+                    Title = "Reasoning About the Body",
+                    Author = "Ted Chiang",
+                    PublicationYear = 2010,
+                    PublicationMonth = 11,
+                    Type = BookType.NonFiction,
+                    Description = "First published in the Lady Churchill's Rosebud Wristlet #26 in November 2010."
+                },
+                new Book
+                {
+                    Title = "Introduction to 'Particle Theory'",
+                    Author = "Ted Chiang",
+                    PublicationYear = 2011,
+                    PublicationMonth = 10,
+                    Type = BookType.NonFiction,
+                    Description = "First published in the Strange Horizons in October 2011."
+                },
+                new Book
+                {
+                    Title = "Bad Character",
+                    Author = "Ted Chiang",
+                    PublicationYear = 2016,
+                    PublicationMonth = 5,
+                    Type = BookType.NonFiction,
+                    Description = "First published in the New Yorker in May 2016."
+                },
+                new Book
+                {
+                    Title = "Silicon Valley Is Turning Into Its Own Worst Fear",
+                    Author = "Ted Chiang",
+                    PublicationYear = 2017,
+                    PublicationMonth = 12,
+                    Type = BookType.NonFiction,
+                    Description = "First published on BuzzFeed in December 2017."
+                },
+                new Book
+                {
+                    Title = "What If Parents Loved Strangers' Children As Much As Their Own?",
+                    Author = "Ted Chiang",
+                    PublicationYear = 2017,
+                    PublicationMonth = 12,
+                    Type = BookType.NonFiction,
+                    Description = "First published in the New Yorker in December 2017."
+                },
+                new Book
+                {
+                    Title = "Why Computers Won't Make Themselves Smarter",
+                    Author = "Ted Chiang",
+                    PublicationYear = 2021,
+                    PublicationMonth = 3,
+                    Type = BookType.NonFiction,
+                    Description = "First published in the New Yorker in March 2021."
+                },
+                new Book
+                {
+                    Title = "The Art and Science of Arrival by Tanya Lapointe",
+                    Author = "Ted Chiang",
+                    PublicationYear = 2022,
+                    Type = BookType.Forward,
+                },
+                new Book
+                {
+                    Title = "The History of Science Fiction: A Graphic Novel Adventure by Xavier Dollo",
+                    Author = "Ted Chiang",
+                    PublicationYear = 2022,
+                    Type = BookType.Forward,
+                },
+                new Book
+                {
+                    Title = "ChatGPT Is a Blurry JPEG of the Web",
+                    Author = "Ted Chiang",
+                    PublicationYear = 2023,
+                    PublicationMonth = 2,
+                    Type = BookType.NonFiction,
+                    Description = "First published in the New Yorker in February 2023."
+                },
+                new Book
+                {
+                    Title = "Will A.I. Become the New McKinsey?",
+                    Author = "Ted Chiang",
+                    PublicationYear = 2023,
+                    PublicationMonth = 5,
+                    Type = BookType.NonFiction,
+                    Description = "First published in the New Yorker in May 2023."
+                },
+                new Book
+                {
+                    Title = "Why A.I. Isn't Going to Make Art",
+                    Author = "Ted Chiang",
+                    PublicationYear = 2024,
+                    PublicationMonth = 8,
+                    Type = BookType.NonFiction,
+                    Description = "First published in the New Yorker in August 2024. Won the 2024 BSFA Award for Short Non-Fiction.",
                 }
             };
 
@@ -13747,6 +14088,26 @@ namespace ASP_site.Data.Initializers
                 new Link { BookTitle = "Witches", Url = "https://en.wikipedia.org/wiki/Witches_(anthology)", Label = "Wikipedia Link", LinkType = LinkType.Wiki },
                 new Link { BookTitle = "Wizards", Url = "https://en.wikipedia.org/wiki/Wizards_(Asimov_anthology)", Label = "Wikipedia Link", LinkType = LinkType.Wiki },
                 new Link { BookTitle = "Youth", Url = "https://en.wikipedia.org/wiki/Youth_(Asimov_short_story)", Label = "Wikipedia Link", LinkType = LinkType.Wiki },
+                new Link { BookTitle = "Tower of Babylon", Url = "https://en.wikipedia.org/wiki/Tower_of_Babylon", Label = "Wikipedia Link", LinkType = LinkType.Wiki },
+                new Link { BookTitle = "Division by Zero", Url = "https://en.wikipedia.org/wiki/Division_by_Zero", Label = "Wikipedia Link", LinkType = LinkType.Wiki },
+                new Link { BookTitle = "Understand", Url = "https://en.wikipedia.org/wiki/Understand", Label = "Wikipedia Link", LinkType = LinkType.Wiki },
+                new Link { BookTitle = "Story of Your Life", Url = "https://en.wikipedia.org/wiki/Story_of_Your_Life", Label = "Wikipedia Link", LinkType = LinkType.Wiki },
+                new Link { BookTitle = "The Evolution of Human Science", Url = "https://en.wikipedia.org/wiki/The_Evolution_of_Human_Science", Label = "Wikipedia Link", LinkType = LinkType.Wiki },
+                new Link { BookTitle = "Seventy-Two Letters", Url = "https://en.wikipedia.org/wiki/Seventy-Two_Letters", Label = "Wikipedia Link", LinkType = LinkType.Wiki },
+                new Link { BookTitle = "Hell Is the Absence of God", Url = "https://en.wikipedia.org/wiki/Hell_Is_the_Absence_of_God", Label = "Wikipedia Link", LinkType = LinkType.Wiki },
+                new Link { BookTitle = "Liking What You See: A Documentary", Url = "https://en.wikipedia.org/wiki/Liking_What_You_See:_A_Documentary", Label = "Wikipedia Link", LinkType = LinkType.Wiki },
+                new Link { BookTitle = "What's Expected of Us", Url = "https://en.wikipedia.org/wiki/What%27s_Expected_of_Us", Label = "Wikipedia Link", LinkType = LinkType.Wiki },
+                new Link { BookTitle = "The Merchant and the Alchemist's Gate", Url = "https://en.wikipedia.org/wiki/The_Merchant_and_the_Alchemist%27s_Gate", Label = "Wikipedia Link", LinkType = LinkType.Wiki },
+                new Link { BookTitle = "Exhalation", Url = "https://en.wikipedia.org/wiki/Exhalation", Label = "Wikipedia Link", LinkType = LinkType.Wiki },
+                new Link { BookTitle = "The Lifecycle of Software Objects", Url = "https://en.wikipedia.org/wiki/The_Lifecycle_of_Software_Objects", Label = "Wikipedia Link", LinkType = LinkType.Wiki },
+                new Link { BookTitle = "Dacey's Patent Automatic Nanny", Url = "https://en.wikipedia.org/wiki/Dacey%27s_Patent_Automatic_Nanny", Label = "Wikipedia Link", LinkType = LinkType.Wiki },
+                new Link { BookTitle = "The Truth of Fact, the Truth of Feeling", Url = "https://en.wikipedia.org/wiki/The_Truth_of_Fact,_the_Truth_of_Feeling", Label = "Wikipedia Link", LinkType = LinkType.Wiki },
+                new Link { BookTitle = "The Great Silence", Url = "https://en.wikipedia.org/wiki/The_Great_Silence", Label = "Wikipedia Link", LinkType = LinkType.Wiki },
+                new Link { BookTitle = "Omphalos", Url = "https://en.wikipedia.org/wiki/Omphalos", Label = "Wikipedia Link", LinkType = LinkType.Wiki },
+                new Link { BookTitle = "Anxiety Is the Dizziness of Freedom", Url = "https://en.wikipedia.org/wiki/Anxiety_Is_the_Dizziness_of_Freedom", Label = "Wikipedia Link", LinkType = LinkType.Wiki },
+                new Link { BookTitle = "It's 2059, and the Rich Kids are Still Winning", Url = "https://en.wikipedia.org/wiki/It%27s_2059,_and_the_Rich_Kids_are_Still_Winning", Label = "Wikipedia Link", LinkType = LinkType.Wiki },             
+                new Link { BookTitle = "It's 2059, and the Rich Kids are Still Winning", Url = "https://web.archive.org/web/20190601030957/https://www.nytimes.com/2019/05/27/opinion/ted-chiang-future-genetic-engineering.html", Label = "It's 2059, and the Rich Kids are Still Winning on Archive.org", LinkType = LinkType.Download },
+                new Link { BookTitle = "Why A.I. Isn't Going to Make Art", Url = "https://web.archive.org/web/20240901011514/https://www.newyorker.com/culture/the-weekend-essay/why-ai-isnt-going-to-make-art", Label = "Why A.I. Isn't Going to Make Art on Archive.org", LinkType = LinkType.Download },
             };
 
             return (books, links);

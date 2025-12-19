@@ -8,7 +8,7 @@ using ASP_site.Data;
 using ASP_site.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace ASP_site.Pages.Books.Heinlein
+namespace ASP_site.Pages.Books.Chiang
 {
     public class IndexModel : PageModel
     {
@@ -52,11 +52,11 @@ namespace ASP_site.Pages.Books.Heinlein
         public async Task OnGetAsync()
         {
             var booksIQ = _context.Books
-                .Where(b => b.Author == "Robert A. Heinlein")
+                .Where(b => b.Author == "Ted Chiang")
                 .Include(b => b.Tags)
                 .AsQueryable();
 
-            // Populate filter options from the full set of Heinlein's books
+            // Populate filter options from the full set of Chiang's books
             var allBooks = await booksIQ.ToListAsync();
             AllLinks = await _context.Links.Where(l => l.BookTitle != null).ToListAsync();
             
@@ -68,7 +68,7 @@ namespace ASP_site.Pages.Books.Heinlein
 
             if (!SelectedBookTypes.Any())
             {
-                SelectedBookTypes = AllBookTypes.Keys.ToList();
+                SelectedBookTypes = AllBookTypes.Keys.Where(k => k != BookType.Forward.ToString()).ToList();
             }
 
             AllCollections = allBooks
@@ -122,4 +122,4 @@ namespace ASP_site.Pages.Books.Heinlein
             Books = await booksIQ.ToListAsync();
         }
     }
-} 
+}

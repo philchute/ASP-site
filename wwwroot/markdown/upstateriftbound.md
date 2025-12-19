@@ -34,6 +34,7 @@ Let me know if you find any errors or if you have any updates.
     - [Radiance Set Pre-release](#radiance-set-pre-release)
     - [Radiance Summoner Skirmish 1](#radiance-summoner-skirmish-1)
     - [Radiance Summoner Skirmish 2](#radiance-summoner-skirmish-2)
+- [Bonus Lorcana Section](#bonus-lorcana-section)
 
 
 ## Retail availability
@@ -236,3 +237,15 @@ TBD. December 2026?
 
 TBD. January 2027?
 
+## Bonus Lorcana Section
+
+League:  
+Tuesday nights at 6:30 at Game Kastle Greenville  
+Some Friday nights at 6:30 at Limit Break Fountain Inn  
+Some? Saturday nights at 6:00 at Boardwalk Greenville  
+ 
+| Whispers in the Well Set Championship | Date                                  | 
+|---------------------------------------|---------------------------------------|
+|Limit Break Fountain Inn               | Saturday January 10th, 2026 1:00 pm   |
+|Game Kastle Greenville                 | Sunday January 18th, 2026 1:00 pm     |
+|Borderlands Greenville                 | Saturday January 24th, 2026 10:00 am  |

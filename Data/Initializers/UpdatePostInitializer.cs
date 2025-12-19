@@ -88,6 +88,14 @@ namespace ASP_site.Data.Initializers
                     Content = "<p>Added proper domain name support for the server browser, fixing an issue with some old IPs which now won't need to be replaced. Fixed issue where Day of Defeat was showing DoD:Source servers.</p>",
                     PostedDate = new DateTime(2025, 12, 7, 12, 0, 0, DateTimeKind.Utc), Author = "Phil",
                     Tags = new List<Tag> { tags.Single(t => t.Name == "Website Update"), tags.Single(t => t.Name == "Gaming Update") }
+                },
+                new UpdatePost
+                {
+                    Id = 10,
+                    Title = "New books page",
+                    Content = "<p>I added an author page for Ted Chiang, as I intend to read all of his stories and books. Fixed a bug on the links page where the dropdown showed options with no links.</p>",
+                    PostedDate = new DateTime(2025, 12, 19, 12, 0, 0, DateTimeKind.Utc), Author = "Phil",
+                    Tags = new List<Tag> { tags.Single(t => t.Name == "Website Update") }
                 }
             };
             return (posts, tags);

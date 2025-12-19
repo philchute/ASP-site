@@ -41,28 +41,49 @@ namespace ASP_site.Pages.Links
         {
             ViewData["ActivePage"] = "Links";
 
+            // 1. Base query for "interesting" links (filtering out boring types)
+            var interestingLinksQuery = _context.Links
+                .Where(l => l.LinkType != LinkType.Wiki && l.LinkType != LinkType.Store && l.LinkType != LinkType.SteamDB);
+
+            // 2. Get all distinct topic identifiers from the links in one query
+            var activeLinkTopics = await interestingLinksQuery
+                .Select(l => new { l.GameID, l.BookTitle })
+                .Distinct()
+                .ToListAsync();
+
+            var activeGameIds = activeLinkTopics
+                .Where(l => !string.IsNullOrEmpty(l.GameID))
+                .Select(l => l.GameID)
+                .Distinct();
+
+            var activeBookTitles = activeLinkTopics
+                .Where(l => !string.IsNullOrEmpty(l.BookTitle))
+                .Select(l => l.BookTitle)
+                .Distinct();
+
+            // 3. Look up Game Names (since we only have IDs)
             var gameTopics = await _context.Games
-                                         .OrderBy(g => g.Name)
-                                         .Select(g => new { ID = g.GameID, Name = g.Name })
-                                         .ToListAsync();
-            var bookTopics = await _context.Books
-                                         .OrderBy(b => b.Title)
-                                         .Select(b => new { ID = b.Title, Name = b.Title })
+                                         .Where(g => activeGameIds.Contains(g.GameID))
+                                         .Select(g => new SelectListItem { Value = g.GameID, Text = g.Name })
                                          .ToListAsync();
 
-            var allTopics = gameTopics.Select(g => new SelectListItem { Value = g.ID, Text = g.Name })
-                                    .Concat(bookTopics.Select(b => new SelectListItem { Value = b.ID, Text = b.Name }))
-                                    .OrderBy(t => t.Text);
+            // 4. Create Book items directly (Title is both ID and Text)
+            var bookTopics = activeBookTitles
+                                         .Select(t => new SelectListItem { Value = t, Text = t });
+
+            var allTopics = gameTopics.Concat(bookTopics).OrderBy(t => t.Text);
 
             Topics = new SelectList(allTopics, "Value", "Text");
 
+            // 4. Build the Link Types dropdown (excluding boring types)
             var linkTypesList = Enum.GetValues(typeof(LinkType))
                 .Cast<LinkType>()
                 .Where(lt => lt != LinkType.Wiki && lt != LinkType.Store && lt != LinkType.SteamDB)
                 .Select(lt => lt.ToString());
             LinkTypes = new SelectList(linkTypesList);
 
-            var linksQuery = _context.Links.Where(l => l.LinkType != LinkType.Wiki && l.LinkType != LinkType.Store && l.LinkType != LinkType.SteamDB);
+            // 5. Initialize the main query for the page using the base interesting query
+            var linksQuery = interestingLinksQuery;
 
             if (!string.IsNullOrEmpty(SearchString))
             {
