@@ -13493,8 +13493,8 @@ namespace ASP_site.Data.Initializers
                     Author = "Ted Chiang",
                     PublicationYear = 2011,
                     PublicationMonth = 10,
-                    Type = BookType.NonFiction,
-                    Description = "First published in the Strange Horizons in October 2011."
+                    Type = BookType.Forward,
+                    Description = "First published in Strange Horizons in October 2011."
                 },
                 new Book
                 {
@@ -14095,6 +14095,7 @@ namespace ASP_site.Data.Initializers
                 new Link { BookTitle = "The Evolution of Human Science", Url = "https://en.wikipedia.org/wiki/The_Evolution_of_Human_Science", Label = "Wikipedia Link", LinkType = LinkType.Wiki },
                 new Link { BookTitle = "Seventy-Two Letters", Url = "https://en.wikipedia.org/wiki/Seventy-Two_Letters", Label = "Wikipedia Link", LinkType = LinkType.Wiki },
                 new Link { BookTitle = "Hell Is the Absence of God", Url = "https://en.wikipedia.org/wiki/Hell_Is_the_Absence_of_God", Label = "Wikipedia Link", LinkType = LinkType.Wiki },
+                new Link { BookTitle = "Hell Is the Absence of God", Url = "https://thoughtcrime.crummy.com/2009/Error.html", Label = "Single-Bit Error by Ken Liu, a response/sequel to Hell Is the Absence of God", LinkType = LinkType.Download },
                 new Link { BookTitle = "Liking What You See: A Documentary", Url = "https://en.wikipedia.org/wiki/Liking_What_You_See:_A_Documentary", Label = "Wikipedia Link", LinkType = LinkType.Wiki },
                 new Link { BookTitle = "What's Expected of Us", Url = "https://en.wikipedia.org/wiki/What%27s_Expected_of_Us", Label = "Wikipedia Link", LinkType = LinkType.Wiki },
                 new Link { BookTitle = "The Merchant and the Alchemist's Gate", Url = "https://en.wikipedia.org/wiki/The_Merchant_and_the_Alchemist%27s_Gate", Label = "Wikipedia Link", LinkType = LinkType.Wiki },
@@ -14107,6 +14108,14 @@ namespace ASP_site.Data.Initializers
                 new Link { BookTitle = "Anxiety Is the Dizziness of Freedom", Url = "https://en.wikipedia.org/wiki/Anxiety_Is_the_Dizziness_of_Freedom", Label = "Wikipedia Link", LinkType = LinkType.Wiki },
                 new Link { BookTitle = "It's 2059, and the Rich Kids are Still Winning", Url = "https://en.wikipedia.org/wiki/It%27s_2059,_and_the_Rich_Kids_are_Still_Winning", Label = "Wikipedia Link", LinkType = LinkType.Wiki },             
                 new Link { BookTitle = "It's 2059, and the Rich Kids are Still Winning", Url = "https://web.archive.org/web/20190601030957/https://www.nytimes.com/2019/05/27/opinion/ted-chiang-future-genetic-engineering.html", Label = "It's 2059, and the Rich Kids are Still Winning on Archive.org", LinkType = LinkType.Download },
+                new Link { BookTitle = "Frankenstein's Daughter by Maureen McHugh: An Appreciation", Url = "https://edsfproject.blogspot.com/2005/12/frankensteins-daughter-by-maureen.html", Label = "Frankenstein's Daughter by Maureen McHugh: An Appreciation on EdsfProject.blogspot.com", LinkType = LinkType.Download },
+                new Link { BookTitle = "Introduction to Particle Theory", Url = "http://strangehorizons.com/fiction/introduction-to-particle-theory/", Label = "Introduction to Particle Theory on StrangeHorizons.com", LinkType = LinkType.Download },
+                new Link { BookTitle = "If Chinese Were Phonetic", Url = "https://web.archive.org/web/20160601190340/https://www.newyorker.com/magazine/2016/05/16/if-chinese-were-phonetic", Label = "If Chinese Were Phonetic on Archive.org", LinkType = LinkType.Download },
+                new Link { BookTitle = "Silicon Valley Is Turning Into Its Own Worst Fear", Url = "https://web.archive.org/web/20180729193238/https://www.buzzfeednews.com/article/tedchiang/the-real-danger-to-civilization-isnt-ai-its-runaway", Label = "Silicon Valley Is Turning Into Its Own Worst Fear on Archive.org", LinkType = LinkType.Download },
+                new Link { BookTitle = "What If Parents Loved Strangers' Children As Much As Their Own?", Url = "https://web.archive.org/web/20220721062024/https://www.newyorker.com/tech/annals-of-technology/what-if-parents-loved-strangers-children-as-much-as-their-own", Label = "What If Parents Loved Strangers' Children As Much As Their Own on Archive.org", LinkType = LinkType.Download },
+                new Link { BookTitle = "Why Computers Won't Make Themselves Smarter", Url = "https://web.archive.org/web/20210331161611/https://www.newyorker.com/culture/annals-of-inquiry/why-computers-wont-make-themselves-smarter", Label = "Why Computers Won't Make Themselves Smarter on Archive.org", LinkType = LinkType.Download },
+                new Link { BookTitle = "ChatGPT Is a Blurry JPEG of the Web", Url = "https://web.archive.org/web/20251213234718/https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web", Label = "ChatGPT Is a Blurry JPEG of the Web on Archive.org", LinkType = LinkType.Download },
+                new Link { BookTitle = "Will AI Become the New McKinsey?", Url = "https://web.archive.org/web/20251217111646/https://www.newyorker.com/science/annals-of-artificial-intelligence/will-ai-become-the-new-mckinsey", Label = "Will AI Become the New McKinsey? on Archive.org", LinkType = LinkType.Download },
                 new Link { BookTitle = "Why A.I. Isn't Going to Make Art", Url = "https://web.archive.org/web/20240901011514/https://www.newyorker.com/culture/the-weekend-essay/why-ai-isnt-going-to-make-art", Label = "Why A.I. Isn't Going to Make Art on Archive.org", LinkType = LinkType.Download },
             };
 
