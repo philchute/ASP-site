@@ -280,7 +280,7 @@ Current formats:
 |   2   |   8 | Reign of Jafar       | May 30, 2025      | June 6, 2025      |
 |   3   |   9 | Fabled               | August 29, 2025   | September 5, 2025 |
 |   3   |  10 | Whispers in the Well | November 6, 2025  | November 14, 2025 |
-|   3   |  11 | Winterspell          | Q1 2026           | Q1 2026           |
+|   3   |  11 | Winterspell          | February, 2026    | February 20, 2026 |
 |   3   |  12 | Wilds Unknown        | Q2 2026           | Q2 2026           |
 
 Season 2 North American Challenge Events: (Other events in EU, Asia, Australia, and Brazil)
@@ -343,7 +343,15 @@ Based on the anime 'One Piece'. Since it was published in 2022 by [Bandai](https
 |  4  | EB03  | Extra Booster                                 | February 20, 2026 |
 |  4  | PB05  | Premium Card Collection -Best Selection Vol.5 | February 27, 2026 |
 |  4  | JAP01 | Japanese 3rd Anniversary Set                  | March 27, 2026    |
+|  4  | DP11  | Double Pack DP-11                             | June 5, 2026      |
+|  4  | OP16  | Booster OP-16                                 | June 12, 2026     |
 |  4  | ST30  | Starter Deck ST-30                            | June 12, 2026     |
+|  4  | ST31  | Starter Deck ST-31                            | July 31, 2026     |
+|  4  | ST32  | Starter Deck ST-32                            | July 31, 2026     |
+|  4  | ST33  | Starter Deck ST-33                            | July 31, 2026     |
+|  4  | ST34  | Starter Deck ST-34                            | July 31, 2026     |
+|  4  | ST35  | Starter Deck ST-35                            | July 31, 2026     |
+|  4  | ST36  | Starter Deck ST-36                            | July 31, 2026     |
 
 
 ### Star Wars: Unlimited
@@ -436,6 +444,8 @@ Events: [Digimon Card Game Official Events](https://world.digimoncard.com/event/
 | BT27 | ZENKAI Series EX Set 10       | History of Z Booster Set                  | March 7, 2025      |
 | BT28 | Ultra-Bout Series Set 01      | Prismatic Clash                           | September 5, 2025  |
 | BT29 | Ultra-Bout Series Set 02      | Gathering of Strong Rivals                | January 2026       |
+| BT30 | Ultra-Bout Series Set 03      | B30                                       | March 27, 2026     |
+| BT31 | Ultra-Bout Series Set 04      | B31                                       | July 30, 2026      |
 
 
 
@@ -612,6 +622,7 @@ Formats:
 |-------------------------------------------------|-------------------|
 | Siege of the Forgotten: PvE Boxed Game          | August 31, 2025   |
 | Siege of the Forgotten: Spoils of the Forgotten | August 31, 2025   |
+| Ancient Alphas                                  | February 23, 2026 |
 
 
 ### Altered
@@ -739,6 +750,7 @@ This is a new card game published by BushiRoad in 2025.
 | Distorted Reflections (Standard Set)       | July 25th, 2025   |
 | Merlin Re:Collection - Brilliant Vestige   | December 5, 2025  |
 | Phantom Monarchs 1st Edition               | December 5, 2025  |
+| Mortal Ambition Alter Edition              | January 30, 2026 |
 
 
 ## Hololive Official Card Game
@@ -904,10 +916,11 @@ and still sees some releases.
 
 Weiß Schwarz is a Japanese anime themed CCG created in 2007 by Bushiroad and some sets are available in English.
 
-| Name                          | Release           |
-|-------------------------------|-------------------|
-| Persona 3 Reload Reprint      | December 31, 2025 |
-| Fairy Tail 100 Years Quest    | March 13, 2026    |
+| Name                               | Release           |
+|------------------------------------|-------------------|
+| Persona 3 Reload Reprint           | December 31, 2025 |
+| Fairy Tail 100 Years Quest         | March 13, 2026    |
+| Nazarick: Tomb of the Undead Vol.3 | May 15, 2026      |
 
 
 ### Wixoss
