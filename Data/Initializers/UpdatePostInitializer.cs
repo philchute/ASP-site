@@ -92,8 +92,8 @@ namespace ASP_site.Data.Initializers
                 new UpdatePost
                 {
                     Id = 10,
-                    Title = "New books page",
-                    Content = "<p>I added an author page for Ted Chiang, as I intend to read all of his stories and books. Fixed a bug on the links page where the dropdown showed options with no links.</p>",
+                    Title = "New title page",
+                    Content = "<p>The website has a new star constellation themed home page to accommodate the growing number of pages. I also added an author page for Ted Chiang, as I intend to read all of his stories and books. Fixed a bug on the links page where the dropdown showed options with no links.</p>",
                     PostedDate = new DateTime(2025, 12, 19, 12, 0, 0, DateTimeKind.Utc), Author = "Phil",
                     Tags = new List<Tag> { tags.Single(t => t.Name == "Website Update") }
                 }

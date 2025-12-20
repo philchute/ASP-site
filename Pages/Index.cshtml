@@ -6,25 +6,15 @@
     var version = DateTime.Now.Ticks; // Add cache-busting version
 }
 
-<div class="tron-container">
-    <div class="grid"></div>
-    <div class="menu-container">
-        <div class="menu-frame">
-            <div class="menu-items">
-                <div class="menu-item" data-text="Games">Games</div>
-                <div class="menu-item" data-text="Maps">Maps</div>
-                <div class="menu-item" data-text="Servers">Servers</div>
-                <div class="menu-item" data-text="Years">Years</div>
-                <div class="menu-item" data-text="Links">Links</div>
-                <div class="menu-item" data-text="Philosophy">Philosophy</div>
-                <div class="menu-item" data-text="Updates">Updates</div>
-                <div class="menu-item" data-text="About">About</div>
-            </div>
-        </div>
+<div class="constellation-container">
+    <div class="constellation-ui">
+        <h1 class="display-4">philchute.com</h1>
+        <p class="lead">Map of the territory</p>
     </div>
+    <canvas id="constellation-canvas"></canvas>
 </div>
 
 @section Scripts {
-    <link rel="stylesheet" href="~/css/tron.css?v=@version" />
-    <script src="~/js/tron.js?v=@version"></script>
+    <link rel="stylesheet" href="~/css/constellation.css?v=@version" />
+    <script src="~/js/constellation.js?v=@version"></script>
 }

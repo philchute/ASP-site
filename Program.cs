@@ -59,6 +59,9 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+// Add 404 Error Handling
+app.UseStatusCodePagesWithReExecute("/NotFound");
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();

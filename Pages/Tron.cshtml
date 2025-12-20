@@ -1,0 +1,30 @@
+@page
+@using ASP_site.Pages
+@model TronModel
+@{
+    ViewData["Title"] = "Legacy Home Page";
+    var version = DateTime.Now.Ticks; // Add cache-busting version
+}
+
+<div class="tron-container">
+    <div class="grid"></div>
+    <div class="menu-container">
+        <div class="menu-frame">
+            <div class="menu-items">
+                <div class="menu-item" data-text="Games">Games</div>
+                <div class="menu-item" data-text="Maps">Maps</div>
+                <div class="menu-item" data-text="Servers">Servers</div>
+                <div class="menu-item" data-text="Years">Years</div>
+                <div class="menu-item" data-text="Links">Links</div>
+                <div class="menu-item" data-text="Philosophy">Philosophy</div>
+                <div class="menu-item" data-text="Updates">Updates</div>
+                <div class="menu-item" data-text="About">About</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <link rel="stylesheet" href="~/css/tron.css?v=@version" />
+    <script src="~/js/tron.js?v=@version"></script>
+}

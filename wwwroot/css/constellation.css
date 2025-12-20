@@ -1,0 +1,40 @@
+:root {
+    --space-bg: #050505;
+    --star-color: #ffffff;
+    --node-color: #a0a0ff;
+    --node-active: #ffffff;
+    --line-color: rgba(100, 100, 255, 0.3);
+    --text-color: #e0e0e0;
+}
+
+body {
+    background-color: var(--space-bg);
+    overflow: hidden; /* Prevent scrolling on the constellation view */
+    margin: 0;
+    padding: 0;
+}
+
+.constellation-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+canvas#constellation-canvas {
+    display: block;
+}
+
+.constellation-ui {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    color: var(--text-color);
+    pointer-events: none; /* Let clicks pass through to canvas */
+}
+
+/* Optional: Add a subtle twinkle animation for background stars later if needed */
+
