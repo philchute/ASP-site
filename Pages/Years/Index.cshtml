@@ -1,107 +1,126 @@
 @page
 @model ASP_site.Pages.Years.IndexModel
-@using ASP_site.Models @* For easy access to enums if needed in Razor *@
-@using System.ComponentModel.DataAnnotations @* Required for DisplayAttribute access in GetDisplayName if it were here *@
+@using ASP_site.Models
+@using System.ComponentModel.DataAnnotations
 
 @{
     ViewData["Title"] = "Years Timeline";
 }
 
-<div class="jumbotron p-2 row align-items-start">
-    <h2 class="col-md-auto mr-auto display-3 pe-3">Years</h2>
-    <form class="col-md d-flex flex-wrap align-items-start justify-content-end">
-        <div class="form-group ps-2">
-            <label class="col-form-label">Age Appropriateness:</label>
-            <div>
-                <div class="form-check pe-2">
-                    <input class="form-check-input" type="checkbox" name="SelectedAgeAppropriateness" value="Early" id="ageLevel_Early" checked="@(Model.SelectedAgeAppropriateness.Contains("Early"))" onchange="this.form.submit();" />
-                    <label class="form-check-label" for="ageLevel_Early">Early childhood specific content</label>
-                </div>
-                 <div class="form-check pe-2">
-                    <input class="form-check-input" type="checkbox" name="SelectedAgeAppropriateness" value="Middle" id="ageLevel_Middle" checked="@(Model.SelectedAgeAppropriateness.Contains("Middle"))" onchange="this.form.submit();" />
-                    <label class="form-check-label" for="ageLevel_Middle">Middle school / Moderate content</label>
-                </div>
-                 <div class="form-check pe-2">
-                    <input class="form-check-input" type="checkbox" name="SelectedAgeAppropriateness" value="Teen" id="ageLevel_Teen" checked="@(Model.SelectedAgeAppropriateness.Contains("Teen"))" onchange="this.form.submit();" />
-                    <label class="form-check-label" for="ageLevel_Teen">Teen / Mature content</label>
-                </div>
-                 <div class="form-check pe-2">
-                    <input class="form-check-input" type="checkbox" name="SelectedAgeAppropriateness" value="Adult" id="ageLevel_Adult" checked="@(Model.SelectedAgeAppropriateness.Contains("Adult"))" onchange="this.form.submit();" />
-                    <label class="form-check-label" for="ageLevel_Adult">Adult Only Content</label>
-                </div>
+<div class="container mt-4">
+    <form method="get" class="mb-4">
+        <div class="row align-items-end">
+            <div class="col-md-7">
+                 <h1 class="display-3">Years</h1>
+                 <p class="lead">Timeline of media in historical settings.</p>
             </div>
-        </div>
-        <div class="form-group ps-2">
-            <label class="col-form-label">Content Type:</label>
-            <div style="column-count: 2; column-gap: 10px; max-width: 300px; break-inside: avoid-column;">
-                @foreach (var contentType in Model.AllContentTypes)
-                {
-                    <div class="form-check pe-2" style="display: block; break-inside: avoid-column;">
-                        <input class="form-check-input" type="checkbox" name="SelectedContentTypes" value="@contentType.Key" id="contentType_@contentType.Key" checked="@(Model.SelectedContentTypes.Contains(contentType.Key))" onchange="this.form.submit();" />
-                        <label class="form-check-label" for="contentType_@contentType.Key">@contentType.Value</label>
+            <div class="col-md-5">
+                <div class="d-flex justify-content-end align-items-end flex-wrap gap-2">
+                    <div class="form-group flex-grow-1">
+                        <label class="form-label" for="SortField">Sort:</label>
+                        <select class="form-control" asp-for="SortField" asp-items="Model.SortOptions" onchange="this.form.submit();">
+                        </select>
                     </div>
-                }
+                    <div class="form-group flex-grow-1">
+                        <label class="form-label" for="SearchString">Search:</label>
+                        <div class="d-flex">
+                            <input id="SearchString" type="text" asp-for="SearchString" class="form-control" placeholder="Search title..." />
+                            <button type="submit" class="btn btn-secondary ms-1">Search</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="form-group ps-2">
-            <label class="col-form-label" asp-for="SearchString" class="control-label">Search:</label>
-            <input class="form-control" type="text" asp-for="SearchString" />
-            <input class="form-control" type="submit" value="Search" class="btn btn-primary btn-sm mr-auto" />
-        </div>
-        <div class="form-group ps-2">
-            <label class="col-form-label" asp-for="SortField">Sort by:</label>
-            <select class="form-control" asp-for="SortField" asp-items="Model.SortOptions" onchange="this.form.submit();">
-            </select>
+        <hr />
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <label class="form-label fw-bold text-light">Age Appropriateness:</label>
+                <div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="SelectedAgeAppropriateness" value="Early" id="ageLevel_Early" checked="@(Model.SelectedAgeAppropriateness.Contains("Early"))" onchange="this.form.submit();" />
+                        <label class="form-check-label text-muted" for="ageLevel_Early">Early childhood</label>
+                    </div>
+                     <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="SelectedAgeAppropriateness" value="Middle" id="ageLevel_Middle" checked="@(Model.SelectedAgeAppropriateness.Contains("Middle"))" onchange="this.form.submit();" />
+                        <label class="form-check-label text-muted" for="ageLevel_Middle">Middle school</label>
+                    </div>
+                     <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="SelectedAgeAppropriateness" value="Teen" id="ageLevel_Teen" checked="@(Model.SelectedAgeAppropriateness.Contains("Teen"))" onchange="this.form.submit();" />
+                        <label class="form-check-label text-muted" for="ageLevel_Teen">Teen / Mature</label>
+                    </div>
+                     <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="SelectedAgeAppropriateness" value="Adult" id="ageLevel_Adult" checked="@(Model.SelectedAgeAppropriateness.Contains("Adult"))" onchange="this.form.submit();" />
+                        <label class="form-check-label text-muted" for="ageLevel_Adult">Adult Only</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <label class="form-label fw-bold text-light">Content Type:</label>
+                <div style="column-count: 2; column-gap: 20px;">
+                    @foreach (var contentType in Model.AllContentTypes)
+                    {
+                        <div class="form-check" style="break-inside: avoid-column;">
+                            <input class="form-check-input" type="checkbox" name="SelectedContentTypes" value="@contentType.Key" id="contentType_@contentType.Key" checked="@(Model.SelectedContentTypes.Contains(contentType.Key))" onchange="this.form.submit();" />
+                            <label class="form-check-label text-muted" for="contentType_@contentType.Key">@contentType.Value</label>
+                        </div>
+                    }
+                </div>
+            </div>
         </div>
     </form>
+
+    <p>
+        This page is an evolving list of movies, books, games, and other media in historical settings, arranged chronologically. 
+        This is not a precise timeline or a comprehensive list, but will allow you find media from a particular time period.
+        Hover the titles for more information.
+    </p>
+
+    <section class="grid mt-3">
+        <div class="row g-0 bg-dark text-white fw-bold">
+            <div class="p-1 text-center col-sm-1">Year</div>
+            <div class="p-1 text-center col-sm-2">Era</div>
+            <div class="p-1 text-center col-sm-1">Age Group</div>
+            <div class="p-1 text-center col-sm-1">Type</div>
+            <div class="p-1 text-center col-sm-1">Published</div>
+            <div class="p-1 text-start col-sm">Title <i>(@(Model.TimelineEntries?.Count ?? 0) shown)</i></div>
+        </div>
+
+        @if(Model.TimelineEntries != null && Model.TimelineEntries.Any()) {
+            foreach (var entry in Model.TimelineEntries) { 
+                <div class="row g-0 border-bottom table-row-hover">
+                    <div class="p-1 text-center col-sm-1">
+                        @{
+                            if (entry.Year < 0) { @($"{Math.Abs(entry.Year)} BC") }
+                            else { @($"{entry.Year}") }
+                        }
+                    </div>
+                    <div class="p-1 text-center col-sm-2 text-muted">@ASP_site.Pages.Years.IndexModel.GetEra(entry.Year)</div>
+                    <div class="p-1 text-center col-sm-1 text-muted">@ASP_site.Pages.Years.IndexModel.GetEnumDisplayName(entry.Age)</div>
+                    <div class="p-1 text-center col-sm-1">
+                        @if (entry.Type.HasValue) {
+                            <img src="~/image/@(entry.Type.Value.ToString()).svg" alt="@entry.Type.Value.ToString()" title="@entry.Type.Value.ToString()" style="width: 24px; height: 24px; filter: invert(0.8);" />
+                        } else {
+                            <span>-</span>
+                        }
+                    </div>
+                    <div class="p-1 text-center col-sm-1 text-muted">
+                        @if (!string.IsNullOrEmpty(entry.Published)) {
+                            <span>@entry.Published</span>
+                        } else {
+                            <span>-</span>
+                        }
+                    </div>
+                    <div class="p-1 text-start col-sm text-light fw-bold" title="@(entry.Description + (!string.IsNullOrEmpty(entry.Availability) ? $"\n\nAvailability: {entry.Availability}" : ""))">@(entry.Title ?? "-")</div>
+                </div>
+            }
+        } else {
+            <p class="p-2">No timeline entries found matching your criteria. Try adjusting the filters or search terms.</p>
+        }
+    </section>
 </div>
 
-<p>
-    This page is an evolving list of movies, books, games, and other media in historical settings, arranged chronologically. 
-    This is not a precise timeline or a comprehensive list, but will allow you find media from a particular time period.
-    You can filter by content type, age appropriateness, and by searching for a specific word or phrase.
-    Hover the titles for more information, and let me know what's missing from this list.
-</p>
-
-<section class="grid mt-3">
-    <div class="row g-0 bg-dark text-white fw-bold">
-        <div class="p-1 text-center col-sm-1">Year</div>
-        <div class="p-1 text-center col-sm-2">Era</div>
-        <div class="p-1 text-center col-sm-1">Age Group</div>
-        <div class="p-1 text-center col-sm-1">Type</div>
-        <div class="p-1 text-center col-sm-1">Published</div>
-        <div class="p-1 text-start col-sm">Title <i>(@(Model.TimelineEntries?.Count ?? 0) shown)</i></div>
-    </div>
-
-    @if(Model.TimelineEntries != null && Model.TimelineEntries.Any()) {
-        foreach (var entry in Model.TimelineEntries) { 
-            <div class="row g-0 border-bottom">
-                <div class="p-1 text-center col-sm-1">
-                    @{
-                        if (entry.Year < 0) { @($"{Math.Abs(entry.Year)} BC") }
-                        else { @($"{entry.Year}") }
-                    }
-                </div>
-                <div class="p-1 text-center col-sm-2">@ASP_site.Pages.Years.IndexModel.GetEra(entry.Year)</div>
-                <div class="p-1 text-center col-sm-1">@ASP_site.Pages.Years.IndexModel.GetEnumDisplayName(entry.Age)</div>
-                <div class="p-1 text-center col-sm-1">
-                    @if (entry.Type.HasValue) {
-                        <img src="~/image/@(entry.Type.Value.ToString()).svg" alt="@entry.Type.Value.ToString()" title="@entry.Type.Value.ToString()" style="width: 24px; height: 24px;" />
-                    } else {
-                        <span>-</span>
-                    }
-                </div>
-                <div class="p-1 text-center col-sm-1">
-                    @if (!string.IsNullOrEmpty(entry.Published)) {
-                        <span>@entry.Published</span>
-                    } else {
-                        <span>-</span>
-                    }
-                </div>
-                <div class="p-1 text-start col-sm text-white" title="@(entry.Description + (!string.IsNullOrEmpty(entry.Availability) ? $"\n\nAvailability: {entry.Availability}" : ""))">@(entry.Title ?? "-")</div>
-            </div>
-        }
-    } else {
-        <p class="p-2">No timeline entries found matching your criteria. Try adjusting the filters or search terms.</p>
+<style>
+    .table-row-hover:hover {
+        background-color: #1a1a1a;
     }
-</section>
+</style>

@@ -773,6 +773,36 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
+          GameID = "cvssnk",
+          Name = "Capcom vs. SNK: Millennium Fight 2000",
+          Description = "Capcom vs. SNK: Millennium Fight 2000 is a crossover fighting game developed by Capcom.",
+          EngineID = "NAOMI",
+          Developer = "Capcom",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          Genre = Genre.Fighting,
+          PlayWith = new List<int> { 1, 2 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2000, Month = 8}
+          ]
+        },
+        new Game {
+          GameID = "cvssnk2",
+          Name = "Capcom vs. SNK 2: Mark of the Millennium 2001",
+          Description = "Capcom vs. SNK 2: Mark of the Millennium 2001 is a crossover fighting game developed by Capcom.",
+          EngineID = "NAOMI",
+          Developer = "Capcom",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          Genre = Genre.Fighting,
+          PlayWith = new List<int> { 1, 2 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2001, Month = 8}
+          ]
+        },
+        new Game {
           GameID = "chess",
           Name = "Chess",
           Description = "A classic board game available on various platforms.",
@@ -1506,6 +1536,28 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
+          GameID = "crazytaxi2",
+          Name = "Crazy Taxi 2",
+          Description = "Crazy Taxi 2 is a racing game developed by Sega.",
+          EngineID = "NAOMI",
+          PlayWith = new List<int> { 1 },
+          Genre = Genre.Racing,
+          ReleaseDates = [
+            new ReleaseDate{Year = 2002, Month = 2, ReleaseVersion = ReleaseVersion.Dreamcast, Region = Region.Worldwide},
+          ]
+        },
+        new Game {
+          GameID = "crazytaxi3",
+          Name = "Crazy Taxi 3: High Roller",
+          Description = "Crazy Taxi 3: High Roller is a racing game developed by Sega.",
+          EngineID = "Chihiro",
+          PlayWith = new List<int> { 1 },
+          Genre = Genre.Racing,
+          ReleaseDates = [
+            new ReleaseDate{Year = 2004, Month = 2, ReleaseVersion = ReleaseVersion.Dreamcast, Region = Region.Worldwide},
+          ]
+        },
+        new Game {
           GameID = "customtf",
           Name = "CustomTF",
           Description = "CustomTF allows for co-op and pub gameplay with customizable classes which you choose within a budget of money for equipment. CustomTF is played in a weekly pub game every Saturday at 7 pm EST on gamehost2.tastyspleen.net:27507",
@@ -2099,6 +2151,22 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
+          GameID = "fightingforce",
+          Name = "Fighting Force",
+          Description = "Fighting Force is a Third Person adventure game developed by Core Design on the Tomb Raider Engine and released for Windows and PlayStation 1, soon releasing on Steam.",
+          EngineID = "tombraider",
+          SteamID = 3504580,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = true,
+          Genre = Genre.Adventure,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 1997, Month = 11, Day = 5}
+          ]
+        },
+        new Game {
           GameID = "firearms",
           Name = "Firearms",
           ModForGameID = "halflife",
@@ -2543,6 +2611,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Hell Let Loose",
           Description = "A realistic World War II first-person shooter featuring large-scale battles.",
           Developer = "Black Matter",
+          EngineID = "unreal4",
           SteamID = 686810,
           IsFree = false,
           IsPaid = true,
@@ -2553,6 +2622,25 @@ namespace ASP_site.Data.Initializers {
           PlayWith = new List<int> { 0 },
           ReleaseDates = [
             new ReleaseDate{Year = 2021, Month = 7, Day = 27}
+          ]
+        },
+        new Game {
+          GameID = "hellletloosevietnam",
+          Name = "Hell Let Loose: Vietnam",
+          Description = "Hell Let Loose: Vietnam is an upcoming Vietnam War first-person shooter game.",
+          Developer = "Black Matter",
+          EngineID = "unreal5",
+          SteamID = 3079210,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = true,
+          IsCommunityMaintained = false,
+          IsPlayable = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2026 }
           ]
         },
         new Game {
@@ -2728,6 +2816,7 @@ namespace ASP_site.Data.Initializers {
           SteamID = 1087700,
           IsFree = false,
           IsPaid = false,
+          EngineID = "Chihiro",
           IsOpenSource = false,
           IsDeveloperMaintained = false,
           IsCommunityMaintained = false,
@@ -2952,9 +3041,9 @@ namespace ASP_site.Data.Initializers {
         new Game {
           GameID = "lambdafortress",
           Name = "Lambda Fortress",
-          Description = "A Source 2 engine mod that brings co-op gameplay to the Team Fortress universe.",
+          Description = "A Source engine mod that allows for co-op gameplay of Half-Life 2 with the mercenaries from Team Fortress 2.",
           ModForGameID = "tf2",
-          EngineID = "source2",
+          EngineID = "source",
           Developer = "CoaXioN",
           IsOpenSource = true,
           IsCommunityMaintained = true,
@@ -3087,6 +3176,21 @@ namespace ASP_site.Data.Initializers {
           PlayWith = new List<int> { 1, 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 2000, Month = 3, Day = 23}
+          ]
+        },
+        new Game {
+          GameID = "mvc3",
+          Name = "Marvel vs. Capcom 3: Fate of Two Worlds",
+          Description = "Marvel vs. Capcom 3: Fate of Two Worlds is a crossover fighting game developed by Capcom.",
+          EngineID = "MT-Framework",
+          Developer = "Capcom",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          Genre = Genre.Fighting,
+          PlayWith = new List<int> { 1, 2 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2011, Month = 2, Day = 15}
           ]
         },
         new Game {
@@ -3294,9 +3398,9 @@ namespace ASP_site.Data.Initializers {
         new Game {
           GameID = "medalofhonor2010",
           Name = "Medal of Honor (2010)",
-          Description = "Medal of Honor (2010) is a first-person shooter game set during World War II.",
+          Description = "Medal of Honor (2010) is a first-person shooter game set during World War II. Multiplayer was developed by DICE on Frostbite 1.5.",
           EngineID = "unreal3",
-          Developer = "DICE",
+          Developer = "EA Los Angeles",
           IsFree = false,
           SteamID = 47790,
           IsPaid = true,
@@ -3546,6 +3650,21 @@ namespace ASP_site.Data.Initializers {
             IconPath = "img/icons/hl2",
             GameDirectory = "orion"
           }
+        },
+        new Game {
+          GameID = "outlaws",
+          Name = "Outlaws",
+          Description = "Outlaws is a first-person shooter game developed by LucasArts set in the Wild West.",
+          EngineID = "jedi",
+          Developer = "LucasArts",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 1997, Month = 4, Day = 7}
+          ]
         },
         new Game {
           GameID = "pavlovvr",
@@ -4227,21 +4346,6 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "shogi",
-          Name = "Shogi",
-          Description = "Shogi is a type of Japense chess. It is played by two players on a board with 10x9 squares.",
-          IsFree = true,
-          IsPaid = false,
-          IsOpenSource = false,
-          IsDeveloperMaintained = false,
-          IsCommunityMaintained = true,
-          Genre = Genre.TBS,
-          PlayWith = new List<int> { 2 },
-          ReleaseDates = [
-            new ReleaseDate{Year = 1500}
-          ]
-        },
-        new Game {
           GameID = "situationoutbreak",
           Name = "Situation Outbreak",
           Description = "",
@@ -4424,6 +4528,72 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
+          GameID = "starwarsdarkforces",
+          Name = "Star Wars: Dark Forces",
+          Description = "Star Wars: Dark Forces is a first-person shooter game developed by LucasArts. A remaster was released by Aspyer in 2024.",
+          EngineID = "jedi",
+          Developer = "LucasArts",
+          SteamID = 32400,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = true,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 1995, Month = 3, Day = 8}
+          ]
+        },
+        new Game {
+          GameID = "starwarsjediknight",
+          Name = "Star Wars: Jedi Knight: Dark Forces II",
+          Description = "Star Wars: Jedi Knight: Dark Forces II is the sequel to Star Wars: Dark Forces.",
+          EngineID = "sith",
+          Developer = "LucasArts",
+          SteamID = 32380,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = true,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 1997, Month = 10, Day = 9, Region = Region.NA},
+            new ReleaseDate{Year = 1997, Month = 10, Day = 17, Region = Region.EU}
+          ]
+        },
+        new Game {
+          GameID = "starwarsjediknight2",
+          Name = "Star Wars: Jedi Knight 2: Jedi Outcast",
+          Description = "Star Wars: Jedi Knight 2: Jedi Outcast is the sequel to Star Wars: Jedi Knight.",
+          EngineID = "idtech3",
+          Developer = "LucasArts",
+          SteamID = 6030,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = true,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2002, Month = 3, Day = 28},
+          ]
+        },
+        new Game {
+          GameID = "starwarsjediknightacademy",
+          Name = "Star Wars: Jedi Knight: Jedi Academy",
+          Description = "Star Wars: Jedi Knight: Jedi Academy is the sequel to Star Wars: Jedi Knight 2: Jedi Outcast.",
+          EngineID = "Jedi",
+          Developer = "LucasArts",
+          SteamID = 6020,
+          IsFree = false,
+          IsPaid = true,
+          IsCommunityMaintained = true,
+          IsOpenSource = true,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2003, Month = 9, Day = 16}
+          ]
+        },
+        new Game {
           GameID = "sf2ww",
           Name = "Street Fighter 2: The World Warrior",
           Description = "Capcom's sequel to Street Fighter, this game launched the fighting game genre.",
@@ -4601,6 +4771,70 @@ namespace ASP_site.Data.Initializers {
           PlayWith = new List<int> { 1, 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 1999, Month = 5, Day = 12}
+          ]
+        },
+        new Game {
+          GameID = "sf4",
+          Name = "Street Fighter 4",
+          Description = "Street Fighter 4 is a fighting game developed by Capcom.",
+          EngineID = "MT-Framework",
+          Developer = "Capcom",
+          SteamID = 21660,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          Genre = Genre.Fighting,
+          PlayWith = new List<int> { 1, 2 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2009, Month = 2, Day = 12}
+          ]
+        },
+        new Game {
+          GameID = "usf4",
+          Name = "Ultra Street Fighter 4",
+          Description = "Ultra Street Fighter 4 is a fighting game developed by Capcom.",
+          EngineID = "MT-Framework",
+          Developer = "Capcom",
+          SteamID = 45760,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          Genre = Genre.Fighting,
+          PlayWith = new List<int> { 1, 2 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2014, Month = 8, Day = 7}
+          ]
+        },
+        new Game {
+          GameID = "sf5",
+          Name = "Street Fighter 5",
+          Description = "Street Fighter 5 is a fighting game developed by Capcom.",
+          EngineID = "unreal4",
+          Developer = "Capcom",
+          SteamID = 310950,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          Genre = Genre.Fighting,
+          PlayWith = new List<int> { 1, 2 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2016, Month = 2, Day = 12}
+          ]
+        },
+        new Game {
+          GameID = "sf6",
+          Name = "Street Fighter 6",
+          Description = "Street Fighter 6 is a fighting game developed by Capcom.",
+          EngineID = "RE-Engine",
+          Developer = "Capcom",
+          SteamID = 1364780,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          Genre = Genre.Fighting,
+          PlayWith = new List<int> { 1, 2 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2023, Month = 6, Day = 2}
           ]
         },
         new Game {
@@ -4875,6 +5109,118 @@ namespace ASP_site.Data.Initializers {
             GameDirectory = "tt",
             MasterServerKey = "GoldSource"
           }
+        },
+        new Game {
+          GameID = "tombraider",
+          Name = "Tomb Raider",
+          Description = "Tomb Raider is a third person platformer developed by Core Design. Originally released for the Sega Saturn and Playstation 1, it was remade in 2007 as 'Tomb Raider: Anniversary, remastered by Aspyer in 2024 as 'Tomb Raider I-III Remastered', and will be remade again in 2026 as 'Tomb Raider: Legacy of Atlantis'",
+          EngineID = "tombraider",
+          Developer = "Core Design",
+          IsFree = false,
+          IsPaid = true,
+          IsCommunityMaintained = true,
+          IsOpenSource = false,
+          Genre = Genre.Adventure,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 1996, Month = 11, Day = 14}
+          ]
+        },
+        new Game {
+          GameID = "tombraider2",
+          Name = "Tomb Raider 2",
+          Description = "Tomb Raider 2 is a third person platformer developed by Core Design. Remastered by Aspyer in 2024 as 'Tomb Raider I-III Remastered'.",
+          EngineID = "tombraider",
+          Developer = "Core Design",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          Genre = Genre.Adventure,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 1997, Month = 11, Day = 21, Region = Region.NA},
+            new ReleaseDate{Year = 1997, Month = 11, Day = 21, Region = Region.EU}
+          ]
+        },
+        new Game {
+          GameID = "tombraider3",
+          Name = "Tomb Raider 3",
+          Description = "Tomb Raider 3 is a third person platformer developed by Core Design. Remastered by Aspyer in 2024 as 'Tomb Raider I-III Remastered'.",
+          EngineID = "tombraider",
+          Developer = "Core Design",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          Genre = Genre.Adventure,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 1998, Month = 11, Day = 20, Region = Region.EU},
+            new ReleaseDate{Year = 1998, Month = 11, Day = 24, Region = Region.NA}
+          ]
+        },
+        new Game {
+          GameID = "tombraiderthelastrevelation",
+          Name = "Tomb Raider 4: The Last Revelation",
+          Description = "Tomb Raider 4: The Last Revelation is a third person platformer developed by Core Design. Remastered by Aspyer in 2025 as 'Tomb Raider IV-VI Remastered'.",
+          EngineID = "tombraider",
+          Developer = "Core Design",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          Genre = Genre.Adventure,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 1999, Month = 11, Day = 24, Region = Region.NA},
+            new ReleaseDate{Year = 1999, Month = 12, Day = 3, Region = Region.EU}
+          ]
+        },
+        new Game {
+          GameID = "tombraiderchronicles",
+          Name = "Tomb Raider 5: Chronicles",
+          Description = "Tomb Raider 5: Chronicles is a third person platformer developed by Core Design. Remastered by Aspyer in 2025 as 'Tomb Raider IV-VI Remastered'.",
+          EngineID = "tombraider",
+          Developer = "Core Design",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          Genre = Genre.Adventure,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2000, Month = 11, Day = 17, Region = Region.EU},
+            new ReleaseDate{Year = 2000, Month = 11, Day = 26, Region = Region.NA}
+          ]
+        },
+        new Game {
+          GameID = "tombraiderangelofdarkness",
+          Name = "Tomb Raider 6: Angel of Darkness",
+          Description = "Tomb Raider 6: Angel of Darkness is a third person platformer developed by Core Design. Remastered by Aspyer in 2025 as 'Tomb Raider IV-VI Remastered'.",
+          EngineID = "tombraider",
+          Developer = "Core Design",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          Genre = Genre.Adventure,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2003, Month = 6, Day = 26}
+          ]
+        },
+        new Game {
+          GameID = "tombraiderlegacyofatlantis",
+          Name = "Tomb Raider: Legacy of Atlantis",
+          Description = "Tomb Raider: Legacy of Atlantis is an upcoming third person platformer developed by Crystal Dynamics.",
+          EngineID = "unreal5",
+          Developer = "Crystal Dynamics",
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = true,
+          IsCommunityMaintained = false,
+          Genre = Genre.Adventure,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2026}
+          ]
         },
         new Game {
           GameID = "touhoucrisis",

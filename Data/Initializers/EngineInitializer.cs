@@ -240,6 +240,24 @@ namespace ASP_site.Data.Initializers {
           ParentID = "unreal4", Year = 2022
         }, 
         new Engine {
+          EngineID = "jedi",
+          Name = "Jedi Engine",
+          Description = "Jedi Engine is a game engine developed by LucasArts, similar to the Build Engine, first used in Star Wars: Dark Forces.",
+          Year = 1997
+        },
+        new Engine {
+          EngineID = "sith",
+          Name = "Sith Engine",
+          Description = "Sith Engine is a game engine developed by LucasArts, similar to the Quake Engine, first used in Star Wars: Jedi Knight 2: Jedi Outcast.",
+          ParentID = "jedi", Year = 2002
+        },
+        new Engine {
+          EngineID = "tombraider",
+          Name = "Tomb Raider Engine",
+          Description = "Tomb Raider Engine is a game engine developed by Core Design, first used in Tomb Raider and heavily upgraded for each of the sequels.",
+          ParentID = "", Year = 1996
+        },
+        new Engine {
           EngineID = "CPS-1",
           Name = "CPS-1",
           Description = "CPS-1 is an arcade system board developed by Capcom.",
@@ -262,6 +280,24 @@ namespace ASP_site.Data.Initializers {
           Name = "NAOMI",
           Description = "NAOMI is an arcade system board developed by SEGA based on the Dreamcast hardware.",
           ParentID = "CPS-3", Year = 1998
+        },
+        new Engine {
+          EngineID = "Chihiro",
+          Name = "Chihiro",
+          Description = "Chihiro is an arcade system board developed by SEGA based on the X-Box hardware.",
+          ParentID = "CPS-3", Year = 2000
+        },
+        new Engine {
+          EngineID = "MT-Framework",
+          Name = "MT-Framework",
+          Description = "MT-Framework is a game engine developed by Capcom, based on the Onimusha 3 engine, first used in 2006's Dead Rising, last used in 2018's Monster Hunter: World (and still used in some new other ports of previous tiles).",
+          ParentID = "", Year = 2006
+        },
+        new Engine {
+          EngineID = "RE-Engine",
+          Name = "RE-Engine",
+          Description = "RE-Engine is a game engine developed by Capcom, first used in 2017's Resident Evil 7: Biohazard.",
+          ParentID = "MT-Framework", Year = 2017
         }
       };
     }

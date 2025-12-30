@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -26,87 +26,97 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="~/lib/bootstrap-5.3.3-dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+  <link rel="stylesheet" href="~/css/chess.css" asp-append-version="true" />
 </head>
 <body>
-  <header>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm bg-dark border-bottom mb-3" data-bs-theme="dark">
-      <div class="container">
-        <a class="navbar-brand" asp-area="" asp-page="/Index">philchute.com</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse d-sm-inline-flex flex-sm-row-reverse" id="navbarColor02">
-          <ul class="navbar-nav me-auto">
-            <li class="nav-item">
-              <a class="nav-link @(ViewData["ActivePage"]?.ToString() == "Home" ? "active" : "")" asp-area="" asp-page="/Index">Home
-                <span class="visually-hidden">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMore" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Gaming
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMore">
-                <li><a class="dropdown-item @(ViewData["ActivePage"]?.ToString() == "CCGs" ? "active" : "")" asp-area="" asp-page="/CCGs/Index">CCGs</a></li>
-                <li><a class="dropdown-item @(ViewData["ActivePage"]?.ToString() == "Games" ? "active" : "")" asp-area="" asp-page="/Games/Index">Games</a></li>
-                <li><a class="dropdown-item @(ViewData["ActivePage"]?.ToString() == "Engines" ? "active" : "")" asp-area="" asp-page="/Engines/Index">Engines</a></li>
-                <li><a class="dropdown-item @(ViewData["ActivePage"]?.ToString() == "Maps" ? "active" : "")" asp-area="" asp-page="/Maps/Index">Maps</a></li>
-                <li><a class="dropdown-item @(ViewData["ActivePage"]?.ToString() == "Servers" ? "active" : "")" asp-area="" asp-page="/Servers/Index">Servers</a></li>
+  @using ASP_site.Services
+  @inject SiteMapService SiteMapService
+  @{
+      var root = SiteMapService.GetSiteMap();
+      var currentPath = ViewContext.HttpContext.Request.Path;
+      var hideLayout = ViewData["HideHeaderFooter"] as bool? ?? false;
+  }
+
+  @if (!hideLayout)
+  {
+      <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm bg-dark border-bottom mb-3" data-bs-theme="dark">
+          <div class="container">
+            <a class="navbar-brand" asp-area="" asp-page="/Index">philchute.com</a>
+            
+            <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ffa028" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="filter: drop-shadow(0 0 4px rgba(255, 160, 40, 0.5));">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </button>
+            
+            <div class="collapse navbar-collapse d-sm-inline-flex flex-sm-row-reverse" id="navbarColor02">
+              <ul class="navbar-nav me-auto">
+
+                @foreach (var node in root.Children)
+                {
+                    var isActive = false;
+                        // Simple active check for dropdown parent: if any child URL matches current path
+                    if (node.Children != null) {
+                        isActive = node.Children.Any(c => c.Url != null && (currentPath.HasValue && currentPath.StartsWithSegments(c.Url) || 
+                            (c.Id == "blog" && currentPath.HasValue && currentPath.Value.StartsWith("/Blog"))));
+                    }
+
+                    @if (node.Children != null && node.Children.Count > 0)
+                    {
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle @(isActive ? "active" : "")" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                @node.Label
+                            </a>
+                            <ul class="dropdown-menu">
+                                @foreach (var child in node.Children)
+                                {
+                                    var isChildActive = child.Url != null && (currentPath.StartsWithSegments(child.Url) || 
+                                        (child.Id == "blog" && currentPath.HasValue && currentPath.Value.StartsWith("/Blog")));
+                                    <li><a class="dropdown-item @(isChildActive ? "active" : "")" href="@child.Url">@child.Label</a></li>
+                                }
+                            </ul>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link @(node.Url != null && currentPath.StartsWithSegments(node.Url) ? "active" : "")" href="@node.Url">@node.Label</a>
+                        </li>
+                    }
+                }
               </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBooks" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Books
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownBooks">
-                <li><a class="dropdown-item @(ViewData["ActivePage"]?.ToString() == "Asimov" ? "active" : "")" asp-area="" asp-page="/Books/Asimov/Index">Isaac Asimov</a></li>
-                <li><a class="dropdown-item @(ViewData["ActivePage"]?.ToString() == "Chiang" ? "active" : "")" asp-area="" asp-page="/Books/Chiang/Index">Ted Chiang</a></li>
-                <li><a class="dropdown-item @(ViewData["ActivePage"]?.ToString() == "Clarke" ? "active" : "")" asp-area="" asp-page="/Books/Clarke/Index">Arthur C. Clarke</a></li>
-                <li><a class="dropdown-item @(ViewData["ActivePage"]?.ToString() == "Heinlein" ? "active" : "")" asp-area="" asp-page="/Books/Heinlein/Index">Robert A. Heinlein</a></li>
-              </ul> 
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMore" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Philosophy
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMore">
-                <li><a class="dropdown-item @(ViewData["ActivePage"]?.ToString() == "Main Page" ? "active" : "")" asp-area="" asp-page="/Philosophy/Index">Main Page</a></li>
-                <li><a class="dropdown-item @(ViewData["ActivePage"]?.ToString() == "Tractatus" ? "active" : "")" asp-area="" asp-page="/Tractatus/Index">Tractatus</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link @(ViewData["ActivePage"]?.ToString() == "Years" ? "active" : "")" asp-area="" asp-page="/Years/Index">Years</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link @(ViewData["ActivePage"]?.ToString() == "Links" ? "active" : "")" asp-area="" asp-page="/Links/Index">Links</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link @(ViewData["ActivePage"]?.ToString() == "Updates" ? "active" : "")" asp-area="" asp-page="/Updates/Index">Updates</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link @(ViewData["ActivePage"]?.ToString() == "About" ? "active" : "")" asp-area="" asp-page="/About/Index">About</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
+            </div>
+          </div>
+        </nav>
+      </header>
+  }
+
   <div class="container">
     <main role="main" class="pb-3">
       @RenderBody()
     </main>
   </div>
 
-  <footer class="border-top footer text-muted bg-dark" data-bs-theme="dark">
-    <div class="container">
-      &copy; 2025 - Philip Chute - <a class="link-secondary" asp-area="" asp-page="/About">About</a>
-    </div>
-  </footer>
+  @if (!hideLayout)
+  {
+      <footer class="border-top footer text-muted bg-dark" data-bs-theme="dark">
+        <div class="container">
+          &copy; 2025 - Philip Chute - <a class="link-secondary" asp-area="" asp-page="/About/Index">About</a>
+        </div>
+      </footer>
+  }
 
   <script src="~/lib/jquery/dist/jquery.min.js"></script>
   <script src="~/lib/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
-  <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/chess-animations.js" asp-append-version="true"></script>
+    
+    @if (ViewData["ActivePage"]?.ToString() != "Home")
+    {
+        <script src="~/js/background-stars.js" asp-append-version="true"></script>
+    }
 
-  @RenderSection("Scripts", required: false)
+    @RenderSection("Scripts", required: false)
 </body>
 </html>

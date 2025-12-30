@@ -14,5 +14,7 @@ namespace ASP_site.Models
         public string? GameID { get; set; } = "";
         public string? MapID { get; set; } = "";
         public string? BookTitle { get; set; } = "";
+        public string? ArmyID { get; set; } = "";
+        public string? VariantID { get; set; } = "";
     }
 } 

@@ -1,0 +1,205 @@
+@using ASP_site.Helpers
+@using ASP_site.Models.ViewModels
+@model ASP_site.Models.ViewModels.VariantBoardViewModel
+
+@{
+    var maxDim = Math.Max(Model.Width, Model.Height);
+    var unit = 100.0 / maxDim;
+    
+    // Centering offsets
+    var offsetX = (100.0 - (Model.Width * unit)) / 2.0;
+    var offsetY = (100.0 - (Model.Height * unit)) / 2.0;
+}
+
+<div class="variant-board-container">
+    <div class="variant-board" style="position: relative; padding-bottom: 100%;" id="variant-board-@GetHashCode()">
+        <svg viewBox="0 0 100 100" style="position: absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index: 10;">
+        <defs>
+            <marker id="arrowhead-move" markerWidth="3" markerHeight="3" refX="2" refY="1.5" orient="auto">
+                <path d="M0,0 L3,1.5 L0,3" style="fill: rgba(0, 255, 0, 0.8);" />
+            </marker>
+            <marker id="arrowhead-capture" markerWidth="3" markerHeight="3" refX="2" refY="1.5" orient="auto">
+                <path d="M0,0 L3,1.5 L0,3" style="fill: rgba(255, 0, 0, 0.8);" />
+            </marker>
+            <marker id="arrowhead-both" markerWidth="3" markerHeight="3" refX="2" refY="1.5" orient="auto">
+                <path d="M0,0 L3,1.5 L0,3" style="fill: rgba(100, 100, 100, 0.8);" />
+            </marker>
+        </defs>
+            
+            <!-- Trajectories (Hidden by default) -->
+            @foreach (var kvp in Model.Pieces)
+            {
+                var (r, f) = kvp.Key;
+                var pieceData = kvp.Value;
+                var groupId = $"moves-{r}-{f}";
+                
+                <g id="@groupId" style="display: none;">
+                    @foreach (var t in pieceData.Trajectories)
+                    {
+                        var color = "rgba(100,100,100,0.5)"; 
+                        var markerId = "arrowhead-both";
+                        
+                        if (t.IsMove && !t.IsCapture) { color = "rgba(0, 255, 0, 0.5)"; markerId = "arrowhead-move"; }
+                        else if (!t.IsMove && t.IsCapture) { color = "rgba(255, 0, 0, 0.5)"; markerId = "arrowhead-capture"; }
+
+                        // Start point
+                        var startX = offsetX + (t.StartFile * unit) + (unit / 2);
+                        var startY = offsetY + ((Model.Height - 1 - t.StartRank) * unit) + (unit / 2);
+                        
+                        var points = new List<string> { $"{startX},{startY}" };
+                        foreach(var p in t.Path)
+                        {
+                            var x = offsetX + (p.f * unit) + (unit / 2);
+                            var y = offsetY + ((Model.Height - 1 - p.r) * unit) + (unit / 2);
+                            points.Add($"{x},{y}");
+                        }
+                        
+                        // Curved Path Logic
+                        // Check if points are collinear (sliding move) or complex (polyline)
+                        // If all points lie on the same line, treat as single segment for curving
+                        
+                        // We can simplify the path to just Start -> End if it's collinear
+                        bool isCollinear = true;
+                        if (points.Count > 2)
+                        {
+                            var pStart = points[0].Split(',');
+                            var pEnd = points[points.Count - 1].Split(',');
+                            
+                            var sx = double.Parse(pStart[0]);
+                            var sy = double.Parse(pStart[1]);
+                            var ex = double.Parse(pEnd[0]);
+                            var ey = double.Parse(pEnd[1]);
+                            
+                            for(int i = 1; i < points.Count - 1; i++)
+                            {
+                                var pMid = points[i].Split(',');
+                                var mx = double.Parse(pMid[0]);
+                                var my = double.Parse(pMid[1]);
+                                
+                                // Check cross product of (End-Start) and (Mid-Start)
+                                var cross = (ex - sx) * (my - sy) - (ey - sy) * (mx - sx);
+                                if (Math.Abs(cross) > 0.01) // Small epsilon
+                                {
+                                    isCollinear = false;
+                                    break;
+                                }
+                            }
+                        }
+
+                        if (isCollinear && points.Count >= 2)
+                        {
+                            // Simple line (start->end) -> Quad Bezier
+                            var p1 = points[0].Split(',');
+                            var p2 = points[points.Count - 1].Split(','); // Use LAST point
+                            var x1 = double.Parse(p1[0]);
+                            var y1 = double.Parse(p1[1]);
+                            var x2 = double.Parse(p2[0]);
+                            var y2 = double.Parse(p2[1]);
+                            
+                            // Midpoint
+                            var midX = (x1 + x2) / 2;
+                            var midY = (y1 + y2) / 2;
+                            
+                            // Perpendicular offset
+                            var dx = x2 - x1;
+                            var dy = y2 - y1;
+                            var len = Math.Sqrt(dx*dx + dy*dy);
+                            
+                            var offset = 2.0; 
+                            
+                            // Direction: Perpendicular (-dy, dx)
+                            var perpX = -dy / (len > 0 ? len : 1);
+                            var perpY = dx / (len > 0 ? len : 1);
+                            
+                            var cpX = midX + perpX * offset;
+                            var cpY = midY + perpY * offset;
+                            
+                            var strokeDash = t.IsHopper ? "stroke-dasharray: 2,2;" : "";
+                            
+                            <path d="M @x1 @y1 Q @cpX @cpY @x2 @y2" style="fill:none; stroke:@color; stroke-width:1.0; marker-end:url(#@markerId); @strokeDash" />
+                        }
+                        else
+                        {
+                            var pointsStr = string.Join(" ", points);
+                            var strokeDash = t.IsHopper ? "stroke-dasharray: 2,2;" : "";
+                            <polyline points="@pointsStr" style="fill:none; stroke:@color; stroke-width:1.0; marker-end:url(#@markerId); @strokeDash" />
+                        }
+                    }
+                </g>
+            }
+            
+            <!-- Pieces -->
+            @foreach (var kvp in Model.Pieces)
+            {
+                var (r, f) = kvp.Key;
+                var pieceData = kvp.Value;
+                
+                var x = offsetX + (f * unit);
+                var y = offsetY + ((Model.Height - 1 - r) * unit);
+                var fontSize = unit * 0.75;
+                
+                // Color Logic based on explicit PieceColor
+                var isWhite = pieceData.Color == PieceColor.White;
+                var pieceColor = isWhite ? "white" : "black";
+                var strokeColor = isWhite ? "black" : "white";
+                
+                <foreignObject x="@x" y="@y" width="@unit" height="@unit" style="pointer-events: none;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; justify-content: center; align-items: center; width: 100%; height: 100%;">
+                        <span style="font-size: @(fontSize)px; font-weight: bold; 
+                                     color: @pieceColor; 
+                                     text-shadow: 0 0 2px @strokeColor, 0 0 2px @strokeColor;"
+                              class="chess-piece">
+                            @(pieceData.Symbol)
+                        </span>
+                    </div>
+                </foreignObject>
+            }
+        </svg>
+
+        <!-- Board Grid for Interaction -->
+        @for (int r = Model.Height - 1; r >= 0; r--)
+        {
+            for (int f = 0; f < Model.Width; f++)
+            {
+                var isLight = (r + f) % 2 != 0;
+                var fill = isLight ? "#f0d9b5" : "#b58863"; 
+                
+                if (Model.DeadZones.Contains((r, f))) 
+                {
+                    fill = "#333"; // Dead/Void
+                }
+                else if (Model.RiverZones.Contains((r, f))) 
+                {
+                    fill = "#87CEEB"; // River
+                }
+                
+                var isPromotion = Model.PromotionZones.Contains((r, f));
+                var promotionStyle = isPromotion ? "box-shadow: inset 0 0 5px orange;" : "";
+
+                var x = offsetX + (f * unit);
+                var y = offsetY + ((Model.Height - 1 - r) * unit);
+                
+                <div style="position: absolute; left: @(x)%; top: @(y)%; width: @(unit)%; height: @(unit)%; background-color: @fill; @promotionStyle"
+                     onmouseenter="document.getElementById('moves-@r-@f') ? document.getElementById('moves-@r-@f').style.display='block' : null"
+                     onmouseleave="document.getElementById('moves-@r-@f') ? document.getElementById('moves-@r-@f').style.display='none' : null">
+                </div>
+            }
+        }
+    </div>
+
+    <!-- Hand (Pieces in Hand / Captured) -->
+    @if(Model.HandPieces.Any())
+    {
+        <div class="hand-area mt-3 p-2 bg-light rounded border">
+            <h6 class="text-muted small text-center mb-2">Pieces in Hand / Reserves</h6>
+            <div class="d-flex justify-content-center flex-wrap gap-2">
+                @foreach(var piece in Model.HandPieces)
+                {
+                    <div class="text-center p-1 border rounded bg-white" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                        <span class="chess-piece" style="font-size: 24px; color: black;">@piece.Symbol</span>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+</div>

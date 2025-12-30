@@ -1,0 +1,141 @@
+@page
+@model ASP_site.Pages.Chess.ParserModel
+@using ASP_site.Helpers
+@{
+    ViewData["Title"] = "Betza Notation Parser";
+}
+
+<div class="container mt-4">
+    <div class="row mb-4">
+        <div class="col-12 text-center">
+            <h1 class="display-4">Betza Notation Parser</h1>
+            <p class="lead">Enter a Betza notation string to visualize the piece's moves and see matching pieces.</p>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mb-5">
+        <div class="col-md-8">
+            <form method="post" class="d-flex gap-2">
+                <input type="text" asp-for="Notation" class="form-control form-control-lg" placeholder="e.g. RB, fR, fmWfcF" />
+                <button type="submit" class="btn btn-primary btn-lg">Visualize</button>
+            </form>
+            
+            <div class="card mt-3">
+                <div class="card-header">
+                    <strong>Notation Reference</strong>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6>Atoms (Base Moves)</h6>
+                            <ul class="list-unstyled small">
+                                <li><code>W</code>: Wazir (1 step orthogonal)</li>
+                                <li><code>F</code>: Fers (1 step diagonal)</li>
+                                <li><code>D</code>: Dabbaba (2 step orthogonal jump)</li>
+                                <li><code>N</code>: Knight (2,1 jump)</li>
+                                <li><code>A</code>: Alfil (2 step diagonal jump)</li>
+                                <li><code>H</code>: Threeleaper (3 step orthogonal jump)</li>
+                                <li><code>C</code>: Camel (3,1 jump)</li>
+                                <li><code>Z</code>: Zebra (3,2 jump)</li>
+                                <li><code>G</code>: Tripper (3 step diagonal jump)</li>
+                                <li><code>O</code>: Fourleaper (4 step orthogonal jump)</li>
+                                <li><code>U</code>: Zurafa (4,1 jump)</li>
+                                <li><code>L</code>: Lancer (4,2 jump)</li>
+                                <li><code>T</code>: Antelope (4,3 jump)</li>
+                                <li><code>E</code>: Pademelon (4 step diagonal jump)</li>
+                                <li><code>V</code>: Fiveleaper (5 step orthogonal jump)</li>
+                                <li><code>I</code>: Ibis (5,1 jump)</li>
+                                <li><code>S</code>: Springbok (5,2 jump)</li>
+                                <li><code>Y</code>: Wallaby (5,3 jump)</li>
+                                <li><code>X</code>: Ibex (5,4 jump)</li>
+                                <li><code>J</code>: Bonobo (5 step diagonal jump)</li>
+
+                                <li><code>R</code>: Rook (W slider)</li>
+                                <li><code>B</code>: Bishop (F slider)</li>
+                                <li><code>K</code>: King (W+F)</li>
+                                <li><code>Q</code>: Queen (R+B)</li>
+                                <li>Repeated Atoms: <code>WW</code> = Wazir Rider (Rook). <code>NN</code> = Nightrider.</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h6>Modifiers</h6>
+                            <ul class="list-unstyled small">
+                                <li><code>f, b, r, l</code>: Forward, Backward, Right, Left</li>
+                                <li><code>ff, bb, rr, ll</code>: Steep (only the moves most in that direction)</li>
+                                <li><code>v, s</code>: Vertical, Sideways (only the moves most in that direction)</li>
+                                <li><code>i</code>: Initial (first move)</li>
+                                <li><code>m</code>: Move only</li>
+                                <li><code>c</code>: Capture only</li>
+                                <li><code>e</code>: En Passant</li>
+                                <li><code>n</code>: Lame (cannot jump)</li>
+                                <li><code>j</code>: Jump (leapers) or Skip first square (sliders)</li>
+                                <li><code>p</code>: Hopper (needs hurdle, Cannon-like)</li>
+                                <li><code>g</code>: Grasshopper (lands directly after hurdle)</li>
+                                <li><code>o</code>: Cylindrical (Wrap around)</li>
+                                <li><code>q</code>: Circular (Curve)</li>
+                                <li><code>z</code>: Crooked (Zigzag)</li>
+                                <li><code>x</code>: Explode (Capture all adjacent)</li>
+                                <li><code>w</code>: Power Transfer</li>
+                            </ul>
+                            <h6>Further Syntax</h6>
+                            <ul class="list-unstyled small">
+                                <li><code>(x,y)</code>: Coordinate jump (e.g. <code>(1,2)</code> is Knight). <code>(0,0)</code> for null move.</li>
+                                <li><code>[Tag]</code>: Attributes (e.g. <code>[Immune]K</code>, <code>[Power]R</code>)</li>
+                                <li><code>a</code>: Relative sequence (e.g. <code>FaR</code> is Fers then relative Rook)</li>
+                                <li><code>-</code>: Sequence (e.g. <code>N-W</code> is a Knight jump followed by a Wazir step)</li>
+                                <li><code>?</code>: Optional move (e.g. <code>W?</code>)</li>
+                            </ul>
+                            <p class="small text-muted mt-2">
+                                Combine modifiers before atoms (<code>mfWcfFimfnD</code>).  
+                                Numbers after atoms increase or limit range (<code>W4 = R4</code>).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    @if (!string.IsNullOrEmpty(Model.Notation))
+    {
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center">
+                @if (Model.MatchingPiece != null)
+                {
+                    <div class="alert alert-success mb-4 alert-match-found">
+                        <strong>Match Found!</strong> This notation matches the 
+                        <a asp-page="/Chess/Piece" asp-route-PieceID="@Model.MatchingPiece.PieceID" class="alert-link">@Model.MatchingPiece.DisplayName (@Model.MatchingPiece.PieceID)</a> 
+                        (@Model.MatchingPiece.Symbol).
+                    </div>
+                }
+                else
+                {
+                    <div class="alert alert-info mb-4">
+                        No standard piece found with exactly this notation.
+                    </div>
+                }
+
+                <div class="d-flex justify-content-center">
+                    @{
+                        var viewModel = new ASP_site.Models.ViewModels.ChessBoardViewModel
+                        {
+                            Trajectories = Model.Trajectories,
+                            CenterPieceSymbol = "X",
+                            CenterPieceNotation = Model.Notation ?? ""
+                        };
+                    }
+                    <partial name="_ChessBoard" model="viewModel" />
+                </div>
+                
+                <div class="mt-4">
+                    @{
+                        var legendVm = ASP_site.Models.ViewModels.LegendViewModel.FromMoves(Model.Trajectories);
+                    }
+                    <partial name="_MoveLegend" model="legendVm" />
+                </div>
+
+            </div>
+        </div>
+    }
+</div>

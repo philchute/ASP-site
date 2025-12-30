@@ -5,36 +5,51 @@
   ViewData["Title"] = "Engines List";
 }
 
-<div class="jumbotron p-2 d-flex justify-content-between">
+<div class="jumbotron p-2 d-flex justify-content-between align-items-end mb-4">
   <h2 class="mr-auto display-3">Engines List</h2>
-  <form class="d-flex">
-    <div class="form-group ps-2">
-    <label class="col-form-label" asp-for="SearchString" class="control-label">Name:</label>
-    <input class="form-control" type="text" asp-for="SearchString" />
-    <input class="form-control" type="submit" value="Search" class="btn btn-primary btn-sm mr-auto" />
+  <form class="d-flex align-items-end flex-wrap gap-2">
+    <div class="form-group flex-grow-1">
+        <label class="form-label" for="SortField">Sort:</label>
+        <select class="form-control" asp-for="SortField" onchange="this.form.submit();">
+          <option value="Year">Year</option>
+          <option value="Name">Name</option>
+        </select>
     </div>
-    <div class="form-group ps-2">
-    <label class="col-form-label" asp-for="SortField" class="control-label">Sort by:</label>
-    <select class="form-control" asp-for="SortField" onchange="this.form.submit();">
-      <option value="Year">Year</option>
-      <option value="Name">Name</option>
-    </select>
+    <div class="form-group flex-grow-1">
+        <label class="form-label" for="SearchString">Search:</label>
+        <div class="d-flex">
+            <input id="SearchString" class="form-control" type="text" asp-for="SearchString" placeholder="Name..." />
+            <button class="btn btn-secondary ms-1" type="submit">Search</button>
+        </div>
     </div>
   </form>    
 </div>
 
-<section class="grid">
-  <div class="row bg-dark text-white fw-bold g-0">
-    <div class="p-1 col-sm-4 text-center">Year</div>
-    <div class="p-1 col-sm">Name</div>
-  </div>
+@if (Model.Engines != null)
+{
+    @* Flat List Mode (Search/Filter active) *@
+    <section class="grid">
+      <div class="row bg-dark text-white fw-bold g-0">
+        <div class="p-1 col-sm-4 text-center">Year</div>
+        <div class="p-1 col-sm">Name</div>
+      </div>
 
-  @if(Model.Engines != null) {
-    @foreach (Engine e in Model.Engines) {
-      <a class="row g-0 text-decoration-none text-reset border-bottom @Model.EngineClass(e)" asp-page="./Engine" asp-route-EngineID="@e.EngineID">
-        <div class="p-1 col-sm-4 text-center">@e.Year</div>
-        <div class="p-1 col-sm text-white">@e.Name</div>
-      </a>
-    }
-  }
-</section>
+      @foreach (Engine e in Model.Engines) {
+          <a class="row g-0 text-decoration-none text-reset border-bottom @Model.EngineClass(e) table-row-hover" asp-page="./Engine" asp-route-EngineID="@e.EngineID">
+            <div class="p-1 col-sm-4 text-center">@e.Year</div>
+            <div class="p-1 col-sm text-white">@e.Name</div>
+          </a>
+        }
+    </section>
+}
+else
+{
+    @* Tree View Mode *@
+    <div class="evolution-tree">
+        @foreach (var root in Model.Roots)
+        {
+            <partial name="_EngineNode" model="root" />
+        }
+    </div>
+}
+

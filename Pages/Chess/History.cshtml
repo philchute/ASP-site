@@ -1,0 +1,47 @@
+@page
+@model ASP_site.Pages.Chess.HistoryModel
+@{
+    ViewData["Title"] = "Chess History";
+}
+
+<div class="container">
+    <div class="text-center mb-5">
+        <h1 class="display-4">History of Chess Variants</h1>
+        <p class="lead">A timeline of chess variants and armies through the ages.</p>
+    </div>
+
+    <div class="timeline">
+        @foreach (var item in Model.Timeline)
+        {
+            <div class="row mb-4">
+                <div class="col-md-2 text-end">
+                    <h3 class="text-primary">@item.Year</h3>
+                </div>
+                <div class="col-md-10 border-start border-3 pb-4">
+                    <div class="card shadow-sm ms-3">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h4 class="card-title mb-1">
+                                    @if(item.IsArmy) {
+                                        <a asp-page="/Chess/Armies/Army" asp-route-ArmyID="@item.Id" class="text-decoration-none text-info">@item.Name</a>
+                                        <span class="badge bg-info text-white ms-2">Army</span>
+                                    } else {
+                                        <a asp-page="/Chess/Variants/Variant" asp-route-id="@item.Id" class="text-decoration-none text-primary">@item.Name</a>
+                                        <span class="badge bg-secondary text-white border ms-2">Variant</span>
+                                    }
+                                </h4>
+                                @if(!string.IsNullOrEmpty(item.Author)) {
+                                    <small class="text-muted">by @item.Author</small>
+                                }
+                            </div>
+                            @if(!string.IsNullOrEmpty(item.Description)) {
+                                <p class="card-text mt-2">@item.Description</p>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+

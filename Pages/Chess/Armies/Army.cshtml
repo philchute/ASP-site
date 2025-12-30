@@ -1,0 +1,175 @@
+@page "/Chess/Army/{ArmyID}"
+@model ASP_site.Pages.Chess.Armies.ArmyModel
+@using ASP_site.Models.Chess
+@using ASP_site.Models.ViewModels
+
+@{
+    ViewData["Title"] = Model.Variant.Name;
+    var piecesToShow = Model.Variant.Pieces.ToList();
+}
+
+<div class="container">
+    <div class="row mb-4">
+        <div class="col-12 text-center">
+            <h1 class="display-4">@Model.Variant.Name</h1>
+            <p class="lead mt-3">@Model.Variant.Description</p>
+        </div>
+    </div>
+    
+    <div class="row justify-content-center mb-5">
+        <div class="col-md-8 text-center">
+             <h3>Starting Position</h3>
+             <div class="d-inline-block p-3 bg-dark border border-secondary rounded shadow-sm">
+                @{
+                     // Convert Army placements to Interactive ViewModel
+                     var armyViewModel = new ArmyBoardViewModel();
+
+                     // Calculate Promotion Zones (Default to Rank 7 for White Army display)
+                     if (Model.Variant.PromotionRules == null || !Model.Variant.PromotionRules.Any())
+                     {
+                         for (int f = 0; f < 8; f++)
+                         {
+                             // Only showing one side, so only show promotion at the "end" (Rank 7)
+                             armyViewModel.PromotionZones.Add((7, f));
+                         }
+                     }
+                     else
+                     {
+                         foreach (var rule in Model.Variant.PromotionRules)
+                         {
+                             foreach (var z in rule.PromotionZones)
+                             {
+                                 armyViewModel.PromotionZones.Add((z.Rank, z.File));
+                             }
+                             foreach (var r in rule.PromotionRanks)
+                             {
+                                 if (r >= 0 && r < 8)
+                                 {
+                                     // Filter out Rank 0 (self-promotion?) if we are only showing White perspective
+                                     if (r == 0) continue; 
+                                     
+                                     for (int f = 0; f < 8; f++)
+                                     {
+                                         armyViewModel.PromotionZones.Add((r, f));
+                                     }
+                                 }
+                             }
+                         }
+                     }
+
+                     foreach(var placement in Model.Variant.Placements)
+                    {
+                        if (placement.Piece != null)
+                        {
+                            // Check if piece is in hand (Rank < 0)
+                            if (placement.Rank < 0)
+                            {
+                                armyViewModel.HandPieces.Add(new ArmyPieceData
+                                 {
+                                     Symbol = placement.Piece.Symbol ?? "?",
+                                     Name = placement.Piece.DisplayName,
+                                     Trajectories = new List<ASP_site.Helpers.MoveTrajectory>() // No moves for hand pieces
+                                 });
+                             }
+                             else
+                             {
+                                 // We need to parse moves for each piece from its specific location
+                                 var moves = ASP_site.Helpers.BetzaParser.Parse(placement.Piece.Notation ?? "");
+                                 var trajs = ASP_site.Helpers.BetzaParser.GetValidTrajectories(moves, placement.Rank, placement.File);
+                                 
+                                 armyViewModel.Pieces[(placement.Rank, placement.File)] = new ArmyPieceData
+                                 {
+                                     Symbol = placement.Piece.Symbol ?? "?",
+                                     Name = placement.Piece.DisplayName,
+                                     Trajectories = trajs
+                                 };
+                             }
+                         }
+                     }
+                 }
+                 <partial name="_InteractiveArmyBoard" model="armyViewModel" />
+             </div>
+             <p class="text-muted mt-2 small"><i class="bi bi-info-circle"></i> Hover over pieces to see their moves.</p>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <h3 class="text-center mb-4">Army Pieces</h3>
+            
+            @* Legend for the move boards - Moved above pieces list *@
+            <div class="row justify-content-center mb-4">
+                <div class="col-auto">
+                    @{
+                        var legendVm = ASP_site.Models.ViewModels.LegendViewModel.All();
+                    }
+                    <partial name="_MoveLegend" model="legendVm" />
+                </div>
+            </div>
+
+            <div class="d-flex flex-wrap justify-content-center gap-4">
+                @foreach (var piece in piecesToShow)
+                {
+                    <div class="mb-4">
+                        <div class="text-center mb-2">
+                            <a asp-page="/Chess/Piece" asp-route-PieceID="@piece.PieceID" class="text-decoration-none text-dark">
+                                <span class="fw-bold text-light">@(Model.Variant.Placements.FirstOrDefault(p => p.PieceId == piece.PieceID && !string.IsNullOrEmpty(p.Name))?.Name ?? piece.DisplayName)</span>
+                                <span class="text-muted small">(@piece.Symbol)</span>
+                            </a>
+                        </div>
+                        @{
+                            // Map to ViewModel for _ChessBoard
+                            var notation = piece.Notation ?? "";
+                            var moves = ASP_site.Helpers.BetzaParser.Parse(notation);
+                            // Standard preview centered at 3,4
+                            var trajs = ASP_site.Helpers.BetzaParser.GetValidTrajectories(moves, 3, 4);
+                            
+                            var viewModel = new ChessBoardViewModel
+                            {
+                                Trajectories = trajs,
+                                CenterPieceSymbol = piece.Symbol ?? "?",
+                                CenterPieceNotation = notation
+                            };
+                        }
+                        <partial name="_ChessBoard" model="viewModel" />
+                        
+                        @{
+                            var promo = Model.Variant.Placements.FirstOrDefault(p => p.PieceId == piece.PieceID)?.PromotesTo ?? piece.PromotesTo;
+                            if (!string.IsNullOrEmpty(promo))
+                            {
+                                <div class="small text-muted mt-2">
+                                    <i class="bi bi-arrow-up-circle"></i> Promotes to: 
+                                    @if(promo == "Any") { <span>Any</span> } else { <a asp-page="/Chess/Piece" asp-route-PieceID="@promo" class="text-decoration-none">@promo</a> }
+                                </div>
+                            }
+                        }
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    @if (Model.RelatedLinks != null && Model.RelatedLinks.Any())
+    {
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-8">
+                <h3 class="mb-3">Related Links</h3>
+                <div class="list-group">
+                    @foreach (var link in Model.RelatedLinks)
+                    {
+                         <a href="@link.Url" target="_blank" class="list-group-item list-group-item-action bg-dark border-secondary text-light">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1 text-primary">@link.Label</h5>
+                                <small class="text-muted">@link.LinkType</small>
+                            </div>
+                            @if (!string.IsNullOrEmpty(link.Description))
+                            {
+                                <p class="mb-1 text-light">@link.Description</p>
+                            }
+                        </a>
+                    }
+                </div>
+            </div>
+        </div>
+    }
+</div>

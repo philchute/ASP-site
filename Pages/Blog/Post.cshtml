@@ -1,0 +1,46 @@
+@page "/Blog/{slug}"
+@model ASP_site.Pages.Blog.PostModel
+@{
+    if (Model.Post != null)
+    {
+        ViewData["Title"] = Model.Post.Title;
+    }
+    else
+    {
+        ViewData["Title"] = "Blog Post";
+    }
+    ViewData["ActivePage"] = "Blog";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+
+            @if (Model.Post != null)
+            {
+                <article>
+                    <header class="mb-4">
+                        <h1 class="mb-1">@Model.Post.Title</h1>
+                        <div class="text-muted fst-italic mb-2">Posted on @Model.Post.Date.ToString("MMMM dd, yyyy")</div>
+                    </header>
+                    <section class="mb-5 blog-content markdown-content">
+                        @Html.Raw(Model.HtmlContent)
+                    </section>
+                    
+                    <div class="border-top pt-3 mt-5">
+                         <a asp-page="./Index" class="btn">&larr; Back to Blog</a>
+                    </div>
+                </article>
+            }
+            else
+            {
+                <div class="alert alert-danger">Post not found.</div>
+            }
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+
+}
+

@@ -22,6 +22,10 @@
     <Content Remove="external\**" />
     <EmbeddedResource Remove="external\**" />
     <None Remove="external\**" />
+    <Compile Remove="Tests\**" />
+    <Content Remove="Tests\**" />
+    <EmbeddedResource Remove="Tests\**" />
+    <None Remove="Tests\**" />
   </ItemGroup>
 
   <ItemGroup>

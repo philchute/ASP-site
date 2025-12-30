@@ -985,6 +985,7 @@ Star Trek CCG was an early CCG which was published by [Decipher](http://www.deci
 A [Player's Committee](https://www.trekcc.org/) formed to continue the game and has been releasing new sets since then. 
 
 Recent First Edition Expansions:
+
 | Name                               | Date              |
 |------------------------------------|-------------------|
 | Nemesis                            | February 10, 2023 |
@@ -997,6 +998,7 @@ Recent First Edition Expansions:
 | All Good Things Remastered         | December 5, 2025  |
 
 Recent Second Edition Expansions:
+
 | Set | Name                          | Date              |
 |-----|-------------------------------|-------------------|
 | 61  | Second Chances                | June 9, 2023      |
@@ -1208,8 +1210,8 @@ The following games are no longer in print, and are just here for reference.
 | Bionicle: Quest for the Masks     | 2001  | Upper Deck                 | Not in print |
 | Bleach Soul Card Battle           | 2004  | Bandai                     | Not in print |
 | Bleach Trading Card Game          | 2007  | Score Entertainment        | Not in print |
-| Blood Wars                        | 1995  | TSR                        | [Based on DnD, out of print after a few sets](https://en.wikipedia.org/wiki/Blood_Wars_(card_game)) |
-| Blue Moon Expandable Card Game    | 2000  | Kosmos, Fantasy Flight Games | [Designed by Reiner Knizia](https://en.wikipedia.org/wiki/Blue_Moon_(game)) |
+| Blood Wars                        | 1995  | TSR                        | [Based on DnD, out of print after a few sets](https://en.wikipedia.org/wiki/Blood_Wars_%28card_game%29) |
+| Blue Moon Expandable Card Game    | 2000  | Kosmos, Fantasy Flight Games | [Designed by Reiner Knizia](https://en.wikipedia.org/wiki/Blue_Moon_%28game%29) |
 | Bratz Fashion Party Fever Game    | 2004  | Upper Deck                 | Not in print |
 | Buffy the Vampire Slayer CCG      | 2001  | Score Entertainment        | Not in print |
 | Bumblings - The funtasy card game | 2014  | Gernilex Bt.               | Not in print |
@@ -1265,7 +1267,7 @@ The following games are no longer in print, and are just here for reference.
 | The Dragon's Wrath                  | 1995  | Naipes Heraclio Fournier    | Not in print |
 | Draim Arena                         | 2007  | Draim                       | Not in print |
 | Dredd: The Card Game                | 2000  | Round Table Productions     | Not in print |
-| Dune (Eye of the Storm)             | 1997  | Last Unicorn/Five Rings/WotC | [Cancelled in 1998](https://en.wikipedia.org/wiki/Dune_(card_game)) |
+| Dune (Eye of the Storm)             | 1997  | Last Unicorn/Five Rings/WotC | [Cancelled in 1998](https://en.wikipedia.org/wiki/Dune_%28card_game%29) |
 | Eagles                              | 1995  | Columbia Games              | Not in print |
 | Echelons of Fire                    | 1995  | Medallion Simulations       | Not in print |
 | Echelons of Fury                    | 1995  | Medallion Simulations       | Not in print |
@@ -1292,7 +1294,7 @@ The following games are no longer in print, and are just here for reference.
 | Future Card Buddyfight             | 2013  | Bushiroad                     | Not in print |
 | G.I. Joe Trading Card Game         | 2004  | Wizards of the Coast          | Not in print |
 | Galactic Empires                   | 1994  | Companion Games               | Not in print |
-| A Game of Thrones                  | 2002  | Fantasy Flight Games          | [Converted to LCG in 2008, 2nd Edition in 2015, stopped in 2020](https://en.wikipedia.org/wiki/A_Game_of_Thrones_(card_game)) |
+| A Game of Thrones                  | 2002  | Fantasy Flight Games          | [Converted to LCG in 2008, 2nd Edition in 2015, stopped in 2020](https://en.wikipedia.org/wiki/A_Game_of_Thrones_%28card_game%29) |
 | The Garbage Gang                   | 2008  | Topps                      | Not in print |
 | Gasaraki Mission Director          | 1999  | Bandai                     | Not in print |
 | Geek Fight!                        | 2008  | Diving Dragon Games        | In print, no new sets |
@@ -1313,7 +1315,7 @@ The following games are no longer in print, and are just here for reference.
 | High Stakes Drifter                 | 2005  | WizKids                   | Not in print |
 | Highlander: The Card Game           | 1995  | Thunder Castle Games      | Not in print |
 | Highlander: The Card Game 2E        | 2006  | Rapidpod                  | Not in print |
-| Horus Heresy                        | 2003  | Sabertooth Games          | [Stopped in 2008](https://en.wikipedia.org/wiki/Horus_Heresy_(card_game)) |
+| Horus Heresy                        | 2003  | Sabertooth Games          | [Stopped in 2008](https://en.wikipedia.org/wiki/Horus_Heresy_%28card_game%29) |
 | Hot Wheels Acceleracers CCG         | 2005  | Mattel                    | Not in print |
 | Humaliens Collectible Card Game     | 2003  | AEG                       | Not in print |
 | HumanKind                           | 2005  | SALO                      | Not in print |
@@ -1339,7 +1341,7 @@ The following games are no longer in print, and are just here for reference.
 | The Last Crusade                    | 1995  | Pinnacle Entertainment    | Not in print |
 | Leaf fight TCG                      | 1999  | Tea Ice Tokyo             | Not in print |
 | Legend of the Burning Sands         | 1998  | Wizards of the Coast      | [Unsuccessful spin-off of the Legend of the Five Rings CCG](https://en.wikipedia.org/wiki/Legend_of_the_Burning_Sands) |
-| Legend of the Five Rings CCG        | 1995  | Five Rings/WotC/AEG       | [Ended in 2015](https://en.wikipedia.org/wiki/Legend_of_the_Five_Rings_(collectible_card_game)) |
+| Legend of the Five Rings CCG        | 1995  | Five Rings/WotC/AEG       | [Ended in 2015](https://en.wikipedia.org/wiki/Legend_of_the_Five_Rings_%28collectible_card_game%29) |
 | Legend of the Five Rings: The Card Game | 2017 | Fantasy Flight Games   | [LCG sequel to the CCG, ended in 2021](https://en.wikipedia.org/wiki/Legend_of_the_Five_Rings:_The_Card_Game) |
 | Lego: Ninjago Spinjitzu Card Game    | 2016  | Blue Ocean Entertainment  | Not in print |
 | Level Neo                            | 2014  | Movic                     | Not in print |
@@ -1468,12 +1470,12 @@ The following games are no longer in print, and are just here for reference.
 | Wakfu Trading Card Game                | 2011  | Ankama Games/Upper Deck   | Not in print |
 | Warcards                               | 2005  | SC Patiart SRL            | Not in print |
 | Warcardz                               | 2008  | Warmoves Inc.             | Not in print |
-| WarCry (Warhammer Fantasy CCG)         | 2003  | Sabertooth Games          | [Stopped in 2007](https://en.wikipedia.org/wiki/WarCry_(game)) |
+| WarCry (Warhammer Fantasy CCG)         | 2003  | Sabertooth Games          | [Stopped in 2007](https://en.wikipedia.org/wiki/WarCry_%28game%29) |
 | Warhammer 40,000 CCG                   | 2001  | Sabertooth Games          | Not in print |
 | Warhammer 40,000: Conquest             | 2014  | Fantasy Flight Games  | [LCG stopped in 2017](https://en.wikipedia.org/wiki/Warhammer_40,000:_Conquest) |
 | Warhammer: Invasion                     | 2009 | Fantasy Flight Games  | [LCG stopped in 2013](https://en.wikipedia.org/wiki/Warhammer:_Invasion) |
 | Warhammer AoS: Champions                | 2018  | PlayFusion Limited/Games Workshop | Not in print |
-| Warlords                                | 1997  | Iron Crown Enterprises      | [Not in print](https://en.wikipedia.org/wiki/Warlords_(card_game) Based on WarLords III) |
+| Warlords                                | 1997  | Iron Crown Enterprises      | [Based on WarLords III](https://en.wikipedia.org/wiki/Warlords_%28card_game%29)  |
 | Wars of the Past                        | 2021  | Finople Games/Finople Games | Website down |
 | WARS Trading Card Game                  | 2004  | Decipher, Inc.              | Not in print |
 | WCW Nitro                               | 2000  | Wizards of the Coast        | Not in print |
@@ -1807,4 +1809,4 @@ ZU Tiles: Hime is a boxed CCG-like game created in 2020 by ZU Studios, LLC.
 
 ---
 
-[Return to top](#customizable-card-games-ccgs)
+[Return to top](#table-of-contents)

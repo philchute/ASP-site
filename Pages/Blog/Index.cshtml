@@ -1,0 +1,34 @@
+@page
+@model ASP_site.Pages.Blog.IndexModel
+@{
+    ViewData["Title"] = "Blog";
+}
+
+<div class="text-center">
+    <h1 class="display-4 font-orbitron">Phil's Blog</h1>
+    <p class="lead">Longer form thoughts and articles.</p>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        @if (Model.Posts.Any())
+        {
+            <div class="list-group">
+                @foreach (var post in Model.Posts)
+                {
+                    <a asp-page="./Post" asp-route-slug="@post.Slug" class="list-group-item list-group-item-action flex-column align-items-start bg-dark text-light border-secondary mb-3 rounded">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">@post.Title</h5>
+                            <small class="text-muted">@post.Date.ToString("MMMM dd, yyyy")</small>
+                        </div>
+                    </a>
+                }
+            </div>
+        }
+        else
+        {
+            <p class="text-center text-muted">No blog posts found.</p>
+        }
+    </div>
+</div>
+

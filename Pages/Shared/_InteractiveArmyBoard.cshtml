@@ -1,0 +1,197 @@
+@using ASP_site.Helpers
+@model ASP_site.Models.ViewModels.ArmyBoardViewModel
+
+<div class="chess-board large" style="position: relative;" id="army-board">
+    <!-- SVG Overlay for Paths and Pieces -->
+    <!-- We generate one group per piece, hidden by default -->
+    <svg viewBox="0 0 100 100" style="position: absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index: 10;">
+        <defs>
+            <marker id="arrowhead-move" markerWidth="3" markerHeight="3" refX="2" refY="1.5" orient="auto">
+                <path d="M0,0 L3,1.5 L0,3" style="fill: rgba(0, 255, 0, 0.8);" />
+            </marker>
+            <marker id="arrowhead-capture" markerWidth="3" markerHeight="3" refX="2" refY="1.5" orient="auto">
+                <path d="M0,0 L3,1.5 L0,3" style="fill: rgba(255, 0, 0, 0.8);" />
+            </marker>
+            <marker id="arrowhead-both" markerWidth="3" markerHeight="3" refX="2" refY="1.5" orient="auto">
+                <path d="M0,0 L3,1.5 L0,3" style="fill: rgba(100, 100, 100, 0.8);" />
+            </marker>
+        </defs>
+        
+        @foreach (var kvp in Model.Pieces)
+        {
+            var (r, f) = kvp.Key;
+            var pieceData = kvp.Value;
+            var groupId = $"moves-{r}-{f}";
+            
+            <g id="@groupId" style="display: none;">
+                @foreach (var t in pieceData.Trajectories)
+                {
+                    var color = "rgba(100,100,100,0.5)"; // default
+                    var markerId = "arrowhead-both";
+                    
+                    if (t.IsMove && !t.IsCapture) { color = "rgba(0, 255, 0, 0.5)"; markerId = "arrowhead-move"; }
+                    else if (!t.IsMove && t.IsCapture) { color = "rgba(255, 0, 0, 0.5)"; markerId = "arrowhead-capture"; }
+
+                    // Start point (Center of the piece's square)
+                    var startX = (f * 12.5) + 6.25;
+                    var startY = ((7 - r) * 12.5) + 6.25;
+                    
+                    var points = new List<string> { $"{startX},{startY}" };
+                    foreach(var p in t.Path)
+                    {
+                        var x = (p.f * 12.5) + 6.25;
+                        var y = ((7 - p.r) * 12.5) + 6.25;
+                        // For arrows, we can add a slight control point to curve them if they overlap?
+                        // Or just render a polyline.
+                        // Simple Quadratic Bezier: "M startX startY Q cpX cpY endX endY"
+                        
+                        // For a polyline path like Knight (1,2), it's straight.
+                        // Overlap happens if multiple pieces have same move.
+                        
+                        points.Add($"{x},{y}");
+                    }
+                    
+                    // To add curve:
+                    // If it's a simple start->end line (2 points), we can make it a quadratic curve.
+                    // Calculate a midpoint offset.
+                    
+                    if (points.Count == 2)
+                    {
+                        var p1 = points[0].Split(',');
+                        var p2 = points[1].Split(',');
+                        var x1 = double.Parse(p1[0]);
+                        var y1 = double.Parse(p1[1]);
+                        var x2 = double.Parse(p2[0]);
+                        var y2 = double.Parse(p2[1]);
+                        
+                        // Midpoint
+                        var midX = (x1 + x2) / 2;
+                        var midY = (y1 + y2) / 2;
+                        
+                        // Offset perpendicular to the line
+                        // Vector (dx, dy)
+                        var dx = x2 - x1;
+                        var dy = y2 - y1;
+                        
+                        // Perpendicular (-dy, dx)
+                        // Normalize?
+                        var len = Math.Sqrt(dx*dx + dy*dy);
+                        var perpX = -dy / len;
+                        var perpY = dx / len;
+                        
+                        // Small offset based on length? Or fixed?
+                        var offset = 2.0; // 2 units offset
+                        var cpX = midX + perpX * offset;
+                        var cpY = midY + perpY * offset;
+                        
+                        var strokeDash = "";
+                        if (t.IsHopper) strokeDash = "stroke-dasharray: 2,2;";
+                        
+                        <path d="M @x1 @y1 Q @cpX @cpY @x2 @y2" style="fill:none; stroke:@color; stroke-width:1.5; marker-end:url(#@markerId); @strokeDash" />
+                    }
+                    else
+                    {
+                        // Complex path, keep polyline
+                        var pointsStr = string.Join(" ", points);
+                        var strokeDash = "";
+                        if (t.IsHopper) strokeDash = "stroke-dasharray: 2,2;";
+                        
+                        <polyline points="@pointsStr" style="fill:none; stroke:@color; stroke-width:1.5; marker-end:url(#@markerId); @strokeDash" />
+                    }
+                }
+            </g>
+        }
+
+        <!-- Render pieces in SVG to stay on top of arrows -->
+        @foreach (var kvp in Model.Pieces)
+        {
+            var (r, f) = kvp.Key;
+            var pieceData = kvp.Value;
+            var pX = (f * 12.5);
+            var pY = ((7 - r) * 12.5);
+            
+            <foreignObject x="@pX" y="@pY" width="12.5" height="12.5">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; justify-content: center; align-items: center; width: 100%; height: 100%;">
+                    @if (!string.IsNullOrEmpty(pieceData.ImagePath))
+                    {
+                         <img src="@pieceData.ImagePath" style="width: 80%; height: 80%;" />
+                    }
+                    else
+                    {
+                        <span class="chess-piece piece-text piece-white" style="font-size: 8px;">@pieceData.Symbol</span>
+                    }
+                </div>
+            </foreignObject>
+        }
+        
+        <!-- Render Black pieces (Opponents) -->
+        @foreach (var kvp in Model.BlackPieces)
+        {
+            var (r, f) = kvp.Key;
+            var pieceData = kvp.Value;
+            var pX = (f * 12.5);
+            var pY = ((7 - r) * 12.5);
+            
+            <foreignObject x="@pX" y="@pY" width="12.5" height="12.5">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; justify-content: center; align-items: center; width: 100%; height: 100%;">
+                    @if (!string.IsNullOrEmpty(pieceData.ImagePath))
+                    {
+                         <img src="@pieceData.ImagePath" style="width: 80%; height: 80%;" />
+                    }
+                    else
+                    {
+                        <span class="chess-piece piece-text piece-black" style="font-size: 8px;">@pieceData.Symbol</span>
+                    }
+                </div>
+            </foreignObject>
+        }
+    </svg>
+
+    @for (int rank = 7; rank >= 0; rank--)
+    {
+        <div class="rank">
+            @for (int file = 0; file < 8; file++)
+            {
+                var isLight = (rank + file) % 2 != 0;
+                var squareClass = isLight ? "light" : "dark";
+                
+                var isPromotion = Model.PromotionZones.Contains((rank, file));
+                var promotionStyle = isPromotion ? "box-shadow: inset 0 0 5px orange;" : "";
+
+                <div class="square @squareClass" style="@promotionStyle"
+                     onmouseenter="showMoves(@rank, @file)" 
+                     onmouseleave="hideMoves(@rank, @file)">
+                     
+                     <!-- Piece removed from here, now in SVG -->
+                </div>
+            }
+        </div>
+    }
+</div>
+
+<!-- Hand (Pieces in Hand / Captured) -->
+@if(Model.HandPieces.Any())
+{
+    <div class="hand-area mt-3 p-2 bg-light rounded border">
+        <h6 class="text-muted small text-center mb-2">Pieces in Hand / Reserves</h6>
+        <div class="d-flex justify-content-center flex-wrap gap-2">
+            @foreach(var piece in Model.HandPieces)
+            {
+                <div class="text-center p-1 border rounded bg-white" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                    <span class="chess-piece" style="font-size: 24px; color: black;">@piece.Symbol</span>
+                </div>
+            }
+        </div>
+    </div>
+}
+
+<script>
+    function showMoves(r, f) {
+        var el = document.getElementById('moves-' + r + '-' + f);
+        if (el) el.style.display = 'block';
+    }
+    function hideMoves(r, f) {
+        var el = document.getElementById('moves-' + r + '-' + f);
+        if (el) el.style.display = 'none';
+    }
+</script>

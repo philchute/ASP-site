@@ -35,19 +35,34 @@ namespace ASP_site.Pages.Links
         [BindProperty(SupportsGet = true)] public string? SearchString { get; set; }
         [BindProperty(SupportsGet = true)] public string? SelectedTopic { get; set; }
         [BindProperty(SupportsGet = true)] public string? SelectedLinkType { get; set; }
+        [BindProperty(SupportsGet = true)] public bool ShowWikiLinks { get; set; }
+        [BindProperty(SupportsGet = true)] public bool ShowStoreLinks { get; set; }
+        [BindProperty(SupportsGet = true)] public bool ShowSteamDBLinks { get; set; }
         [BindProperty(SupportsGet = true)] public string SortField { get; set; } = "Topic";
 
         public async Task OnGetAsync()
         {
             ViewData["ActivePage"] = "Links";
 
-            // 1. Base query for "interesting" links (filtering out boring types)
-            var interestingLinksQuery = _context.Links
-                .Where(l => l.LinkType != LinkType.Wiki && l.LinkType != LinkType.Store && l.LinkType != LinkType.SteamDB);
+            // 1. Base query for links
+            IQueryable<Link> interestingLinksQuery = _context.Links;
+
+            if (!ShowWikiLinks)
+            {
+                interestingLinksQuery = interestingLinksQuery.Where(l => l.LinkType != LinkType.Wiki);
+            }
+            if (!ShowStoreLinks)
+            {
+                interestingLinksQuery = interestingLinksQuery.Where(l => l.LinkType != LinkType.Store);
+            }
+            if (!ShowSteamDBLinks)
+            {
+                interestingLinksQuery = interestingLinksQuery.Where(l => l.LinkType != LinkType.SteamDB);
+            }
 
             // 2. Get all distinct topic identifiers from the links in one query
             var activeLinkTopics = await interestingLinksQuery
-                .Select(l => new { l.GameID, l.BookTitle })
+                .Select(l => new { l.GameID, l.BookTitle, l.ArmyID, l.VariantID })
                 .Distinct()
                 .ToListAsync();
 
@@ -60,6 +75,12 @@ namespace ASP_site.Pages.Links
                 .Where(l => !string.IsNullOrEmpty(l.BookTitle))
                 .Select(l => l.BookTitle)
                 .Distinct();
+            
+            // Consolidate ArmyID and VariantID into one list of Variant IDs
+            var activeVariantIds = activeLinkTopics
+                .SelectMany(l => new[] { l.ArmyID, l.VariantID })
+                .Where(id => !string.IsNullOrEmpty(id))
+                .Distinct();
 
             // 3. Look up Game Names (since we only have IDs)
             var gameTopics = await _context.Games
@@ -70,18 +91,27 @@ namespace ASP_site.Pages.Links
             // 4. Create Book items directly (Title is both ID and Text)
             var bookTopics = activeBookTitles
                                          .Select(t => new SelectListItem { Value = t, Text = t });
+            
+            // 5. Look up Variant Names (includes Armies)
+            var variantTopics = await _context.Variants
+                                          .Where(v => activeVariantIds.Contains(v.VariantID))
+                                          .Select(v => new SelectListItem { Value = v.VariantID, Text = v.Name })
+                                          .ToListAsync();
 
-            var allTopics = gameTopics.Concat(bookTopics).OrderBy(t => t.Text);
+            var allTopics = gameTopics.Concat(bookTopics).Concat(variantTopics).OrderBy(t => t.Text);
 
             Topics = new SelectList(allTopics, "Value", "Text");
 
-            // 4. Build the Link Types dropdown (excluding boring types)
+            // 4. Build the Link Types dropdown (excluding boring types unless shown)
             var linkTypesList = Enum.GetValues(typeof(LinkType))
                 .Cast<LinkType>()
-                .Where(lt => lt != LinkType.Wiki && lt != LinkType.Store && lt != LinkType.SteamDB)
+                .Where(lt => 
+                    (ShowWikiLinks || lt != LinkType.Wiki) && 
+                    (ShowStoreLinks || lt != LinkType.Store) && 
+                    (ShowSteamDBLinks || lt != LinkType.SteamDB))
                 .Select(lt => lt.ToString());
             LinkTypes = new SelectList(linkTypesList);
-
+            
             // 5. Initialize the main query for the page using the base interesting query
             var linksQuery = interestingLinksQuery;
 
@@ -91,12 +121,14 @@ namespace ASP_site.Pages.Links
                     (l.Label != null && l.Label.Contains(SearchString)) || 
                     (l.Description != null && l.Description.Contains(SearchString)) ||
                     (l.GameID != null && l.GameID.Contains(SearchString)) ||
-                    (l.BookTitle != null && l.BookTitle.Contains(SearchString)));
+                    (l.BookTitle != null && l.BookTitle.Contains(SearchString)) ||
+                    (l.ArmyID != null && l.ArmyID.Contains(SearchString)) ||
+                    (l.VariantID != null && l.VariantID.Contains(SearchString)));
             }
             
             if (!string.IsNullOrEmpty(SelectedTopic))
             {
-                linksQuery = linksQuery.Where(l => l.GameID == SelectedTopic || l.BookTitle == SelectedTopic);
+                linksQuery = linksQuery.Where(l => l.GameID == SelectedTopic || l.BookTitle == SelectedTopic || l.ArmyID == SelectedTopic || l.VariantID == SelectedTopic);
             }
             if (!string.IsNullOrEmpty(SelectedLinkType))
             {
@@ -106,11 +138,26 @@ namespace ASP_site.Pages.Links
             var links = await linksQuery.ToListAsync();
             
             var gamesDict = await _context.Games.ToDictionaryAsync(g => g.GameID, g => g.Name);
+            
+            var relevantVariantIds = links.SelectMany(l => new[] { l.ArmyID, l.VariantID })
+                                          .Where(id => !string.IsNullOrEmpty(id))
+                                          .Distinct()
+                                          .ToList();
+            
+            var variantsDict = await _context.Variants
+                                    .Where(v => relevantVariantIds.Contains(v.VariantID))
+                                    .ToDictionaryAsync(v => v.VariantID, v => v.Name);
 
             var displayLinks = links.Select(l => new LinkViewModel
             {
-                Topic = !string.IsNullOrEmpty(l.GameID) ? gamesDict.GetValueOrDefault(l.GameID, l.GameID) : l.BookTitle,
-                TopicUrl = !string.IsNullOrEmpty(l.GameID) ? $"/Games/Game?GameID={l.GameID}" : $"/Books/Book?BookTitle={l.BookTitle}",
+                Topic = !string.IsNullOrEmpty(l.GameID) ? gamesDict.GetValueOrDefault(l.GameID, l.GameID) : 
+                        !string.IsNullOrEmpty(l.VariantID) ? variantsDict.GetValueOrDefault(l.VariantID, l.VariantID) :
+                        !string.IsNullOrEmpty(l.ArmyID) ? variantsDict.GetValueOrDefault(l.ArmyID, l.ArmyID) :
+                        l.BookTitle,
+                TopicUrl = !string.IsNullOrEmpty(l.GameID) ? $"/Games/{l.GameID}" : 
+                           !string.IsNullOrEmpty(l.ArmyID) ? $"/Chess/Armies/Army/{l.ArmyID}" : 
+                           !string.IsNullOrEmpty(l.VariantID) ? $"/Chess/Variants/Variant/{l.VariantID}" :
+                           $"/Books/{l.BookTitle}",
                 LinkType = l.LinkType,
                 Url = l.Url,
                 Label = l.Label,

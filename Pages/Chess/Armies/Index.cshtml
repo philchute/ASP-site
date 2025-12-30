@@ -1,0 +1,83 @@
+@page
+@model ASP_site.Pages.Chess.Armies.IndexModel
+@{
+    ViewData["Title"] = "Chess Armies";
+}
+
+<div class="container mt-4">
+    <div class="row align-items-end mb-4">
+        <div class="col-md-8">
+             <h1 class="display-4">Alternative Chess Armies</h1>
+             <p>
+                Chess has many problems in the modern era, most notably the huge amount of opening theory required to 
+                play at a high level. Variations like Fischer Random Chess (Chess960) attempt to solve this by randomizing
+                the starting position, but this often creates lopsided starting positions with undefended pawns or useless pieces, 
+                which undermines the beauty and symetry of Chess. Allowing players to customize their army with different pieces creates 
+                balance issues, because pieces don't really have a value in a vacuum; Chess is balanced by the composition
+                of the entire army. Playing with alternative armies solves the problem of relying on opening theory while 
+                retaining the strategic nature of the opening and refocusing the game on tactics and counterplay.  
+                The largest sets of alternative armies come from Ralph Betza's work on 'Chess With Different Armies' and 
+                Daniel Lee's 'Empire Chess' series, but I am gathering here many more armies which are approximately balanced
+                with the standard chess army. Perhaps this list can grow and be refined for improved balance and playability.
+                This brings Chess to the modern era of gaming, where players can choose an army that suits their style of
+                play and become practiced with those pieces and the openings that their army is capable of.
+             </p>
+        </div>
+        <div class="col-md-4">
+             <form method="get">
+                <div class="form-group text-end">
+                    <label class="form-label" for="SearchString">Search:</label>
+                    <div class="d-flex justify-content-end">
+                        <input id="SearchString" type="text" name="SearchString" value="@Model.SearchString" class="form-control" placeholder="Search armies..." style="max-width: 300px;" />
+                        <button type="submit" class="btn btn-secondary ms-1">Search</button>
+                    </div>
+                </div>
+                @if (!string.IsNullOrEmpty(Model.SearchString))
+                {
+                    <div class="d-flex justify-content-end mt-2">
+                        <a asp-page="./Index" class="btn btn-outline-secondary btn-sm">Clear Filters</a>
+                    </div>
+                }
+            </form>
+        </div>
+    </div>
+    
+    <div class="table-responsive">
+        <table class="table table-hover table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th style="width: 25%">
+                        <a asp-page="./Index" asp-route-sortOrder="@Model.NameSort" class="text-white text-decoration-none">
+                            Name <i class="bi bi-arrow-down-up small"></i>
+                        </a>
+                        <span class="fw-normal fst-italic ms-2">(@Model.Armies.Count shown)</span>
+                    </th>
+                    <th style="width: 25%">
+                        <a asp-page="./Index" asp-route-sortOrder="@Model.AuthorSort" class="text-white text-decoration-none">
+                            Author <i class="bi bi-arrow-down-up small"></i>
+                        </a>
+                    </th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var army in Model.Armies)
+                {
+                    <tr>
+                        <td>
+                            <a asp-page="./Army" asp-route-ArmyID="@army.VariantID" class="fw-bold text-decoration-none">
+                                @Html.DisplayFor(modelItem => army.Name)
+                            </a>
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => army.Author)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => army.Description)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

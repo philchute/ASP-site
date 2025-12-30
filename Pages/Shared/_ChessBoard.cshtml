@@ -1,0 +1,130 @@
+@using ASP_site.Helpers
+@model ASP_site.Models.ViewModels.ChessBoardViewModel
+@{
+    var centerRank = 3;
+    var centerFile = 4;
+}
+
+<div class="chess-board large" style="position: relative;" data-animation-frames="@Model.AnimationFramesJson">
+    <!-- SVG Overlay for Paths and Pieces -->
+    <svg viewBox="0 0 100 100" style="position: absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index: 10;">
+        <defs>
+            <marker id="arrowhead-move" markerWidth="4" markerHeight="4" refX="3" refY="2" orient="auto">
+                <path d="M0,0 L4,2 L0,4" style="fill: rgba(0, 255, 0, 0.8);" />
+            </marker>
+            <marker id="arrowhead-capture" markerWidth="4" markerHeight="4" refX="3" refY="2" orient="auto">
+                <path d="M0,0 L4,2 L0,4" style="fill: rgba(255, 0, 0, 0.8);" />
+            </marker>
+            <marker id="arrowhead-both" markerWidth="4" markerHeight="4" refX="3" refY="2" orient="auto">
+                <path d="M0,0 L4,2 L0,4" style="fill: rgba(100, 100, 100, 0.8);" />
+            </marker>
+        </defs>
+        
+        <!-- Paths -->
+        @foreach (var t in Model.Trajectories)
+        {
+            var color = "rgba(100,100,100,0.5)"; // default
+            var markerId = "arrowhead-both";
+            
+            if (t.IsMove && !t.IsCapture) { color = "rgba(0, 255, 0, 0.5)"; markerId = "arrowhead-move"; }
+            else if (!t.IsMove && t.IsCapture) { color = "rgba(255, 0, 0, 0.5)"; markerId = "arrowhead-capture"; }
+
+            // Start point from trajectory or fallback
+            var startX = (t.StartFile * 12.5) + 6.25;
+            var startY = ((7 - t.StartRank) * 12.5) + 6.25;
+            
+            var points = new List<string> { $"{startX},{startY}" };
+            foreach(var p in t.Path)
+            {
+                var x = (p.f * 12.5) + 6.25;
+                var y = ((7 - p.r) * 12.5) + 6.25;
+                points.Add($"{x},{y}");
+            }
+            
+            var pointsStr = string.Join(" ", points);
+            
+            // Style for complex paths
+            var strokeDash = "";
+            if (t.IsHopper) strokeDash = "stroke-dasharray: 2,2;";
+            
+            <polyline points="@pointsStr" style="fill:none; stroke:@color; stroke-width:1.5; marker-end:url(#@markerId); @strokeDash" />
+        }
+        
+        <!-- Pieces on SVG -->
+        <!-- Center Piece -->
+        @{
+            var centerX = (centerFile * 12.5);
+            var centerY = ((7 - centerRank) * 12.5);
+            var centerColor = (!string.IsNullOrEmpty(Model.CenterPieceNotation) && Model.CenterPieceNotation.Contains("[Immune]")) ? "grey" : "white";
+        }
+        <foreignObject x="@centerX" y="@centerY" width="12.5" height="12.5">
+            <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; justify-content: center; align-items: center; width: 100%; height: 100%;">
+                <span class="chess-piece piece-text" style="color: @centerColor; font-size: 8px;">@Model.CenterPieceSymbol</span>
+            </div>
+        </foreignObject>
+
+        <!-- Extra Pieces -->
+        @foreach(var p in Model.Pieces)
+        {
+            var pX = (p.f * 12.5);
+            var pY = ((7 - p.r) * 12.5);
+            <foreignObject x="@pX" y="@pY" width="12.5" height="12.5">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; justify-content: center; align-items: center; width: 100%; height: 100%;">
+                    <span class="chess-piece piece-text" style="color: white; font-size: 8px; @p.style">@p.symbol</span>
+                </div>
+            </foreignObject>
+        }
+        
+        <!-- Hurdles -->
+        @foreach(var h in Model.Hurdles)
+        {
+            var hX = (h.f * 12.5);
+            var hY = ((7 - h.r) * 12.5);
+            <foreignObject x="@hX" y="@hY" width="12.5" height="12.5">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; justify-content: center; align-items: center; width: 100%; height: 100%;">
+                    <span class="chess-piece piece-text piece-black" style="opacity: 0.5; font-size: 8px;">p</span>
+                </div>
+            </foreignObject>
+        }
+    </svg>
+
+    @for (int rank = 7; rank >= 0; rank--)
+    {
+        <div class="rank">
+            @for (int file = 0; file < 8; file++)
+            {
+                var isLight = (rank + file) % 2 != 0;
+                var squareClass = isLight ? "light" : "dark";
+                var isCenter = rank == centerRank && file == centerFile;
+                
+                // Check if this square is a target
+                var move = Model.Trajectories.FirstOrDefault(m => m.TargetRank == rank && m.TargetFile == file);
+                var isTarget = move != null;
+                var isThreat = Model.Threats.Contains((rank, file));
+                
+                var markerStyle = "";
+                
+                if (move != null)
+                {
+                    if (move.IsMove && !move.IsCapture) markerStyle = "background-color: rgba(0, 255, 0, 0.3);";
+                    else if (!move.IsMove && move.IsCapture) markerStyle = "background-color: rgba(255, 0, 0, 0.3);";
+                    else markerStyle = "background-color: rgba(0, 0, 0, 0.2);";
+                    
+                    if (move.IsLame) markerStyle += " border: 2px dotted blue;";
+                    if (move.IsExplode) markerStyle += " border: 2px solid orange;";
+                    if (move.IsPowerTransfer) markerStyle += " border: 2px dashed purple;";
+                }
+
+                <div class="square @squareClass @(isTarget ? "target-square" : "")" style="@(isThreat ? "box-shadow: inset 0 0 10px red;" : "")">
+                    
+                    @if (isTarget && move != null)
+                    {
+                        <div class="move-marker" style="@markerStyle">
+                             @if (move.IsEnPassant) { <span style="font-size: 8px; color: teal; position: absolute; bottom: 0; right: 0;">ep</span> }
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+    }
+</div>

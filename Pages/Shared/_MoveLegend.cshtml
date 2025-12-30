@@ -1,0 +1,71 @@
+@model ASP_site.Models.ViewModels.LegendViewModel
+@{
+    var vm = Model ?? ASP_site.Models.ViewModels.LegendViewModel.All();
+}
+
+<div class="card bg-secondary text-white border-0 d-inline-block mt-3" style="max-width: 30rem;">
+    <div class="card-body py-2">
+        <div class="d-flex flex-wrap gap-3 justify-content-center">
+            @if (vm.ShowMoveOnly) {
+                <div class="d-flex align-items-center">
+                    <span class="d-inline-block rounded-circle me-2" style="width: 12px; height: 12px; background-color: rgba(0, 255, 0, 0.5);"></span>
+                    <small>Move Only</small>
+                </div>
+            }
+            @if (vm.ShowCaptureOnly) {
+                <div class="d-flex align-items-center">
+                    <span class="d-inline-block rounded-circle me-2" style="width: 12px; height: 12px; background-color: rgba(255, 0, 0, 0.5);"></span>
+                    <small>Capture Only</small>
+                </div>
+            }
+            @if (vm.ShowMoveAndCapture) {
+                <div class="d-flex align-items-center">
+                    <span class="d-inline-block rounded-circle me-2" style="width: 12px; height: 12px; background-color: rgba(0, 0, 0, 0.2);"></span>
+                    <small>Move & Capture</small>
+                </div>
+            }
+            @if (vm.ShowHopper) {
+                <div class="d-flex align-items-center">
+                    <span class="d-inline-block me-2" style="width: 12px; height: 12px; border: 2px dashed yellow;"></span>
+                    <small>Hopper (Hurdle)</small>
+                </div>
+            }
+            @if (vm.ShowLame) {
+                <div class="d-flex align-items-center">
+                    <span class="d-inline-block me-2" style="width: 12px; height: 12px; border: 2px dotted blue;"></span>
+                    <small>Lame (Leaper)</small>
+                </div>
+            }
+            @if (vm.ShowImmune) {
+                <div class="d-flex align-items-center">
+                    <span class="d-inline-block rounded-circle me-2" style="width: 12px; height: 12px; background-color: grey;"></span>
+                    <small>Immune</small>
+                </div>
+            }
+            @if (vm.ShowPromotion) {
+                <div class="d-flex align-items-center">
+                    <span class="d-inline-block me-2" style="width: 12px; height: 12px; background-color: #b58863; box-shadow: inset 0 0 5px orange;"></span>
+                    <small>Promotion Zone</small>
+                </div>
+            }
+            @if (vm.ShowExplode) {
+                <div class="d-flex align-items-center">
+                    <span class="d-inline-block me-2" style="width: 12px; height: 12px; border: 2px solid orange;"></span>
+                    <small>Explode (x)</small>
+                </div>
+            }
+            @if (vm.ShowPowerTransfer) {
+                <div class="d-flex align-items-center">
+                    <span class="d-inline-block me-2" style="width: 12px; height: 12px; border: 2px dashed purple;"></span>
+                    <small>Power Transfer (w)</small>
+                </div>
+            }
+            @if (vm.ShowEnPassant) {
+                <div class="d-flex align-items-center">
+                    <small class="me-2" style="font-weight: bold; color: teal;">ep</small>
+                    <small>En Passant (e)</small>
+                </div>
+            }
+        </div>
+    </div>
+</div>

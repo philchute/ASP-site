@@ -3,12 +3,13 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
+    ViewData["HideHeaderFooter"] = true; // Hide navigation and footer for splash page
     var version = DateTime.Now.Ticks; // Add cache-busting version
 }
 
 <div class="constellation-container">
     <div class="constellation-ui">
-        <h1 class="display-4">philchute.com</h1>
+        <h1 class="display-4 branding-text">philchute.com</h1>
         <p class="lead">Map of the territory</p>
     </div>
     <canvas id="constellation-canvas"></canvas>
@@ -17,4 +18,10 @@
 @section Scripts {
     <link rel="stylesheet" href="~/css/constellation.css?v=@version" />
     <script src="~/js/constellation.js?v=@version"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+             const siteData = @Html.Raw(Model.SiteMapJson);
+             new ConstellationNav('constellation-canvas', siteData);
+        });
+    </script>
 }

@@ -1,0 +1,113 @@
+@page "/Chess/Variant/{id}"
+@using ASP_site.Models.ViewModels
+@model ASP_site.Pages.Chess.Variants.VariantModel
+@{
+    ViewData["Title"] = Model.Variant.Name;
+}
+
+<div class="container">
+    <div class="row mb-4">
+        <div class="col-12 text-center">
+            <h1 class="display-4">@Model.Variant.Name</h1>
+            <p class="lead mt-3">@Model.Variant.Description</p>
+            <div class="small text-muted">Board Size: @Model.Variant.BoardWidth x @Model.Variant.BoardHeight</div>
+            <div class="small text-muted">Author: @Model.Variant.Author</div>
+            <div class="small text-muted">Year: @Model.Variant.Year</div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mb-5">
+        <div class="col-md-8 text-center">
+             <h3>Starting Position</h3>
+             <div class="d-inline-block p-3 bg-dark border border-secondary rounded shadow-sm" style="width: 100%; max-width: 600px;">
+                 <partial name="_InteractiveVariantBoard" model="Model.BoardViewModel" />
+             </div>
+             <p class="text-muted mt-2 small"><i class="bi bi-info-circle"></i> Hover over pieces to see their moves.</p>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <h3 class="text-center mb-4">Variant Pieces</h3>
+            
+            @* Legend for the move boards - Moved above piece list *@
+            <div class="row justify-content-center mb-4">
+                <div class="col-auto">
+                    @{
+                        var legendVm = ASP_site.Models.ViewModels.LegendViewModel.All();
+                    }
+                    <partial name="_MoveLegend" model="legendVm" />
+                </div>
+            </div>
+
+            <div class="d-flex flex-wrap justify-content-center gap-4">
+                @{
+                    var uniquePieces = Model.Variant.Placements
+                        .Where(p => p.Piece != null)
+                        .Select(p => p.Piece!)
+                        .DistinctBy(p => p.PieceID)
+                        .OrderBy(p => p.DisplayName);
+                }
+                @foreach(var piece in uniquePieces)
+                {
+                    <div class="mb-4">
+                        <div class="text-center mb-2">
+                            <a asp-page="/Chess/Piece" asp-route-PieceID="@piece.PieceID" class="text-decoration-none">
+                                <span class="fw-bold text-light">@(Model.Variant.Placements.FirstOrDefault(p => p.PieceId == piece.PieceID && !string.IsNullOrEmpty(p.Name))?.Name ?? piece.DisplayName)</span> 
+                                <span class="text-muted small">(@(string.IsNullOrEmpty(piece.Notation) ? piece.Symbol : piece.Notation))</span>
+                            </a>
+                        </div>
+                        @{
+                            var pieceNotation = piece.Notation ?? "";
+                            var moves = ASP_site.Helpers.BetzaParser.Parse(pieceNotation);
+                            var trajs = ASP_site.Helpers.BetzaParser.GetValidTrajectories(moves, 3, 4);
+                            
+                            var viewModel = new ChessBoardViewModel
+                            {
+                                Trajectories = trajs,
+                                CenterPieceSymbol = piece.Symbol ?? "?",
+                                CenterPieceNotation = pieceNotation
+                            };
+                        }
+                        <partial name="_ChessBoard" model="viewModel" />
+                        
+                        @{
+                            var promo = Model.Variant.Placements.FirstOrDefault(p => p.PieceId == piece.PieceID)?.PromotesTo ?? piece.PromotesTo;
+                            if (!string.IsNullOrEmpty(promo))
+                            {
+                                <div class="small text-muted mt-2">
+                                    <i class="bi bi-arrow-up-circle"></i> Promotes to: 
+                                    @if(promo == "Any") { <span>Any</span> } else { <a asp-page="/Chess/Piece" asp-route-PieceID="@promo" class="text-decoration-none">@promo</a> }
+                                </div>
+                            }
+                        }
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    
+     @if (Model.RelatedLinks != null && Model.RelatedLinks.Any())
+    {
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-8">
+                <h3 class="mb-3">Related Links</h3>
+                <div class="list-group">
+                    @foreach (var link in Model.RelatedLinks)
+                    {
+                         <a href="@link.Url" target="_blank" class="list-group-item list-group-item-action bg-dark border-secondary text-light">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1 text-primary">@link.Label</h5>
+                                <small class="text-muted">@link.LinkType</small>
+                            </div>
+                            @if (!string.IsNullOrEmpty(link.Description))
+                            {
+                                <p class="mb-1 text-light">@link.Description</p>
+                            }
+                        </a>
+                    }
+                </div>
+            </div>
+        </div>
+    }
+</div>

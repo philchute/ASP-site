@@ -1,0 +1,27 @@
+@model ASP_site.Models.Engine
+
+<div class="mb-2">
+    <div class="card shadow-sm node-card">
+        <div class="card-body p-2">
+            <h5 class="card-title h6 mb-1">
+                <a asp-page="./Engine" asp-route-EngineID="@Model.EngineID" class="text-decoration-none">@Model.Name</a>
+            </h5>
+            @if(Model.Year != null) {
+                <div class="text-muted small" style="font-size: 0.75em">@Model.Year</div>
+            }
+        </div>
+    </div>
+    
+    @if (Model.Children != null && Model.Children.Any())
+    {
+        <ul>
+            @foreach (var child in Model.Children)
+            {
+                <li>
+                    <partial name="_EngineNode" model="child" />
+                </li>
+            }
+        </ul>
+    }
+</div>
+

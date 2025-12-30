@@ -1,7 +1,9 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
-/* Base Styles */
+/* ==========================================================================
+   Base Styles & Layout
+   ========================================================================== */
 html {
   font-size: 14px;
   position: relative;
@@ -15,8 +17,9 @@ html {
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+  margin-bottom: 60px; /* Margin bottom by footer height */
+  background-color: #050505; /* Constellation Deep Black */
+  color: #c8c8c8; /* Soft grey text */
 }
 
 /* Layout */
@@ -26,27 +29,157 @@ body {
   width: 100%;
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
+  background-color: rgba(5, 5, 5, 0.85) !important; /* Semi-transparent black */
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(5px);
+  z-index: 1000;
 }
 
-/* Grid Section */
+/* ==========================================================================
+   Theme Overrides (Cyborg to Constellation)
+   ========================================================================== */
+
+/* Links & Primary Colors - Nebula Blue */
+a, .text-primary, .nav-link {
+    color: #648cff !important; /* rgb(100, 140, 255) */
+    transition: color 0.2s ease-in-out;
+}
+
+a:hover, .nav-link:hover {
+    color: #ffffff !important; /* Hot white on hover */
+    text-shadow: 0 0 8px rgba(100, 140, 255, 0.6);
+}
+
+.btn-primary {
+    background-color: #648cff;
+    border-color: #648cff;
+    color: #000;
+}
+
+.btn-primary:hover {
+    background-color: #8daeff;
+    border-color: #8daeff;
+    box-shadow: 0 0 10px rgba(100, 140, 255, 0.4);
+}
+
+/* Navbar - Clean, no ribbon look */
+.bg-dark {
+    background-color: rgba(5, 5, 5, 0.85) !important; /* Semi-transparent black */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important; /* Subtle border */
+    backdrop-filter: blur(5px); /* Nice blur effect */
+    z-index: 1030; /* Ensure navbar stays on top */
+}
+
+.navbar {
+    z-index: 1030;
+}
+
+.navbar-brand, .branding-text {
+    font-family: 'Orbitron', sans-serif;
+    color: #ffa028 !important; /* Constellation Orange/Gold for Home */
+    text-shadow: 0 0 5px rgba(255, 160, 40, 0.4);
+}
+
+/* Dropdowns */
+.dropdown-menu {
+    background-color: #0a0a0a !important; /* Solid dark background */
+    border: 1px solid #333;
+    z-index: 1050; /* Ensure dropdowns are above everything */
+}
+
+.dropdown-item {
+    color: #c8c8c8 !important;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    background-color: rgba(100, 140, 255, 0.15) !important; /* Slight blue tint on hover */
+    color: #ffffff !important;
+}
+
+/* Cards & Containers - Darker greys */
+.card, .list-group-item {
+    background-color: #0a0a0a;
+    border-color: #222;
+}
+
+.card-header {
+    background-color: #111;
+    border-bottom-color: #222;
+}
+
+/* Success - Muted Emerald */
+.text-success, .alert-success, .badge-success {
+    color: #2aa198 !important; /* Keeping the solar teal-ish green, it's nice */
+}
+.btn-success {
+    background-color: #2aa198;
+    border-color: #2aa198;
+}
+
+/* Info - Deep Space Violet */
+.text-info, .alert-info, .badge-info, .bg-info {
+    color: #bfa1ff !important; /* Lighter, more pastel violet for text */
+}
+
+.bg-info {
+    background-color: #6a4c93 !important; /* Deep refined violet background */
+    color: #fff !important;
+}
+
+.alert-info {
+    background-color: rgba(106, 76, 147, 0.2) !important;
+    border-color: #6a4c93;
+    color: #d0c0ff !important;
+}
+
+/* Alert Styles Overrides (Specific for Parser etc) */
+.alert-match-found {
+    background-color: rgba(42, 161, 152, 0.2);
+    border-color: #2aa198;
+    color: #bfa1ff !important;
+}
+
+.alert-match-found strong {
+    color: #2aa198;
+}
+
+.alert-match-found a.alert-link {
+    color: #648cff !important;
+}
+
+/* Forms */
+.form-check-input:checked {
+    background-color: #648cff; /* Match primary blue */
+    border-color: #648cff;
+}
+
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.25rem rgba(100, 140, 255, 0.25);
+    border-color: #8daeff;
+}
+
+/* ==========================================================================
+   Page Specific Styles
+   ========================================================================== */
+
+/* 1. Grid Lists (Engines, Games List) */
 section.grid a {
   text-decoration: none;
   cursor: pointer;
-  color: white;
+  color: white !important;
   transition: background-color 0.15s ease-in-out;
 }
 
 section.grid a:hover {
-  background-color: #4d5d6c;  /* Solar's default active background color */
-}
-
-/* Game List */
-.playable {
-  font-weight: bold;
+  background-color: #222; 
 }
 
 .games-list a {
-  padding: 0.25rem 0.5rem;  /* Add some padding */
+  padding: 0.25rem 0.5rem; 
+}
+
+.playable {
+  font-weight: bold;
 }
 
 .comp-icon,
@@ -56,34 +189,70 @@ section.grid a:hover {
   vertical-align: middle;
 }
 
-/* Styles for green checkboxes when checked */
-.form-check-input:checked {
-    background-color: #2aa198; /* Green color - General */
-    border-color: #2aa198;
+/* 2. Engines Page */
+.multi-column-list {
+  column-width: 250px;
+  column-gap: 1.5rem;
 }
 
-/* Make links white-ish with a hover effect */
-a,
-a:visited {
-  color: #f8f9fa; /* Bootstrap's light color */
-  text-decoration: none; /* Remove underline */
+.evolution-tree ul {
+    list-style-type: none;
+    padding-left: 20px;
+    margin-left: 10px;
+}
+.evolution-tree li {
+    margin-bottom: 5px;
+    position: relative;
+}
+.evolution-tree li::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 15px;
+    width: 1px;
+    height: 25px;
+    background-color: #ccc;
+}
+.evolution-tree li::after {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 15px;
+    width: 15px;
+    height: 1px;
+    background-color: #ccc;
+}
+.evolution-tree ul > li:not(:last-child)::before {
+    height: 100%;
+    top: 0;
+}
+.evolution-tree ul > li:first-child::before {
+     top: 0; 
+     height: 100%;
+}
+.evolution-tree ul > li:last-child::before {
+    height: 15px;
+    top: 0;
+}
+.node-card {
+    display: inline-block;
+    min-width: 250px;
 }
 
-a:hover {
-  color: #adb5bd; /* A dimmer grey for hover */
+/* 3. Chess Variants (Evolution Graph) */
+.evolution-graph-node {
+    min-width: 150px;
+    max-width: 200px;
+    z-index: 2;
+    border: 1px solid #333; /* Dark border */
+    background-color: #0a0a0a; /* Dark background */
+}
+.evolution-graph-node:hover {
+    border-color: #648cff; /* Nebula Blue hover */
+    z-index: 10; /* Bring to front */
 }
 
-/* Style links specifically within the main content area */
-main a, main a:visited {
-    color: #f8f9fa; /* Bootstrap 'light' color */
-    text-decoration: none; /* Remove underline */
-}
-
-main a:hover {
-    color: #adb5bd; /* A slightly darker grey for hover */
-}
-
-/* Updates Page Specific Styles */
+/* 4. Updates & Blog */
 .update-content img {
     max-width: 100%;
     height: auto;
@@ -93,41 +262,43 @@ main a:hover {
 }
 
 .update-tag-link {
-    color: #ced4da;
+    color: #888;
 }
 
 .update-tag-link:hover {
     text-decoration: underline;
+    color: #ccc;
 }
 
+/* 5. Tractatus */
 .tractatus-content {
     max-width: 800px;
     margin: 0 auto;
 }
 
-/* CCGs Page Table Styling for Dark Theme - Vertically Compressed */
+/* 6. Markdown Content (CCGs, Blog) */
 .markdown-content .table {
     border-collapse: collapse;
+    color: #ccc;
 }
 
 .markdown-content .table thead {
-    border-bottom: 1px solid #495057; /* Thinner header border */
+    border-bottom: 1px solid #333;
 }
 
 .markdown-content .table th,
 .markdown-content .table td {
     border-top: none;
-    border-bottom: none; /* Removed all row dividers */
-    padding: 0.1rem 0.75rem; /* Minimal vertical padding */
+    border-bottom: none;
+    padding: 0.1rem 0.75rem;
 }
 
-/* Responsive wrapper for tables */
 .table-responsive-wrapper {
     overflow-x: auto;
 }
 
-/* Multi-column list for Engine page */
-.multi-column-list {
-  column-width: 250px;
-  column-gap: 1.5rem;
+/* 7. Shared Table Utilities */
+.table-row-hover:hover {
+    background-color: #1a1a1a;
+    transition: background-color 0.15s ease-in-out;
 }

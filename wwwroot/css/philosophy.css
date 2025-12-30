@@ -2,12 +2,8 @@
     display: none;
 }
 
-body {
-    font-family: sans-serif;
-    margin: 0;
-    background-color: #002b36;
-    color: #839496;
-}
+/* Inherit global body styles from site.css, no need to re-declare body background/color unless overriding specifically */
+/* But tractatus container needs some specific styling */
 
 #tractatus-app-container {
     max-width: 1200px;
@@ -32,8 +28,8 @@ body {
 .language-config,
 .nav-bar,
 .content-pane {
-    background-color: #073642;
-    border: 1px solid #586e75;
+    background-color: #0a0a0a; /* Darker background to match site theme */
+    border: 1px solid #333;
     border-radius: .25rem;
 }
 
@@ -41,21 +37,21 @@ body {
 .content-pane h3 {
     margin-top: 0;
     margin-bottom: 1rem;
-    color: #2aa198;
+    color: #2aa198; /* Keep teal for headers, it works well */
     text-align: center;
     font-weight: bold;
 }
 
 .side-nav-button {
-    background-color: #eee8d5;
-    color: #002b36;
-    border: 1px solid #93a1a1;
+    background-color: #222; /* Dark button background */
+    color: #648cff; /* Nebula Blue text/arrows */
+    border: 1px solid #444;
     border-radius: .25rem;
     padding: .5rem .75rem; 
     font-size: 1.2em;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, color 0.15s ease-in-out;
     flex-shrink: 0; 
     display: flex;
     align-items: center;
@@ -63,21 +59,22 @@ body {
 }
 
 .side-nav-button:hover {
-    background-color: #fdf6e3;
-    border-color: #657b83;
+    background-color: #333;
+    border-color: #648cff;
+    color: #fff;
 }
 
 .side-nav-button:disabled {
-    background-color: #586e75;
-    color: #073642;
-    border-color: #586e75;
+    background-color: #111;
+    color: #444;
+    border-color: #222;
     cursor: not-allowed;
 }
 
 .language-config {
     margin-bottom: 20px;
     padding: 10px;
-    color: #93a1a1;
+    color: #c8c8c8;
     text-align: center;
     max-width: 800px;
     margin-left: auto;
@@ -87,7 +84,7 @@ body {
 
 .language-config strong {
     margin-right: 10px;
-    color: #eee8d5;
+    color: #ffa028; /* Orange for label */
 }
 
 .language-config label {
@@ -123,24 +120,26 @@ body {
     cursor: pointer;
     white-space: nowrap;
     font-size: 0.9em;
-    color: #93a1a1;
-    transition: filter 0.15s ease-in-out, border-color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+    color: #c8c8c8;
+    transition: filter 0.15s ease-in-out, border-color 0.15s ease-in-out, background-color 0.15s ease-in-out, color 0.15s ease-in-out;
 }
 
 .nav-bar-item:hover {
-   filter: brightness(120%);
+    background-color: rgba(100, 140, 255, 0.1);
+    color: #fff;
 }
 
 .nav-bar-item.ancestor-path {
-    border: 2px solid #b58900 !important;
+    border: 2px solid #ffa028 !important; /* Gold/Orange border for path */
+    color: #ffa028;
     font-weight: bold;
     padding: calc(.375rem - 1px) calc(.75rem - 1px);
 }
 
 .nav-bar-item.active {
-    background-color: #2aa198 !important;
-    color: #002b36 !important;
-    border-color: #2aa198 !important;
+    background-color: #648cff !important; /* Nebula Blue active background */
+    color: #000 !important;
+    border-color: #648cff !important;
     font-weight: bold;
 }
 
@@ -149,28 +148,28 @@ body {
     margin-top: 15px;
     max-width: 100%;
     min-height: 200px;
-    color: #93a1a1;
+    color: #c8c8c8;
 }
 
 .translation-section {
     margin-bottom: 20px;
     padding: 15px;
-    background-color: #002b36;
+    background-color: #0e0e0e; /* Slightly lighter black for sections */
     border-radius: .20rem;
-    border-left: 3px solid #586e75;
+    border-left: 3px solid #648cff; /* Blue accent border */
 }
 
 .translation-section h4 {
     margin-top: 0;
     margin-bottom: 10px;
     font-size: 1.1em; 
-    color: #93a1a1;
+    color: #9d65ff; /* Space Violet for section titles */
     font-weight: bold;
 }
 
 .proposition-text-content {
     line-height: 1.6;
-    color: #839496;
+    color: #c8c8c8;
 }
 
 .proposition-text-content.empty-text {

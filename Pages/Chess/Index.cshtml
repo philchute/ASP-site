@@ -1,0 +1,19 @@
+@page
+@model ASP_site.Pages.Chess.IndexModel
+@{
+    ViewData["Title"] = "Chess";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Chess</h1>
+    <p>
+        Welcome to my Chess page where I have some chess related pages and tools for understanding pieces and variants,
+        as well as a collection of armies which can be played against each other.
+    </p>
+    <p>
+        <a asp-page="/Chess/Variants/Index" class="btn btn-outline-primary mx-2">View Variants</a>
+        <a asp-page="/Chess/Armies/Index" class="btn btn-outline-primary mx-2">View Armies</a>
+        <a asp-page="/Chess/Pieces" class="btn btn-outline-secondary mx-2">View Pieces</a>
+        <a asp-page="/Chess/Parser" class="btn btn-outline-info mx-2">Betza Notation Parser</a>
+    </p>
+</div>

@@ -17,7 +17,19 @@ namespace ASP_site.Data {
       context.Tags.RemoveRange(context.Tags);
       context.Books.RemoveRange(context.Books);
 
+      // Clear Chess tables
+      context.Variants.RemoveRange(context.Variants);
+      context.ChessPieces.RemoveRange(context.ChessPieces);
+
       context.SaveChanges();
+
+      // Initialize Chess Data
+      try {
+        ChessInitializer.Initialize(context);
+      }
+      catch (Exception ex) {
+        Console.WriteLine($"Failed to initialize chess data: {ex.Message}");
+      }
       
       // Initialize engines
       var engines = EngineInitializer.GetEngines();

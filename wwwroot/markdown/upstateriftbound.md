@@ -240,9 +240,9 @@ TBD. January 2027?
 ## Bonus Lorcana Section
 
 League:  
-Tuesday nights at 6:30 at Game Kastle Greenville  
-Some Friday nights at 6:30 at Limit Break Fountain Inn  
-Some? Saturday nights at 6:00 at Boardwalk Greenville  
+* Tuesday nights at 6:30 at Game Kastle Greenville  
+* Friday nights at 6:30 at Limit Break Fountain Inn  
+* Saturday nights at 6:00 at Boardwalk Greenville  
  
 | Whispers in the Well Set Championship | Date                                  | 
 |---------------------------------------|---------------------------------------|

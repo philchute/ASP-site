@@ -1,0 +1,71 @@
+@model ASP_site.Models.ViewModels.VariantBoardViewModel
+@{
+    var maxDim = Math.Max(Model.Width, Model.Height);
+    // Use slightly less than 100 to leave margin if needed, or 100 for full bleed
+    var unit = 100.0 / maxDim;
+    
+    // Centering offsets if non-square aspect ratio
+    var offsetX = (100.0 - (Model.Width * unit)) / 2.0;
+    var offsetY = (100.0 - (Model.Height * unit)) / 2.0;
+}
+
+<div class="variant-board" style="position: relative; width: 100%; padding-bottom: 100%; /* Aspect Ratio 1:1 */">
+    <svg viewBox="0 0 100 100" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+        <!-- Board Background -->
+        @for (int r = 0; r < Model.Height; r++)
+        {
+            for (int f = 0; f < Model.Width; f++)
+            {
+                var isLight = (r + f) % 2 != 0;
+                // Standard chess colors
+                var fill = isLight ? "#f0d9b5" : "#b58863"; 
+                
+                var x = offsetX + (f * unit);
+                var y = offsetY + ((Model.Height - 1 - r) * unit);
+                
+                <rect x="@x" y="@y" width="@unit" height="@unit" fill="@fill" />
+            }
+        }
+        
+        <!-- Pieces -->
+        @foreach (var p in Model.Placements)
+        {
+            if (p.Piece != null)
+            {
+                var x = offsetX + (p.File * unit);
+                var y = offsetY + ((Model.Height - 1 - p.Rank) * unit);
+                var fontSize = unit * 0.75;
+                
+                // Color Logic: usually White is Uppercase, Black is Lowercase in fen? 
+                // Or we determine color by rank? 
+                // In standard chess, Ranks 0,1 are White, 6,7 are Black.
+                // Let's assume Pieces have a "Color" property? No, ChessPiece is generic.
+                // We usually determine color by Side (Top/Bottom).
+                // Heuristic: If Rank < Height/2 => White (Bottom), else Black (Top).
+                var isWhite = p.Rank < Model.Height / 2;
+                var pieceColor = isWhite ? "white" : "black";
+                var strokeColor = isWhite ? "black" : "white"; // Outline for contrast
+                
+                <foreignObject x="@x" y="@y" width="@unit" height="@unit" style="pointer-events: none;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" 
+                         style="display: flex; justify-content: center; align-items: center; width: 100%; height: 100%;">
+                        <span style="font-size: @(fontSize)px; font-weight: bold; 
+                                     color: @pieceColor; 
+                                     text-shadow: 0 0 2px @strokeColor, 0 0 2px @strokeColor;
+                                     cursor: help;"
+                              title="@p.Piece.DisplayName (@p.Piece.Notation)">
+                            @(p.Piece.Symbol ?? p.PieceId.Substring(0, 1))
+                        </span>
+                    </div>
+                </foreignObject>
+            }
+        }
+        
+        <!-- Coordinates (Optional, simple) -->
+        @if (Model.ShowCoordinates)
+        {
+             // Maybe add rank/file labels? Skipping for cleanliness unless requested.
+        }
+    </svg>
+</div>
+

@@ -45,6 +45,8 @@ builder.Services.AddMemoryCache();
 
 // Register application services
 builder.Services.AddSingleton<ServerBrowserService>();
+builder.Services.AddSingleton<SiteMapService>();
+builder.Services.AddSingleton<BlogService>();
 
 // Register Background Worker
 builder.Services.AddHostedService<GameServerWorker>();

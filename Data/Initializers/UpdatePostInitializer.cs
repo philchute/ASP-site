@@ -96,7 +96,24 @@ namespace ASP_site.Data.Initializers
                     Content = "<p>The website has a new star constellation themed home page to accommodate the growing number of pages. I also added an author page for Ted Chiang, as I intend to read all of his stories and books. Fixed a bug on the links page where the dropdown showed options with no links.</p>",
                     PostedDate = new DateTime(2025, 12, 19, 12, 0, 0, DateTimeKind.Utc), Author = "Phil",
                     Tags = new List<Tag> { tags.Single(t => t.Name == "Website Update") }
+                },
+                new UpdatePost
+                {
+                    Id = 11,
+                    Title = "New chess section!",
+                    Content = "<p>I've added a new section of Chess related pages, including a listing of pieces and variants, a listing of armies that can be played against each other, and a notation parser for the Betza notation system. This was a fun and intense coding project that really got me back to full-speed here. Like most of the pages here, these pages will never really be 'complete' but I hope to add a lot more information there, refine the data over time, and better integrate things together and with other sites. Shogi removed as a game and listed as a variant.</p>",
+                    PostedDate = new DateTime(2025, 12, 27, 12, 0, 0, DateTimeKind.Utc), Author = "Phil",
+                    Tags = new List<Tag> { tags.Single(t => t.Name == "Website Update") }
+                },
+                new UpdatePost
+                {
+                    Id = 12,
+                    Title = "New visuals, new Blog section",
+                    Content = "<p>I liked the new visuals from the spash page so I spread them to the rest of the site. Added a new Blog section for longer writing than this page which can just be for site updates. Redid the Engines page display and added some more engine and game data.</p>",
+                    PostedDate = new DateTime(2025, 12, 29, 12, 0, 0, DateTimeKind.Utc), Author = "Phil",
+                    Tags = new List<Tag> { tags.Single(t => t.Name == "Website Update") }
                 }
+
             };
             return (posts, tags);
         }
