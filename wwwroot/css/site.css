@@ -302,3 +302,67 @@ section.grid a:hover {
     background-color: #1a1a1a;
     transition: background-color 0.15s ease-in-out;
 }
+
+/* ==========================================================================
+   Nebula Icon (Constellation Theme)
+   ========================================================================== */
+.nebula-icon {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    border-radius: 50%;
+    pointer-events: none; /* Let clicks pass to button */
+}
+
+.nebula-icon .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: 60%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: radial-gradient(circle, #ffffff 0%, rgba(255, 160, 40, 0.8) 40%, rgba(255, 160, 40, 0) 70%);
+    mix-blend-mode: screen;
+    animation: nebula-pulse-core 3s ease-in-out infinite;
+    z-index: 2;
+}
+
+.nebula-icon .layer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 140%;
+    height: 140%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 160, 40, 0.3) 0%, rgba(255, 160, 40, 0.1) 40%, transparent 70%);
+    mix-blend-mode: screen;
+    z-index: 1;
+}
+
+.nebula-icon .layer.layer-1 {
+    animation: nebula-rotate-1 8s linear infinite;
+}
+
+.nebula-icon .layer.layer-2 {
+    animation: nebula-rotate-2 12s linear infinite reverse;
+    width: 130%;
+    height: 120%;
+}
+
+@keyframes nebula-pulse-core {
+    0%, 100% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.9; }
+    50% { transform: translate(-50%, -50%) scale(1.1); opacity: 1; }
+}
+
+@keyframes nebula-rotate-1 {
+    from { transform: translate(-50%, -50%) rotate(0deg) scale(1); }
+    to { transform: translate(-50%, -50%) rotate(360deg) scale(1.05); }
+}
+
+@keyframes nebula-rotate-2 {
+    from { transform: translate(-50%, -50%) rotate(0deg) scale(1); }
+    to { transform: translate(-50%, -50%) rotate(360deg) scale(0.95); }
+}
