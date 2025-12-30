@@ -10,11 +10,11 @@ namespace ASP_site.Tests
         [Fact]
         public void TestArmy_WithValidPlacements_ShouldBeValid()
         {
-            var army = new ChessArmy
+            var army = new ChessVariant
             {
-                ArmyID = "TestArmy",
+                VariantID = "TestArmy",
                 Name = "Test Army",
-                StartingPosition = new List<ChessArmyPlacement>
+                Placements = new List<ChessArmyPlacement>
                 {
                     new ChessArmyPlacement { PieceId = "King", Rank = 0, File = 4 },
                     new ChessArmyPlacement { PieceId = "Rook", Rank = 0, File = 0 }
@@ -22,12 +22,12 @@ namespace ASP_site.Tests
             };
 
             // Basic sanity checks
-            Assert.Equal(2, army.StartingPosition.Count);
-            Assert.DoesNotContain(army.StartingPosition, p => p.Rank < 0 || p.Rank > 7);
-            Assert.DoesNotContain(army.StartingPosition, p => p.File < 0 || p.File > 7);
+            Assert.Equal(2, army.Placements.Count);
+            Assert.DoesNotContain(army.Placements, p => p.Rank < 0 || p.Rank > 7);
+            Assert.DoesNotContain(army.Placements, p => p.File < 0 || p.File > 7);
             
             // Ensure no overlaps
-            var overlaps = army.StartingPosition
+            var overlaps = army.Placements
                 .GroupBy(p => new { p.Rank, p.File })
                 .Where(g => g.Count() > 1);
             Assert.Empty(overlaps);
@@ -36,18 +36,18 @@ namespace ASP_site.Tests
         [Fact]
         public void TestArmy_OverlapDetection()
         {
-            var army = new ChessArmy
+            var army = new ChessVariant
             {
-                ArmyID = "OverlapArmy",
+                VariantID = "OverlapArmy",
                 Name = "Overlap Army",
-                StartingPosition = new List<ChessArmyPlacement>
+                Placements = new List<ChessArmyPlacement>
                 {
                     new ChessArmyPlacement { PieceId = "King", Rank = 0, File = 4 },
                     new ChessArmyPlacement { PieceId = "Queen", Rank = 0, File = 4 } // Overlap!
                 }
             };
 
-            var groups = army.StartingPosition
+            var groups = army.Placements
                 .GroupBy(p => new { p.Rank, p.File })
                 .Where(g => g.Count() > 1);
 
