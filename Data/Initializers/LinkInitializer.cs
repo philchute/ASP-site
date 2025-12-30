@@ -299,7 +299,7 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=fRk_zF3UYAY" },
 
         // DMC
-        new Link { GameID = "dmc", Label = "DMC: threewave", Description = "Me playing CTF on q1e1m1", 
+        new Link { GameID = "dmc", Label = "DMC: Threewave", Description = "Me playing CTF on q1e1m1", 
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=JSnC9o-kZIg" },
 
         // DMCR
@@ -319,7 +319,7 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=rhtRdCRdCdM" },
         new Link { GameID = "dmcr", Label = "DMC:R grapple test", Description = "Me playing CTF", 
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=27X4uxzeUpA" },
-        new Link { GameID = "dmcr", Label = "Coaxion Games", Description = "Coaxion Games",
+        new Link { GameID = "dmcr", Label = "Coaxion Games", Description = "Coaxion Games Official Site",
           LinkType = LinkType.Official, Url = "https://coaxion.games/" },
         new Link { GameID = "dmcr", Label = "Coaxion Games discord", Description = "Coaxion Games discord",
           LinkType = LinkType.Discord, Url = "https://discord.gg/TvEyWQcm4j" },
@@ -335,7 +335,7 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Documentary, Url = "https://www.youtube.com/watch?v=-zUSp1u81I4" },
         new Link { GameID = "dod", Label = "RR Going Ham", Description = "Funny DoD highlight",
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=pbtkLzolMQ8" },
-        new Link { GameID = "dod", Label = "STOP IT!!! [DoD 1.3] (funny clip)", Description = "STOP IT!!! [DoD 1.3] (funny clip)",
+        new Link { GameID = "dod", Label = "STOP IT!!! [DoD 1.3] (funny clip)", Description = "Classic DoD clip",
           LinkType = LinkType.Gameplay, Url = "https://youtu.be/zwtpKTU5cn4" },
         new Link { GameID = "dod", Label = "compLextity DoD (frag movie)", Description = "compLextity DoD (classic frag movie)",
           LinkType = LinkType.Highlights, Url = "https://youtu.be/mJWYlbsK9r4" },
@@ -451,7 +451,7 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/playlist?list=PLW5_cMTm0wvamCNX7qNoUqbXxeHt9n67i" },
         new Link { GameID = "go", Label = "YoungBlade's must know Go Playlist", Description = "YoungBlade's must know Go Playlist",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/playlist?list=PLFG-jNjCiKSNyAKGZwQ-rCTxf1GroGAQ3" },
-        new Link { GameID = "go", Label = "Lecture on shape", Description = "Lecture on Shape",
+        new Link { GameID = "go", Label = "Lecture on shape", Description = "Lecture on shape",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=IkzuAE93-bc" },
         new Link { GameID = "go", Label = "AlphaGo - The Movie", Description = "Award winning documentary about AlphaGo",
           LinkType = LinkType.Documentary, Url = "https://www.youtube.com/watch?v=WXuK6gekU1Y" },
@@ -471,8 +471,8 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Documentary, Url = "https://youtu.be/q-3gcVICiCs" },
         new Link { GameID = "halflife", Label = "A Thorough Look At Half-Life (Revised/Expanded)", Description = "A Thorough Look At Half-Life (Revised/Expanded)",
           LinkType = LinkType.Documentary, Url = "https://youtu.be/_bsIXA8lNZc" },
-        new Link { GameID = "halflife", Label = "Glitches and Tricks in Half-life 1", Description = "Glitches and Tricks in Half-life 1",
-          LinkType = LinkType.Guide, Url = "https://youtu.be/zX5AHYZ5NJM" },
+        new Link { GameID = "halflife", Label = "Glitches and Tricks in Half-life 1", Description = "Funny video of some glitches and tricks in Half-life 1",
+          LinkType = LinkType.Highlights, Url = "https://youtu.be/zX5AHYZ5NJM" },
         new Link { GameID = "halflife", Label = "Half-life Adrenaline Gamer frag movie by Alex", Description = "Half-life Adrenaline Gamer frag movie by Alex",
           LinkType = LinkType.Highlights, Url = "https://youtu.be/c745LBQTmz0" },
         new Link { GameID = "halflife", Label = "Half-life: Opposing Force Trailer (Remake)", Description = "Half-life: Opposing Force Trailer (Remake)",
@@ -493,14 +493,13 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=OY2_53oydbM" },
         new Link { GameID = "halflife", Label = "Lambda Generation", Description = "Half-life community",
           LinkType = LinkType.Community, Url = "https://community.lambdageneration.com/" },
-        new Link { GameID = "halflife", Label = "5 Half-Likes You Should Play", Description = "5 Half-Likes You Should Play",
+        new Link { GameID = "halflife", Label = "5 Half-Likes You Should Play", Description = "Recommended Half-Life style games",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=sr-FPvGi-rc" },
-
 
         // HalfLife2
         new Link { GameID = "halflife2", Label = "Half-Life 2 Fan Trailer", Description = "Half-Life 2 Fan Trailer",
           LinkType = LinkType.Trailer, Url = "https://www.youtube.com/watch?v=ID1dWN3n7q4" },
-        new Link { GameID = "halflife2", Label = "Half-Life 2 | Trailer [FAN-MADE]", Description = "Half-Life 2 | Trailer [FAN-MADE]",
+        new Link { GameID = "halflife2", Label = "Half-Life 2 | Trailer [FAN-MADE]", Description = "Half-Life 2 fan made trailer",
           LinkType = LinkType.Trailer, Url = "https://www.youtube.com/watch?v=_vS3idZI6TM" },
         new Link { GameID = "halflife2", Label = "A Love Letter to the Source Engine", Description = "A Love Letter to the Source Engine",
           LinkType = LinkType.Documentary, Url = "https://youtu.be/9ojTBNfDKrw" },
@@ -609,7 +608,6 @@ namespace ASP_site.Data.Initializers {
         new Link { GameID = "momentum", Label = "Momentum Mod showcase", Description = "Momentum Mod showcase and current status updated 12/12/25.", 
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=uHCqfhH1Ah0" },
 
-
         // NaturalSelection
         new Link { GameID = "naturalselection", Label = "Natural Selection", Description = "Gameplay footage", 
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=WVajO-U1o74" },
@@ -678,8 +676,6 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Community, Url = "https://www.quakeservers.net/quakeworld/servers/" },
         new Link { GameID = "quake1", Label = "usquake.world discord", Description = "usquake.world discord",
           LinkType = LinkType.Discord, Url = "http://discord.usquake.world/" },
-        
-
         new Link { GameID = "quake1", Label = "QuakeQuest for Quest and Pico", Description = "QuakeQuest for Quest and Pico",
           LinkType = LinkType.Download, Url = "https://sidequestvr.com/app/93/quakequest-for-quest-pico" },
 
@@ -916,7 +912,7 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Download, Url = "https://www.moddb.com/mods/syndicate-black-ops" },
 
         // TheFinals
-        new Link { GameID = "thefinals", Label = "the finals playtest", Description = "3v3v3 gameplay on stadium", 
+        new Link { GameID = "thefinals", Label = "The Finals playtest", Description = "3v3v3 gameplay on stadium", 
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=o9GwWDeB8PA" },
         new Link { GameID = "thefinals", Label = "Finals free and easy", Description = "Light gameplay", 
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=ZXQfdhRMqEA" },
@@ -928,7 +924,7 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Download, Url = "https://sidequestvr.com/app/38086/beef-raider-xr-tomb-raider-in-vr" },
 
         // Tribes1
-        new Link { GameID = "tribes1", Label = "Tribes1", Description = "Pub gameplay", 
+        new Link { GameID = "tribes1", Label = "Tribes 1 pub gameplay", Description = "Pub gameplay", 
           LinkType = LinkType.Gameplay, Url = "https://youtu.be/SNl4jWwUbaI" },
         new Link { GameID = "tribes1", Label = "Starseige Tribes pickups", Description = "Tribes 1 discord and pickup games",
           LinkType = LinkType.Community, Url = "https://playt1.com/" },
@@ -942,9 +938,9 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=qXC3tezqwrA" },
 
         // Tribes3
-        new Link { GameID = "tribes3", Label = "Tribes 3", Description = "Mid gameplay on island", 
+        new Link { GameID = "tribes3", Label = "Tribes 3 mid gameplay on island", Description = "Mid gameplay on island", 
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=69FXmkBriFk" },
-        new Link { GameID = "tribes3", Label = "Tribes 3", Description = "Mid gameplay on katabatic", 
+        new Link { GameID = "tribes3", Label = "Tribes 3 mid gameplay on katabatic", Description = "Mid gameplay on katabatic", 
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=CnNYf6Oc1zw" },
         new Link { GameID = "tribes3", Label = "Tribes 3 12s", Description = "Mid gameplay on mountain", 
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=o9oP8EwTBeQ" },

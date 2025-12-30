@@ -116,21 +116,27 @@ Houston, Texas	December 5-7, 2025
 | Game Kastle Greenville        | Sunday December 7th, 2025 2:00 pm     | 7 players [immortnight12](https://locator.riftbound.uvsgames.com/events/233784)  |
 | Cheerful Games Spartanburg    | Sunday December 7th, 2025 2:00 pm     | 8 players [jefticles](https://locator.riftbound.uvsgames.com/events/236280)      |
 | Limit Break Fountain Inn      | Sunday December 7th, 2025 2:00 pm     | 12 players [N3gation](https://locator.riftbound.uvsgames.com/events/224695)      |
-| Epic Battlegrounds Cowpens    | Saturday December 13th, 2025 12:00 pm | 4 Players [TooTawl](https://locator.riftbound.uvsgames.com/events/233220)       |
-| Empire Games Anderson         | Saturday December 13th, 2025 1:00 pm  | 8 players [KeeblerX](https://locator.riftbound.uvsgames.com/events/219142)      |
-| Decks and Dice Seneca         | Sunday December 14th, 2025 3:00 pm  | 6 players[Moemmoth](https://locator.riftbound.uvsgames.com/events/234389) |
+| Epic Battlegrounds Cowpens    | Saturday December 13th, 2025 12:00 pm | 4 Players [TooTawl](https://locator.riftbound.uvsgames.com/events/233220)        |
+| Empire Games Anderson         | Saturday December 13th, 2025 1:00 pm  | 8 players [KeeblerX](https://locator.riftbound.uvsgames.com/events/219142)       |
+| Decks and Dice Seneca         | Sunday December 14th, 2025 3:00 pm    | 6 players [Moemmoth](https://locator.riftbound.uvsgames.com/events/234389)       |
+
+### Manathril Store Tournament
+
+| Event                         | Date                                  | Winner                                                                 |
+|-------------------------------|---------------------------------------|------------------------------------------------------------------------|
+| Manathril Williamston         | Friday January 2nd, 2026 5:30 pm      | [TBD](https://locator.riftbound.uvsgames.com/events/319731)            |
 
 
 ### Origins Summoner Skirmish 2
 
 | Event                         | Date                                  | Winner                                                                 |
 |-------------------------------|---------------------------------------|------------------------------------------------------------------------|
-| Borderlands Greenville        | Saturday January 10th, 2026 12:00 pm  | TBD |
-| Boardwalk Greenville          | Sunday January 11th, 2026 11:00 am    | TBD |
-| Cheerful Games Spartanburg    | Sunday January 11th, 2026 2:00 pm     | TBD |
-| Limit Break Fountain Inn      | Sunday January 11th, 2026 2:00 pm     | TBD |
-| Game Kastle Greenville        | Sunday January 11th, 2026 4:00 pm     | TBD |
-| Toon Gaming Greenville        | Friday January 23rd, 2026 7:30 pm     | TBD |
+| Borderlands Greenville        | Saturday January 10th, 2026 12:00 pm  | [TBD](https://locator.riftbound.uvsgames.com/events/227685) |
+| Boardwalk Greenville          | Sunday January 11th, 2026 11:00 am    | [TBD](https://locator.riftbound.uvsgames.com/events/227300) |
+| Cheerful Games Spartanburg    | Sunday January 11th, 2026 2:00 pm     | [TBD](https://locator.riftbound.uvsgames.com/events/236281) |
+| Limit Break Fountain Inn      | Sunday January 11th, 2026 2:00 pm     | [TBD](https://locator.riftbound.uvsgames.com/events/224700) |
+| Game Kastle Greenville        | Sunday January 11th, 2026 4:00 pm     | [TBD](https://locator.riftbound.uvsgames.com/events/233791) |
+| Toon Gaming Greenville        | Friday January 23rd, 2026 7:30 pm     | [TBD](https://locator.riftbound.uvsgames.com/events/217629) |
 
 
 ### Spiritforged Set Pre-release
