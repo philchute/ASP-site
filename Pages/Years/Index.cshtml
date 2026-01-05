@@ -110,7 +110,7 @@
                             <span>-</span>
                         }
                     </div>
-                    <div class="p-1 text-start col-sm text-light fw-bold" title="@(entry.Description + (!string.IsNullOrEmpty(entry.Availability) ? $"\n\nAvailability: {entry.Availability}" : ""))">@(entry.Title ?? "-")</div>
+                    <div class="p-1 text-start col-sm fw-bold" title="@(entry.Description + (!string.IsNullOrEmpty(entry.Availability) ? $"\n\nAvailability: {entry.Availability}" : ""))">@(entry.Title ?? "-")</div>
                 </div>
             }
         } else {

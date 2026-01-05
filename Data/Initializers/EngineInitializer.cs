@@ -210,6 +210,12 @@ namespace ASP_site.Data.Initializers {
           ParentID = "", Year = 1995
         },
         new Engine {
+          EngineID = "unity",
+          Name = "Unity Engine",
+          Description = "Unity Engine is a game engine developed by Unity Technologies, first used in 2005 for MacOS titles, it has become a common engine for cross-platform and mobile development. In 2023 they announced they would charge per-install royalties to their developers, prompting many to switch away from Unity.",
+          ParentID = "", Year = 2005
+        },
+        new Engine {
           EngineID = "unreal",
           Name = "Unreal Engine",
           Description = "Unreal Engine is a game engine developed by Epic Games, first used in 1998's Unreal.",

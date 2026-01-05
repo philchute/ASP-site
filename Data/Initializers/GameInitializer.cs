@@ -1483,7 +1483,7 @@ namespace ASP_site.Data.Initializers {
         },
         new Game {
           GameID = "csgo",
-          Name = "CS:GO",
+          Name = "Counter-Strike: Global Offensive",
           Description = "Counter-Strike: Global Offensive was released in 2012 as a paid title and converted to free to play, then replaced by CS2.", 
           EngineID = "source",
           Developer = "Valve Software",
@@ -1733,9 +1733,9 @@ namespace ASP_site.Data.Initializers {
         },
         new Game {
           GameID = "dmcr",
-          Name = "DMC:R",
+          Name = "Deathmatch Classic: Refragged",
           Description = "Deathmatch Classic was Valve's port of QuakeWorld Deathmatch to the goldsrc engine."
-            + "DMC:R is a source mod which extends this legacy to the the Half-Life 2 engine.",
+            + "Deathmatch Classic: Refragged is a source mod which extends this legacy to the the Half-Life 2 engine.",
           ModForGameID = "halflife2",
           EngineID = "source",
           Developer = "CoaXioN",
@@ -1983,6 +1983,24 @@ namespace ASP_site.Data.Initializers {
             MasterServerKey = "333networks",
             QueryProtocol = "GameSpy",
           }
+        },
+        new Game {
+          GameID = "dusk",
+          Name = "Dusk",
+          Description = "Dusk is a modern 'Boomer Shooter' emulating classic 90s Build Engine titles.",
+          EngineID = "unity",
+          Developer = "David Szymanski",
+          SteamID = 519860,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2018, Month = 12, Day = 10, Region = Region.Worldwide},
+          ]
         },
         new Game {
           GameID = "dystopia",

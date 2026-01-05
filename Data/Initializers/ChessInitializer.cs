@@ -3589,6 +3589,23 @@ namespace ASP_site.Data.Initializers
                 },
                 new ChessVariant
                 {
+                    VariantID = "ApocalypseChess", Name = "Apocalypse Chess", Year = "1976", Author = "C. S. Elliott",
+                    Description = "Players move simultaneously, Knights capture pawns and equal pieces capture each other. Win by capturing all pawns.",
+                    BoardWidth = 5,
+                    BoardHeight = 5,
+                    ParentIDs = new List<string> { "WesternChess" },
+                    Placements = new List<ChessArmyPlacement> {
+                        new ChessArmyPlacement { PieceId = "Knight", Rank = 0, File = 0 },
+                        new ChessArmyPlacement { PieceId = "PawnWithoutInitialMove", Rank = 0, File = 1 },
+                        new ChessArmyPlacement { PieceId = "PawnWithoutInitialMove", Rank = 0, File = 2 },
+                        new ChessArmyPlacement { PieceId = "PawnWithoutInitialMove", Rank = 0, File = 3 },
+                        new ChessArmyPlacement { PieceId = "Knight", Rank = 0, File = 4 },
+                        new ChessArmyPlacement { PieceId = "PawnWithoutInitialMove", Rank = 1, File = 0 },
+                        new ChessArmyPlacement { PieceId = "PawnWithoutInitialMove", Rank = 1, File = 4 },
+                    }
+                },
+                new ChessVariant
+                {
                     VariantID = "Double", Name = "Double Chess", Author = "Julian S. Grant Hayward", Year = "1916",
                     Description = "Double Chess is double the pieces of standard chess on a 16x12 board.",
                     ParentIDs = new List<string> { "WesternChess" },

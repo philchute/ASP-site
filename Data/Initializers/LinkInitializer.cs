@@ -58,6 +58,8 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Community, Url = "https://wiki.supercombo.gg/w/SuperCombo_Wiki:Community_portal/Discords/Region" },
         new Link { GameID = "", Label = "Every Fighting Game Type Explained", Description = "Every Fighting Game Type Explained",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=b4Kc1p6Iat8" },
+        new Link { GameID = "", Label = "Quine Relay", Description = "Quine Relay",
+          LinkType = LinkType.Community, Url = "https://github.com/mame/quine-relay" },
 
 
         // ActionHalfLife
@@ -383,6 +385,14 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Download, Url = "https://sidequestvr.com/app/24502/razexr-build-engine-for-quest" },
         new Link { GameID = "duke3d", Label = "Razexr Build Engine for Pico 4", Description = "Razexr Build Engine for Pico 4",
           LinkType = LinkType.Download, Url = "https://sidequestvr.com/app/24600/razexr-pico" },
+        new Link { GameID = "duke3d", Label = "Understanding Duke 3D Weapons", Description = "Understanding Duke 3D Weapons",
+          LinkType = LinkType.Guide, Url = "https://youtu.be/H0Z1BTbTq64" },
+
+        // Dusk
+        new Link { GameID = "dusk", Label = "Dusk on Wikipedia", Description = "Dusk on Wikipedia",
+          LinkType = LinkType.Wiki, Url = "https://en.wikipedia.org/wiki/Dusk_(video_game)" },
+        new Link { GameID = "dusk", Label = "Half-life in Dusk", Description = "Half-life in Dusk",
+          LinkType = LinkType.Video, Url = "https://youtu.be/z2Eisye3_YY" },
 
         // Eleven Table Tennis
         new Link { GameID = "eleven", Label = "Eleven VR stats", Description = "Eleven VR stats",
@@ -816,6 +826,8 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Documentary, Url = "https://youtu.be/L4ej5xk-HHY" },
         new Link { GameID = "qc", Label = "Death of a Game: Quake Champions", Description = "Death of a Game: Quake Champions",
           LinkType = LinkType.Documentary, Url = "https://youtu.be/zsQFxBndRG0" },
+        new Link { GameID = "qc", Label = "Quake Champions: All strafe jumping techniques", Description = "Quake Champions: All strafe jumping techniques",
+          LinkType = LinkType.Guide, Url = "https://youtu.be/gpir6ZZKmcM" },
 
         // QuakeLive
         new Link { GameID = "quakelive", Label = "Quake Live Trailer", Description = "Quake Live Launch Trailer",
@@ -1041,6 +1053,8 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Video, Url = "https://www.youtube.com/watch?v=v1lYrUGy9uQ" },
 
         // Chess Variants
+        new Link { VariantID = "ApocalypseChess", Label = "Apocalypse Chess", Description = "Apocalypse Chess on Wikipedia",
+          LinkType = LinkType.Wiki, Url = "https://en.wikipedia.org/wiki/Apocalypse_(chess_variant)" },
         new Link { VariantID = "CerebralChess", Label = "Cerebral Chess", Description = "Cerebral Chess on Musketeer Chess",
           LinkType = LinkType.Official, Url = "https://musketeerchess.net/p/games/cerebral/rules/rules.php" },
         new Link { VariantID = "Chaturanga", Label = "Chaturanga", Description = "Chaturanga on Wikipedia",
