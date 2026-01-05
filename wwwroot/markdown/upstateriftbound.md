@@ -124,7 +124,7 @@ Houston, Texas	December 5-7, 2025
 
 | Event                         | Date                                  | Winner                                                                 |
 |-------------------------------|---------------------------------------|------------------------------------------------------------------------|
-| Manathril Williamston         | Friday January 2nd, 2026 5:30 pm      | [TBD](https://locator.riftbound.uvsgames.com/events/319731)            |
+| Manathril Williamston         | Friday January 2nd, 2026 5:30 pm      | 14 Players [TooTawl](https://locator.riftbound.uvsgames.com/events/319731)            |
 
 
 ### Origins Summoner Skirmish 2
@@ -149,7 +149,7 @@ Houston, Texas	December 5-7, 2025
 | Upstate TCG Spartanburg       | Friday February 6th, 2026 6:00 pm     | TBD |
 | Empire Games Anderson         | Friday February 6th, 2026 6:00 pm     | TBD |
 | Borderlands Greenville        | Friday February 6th, 2026 6:00 pm     | TBD. currently showing full |
-| Toon Gaming Greenville        | Friday February 6th, 2026 7:30 pm     | TBD |
+| Toon Gaming Greenville        | Friday February 6th, 2026 7:30 pm     | Cancelled? |
 | Manathril Williamston         | Friday February 6th, 2026 8:00 pm     | TBD |
 | Boardwalk Greenville          | Saturday February 7th, 2026 12:00 pm  | TBD. currently showing invite only |
 | Epic Battlegrounds            | Saturday February 7th, 2026 12:00 pm  | TBD |
@@ -178,7 +178,7 @@ Las Vegas, Nevada	February 27-March 1, 2026
 | Event                         | Date                                  | Winner                                                                 |
 |-------------------------------|---------------------------------------|------------------------------------------------------------------------|
 | Manathril Williamston         | Monday March 2nd, 2026 6:00 pm        | TBD |
-| Toon Gaming Greenville        | Friday March 6th, 2026 7:30 pm        | TBD |
+| Toon Gaming Greenville        | Friday March 6th, 2026 7:30 pm        | Cancelled? |
 | Limit Break Fountain Inn      | Saturday March 7th, 2026 2:00 pm      | TBD |
 | Boardwalk Greenville          | Sunday March 15th, 2026 11:00 am      | TBD |
 | Cheerful Games Spartanburg    | Sunday March 15th, 2026 2:00 pm       | TBD |
