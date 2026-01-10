@@ -58,6 +58,10 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Community, Url = "https://wiki.supercombo.gg/w/SuperCombo_Wiki:Community_portal/Discords/Region" },
         new Link { GameID = "", Label = "Every Fighting Game Type Explained", Description = "Every Fighting Game Type Explained",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=b4Kc1p6Iat8" },
+        new Link { GameID = "", Label = "The Complete Vector Arcade Journey", Description = "Every vector arcade game (CRT drawing lines rather than pixels)",
+          LinkType = LinkType.Video, Url = "https://www.youtube.com/watch?v=swryO4xWOTk" },
+        new Link { GameID = "", Label = "Archipelago: The Best Way to Play Old Games", Description = "Archipelago: The Best Way to Play Old Games",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=n-Q-vQgaxNs" },
         new Link { GameID = "", Label = "Quine Relay", Description = "Quine Relay",
           LinkType = LinkType.Community, Url = "https://github.com/mame/quine-relay" },
 
@@ -828,6 +832,8 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Documentary, Url = "https://youtu.be/zsQFxBndRG0" },
         new Link { GameID = "qc", Label = "Quake Champions: All strafe jumping techniques", Description = "Quake Champions: All strafe jumping techniques",
           LinkType = LinkType.Guide, Url = "https://youtu.be/gpir6ZZKmcM" },
+        new Link { GameID = "qc", Label = "SHOOT 2 KILL - Quake Champions frag movie by PLEJ", Description = "Amazing frag movie with musical and editing references to classic Quake frag movies.",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=rxeXwNYsBf8" },
 
         // QuakeLive
         new Link { GameID = "quakelive", Label = "Quake Live Trailer", Description = "Quake Live Launch Trailer",

@@ -43,7 +43,7 @@ There is essentially no retail product available anywhere. Your best bet is actu
 Most people are trading for their decks or buying online.  
 Game Kastle Greenville have some commons in their bulk bins.  
 Borderlands Greenville have a limited amount of singles.  
-Toon Gaming Greenville have some singles? Now open Friday-Monday  
+Toon Gaming Greenville have some singles? Open Friday-Monday till January 30th when they will be closing.
 Limit Break Fountain Inn have some singles?  
 Manathril Williamston have some singles?  
 
@@ -57,7 +57,7 @@ Manathril Williamston have some singles?
 ### Monday
 
 5:30 pm Weekly Nexus Night at Manathril Williamston  
-6:00 pm Toon Gaming Greenville have been running events but they are not pre-listed on the events locator.
+6:00 pm Toon Gaming Greenville (until January 30th when they will be closing)
 
 ### Tuesday
 
@@ -149,7 +149,7 @@ Houston, Texas	December 5-7, 2025
 | Upstate TCG Spartanburg       | Friday February 6th, 2026 6:00 pm     | TBD |
 | Empire Games Anderson         | Friday February 6th, 2026 6:00 pm     | TBD |
 | Borderlands Greenville        | Friday February 6th, 2026 6:00 pm     | TBD. currently showing full |
-| Toon Gaming Greenville        | Friday February 6th, 2026 7:30 pm     | Cancelled? |
+| ~~~Toon Gaming Greenville~~   | ~~Friday February 6th, 2026 7:30 pm~~ | Cancelled due to Toon Gaming closing |
 | Manathril Williamston         | Friday February 6th, 2026 8:00 pm     | TBD |
 | Boardwalk Greenville          | Saturday February 7th, 2026 12:00 pm  | TBD. currently showing invite only |
 | Epic Battlegrounds            | Saturday February 7th, 2026 12:00 pm  | TBD |
@@ -178,7 +178,7 @@ Las Vegas, Nevada	February 27-March 1, 2026
 | Event                         | Date                                  | Winner                                                                 |
 |-------------------------------|---------------------------------------|------------------------------------------------------------------------|
 | Manathril Williamston         | Monday March 2nd, 2026 6:00 pm        | TBD |
-| Toon Gaming Greenville        | Friday March 6th, 2026 7:30 pm        | Cancelled? |
+| ~~~Toon Gaming Greenville~~   | ~~Friday March 6th, 2026 7:30 pm~~    | Cancelled due to Toon Gaming closing |
 | Limit Break Fountain Inn      | Saturday March 7th, 2026 2:00 pm      | TBD |
 | Boardwalk Greenville          | Sunday March 15th, 2026 11:00 am      | TBD |
 | Cheerful Games Spartanburg    | Sunday March 15th, 2026 2:00 pm       | TBD |
@@ -190,7 +190,7 @@ Las Vegas, Nevada	February 27-March 1, 2026
 
 | Event                         | Date                                  | Winner                                                                 |
 |-------------------------------|---------------------------------------|------------------------------------------------------------------------|
-| Toon Gaming Greenville        | Friday April 3rd, 2026 7:30 pm        | TBD |
+| ~~~Toon Gaming Greenville~~   | ~~Friday April 3rd, 2026 7:30 pm~~    | Cancelled due to Toon Gaming closing |
 | Manathril Williamston         | Monday April 6th, 2026 6:00 pm        | TBD |
 | Cheerful Games Spartanburg    | Sunday April 12th, 2026 2:00 pm       | TBD |
 | Game Kastle Greenville        | Sunday April 12th, 2026 4:00 pm       | TBD | 

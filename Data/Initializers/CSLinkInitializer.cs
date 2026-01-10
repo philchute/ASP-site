@@ -115,6 +115,8 @@ namespace ASP_site.Data.Initializers
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/playlist?list=PLIzaC48T2qRdmbud299fj9s4tQ7UPXpFt" },
         new Link { GameID = "cs2", Label = "CS2 Major bracket simulator", Description = "CS2 Major bracket simulator",
           LinkType = LinkType.Community, Url = "https://majors.im/" },
+        new Link { GameID = "cs2", Label = "The Art of Counter-Strike Observing", Description = "The Art of Counter-Strike Observing",
+          LinkType = LinkType.Documentary, Url = "https://www.youtube.com/watch?v=XeWef2dQ6-k" },
         // Gameplay modes
         new Link { GameID = "cs2", Label = "learning to fly on surf_pantheon", Description = "Surf gameplay on surf_pantheon", 
           LinkType = LinkType.Gameplay, Url = "https://youtu.be/XEIIc1gFfpw" },
