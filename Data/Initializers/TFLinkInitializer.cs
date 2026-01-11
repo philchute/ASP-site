@@ -188,6 +188,8 @@ namespace ASP_site.Data.Initializers
           LinkType = LinkType.Guide, Url = "http://www.fortress-forever.com/wiki/index.php?title=Main_Page" },
         new Link { GameID = "ff", Label = "Fortress Forever Maps on GitHub", Description = "Fortress Forever Maps on GitHub",
           LinkType = LinkType.Download, Url = "https://github.com/fortressforever/fortressforever-maps" },
+        new Link { GameID = "ff", Label = "Fortress Forever on Speedrun.com", Description = "Fortress Forever on Speedrun.com",
+          LinkType = LinkType.Community, Url = "https://www.speedrun.com/fortressforever" },
         
         // Gameplay
         new Link { GameID = "ff", Label = "Fortress Forever 2015 League Playlist", Description = "Playlist of competitive Fortress Forever games from 2015",

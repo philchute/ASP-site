@@ -34,6 +34,7 @@ Let me know if you find any errors or if you have any updates.
     - [Radiance Set Pre-release](#radiance-set-pre-release)
     - [Radiance Summoner Skirmish 1](#radiance-summoner-skirmish-1)
     - [Radiance Summoner Skirmish 2](#radiance-summoner-skirmish-2)
+- [Bonus Gundam Section](#bonus-gundam-section)
 - [Bonus Lorcana Section](#bonus-lorcana-section)
 
 
@@ -131,7 +132,7 @@ Houston, Texas	December 5-7, 2025
 
 | Event                         | Date                                  | Winner                                                                 |
 |-------------------------------|---------------------------------------|------------------------------------------------------------------------|
-| Borderlands Greenville        | Saturday January 10th, 2026 12:00 pm  | [TBD](https://locator.riftbound.uvsgames.com/events/227685) |
+| Borderlands Greenville        | Saturday January 10th, 2026 12:00 pm  | 4 players [UnsungCrown](https://locator.riftbound.uvsgames.com/events/227685) |
 | Boardwalk Greenville          | Sunday January 11th, 2026 11:00 am    | [TBD](https://locator.riftbound.uvsgames.com/events/227300) |
 | Cheerful Games Spartanburg    | Sunday January 11th, 2026 2:00 pm     | [TBD](https://locator.riftbound.uvsgames.com/events/236281) |
 | Limit Break Fountain Inn      | Sunday January 11th, 2026 2:00 pm     | [TBD](https://locator.riftbound.uvsgames.com/events/224700) |
@@ -242,6 +243,19 @@ TBD. December 2026?
 ### Radiance Summoner Skirmish 2
 
 TBD. January 2027?
+
+
+## Bonus Gundam Section
+
+With the closing of Toon Gaming, Gundam is now played:
+* Thursday nights at 7:00 at Game Kastle Greenville
+* Sometimes at Borderlands Greenville?
+
+| ST07/08 Release        | Date                                  |
+|------------------------|---------------------------------------|
+|Toon Gaming Greenville? | Saturday January 17th, 2026 1:00 pm?  |
+|Boardwalk Greenville    | Sunday January 25th, 2026 1:00 pm     |
+
 
 ## Bonus Lorcana Section
 
