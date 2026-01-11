@@ -1,0 +1,508 @@
+@page
+@model ASP_site.Pages.MathSection.Scales.IndexModel
+@{
+    ViewData["Title"] = "Scale Model Reference";
+}
+
+    <!-- Header: Title and Description -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h1 id="scaleTitle">Scale: @Model.SelectedScale.Name</h1>
+            <p class="lead" id="scaleDesc">@Model.SelectedScale.Description</p>
+            <p class="text-muted" id="scaleInfo">
+                Ratio: 1:@Model.SelectedRatio
+            </p>
+        </div>
+        <div>
+            <a id="downloadBtn" href="@Url.Page("Index", "DownloadPdf", new { ratio = Model.SelectedRatio })" class="btn btn-primary btn-lg text-white">
+                <i class="bi bi-printer"></i> Download PDF Reference
+            </a>
+        </div>
+    </div>
+
+    <!-- Visualizer Note -->
+    <div class="alert alert-info d-flex align-items-center mb-4" role="alert">
+        <i class="bi bi-info-circle-fill me-2"></i>
+        <div>
+            <strong>Visualizer Note:</strong> Objects on screen are relative to each other and the Credit Card outline. 
+            They are NOT actual size on your monitor (unless you calibrate zoom to the credit card). 
+            Download the PDF for 1:1 scale.
+        </div>
+    </div>
+
+    <!-- Control Panel -->
+    <div class="card mb-4">
+    <div class="card-header bg-light">
+        <strong>Scale Controls</strong>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <!-- Col 1: Scale Selection -->
+            <div class="col-md-4 mb-3">
+                <label for="scaleSelect" class="form-label">Scale Selection</label>
+                <select id="scaleSelect" class="form-select mb-2" onchange="onSelectChange(this)">
+                    @foreach (var scale in Model.Scales)
+                    {
+                        <option value="@scale.Ratio" 
+                                data-name="@scale.Name" 
+                                data-desc="@scale.Description"
+                                selected="@(Math.Abs(scale.Ratio - Model.SelectedRatio) < 0.01)">
+                            @scale.Name
+                        </option>
+                    }
+                    <option value="custom" id="customOption">Custom...</option>
+                </select>
+                
+                <div class="input-group">
+                    <span class="input-group-text">1:</span>
+                    <input type="number" id="customRatio" class="form-control" 
+                           value="@Model.SelectedRatio" 
+                           onchange="onCustomChange(this.value)" 
+                           step="0.1" min="0.1">
+                    <span class="input-group-text">(Custom Ratio)</span>
+                </div>
+            </div>
+
+            <!-- Col 2: View Options -->
+            <div class="col-md-4 mb-3">
+                <label class="form-label">View Mode</label>
+                <div class="btn-group w-100 mb-2" role="group">
+                    <input type="radio" class="btn-check" name="viewMode" id="viewProfile" value="profile" checked onchange="updateVisuals()">
+                    <label class="btn btn-outline-secondary" for="viewProfile">Profile (Front)</label>
+
+                    <input type="radio" class="btn-check" name="viewMode" id="viewOverhead" value="overhead" onchange="updateVisuals()">
+                    <label class="btn btn-outline-secondary" for="viewOverhead">Overhead</label>
+                </div>
+                
+                <div class="d-flex gap-2">
+                    <div class="dropdown flex-grow-1">
+                        <button class="btn btn-outline-secondary dropdown-toggle w-100" type="button" data-bs-toggle="dropdown">
+                            Objects
+                        </button>
+                        <div class="dropdown-menu p-3" style="min-width: 250px;">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="showCreditCard" checked onchange="toggleCreditCard()">
+                                <label class="form-check-label" for="showCreditCard">Credit Card Ref</label>
+                            </div>
+                            <hr class="dropdown-divider">
+                             @foreach(var obj in Model.ReferenceObjects)
+                             {
+                                 <div class="form-check">
+                                     <input class="form-check-input" type="checkbox" value="" id="check_@obj.Name.GetHashCode()" checked onchange="toggleObject('@obj.Name', this.checked)">
+                                     <label class="form-check-label" for="check_@obj.Name.GetHashCode()">
+                                         @obj.Name
+                                     </label>
+                                 </div>
+                             }
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-2">
+                    <label for="zoomRange" class="form-label d-flex justify-content-between">
+                        <span>Screen Zoom</span>
+                        <span id="zoomValue" class="text-muted">3.0x</span>
+                    </label>
+                    <input type="range" class="form-range" min="0.5" max="6.0" step="0.5" id="zoomRange" value="3.0" oninput="updateZoom(this.value)">
+                </div>
+            </div>
+
+            <!-- Col 3: Conversions (Live) -->
+            <div class="col-md-4 mb-3">
+                 <label class="form-label">Live Conversions</label>
+                 <div class="card bg-light border-0">
+                    <div class="card-body p-2">
+                        <ul class="list-unstyled small mb-0" id="conversionList">
+                            <!-- Populated by JS -->
+                        </ul>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Main Content -->
+    <div>
+        <!-- Visualizer -->
+    <div class="visualizer-card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <span>Visualizer</span>
+        </div>
+        <div class="card-body visualizer-body">
+            <svg id="visualizerSvg" width="100%" height="600" viewBox="0 0 1000 600">
+                <!-- Background Grid (1cm lines approx) -->
+                <defs>
+                    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+                        <path d="M 30 0 L 0 0 0 30" fill="none" stroke="gray" stroke-width="0.5"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#grid)" opacity="0.1" />
+
+                <!-- Ground Line -->
+                <line id="groundLine" x1="0" y1="550" x2="10000" y2="550" stroke="black" stroke-width="2" />
+                <text id="groundText" x="10" y="565" font-size="12" fill="gray">Ground Level</text>
+
+                <!-- Credit Card Reference (85.60 x 53.98 mm) -->
+                <g id="ccGroup" display="inline">
+                    <rect id="ccRect" x="20" y="388.06" width="256.8" height="161.94" rx="9" ry="9" fill="none" stroke="#6366f1" stroke-width="2" stroke-dasharray="5,5" />
+                    <text id="ccText" x="30" y="420" fill="#6366f1" font-size="14">Credit Card (Screen Ref)</text>
+                </g>
+
+                <!-- Dynamic Objects -->
+                @{
+                    double startX = 300; 
+                    double groundY = 550;
+                }
+                @foreach (var obj in Model.ReferenceObjects)
+                {
+                    <!-- Group for each object -->
+                    <g class="ref-object" 
+                       id="obj_@obj.Name"
+                       data-name="@obj.Name"
+                       data-real-height="@obj.RealHeightMm"
+                       data-real-width="@obj.RealWidthMm"
+                       data-real-depth="@obj.RealDepthMm"
+                       data-is-round="@obj.IsRound"
+                       data-svg="@obj.SvgFileName"
+                       data-svg-overhead="@obj.OverheadSvgFileName"
+                       transform="translate(@startX, @groundY)">
+                       
+                        <!-- SVG Images -->
+                        @if (!string.IsNullOrEmpty(obj.SvgFileName))
+                        {
+                            <image class="ref-image-profile" 
+                                   href="/image/references/@obj.SvgFileName" 
+                                   x="0" y="0" width="0" height="0" 
+                                   display="none" />
+                        }
+                        @if (!string.IsNullOrEmpty(obj.OverheadSvgFileName))
+                        {
+                            <image class="ref-image-overhead" 
+                                   href="/image/references/@obj.OverheadSvgFileName" 
+                                   x="0" y="0" width="0" height="0" 
+                                   display="none" />
+                        }
+
+                        <!-- Shape Fallback -->
+                        <rect class="ref-shape" 
+                              x="0" 
+                              y="0" 
+                              width="10" 
+                              height="0" 
+                              fill="@obj.ColorHex" 
+                              opacity="0.8" />
+                        
+                        <circle class="ref-circle"
+                                cx="0"
+                                cy="0"
+                                r="0"
+                                fill="@obj.ColorHex"
+                                opacity="0.8"
+                                display="none" />
+
+                        <!-- Label -->
+                        <text class="ref-label" x="0" y="25" font-size="12" fill="black" text-anchor="middle">@obj.Name</text>
+                        <text class="ref-size" x="0" y="0" font-size="10" fill="gray" text-anchor="middle"></text>
+                    </g>
+                    startX += 100; // Increased spacing
+                }
+            </svg>
+            <div id="scaleWarning" class="alert alert-warning m-3" style="display:none">
+                Some objects are hidden because they are too small or too large for this scale.
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .visualizer-card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background: white;
+    }
+    .visualizer-body {
+        padding: 0;
+        overflow: auto; 
+        position: relative;
+    }
+</style>
+
+<script>
+    let currentRatio = @Model.SelectedRatio;
+    let displayFactor = 3.0; // Initial Zoom
+
+    function onSelectChange(select) {
+        const val = select.value;
+        if (val === 'custom') {
+            document.getElementById('customRatio').focus();
+            updateUI(document.getElementById('customRatio').value, "Custom", "User defined scale");
+        } else {
+            const option = select.options[select.selectedIndex];
+            const name = option.getAttribute('data-name');
+            const desc = option.getAttribute('data-desc');
+            document.getElementById('customRatio').value = val;
+            updateUI(val, name, desc);
+        }
+    }
+
+    function onCustomChange(val) {
+        const select = document.getElementById('scaleSelect');
+        select.value = 'custom';
+        updateUI(val, "Custom", "User defined scale");
+    }
+    
+    function toggleCreditCard() {
+        const show = document.getElementById('showCreditCard').checked;
+        document.getElementById('ccGroup').setAttribute('display', show ? 'inline' : 'none');
+    }
+
+    function toggleObject(name, checked) {
+        const objects = document.querySelectorAll('.ref-object');
+        objects.forEach(obj => {
+             if(obj.getAttribute('data-name') === name) {
+                 obj.setAttribute('data-user-visible', checked ? 'true' : 'false');
+                 updateVisuals();
+             }
+        });
+    }
+    
+    function updateZoom(val) {
+        displayFactor = parseFloat(val);
+        document.getElementById('zoomValue').innerText = displayFactor.toFixed(1) + 'x';
+        updateVisuals();
+    }
+    
+    function updateVisuals() {
+        updateUI(currentRatio, document.getElementById('scaleTitle').innerText.replace('Scale: ', ''), document.getElementById('scaleDesc').innerText);
+    }
+
+    function updateUI(ratio, name, desc) {
+        ratio = parseFloat(ratio);
+        if (!ratio || ratio <= 0) return;
+        currentRatio = ratio;
+
+        // Update Text
+        document.getElementById('scaleTitle').innerText = 'Scale: ' + name;
+        document.getElementById('scaleDesc').innerText = desc || '';
+        document.getElementById('scaleInfo').innerHTML = 'Ratio: 1:' + ratio;
+        
+        // Update Download Link
+        const downloadBtn = document.getElementById('downloadBtn');
+        const baseUrl = downloadBtn.href.split('?')[0]; 
+        downloadBtn.href = baseUrl + '?handler=DownloadPdf&ratio=' + ratio;
+
+        // Update Conversions
+        const inchesToFeet = (1 * ratio) / 12.0; 
+        const footToInches = (12.0 / ratio); 
+        const mileToInches = (63360.0 / ratio);
+        const mmToM = ratio / 1000.0;            
+        const mToMm = 1000.0 / ratio;            
+
+        const list = document.getElementById('conversionList');
+        list.innerHTML = `
+            <li><strong>1 Real Unit</strong> = ${(1.0 / ratio).toPrecision(5)} Model Units</li>
+            <li><strong>1 Model Unit</strong> = ${(ratio).toPrecision(5)} Real Units</li>
+            <li><strong>1 Model mm</strong> = ${(mmToM).toPrecision(5)} Real Meters</li>
+            <li><strong>1 Real Meter</strong> = ${(mToMm).toPrecision(5)} Model mm</li>
+            <li><strong>1 Model Inch</strong> = ${(inchesToFeet).toPrecision(5)} Real Feet</li>
+            <li><strong>1 Real Foot</strong> = ${(footToInches).toPrecision(5)} Model Inches</li>
+            <li><strong>1 Real Mile</strong> = ${(mileToInches).toPrecision(5)} Model Inches</li>
+        `;
+
+        // Check View Mode
+        const mode = document.querySelector('input[name="viewMode"]:checked').value;
+        const isProfile = (mode === 'profile');
+        
+        // Ground line position
+        // In Profile mode, ground is near bottom (450).
+        // In Overhead mode, ground is center (300) to allow staggering up and down.
+        const groundY = isProfile ? 450 : 300;
+        
+        // Update Ground Line visual
+        const groundLine = document.getElementById('groundLine');
+        groundLine.setAttribute('y1', groundY);
+        groundLine.setAttribute('y2', groundY);
+        document.getElementById('groundText').setAttribute('y', groundY + 15);
+        document.getElementById('groundText').textContent = isProfile ? "Ground Level" : "Center Axis";
+
+        // Update SVG Objects
+        const objects = document.querySelectorAll('.ref-object');
+        let hiddenCount = 0;
+        
+        // Credit Card Width at Scale
+        const ccW = 85.60 * displayFactor;
+        const startXBase = ccW + 50; // Start items after Credit Card + padding
+        let currentX = startXBase; 
+        let visibleIndex = 0;
+
+        objects.forEach(obj => {
+            const realHeight = parseFloat(obj.getAttribute('data-real-height'));
+            const realWidth = parseFloat(obj.getAttribute('data-real-width'));
+            const realDepth = parseFloat(obj.getAttribute('data-real-depth'));
+            const isRound = (obj.getAttribute('data-is-round') === 'True'); 
+            const svgFile = obj.getAttribute('data-svg');
+            const svgOverheadFile = obj.getAttribute('data-svg-overhead');
+            const userVisible = obj.getAttribute('data-user-visible') !== 'false'; 
+            
+            // Calculate base dimensions (mm/ratio)
+            let baseH, baseW;
+
+            if (isProfile) {
+                baseH = realHeight / ratio; 
+                baseW = realWidth / ratio;
+            } else {
+                baseH = realDepth / ratio;
+                baseW = realWidth / ratio;
+            }
+            
+            // Apply Display Factor (Zoom)
+            const dimY = baseH * displayFactor;
+            const dimX = baseW * displayFactor;
+
+            // Size Filtering (Screen pixels check)
+            if (dimY < 1 || dimX < 1 || dimY > 50000 || dimX > 50000) {
+                obj.setAttribute('display', 'none');
+                hiddenCount++;
+                return; 
+            } else {
+                obj.setAttribute('display', userVisible ? 'inline' : 'none');
+            }
+
+            // Update Position X to flow items
+            if (userVisible) {
+                let yPos = groundY;
+                
+                // Overhead Staggering: Move odd items up/down relative to center
+                if (!isProfile) {
+                    if (visibleIndex % 2 !== 0) {
+                         yPos = groundY + 80; // Shift down
+                    } else {
+                         yPos = groundY - 80; // Shift up
+                    }
+                }
+
+                obj.setAttribute('transform', `translate(${currentX + dimX/2}, ${yPos})`);
+                currentX += dimX + 50; // Width + 50px spacing
+                visibleIndex++;
+            }
+
+            const rect = obj.querySelector('.ref-shape');
+            const circle = obj.querySelector('.ref-circle');
+            const imageProfile = obj.querySelector('.ref-image-profile');
+            const imageOverhead = obj.querySelector('.ref-image-overhead');
+            const label = obj.querySelector('.ref-label');
+            const sizeLabel = obj.querySelector('.ref-size');
+
+            // Reset visibility
+            rect.setAttribute('display', 'none');
+            circle.setAttribute('display', 'none');
+            if(imageProfile) imageProfile.setAttribute('display', 'none');
+            if(imageOverhead) imageOverhead.setAttribute('display', 'none');
+
+            // Determine Label Offset to prevent overlap
+            // Stagger labels for odd/even items in both views
+            // Logic: if visibleIndex is odd (which is effectively current visible item index), push label down further
+            // visibleIndex has already been incremented above, so use (visibleIndex-1)
+            const isOddItem = ((visibleIndex - 1) % 2 !== 0);
+            const labelStaggerY = isOddItem ? 20 : 0; 
+
+            if (isProfile) {
+                // Profile View
+                if (svgFile && imageProfile) {
+                    imageProfile.setAttribute('display', 'inline');
+                    imageProfile.setAttribute('y', -dimY);
+                    imageProfile.setAttribute('height', dimY);
+                    imageProfile.setAttribute('width', dimX);
+                    imageProfile.setAttribute('x', -dimX / 2);
+                } else {
+                    rect.setAttribute('display', 'inline');
+                    rect.setAttribute('y', -dimY);
+                    rect.setAttribute('height', dimY);
+                    rect.setAttribute('width', dimX);
+                    rect.setAttribute('x', -dimX / 2);
+                }
+
+                label.setAttribute('y', 25 + labelStaggerY);
+                sizeLabel.setAttribute('y', -dimY - 8);
+                sizeLabel.textContent = baseH.toFixed(1) + 'mm';
+            } else {
+                // Overhead View
+                if (svgOverheadFile && imageOverhead) {
+                     imageOverhead.setAttribute('display', 'inline');
+                     imageOverhead.setAttribute('preserveAspectRatio', 'none');
+                     imageOverhead.setAttribute('x', -dimX / 2);
+                     imageOverhead.setAttribute('y', -dimY / 2);
+                     imageOverhead.setAttribute('height', dimY);
+                     imageOverhead.setAttribute('width', dimX);
+                }
+                else if (isRound) {
+                    circle.setAttribute('display', 'inline');
+                    circle.setAttribute('r', dimX / 2);
+                    circle.setAttribute('cx', 0);
+                    circle.setAttribute('cy', -dimY / 2); 
+                } else {
+                    rect.setAttribute('display', 'inline');
+                    rect.setAttribute('x', -dimX / 2);
+                    rect.setAttribute('y', -dimY / 2);
+                    rect.setAttribute('height', dimY);
+                    rect.setAttribute('width', dimX);
+                }
+                
+                label.setAttribute('y', dimY/2 + 25 + labelStaggerY);
+                sizeLabel.setAttribute('y', -dimY/2 - 8);
+                sizeLabel.textContent = baseW.toFixed(1) + 'x' + baseH.toFixed(1) + 'mm';
+            }
+        });
+        
+        // Resize SVG container to fit content
+        const totalWidth = Math.max(currentX + 100, 1000);
+        const svg = document.getElementById('visualizerSvg');
+        svg.setAttribute('width', totalWidth);
+        svg.setAttribute('viewBox', `0 0 ${totalWidth} 600`);
+        // Extend ground line
+        // const groundLine = document.getElementById('groundLine'); // Already selected
+        groundLine.setAttribute('x2', totalWidth);
+
+        // Show/Hide Warning
+        const warning = document.getElementById('scaleWarning');
+        if (hiddenCount > 0) {
+            warning.style.display = 'block';
+            warning.innerText = hiddenCount + " object(s) hidden because they are too small/large for this scale.";
+        } else {
+             warning.style.display = 'none';
+        }
+
+        // Update Credit Card Reference (Fixed size scaled by displayFactor)
+        // CC: 85.60 x 53.98 mm
+        const ccRect = document.getElementById('ccRect');
+        const ccText = document.getElementById('ccText');
+        const ccH = 53.98 * displayFactor;
+
+        if (isProfile) {
+            ccRect.setAttribute('height', ccH);
+            ccRect.setAttribute('width', ccW);
+            ccRect.setAttribute('y', groundY - ccH);
+            ccText.textContent = "Credit Card (Screen Ref)";
+            ccText.setAttribute('y', groundY - ccH - 10);
+        } else {
+            // Overhead - Center it on Axis
+             ccRect.setAttribute('height', ccH);
+             ccRect.setAttribute('width', ccW);
+             ccRect.setAttribute('y', groundY - ccH/2); 
+             ccText.textContent = "Credit Card (Screen Ref)";
+             ccText.setAttribute('y', groundY - ccH/2 - 10);
+        }
+    }
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+        const select = document.getElementById('scaleSelect');
+        onSelectChange(select);
+        
+        const objects = document.querySelectorAll('.ref-object');
+        objects.forEach(obj => {
+             obj.setAttribute('data-user-visible', 'true');
+        });
+    });
+</script>

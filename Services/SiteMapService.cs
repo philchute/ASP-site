@@ -49,6 +49,7 @@ public class SiteMapService
                         new SiteNode { Id = "games", Label = "Games List", Url = "/Games/Index" },
                         new SiteNode { Id = "maps", Label = "Map List", Url = "/Maps/Index" },
                         new SiteNode { Id = "servers", Label = "Server Browser", Url = "/Servers/Index" },
+                        new SiteNode { Id = "scales", Label = "Model Scales", Url = "/Math/Scales/Index" },
                     }
                 },
                 new SiteNode

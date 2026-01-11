@@ -13,7 +13,9 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.3" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="QuestPDF" Version="2025.12.1" />
     <PackageReference Include="SharpZipLib" Version="1.4.2" />
+    <PackageReference Include="SkiaSharp" Version="3.119.1" />
   </ItemGroup>
 
   <!-- Exclude the external reference directory from build -->

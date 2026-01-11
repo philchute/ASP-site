@@ -112,6 +112,14 @@ namespace ASP_site.Data.Initializers
                     Content = "<p>I liked the new visuals from the spash page so I spread them to the rest of the site. Added a new Blog section for longer writing than this page which can just be for site updates. Redid the Engines page display and added some more engine and game data.</p>",
                     PostedDate = new DateTime(2025, 12, 29, 12, 0, 0, DateTimeKind.Utc), Author = "Phil",
                     Tags = new List<Tag> { tags.Single(t => t.Name == "Website Update") }
+                },
+                new UpdatePost
+                {
+                    Id = 13,
+                    Title = "New scale reference page",
+                    Content = "<p>I've added a new scale reference page with scales for various model trains and wargames. You can see relative size of some things and generate a PDF file with correct scaling. As always there's more work that can be done here but it's a nice start to something useful.</p>",
+                    PostedDate = new DateTime(2026, 1, 11, 12, 0, 0, DateTimeKind.Utc), Author = "Phil",
+                    Tags = new List<Tag> { tags.Single(t => t.Name == "Website Update") }
                 }
 
             };

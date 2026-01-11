@@ -3,8 +3,12 @@ using ASP_site.Data;
 using ASP_site.Helpers;
 using ASP_site.Services;
 using ASP_site.Models;
+using QuestPDF.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Set QuestPDF License
+QuestPDF.Settings.License = LicenseType.Community;
 
 // Configure Kestrel to listen only on localhost for port 5175
 builder.WebHost.UseUrls("http://localhost:5175"); 
@@ -47,6 +51,7 @@ builder.Services.AddMemoryCache();
 builder.Services.AddSingleton<ServerBrowserService>();
 builder.Services.AddSingleton<SiteMapService>();
 builder.Services.AddSingleton<BlogService>();
+builder.Services.AddSingleton<ScaleConverterService>();
 
 // Register Background Worker
 builder.Services.AddHostedService<GameServerWorker>();
