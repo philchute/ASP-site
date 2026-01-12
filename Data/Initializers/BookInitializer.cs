@@ -13344,7 +13344,7 @@ namespace ASP_site.Data.Initializers
                     PublicationYear = 2007,
                     PublicationMonth = 7,
                     Type = BookType.ShortStory,
-                    Description = "Nominated for the 2007 BSFA Award for Short Fiction, Won the 2008 Hugo Award for Best Novelette. Won the 2008 Nebula Award for Best Novelette. Nominated for the 2008 Locus Award for Best Novelette.",
+                    Description = "An Alchemist provides a doorway to the past or the future, but can it be changed? Nominated for the 2007 BSFA Award for Short Fiction, Won the 2008 Hugo Award for Best Novelette. Won the 2008 Nebula Award for Best Novelette. Nominated for the 2008 Locus Award for Best Novelette.",
                     Tags = new List<Tag>
                     {
                         new Tag { Name = "Collection: Exhalation Stories" }
@@ -13370,7 +13370,7 @@ namespace ASP_site.Data.Initializers
                     PublicationYear = 2005,
                     PublicationMonth = 7,
                     Type = BookType.ShortStory,
-                    Description = "Originally published in Nature Magazine in July 2005. Included in the 2006 anthology Year's Best SF 11 and in the 2019 collection Exhalation: Stories.",
+                    Description = "A device predicts our behavior, but what effect does it have on us?Originally published in Nature Magazine in July 2005. Included in the 2006 anthology Year's Best SF 11 and in the 2019 collection Exhalation: Stories.",
                     Tags = new List<Tag>
                     {
                         new Tag { Name = "Collection: Exhalation Stories" }
