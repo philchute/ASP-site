@@ -120,6 +120,14 @@ namespace ASP_site.Data.Initializers
                     Content = "<p>I've added a new scale reference page with scales for various model trains and wargames. You can see relative size of some things and generate a PDF file with correct scaling. As always there's more work that can be done here but it's a nice start to something useful.</p>",
                     PostedDate = new DateTime(2026, 1, 11, 12, 0, 0, DateTimeKind.Utc), Author = "Phil",
                     Tags = new List<Tag> { tags.Single(t => t.Name == "Website Update") }
+                },
+                new UpdatePost  
+                {
+                    Id = 14,
+                    Title = "New Gunpla section",
+                    Content = "<p>I've added a new Gunpla section with a dashboard to track your collection. This will list the gundam kits from different grades and timelines. As always this is a work in progress. I'm better at starting projects than finishing them, but we'll see how it goes. Added Ayn Rand author page.</p>",
+                    PostedDate = new DateTime(2026, 1, 14, 12, 0, 0, DateTimeKind.Utc), Author = "Phil",
+                    Tags = new List<Tag> { tags.Single(t => t.Name == "Website Update") }
                 }
 
             };

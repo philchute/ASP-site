@@ -134,10 +134,10 @@ Houston, Texas	December 5-7, 2025
 |-------------------------------|---------------------------------------|------------------------------------------------------------------------|
 | Borderlands Greenville        | Saturday January 10th, 2026 12:00 pm  | 4 players [UnsungCrown](https://locator.riftbound.uvsgames.com/events/227685) |
 | Boardwalk Greenville          | Sunday January 11th, 2026 11:00 am    | 8 players [UnsungCrown/Token](https://locator.riftbound.uvsgames.com/events/227300) |
-| Cheerful Games Spartanburg    | Sunday January 11th, 2026 2:00 pm     | [TBD](https://locator.riftbound.uvsgames.com/events/236281) |
-| Limit Break Fountain Inn      | Sunday January 11th, 2026 2:00 pm     | [TBD](https://locator.riftbound.uvsgames.com/events/224700) |
-| Game Kastle Greenville        | Sunday January 11th, 2026 4:00 pm     | [TBD](https://locator.riftbound.uvsgames.com/events/233791) |
-| Toon Gaming Greenville?        | Friday January 23rd, 2026 7:30 pm?     | [TBD](https://locator.riftbound.uvsgames.com/events/217629) |
+| Cheerful Games Spartanburg    | Sunday January 11th, 2026 2:00 pm     | 9 players [LoreGoblin47](https://locator.riftbound.uvsgames.com/events/236281) |
+| Limit Break Fountain Inn      | Sunday January 11th, 2026 2:00 pm     | 6 players [the kreatcher](https://locator.riftbound.uvsgames.com/events/224700) |
+| Game Kastle Greenville        | Sunday January 11th, 2026 4:00 pm     | 6 players [Token](https://locator.riftbound.uvsgames.com/events/233791) |
+| Toon Gaming Greenville?        | Friday January 23rd, 2026 5:30 pm?     | [TBD](https://locator.riftbound.uvsgames.com/events/217629) |
 
 
 ### Spiritforged Set Pre-release

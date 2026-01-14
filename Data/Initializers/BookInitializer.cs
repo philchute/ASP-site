@@ -13572,9 +13572,338 @@ namespace ASP_site.Data.Initializers
                     PublicationMonth = 8,
                     Type = BookType.NonFiction,
                     Description = "First published in the New Yorker in August 2024. Won the 2024 BSFA Award for Short Non-Fiction.",
-                }
+                },
+                new Book
+                {
+                    Title = "Ideal",
+                    Author = "Ayn Rand",
+                    PublicationYear = 1934,
+                    Type = BookType.Novel,
+                    Description = "Written in 1934, published posthumously in 2015.",
+                },
+                new Book
+                {
+                    Title = "We the Living",
+                    Author = "Ayn Rand",
+                    PublicationYear = 1936,
+                    Type = BookType.Novel,
+                    Description = "Written and published in 1936, revised edition published in 1959. 60th anniversary edition published by New American Library in 1996, includes an introduction by Leonard Peikoff.",
+                },
+                new Book
+                {
+                    Title = "Anthem",
+                    Author = "Ayn Rand",
+                    PublicationYear = 1938,
+                    Type = BookType.Novel,
+                    Description = "Written and published in 1938, revised edition published in 1946. 50th anniversary edition published by Pamphleteers in 1995, includes the revised edition text plus a facsimile of the first edition.",
+                },
+                new Book
+                {
+                    Title = "The Fountainhead",
+                    Author = "Ayn Rand",
+                    PublicationYear = 1943,
+                    Type = BookType.Novel,
+                    Description = "Written and published in 1943, revised edition published in 1971. 25th anniversary edition published by Bobbs-Merrill in 1971, includes a new introduction by Rand. 50th anniversary edition published by Bobbs-Merrill in 1993, includes an afterword by Leonard Peikoff.",
+                },
+                new Book
+                {
+                    Title = "Atlas Shrugged",
+                    Author = "Ayn Rand",
+                    PublicationYear = 1957,
+                    Type = BookType.Novel,
+                    Description = "Written and published in 1957, revised edition published in 1992. 35th anniversary edition published by Dutton in 1992, includes an introduction by Leonard Peikoff.",
+                },
+                new Book
+                {
+                    Title = "The Husband I Bought",
+                    Author = "Ayn Rand",
+                    PublicationYear = 1926,
+                    Type = BookType.ShortStory,
+                    Description = "Written circa 1926, published in 1984 in 'The Early Ayn Rand'.",
+                    Tags = new List<Tag>
+                    {
+                        new Tag { Name = "Collection: The Early Ayn Rand" }
+                    }
+                },
+                new Book
+                {
+                    Title = "The Night King",
+                    Author = "Ayn Rand",
+                    PublicationYear = 1926,
+                    Type = BookType.ShortStory,
+                    Description = "Written circa 1926, published in 1984 in 'The Early Ayn Rand'.",
+                    Tags = new List<Tag>
+                    {
+                        new Tag { Name = "Collection: The Early Ayn Rand" }
+                    }
+                },
+                new Book
+                {
+                    Title = "Good Copy",
+                    Author = "Ayn Rand",
+                    PublicationYear = 1927,
+                    Type = BookType.ShortStory,
+                    Description = "Written circa 1927, published in 1984 in 'The Early Ayn Rand'.",
+                },
+                new Book
+                {
+                    Title = "Escort",
+                    Author = "Ayn Rand",
+                    PublicationYear = 1929,
+                    Type = BookType.ShortStory,
+                    Description = "Written circa 1929, published in 1984 in 'The Early Ayn Rand'.",
+                },
+                new Book
+                {
+                    Title = "Her Second Career",
+                    Author = "Ayn Rand",
+                    PublicationYear = 1929,
+                    Type = BookType.ShortStory,
+                    Description = "Written circa 1929, published in 1984 in 'The Early Ayn Rand'.",
+                },
+                new Book
+                {
+                    Title = "Red Pawn",
+                    Author = "Ayn Rand",
+                    PublicationYear = 1931,
+                    Type = BookType.ShortStory,
+                    Description = "Written circa 1931, published in 1984 in 'The Early Ayn Rand'.",
+                },
+                new Book
+                {
+                    Title = "Night of January 16th",
+                    Author = "Ayn Rand",
+                    PublicationYear = 1934,
+                    Type = BookType.Play,
+                    Description = "Written and published in 1934, revised edition published in 1968. Stage play, published in The Early Ayn Rand prior to first production.",
+                    Tags = new List<Tag>
+                    {
+                        new Tag { Name = "Collection: Three Plays" }
+                    }
+                },
+                new Book
+                {
+                    Title = "The Unconquered",
+                    Author = "Ayn Rand",
+                    PublicationYear = 1940,
+                    Type = BookType.Play,
+                    Description = "Written and published in 1940, revised edition published in 2014. Stage adaptation of We the Living, two versions of the script, edited by Robert Mayhew, published by Palgrave Macmillan in 2014",
+                },
+                new Book
+                {
+                    Title = "Love Letters",
+                    Author = "Ayn Rand",
+                    PublicationYear = 1945,
+                    Type = BookType.Play,
+                    Description = "Written and published in 1945, screenplay.",
+                },
+                new Book
+                {
+                    Title = "You Came Along",
+                    Author = "Ayn Rand",
+                    PublicationYear = 1945,
+                    Type = BookType.Play,
+                    Description = "Written and published in 1945, screenplay, co-written with Robert Smith.",
+                },
+                new Book
+                {
+                    Title = "The Fountainhead (Screenplay)",
+                    Author = "Ayn Rand",
+                    PublicationYear = 1949,
+                    Type = BookType.Play,
+                    Description = "Written and published in 1949, screenplay adaptation of her own novel.",
+                },
+                new Book
+                {
+                    Title = "Ideal (Stage Play)",
+                    Author = "Ayn Rand",
+                    PublicationYear = 1934,
+                    Type = BookType.Play,
+                    Description = "Stage play, published in The Early Ayn Rand prior to first production.",
+                    Tags = new List<Tag>
+                    {
+                        new Tag { Name = "Collection: Three Plays" },
+                        new Tag { Name = "Collection: The Early Ayn Rand" }
+                    }
+                },
+                new Book
+                {
+                    Title = "Think Twice",
+                    Author = "Ayn Rand",
+                    PublicationYear = 1939,
+                    Type = BookType.Play,
+                    Description = "Written in 1939 and published in in 1984 in 'The Early Ayn Rand' and 2005 in 'Three Plays', includes an introduction by Leonard Peikoff.",
+                    Tags = new List<Tag>
+                    {
+                        new Tag { Name = "Collection: Three Plays" },
+                        new Tag { Name = "Collection: The Early Ayn Rand" }
+                    }
+                },
+                new Book
+                {
+                    Title = "The Simplest Thing in the World",
+                    Author = "Ayn Rand",
+                    PublicationYear = 1940  ,
+                    Type = BookType.ShortStory,
+                    Description = "Written in 1941 and published in in 1984 in 'The Early Ayn Rand'.",
+                    Tags = new List<Tag>
+                    {
+                        new Tag { Name = "Collection: The Early Ayn Rand" }
+                    }
+                },
+                new Book
+                {
+                    Title = "For the New Intellectual: The Philosophy of Ayn Rand",
+                    Author = "Ayn Rand",
+                    PublicationYear = 1961,
+                    Type = BookType.NonFiction,
+                    Description = "Written and published in 1961, includes essays by Nathaniel Branden.",
+                },
+                new Book
+                {
+                    Title = "The Virtue of Selfishness: A New Concept of Egoism",
+                    Author = "Ayn Rand",
+                    PublicationYear = 1964,
+                    Type = BookType.NonFiction,
+                    Description = "Written and published in 1964, includes essays by Nathaniel Branden.",
+                },
+                new Book
+                {
+                    Title = "Capitalism: The Unknown Ideal",
+                    Author = "Ayn Rand",
+                    PublicationYear = 1966,
+                    Type = BookType.NonFiction,
+                    Description = "Written and published in 1966, includes essays by Nathaniel Branden, Alan Greenspan, and Robert Hessen.",
+                },
+                new Book
+                {
+                    Title = "The Romantic Manifesto: A Philosophy of Literature",
+                    Author = "Ayn Rand",
+                    PublicationYear = 1969,
+                    Type = BookType.NonFiction,
+                    Description = "Written and published in 1969, expanded second edition published in 1975.",
+                },
+                new Book
+                {
+                    Title = "The New Left: The Anti-Industrial Revolution",
+                    Author = "Ayn Rand",
+                    PublicationYear = 1971,
+                    Type = BookType.NonFiction,
+                    Description = "Written and published in 1971, expanded second edition published in 1975.",
+                },
+                new Book
+                {
+                    Title = "Introduction to Objectivist Epistemology",
+                    Author = "Ayn Rand",
+                    PublicationYear = 1979,
+                    Type = BookType.NonFiction,
+                    Description = "Edited by Harry Binswanger and Leonard Peikoff, includes essay by Ayn Rand from The Objectivist in 1967.",
+                },
+                new Book
+                {
+                    Title = "Philosophy: Who Needs It",
+                    Author = "Ayn Rand",
+                    PublicationYear = 1982,
+                    Type = BookType.NonFiction,
+                    Description = "Edited by Leonard Peikoff.",
+                },
+                new Book
+                {
+                    Title = "The Voice of Reason: Essays in Objectivist Thought",
+                    Author = "Ayn Rand",
+                    PublicationYear = 1989,
+                    Type = BookType.NonFiction,
+                    Description = "Edited by Leonard Peikoff.  Includes essays by Leonard Peikoff and Peter Schwartz",
+                },
+                new Book
+                {
+                    Title = "The Ayn Rand Column: Written for the Los Angeles Times",
+                    Author = "Ayn Rand",
+                    PublicationYear = 1991,
+                    Type = BookType.NonFiction,
+                    Description = "Edited by Peter Schwartz. A collection of twenty-six newspaper columns that Rand wrote for the Los Angeles Times from 1962 on, as well as six essays (with an additional three in the revised edition).",
+                },
+                new Book
+                {
+                    Title = "Ayn Rand's Marginalia: Her Critical Comments on the Writings of Over 20 Authors",
+                    Author = "Ayn Rand",
+                    PublicationYear = 1994,
+                    Type = BookType.NonFiction,
+                    Description = "Edited by Robert Mayhew",
+                },
+                new Book
+                {
+                    Title = "Letters of Ayn Rand",
+                    Author = "Ayn Rand",
+                    PublicationYear = 1995,
+                    Type = BookType.NonFiction,
+                    Description = "Edited by Michael S. Berliner. Includes an introduction by Leonard Peikoff.",
+                },
+                new Book
+                {
+                    Title = "Journals of Ayn Rand",
+                    Author = "Ayn Rand",
+                    PublicationYear = 1997,
+                    Type = BookType.NonFiction,
+                    Description = "Edited by David Harriman. Includes a foreword by Leonard Peikoff.",
+                },
+                new Book
+                {
+                    Title = "The Ayn Rand Reader",
+                    Author = "Ayn Rand",
+                    PublicationYear = 1999,
+                    Type = BookType.NonFiction,
+                    Description = "Edited by Gary Hull and Leonard Peikoff",
+                },
+                new Book
+                {
+                    Title = "Return of the Primitive: The Anti-Industrial Revolution",
+                    Author = "Ayn Rand",
+                    PublicationYear = 1999,
+                    Type = BookType.NonFiction,
+                    Description = "Revised edition of Rand's earlier book, The New Left, edited by Peter Schwartz and includes essays by Peter Schwartz.",
+                },
+                new Book
+                {
+                    Title = "Russian Writings on Hollywood",
+                    Author = "Ayn Rand",
+                    PublicationYear = 1999,
+                    Type = BookType.NonFiction,
+                    Description = "Reproduces and translates two booklets previously published in Russia without Rand's knowledge.",
+                },
+                new Book
+                {
+                    Title = "Why Businessmen Need Philosophy",
+                    Author = "Ayn Rand",
+                    PublicationYear = 1999,
+                    Type = BookType.NonFiction,
+                    Description = "Edited by Richard E. Ralston and published in 1999, includes essays by Leonard Peikoff, Harry Binswanger, Edwin A. Locke, John Ridpath, Richard M. Salsman, and Jaana Woiceshyn.",
+                },
+                new Book
+                {
+                    Title = "The Art of Fiction: A Guide for Writers and Readers",
+                    Author = "Ayn Rand",
+                    PublicationYear = 2000,
+                    Type = BookType.NonFiction,
+                    Description = "Edited by Tore Boeckmann and published in 2000, includes an introduction by Leonard Peikoff.",
+                },
+                new Book
+                {
+                    Title = "The Art of Nonfiction: A Guide for Writers and Readers",
+                    Author = "Ayn Rand",
+                    PublicationYear = 2001,
+                    Type = BookType.NonFiction,
+                    Description = "Edited by Robert Mayhew and published in 2001.",
+                },
+                new Book
+                {
+                    Title = "Ayn Rand Answers: The Best of Her Q & A",
+                    Author = "Ayn Rand",
+                    PublicationYear = 2005,
+                    Type = BookType.NonFiction,
+                    Description = "Edited by Robert Mayhew and published in 2005.",
+                },
             };
-
 
             var links = new List<Link>
             {

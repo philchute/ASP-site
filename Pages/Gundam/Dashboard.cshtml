@@ -1,0 +1,205 @@
+@page
+@model ASP_site.Pages.Gundam.DashboardModel
+@using ASP_site.Models.Gunpla
+@{
+    ViewData["Title"] = "Gunpla Dashboard";
+}
+
+<div class="container-fluid p-0">
+    <form method="get" class="mb-4">
+        <div class="row align-items-end">
+            <div class="col-md-5">
+                <h2 class="display-3">Gunpla Dashboard</h2>
+                <div class="mt-3">
+                    <a asp-page="/Gundam/Grades" class="btn btn-secondary me-2">Grade Guide</a>
+                    <a asp-page="/Gundam/Timeline" class="btn btn-secondary me-2">Timeline</a>
+                    <a asp-page-handler="Export" class="btn btn-secondary">Export CSV</a>
+                    
+                    <button class="btn btn-outline-secondary ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#importCollapse">
+                        Import
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="d-flex justify-content-end align-items-end">
+                    <div class="form-group me-2">
+                        <label class="form-label" for="search-input">Search:</label>
+                        <div class="d-flex">
+                            <input id="search-input" class="form-control" type="text" asp-for="SearchString" />
+                            <button class="btn btn-secondary ms-1" type="submit">Search</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="sort-select">Sort by:</label>
+                        <select id="sort-select" class="form-control" asp-for="SortField" asp-items="Model.SortOptions" onchange="this.form.submit();"></select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="collapse mt-3" id="importCollapse">
+            <div class="card card-body bg-dark border-secondary">
+                 <div class="d-flex gap-2 align-items-center">
+                    <input type="file" name="CsvFile" class="form-control bg-black text-white border-secondary" accept=".csv" form="importForm" required />
+                    <button type="submit" form="importForm" class="btn btn-success">Import CSV</button>
+                </div>
+                <small class="text-muted mt-2">Upload a CSV file previously exported from this dashboard.</small>
+            </div>
+        </div>
+
+        <hr />
+        <p class="lead mb-4">
+            Welcome to the Gunpla Dashboard. This page is still under construction but can be used to track your collection. 
+            Use the filters to narrow down your view, or search for a specific mobile suit.
+        </p>
+        <div class="row mt-3">
+            <div class="col-md-3">
+                <label class="form-label fw-bold">Grades:</label>
+                @foreach (var grade in Enum.GetNames(typeof(GunplaGrade)))
+                {
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="SelectedGrades" value="@grade" id="grade_@grade" checked="@(Model.SelectedGrades.Contains(grade))" onchange="this.form.submit();" />
+                        <label class="form-check-label" for="grade_@grade">@grade</label>
+                    </div>
+                }
+            </div>
+            <div class="col-md-3">
+                <label class="form-label fw-bold">Status:</label>
+                @foreach (var status in Enum.GetNames(typeof(KitStatus)))
+                {
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="SelectedStatuses" value="@status" id="status_@status" checked="@(Model.SelectedStatuses.Contains(status))" onchange="this.form.submit();" />
+                        <label class="form-check-label" for="status_@status">@status</label>
+                    </div>
+                }
+            </div>
+            <div class="col-md-6">
+                 <!-- Stats can go here -->
+                 <label class="form-label fw-bold">Collection Stats:</label>
+                 <div class="row g-2">
+                    @foreach (var grade in Model.CompletedStats)
+                    {
+                        <div class="col-3">
+                            <div class="p-2 border border-secondary rounded text-center bg-dark">
+                                <strong class="text-info d-block">@grade.Value</strong>
+                                <small class="text-muted" style="font-size:0.7em">@grade.Key</small>
+                            </div>
+                        </div>
+                    }
+                 </div>
+            </div>
+        </div>
+    </form>
+    
+    <!-- Hidden form for Import to keep it separate from GET form -->
+    <form method="post" enctype="multipart/form-data" asp-page-handler="Import" id="importForm"></form>
+
+    <section class="grid mt-3">
+        <div class="row g-0 bg-dark text-white fw-bold">
+            <div class="p-1 text-center col-1">ID</div>
+            <div class="p-1 text-center col-1">Grade</div>
+            <div class="p-1 text-center col-2">Timeline</div>
+            <div class="p-1 text-start col-1">Model</div>
+            <div class="p-1 text-start col-3">Name</div>
+            <div class="p-1 text-center col-1">Release</div>
+            <div class="p-1 text-center col-2">Status</div>
+        </div>
+
+        @if(Model.AllKits != null && Model.AllKits.Any()) {
+            foreach (var kit in Model.AllKits) { 
+                var userEntry = Model.UserCollection.FirstOrDefault(u => u.KitId == kit.Id);
+                var currentStatus = userEntry?.Status;
+
+                <div class="row g-0 text-decoration-none text-reset border-bottom table-row-hover align-items-center">
+                    <div class="p-1 text-center col-1 font-monospace text-info">
+                        <a asp-page="/Gundam/Kits/Details" asp-route-id="@kit.Id" class="text-info text-decoration-none">@kit.Id</a>
+                    </div>
+                    <div class="p-1 text-center col-1">
+                        <a asp-page="/Gundam/Grades/List" asp-route-grade="@kit.Grade" class="badge bg-secondary text-decoration-none">@kit.Grade</a>
+                    </div>
+                    <div class="p-1 text-center col-2 text-muted small">
+                        <a asp-page="/Gundam/Timeline/List" asp-route-name="@kit.Gundam?.Timeline" class="text-decoration-none text-muted">@kit.Gundam?.Timeline</a>
+                    </div>
+                    <div class="p-1 text-start col-1 fw-bold text-white">
+                         <a asp-page="/Gundam/Gundams/Details" asp-route-id="@kit.GundamModelNumber" class="text-white text-decoration-none">
+                            @kit.GundamModelNumber
+                        </a>
+                    </div>
+                    <div class="p-1 text-start col-3 text-white">
+                        <a asp-page="/Gundam/Kits/Details" asp-route-id="@kit.Id" class="text-white text-decoration-none">
+                            @(kit.KitName ?? kit.Gundam?.CommonName ?? "Unknown")
+                        </a>
+                    </div>
+                    <div class="p-1 text-center col-1">@kit.ReleaseYear</div>
+                    <div class="p-1 text-center col-2">
+                         <select class="form-select form-select-sm bg-dark text-white border-secondary" onchange="updateStatus('@kit.Id', this.value)">
+                            <option value="" selected="@(currentStatus == null)">-</option>
+                            @foreach (var status in Enum.GetValues(typeof(KitStatus)))
+                            {
+                                <option value="@status" selected="@(currentStatus?.Equals(status) == true)">@status</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+            }
+        } else {
+            <p class="p-2">No kits found matching your criteria.</p>
+        }
+    </section>
+    
+    <!-- Footer Stats -->
+    <div class="mt-5 text-center text-muted">
+        <p>
+            <button class="btn btn-link text-muted text-decoration-none" type="button" data-bs-toggle="collapse" data-bs-target="#hiddenStats">
+                Show Backlog Stats
+            </button>
+        </p>
+        <div class="collapse" id="hiddenStats">
+            <div class="row justify-content-center">
+                <div class="col-md-3">
+                    <h3 class="text-danger">@Model.BacklogCount</h3>
+                    <small>Backlog</small>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="text-danger">$@Model.TotalSpent.ToString("N0")</h3>
+                    <small>Total Spent</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .table-row-hover:hover {
+        background-color: #303030;
+    }
+</style>
+
+<script>
+    function updateStatus(kitId, newStatus) {
+        if (!newStatus) return;
+
+        const formData = new FormData();
+        formData.append('kitId', kitId);
+        formData.append('status', newStatus);
+        const token = document.querySelector('input[name="__RequestVerificationToken"]').value;
+        formData.append('__RequestVerificationToken', token);
+
+        fetch('?handler=UpdateStatus', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Flash success maybe?
+            } else {
+                alert('Error saving status');
+            }
+        })
+        .catch(err => {
+            console.error(err);
+            alert('Network error saving status');
+        });
+    }
+</script>

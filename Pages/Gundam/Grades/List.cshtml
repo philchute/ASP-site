@@ -1,0 +1,82 @@
+@page "/gundam/grade/{grade}"
+@model ASP_site.Pages.Gundam.Grades.ListModel
+@using ASP_site.Models.Gunpla
+@{
+    ViewData["Title"] = $"{Model.Grade} Kit List";
+}
+
+<div class="container-fluid p-0">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="display-4 text-info">@Model.Grade Master List</h1>
+        <div>
+            <a asp-page="/Gundam/Grades" class="btn btn-outline-secondary me-2">Grade Guide</a>
+            <a asp-page="/Gundam/Dashboard/" class="btn btn-secondary">Dashboard</a>
+        </div>
+    </div>
+
+    <section class="grid mt-3">
+        <div class="row g-0 bg-dark text-white fw-bold">
+            <div class="p-1 text-center col-1">ID</div>
+            <div class="p-1 text-center col-2">Model</div>
+            <div class="p-1 text-start col-4">Name</div>
+            <div class="p-1 text-center col-1">Release</div>
+            <div class="p-1 text-center col-2">Timeline</div>
+            <div class="p-1 text-center col-2">My Status</div>
+        </div>
+
+        @foreach (var kit in Model.Kits)
+        {
+            var userEntry = Model.UserCollection.FirstOrDefault(u => u.KitId == kit.Id);
+            var statusClass = userEntry?.Status switch {
+                KitStatus.Built or KitStatus.Completed => "bg-success",
+                KitStatus.Own or KitStatus.Started => "bg-warning text-dark",
+                KitStatus.Want => "bg-primary",
+                _ => "bg-secondary"
+            };
+            
+            <div class="row g-0 text-decoration-none text-reset border-bottom table-row-hover align-items-center">
+                <div class="p-1 text-center col-1 font-monospace text-info">
+                    @kit.Id
+                </div>
+                <div class="p-1 text-center col-2">
+                    <a asp-page="/Gundam/Gundams/Details" asp-route-id="@kit.GundamModelNumber" class="text-white text-decoration-none">
+                        @kit.GundamModelNumber
+                    </a>
+                </div>
+                <div class="p-1 text-start col-4 fw-bold text-white">
+                    <a asp-page="/Gundam/Kits/Details" asp-route-id="@kit.Id" class="text-white text-decoration-none">
+                        @(kit.KitName ?? kit.Gundam?.CommonName ?? "Unknown")
+                    </a>
+                </div>
+                <div class="p-1 text-center col-1">@kit.ReleaseYear</div>
+                <div class="p-1 text-center col-2 text-muted small">
+                    <a asp-page="/Gundam/Timeline/" asp-route-name="@kit.Gundam?.Timeline" class="text-decoration-none text-muted">
+                        @kit.Gundam?.Timeline
+                    </a>
+                </div>
+                <div class="p-1 text-center col-2">
+                    @if (userEntry != null)
+                    {
+                        <span class="badge @statusClass">@userEntry.Status</span>
+                    }
+                    else
+                    {
+                        <span class="text-muted small">-</span>
+                    }
+                </div>
+            </div>
+        }
+        @if (!Model.Kits.Any())
+        {
+            <div class="row g-0 border-bottom p-3">
+                <div class="col-12 text-center text-muted">No kits found for this grade.</div>
+            </div>
+        }
+    </section>
+</div>
+
+<style>
+    .table-row-hover:hover {
+        background-color: #303030;
+    }
+</style>

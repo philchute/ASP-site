@@ -1,0 +1,64 @@
+@page "/gundam/gundam/{id}"
+@model ASP_site.Pages.Gunpla.Gundams.DetailsModel
+@{
+    ViewData["Title"] = Model.Gundam.CommonName;
+}
+
+<div class="container-fluid p-0">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+             <h1 class="display-4 text-info mb-0">@Model.Gundam.CommonName</h1>
+             <div class="text-muted fs-5">
+                <span class="text-white">@Model.Gundam.ModelNumber</span> 
+                <span class="mx-2 text-secondary">|</span> 
+                <span class="text-info">@Model.Gundam.Timeline</span>
+             </div>
+        </div>
+        <div>
+            <a asp-page="/Gundam/Dashboard" class="btn btn-outline-secondary">Back to Dashboard</a>
+        </div>
+    </div>
+
+    <div class="mb-5">
+        <h5 class="text-secondary text-uppercase fs-6 mb-3">Description</h5>
+        <p class="lead text-light mb-0">@Model.Gundam.Description</p>
+    </div>
+
+    <div class="d-flex align-items-center mb-4 border-bottom border-secondary pb-2">
+        <h2 class="text-white mb-0 me-3">Available Kits</h2>
+        <span class="badge bg-secondary rounded-pill">@Model.Kits.Count</span>
+    </div>
+    
+    <div class="row g-4">
+        @foreach (var kit in Model.Kits)
+        {
+            <div class="col-md-4 col-sm-6">
+                <a asp-page="/Gundam/Kits/Details" asp-route-id="@kit.Id" class="text-decoration-none">
+                    <div class="card bg-dark border-secondary h-100 table-row-hover">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <span class="badge bg-info text-dark">@kit.Grade</span>
+                                <span class="font-monospace text-muted small">@kit.Id</span>
+                            </div>
+                            <h3 class="h5 text-white mb-2">@(kit.KitName ?? kit.Gundam?.CommonName)</h3>
+                            <div class="text-muted small">
+                                <div>Released: @kit.ReleaseYear</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        }
+    </div>
+</div>
+
+<style>
+    .table-row-hover {
+        transition: all 0.2s ease;
+    }
+    .table-row-hover:hover {
+        background-color: #262626 !important;
+        border-color: #00bcd4 !important;
+        transform: translateY(-5px);
+    }
+</style>

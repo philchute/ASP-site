@@ -48,10 +48,12 @@ builder.Services.AddSingleton<ThreeNetworksQuery>();
 builder.Services.AddMemoryCache();
 
 // Register application services
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddSingleton<ServerBrowserService>();
 builder.Services.AddSingleton<SiteMapService>();
 builder.Services.AddSingleton<BlogService>();
 builder.Services.AddSingleton<ScaleConverterService>();
+builder.Services.AddScoped<GunplaCollectionService>();
 
 // Register Background Worker
 builder.Services.AddHostedService<GameServerWorker>();

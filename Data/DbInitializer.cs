@@ -158,6 +158,14 @@ namespace ASP_site.Data {
         }
       }
 
+      // Initialize Gunpla Data
+      try {
+        GunplaInitializer.Initialize(context);
+      }
+      catch (Exception ex) {
+        Console.WriteLine($"Failed to initialize Gunpla data: {ex.Message}");
+      }
+
       // Initialize Update Posts and Tags
       var (initialPosts, initialTags) = UpdatePostInitializer.GetInitialData();
       foreach (var tag in initialTags)

@@ -22,6 +22,7 @@ public class SiteMapService
                         new SiteNode { Id = "chiang", Label = "Ted Chiang", Url = "/Books/Chiang/Index" },
                         new SiteNode { Id = "clarke", Label = "Arthur C. Clarke", Url = "/Books/Clarke/Index" },
                         new SiteNode { Id = "heinlein", Label = "Robert A. Heinlein", Url = "/Books/Heinlein/Index" },
+                        new SiteNode { Id = "rand", Label = "Ayn Rand", Url = "/Books/Rand/Index" },
                         new SiteNode { Id = "philosophy", Label = "Philosophy", Url = "/Philosophy/Index" },
                         new SiteNode { Id = "tractatus", Label = "Tractatus", Url = "/Tractatus/Index" },
                     }
@@ -50,6 +51,7 @@ public class SiteMapService
                         new SiteNode { Id = "maps", Label = "Map List", Url = "/Maps/Index" },
                         new SiteNode { Id = "servers", Label = "Server Browser", Url = "/Servers/Index" },
                         new SiteNode { Id = "scales", Label = "Model Scales", Url = "/Math/Scales/Index" },
+                        new SiteNode { Id = "gunpla", Label = "Gunpla Dashboard", Url = "/Gundam/Dashboard" },
                     }
                 },
                 new SiteNode

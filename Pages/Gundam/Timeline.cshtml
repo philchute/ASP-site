@@ -1,0 +1,134 @@
+@page "/gundam/timeline/{name?}"
+@model ASP_site.Pages.Gundam.TimelineModel
+@{
+    ViewData["Title"] = string.IsNullOrEmpty(Model.TimelineName) ? "Gunpla Timeline List" : $"{Model.TimelineName} Kits";
+}
+
+<style>
+    .timeline-page {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #e0e0e0;
+        background-color: #121212;
+        padding: 40px;
+        min-height: 100vh;
+    }
+    .content-card {
+        background: #1e1e1e;
+        border: 1px solid #333;
+        padding: 40px;
+        border-radius: 8px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .kit-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+    }
+    .kit-card {
+        background: #262626;
+        border: 1px solid #444;
+        border-radius: 6px;
+        padding: 15px;
+        position: relative;
+    }
+    .kit-card a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+    }
+    .kit-grade {
+        background: #00bcd4;
+        color: #000;
+        display: inline-block;
+        padding: 2px 8px;
+        border-radius: 4px;
+        font-weight: bold;
+        font-size: 0.8em;
+        margin-bottom: 10px;
+    }
+    h1, h2, h3 { color: #00bcd4; margin-top: 1.5em; margin-bottom: 0.5em; }
+    h1 { margin-top: 0; font-family: 'Orbitron', sans-serif; border-bottom: 2px solid #333; padding-bottom: 10px; }
+    p, li { line-height: 1.6; color: #ccc; }
+    strong { color: #fff; }
+    a.back-link {
+        color: #888;
+        text-decoration: none;
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+    a.back-link:hover { color: #fff; }
+</style>
+
+<div class="timeline-page">
+    <a asp-page="/Gundam/Dashboard" class="back-link">&larr; Back to Dashboard</a>
+
+    @if (string.IsNullOrEmpty(Model.TimelineName))
+    {
+        <div class="content-card">
+            <div class="text-center mb-4">
+                <h3>Browse Kits by Timeline</h3>
+                <div class="d-flex justify-content-center gap-2 flex-wrap">
+                    @foreach (var timeline in Model.AllTimelines)
+                    {
+                        <a asp-page="/Gundam/Timeline" asp-route-name="@timeline" class="btn btn-outline-info">@timeline</a>
+                    }
+                </div>
+            </div>
+
+            @if (Model.TimelineInfo != null)
+            {
+                @* Simple Server-side Render for common markdown elements *@
+                string html = Model.TimelineInfo.Content;
+                // Remove FrontMatter
+                html = System.Text.RegularExpressions.Regex.Replace(html, @"^---[\s\S]*?---", "");
+                
+                // Headers
+                html = System.Text.RegularExpressions.Regex.Replace(html, @"^### (.*$)", "<h3>$1</h3>", System.Text.RegularExpressions.RegexOptions.Multiline);
+                html = System.Text.RegularExpressions.Regex.Replace(html, @"^## (.*$)", "<h2>$1</h2>", System.Text.RegularExpressions.RegexOptions.Multiline);
+                
+                // Bold
+                html = System.Text.RegularExpressions.Regex.Replace(html, @"\*\*(.*?)\*\*", "<strong>$1</strong>");
+                
+                // Lists
+                html = System.Text.RegularExpressions.Regex.Replace(html, @"^\* (.*$)", "<li>$1</li>", System.Text.RegularExpressions.RegexOptions.Multiline);
+                
+                // Paragraphs (double newline)
+                html = System.Text.RegularExpressions.Regex.Replace(html, @"\n\n", "<br/><br/>");
+            
+                @Html.Raw(html)
+            }
+            else
+            {
+                <p>Timeline information not found.</p>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="container-fluid">
+            <h1 style="color: #00bcd4;">@Model.TimelineName</h1>
+            <p class="text-muted mb-4">Displaying all kits from this timeline.</p>
+
+            <div class="kit-grid">
+                @foreach (var kit in Model.Kits.OrderBy(k => k.Grade).ThenBy(k => k.ReleaseYear))
+                {
+                    <div class="kit-card">
+                        <a asp-page="/Gundam/Kits/Details" asp-route-id="@kit.Id">
+                            <span class="kit-grade">@kit.Grade</span>
+                            <h4 class="mt-2">@(kit.KitName ?? kit.Gundam?.CommonName)</h4>
+                            <div class="text-muted small">@kit.GundamModelNumber</div>
+                            <div class="mt-2 text-white-50">Released: @kit.ReleaseYear</div>
+                        </a>
+                    </div>
+                }
+            </div>
+            
+            @if (!Model.Kits.Any())
+            {
+                <p>No kits found for this timeline.</p>
+            }
+        </div>
+    }
+</div>

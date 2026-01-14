@@ -28,8 +28,16 @@ namespace ASP_site.Data
     public DbSet<ChessArmyPlacement> ArmyPlacements { get; set; } = null!;
     public DbSet<ChessPiece> ChessPieces { get; set; } = null!;
 
+    public DbSet<ASP_site.Models.Gunpla.Gundam> Gundams { get; set; } = null!;
+    public DbSet<ASP_site.Models.Gunpla.GunplaKit> GunplaKits { get; set; } = null!;
+    public DbSet<ASP_site.Models.Gunpla.UserKitEntry> UserKitEntries { get; set; } = null!;
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+      modelBuilder.Entity<ASP_site.Models.Gunpla.Gundam>().ToTable("Gundams");
+      modelBuilder.Entity<ASP_site.Models.Gunpla.GunplaKit>().ToTable("GunplaKits");
+      modelBuilder.Entity<ASP_site.Models.Gunpla.UserKitEntry>().ToTable("UserKitEntries");
+
       modelBuilder.Entity<Engine>().ToTable("Engines");
       modelBuilder.Entity<Game>().ToTable("Games");
       modelBuilder.Entity<Link>().ToTable("Links");

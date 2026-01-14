@@ -6,11 +6,10 @@ namespace ASP_site.Models
     public enum BookType
     {
         Novel,
-        //Novella,
         ShortStory,
         NonFiction,
         Poem,
-        //Screenplay,
+        Play,
         Forward
     }
 
@@ -20,7 +19,7 @@ namespace ASP_site.Models
         public string Title { get; set; } = "";
 
         [Required]
-        public string Author { get; set; } = "Robert A. Heinlein";
+        public string Author { get; set; } = "";
 
         public string? WrittenAs { get; set; } // Pseudonym
 

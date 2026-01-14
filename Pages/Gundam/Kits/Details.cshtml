@@ -1,0 +1,65 @@
+@page "/gundam/kit/{id}"
+@model ASP_site.Pages.Gunpla.Kits.DetailsModel
+@using ASP_site.Models.Gunpla
+@{
+    ViewData["Title"] = $"{Model.Kit.Grade} {Model.Kit.Gundam?.CommonName}";
+}
+
+<div class="container-fluid p-0">
+    <div class="d-flex justify-content-between align-items-center mb-5">
+        <h1 class="display-5 text-info mb-0">
+            <span class="badge bg-secondary fs-4 align-middle">@Model.Kit.Grade</span> 
+            @(Model.Kit.KitName ?? Model.Kit.Gundam?.CommonName)
+        </h1>
+        <a asp-page="/Gundam/Dashboard/" class="btn btn-outline-secondary">Back to Dashboard</a>
+    </div>
+    
+    <div class="row gx-5">
+        <div class="col-md-6 mb-5">
+            <h3 class="h4 text-info mb-4 border-bottom border-secondary pb-2">Specifications</h3>
+            <ul class="list-group list-group-flush bg-transparent ps-0">
+                <li class="list-group-item bg-transparent text-white border-secondary px-0 d-flex justify-content-between align-items-center">
+                    <span class="text-muted">Kit ID</span>
+                    <span class="font-monospace text-info fs-5">@Model.Kit.Id</span>
+                </li>
+                <li class="list-group-item bg-transparent text-white border-secondary px-0 d-flex justify-content-between align-items-center">
+                    <span class="text-muted">Gundam Model</span>
+                    <a asp-page="/Gundam/Gundams/Details" asp-route-id="@Model.Kit.GundamModelNumber" class="text-decoration-none text-info fs-5">
+                        @Model.Kit.GundamModelNumber
+                    </a>
+                </li>
+                <li class="list-group-item bg-transparent text-white border-secondary px-0 d-flex justify-content-between align-items-center">
+                    <span class="text-muted">Release Year</span>
+                    <span class="fs-5">@Model.Kit.ReleaseYear</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-md-6 mb-5">
+            <h3 class="h4 text-info mb-4 border-bottom border-secondary pb-2">Collection Status</h3>
+            <form method="post">
+                <input type="hidden" asp-for="InputEntry.KitId" />
+                
+                <div class="mb-4">
+                    <label class="form-label text-secondary small text-uppercase">Status</label>
+                    <select asp-for="InputEntry.Status" class="form-select bg-black text-white border-secondary" asp-items="Html.GetEnumSelectList<KitStatus>()"></select>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label text-secondary small text-uppercase">Price Paid</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-secondary text-white border-secondary">$</span>
+                        <input asp-for="InputEntry.PricePaid" class="form-control bg-black text-white border-secondary" type="number" step="0.01" />
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label text-secondary small text-uppercase">Notes</label>
+                    <textarea asp-for="InputEntry.Notes" class="form-control bg-black text-white border-secondary" rows="3"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100 py-2">Save Changes</button>
+            </form>
+        </div>
+    </div>
+</div>
