@@ -61,9 +61,11 @@ namespace ASP_site.Data.Initializers {
         new Link { GameID = "", Label = "The Complete Vector Arcade Journey", Description = "Every vector arcade game (CRT drawing lines rather than pixels)",
           LinkType = LinkType.Video, Url = "https://www.youtube.com/watch?v=swryO4xWOTk" },
         new Link { GameID = "", Label = "Archipelago: The Best Way to Play Old Games", Description = "Archipelago: The Best Way to Play Old Games",
-          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=n-Q-vQgaxNs" },
+          LinkType = LinkType.Video, Url = "https://www.youtube.com/watch?v=n-Q-vQgaxNs" },
         new Link { GameID = "", Label = "Quine Relay", Description = "Quine Relay",
           LinkType = LinkType.Community, Url = "https://github.com/mame/quine-relay" },
+        new Link { GameID = "", Label = "eHero on YouTube", Description = "eHero is a kids movie about a competitive gamer. Game footage was taken from Reflex Arena.",
+          LinkType = LinkType.Video, Url = "https://www.youtube.com/watch?v=3xzIV7uhU-U" },
 
 
         // ActionHalfLife

@@ -1,6 +1,6 @@
 # Customizable Card Games (CCGs)
 
-This page provides an overview of active Customizable Card Games (CCGs), also known as Trading Card Games (TCGs), in North America as of December 2025 along with some links and resources. There is also some information about games that are not available, as well as some boxed and living card games which share some CCG elements.
+This page provides an overview of active Customizable Card Games (CCGs), also known as Trading Card Games (TCGs), in North America as of January 2026, along with some links and resources. There is also some information about games that are not available, as well as some boxed and living card games which share some CCG elements.
 This is as much to organize my own thoughts as it is to provide as service to others, but I hope you find this useful. 
 In some ways this is a better organized version of the [wikipedia list of CCGS](https://en.wikipedia.org/wiki/List_of_collectible_card_games).
 Most of the upcoming release dates are gathered from this [article](https://www.vintageccg.com/ccg-news/tcg-release-schedule-2024/).
@@ -525,10 +525,10 @@ Gundam Card Game is a brand new CCG based on the Gundam Franchise and published 
 | ST06 | Clan Unity Starter Deck              | October 24, 2025   |
 | ST07 | Celestial Drive Starter Deck         | January 16, 2026   |
 | ST08 | Flash of Brilliance Starter Deck     | January 16, 2026   |
-| GD03 | TBA                                  | January 31, 2026   |
+| GD03 | Steel Requiem Booster Box            | January 31, 2026   |
 |      | Gundam Assemble Premium Collection   | February 27, 2026  |
 |      | Ultimate Deck 01                     | March 27, 2026     |
-| GD04 | TBA                                  | April 24, 2026     |
+| GD04 | Phantom Aria Booster Box             | April 24, 2026     |
 
 
 ### Keyforge
