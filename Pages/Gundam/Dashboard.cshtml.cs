@@ -39,7 +39,12 @@ namespace ASP_site.Pages.Gundam
         public List<string> SelectedGrades { get; set; } = new();
 
         [BindProperty(SupportsGet = true)]
+        public List<string> SelectedScales { get; set; } = new();
+
+        [BindProperty(SupportsGet = true)]
         public List<string> SelectedStatuses { get; set; } = new();
+
+        public List<string> AllScales { get; set; } = new();
 
         // Sorting Properties
         [BindProperty(SupportsGet = true)]
@@ -48,6 +53,12 @@ namespace ASP_site.Pages.Gundam
 
         public async Task OnGetAsync()
         {
+            var scales = new ScaleConverterService().GetCommonScales();
+            AllScales = scales
+                .Where(s => s.Category.Contains("Gundam"))
+                .Select(s => s.Name)
+                .ToList();
+
             UserCollection = await _service.GetUserCollectionAsync();
             var allKits = await _service.GetAllKitsAsync();
             
@@ -58,15 +69,22 @@ namespace ASP_site.Pages.Gundam
             {
                 query = query.Where(k => 
                     k.Id.Contains(SearchString, StringComparison.OrdinalIgnoreCase) ||
-                    k.GundamModelNumber.Contains(SearchString, StringComparison.OrdinalIgnoreCase) ||
-                    (k.Gundam != null && k.Gundam.CommonName != null && k.Gundam.CommonName.Contains(SearchString, StringComparison.OrdinalIgnoreCase)) ||
-                    (k.Gundam != null && k.Gundam.Timeline != null && k.Gundam.Timeline.Contains(SearchString, StringComparison.OrdinalIgnoreCase))
+                    (k.KitName != null && k.KitName.Contains(SearchString, StringComparison.OrdinalIgnoreCase)) ||
+                    (k.Gundams != null && k.Gundams.Any(u => u.ModelNumber.Contains(SearchString, StringComparison.OrdinalIgnoreCase))) ||
+                    (k.Gundams != null && k.Gundams.Any(u => u.CommonName.Contains(SearchString, StringComparison.OrdinalIgnoreCase))) ||
+                    (k.Gundams != null && k.Gundams.Any(u => u.Timeline.Contains(SearchString, StringComparison.OrdinalIgnoreCase))) ||
+                    (k.Gundams != null && k.Gundams.Any(u => u.Series != null && u.Series.Any(s => s.Contains(SearchString, StringComparison.OrdinalIgnoreCase))))
                 );
             }
 
             if (SelectedGrades.Any())
             {
                 query = query.Where(k => SelectedGrades.Contains(k.Grade.ToString()));
+            }
+
+            if (SelectedScales.Any())
+            {
+                query = query.Where(k => SelectedScales.Contains(k.Scale));
             }
 
             // Status filter
@@ -87,13 +105,13 @@ namespace ASP_site.Pages.Gundam
                     query = query.OrderBy(k => k.Grade).ThenBy(k => k.Id);
                     break;
                 case "Timeline":
-                    query = query.OrderBy(k => k.Gundam != null ? k.Gundam.Timeline : "").ThenBy(k => k.Id);
+                    query = query.OrderBy(k => k.Gundams.FirstOrDefault() != null ? k.Gundams.First().Timeline : "").ThenBy(k => k.Id);
                     break;
                 case "Model":
-                    query = query.OrderBy(k => k.GundamModelNumber).ThenBy(k => k.Id);
+                    query = query.OrderBy(k => k.Gundams.FirstOrDefault() != null ? k.Gundams.First().ModelNumber : "").ThenBy(k => k.Id);
                     break;
                 case "Name":
-                    query = query.OrderBy(k => k.Gundam != null ? k.Gundam.CommonName : "").ThenBy(k => k.Id);
+                    query = query.OrderBy(k => k.KitName ?? (k.Gundams.FirstOrDefault() != null ? k.Gundams.First().CommonName : "")).ThenBy(k => k.Id);
                     break;
                 case "Release":
                     query = query.OrderBy(k => k.ReleaseYear).ThenBy(k => k.Id);

@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using ASP_site.Models;
 using ASP_site.Models.Chess;
+using ASP_site.Models.Gunpla;
 using System.Text.Json;
 
 namespace ASP_site.Data
@@ -22,29 +23,40 @@ namespace ASP_site.Data
     public DbSet<UpdatePost> UpdatePosts { get; set; } = null!;
     public DbSet<Tag> Tags { get; set; } = null!;
     public DbSet<Book> Books { get; set; } = null!;
-    // ChessArmy merged into ChessVariant
-    // public DbSet<ChessArmy> Armies { get; set; } = null!;
     public DbSet<ChessVariant> Variants { get; set; } = null!;
     public DbSet<ChessArmyPlacement> ArmyPlacements { get; set; } = null!;
     public DbSet<ChessPiece> ChessPieces { get; set; } = null!;
 
-    public DbSet<ASP_site.Models.Gunpla.Gundam> Gundams { get; set; } = null!;
-    public DbSet<ASP_site.Models.Gunpla.GunplaKit> GunplaKits { get; set; } = null!;
-    public DbSet<ASP_site.Models.Gunpla.UserKitEntry> UserKitEntries { get; set; } = null!;
+    public DbSet<Gundam> Gundams { get; set; } = null!;
+    public DbSet<GunplaKit> GunplaKits { get; set; } = null!;
+    public DbSet<UserKitEntry> UserKitEntries { get; set; } = null!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-      modelBuilder.Entity<ASP_site.Models.Gunpla.Gundam>().ToTable("Gundams");
-      modelBuilder.Entity<ASP_site.Models.Gunpla.GunplaKit>().ToTable("GunplaKits");
-      modelBuilder.Entity<ASP_site.Models.Gunpla.UserKitEntry>().ToTable("UserKitEntries");
+      modelBuilder.Entity<Gundam>().ToTable("Gundams");
 
+      modelBuilder.Entity<Gundam>()
+        .Property(g => g.Series)
+        .HasConversion(
+            v => JsonSerializer.Serialize(v, new JsonSerializerOptions()),
+            v => JsonSerializer.Deserialize<List<string>>(v, new JsonSerializerOptions()) ?? new List<string>())
+        .Metadata.SetValueComparer(new ValueComparer<List<string>>(
+            (c1, c2) => JsonSerializer.Serialize(c1, new JsonSerializerOptions()) == JsonSerializer.Serialize(c2, new JsonSerializerOptions()),
+            c => c.Aggregate(0, (a, v) => HashCode.Combine(a, v.GetHashCode())),
+            c => JsonSerializer.Deserialize<List<string>>(JsonSerializer.Serialize(c, new JsonSerializerOptions()), new JsonSerializerOptions())!));
+
+      modelBuilder.Entity<GunplaKit>().ToTable("GunplaKits");
+      modelBuilder.Entity<UserKitEntry>().ToTable("UserKitEntries");
+
+      modelBuilder.Entity<GunplaKit>()
+        .HasMany(k => k.Gundams)
+        .WithMany();
       modelBuilder.Entity<Engine>().ToTable("Engines");
       modelBuilder.Entity<Game>().ToTable("Games");
       modelBuilder.Entity<Link>().ToTable("Links");
       modelBuilder.Entity<Server>().ToTable("Servers");
       modelBuilder.Entity<Map>().ToTable("Maps");
       modelBuilder.Entity<Book>().ToTable("Books");
-      // modelBuilder.Entity<ChessArmy>().ToTable("Armies");
       modelBuilder.Entity<ChessVariant>().ToTable("Variants");
       modelBuilder.Entity<ChessPiece>().ToTable("ChessPieces");
       modelBuilder.Entity<ChessArmyPlacement>().ToTable("ArmyPlacements");
@@ -126,14 +138,9 @@ namespace ASP_site.Data
           c => c.Aggregate(0, (a, v) => HashCode.Combine(a, v.GetHashCode())),
           c => JsonSerializer.Deserialize<List<MapGameInfo>>(JsonSerializer.Serialize(c, new JsonSerializerOptions()), new JsonSerializerOptions())!));
 
-      // Configure UpdatePost table
       modelBuilder.Entity<UpdatePost>().ToTable("UpdatePosts");
-
-      // Configure Tag table
       modelBuilder.Entity<Tag>().ToTable("Tags");
 
-      // Configure the many-to-many relationship between UpdatePost and Tag
-      // EF Core 5+ can configure this by convention, but explicit configuration is clearer.
       modelBuilder.Entity<UpdatePost>()
           .HasMany(p => p.Tags)
           .WithMany(t => t.UpdatePosts)
@@ -149,10 +156,6 @@ namespace ASP_site.Data
                   .WithMany()
                   .HasForeignKey("UpdatePostId")
                   .OnDelete(DeleteBehavior.Cascade));
-
-      // Configure many-to-many relationship between Army and ChessPiece
-      // REMOVED old many-to-many config as we are moving to explicit Placement entity
-      // Keeping generic config if needed, but 'ArmyChessPiece' table is likely deprecated by 'ArmyPlacements'
 
       modelBuilder.Entity<ChessVariant>()
         .Property(v => v.ParentIDs)
@@ -194,15 +197,6 @@ namespace ASP_site.Data
             c => JsonSerializer.Serialize(c, new JsonSerializerOptions()).GetHashCode(),
             c => JsonSerializer.Deserialize<List<PromotionRule>>(JsonSerializer.Serialize(c, new JsonSerializerOptions()), new JsonSerializerOptions())!));
 
-      // modelBuilder.Entity<ChessArmy>()
-      //   .Property(a => a.PromotionRules)
-      //   .HasConversion(
-      //       v => JsonSerializer.Serialize(v, new JsonSerializerOptions()),
-      //       v => JsonSerializer.Deserialize<List<PromotionRule>>(v, new JsonSerializerOptions()) ?? new List<PromotionRule>())
-      //   .Metadata.SetValueComparer(new ValueComparer<List<PromotionRule>>(
-      //       (c1, c2) => JsonSerializer.Serialize(c1, new JsonSerializerOptions()) == JsonSerializer.Serialize(c2, new JsonSerializerOptions()),
-      //       c => JsonSerializer.Serialize(c, new JsonSerializerOptions()).GetHashCode(),
-      //       c => JsonSerializer.Deserialize<List<PromotionRule>>(JsonSerializer.Serialize(c, new JsonSerializerOptions()), new JsonSerializerOptions())!));
     }
   }
 }

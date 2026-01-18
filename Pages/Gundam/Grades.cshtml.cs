@@ -7,10 +7,12 @@ namespace ASP_site.Pages.Gunpla
     public class GradesModel : PageModel
     {
         private readonly IWebHostEnvironment _webHostEnvironment;
+        private readonly MarkdownService _markdownService;
 
-        public GradesModel(IWebHostEnvironment webHostEnvironment)
+        public GradesModel(IWebHostEnvironment webHostEnvironment, MarkdownService markdownService)
         {
             _webHostEnvironment = webHostEnvironment;
+            _markdownService = markdownService;
         }
 
         public BlogPost? GradeInfo { get; set; }
@@ -21,12 +23,10 @@ namespace ASP_site.Pages.Gunpla
             if (System.IO.File.Exists(path))
             {
                 var content = await System.IO.File.ReadAllTextAsync(path);
-                // Simple parsing reused from BlogService logic (simplified here)
-                // In a real app we'd expose a Parse method in BlogService or MarkdownService
                 GradeInfo = new BlogPost
                 {
                     Title = "Gunpla Grades",
-                    Content = content // We will render this using a Markdown helper in the view if available, or just raw if no helper
+                    Content = _markdownService.Parse(content)
                 };
             }
         }

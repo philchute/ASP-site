@@ -1,6 +1,7 @@
 @page
 @model ASP_site.Pages.Gundam.DashboardModel
 @using ASP_site.Models.Gunpla
+@using ASP_site.Helpers
 @{
     ViewData["Title"] = "Gunpla Dashboard";
 }
@@ -23,7 +24,7 @@
             <div class="col-md-7">
                 <div class="d-flex justify-content-end align-items-end">
                     <div class="form-group me-2">
-                        <label class="form-label" for="search-input">Search:</label>
+                        <label class="form-label" for="search-input">Search (Name, ID, Timeline, Series):</label>
                         <div class="d-flex">
                             <input id="search-input" class="form-control" type="text" asp-for="SearchString" />
                             <button class="btn btn-secondary ms-1" type="submit">Search</button>
@@ -56,7 +57,7 @@
             You can edit the csv if you like, in a text editor or spreadsheet editor, and import it here later or on another device.
         </p>
         <div class="row mt-3">
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <label class="form-label fw-bold">Grades:</label>
                 @foreach (var grade in Enum.GetNames(typeof(GunplaGrade)))
                 {
@@ -66,7 +67,17 @@
                     </div>
                 }
             </div>
-            <div class="col-md-3">
+            <div class="col-md-2">
+                <label class="form-label fw-bold">Scales:</label>
+                @foreach (var scale in Model.AllScales)
+                {
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="SelectedScales" value="@scale" id="scale_@scale" checked="@(Model.SelectedScales.Contains(scale))" onchange="this.form.submit();" />
+                        <label class="form-check-label" for="scale_@scale">@scale</label>
+                    </div>
+                }
+            </div>
+            <div class="col-md-2">
                 <label class="form-label fw-bold">Status:</label>
                 @foreach (var status in Enum.GetNames(typeof(KitStatus)))
                 {
@@ -99,11 +110,10 @@
 
     <section class="grid mt-3">
         <div class="row g-0 bg-dark text-white fw-bold">
-            <div class="p-1 text-center col-2">ID</div>
-            <div class="p-1 text-center col-1">Grade</div>
+            <div class="p-1 text-start col-2">Grade/ID <i>(@(Model.AllKits.Count > 0 ? Model.AllKits.Count : 0) shown)</i></div>
             <div class="p-1 text-center col-2">Timeline</div>
-            <div class="p-1 text-start col-1">Model</div>
-            <div class="p-1 text-start col-3">Name <i>(@(Model.AllKits.Count > 0 ? Model.AllKits.Count : 0) shown)</i></div>
+            <div class="p-1 text-start col-2">Model</div>
+            <div class="p-1 text-start col-3">Name <i>(@(Model.AllKits.Where(k => k.Gundams != null && k.Gundams.Any()).Count() > 0 ? Model.AllKits.Where(k => k.Gundams != null && k.Gundams.Any()).Count() : 0) shown)</i></div>
             <div class="p-1 text-center col-1">Release</div>
             <div class="p-1 text-center col-2">Status</div>
         </div>
@@ -114,23 +124,27 @@
                 var currentStatus = userEntry?.Status;
 
                 <div class="row g-0 text-decoration-none text-reset border-bottom table-row-hover align-items-center">
-                    <div class="p-1 text-center col-2 font-monospace text-info">
+                    <div class="p-1 text-start col-2 font-monospace text-info">
+                        <a asp-page="/Gundam/Grades/List" asp-route-grade="@kit.Grade" class="badge bg-secondary text-decoration-none">@kit.Grade</a>
                         <a asp-page="/Gundam/Kits/Details" asp-route-id="@kit.Id" class="text-info text-decoration-none">@kit.Id</a>
                     </div>
-                    <div class="p-1 text-center col-1">
-                        <a asp-page="/Gundam/Grades/List" asp-route-grade="@kit.Grade" class="badge bg-secondary text-decoration-none">@kit.Grade</a>
-                    </div>
                     <div class="p-1 text-center col-2 text-muted small">
-                        <a asp-page="/Gundam/Timeline/List" asp-route-name="@kit.Gundam?.Timeline" class="text-decoration-none text-muted">@kit.Gundam?.Timeline</a>
+                        <a asp-page="/Gundam/Timeline/List" asp-route-name="@(kit.Gundams.FirstOrDefault()?.Timeline ?? "-")" class="text-decoration-none text-muted">
+                            @(kit.Gundams.FirstOrDefault()?.Timeline ?? "-")
+                        </a>
                     </div>
-                    <div class="p-1 text-start col-1 fw-bold text-white">
-                         <a asp-page="/Gundam/Gundams/Details" asp-route-id="@kit.GundamModelNumber" class="text-white text-decoration-none">
-                            @kit.GundamModelNumber
+                    <div class="p-1 text-start col-2 fw-bold text-white">
+                        @{
+                            var seriesColor = GundamHelpers.GetSeriesColor(GundamHelpers.GetSeriesFullName(kit.Gundams.FirstOrDefault()?.Series.FirstOrDefault()));
+                        }
+                        <span style="color: @seriesColor; font-size: 1.2em; line-height: 1;">&#9632;</span>
+                         <a asp-page="/Gundam/Gundams/Details" asp-route-id="@(kit.Gundams.FirstOrDefault()?.ModelNumber ?? "unknown")" class="text-white text-decoration-none">
+                            @(kit.Gundams.FirstOrDefault()?.ModelNumber ?? "-")
                         </a>
                     </div>
                     <div class="p-1 text-start col-3 text-white">
                         <a asp-page="/Gundam/Kits/Details" asp-route-id="@kit.Id" class="text-white text-decoration-none">
-                            @(kit.KitName ?? kit.Gundam?.CommonName ?? "Unknown")
+                            @(kit.KitName ?? kit.Gundams.FirstOrDefault()?.CommonName ?? "Unknown")
                         </a>
                     </div>
                     <div class="p-1 text-center col-1">@kit.ReleaseYear</div>

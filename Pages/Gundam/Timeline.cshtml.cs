@@ -10,11 +10,13 @@ namespace ASP_site.Pages.Gundam
     {
         private readonly GunplaCollectionService _service;
         private readonly IWebHostEnvironment _webHostEnvironment;
+        private readonly MarkdownService _markdownService;
 
-        public TimelineModel(GunplaCollectionService service, IWebHostEnvironment webHostEnvironment)
+        public TimelineModel(GunplaCollectionService service, IWebHostEnvironment webHostEnvironment, MarkdownService markdownService)
         {
             _service = service;
             _webHostEnvironment = webHostEnvironment;
+            _markdownService = markdownService;
         }
 
         public string TimelineName { get; set; } = "";
@@ -37,7 +39,7 @@ namespace ASP_site.Pages.Gundam
                     TimelineInfo = new BlogPost
                     {
                         Title = "Gunpla Timelines",
-                        Content = content
+                        Content = _markdownService.Parse(content)
                     };
                 }
                 

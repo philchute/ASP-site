@@ -1,17 +1,18 @@
 @page "/gundam/kit/{id}"
 @model ASP_site.Pages.Gunpla.Kits.DetailsModel
 @using ASP_site.Models.Gunpla
+@using ASP_site.Helpers
 @{
-    ViewData["Title"] = $"{Model.Kit.Grade} {Model.Kit.Gundam?.CommonName}";
+    ViewData["Title"] = $"{Model.Kit.Grade} {Model.Kit.Gundams.FirstOrDefault()?.CommonName}";
 }
 
 <div class="container-fluid p-0">
     <div class="d-flex justify-content-between align-items-center mb-5">
         <h1 class="display-5 text-info mb-0">
             <span class="badge bg-secondary fs-4 align-middle">@Model.Kit.Grade</span> 
-            @(Model.Kit.KitName ?? Model.Kit.Gundam?.CommonName)
+            @(Model.Kit.KitName ?? Model.Kit.Gundams.FirstOrDefault()?.CommonName)
         </h1>
-        <a asp-page="/Gundam/Dashboard/" class="btn btn-outline-secondary">Back to Dashboard</a>
+        <a asp-page="/Gundam/Dashboard" class="btn btn-outline-secondary">Back to Dashboard</a>
     </div>
     
     <div class="row gx-5">
@@ -24,15 +25,64 @@
                 </li>
                 <li class="list-group-item bg-transparent text-white border-secondary px-0 d-flex justify-content-between align-items-center">
                     <span class="text-muted">Gundam Model</span>
-                    <a asp-page="/Gundam/Gundams/Details" asp-route-id="@Model.Kit.GundamModelNumber" class="text-decoration-none text-info fs-5">
-                        @Model.Kit.GundamModelNumber
+                    <a asp-page="/Gundam/Gundams/Details" asp-route-id="@Model.Kit.Gundams.FirstOrDefault()?.ModelNumber" class="text-decoration-none text-info fs-5">
+                        @Model.Kit.Gundams.FirstOrDefault()?.ModelNumber
                     </a>
+                </li>
+                <li class="list-group-item bg-transparent text-white border-secondary px-0 d-flex justify-content-between align-items-center">
+                    <span class="text-muted">Series</span>
+                    <span>
+                        <span style="color: @GundamHelpers.GetSeriesColor(Model.Kit.Gundams.FirstOrDefault()?.Series.FirstOrDefault()); font-size: 1.2em; line-height: 1;" class="me-1">&#9632;</span>
+                        <span class="fs-5">@(Model.Kit.Gundams.FirstOrDefault()?.Series.FirstOrDefault() ?? "-")</span>
+                    </span>
+                </li>
+                <li class="list-group-item bg-transparent text-white border-secondary px-0 d-flex justify-content-between align-items-center">
+                    <span class="text-muted">Scale</span>
+                    <span class="fs-5">@Model.Kit.Scale</span>
                 </li>
                 <li class="list-group-item bg-transparent text-white border-secondary px-0 d-flex justify-content-between align-items-center">
                     <span class="text-muted">Release Year</span>
                     <span class="fs-5">@Model.Kit.ReleaseYear</span>
                 </li>
+                <li class="list-group-item bg-transparent text-white border-secondary px-0 d-flex justify-content-between align-items-center">
+                    <span class="text-muted">Manufacturer</span>
+                    <span class="fs-5">@Model.Kit.Manufacturer</span>
+                </li>
+                @if (!string.IsNullOrEmpty(Model.Kit.Faction))
+                {
+                    <li class="list-group-item bg-transparent text-white border-secondary px-0 d-flex justify-content-between align-items-center">
+                        <span class="text-muted">Faction</span>
+                        <span class="fs-5">@Model.Kit.Faction</span>
+                    </li>
+                }
             </ul>
+
+            @if (Model.RelatedAccessories.Any())
+            {
+                <div class="mt-4">
+                    <h5 class="text-secondary text-uppercase fs-6 mb-3">Related Accessories</h5>
+                    <div class="list-group">
+                        @foreach (var acc in Model.RelatedAccessories)
+                        {
+                            <a asp-page="/Gundam/Kits/Details" asp-route-id="@acc.Id" class="list-group-item list-group-item-action bg-black text-white border-secondary d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="badge bg-secondary me-2">@acc.Grade</span>
+                                    <span>@(acc.KitName ?? acc.Gundams.FirstOrDefault()?.CommonName ?? "Unknown")</span>
+                                </div>
+                                <small class="text-muted font-monospace">@acc.Id</small>
+                            </a>
+                        }
+                    </div>
+                </div>
+            }
+
+            @if (!string.IsNullOrEmpty(Model.Kit.Description))
+            {
+                <div class="mt-4">
+                    <h5 class="text-secondary text-uppercase fs-6 mb-3">Description</h5>
+                    <p class="text-light">@Model.Kit.Description</p>
+                </div>
+            }
         </div>
 
         <div class="col-md-6 mb-5">

@@ -10,7 +10,7 @@
         <h1 class="display-4 text-info">@Model.Grade Master List</h1>
         <div>
             <a asp-page="/Gundam/Grades" class="btn btn-outline-secondary me-2">Grade Guide</a>
-            <a asp-page="/Gundam/Dashboard/" class="btn btn-secondary">Dashboard</a>
+            <a asp-page="/Gundam/Dashboard" class="btn btn-secondary">Dashboard</a>
         </div>
     </div>
 
@@ -39,19 +39,19 @@
                     @kit.Id
                 </div>
                 <div class="p-1 text-center col-2">
-                    <a asp-page="/Gundam/Gundams/Details" asp-route-id="@kit.GundamModelNumber" class="text-white text-decoration-none">
-                        @kit.GundamModelNumber
+                    <a asp-page="/Gundam/Gundams/Details" asp-route-id="@kit.Gundams.FirstOrDefault()?.ModelNumber" class="text-white text-decoration-none">
+                        @kit.Gundams.FirstOrDefault()?.ModelNumber
                     </a>
                 </div>
                 <div class="p-1 text-start col-4 fw-bold text-white">
                     <a asp-page="/Gundam/Kits/Details" asp-route-id="@kit.Id" class="text-white text-decoration-none">
-                        @(kit.KitName ?? kit.Gundam?.CommonName ?? "Unknown")
+                        @(kit.KitName ?? kit.Gundams.FirstOrDefault()?.CommonName ?? "Unknown")
                     </a>
                 </div>
                 <div class="p-1 text-center col-1">@kit.ReleaseYear</div>
                 <div class="p-1 text-center col-2 text-muted small">
-                    <a asp-page="/Gundam/Timeline/" asp-route-name="@kit.Gundam?.Timeline" class="text-decoration-none text-muted">
-                        @kit.Gundam?.Timeline
+                    <a asp-page="/Gundam/Timeline/" asp-route-name="@kit.Gundams.FirstOrDefault()?.Timeline" class="text-decoration-none text-muted">
+                        @kit.Gundams.FirstOrDefault()?.Timeline
                     </a>
                 </div>
                 <div class="p-1 text-center col-2">

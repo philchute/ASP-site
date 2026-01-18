@@ -15,6 +15,7 @@ namespace ASP_site.Pages.Gunpla.Kits
         }
 
         public GunplaKit Kit { get; set; } = null!;
+        public List<GunplaKit> RelatedAccessories { get; set; } = new();
         public UserKitEntry? UserEntry { get; set; }
         
         [BindProperty]
@@ -25,6 +26,34 @@ namespace ASP_site.Pages.Gunpla.Kits
             var kit = await _service.GetKitAsync(id);
             if (kit == null) return NotFound();
             Kit = kit;
+
+            // Fetch related accessories
+            var accessoryGrades = new[] 
+            { 
+                GunplaGrade.WaterSlideDecal, 
+                GunplaGrade.Sticker, 
+                GunplaGrade.MetalSticker, 
+                GunplaGrade.MetalParts, 
+                GunplaGrade.ActionBase 
+            };
+
+            var relatedKits = new List<GunplaKit>();
+            foreach (var gundam in Kit.Gundams)
+            {
+                var kits = await _service.GetKitsForGundamAsync(gundam.ModelNumber);
+                relatedKits.AddRange(kits);
+            }
+
+            RelatedAccessories = relatedKits
+                .Where(k => accessoryGrades.Contains(k.Grade) 
+                            && k.Id != Kit.Id
+                            && (k.Grade == GunplaGrade.ActionBase 
+                                || k.Scale == Kit.Scale 
+                                || k.Scale == ScaleConverterService.NonScale.Name))
+                .GroupBy(k => k.Id) // Deduplicate
+                .Select(g => g.First())
+                .OrderBy(k => k.ReleaseYear)
+                .ToList();
 
             UserEntry = await _service.GetUserEntryAsync(id);
             InputEntry = UserEntry ?? new UserKitEntry { KitId = id, Status = KitStatus.Want };

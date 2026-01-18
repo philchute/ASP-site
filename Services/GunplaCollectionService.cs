@@ -44,14 +44,14 @@ namespace ASP_site.Services
             return await _context.UserKitEntries
                 .Where(u => u.UserId == userId)
                 .Include(u => u.Kit)
-                .ThenInclude(k => k!.Gundam)
+                .ThenInclude(k => k!.Gundams)
                 .ToListAsync();
         }
 
         public async Task<List<GunplaKit>> GetAllKitsAsync()
         {
              return await _context.GunplaKits
-                .Include(k => k.Gundam)
+                .Include(k => k.Gundams)
                 .ToListAsync();
         }
 
@@ -88,7 +88,7 @@ namespace ASP_site.Services
         public async Task<List<GunplaKit>> GetKitsByGradeAsync(GunplaGrade grade)
         {
             return await _context.GunplaKits
-                .Include(k => k.Gundam)
+                .Include(k => k.Gundams)
                 .Where(k => k.Grade == grade)
                 .OrderBy(k => k.Id)
                 .ToListAsync();
@@ -106,8 +106,8 @@ namespace ASP_site.Services
         public async Task<List<GunplaKit>> GetKitsByTimelineAsync(string timelineName)
         {
             return await _context.GunplaKits
-                .Include(k => k.Gundam)
-                .Where(k => k.Gundam != null && k.Gundam.Timeline == timelineName)
+                .Include(k => k.Gundams)
+                .Where(k => k.Gundams.Any(u => u.Timeline == timelineName))
                 .ToListAsync();
         }
 
@@ -140,18 +140,20 @@ namespace ASP_site.Services
         public string ExportToCsv(List<UserKitEntry> entries)
         {
             var sb = new StringBuilder();
-            sb.AppendLine("KitId,GundamModelNumber,CommonName,Status,PricePaid,Notes");
+            sb.AppendLine("KitId,GundamModelNumber,CommonName,Timeline,ReleaseYear,Status,PricePaid,Notes");
 
             foreach (var entry in entries)
             {
-                var gundamModel = entry.Kit?.GundamModelNumber ?? entry.Kit?.Gundam?.ModelNumber ?? "";
-                var commonName = entry.Kit?.Gundam?.CommonName ?? "";
+                var gundamModel = entry.Kit?.Gundams.FirstOrDefault()?.ModelNumber ?? "";
+                var commonName = entry.Kit?.Gundams.FirstOrDefault()?.CommonName ?? "";
+                var timeline = entry.Kit?.Gundams.FirstOrDefault()?.Timeline ?? "";
+                var releaseYear = entry.Kit?.ReleaseYear.ToString() ?? "";
                 
                 // Simple CSV escaping
                 var notes = entry.Notes?.Replace("\"", "\"\"") ?? "";
                 if (notes.Contains(",") || notes.Contains("\n")) notes = $"\"{notes}\"";
 
-                sb.AppendLine($"{entry.KitId},{gundamModel},{commonName},{entry.Status},{entry.PricePaid},{notes}");
+                sb.AppendLine($"{entry.KitId},{gundamModel},{commonName},{timeline},{releaseYear},{entry.Status},{entry.PricePaid},{notes}");
             }
             return sb.ToString();
         }
@@ -168,17 +170,17 @@ namespace ASP_site.Services
                 // Basic CSV parsing (not robust for all edge cases but sufficient for this demo)
                 var parts = line.Split(',');
                 
-                if (parts.Length >= 4)
+                if (parts.Length >= 6)
                 {
                     string kitId = parts[0];
-                    if (Enum.TryParse(parts[3], out KitStatus status))
+                    if (Enum.TryParse(parts[5], out KitStatus status))
                     {
                         decimal? price = null;
-                        if (parts.Length > 4 && decimal.TryParse(parts[4], out decimal p)) price = p;
+                        if (parts.Length > 6 && decimal.TryParse(parts[6], out decimal p)) price = p;
                         
                         // Handle potential notes at the end
                         string notes = "";
-                        if (parts.Length > 5) notes = string.Join(",", parts.Skip(5)); 
+                        if (parts.Length > 7) notes = string.Join(",", parts.Skip(7)); 
                         if (notes.StartsWith("\"") && notes.EndsWith("\"")) notes = notes.Substring(1, notes.Length - 2).Replace("\"\"", "\"");
 
                         entries.Add(new UserKitEntry
@@ -250,15 +252,15 @@ namespace ASP_site.Services
         public async Task<List<GunplaKit>> GetKitsForGundamAsync(string modelNumber)
         {
             return await _context.GunplaKits
-                .Where(k => k.GundamModelNumber == modelNumber)
-                .Include(k => k.Gundam)
+                .Where(k => k.Gundams.Any(u => u.ModelNumber == modelNumber))
+                .Include(k => k.Gundams)
                 .ToListAsync();
         }
 
         public async Task<GunplaKit?> GetKitAsync(string kitId)
         {
             return await _context.GunplaKits
-                .Include(k => k.Gundam)
+                .Include(k => k.Gundams)
                 .FirstOrDefaultAsync(k => k.Id == kitId);
         }
 
