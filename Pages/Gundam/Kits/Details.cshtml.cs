@@ -30,7 +30,7 @@ namespace ASP_site.Pages.Gunpla.Kits
             // Fetch related accessories
             var accessoryGrades = new[] 
             { 
-                GunplaGrade.WaterSlideDecal, 
+                GunplaGrade.WaterSlide, 
                 GunplaGrade.Sticker, 
                 GunplaGrade.MetalSticker, 
                 GunplaGrade.MetalParts, 

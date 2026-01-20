@@ -62,7 +62,6 @@ public class ScaleConverterService
     public static readonly ScaleModel Scale1_1200 = new("1:1200 (Wargame Ships)", 1200.0, "Wargame", "Wargame ships.");
     public static readonly ScaleModel Scale1_2400 = new("1:2400 (Wargame Ships)", 2400.0, "Wargame", "Wargame ships.");
     public static readonly ScaleModel Scale1_2500 = new("1:2500 (Science Fiction Ships)", 2500.0, "Space", "Large capital space ships are in this scale.");
-    public static readonly ScaleModel ScaleSD = new("SD", 0.0, "Gundam", "Super Deformed (SD) Gundam. Non-scale caricatures.");
 
     public List<ReferenceObject> GetReferenceObjects()
     {
@@ -129,8 +128,7 @@ public class ScaleConverterService
             Scale1_720,
             Scale1_1200,
             Scale1_2400,
-            Scale1_2500,
-            ScaleSD
+            Scale1_2500
         };
     }
 

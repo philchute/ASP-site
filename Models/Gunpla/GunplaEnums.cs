@@ -2,8 +2,8 @@ namespace ASP_site.Models.Gunpla
 {
     public enum GunplaGrade
     {
-        EG, HG, MG, MGSD, RG, PG, SD,
-        WaterSlideDecal, Sticker, MetalSticker, MetalParts, ActionBase
+        EG, FM, HG, MG, MGSD, RG, PG, SD,
+        WaterSlide, Sticker, MetalSticker, MetalParts, ActionBase
     }
 
     public enum KitStatus

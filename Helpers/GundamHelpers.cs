@@ -27,10 +27,10 @@ namespace ASP_site.Helpers
                 "MSV" or 
                 GunplaConstants.Series.MSG08 or 
                 "MS IGLOO" or 
-                "Harmony of Gundam" or 
-                "Blue Destiny" or 
-                "Battlefield Record U.C. 0081" or 
-                "Requiem for Vengeance" => "#FDB813", // Yellow-Orange
+                GunplaConstants.Series.HarmonyOfGundam or 
+                GunplaConstants.Series.BlueDestiny or 
+                GunplaConstants.Series.BattlefieldRecord or 
+                GunplaConstants.Series.RequiemForVengeance => "#FDB813", // Yellow-Orange
 
                 GunplaConstants.Series.WarInThePocket => "#8DB600", // Light Green
                 
@@ -38,23 +38,26 @@ namespace ASP_site.Helpers
                 
                 GunplaConstants.Series.Zeta or 
                 "Zeta MSV" or 
-                "Advance of Zeta" => "#008000", // Green
+                GunplaConstants.Series.AdvanceOfZeta => "#008000", // Green
 
                 GunplaConstants.Series.ZZ or 
-                "Moon Gundam" => "#FF8C00", // Orange
+                GunplaConstants.Series.Moon => "#FF8C00", // Orange
 
                 GunplaConstants.Series.Sentinel => "#00FFFF", // Cyan
 
                 GunplaConstants.Series.CCA or 
+                GunplaConstants.Series.CCABC or
                 GunplaConstants.Series.Unicorn or 
                 GunplaConstants.Series.GQ or 
                 "Gundam UC" or 
                 "Gundam UC MSV" or 
                 "Twilight Axis" or 
                 "Gundam NT" or 
-                "Hathaway" => "#FF0000", // Red
+                GunplaConstants.Series.Hathaway => "#FF0000", // Red
 
+                GunplaConstants.Series.F90 or
                 GunplaConstants.Series.F91 or 
+                GunplaConstants.Series.SilhouetteFormula91 or
                 GunplaConstants.Series.Crossbone => "#B0E0E6", // Pale-Blue
 
                 GunplaConstants.Series.Victory => "#FFFF00", // Yellow
@@ -63,13 +66,14 @@ namespace ASP_site.Helpers
 
                 GunplaConstants.Series.Wing or 
                 GunplaConstants.Series.EW or 
-                "Gundam Wing G-Unit" => "#800080", // Purple
+                GunplaConstants.Series.GUnit => "#800080", // Purple
 
                 GunplaConstants.Series.X => "#66e4f5", // Sky-Blue
 
                 GunplaConstants.Series.TurnA => "#FFFFFF", // White
 
                 GunplaConstants.Series.Seed or 
+                GunplaConstants.Series.SeedAstray or
                 GunplaConstants.Series.SeedDestiny or
                 GunplaConstants.Series.SeedFreedom or
                 GunplaConstants.Series.SeedStargazer => "#000080", // Dark-Blue

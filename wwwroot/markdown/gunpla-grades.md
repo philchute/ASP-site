@@ -1,6 +1,12 @@
 ## Guide to Gunpla Grades
 
-Gundam Plastic Model Kits (Gunpla) come in various scales and levels of detail, known as **Grades**. The standard scale is 1/144, but there are also 1/100, 1/60, and 1/48 scale kits. Here is a guide to the different grades, and numbered lines of kits within each grade. Even within a grade, there have been advances in the quality of the kits over the years, so newer kits typically offer the best modelling experience. If you are new to Gunpla, I would recommend starting with any HG kit from the past few years that looks good to you, and then branching out from there. Older kits and higher grades are where you really explore the hobby. 
+### Introduction
+
+Gundam Plastic Model Kits (Gunpla) come in various scales and levels of detail, known as **Grades**. Bandai currently produces about 20 new 1/144 scale **High Grade** kits per year, in the **HGUC** line, or as a new numbered line for a specific show or movie. The most iconic Mobile Suits might eventually receive more detailed kits in the **Master Grade** (1/100 scale), **Perfect Grade** (1/60 scale), or **Real Grade** (1/144 scale), which each see about 2 new kits released per year. Other grades exist as historical vestiges or to fill in some gaps around these grades.
+
+***If you are new to Gunpla, I would recommend starting with any HG kit from the past few years that looks good to you, and then branching out from there.*** Older kits and higher grades are where you really explore the hobby. Even within a grade, ***the newest kits offer the best modelling experience***, due to advances in design and manufacturing quality.
+
+Remember that for this manufacturing process (injection molded plastic), nearly all of the cost is up-front, in designing and carving the molds. For this reason, while some kits and lines do get obsoleted, and some exclusive colors are printed in limited runs, generally Bandai will continue to print older kits as long as there is any demand. Kits are more expensive in the West due to them being imported from Japan, but Bandai is pretty transparent with their pricing, meaning if one kit is more expensive than another kit, that's because it contains more parts. 
 
 ### HG (High Grade) - 1/144
 
@@ -31,39 +37,50 @@ Gundam Plastic Model Kits (Gunpla) come in various scales and levels of detail, 
 
 Other numbered HG lines:
 
-| Line       | Name                      | Released  | Description                                             |
-|------------|---------------------------|-----------|---------------------------------------------------------|
-| **HG90**   | High Grade (1990)         | 1990-TBA  | The original High Grade line, no longer in production. |
-| **HGVG**   | High Grade Victory Gundam | 1993-1994 | Mobile Suits from the "Mobile Suit Victory Gundam" series. Now known as the 'old kits', newer Victory Gundam kits are now combined into the <span style="color: #FFFF00;">&#9632;</span> **HGUC** (High Grade Universal Century) line. |
-| **HGG**    | High Grade G Gundam       | 1994      | Mobile Suits from the "G Gundam" series. Now known as the 'old kits', newer G Gundam kits are now combined into the HGUC line and labeled as <span style="color: #FF4500;">&#9632;</span> **HGFC** (High Grade Future Century). |
-| **HG08**   | High Grade Mobile Suit Gundam: The 08th MS Team | 1996-1999 | Mobile Suits from the "Mobile Suit Gundam: The 08th MS Team" series. |
-| **HGGT**   | High Grade Mobile Suit Gundam: Thunderbolt      | 2013-2017 | Mobile Suits from the "Mobile Suit Gundam: Thunderbolt" manga and anime series. The first 6 kits are out of print as kits 7-11 were recolors of the first 6 to match the colors of the anime. |
-| **HGGTO**  | High Grade Mobile Suit Gundam: The Origin       | 2015-2023 | Mobile Suits from the "Mobile Suit Gundam: The Origin" series. |
-| **HGSEED** | High Grade Gundam SEED | 2002-2005 | Mobile Suits from the Cosmic Era timeline. There was also a **HGSEED-MSV** line. Some of HGSEED kits were released as re-colored and restickered 'Remaster' versions in the **HGSEED-R** line between 2011-2013. Starting in 2014 new High Grade Cosmic Era kits were combined into the HGUC line and labeled as <span style="color: #000080;">&#9632;</span> **HGCE** (High Grade Cosmic Era). |
-| **HG00**   | High Grade Gundam 00              | 2007-2010 | Mobile Suits from the "Gundam 00" series and the Anno Domini timeline. |
-| **HGAGE**  | High Grade Gundam AGE             | 2011-2013 | Mobile Suits from the "Gundam AGE" series and the Advanced Generation timeline. New HG Advanced Generation kits are now combined into the HGUC line and labeled as **HGAG**. |
-| **HGBF**   | High Grade Gundam Build Fighters  | 2013-2018 | Mobile Suits from the "Gundam Build Fighters", "Gundam Build Fighters Try", "Gundam Build Fighters: GM's Counterattack" and "Gundam Build Fighters: Battlogue" series and the "Build Fighters" timeline. There is also a line of **SDBF** Super Deformed Build Fighters kits and **HGPG** High Grade Petit Guy kits, after a character from the Build series. |
-| **HGRC**   | High Grade Reconguista In G       | 2014-2015 | Mobile Suits from the "Reconguista In G" series and the Regild Century timeline. |
-| **HGIBO**  | High Grade Iron Blooded Orphans   | 2015-2022 | Mobile Suits from the "Iron Blooded Orphans" series and the Post Disaster timeline. First HG line to feature sub-frames. Allows the swapping of weapons and armor between kits and the Iron Blooded Arms sub-line. |
-| **HGWFM**  | High Grade Witch From Mercury     | 2022-2023 | Mobile Suits from the "The Witch From Mercury" series and the Ad Stella timeline. Features a very modern design and lots of articulation. |
-| **HGGQ**   | High Grade GQuuuuuuX              | 2025-TBA  | Mobile Suits from the "Mobile Suit Gundam: GQuuuuuuX" series (Alternate UC timeline). |
+| Line                         | Name                                  | Released  | Description                                             |
+|------------------------------|---------------------------------------|-----------|---------------------------------------------------------|
+| HG(1990)-001 to HG(1990)-009 | High Grade (1990)                     | 1990-2000 | The original High Grade line, no longer in production.  |
+| VG(144)-001 to VG(144)-016   | 1/144 Scale (No Grade) Victory Gundam | 1993-1994 | Mobile Suits from the "Mobile Suit Victory Gundam" series. Now known as the 'old kits', newer Victory Gundam kits are now combined into the <span style="color: #FFFF00;">&#9632;</span> **HGUC** (High Grade Universal Century) line. |
+| G(144)-001 to G(144)-016     | 1/144 Scale (No Grade) G Gundam       | 1994      | Mobile Suits from the "G Gundam" series. Now known as the 'old kits', newer G Gundam kits are now combined into the HGUC line and labeled as <span style="color: #FF4500;">&#9632;</span> HGFC (High Grade Future Century). |
+| GW(144)-001 to GW(144)-013   | 1/144 Scale (No Grade) Gundam Wing    | 1995-1996 | Mobile Suits from the "Mobile Suit Gundam Wing" series and the After Colony timeline. Now known as the 'old kits', newer Gundam Wing kits are now combined into the HGUC line and labeled as <span style="color: #800080;">&#9632;</span> HGAC (High Grade After Colony). |
+| HGFA-001 to HGFA-007         | High Grade Fighting Action Gundam Wing: Endless Waltz | 1998-1998 | Mobile Suits from the "Mobile Suit Gundam Wing: Endless Waltz" series and the After Colony timeline. Now known as the 'old kits', newer Gundam Wing kits are now combined into the HGUC line and labeled as <span style="color: #800080;">&#9632;</span> HGAC (High Grade After Colony). |
+| HGGU-001 to HGGU-005         | High Grade Gundam Wing Dual Story G-Unit (HGGU)       | 1997-1997 | Mobile Suits from the "Mobile Suit Gundam Wing Dual Story G-Unit" series and the After Colony timeline. Now known as the 'old kits', newer Gundam Wing kits are now combined into the HGUC line and labeled as <span style="color: #800080;">&#9632;</span> HGAC (High Grade After Colony). |
+| HG08                         | High Grade Mobile Suit Gundam: The 08th MS Team       | 1996-1999 | Mobile Suits from the "Mobile Suit Gundam: The 08th MS Team" series. |
+| HGGT                         | High Grade Mobile Suit Gundam: Thunderbolt            | 2013-2017 | Mobile Suits from the "Mobile Suit Gundam: Thunderbolt" manga and anime series. The first 6 kits are out of print as kits 7-11 were recolors of the first 6 to match the colors of the anime. |
+| HGGTO                        | High Grade Mobile Suit Gundam: The Origin             | 2015-2023 | Mobile Suits from the "Mobile Suit Gundam: The Origin" series. |
+| HGSEED                       | High Grade Gundam SEED                                | 2002-2005 | Mobile Suits from the Cosmic Era timeline. There was also a **HGSEED-MSV** line. Some of HGSEED kits were released as re-colored and restickered 'Remaster' versions in the **HGSEED-R** line between 2011-2013. Starting in 2014 new High Grade Cosmic Era kits were combined into the HGUC line and labeled as <span style="color: #000080;">&#9632;</span> **HGCE** (High Grade Cosmic Era). |
+| HG00                         | High Grade Gundam 00              | 2007-2010 | Mobile Suits from the "Gundam 00" series and the Anno Domini timeline. |
+| HGAGE                        | High Grade Gundam AGE             | 2011-2013 | Mobile Suits from the "Gundam AGE" series and the Advanced Generation timeline. New HG Advanced Generation kits are now combined into the HGUC line and labeled as **HGAG**. |
+| HGBF                         | High Grade Gundam Build Fighters  | 2013-2018 | Mobile Suits from the "Gundam Build Fighters", "Gundam Build Fighters Try", "Gundam Build Fighters: GM's Counterattack" and "Gundam Build Fighters: Battlogue" series and the "Build Fighters" timeline. There is also a line of **SDBF** Super Deformed Build Fighters kits and **HGPG** High Grade Petit Guy kits, after a character from the Build series. |
+| HGRC                         | High Grade Reconguista In G       | 2014-2015 | Mobile Suits from the "Reconguista In G" series and the Regild Century timeline. |
+| HGIBO                        | High Grade Iron Blooded Orphans   | 2015-2022 | Mobile Suits from the "Iron Blooded Orphans" series and the Post Disaster timeline. First HG line to feature sub-frames. Allows the swapping of weapons and armor between kits and the Iron Blooded Arms sub-line. |
+| HGWFM                        | High Grade Witch From Mercury     | 2022-2023 | Mobile Suits from the "The Witch From Mercury" series and the Ad Stella timeline. Features a very modern design and lots of articulation. |
+| **HGGQ-001 to HGGQ-015+**    | **High Grade GQuuuuuuX**          | **2025-TBD**  | Mobile Suits from the "Mobile Suit Gundam: GQuuuuuuX" series (Alternate UC timeline). |
 
-Some lines of HG kits are at 1/100 scale, which display well with Master Grade kits. Some of these lines are marked as '1/100 HG' and some are just marked as '1/100 scale' or '1/100 Full Mechanics'. Some of these are considered NG - No Grade, but for simplicity are all listed here as HG:
+### FM (Full Mechanics) - 1/100
+*   **Scale**: 1/100 (approx 18cm / 7 inches tall)
+*   **Complexity**: Intermediate
+*   **Detail**: Good. Many kits are desgined with a high level of detail on the exterior so that they display well with Master Grade models, however most have relatively simple internals, similar to High Grade models.
+*   **Notes**: The "Full Mechanics" name is a relatively new one, but here I am applying it retroactively as a grade for all the kits in a HG level of detail at 1/100 scale. Some of these are considered "1/100 Grade", "HG 1/100", or "NG" No Grade, but for simplicity are all listed here as FM Grade:
 
-| Line           | Name                      | Released  | Description                                             |
-|----------------|---------------------------|-----------|---------------------------------------------------------|
-| **HGVG/100**   | 1/100 Scale High Grade Victory Gundam | 1993-1994 | Mobile Suits from the "Mobile Suit Victory Gundam" series.                            |
-| **HGG/100**    | 1/100 Scale High Grade G Gundam       | 1994      | Mobile Suits from the "G Gundam" series.                                              |
-| **HGGW/100**   | 1/100 Scale High Grade Gundam Wing    | 1995-1996 | Mobile Suits from the "Mobile Suit Gundam Wing" series and the After Colony timeline. |
-| **HGX/100**    | 1/100 Scale High Grade Gundam X       | 1996      | Mobile Suits from the "Gundam X" series and the After War timeline.                   |
-| **HGEW/100**   | 1/100 Scale High Grade Gundam Wing: Endless Waltz | 1997-1998 | Mobile Suits from the "Mobile Suit Gundam Wing: Endless Waltz" series.    |
-| **HGSEED/100** | 1/100 Scale High Grade Gundam SEED    | 2002-2010 | Mobile Suits from the "Gundam SEED" series and the Cosmic Era timeline.               |
-| **HG00/100**   | 1/100 Scale High Grade Gundam 00      | 2007-2009 | Mobile Suits from the "Gundam 00" series and the Anno Domini timeline.                |
-| **RE/100**     | Reborn-One Hundred                    | 2014-TBD  | Mobile Suits from the Universal Century in 1/100 scale similar to MG on the exterior but built with simpler HG style internals. |
-| **IBO/100**    | 1/100 Scale High Grade Iron Blooded Orphans                | 2015-2016 | Mobile Suits from season 1 of the "Iron Blooded Orphans" series. |
-| **IBOFM/100**  | 1/100 Scale High Grade Iron Blooded Orphans Full Mechanics | 2016-2017 | Mobile Suits from season 2 of the "Iron Blooded Orphans" series. |
-| **FM/100**     | Full Mechanics                        | 2021-TBD  | Mobile Suits from timelines outside of Universal Century in 1/100 scale similar to MG on the exterior but built with simpler HG style internals.|
-| **HiRM**       | Hi-Resolution Model (HiRM)            | 2016-TBD  | These models feature metallic parts and finishes. |
+| Line                         | Name                                  | Released  | Description                                             |
+|----------------------------|---------------------------------------|-----------|---------------------------------------------------------|
+| F90-001 to F90-004           | 1/100 Scale (No Grade) F90 Gundam            | 1990-1991 | Mobile Suits from the "F90" series.                            |
+| F91-001 to F91-008           | 1/100 Scale (No Grade) F91 Gundam            | 1990-1991 | Mobile Suits from the "F91" series.                            |
+| SF91-001 to SF91-007         | 1/100 Scale (No Grade) Silhouette Formula 91 | 1992-1993 | Mobile Suits from the "Silhouette Formula 91" series.          |
+| VG(100)-001 to VG(100)-007   | 1/100 Scale (High Grade) Victory Gundam      | 1993-1994 | Mobile Suits from the "Mobile Suit Victory Gundam" series.                            |
+| G(100)-001 to G(100)-006     | 1/100 Scale (High Grade) G Gundam            | 1994      | Mobile Suits from the "G Gundam" series.                                              |
+| GW(100)-001 to GW(100)-007   | 1/100 Scale (High Grade) Gundam Wing         | 1995-1996 | Mobile Suits from the "Mobile Suit Gundam Wing" series and the After Colony timeline. |
+| EW(100)-001 to EW(100)-007   | 1/100 Scale (High Grade) Gundam Wing: Endless Waltz | 1997-1998 | Mobile Suits from the "Mobile Suit Gundam Wing: Endless Waltz" series and the After Colony timeline. |
+| X(100)                       | 1/100 Scale (High Grade) Gundam X               | 1996      | Mobile Suits from the "Gundam X" series and the After War timeline.                   |
+| SEED(100)-001 to 013         | 1/100 Scale Gundam SEED                         | 2002 | Mobile Suits from the "Gundam SEED" series and the Cosmic Era timeline.               |
+| SEED-DESTINY(100)-001 to 024 | 1/100 Scale Gundam SEED Destiny                 | 2004 | Mobile Suits from the "Gundam SEED Destiny" series and the Cosmic Era timeline.               |
+| 00(100)-001 to 00(100)-020   | 1/100 Scale (No Grade) Gundam 00                | 2007-2009 | Mobile Suits from the "Gundam 00" series and the Anno Domini timeline. |
+| RE/100-001 to RE/100-013     | Reborn-One Hundred                              | 2014-2019 | Mobile Suits from the Universal Century in 1/100 scale similar to MG on the exterior but built with simpler HG style internals. |
+| IBO(100)-001 to IBO(100)-009 | 1/100 Scale Iron Blooded Orphans                | 2015-2016 | Mobile Suits from season 1 of the "Iron Blooded Orphans" series. |
+| IBOFM-001 to IBOFM-004       | 1/100 Scale Iron Blooded Orphans Full Mechanics | 2016-2017 | Mobile Suits from season 2 of the "Iron Blooded Orphans" series. |
+| **FM-001 to FM-004+**        | **Full Mechanics**                              | **2021-TBD** | Mobile Suits from outside of the Universal Century in 1/100 scale similar to MG on the exterior but built with simpler HG-style internals.|
+| **HiRM-001 to HiRM-004+**    | **Hi-Resolution Model (HiRM)**                  | **2016-TBD** | These models feature metallic parts and finishes. |
 
 Similarly there are lines of HG style kits at 1/60 scale (**1/60 Series**, **HGEX**) and 1/48 scale (**MSM** Mega Sized Model).
 
@@ -75,21 +92,35 @@ Similarly there are lines of HG style kits at 1/60 scale (**1/60 Series**, **HGE
 
 ### PG (Perfect Grade) - 1/60
 *   **Scale**: 1/60 (approx 30cm / 12 inches tall)
-*   **Complexity**: Expert
-*   **Detail**: Ultimate
+*   **Complexity**: Advanced
+*   **Detail**: Extreme
 *   **Notes**: Introduced in 1998, Perfect Grades are even larger than MG models and feature even more detail. Featuring LED lighting, metal parts, and fully articulated fingers. Very expensive and time-consuming. There is also a PG kit from the series 'Evangelion' and a PG kit of the 'Millenium Falcon'. Beginning in 2020 there is a sub-line of even more detailed kits called **PGU** - Perfect Grade Unleashed.
 
 ### RG (Real Grade) - 1/144
 *   **Scale**: 1/144
 *   **Complexity**: Advanced
-*   **Detail**: Extreme
+*   **Detail**: High
 *   **Notes**: Introduced in 2010, Real Grade kits are a realistic styling that combines the compact size of 1/144 HG scale with the detail and internal frame of MG. Known for their "Advanced MS Joint" pre-assembled internal frame system and high color separation. There are also six RG kits from the series 'Evangelion' and one from the series 'The King of Braves GaoGaiGar'.
 
 ### EG (Entry Grade) - 1/144
 *   **Scale**: 1/144
 *   **Complexity**: Beginner
-*   **Detail**: Good
-*   **Notes**: These are inexpensive and simpler kits in the same 1/144 scale as HG. Unfortunately by the time they are imported from Japan there isn't much price difference, so they don't have much purpose in the Western market. They feature snap-off parts which don't require clippers, and EG models still offer good articulation.
+*   **Detail**: Low
+*   **Notes**: These are inexpensive and simpler kits in the same 1/144 scale as HG. Unfortunately by the time they are imported from Japan there isn't much price difference, so they don't have much purpose in the Western market. They feature snap-off parts which don't require clippers, and EG models still offer good articulation. For simplicity I am including other lines of simple beginner kits as EG here:
+
+| Line                       | Name                                       | Released  | Description                                           |
+|----------------------------|--------------------------------------------|-----------|-------------------------------------------------------|
+| SEED-00 to SEED-21         | 1/144 Scale (No Grade) Gundam SEED         | 2002-2005 | Kits from the Mobile Suit Gundam SEED series.         |
+| SEED-DESTINY-01 to 14      | 1/144 Scale (No Grade) Gundam SEED Destiny | 2004-2005 | Kits from the Mobile Suit Gundam SEED Destiny series. |
+| AG-01 to AG-24             | Advanced Grade                             | 2011-2012 | Kits from the Mobile Suit Gundam AGE series. Included a chip for use in an arcade machine and has not been reprinted since, probably for that reason. |
+| EG(2011)-01 to EG(2011)-06 | Entry Grade (2011)                         | 2011-2012 | The original line of EG kits from 2011.               |
+| **EG-01 to EG-05+**        | **Entry Grade**                            | **2020-TBD** | The modern line of EG kits started in 2020.        |
+
+### UCHG (Universal Century Hard Graph) - 1/35
+*   **Scale**: 1/35 (not used for mobile suits)
+*   **Complexity**: Expert (Requires glue and paint)
+*   **Detail**: Good. 
+*   **Notes**: The Universal Century Hard Graph line is a line of kits for vehicles and equipment in a huge 1/35. Released 2006-2011, there was also a confusingly named HGUCHG (High Grade Universal Century Hard Graph) line of reworked UCHG kits in 2009.
 
 ### EX (Extra Grade) - 1/144
 *   **Scale**: 1/144 or 1/1700
@@ -105,12 +136,16 @@ Similarly there are lines of HG style kits at 1/60 scale (**1/60 Series**, **HGE
 
 Numbered lines of SD kits:
 
-| Line      | Name                                 | Released  | Kits | Description                                                                      |
-|-----------|--------------------------------------|-----------|----- |----------------------------------------------------------------------------------|
-| **SDBB**  | Super Deformed BB Senshi             | 1987-2018 | 412  | The original SD line, the first kits shot BB pellets which gave them their name. |
-| **SDBBW** | Super Deformed Brave Battle Warriors | 2010-2011 |      | Characters from the series 'BB Senshi Sangokuden: Brave Battle Warriors'.        |
-| **SDEX**  | Super Deformed EX Standard           | 2015-TBD  | 20   | Features crossover parts with the 1/144 scale kits.                              |
-| **SDCS**  | Super Deformed Cross Silhouette      | 2018-TBD  | 21   | Features an internal frame and customizable proportions.                         |
+| Line                   | Name                                 | Released  | Description                                                                      |
+|------------------------|--------------------------------------|-----------|----------------------------------------------------------------------------------|
+| SDBB-001 to SDBB-412   | Super Deformed BB Senshi             | 1987-2018 | The original SD line, the first kits shot BB pellets which gave them their name. |
+| SDGG-01 to SDGG-63     | Super Deformed Generation G          | 1999-2002 | Based on the SD Gundam: Generation G series of video games.                      |
+| SDGF-01 to SDGF-11     | Super Deformed Gundam Force          | 2004-2004 | Characters from the series 'SD Gundam Force'. Very simple models for kids.       |
+| SDBBW-001 to SDBBW-046 | Super Deformed Brave Battle Warriors | 2010-2011 | Characters from the series 'BB Senshi Sangokuden: Brave Battle Warriors'.        |
+| SDSS-01 to SDSS-34     | Super Deformed Gundam World Sangoku Soketsuden | 2019-2020 | Characters from the series 'Gundam World Sangoku Soketsuden'.          |
+| SDWH-01 to SDWH-40     | Super Deformed Gundam World Heroes   | 2021-2022 | Characters from various mythological stories.                                    |
+| SDEX-01 to SDEX-20+    | Super Deformed EX Standard           | 2015-TBD  | Features crossover parts with the 1/144 scale kits.                              |
+| SDCS-01 to SDCS-21+    | Super Deformed Cross Silhouette      | 2018-TBD  | Features an internal frame and customizable proportions.                         |
 
 
 ### MGSD (Master Grade Super Deformed)
@@ -118,3 +153,16 @@ Numbered lines of SD kits:
 *   **Complexity**: Intermediate to Advanced
 *   **Detail**: High
 *   **Notes**: Introduced in 2023, these bring Master Grade detail to the Super Deformed chibi style. Very nice models because they are brand new, and fairly complex to build.
+
+### Conclusion
+
+I hope this guide has been helpful, here is a final chart as a (simplified) summary of the different grades and their scales:
+
+| Scale \ Detail Level            | Low Detail    | Good Detail   | High Detail    | Extreme Detail |
+|---------------------------------|---------------|---------------|----------------|----------------|
+| SD Scale (Deformed Proportions) | SD            | SDEX          | MGSD           |                |
+| 1/144 Scale (Smaller models)    | EG            | HG            | RG             |                |
+| 1/100 Scale (Larger models)     |               | FM            | MG             | MGEX           |
+| 1/60 Scale (Huge models)        |               | 1/60 Series   | PG             | PGU            |
+| 1/48 Scale (Mega sized models)  |               | MSM           |                |                |
+| 1/35 Scale (Vehicles only)      |               | UCHG          |                |                |
