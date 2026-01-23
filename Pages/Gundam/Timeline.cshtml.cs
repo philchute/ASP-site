@@ -28,8 +28,6 @@ namespace ASP_site.Pages.Gundam
         {
             if (string.IsNullOrEmpty(name))
             {
-                // List all timelines mode
-                AllTimelines = await _service.GetAllTimelinesAsync();
                 
                 // Load Markdown Info
                 var path = Path.Combine(_webHostEnvironment.WebRootPath, "markdown", "gunpla-timelines.md");

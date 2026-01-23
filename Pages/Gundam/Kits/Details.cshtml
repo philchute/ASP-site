@@ -48,14 +48,203 @@
                     <span class="text-muted">Manufacturer</span>
                     <span class="fs-5">@Model.Kit.Manufacturer</span>
                 </li>
-                @if (!string.IsNullOrEmpty(Model.Kit.Faction))
+                @if (Model.Kit.Designers.Any())
                 {
                     <li class="list-group-item bg-transparent text-white border-secondary px-0 d-flex justify-content-between align-items-center">
-                        <span class="text-muted">Faction</span>
-                        <span class="fs-5">@Model.Kit.Faction</span>
+                        <span class="text-muted">Designers</span>
+                        <div class="text-end">
+                            @foreach (var designer in Model.Kit.Designers)
+                            {
+                                <div class="fs-5">@designer</div>
+                            }
+                        </div>
+                    </li>
+                }
+                @if (Model.Kit.Factions.Any())
+                {
+                    <li class="list-group-item bg-transparent text-white border-secondary px-0 d-flex justify-content-between align-items-center">
+                        <span class="text-muted">Factions</span>
+                        <div class="text-end">
+                            @foreach (var faction in Model.Kit.Factions)
+                            {
+                                <div class="fs-5">@faction</div>
+                            }
+                        </div>
                     </li>
                 }
             </ul>
+
+            @if (Model.IncludedInKits.Any())
+            {
+                <div class="mt-4">
+                    <h5 class="text-secondary text-uppercase fs-6 mb-3">Included In</h5>
+                    <div class="list-group">
+                        @foreach (var kit in Model.IncludedInKits)
+                        {
+                            <a asp-page="/Gundam/Kits/Details" asp-route-id="@kit.Id" class="list-group-item list-group-item-action bg-black text-white border-secondary d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="badge bg-secondary me-2">@kit.Grade</span>
+                                    <span>@(kit.KitName ?? kit.Gundams.FirstOrDefault()?.CommonName ?? "Unknown")</span>
+                                </div>
+                                <small class="text-muted font-monospace">@kit.Id</small>
+                            </a>
+                        }
+                    </div>
+                </div>
+            }
+
+            @if (Model.IncludedKits.Any())
+            {
+                <div class="mt-4">
+                    <h5 class="text-secondary text-uppercase fs-6 mb-3">Includes</h5>
+                    <div class="list-group">
+                        @foreach (var kit in Model.IncludedKits)
+                        {
+                            <a asp-page="/Gundam/Kits/Details" asp-route-id="@kit.Id" class="list-group-item list-group-item-action bg-black text-white border-secondary d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="badge bg-secondary me-2">@kit.Grade</span>
+                                    <span>@(kit.KitName ?? kit.Gundams.FirstOrDefault()?.CommonName ?? "Unknown")</span>
+                                </div>
+                                <small class="text-muted font-monospace">@kit.Id</small>
+                            </a>
+                        }
+                    </div>
+                </div>
+            }
+
+            @if (Model.CombinesWith.Any())
+            {
+                <div class="mt-4">
+                    <h5 class="text-secondary text-uppercase fs-6 mb-3">Combines With</h5>
+                    <div class="list-group">
+                        @foreach (var kit in Model.CombinesWith)
+                        {
+                            <a asp-page="/Gundam/Kits/Details" asp-route-id="@kit.Id" class="list-group-item list-group-item-action bg-black text-white border-secondary d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="badge bg-secondary me-2">@kit.Grade</span>
+                                    <span>@(kit.KitName ?? kit.Gundams.FirstOrDefault()?.CommonName ?? "Unknown")</span>
+                                </div>
+                                <small class="text-muted font-monospace">@kit.Id</small>
+                            </a>
+                        }
+                    </div>
+                </div>
+            }
+
+            @if (Model.RemixedFrom.Any())
+            {
+                <div class="mt-4">
+                    <h5 class="text-secondary text-uppercase fs-6 mb-3">Based On (Remix/Recolor)</h5>
+                    <div class="list-group">
+                        @foreach (var kit in Model.RemixedFrom)
+                        {
+                            <a asp-page="/Gundam/Kits/Details" asp-route-id="@kit.Id" class="list-group-item list-group-item-action bg-black text-white border-secondary d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="badge bg-secondary me-2">@kit.Grade</span>
+                                    <span>@(kit.KitName ?? kit.Gundams.FirstOrDefault()?.CommonName ?? "Unknown")</span>
+                                </div>
+                                <small class="text-muted font-monospace">@kit.Id</small>
+                            </a>
+                        }
+                    </div>
+                </div>
+            }
+
+            @if (Model.RemixedInto.Any())
+            {
+                <div class="mt-4">
+                    <h5 class="text-secondary text-uppercase fs-6 mb-3">Remixed Into</h5>
+                    <div class="list-group">
+                        @foreach (var kit in Model.RemixedInto)
+                        {
+                            <a asp-page="/Gundam/Kits/Details" asp-route-id="@kit.Id" class="list-group-item list-group-item-action bg-black text-white border-secondary d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="badge bg-secondary me-2">@kit.Grade</span>
+                                    <span>@(kit.KitName ?? kit.Gundams.FirstOrDefault()?.CommonName ?? "Unknown")</span>
+                                </div>
+                                <small class="text-muted font-monospace">@kit.Id</small>
+                            </a>
+                        }
+                    </div>
+                </div>
+            }
+
+            @if (Model.PartSwaps.Any())
+
+            {
+                <div class="mt-4">
+                    <h5 class="text-secondary text-uppercase fs-6 mb-3">Part Swaps</h5>
+                    <div class="list-group">
+                        @foreach (var kit in Model.PartSwaps)
+                        {
+                            <a asp-page="/Gundam/Kits/Details" asp-route-id="@kit.Id" class="list-group-item list-group-item-action bg-black text-white border-secondary d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="badge bg-secondary me-2">@kit.Grade</span>
+                                    <span>@(kit.KitName ?? kit.Gundams.FirstOrDefault()?.CommonName ?? "Unknown")</span>
+                                </div>
+                                <small class="text-muted font-monospace">@kit.Id</small>
+                            </a>
+                        }
+                    </div>
+                </div>
+            }
+
+            @if (Model.Recolors.Any())
+            {
+                <div class="mt-4">
+                    <h5 class="text-secondary text-uppercase fs-6 mb-3">Recolors</h5>
+                    <div class="list-group">
+                        @foreach (var kit in Model.Recolors)
+                        {
+                            <a asp-page="/Gundam/Kits/Details" asp-route-id="@kit.Id" class="list-group-item list-group-item-action bg-black text-white border-secondary d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="badge bg-secondary me-2">@kit.Grade</span>
+                                    <span>@(kit.KitName ?? kit.Gundams.FirstOrDefault()?.CommonName ?? "Unknown")</span>
+                                </div>
+                                <small class="text-muted font-monospace">@kit.Id</small>
+                            </a>
+                        }
+                    </div>
+                </div>
+            }
+
+            @if (Model.Requires.Any())
+            {
+                <div class="mt-4">
+                    <h5 class="text-secondary text-uppercase fs-6 mb-3">Requires</h5>
+                    <div class="list-group">
+                        @foreach (var kit in Model.Requires)
+                        {
+                            <a asp-page="/Gundam/Kits/Details" asp-route-id="@kit.Id" class="list-group-item list-group-item-action bg-black text-white border-secondary d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="badge bg-secondary me-2">@kit.Grade</span>
+                                    <span>@(kit.KitName ?? kit.Gundams.FirstOrDefault()?.CommonName ?? "Unknown")</span>
+                                </div>
+                                <small class="text-muted font-monospace">@kit.Id</small>
+                            </a>
+                        }
+                    </div>
+                </div>
+            }
+
+            @if (Model.RequiredBy.Any())
+            {
+                <div class="mt-4">
+                    <h5 class="text-secondary text-uppercase fs-6 mb-3">Required By</h5>
+                    <div class="list-group">
+                        @foreach (var kit in Model.RequiredBy)
+                        {
+                            <a asp-page="/Gundam/Kits/Details" asp-route-id="@kit.Id" class="list-group-item list-group-item-action bg-black text-white border-secondary d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="badge bg-secondary me-2">@kit.Grade</span>
+                                    <span>@(kit.KitName ?? kit.Gundams.FirstOrDefault()?.CommonName ?? "Unknown")</span>
+                                </div>
+                                <small class="text-muted font-monospace">@kit.Id</small>
+                            </a>
+                        }
+                    </div>
+                </div>
+            }
 
             @if (Model.RelatedAccessories.Any())
             {

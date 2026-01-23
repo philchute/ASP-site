@@ -81,8 +81,9 @@ The setting of Gundam SEED. It reimagines many UC concepts for a new generation,
 | CE72     | Mobile Suit Gundam SEED X Astray                      | 11 manga chapters    | 2003-2006          |
 | CE73-74  | Mobile Suit Gundam SEED Destiny                       | 50 episodes          | 2004-2005          |
 | CE73     | Mobile Suit Gundam SEED C.E. 73: Stargazer            | 3 episodes           | 2006               |
+| CE74     | Mobile Suit Gundam SEED Freedom Zero                  | TBA                  | 2026               |
 | CE75     | Mobile Suit Gundam SEED Freedom                       | 1 movie              | 2024               |
-| CE74     | Mobile Suit Gundam SEED Freedom Zero                  | TBA                  | TBA                |
+
 
 ### Anno Domini (AD)
 The timeline of Gundam 00. It is set in our future where three power blocs fight for control of solar energy.
@@ -139,5 +140,6 @@ These series are set in the present day and are about kids building gunpla kits 
 | Gundam Build Fighters Try                                     | 25 episodes      | 2014-2015     |
 | Gundam Build Divers                                           | 25 episodes      | 2018-2019     |
 | Gundam Build Divers Re:Rise                                   | 26 episodes      | 2019-2020     |
+| Gundam Breaker Battlogue                                      | 6 episodes       | 2021          |
 | Gundam Build Metaverse                                        | 3 episodes       | 2023          |
 

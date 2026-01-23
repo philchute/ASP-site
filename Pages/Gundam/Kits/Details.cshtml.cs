@@ -16,6 +16,15 @@ namespace ASP_site.Pages.Gunpla.Kits
 
         public GunplaKit Kit { get; set; } = null!;
         public List<GunplaKit> RelatedAccessories { get; set; } = new();
+        public List<GunplaKit> IncludedKits { get; set; } = new();
+        public List<GunplaKit> IncludedInKits { get; set; } = new();
+        public List<GunplaKit> RemixedFrom { get; set; } = new();
+        public List<GunplaKit> RemixedInto { get; set; } = new();
+        public List<GunplaKit> Recolors { get; set; } = new();
+        public List<GunplaKit> PartSwaps { get; set; } = new();
+        public List<GunplaKit> CombinesWith { get; set; } = new();
+        public List<GunplaKit> Requires { get; set; } = new();
+        public List<GunplaKit> RequiredBy { get; set; } = new();
         public UserKitEntry? UserEntry { get; set; }
         
         [BindProperty]
@@ -27,25 +36,94 @@ namespace ASP_site.Pages.Gunpla.Kits
             if (kit == null) return NotFound();
             Kit = kit;
 
+            // Fetch relationships
+            var relationships = await _service.GetKitRelationshipsAsync(id);
+
+            // 1. Included Kits (Outgoing Includes)
+            IncludedKits = relationships
+                .Where(r => r.KitId == id && r.Type == KitRelationshipType.Includes)
+                .Select(r => r.RelatedKit)
+                .ToList();
+
+            // 2. Parent Kits (Incoming Includes)
+            IncludedInKits = relationships
+                .Where(r => r.RelatedKitId == id && r.Type == KitRelationshipType.Includes)
+                .Select(r => r.Kit)
+                .ToList();
+
+            // 3. Remixed From (Outgoing Remix)
+            RemixedFrom = relationships
+                .Where(r => r.KitId == id && r.Type == KitRelationshipType.Remix )
+                .Select(r => r.RelatedKit)
+                .ToList();
+
+            // 4. Remixed Into (Incoming Remix)
+            RemixedInto = relationships
+                .Where(r => r.RelatedKitId == id && r.Type == KitRelationshipType.Remix)
+                .Select(r => r.Kit)
+                .ToList();
+
+            // 5. Combines With (Bidirectional)
+            CombinesWith = relationships
+                .Where(r => (r.KitId == id || r.RelatedKitId == id) && r.Type == KitRelationshipType.CombinesWith)
+                .Select(r => r.KitId == id ? r.RelatedKit : r.Kit)
+                .ToList();
+
+            // 6. Part Swaps (Bidirectional)
+            PartSwaps = relationships
+                .Where(r => (r.KitId == id || r.RelatedKitId == id) && r.Type == KitRelationshipType.PartSwap)
+                .Select(r => r.KitId == id ? r.RelatedKit : r.Kit)
+                .ToList();
+            
+            // 7. Recolors (Bidirectional)
+            Recolors = relationships
+                .Where(r => (r.KitId == id || r.RelatedKitId == id) && r.Type == KitRelationshipType.Recolor)
+                .Select(r => r.KitId == id ? r.RelatedKit : r.Kit)
+                .ToList();
+
+            // 8. Requires (Outgoing Requires)
+            Requires = relationships
+                .Where(r => r.KitId == id && r.Type == KitRelationshipType.Requires)
+                .Select(r => r.RelatedKit)
+                .ToList();
+
+            // 9. Required By (Incoming Requires)
+            RequiredBy = relationships
+                .Where(r => r.RelatedKitId == id && r.Type == KitRelationshipType.Requires)
+                .Select(r => r.Kit)
+                .ToList();
+
             // Fetch related accessories
             var accessoryGrades = new[] 
             { 
                 GunplaGrade.WaterSlide, 
                 GunplaGrade.Sticker, 
                 GunplaGrade.MetalSticker, 
-                GunplaGrade.MetalParts, 
+                GunplaGrade.Part, 
                 GunplaGrade.ActionBase 
             };
 
             var relatedKits = new List<GunplaKit>();
+
+            // Add explicitly required kits
+            var requiredKits = relationships
+                .Where(r => r.KitId == id && r.Type == KitRelationshipType.Requires)
+                .Select(r => r.RelatedKit);
+            relatedKits.AddRange(requiredKits);
+
             foreach (var gundam in Kit.Gundams)
             {
                 var kits = await _service.GetKitsForGundamAsync(gundam.ModelNumber);
                 relatedKits.AddRange(kits);
             }
+            foreach (var faction in Kit.Factions)
+            {
+                var kits = await _service.GetKitsForFactionAsync(faction);
+                relatedKits.AddRange(kits);
+            }
 
             RelatedAccessories = relatedKits
-                .Where(k => accessoryGrades.Contains(k.Grade) 
+                .Where(k => (accessoryGrades.Contains(k.Grade) || requiredKits.Any(rk => rk.Id == k.Id))
                             && k.Id != Kit.Id
                             && (k.Grade == GunplaGrade.ActionBase 
                                 || k.Scale == Kit.Scale 

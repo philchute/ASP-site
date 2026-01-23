@@ -6,11 +6,15 @@ namespace ASP_site.Models.Gunpla
     {
         public static class Series
         {
+            public const string AGE = "Gundam AGE";
             public const string AdvanceOfZeta = "Advance of Zeta";
             public const string BattlefieldRecord = "Mobile Suit Gundam Battlefield Record U.C. 0081";
             public const string BlueDestiny = "Blue Destiny";
             public const string BuildDivers = "Gundam Build Divers";
+            public const string BuildDiversReRise = "Gundam Build Divers Re:Rise";
             public const string BuildFighters = "Gundam Build Fighters";
+            public const string BuildFightersTry = "Gundam Build Fighters Try";
+            public const string BuildMetaverse = "Gundam Build Metaverse";
             public const string CCA = "Char's Counterattack";
             public const string CCABC = "Mobile Suit Gundam: Char's Counterattack: Beltorchika's Children";
             public const string Crossbone = "Mobile Suit Crossbone Gundam";
@@ -18,6 +22,7 @@ namespace ASP_site.Models.Gunpla
             public const string F90 = "Mobile Suit Gundam F90";
             public const string F91 = "Mobile Suit Gundam F91";
             public const string GGundam = "Mobile Fighter G Gundam";
+            public const string GReco = "Gundam Reconguista in G";
             public const string GQ = "Mobile Suit Gundam GQuuuuuuX";
             public const string GUnit = "Gundam Wing: Dual Story G-Unit (aka The Last Outpost)";
             public const string HarmonyOfGundam = "Harmony of Gundam";
@@ -46,6 +51,23 @@ namespace ASP_site.Models.Gunpla
             public const string X = "After War Gundam X";
             public const string ZZ = "Mobile Suit Gundam ZZ";
             public const string Zeta = "Mobile Suit Zeta Gundam";
+        }
+
+        public static class Timelines
+        {
+            public const string UC = "Universal Century";
+            public const string FC = "Future Century";
+            public const string AC = "After Colony";
+            public const string AW = "After War";
+            public const string CC = "Correct Century";
+            public const string CE = "Cosmic Era";
+            public const string AD = "Anno Domini";
+            public const string AG = "Advanced Generation";
+            public const string RC = "Regild Century";
+            public const string PD = "Post Disaster";
+            public const string AS = "Ad Stella";
+            public const string Build = "Build Timeline";
+            public const string Other = "Other";
         }
     }
 }

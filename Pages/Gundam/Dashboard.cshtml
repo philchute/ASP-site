@@ -14,6 +14,7 @@
                 <div class="mt-3">
                     <a asp-page="/Gundam/Grades" class="btn btn-secondary me-2">Grade Guide</a>
                     <a asp-page="/Gundam/Timeline" class="btn btn-secondary me-2">Timeline Guide</a>
+                    <a asp-page="/Gundam/Stats" class="btn btn-outline-info me-2">Stats</a>
                     <a asp-page-handler="Export" class="btn btn-secondary">Export CSV</a>
                     
                     <button class="btn btn-outline-secondary ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#importCollapse">
@@ -129,8 +130,11 @@
                         <a asp-page="/Gundam/Kits/Details" asp-route-id="@kit.Id" class="text-info text-decoration-none">@kit.Id</a>
                     </div>
                     <div class="p-1 text-center col-2 text-muted small">
-                        <a asp-page="/Gundam/Timeline/List" asp-route-name="@(kit.Gundams.FirstOrDefault()?.Timeline ?? "-")" class="text-decoration-none text-muted">
-                            @(kit.Gundams.FirstOrDefault()?.Timeline ?? "-")
+                        @{
+                            var timeline = GundamHelpers.GetTimeline(GundamHelpers.GetSeriesFullName(kit.Gundams.FirstOrDefault()?.Series.FirstOrDefault()));
+                        }
+                        <a asp-page="/Gundam/Timeline" asp-route-name="@timeline" class="text-decoration-none text-muted">
+                            @timeline
                         </a>
                     </div>
                     <div class="p-1 text-start col-2 fw-bold text-white">

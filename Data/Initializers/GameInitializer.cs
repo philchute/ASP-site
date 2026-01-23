@@ -5129,6 +5129,41 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
+          GameID = "titanfall",
+          Name = "Titanfall",
+          Description = "Titanfall was delisted from Steam in 2021 due to being uplayable due to DDOS attacks on the servers.",
+          EngineID = "source",
+          Developer = "Respawn Entertainment",
+          IsFree = false,
+          IsPaid = false,
+          IsPlayable = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          ReleaseDates = [
+            new ReleaseDate{Year = 2014, Month = 3, Day = 11}
+          ]
+        },
+        new Game {
+          GameID = "titanfall2",
+          Name = "Titanfall 2",
+          Description = "Titanfall 2 is a first-person shooter game developed by Respawn Entertainment.",
+          EngineID = "source",
+          Developer = "Respawn Entertainment",
+          SteamID = 1237970,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = true,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2016, Month = 10, Day = 28}
+          ]
+        },
+        new Game {
           GameID = "tombraider",
           Name = "Tomb Raider",
           Description = "Tomb Raider is a third person platformer developed by Core Design. Originally released for the Sega Saturn and Playstation 1, it was remade in 2007 as 'Tomb Raider: Anniversary, remastered by Aspyer in 2024 as 'Tomb Raider I-III Remastered', and will be remade again in 2026 as 'Tomb Raider: Legacy of Atlantis'",

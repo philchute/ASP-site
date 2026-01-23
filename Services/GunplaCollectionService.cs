@@ -1,5 +1,6 @@
 using ASP_site.Data;
 using ASP_site.Models.Gunpla;
+using ASP_site.Helpers;
 using Microsoft.EntityFrameworkCore;
 using System.Text;
 
@@ -96,19 +97,27 @@ namespace ASP_site.Services
 
         public async Task<List<string>> GetAllTimelinesAsync()
         {
-            return await _context.Gundams
-                .Select(g => g.Timeline)
+            var allSeries = await _context.Gundams
+                .SelectMany(g => g.Series)
+                .Distinct()
+                .ToListAsync();
+
+            return allSeries
+                .Select(s => GundamHelpers.GetTimeline(s))
                 .Distinct()
                 .OrderBy(t => t)
-                .ToListAsync();
+                .ToList();
         }
 
         public async Task<List<GunplaKit>> GetKitsByTimelineAsync(string timelineName)
         {
-            return await _context.GunplaKits
+            var kits = await _context.GunplaKits
                 .Include(k => k.Gundams)
-                .Where(k => k.Gundams.Any(u => u.Timeline == timelineName))
                 .ToListAsync();
+
+            return kits
+                .Where(k => k.Gundams.Any(g => g.Series.Any(s => GundamHelpers.GetTimeline(s) == timelineName)))
+                .ToList();
         }
 
 
@@ -146,7 +155,8 @@ namespace ASP_site.Services
             {
                 var gundamModel = entry.Kit?.Gundams.FirstOrDefault()?.ModelNumber ?? "";
                 var commonName = entry.Kit?.Gundams.FirstOrDefault()?.CommonName ?? "";
-                var timeline = entry.Kit?.Gundams.FirstOrDefault()?.Timeline ?? "";
+                var firstSeries = entry.Kit?.Gundams.FirstOrDefault()?.Series.FirstOrDefault();
+                var timeline = GundamHelpers.GetTimeline(firstSeries);
                 var releaseYear = entry.Kit?.ReleaseYear.ToString() ?? "";
                 
                 // Simple CSV escaping
@@ -257,6 +267,14 @@ namespace ASP_site.Services
                 .ToListAsync();
         }
 
+        public async Task<List<GunplaKit>> GetKitsForFactionAsync(string faction)
+        {
+            return await _context.GunplaKits
+                .Where(k => k.Factions.Contains(faction))
+                .Include(k => k.Gundams)
+                .ToListAsync();
+        }
+
         public async Task<GunplaKit?> GetKitAsync(string kitId)
         {
             return await _context.GunplaKits
@@ -269,6 +287,17 @@ namespace ASP_site.Services
              var userId = GetUserId();
              return await _context.UserKitEntries
                 .FirstOrDefaultAsync(u => u.KitId == kitId && u.UserId == userId);
+        }
+
+        public async Task<List<KitRelationship>> GetKitRelationshipsAsync(string kitId)
+        {
+            return await _context.KitRelationships
+                .Include(r => r.Kit)
+                    .ThenInclude(k => k.Gundams)
+                .Include(r => r.RelatedKit)
+                    .ThenInclude(k => k.Gundams)
+                .Where(r => r.KitId == kitId || r.RelatedKitId == kitId)
+                .ToListAsync();
         }
 
     }

@@ -931,6 +931,10 @@ namespace ASP_site.Data.Initializers {
         new Link { GameID = "syndicateblackops", Label = "Syndicate Black Ops on ModDB", Description = "Syndicate Black Ops on ModDB",
           LinkType = LinkType.Download, Url = "https://www.moddb.com/mods/syndicate-black-ops" },
 
+        // Titanfall 2
+        new Link { GameID = "titanfall2", Label = "Jumping off of walls is really complicated", Description = "Titanfall 2 Wall jumping Guide",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=Vk_RaEgux2Q" },
+
         // TheFinals
         new Link { GameID = "thefinals", Label = "The Finals playtest", Description = "3v3v3 gameplay on stadium", 
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=o9GwWDeB8PA" },
@@ -942,6 +946,8 @@ namespace ASP_site.Data.Initializers {
         // Tomb Raider
         new Link { GameID = "tombraider", Label = "Beef Raider: Tomb Raider in VR", Description = "Beef Raider: Tomb Raider in VR",
           LinkType = LinkType.Download, Url = "https://sidequestvr.com/app/38086/beef-raider-xr-tomb-raider-in-vr" },
+        new Link { GameID = "tombraider", Label = "How Jumping Works in Tomb Raider", Description = "How Jumping Works in Tomb Raider",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=x2lFFCOgOeI" },
 
         // Tribes1
         new Link { GameID = "tribes1", Label = "Tribes 1 pub gameplay", Description = "Pub gameplay", 

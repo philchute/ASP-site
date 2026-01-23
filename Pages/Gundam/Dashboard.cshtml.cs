@@ -1,5 +1,6 @@
 using ASP_site.Models.Gunpla;
 using ASP_site.Services;
+using ASP_site.Helpers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -72,7 +73,6 @@ namespace ASP_site.Pages.Gundam
                     (k.KitName != null && k.KitName.Contains(SearchString, StringComparison.OrdinalIgnoreCase)) ||
                     (k.Gundams != null && k.Gundams.Any(u => u.ModelNumber.Contains(SearchString, StringComparison.OrdinalIgnoreCase))) ||
                     (k.Gundams != null && k.Gundams.Any(u => u.CommonName.Contains(SearchString, StringComparison.OrdinalIgnoreCase))) ||
-                    (k.Gundams != null && k.Gundams.Any(u => u.Timeline.Contains(SearchString, StringComparison.OrdinalIgnoreCase))) ||
                     (k.Gundams != null && k.Gundams.Any(u => u.Series != null && u.Series.Any(s => s.Contains(SearchString, StringComparison.OrdinalIgnoreCase))))
                 );
             }
@@ -105,7 +105,16 @@ namespace ASP_site.Pages.Gundam
                     query = query.OrderBy(k => k.Grade).ThenBy(k => k.Id);
                     break;
                 case "Timeline":
-                    query = query.OrderBy(k => k.Gundams.FirstOrDefault() != null ? k.Gundams.First().Timeline : "").ThenBy(k => k.Id);
+                    // Sort by Timeline (need to resolve via helper since it's no longer on the model)
+                    // This is inefficient in-memory sorting but ok for small datasets
+                    query = query.AsEnumerable()
+                        .OrderBy(k => 
+                        {
+                            var s = k.Gundams.FirstOrDefault()?.Series.FirstOrDefault();
+                            return GundamHelpers.GetTimeline(s);
+                        })
+                        .ThenBy(k => k.Id)
+                        .AsQueryable();
                     break;
                 case "Model":
                     query = query.OrderBy(k => k.Gundams.FirstOrDefault() != null ? k.Gundams.First().ModelNumber : "").ThenBy(k => k.Id);

@@ -12,11 +12,11 @@
              <div class="text-muted fs-5 mt-2">
                 <span class="text-white font-monospace">@Model.Gundam.ModelNumber</span> 
                 <span class="mx-2 text-secondary">|</span> 
-                <span class="text-info">@Model.Gundam.Timeline</span>
-                @if (!string.IsNullOrEmpty(Model.Gundam.Faction))
+                <span class="text-info">@GundamHelpers.GetTimeline(Model.Gundam.Series.FirstOrDefault())</span>
+                @if (Model.Gundam.Factions.Any())
                 {
                     <span class="mx-2 text-secondary">|</span>
-                    <span class="text-white">@Model.Gundam.Faction</span>
+                    <span class="text-white">@string.Join(", ", Model.Gundam.Factions)</span>
                 }
                 @if (Model.Gundam.Series.Any())
                 {

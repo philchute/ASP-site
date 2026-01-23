@@ -8,6 +8,31 @@ Gundam Plastic Model Kits (Gunpla) come in various scales and levels of detail, 
 
 Remember that for this manufacturing process (injection molded plastic), nearly all of the cost is up-front, in designing and carving the molds. For this reason, while some kits and lines do get obsoleted, and some exclusive colors are printed in limited runs, generally Bandai will continue to print older kits as long as there is any demand. Kits are more expensive in the West due to them being imported from Japan, but Bandai is pretty transparent with their pricing, meaning if one kit is more expensive than another kit, that's because it contains more parts. 
 
+### EG (Entry Grade) - 1/144
+*   **Scale**: 1/144
+*   **Complexity**: Beginner
+*   **Detail**: Low
+*   **Notes**: These are inexpensive and simpler kits in the same 1/144 scale as HG. Unfortunately by the time they are imported from Japan there isn't much of a price difference, so they don't have much purpose in the Western market. They feature snap-off parts which don't require clippers, and EG models still offer good articulation. For simplicity I am including other lines of simple beginner kits as EG here:
+
+| Line                       | Name                                       | Released  | Description                                           |
+|----------------------------|--------------------------------------------|-----------|-------------------------------------------------------|
+| SEED-00 to SEED-21         | 1/144 Scale (No Grade) Gundam SEED         | 2002-2005 | Kits from the Mobile Suit Gundam SEED series.         |
+| SEED-DESTINY-01 to 14      | 1/144 Scale (No Grade) Gundam SEED Destiny | 2004-2005 | Kits from the Mobile Suit Gundam SEED Destiny series. |
+| AG-01 to AG-24             | Advanced Grade                             | 2011-2012 | Kits from the Mobile Suit Gundam AGE series. Included a chip for use in an arcade machine and has not been reprinted since, probably for that reason. |
+| EG(2011)-01 to EG(2011)-06 | Entry Grade (2011)                         | 2011-2012 | The original line of EG kits from 2011.               |
+| **EG-01 to EG-05+**        | **Entry Grade**                            | **2020-TBD** | The modern line of EG kits started in 2020.        |
+
+### FG (First Grade) - 1/144
+*   **Scale**: 1/144
+*   **Complexity**: Expert (Some kits require glue and paint)
+*   **Detail**: Low
+*   **Notes**: These are reprints of early Gundpla kits which predate the HG standard of detail. They are generally obsolete, but some are still occasionally printed and can be a fun challenge to add to your collection.
+
+| Line                       | Name                                       | Released  | Description                                           |
+|----------------------------|--------------------------------------------|-----------|-------------------------------------------------------|
+| FG-01 to FG-03           | First Grade                           | 1999-2000 | Released in 1999 as a remake of the original 1980 models. |
+| FG00-01 to FG00-04       | First Grade 00                              | 2007-2007 | Gundam 00 series models. |
+
 ### HG (High Grade) - 1/144
 
 *   **Scale**: 1/144 (approx 13cm / 5 inches tall)
@@ -48,10 +73,12 @@ Other numbered HG lines:
 | HG08                         | High Grade Mobile Suit Gundam: The 08th MS Team       | 1996-1999 | Mobile Suits from the "Mobile Suit Gundam: The 08th MS Team" series. |
 | HGGT                         | High Grade Mobile Suit Gundam: Thunderbolt            | 2013-2017 | Mobile Suits from the "Mobile Suit Gundam: Thunderbolt" manga and anime series. The first 6 kits are out of print as kits 7-11 were recolors of the first 6 to match the colors of the anime. |
 | HGGTO                        | High Grade Mobile Suit Gundam: The Origin             | 2015-2023 | Mobile Suits from the "Mobile Suit Gundam: The Origin" series. |
+| HGGB-001 to HGGB-008         | High Grade Gunpla Builders        | 2010-2024 | Mobile Suits from Model Suit Gunpla Builders Beginning G. |
+| HGBF-001 to HGBF-068                         | High Grade Gundam Build Fighters  | 2013-2020 | Mobile Suits from the "Gundam Build Fighters", "Gundam Build Fighters Try", "Gundam Build Fighters: GM's Counterattack" and "Gundam Build Fighters: Battlogue" series and the "Build Fighters" timeline. Includes a figure-rise model and a petit guy figure. |
+| HGGBM-001 to HGGBM-012       | High Grade Gundam Build Metaverse | 2023-2024 | Mobile Suits from the "Gundam Build Metaverse" series. Includes an SD model and a figure-rise model. |
 | HGSEED                       | High Grade Gundam SEED                                | 2002-2005 | Mobile Suits from the Cosmic Era timeline. There was also a **HGSEED-MSV** line. Some of HGSEED kits were released as re-colored and restickered 'Remaster' versions in the **HGSEED-R** line between 2011-2013. Starting in 2014 new High Grade Cosmic Era kits were combined into the HGUC line and labeled as <span style="color: #000080;">&#9632;</span> **HGCE** (High Grade Cosmic Era). |
 | HG00                         | High Grade Gundam 00              | 2007-2010 | Mobile Suits from the "Gundam 00" series and the Anno Domini timeline. |
 | HGAGE                        | High Grade Gundam AGE             | 2011-2013 | Mobile Suits from the "Gundam AGE" series and the Advanced Generation timeline. New HG Advanced Generation kits are now combined into the HGUC line and labeled as **HGAG**. |
-| HGBF                         | High Grade Gundam Build Fighters  | 2013-2018 | Mobile Suits from the "Gundam Build Fighters", "Gundam Build Fighters Try", "Gundam Build Fighters: GM's Counterattack" and "Gundam Build Fighters: Battlogue" series and the "Build Fighters" timeline. There is also a line of **SDBF** Super Deformed Build Fighters kits and **HGPG** High Grade Petit Guy kits, after a character from the Build series. |
 | HGRC                         | High Grade Reconguista In G       | 2014-2015 | Mobile Suits from the "Reconguista In G" series and the Regild Century timeline. |
 | HGIBO                        | High Grade Iron Blooded Orphans   | 2015-2022 | Mobile Suits from the "Iron Blooded Orphans" series and the Post Disaster timeline. First HG line to feature sub-frames. Allows the swapping of weapons and armor between kits and the Iron Blooded Arms sub-line. |
 | HGWFM                        | High Grade Witch From Mercury     | 2022-2023 | Mobile Suits from the "The Witch From Mercury" series and the Ad Stella timeline. Features a very modern design and lots of articulation. |
@@ -101,20 +128,6 @@ Similarly there are lines of HG style kits at 1/60 scale (**1/60 Series**, **HGE
 *   **Complexity**: Advanced
 *   **Detail**: High
 *   **Notes**: Introduced in 2010, Real Grade kits are a realistic styling that combines the compact size of 1/144 HG scale with the detail and internal frame of MG. Known for their "Advanced MS Joint" pre-assembled internal frame system and high color separation. There are also six RG kits from the series 'Evangelion' and one from the series 'The King of Braves GaoGaiGar'.
-
-### EG (Entry Grade) - 1/144
-*   **Scale**: 1/144
-*   **Complexity**: Beginner
-*   **Detail**: Low
-*   **Notes**: These are inexpensive and simpler kits in the same 1/144 scale as HG. Unfortunately by the time they are imported from Japan there isn't much price difference, so they don't have much purpose in the Western market. They feature snap-off parts which don't require clippers, and EG models still offer good articulation. For simplicity I am including other lines of simple beginner kits as EG here:
-
-| Line                       | Name                                       | Released  | Description                                           |
-|----------------------------|--------------------------------------------|-----------|-------------------------------------------------------|
-| SEED-00 to SEED-21         | 1/144 Scale (No Grade) Gundam SEED         | 2002-2005 | Kits from the Mobile Suit Gundam SEED series.         |
-| SEED-DESTINY-01 to 14      | 1/144 Scale (No Grade) Gundam SEED Destiny | 2004-2005 | Kits from the Mobile Suit Gundam SEED Destiny series. |
-| AG-01 to AG-24             | Advanced Grade                             | 2011-2012 | Kits from the Mobile Suit Gundam AGE series. Included a chip for use in an arcade machine and has not been reprinted since, probably for that reason. |
-| EG(2011)-01 to EG(2011)-06 | Entry Grade (2011)                         | 2011-2012 | The original line of EG kits from 2011.               |
-| **EG-01 to EG-05+**        | **Entry Grade**                            | **2020-TBD** | The modern line of EG kits started in 2020.        |
 
 ### UCHG (Universal Century Hard Graph) - 1/35
 *   **Scale**: 1/35 (not used for mobile suits)
@@ -166,3 +179,26 @@ I hope this guide has been helpful, here is a final chart as a (simplified) summ
 | 1/60 Scale (Huge models)        |               | 1/60 Series   | PG             | PGU            |
 | 1/48 Scale (Mega sized models)  |               | MSM           |                |                |
 | 1/35 Scale (Vehicles only)      |               | UCHG          |                |                |
+
+
+### 1/144 Scale Accessory Kits
+
+| Line                   | Name                                 | Released  | Description                                                                      |
+|------------------------|--------------------------------------|-----------|----------------------------------------------------------------------------------|
+| HGBC-000 to HGBC-046   | High Grade Build Custom (HGBC)       | 2013-2018 | Accessory kits for HGGBF and other 1/144 scale kits.                             |
+| OPS-01 to OPS-20+      | 1/144 Scale Accessory Kits           | 2024-TBA  | Accessory kits for EG and other 1/144 scale kits.                                |
+
+### Action Bases
+
+Action Bases can be a little confusing because several have been released over the years. Action Base 4 (larger)and Action Base 5 (smaller) are the new standard. Generally, especially on newer kits, the instructions will specify which Action Base to use and how to connect it to the model. On many more detailed kits now there will be a specific piece in the kit, matching the model colors, which can optionally be used to connect directly to the arm of an Action Base. Some kits will include an Action Base, but usually this is a sign that the model cannot stand on its own without it.
+
+| Action Base   | Released  | Base Shape | Connectors | Description                                           |
+|---------------|-----------|------------|------------|-------------------------------------------------------|
+| Action Base 1 | 2006-2009 | Large Octagon + Small Square | 8mm fork, 9mm fork, 11mm fork, peg, screw | Used for 1/100 and large 1/144 scale models. Available in Black, Gray, White, Char Aznable (Red variant with stickers designed for MG-098 and MG-099), Clear, Sparkle Clear Green (Designed for GN Drive-based units from Mobile Suit Gundam 00 and MG-150), Celestial Being (White base is molded in the shape of the Celestial Being insignia. Designed for the Celestial Being units from Mobile Suit Gundam 00.), Unicorn Gundam (Black variant with white octagon base and stickers designed for MG-102/131/150.), Sinanju (Black variant with red octagon base and stickers designed for MG-116/167.), EFSF, Zeon |
+| Action Base 2 | 2007-2009 | Two tarapazoids | 6mm U-Shape, 7mm U-Shape, peg, square peg, screw | Used for 1/144 and small 1/100 scale models. Available in Black, Gray, Clear Blue, Sparkle Clear Green (Designed for GN Drive-based units from Mobile Suit Gundam 00 and HGUC-178), Sparkle Clear Red (Designed for GN Drive Tau-based units from Mobile Suit Gundam 00 and HGUC-100/199) |
+| Action Base 3 | 2011 | Rectangular base | 8mm U-Shape, 9mm U-Shape, 11mm U-Shape, peg |  Used for 1/144 scale models. Able to hold a postcard size photo. Able to use arms from Action Base 1. Available in Black |
+| Action Base 4 | 2017 | Three hexagons | 8mm U-Shape, 9mm U-Shape, peg, square peg, screw | Replaces Action Base 1. Can be used for 1/100 and 1/144 scale models. Available in Black, Clear |
+| Action Base 5 | 2017 | Large hexagon | 6mm U-Shape, 7mm U-Shape, several pegs, pinching claw | Replaces Action Base 2. Can be used for 1/100 and 1/144 scale models. Arm can be divided to hold two figures. Available in Black, Clear |
+| Action Base 6 | 2022 | Rectangular | Two pegs, pinching claw | Used for 1/144 scale models, kit makes two bases. Available in Clear with mirror stickers |
+| Action Base 7 | 2024 | Rectangular | Two pegs, pinching claw | Used for 1/144 scale models, kit makes two bases. Bigger and thicker than Action Base 6. Available in Clear with mirror stickers |
+| Action Base 8 | 2024 | Rectangular | Three pegs | Designed for 1/100 scale and large models. Available in Clear |

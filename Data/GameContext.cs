@@ -30,6 +30,7 @@ namespace ASP_site.Data
     public DbSet<Gundam> Gundams { get; set; } = null!;
     public DbSet<GunplaKit> GunplaKits { get; set; } = null!;
     public DbSet<UserKitEntry> UserKitEntries { get; set; } = null!;
+    public DbSet<KitRelationship> KitRelationships { get; set; } = null!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -45,12 +46,58 @@ namespace ASP_site.Data
             c => c.Aggregate(0, (a, v) => HashCode.Combine(a, v.GetHashCode())),
             c => JsonSerializer.Deserialize<List<string>>(JsonSerializer.Serialize(c, new JsonSerializerOptions()), new JsonSerializerOptions())!));
 
+      modelBuilder.Entity<Gundam>()
+        .Property(g => g.Factions)
+        .HasConversion(
+            v => JsonSerializer.Serialize(v, new JsonSerializerOptions()),
+            v => JsonSerializer.Deserialize<List<string>>(v, new JsonSerializerOptions()) ?? new List<string>())
+        .Metadata.SetValueComparer(new ValueComparer<List<string>>(
+            (c1, c2) => JsonSerializer.Serialize(c1, new JsonSerializerOptions()) == JsonSerializer.Serialize(c2, new JsonSerializerOptions()),
+            c => c.Aggregate(0, (a, v) => HashCode.Combine(a, v.GetHashCode())),
+            c => JsonSerializer.Deserialize<List<string>>(JsonSerializer.Serialize(c, new JsonSerializerOptions()), new JsonSerializerOptions())!));
+
+      modelBuilder.Entity<Gundam>()
+        .Property(g => g.Designers)
+        .HasConversion(
+            v => JsonSerializer.Serialize(v, new JsonSerializerOptions()),
+            v => JsonSerializer.Deserialize<List<string>>(v, new JsonSerializerOptions()) ?? new List<string>())
+        .Metadata.SetValueComparer(new ValueComparer<List<string>>(
+            (c1, c2) => JsonSerializer.Serialize(c1, new JsonSerializerOptions()) == JsonSerializer.Serialize(c2, new JsonSerializerOptions()),
+            c => c.Aggregate(0, (a, v) => HashCode.Combine(a, v.GetHashCode())),
+            c => JsonSerializer.Deserialize<List<string>>(JsonSerializer.Serialize(c, new JsonSerializerOptions()), new JsonSerializerOptions())!));
+
       modelBuilder.Entity<GunplaKit>().ToTable("GunplaKits");
       modelBuilder.Entity<UserKitEntry>().ToTable("UserKitEntries");
+      modelBuilder.Entity<KitRelationship>().ToTable("KitRelationships");
+
+      modelBuilder.Entity<GunplaKit>()
+        .Property(g => g.Factions)
+        .HasConversion(
+            v => JsonSerializer.Serialize(v, new JsonSerializerOptions()),
+            v => JsonSerializer.Deserialize<List<string>>(v, new JsonSerializerOptions()) ?? new List<string>())
+        .Metadata.SetValueComparer(new ValueComparer<List<string>>(
+            (c1, c2) => JsonSerializer.Serialize(c1, new JsonSerializerOptions()) == JsonSerializer.Serialize(c2, new JsonSerializerOptions()),
+            c => c.Aggregate(0, (a, v) => HashCode.Combine(a, v.GetHashCode())),
+            c => JsonSerializer.Deserialize<List<string>>(JsonSerializer.Serialize(c, new JsonSerializerOptions()), new JsonSerializerOptions())!));
+
+      modelBuilder.Entity<GunplaKit>()
+        .Property(g => g.Designers)
+        .HasConversion(
+            v => JsonSerializer.Serialize(v, new JsonSerializerOptions()),
+            v => JsonSerializer.Deserialize<List<string>>(v, new JsonSerializerOptions()) ?? new List<string>())
+        .Metadata.SetValueComparer(new ValueComparer<List<string>>(
+            (c1, c2) => JsonSerializer.Serialize(c1, new JsonSerializerOptions()) == JsonSerializer.Serialize(c2, new JsonSerializerOptions()),
+            c => c.Aggregate(0, (a, v) => HashCode.Combine(a, v.GetHashCode())),
+            c => JsonSerializer.Deserialize<List<string>>(JsonSerializer.Serialize(c, new JsonSerializerOptions()), new JsonSerializerOptions())!));
 
       modelBuilder.Entity<GunplaKit>()
         .HasMany(k => k.Gundams)
         .WithMany();
+
+      modelBuilder.Entity<GunplaKit>()
+        .HasMany(k => k.Relationships)
+        .WithOne(r => r.Kit)
+        .HasForeignKey(r => r.KitId);
       modelBuilder.Entity<Engine>().ToTable("Engines");
       modelBuilder.Entity<Game>().ToTable("Games");
       modelBuilder.Entity<Link>().ToTable("Links");
