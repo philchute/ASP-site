@@ -187,6 +187,7 @@ I hope this guide has been helpful, here is a final chart as a (simplified) summ
 |------------------------|--------------------------------------|-----------|----------------------------------------------------------------------------------|
 | HGBC-000 to HGBC-046   | High Grade Build Custom (HGBC)       | 2013-2018 | Accessory kits for HGGBF and other 1/144 scale kits.                             |
 | OPS-01 to OPS-20+      | 1/144 Scale Accessory Kits           | 2024-TBA  | Accessory kits for EG and other 1/144 scale kits.                                |
+| BPSW-001 to BPSW-010   | 1/144 Scale System Weapons           | 2011-2015 | System weapons for 1/144 scale kits.                                |
 
 ### Action Bases
 
@@ -202,3 +203,4 @@ Action Bases can be a little confusing because several have been released over t
 | Action Base 6 | 2022 | Rectangular | Two pegs, pinching claw | Used for 1/144 scale models, kit makes two bases. Available in Clear with mirror stickers |
 | Action Base 7 | 2024 | Rectangular | Two pegs, pinching claw | Used for 1/144 scale models, kit makes two bases. Bigger and thicker than Action Base 6. Available in Clear with mirror stickers |
 | Action Base 8 | 2024 | Rectangular | Three pegs | Designed for 1/100 scale and large models. Available in Clear |
+| System Base 001 | 2011-2013 | Large Hanger Base | Standing Kits | Designed for 1/144 scale models and their weapons to stand in a hanger base. Available in black, gunmetal, and white. |

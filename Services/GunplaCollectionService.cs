@@ -300,5 +300,14 @@ namespace ASP_site.Services
                 .ToListAsync();
         }
 
+        public async Task<List<KitRelationship>> GetRelationshipsForKitsAsync(IEnumerable<string> kitIds)
+        {
+            var idSet = kitIds.ToHashSet();
+            if (idSet.Count == 0) return new List<KitRelationship>();
+            return await _context.KitRelationships
+                .Where(r => idSet.Contains(r.KitId) || idSet.Contains(r.RelatedKitId))
+                .ToListAsync();
+        }
+
     }
 }

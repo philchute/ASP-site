@@ -15,7 +15,9 @@
                     <a asp-page="/Gundam/Grades" class="btn btn-secondary me-2">Grade Guide</a>
                     <a asp-page="/Gundam/Timeline" class="btn btn-secondary me-2">Timeline Guide</a>
                     <a asp-page="/Gundam/Stats" class="btn btn-outline-info me-2">Stats</a>
-                    <a asp-page-handler="Export" class="btn btn-secondary">Export CSV</a>
+                    <a asp-page-handler="Export" class="btn btn-secondary me-2">Export CSV</a>
+                    <a asp-page-handler="ShoppingListPdf" class="btn btn-secondary me-2">Print Shopping List</a>
+                    <a asp-page-handler="ShoppingListPdf" asp-route-includeAccessories="true" class="btn btn-secondary">Print Shopping List + Accessories</a>
                     
                     <button class="btn btn-outline-secondary ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#importCollapse">
                         Import

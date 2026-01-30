@@ -10,6 +10,7 @@ The original and most expansive timeline, starting with the original 1979 Mobile
 |-----------|------------------------------------------------------------------|-----------------------------|--------------------|
 | UC0068-0079 | Mobile Suit Gundam: The Origin                                 | 13 episodes                 | 2015-2019          |
 | UC0079    | **Mobile Suit Gundam**                                           | 43 episodes or 3 movies     | 1979-1980          |
+| UC0079    | Mobile Suit Gundam: The 08th MS Team                             | 12 episodes                 | 1996-1999          |
 | UC0079    | Mobile Suit Gundam Side Story: Blue Destiny                      | 3 Sega Saturn Games         | 1996-1997          |
 | UC0079    | Mobile Suit Gundam Thunderbolt                                   | 8 episodes                  | 2015-2017          |
 | UC0079    | Gundam: Requiem for Vengeance                                    | 6 episodes                  | 2024               |
@@ -28,13 +29,14 @@ The original and most expansive timeline, starting with the original 1979 Mobile
 | UC0096    | Mobile Suit Gundam Silver Phantom                                | 1 VR movie                  | 2024               |
 | UC0096    | Mobile Suit Gundam Unicorn                                       | 22 episodes                 | 2010-2016          |
 | UC0097    | Mobile Suit Gundam Narrative                                     | 1 movie                     | 2018               |
-| UC0105    | Mobile Suit Gundam Hathaway                                      | 3 movies                    | 2021-TBD           |
+| UC0105    | Mobile Suit Gundam Hathaway                                      | 1 movie                     | 2021               |
+| UC0105    | Mobile Suit Gundam Hathaway: The Sorcery of Nymph Circe          | 1 movie                     | 2026               |
 | UC0120    | Mobile Suit Gundam F90                                           | 8 manga chapters            | 1990               |
 | UC0123    | Mobile Suit Gundam Silhouette Formula 91                         | 4 manga chapters            | 1992               |
 | UC0123    | Mobile Suit Gundam F91                                           | 1 movie                     | 1991               |
 | UC0133    | Mobile Suit Crossbone Gundam                                     | 27 manga chapters           | 1994-1997          |
 | UC0153    | Mobile Suit Victory Gundam                                       | 51 episodes                 | 1993-1994          |
-| UC0196    | Mobile Suit Gundam: The 08th MS Team                             | 12 episodes                 | 1996-1999          |
+| UC0223    | G-Saviour                                                        | 1 live action movie         | 2023               |  
 | Alternate UC0079 | Mobile Suit Gundam GQuuuuuuX                              | 12 episodes or 1 movie      | 2025               |
 
 ### Future Century (FC)

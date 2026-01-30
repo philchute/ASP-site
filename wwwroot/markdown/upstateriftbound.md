@@ -1,6 +1,6 @@
 # Upstate Riftbound
 
-This page has information about the Riftbound scene in Upstate South Carolina as of December 6, 2025.
+This page has information about the Riftbound scene in Upstate South Carolina as of January 26, 2026.
 Nothing is guaranteed to be accurate or up to date, be sure to preregister on the [Riftbound Events Locator](https://locator.riftbound.uvsgames.com/events), and validate the dates and times with the store, especially if traveling. To my knowledge, every store has been able to accomidate every player that's shown up to every event, so definitely go ahead of time even if the event is showing full.  
 Let me know if you find any errors or if you have any updates.
 
@@ -58,7 +58,6 @@ Manathril Williamston have some singles?
 ### Monday
 
 5:30 pm Weekly Nexus Night at Manathril Williamston  
-6:00 pm Toon Gaming Greenville (until January 31st when they will be closing)
 
 ### Tuesday
 
@@ -80,11 +79,9 @@ Manathril Williamston have some singles?
 
 2:00 pm Weekly Nexus Night at Empire Games Anderson
 
-
 ## Event Calendar
 
 Riot is planning on four sets per year. Each set will feature a pre-release weekend, two Summoner Skirmish weekends, and 3 Regional Qualifiers.
-
 
 ### Origins Set Pre-release
 
@@ -100,7 +97,6 @@ Riot is planning on four sets per year. Each set will feature a pre-release week
 | Empire Games Anderson         | Saturday November 1st, 2025 5:00 pm   | [username3181](https://locator.riftbound.uvsgames.com/events/196376)   |
 | Limit Break Fountain Inn      | Sunday November 2nd, 2025 2:00 pm     | [aray9000](https://locator.riftbound.uvsgames.com/events/195949)       |
 | Game Kastle Greenville        | Sunday November 2nd, 2025 4:00 pm     | [HipsterSteve](https://locator.riftbound.uvsgames.com/events/196390)   |
-
 
 ### Houston Regionals
 
@@ -127,7 +123,6 @@ Houston, Texas	December 5-7, 2025
 |-------------------------------|---------------------------------------|------------------------------------------------------------------------|
 | Manathril Williamston         | Friday January 2nd, 2026 5:30 pm      | 14 Players [TooTawl](https://locator.riftbound.uvsgames.com/events/319731)            |
 
-
 ### Origins Summoner Skirmish 2
 
 | Event                         | Date                                  | Winner                                                                 |
@@ -137,8 +132,7 @@ Houston, Texas	December 5-7, 2025
 | Cheerful Games Spartanburg    | Sunday January 11th, 2026 2:00 pm     | 9 players [LoreGoblin47](https://locator.riftbound.uvsgames.com/events/236281) |
 | Limit Break Fountain Inn      | Sunday January 11th, 2026 2:00 pm     | 6 players [the kreatcher](https://locator.riftbound.uvsgames.com/events/224700) |
 | Game Kastle Greenville        | Sunday January 11th, 2026 4:00 pm     | 6 players [Token](https://locator.riftbound.uvsgames.com/events/233791) |
-| Toon Gaming Greenville?        | Friday January 23rd, 2026 5:30 pm?     | [TBD](https://locator.riftbound.uvsgames.com/events/217629) |
-
+| ~~Toon Gaming Greenville~~    | ~~Friday January 23rd, 2026 5:30 pm   | [Cancelled](https://locator.riftbound.uvsgames.com/events/217629) |
 
 ### Spiritforged Set Pre-release
 
@@ -165,16 +159,13 @@ Houston, Texas	December 5-7, 2025
 | Cheerful Games Spartanburg    | Sunday February 8th, 2026 4:00 pm     | TBD |
 | Critical Hits Simpsonville    | Monday February 9th, 2026 6:00 pm     | TBD |
 
-
 ### Italian Regionals
 
 Bologna, Italy	February 20-22, 2026
 
-
 ### Vegas Regionals
 
 Las Vegas, Nevada	February 27-March 1, 2026
-
 
 ### Spiritforged Summoner Skirmish 1
 
@@ -183,13 +174,12 @@ Las Vegas, Nevada	February 27-March 1, 2026
 | Cheerful Games Spartanburg    | Saturday March 1st, 2026 4:00 pm      | TBD |
 | Manathril Williamston         | Monday March 2nd, 2026 6:00 pm        | TBD |
 | ~~Toon Gaming Greenville~~    | ~~Friday March 6th, 2026 7:30 pm~~    | Cancelled due to Toon Gaming closing |
-| Limit Break Fountain Inn      | Saturday March 7th, 2026 7:45am??     | TBD |
+| Limit Break Fountain Inn      | Saturday March 7th, 2026 7:45am?      | Scheduled 7:45am on a Saturday? |
 | Boardwalk Greenville          | Sunday March 15th, 2026 11:00 am      | TBD |
 | Cheerful Games Spartanburg    | Sunday March 15th, 2026 2:00 pm       | TBD |
 | Game Kastle Greenville        | Sunday March 15th, 2026 4:00 pm       | TBD |
 | Critical Hits Simpsonville    | Monday March 16th, 2026 6:00 pm       | TBD |
 | Borderlands Greenville        | Saturday March 21st, 2026 11:00 am    | TBD |
-
 
 ### Spiritforged Summoner Skirmish 2
 
@@ -204,95 +194,85 @@ Las Vegas, Nevada	February 27-March 1, 2026
 | Limit Break Fountain Inn      | Saturday April 18th, 2026 2:00 pm     | TBD |
 | Boardwalk Greenville          | Sunday April 19th, 2026 11:00 am      | TBD |
 
-
 ### Unleashed Set Pre-release
 
 | Event                         | Date                                  | Winner                                                                 |
 |-------------------------------|---------------------------------------|------------------------------------------------------------------------|
+| Borderlands Greenville        | Friday May 1st, 2026 6:00 pm          | TBD |
 | Boardwalk Greenville          | Saturday May 2nd, 2026 12:00 pm       | TBD |
-| Meeple Merchants Easley       | Sunday May 3rd, 2026 4:00 pm       | TBD |
+| Meeple Merchants Easley       | Sunday May 3rd, 2026 4:00 pm          | TBD |
 
 ### Unleashed Summoner Skirmish 1
 
 | Event                         | Date                                  | Winner                                                                 |
 |-------------------------------|---------------------------------------|------------------------------------------------------------------------|
-| Meeple Merchants Easley       | Saturday May 31st, 2026 4:00 pm      | TBD |
-| Boardwalk Greenville          | Sunday June 7th, 2026 11:00 pm       | TBD |
-
+| Meeple Merchants Easley       | Saturday May 31st, 2026 4:00 pm       | TBD |
+| Boardwalk Greenville          | Sunday June 7th, 2026 11:00 pm        | TBD |
+| Borderlands Greenville        | Friday June 19th, 2026 12:00 pm?      | Scheduled noon on a Friday? |
 
 ### Unleashed Summoner Skirmish 2
 
 | Event                         | Date                                  | Winner                                                                 |
 |-------------------------------|---------------------------------------|------------------------------------------------------------------------|
-| Boardwalk Greenville          | Sunday July 5th, 2026 11:00 pm      | TBD |
-| Meeple Merchants Easley       | Sunday July 12th, 2026 4:00 pm      | TBD |
-
+| Boardwalk Greenville          | Sunday July 5th, 2026 11:00 pm        | TBD |
+| Meeple Merchants Easley       | Sunday July 12th, 2026 4:00 pm        | TBD |
+| Borderlands Greenville        | Friday July 17th, 2026 12:00 pm?      | Scheduled noon on a Friday? |
 
 ### Vendetta Set Pre-release
 
 TBD. Q3 2026
 
-
 ### Vendetta Summoner Skirmish 1
 
 TBD. Q3 2026
-
 
 ### Vendetta Summoner Skirmish 2
 
 TBD. Q3 2026
 
-
 ### Radiance Set Pre-release
 
 TBD. Q4 2026
-
 
 ### Radiance Summoner Skirmish 1
 
 TBD. December 2026?
 
-
 ### Radiance Summoner Skirmish 2
 
 TBD. January 2027?
-
 
 ## Bonus Gundam Section
 
 With the closing of Toon Gaming, Gundam is now played:
 * Thursday nights at 7:00 at Game Kastle Greenville
-* Sometimes at Borderlands Greenville?
+* Sometimes at Borderlands Greenville? They were scheduling on Thursday nights on top of Game Kastle but now seem to schedule some Fridays.
 
-| ST07/08 Release        | Date                                  |
-|------------------------|---------------------------------------|
-|Toon Gaming Greenville? | Saturday January 17th, 2026 1:00 pm?  |
-|Boardwalk Greenville    | Sunday January 25th, 2026 1:00 pm     |
+| ST07/08 Release        | Date                                  | |
+|------------------------|---------------------------------------|-|
+|Toon Gaming Greenville? | Saturday January 17th, 2026 1:00 pm?  | Cancelled due to Toon Gaming closing |
+|Boardwalk Greenville    | Sunday February 8th, 2026 1:00 pm     | Rescheduled from January 25th due to weather |
 
-| GD03 Release           | Date                                  |
-|------------------------|---------------------------------------|
-|Boardwalk Greenville    | Sunday January 31st, 2026 1:00 pm     |
-|Cheerful Games Spartanburg | Thursday February 5th, 2026 2:00 pm?   |
-|Game Kastle Greenville  | Thursday February 5th, 2026 6:30 pm   |
-
+| GD03 Release           | Date                                  |  |
+|------------------------|---------------------------------------|-|
+|Boardwalk Greenville    | Sunday January 31st, 2026 1:00 pm     | |
+|Cheerful Games Spartanburg | Thursday February 5th, 2026 2:00 pm?   | Scheduled 2:00pm on a Thursday..? |
+|Game Kastle Greenville  | Thursday February 5th, 2026 6:30 pm   | |
 
 ## Bonus Lorcana Section
 
 Weekly Leagues:  
 * Tuesday nights at 6:30 at Game Kastle Greenville  
+* Sparatic Thursday nights at Boarderlands Greenville
 * Friday nights at 6:30 at Limit Break Fountain Inn  
 * Saturday nights at 6:00 at Boardwalk Greenville  
  
-| Whispers in the Well Set Championship | Date                                  | 
-|---------------------------------------|---------------------------------------|
-|Limit Break Fountain Inn               | Saturday January 10th, 2026 1:00 pm   |
-|Game Kastle Greenville                 | Sunday January 18th, 2026 1:00 pm     |
-|Borderlands Greenville                 | Saturday January 24th, 2026 10:00 am  |
-|Boardwalk Greenville                   | Saturday January 24th, 2026 12:00 pm  |
-|Meeple Merchants Easley                | Saturday January 24th, 2026 12:00 pm  |
-|Cheerful Games Spartanburg             | Sunday January 25th, 2026 12:30 pm    |
-
 | Winterspell Pre-release               | Date                                  |
 |---------------------------------------|---------------------------------------|
-|Game Kastle Greenville                 | Sunday February 15th, 2026 1:00 pm    |
-|Limit Break Fountain Inn               | Sunday February 15th, 2026 2:00 pm    |
+| Game Kastle Greenville                | Sunday February 15th, 2026 1:00 pm    |
+| Limit Break Fountain Inn              | Sunday February 15th, 2026 2:00 pm    |
+| Borderlands Greenville                | Thursday February 19th, 2026 2:00 pm  |
+
+| Winterspell Set Championship          | Date                                  |
+|---------------------------------------|---------------------------------------|
+| Borderlands Greenville                | Sunday April 19th, 2026 9:00 am       |

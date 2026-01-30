@@ -177,6 +177,8 @@ namespace ASP_site.Data.Initializers
           LinkType = LinkType.Documentary, Url = "https://youtu.be/iHtmqtsRi3I" },
         new Link { GameID = "tf2", Label = "The soul of TF2 in one clip", Description = "The soul of TF2 in one clip",
           LinkType = LinkType.Gameplay, Url = "https://youtu.be/2hu1bUHL1mc" },
+        new Link { GameID = "tf2", Label = "TF2 Guide to Competitive", Description = "TF2 Guide to Competitive",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=dxJa5TIkMV8" },
 
         // FF
         // General
