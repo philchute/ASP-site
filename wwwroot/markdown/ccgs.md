@@ -1,9 +1,9 @@
 # Customizable Card Games (CCGs)
 
-This page provides an overview of active Customizable Card Games (CCGs), also known as Trading Card Games (TCGs), in North America as of January 2026, along with some links and resources. There is also some information about games that are not available, as well as some boxed and living card games which share some CCG elements.
+This page provides an overview of active Customizable Card Games (CCGs), also known as Trading Card Games (TCGs), in North America as of February 2026, along with some links and resources. There is also some information about games that are not available, as well as some boxed and living card games which share some CCG elements.
 This is as much to organize my own thoughts as it is to provide as service to others, but I hope you find this useful. 
 In some ways this is a better organized version of the [wikipedia list of CCGS](https://en.wikipedia.org/wiki/List_of_collectible_card_games).
-Most of the upcoming release dates are gathered from this [article](https://www.vintageccg.com/ccg-news/tcg-release-schedule-2024/).
+Most of the upcoming release dates are gathered from this [article](https://www.vintageccg.com/ccg-news/tcg-release-schedule-2026-2027/).
 A lot of vintage rulebooks are available as PDFs [here](https://www.vintageccg.com/download-rulebooks/).
 
 ## Table of Contents
@@ -401,6 +401,7 @@ Events: [Digimon Card Game Official Events](https://world.digimoncard.com/event/
 |  5  |AD01| DIGIMON GENERATION AD-01 Advanced      | March 27, 2026     |
 |  5  |LM07| Limited Card Pack Another Knight       | March 27, 2026     |
 |  5  |    | Data Squad and Beatbreak Starter Decks | May 22, 2026       |
+|  5  |LM08| Final Crest                            | August 28, 2026    |
 
 
 ### Dragon Ball Super Card Game: Masters
@@ -446,6 +447,7 @@ Events: [Digimon Card Game Official Events](https://world.digimoncard.com/event/
 | BT29 | Ultra-Bout Series Set 02      | Gathering of Strong Rivals                | January 2026       |
 | BT30 | Ultra-Bout Series Set 03      | B30                                       | March 27, 2026     |
 | BT31 | Ultra-Bout Series Set 04      | B31                                       | July 30, 2026      |
+
 
 
 
@@ -657,6 +659,9 @@ Battle Spirits Saga is [Bandai](https://www.bandai.com/en-us/)'s new attempt to 
 |     | Lyrical Monasterio Season of Wonders | January 30, 2026  |
 | 12  | Chasm of Lost Souls                  | February 27, 2026 |
 | 13  | Parallactic Clash                    | May 8, 2026       |
+|     | Blaster Blade                        | May 22, 2026      |
+|     | Dragonic Overlord                    | May 22, 2026      |
+|     | Envoys of the Crimson Moon            | June 26, 2026     |
 
 
 ### Cookie Run: Braverse
@@ -687,6 +692,8 @@ Events: [https://play.cookieruntcg.com/](https://play.cookieruntcg.com/)
 | First Edition    | Moonrise                    | January 21, 2025  |
 | Divine Champions | Firestorm                   | May 23, 2025      |
 | Divine Champions | Lifestream                  | July 31, 2025     |
+|     | Double Starter Decks        | March 2, 2026     |
+|     | Sunstrike                   | April 10, 2026    |
 
 
 ### Final Fantasy
@@ -733,6 +740,7 @@ This is a new card game published by BushiRoad in 2025.
 | G Monsters Raid Again Booster Pack | October 25, 2025  |
 | Resonance of Rivals                | January 31, 2026  |
 | Dual Starter Deck Set              | February 21, 2026 |
+
 
 
 ### Grand Archive
@@ -1627,6 +1635,11 @@ Ascension: Deckbuilding Game (formerly Ascension: Chronicle of the Godslayer) is
 | Name                          | Release           |
 |-------------------------------|-------------------|
 | Red Rains – Flood Of Mooncove | August 31, 2025   |
+| Ashes Ascendancy Starter Set | March 31, 2026 |
+| The Law of Lions - Phoenixborn Deck | March 31, 2026 |
+| The Breaker of Fate - Phoenixborn Deck | March 31, 2026 |
+| The Song of Soaksend - Phoenixborn Deck | March 31, 2026 |
+| Red Rain The End of Argaia | March 31, 2026 |
 
 
 ### Arkham Horror: The Card Game
@@ -1638,6 +1651,9 @@ A new second edition was recently announced coming in 2026 which promises to be 
 |----------------------------------|--------------------|
 | Film Fatale Scenario Pack        | August 15, 2025    |
 | Arkham Horror: Chapter Two       | March 20, 2026     |
+| Arkham Horror: Five Investigator Decks | April 1, 2026 |
+| Arkham Horror: Children of Blood  | Summer 2026        |
+| Arkham Horror: Traces to Nowhere | Fall 2026          |
 
 
 ### Compile
