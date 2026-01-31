@@ -1,0 +1,15 @@
+Move the Secret:
+    cp /home/botserver/ASP-site/.env /home/botserver/asp-site.env    
+    chmod 600 /home/botserver/asp-site.env
+Create the Web Root:
+    sudo mkdir -p /var/www/asp-site/releases && sudo chown -R botserver:botserver /var/www/asp-site
+Setup the Bare Repo:
+    mkdir -p ~/repos/asp-site.git && cd ~/repos/asp-site.git && git init --bare
+Copy the Hook:
+    cp ~/scripts/post-receive ~/repos/asp-site.git/hooks/post-receive && chmod +x ~/repos/asp-site.git/hooks/post-receive
+Copy the Service:
+    cp ~/scripts/asp-site.service /etc/systemd/system/ && sudo systemctl daemon-reload && sudo systemctl enable asp-site.service
+Add to Sudoers:
+    sudo visudo and add: botserver ALL=(ALL) NOPASSWD: /usr/bin/systemctl restart asp-site.service
+Windows Remote:
+    git remote add production botserver@ip:repos/asp-site.git

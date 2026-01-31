@@ -1,0 +1,24 @@
+[Unit]
+Description=ASP.NET Core Site
+After=network.target
+
+[Service]
+User=botserver
+Group=botserver
+# Set the working directory to the 'current' symlink
+WorkingDirectory=/var/www/asp-site/current
+# The executable path also points through the symlink
+ExecStart=/usr/bin/dotnet /var/www/asp-site/current/ASP-site.dll
+Restart=always
+RestartSec=10
+KillSignal=SIGINT
+SyslogIdentifier=asp-site
+
+# --- Environment Variables ---
+# Point this to a STABLE location outside the release folders
+EnvironmentFile=/home/botserver/asp-site.env
+Environment=ASPNETCORE_ENVIRONMENT=Production
+Environment=DOTNET_PRINT_TELEMETRY_MESSAGE=false
+
+[Install]
+WantedBy=multi-user.target

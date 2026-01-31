@@ -1,0 +1,64 @@
+#!/bin/bash
+
+# --- Configuration ---
+# These paths should be adjusted to match your Debian server structure
+GIT_DIR="/home/botserver/repos/asp-site.git"
+WORK_TREE="/home/botserver/builds/asp-site"
+PUBLISH_ROOT="/var/www/asp-site"
+SERVICE_NAME="asp-site.service"
+ENV_FILE="/home/botserver/asp-site.env"
+
+# Colors for output
+GREEN='\033[0;32m'
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+
+echo -e "${GREEN}>>> Deployment started at $(date)${NC}"
+
+# 1. Checkout the code
+echo ">>> Checking out code from main branch..."
+mkdir -p $WORK_TREE
+git --work-tree=$WORK_TREE --git-dir=$GIT_DIR checkout -f main
+
+cd $WORK_TREE
+
+# 2. Run Tests
+echo ">>> Running tests..."
+dotnet test Tests/ASP-site.Tests/ASP-site.Tests.csproj --configuration Release
+if [ $? -ne 0 ]; then
+    echo -e "${RED}!!! Tests failed. Deployment aborted.${NC}"
+    exit 1
+fi
+
+# 3. Build/Publish
+echo ">>> Building and publishing..."
+# We publish to a timestamped directory to keep things clean
+TIMESTAMP=$(date +%Y%m%d%H%M%S)
+NEW_RELEASE_DIR="$PUBLISH_ROOT/releases/$TIMESTAMP"
+mkdir -p $NEW_RELEASE_DIR
+
+dotnet publish -c Release -o $NEW_RELEASE_DIR
+if [ $? -ne 0 ]; then
+    echo -e "${RED}!!! Build failed. Deployment aborted.${NC}"
+    exit 1
+fi
+
+# 4. Atomic Swap (using symlink)
+echo ">>> Swapping to new version..."
+# Assuming /var/www/asp-site/current is the symlink your systemd service points to
+ln -sfn $NEW_RELEASE_DIR $PUBLISH_ROOT/current
+
+# 5. Restart Service
+echo ">>> Restarting $SERVICE_NAME..."
+if [ -f "$ENV_FILE" ]; then
+    sudo systemctl restart $SERVICE_NAME
+else
+    echo -e "${RED}!!! Environment file $ENV_FILE not found. Service might fail.${NC}"
+    sudo systemctl restart $SERVICE_NAME
+fi
+
+# 6. Cleanup old releases (keep last 5)
+echo ">>> Cleaning up old releases..."
+ls -dt $PUBLISH_ROOT/releases/* | tail -n +6 | xargs -d '\n' rm -rf --
+
+echo -e "${GREEN}>>> Deployment successful!${NC}"
