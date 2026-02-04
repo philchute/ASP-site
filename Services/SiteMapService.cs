@@ -60,11 +60,12 @@ public class SiteMapService
                     Label = "Website",
                     Children = new List<SiteNode>
                     {
-                        new SiteNode { Id = "updates", Label = "Site Updates", Url = "/Updates/Index" },
+                        new SiteNode { Id = "about", Label = "About", Url = "/About/Index" },
+                        new SiteNode { Id = "updates", Label = "Updates", Url = "/Updates/Index" },
+                        new SiteNode { Id = "blog", Label = "Blog", Url = "/Blog/Index" },
+                        new SiteNode { Id = "events", Label = "Events", Url = "/Events/Index" },
                         new SiteNode { Id = "links", Label = "Links", Url = "/Links/Index" },
                         new SiteNode { Id = "years", Label = "Years", Url = "/Years/Index" },
-                        new SiteNode { Id = "blog", Label = "Blog", Url = "/Blog/Index" },
-                        new SiteNode { Id = "about", Label = "About", Url = "/About/Index" },
                     }
                 },
             }

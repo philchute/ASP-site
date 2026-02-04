@@ -20,6 +20,7 @@ namespace ASP_site.Data
     public DbSet<Server> Servers { get; set; }
     public DbSet<Map> Maps { get; set; }
     public DbSet<YearEntry> YearEntries { get; set; }
+    public DbSet<Event> Events { get; set; }
     public DbSet<UpdatePost> UpdatePosts { get; set; } = null!;
     public DbSet<Tag> Tags { get; set; } = null!;
     public DbSet<Book> Books { get; set; } = null!;
@@ -185,6 +186,7 @@ namespace ASP_site.Data
           c => c.Aggregate(0, (a, v) => HashCode.Combine(a, v.GetHashCode())),
           c => JsonSerializer.Deserialize<List<MapGameInfo>>(JsonSerializer.Serialize(c, new JsonSerializerOptions()), new JsonSerializerOptions())!));
 
+      modelBuilder.Entity<Event>().ToTable("Events");
       modelBuilder.Entity<UpdatePost>().ToTable("UpdatePosts");
       modelBuilder.Entity<Tag>().ToTable("Tags");
 

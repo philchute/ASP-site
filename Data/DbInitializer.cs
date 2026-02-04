@@ -11,6 +11,7 @@ namespace ASP_site.Data {
       context.Games.RemoveRange(context.Games);
       context.Engines.RemoveRange(context.Engines);
       context.YearEntries.RemoveRange(context.YearEntries);
+      context.Events.RemoveRange(context.Events);
       // Clear UpdatePosts and Tags
       // context.Database.ExecuteSqlRaw("DELETE FROM UpdatePostTag"); // Removed for in-memory compatibility/simplicity
       context.UpdatePosts.RemoveRange(context.UpdatePosts);
@@ -155,6 +156,17 @@ namespace ASP_site.Data {
         }
         catch (Exception ex) {
           Console.WriteLine($"Failed to add year entry (ID: {entry.ID}, Title: {entry.Title}): {ex.Message}");
+        }
+      }
+
+      // Initialize Events
+      var events = EventInitializer.GetEvents();
+      foreach (var evt in events) {
+        try {
+          context.Events.Add(evt);
+        }
+        catch (Exception ex) {
+          Console.WriteLine($"Failed to add event (ID: {evt.ID}, Name: {evt.Name}): {ex.Message}");
         }
       }
 

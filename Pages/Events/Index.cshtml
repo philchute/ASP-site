@@ -1,0 +1,155 @@
+@page
+@model ASP_site.Pages.Events.IndexModel
+@using ASP_site.Models
+
+@{
+    ViewData["Title"] = "Events";
+}
+
+<div class="container mt-4">
+    <form method="get" class="mb-4">
+        <div class="row align-items-end">
+            <div class="col-md-7">
+                <h1 class="display-3">Events</h1>
+                <p class="lead">Upcoming tournaments, races, and broadcasts.</p>
+            </div>
+            <div class="col-md-5">
+                <div class="d-flex justify-content-end align-items-end flex-wrap gap-2">
+                    <div class="form-group flex-grow-1">
+                        <label class="form-label" for="SortField">Sort:</label>
+                        <select class="form-control" asp-for="SortField" asp-items="Model.SortOptions" onchange="this.form.submit();">
+                        </select>
+                    </div>
+                    <div class="form-group flex-grow-1">
+                        <label class="form-label" for="SearchString">Search:</label>
+                        <div class="d-flex">
+                            <input id="SearchString" type="text" asp-for="SearchString" class="form-control" placeholder="Search name..." />
+                            <button type="submit" class="btn btn-secondary ms-1">Search</button>
+                        </div>
+                    </div>
+                    <a asp-page="/Events/Index" class="btn btn-outline-secondary">Clear filters</a>
+                    <a href="/Events@(Model.GetExportQueryString("Export"))" class="btn btn-secondary">Export CSV</a>
+                    <a href="/Events@(Model.GetExportQueryString("EventsPdf"))" class="btn btn-secondary">Export PDF</a>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <label class="form-label fw-bold text-light">Category:</label>
+                <div>
+                    @foreach (var group in Model.AllCategoryGroups)
+                    {
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="SelectedCategoryGroups" value="@group.Key" id="cat_@group.Key"
+                                   checked="@(Model.SelectedCategoryGroups.Contains(group.Key))" onchange="this.form.submit();" />
+                            <label class="form-check-label text-muted" for="cat_@group.Key">@group.Value</label>
+                        </div>
+                    }
+                </div>
+                <div class="form-check mt-2">
+                    <input class="form-check-input" type="checkbox" asp-for="ShowPastEvents" id="ShowPastEvents" onchange="this.form.submit();" />
+                    <label class="form-check-label text-muted" for="ShowPastEvents">Show past events</label>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label class="form-label fw-bold text-light">Series:</label>
+                <div style="column-count: 2; column-gap: 20px;">
+                    @foreach (var cat in Model.AllCategories)
+                    {
+                        <div class="form-check" style="break-inside: avoid-column;">
+                            <input class="form-check-input" type="checkbox" name="SelectedCategories" value="@cat.Key" id="series_@cat.Key"
+                                   checked="@(Model.SelectedCategories.Contains(cat.Key))" onchange="this.form.submit();" />
+                            <label class="form-check-label text-muted" for="series_@cat.Key">@cat.Value</label>
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label class="form-label fw-bold text-light">Platform:</label>
+                <div>
+                    @foreach (var platform in Model.AllPlatforms)
+                    {
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="SelectedPlatforms" value="@platform.Key" id="platform_@platform.Key"
+                                   checked="@(Model.SelectedPlatforms.Contains(platform.Key))" onchange="this.form.submit();" />
+                            <label class="form-check-label text-muted" for="platform_@platform.Key">@platform.Value</label>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <p>
+        A list of upcoming esports tournaments, races, and broadcasts. Filter by category, series, or platform.
+        Hover titles for more details.
+        <span id="timezone-indicator" class="text-muted small">Times shown in <span class="tz-label">ET</span>.</span>
+    </p>
+
+    <section class="grid mt-3">
+        <div class="row g-0 bg-dark text-white fw-bold">
+            <div class="p-1 text-center col-sm-3">Date / Time <span class="tz-label-col small fw-normal">(ET)</span></div>
+            <div class="p-1 text-center col-sm-2">Platform / Channel</div>
+            <div class="p-1 text-center col-sm-2">Category</div>
+            <div class="p-1 text-start col-sm">Name <i>(@(Model.EventList?.Count ?? 0) shown)</i></div>
+        </div>
+
+        @if (Model.EventList != null && Model.EventList.Any())
+        {
+            foreach (var evt in Model.EventList)
+            {
+                var titleAttr = evt.Description ?? "";
+                if (evt.Link != null) { titleAttr += (string.IsNullOrEmpty(titleAttr) ? "" : "\n\n") + "Link: " + evt.Link; }
+                <div class="row g-0 border-bottom table-row-hover">
+                    <div class="p-1 text-center col-sm-3">@evt.Day.ToString("dddd, MMMM d, yyyy")
+                        @{
+                            var utcIso = ASP_site.Pages.Events.IndexModel.GetUtcIsoForEvent(evt);
+                        }
+                        @if (utcIso != null)
+                        {
+                            <span class="event-time-local" data-et="@utcIso" title="Displayed in your local timezone">@Event.FormatTime(evt.SortTime, evt.TimeDisplay)</span>
+                        }
+                        else
+                        {
+                            @Event.FormatTime(evt.SortTime, evt.TimeDisplay)
+                        }
+                    </div>
+                    <div class="p-1 text-center col-sm-2 text-muted">
+                        @if (!string.IsNullOrEmpty(evt.Channel) && evt.Platform.HasValue) { @($"{evt.Channel} ({evt.Platform})") }
+                        else if (!string.IsNullOrEmpty(evt.Channel)) { @evt.Channel }
+                        else if (evt.Platform.HasValue) { @evt.Platform.Value.ToString() }
+                        else { @("-") }
+                    </div>
+                    <div class="p-1 text-center col-sm-2 text-muted">
+                        @(evt.CategoryGroup?.ToString() ?? "-")@(evt.Category.HasValue && evt.Category != EventCategory.Other ? $" / {evt.Category}" : "")
+                    </div>
+                    <div class="p-1 text-start col-sm fw-bold" title="@titleAttr">
+                        @if (evt.Link != null)
+                        {
+                            <a href="@evt.Link" target="_blank" rel="noopener" class="text-decoration-none">@(evt.Name ?? "-")</a>
+                        }
+                        else
+                        {
+                            @(evt.Name ?? "-")
+                        }
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <p class="p-2">No events found matching your criteria. Try adjusting the filters or check "Show past events".</p>
+        }
+    </section>
+</div>
+
+@section Scripts {
+    <script src="~/js/events-local-time.js" asp-append-version="true"></script>
+}
+
+<style>
+    .table-row-hover:hover {
+        background-color: #1a1a1a;
+    }
+</style>

@@ -728,6 +728,11 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=GfO8OEtdBqc" },
         new Link { GameID = "quake1", Label = "Quake Dwell Trailer (Custom episode)", Description = "Quake Dwell Trailer (Custom episode)",
           LinkType = LinkType.Trailer, Url = "https://www.youtube.com/watch?v=5i8pHwbZlOo" },
+        new Link { GameID = "quake1", Label = "Joe Rogan & Post Malone talk about Quake", Description = "Joe Rogan & Post Malone talk about Quake",
+          LinkType = LinkType.Documentary, Url = "https://www.youtube.com/watch?v=l3cgGZgpeDM" },
+        new Link { GameID = "quake1", Label = "Joe Rogan & Derek, MPMD Talk about Quake and Half-Life", Description = "Joe Rogan & Derek, MPMD Talk about Quake and Half-Life",
+          LinkType = LinkType.Documentary, Url = "https://www.youtube.com/watch?v=5bvrr4ukDZg" },
+          
         //Frags
         new Link { GameID = "quake1", Label = "Frags Done Extreme", Description = "Retro frag video",
           LinkType = LinkType.Highlights, Url = "https://youtu.be/3ttIogcNe0A" },
@@ -994,6 +999,10 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Download, Url = "https://icculus.org/ut99-emscripten/flyby/wasm/" },
         new Link { GameID = "ut", Label = "UT's living on", Description = "Unreal Tournament 99 frag movie",
           LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=lbvX9sqCnSU" },
+
+        // UT 2k4
+        new Link { GameID = "ut2004", Label = "UT2004 Fragmovie: EDGE3 by F51 (2026)", Description = "UT2004 Fragmovie: EDGE3 by F51 (2026)",
+          LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=TdMC7MoaARg" },
 
         // Wolfenstein 3D
         new Link { GameID = "wolf3d", Label = "RetroAhoy: Wolfenstein 3D", Description = "Documentary about Wolfenstein 3D",

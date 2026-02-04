@@ -90,6 +90,8 @@ namespace ASP_site.Data.Initializers
           LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=g0eJP3dttdI" },
         new Link { GameID = "csgo", Label = "Guide to snurfing in Danger Zone (Rampsliding)", Description = "Guide to snurfing in Danger Zone (Rampsliding)",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=YblZkx7mXFM" },
+        new Link { GameID = "csgo", Label = "Biggest CS Mistakes of All Time (2013-2026)", Description = "Biggest CS Mistakes of All Time (2013-2026)",
+          LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=LAFYvSl2wZI" },
 
         // CS2
         // General

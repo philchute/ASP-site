@@ -2369,6 +2369,7 @@ namespace ASP_site.Data.Initializers
                 new GunplaKit { Id = "HGUC-263", Grade = GunplaGrade.HG, ReleaseYear = 2026, GundamModels = new List<String> {"ZGMF-X666S"} },
                 new GunplaKit { Id = "HGUC-264", Grade = GunplaGrade.HG, ReleaseYear = 2026, GundamModels = new List<String> {"FD-03-00"} },
                 new GunplaKit { Id = "HGUC-265", Grade = GunplaGrade.HG, ReleaseYear = 2026, GundamModels = new List<String> {"XXXG-01SR"}, KitName = "Gundam Sandrock Custom EW" },
+                new GunplaKit { Id = "HGUC-266", Grade = GunplaGrade.HG, ReleaseYear = 2026, GundamModels = new List<String> {"TX-ff104"}, KitName = "Alyzeus" },
 
 
                 new GunplaKit { Id = "Delphi-HG-Byarlant-Byarlant-Custom", Grade = GunplaGrade.WaterSlide, GundamModels = new List<String> {"RX-160S"}, 

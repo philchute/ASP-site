@@ -128,6 +128,14 @@ namespace ASP_site.Data.Initializers
                     Content = "<p>I've added a new Gunpla section with a dashboard to track your collection. This will list the gundam kits from different grades and timelines. As always this is a work in progress. I'm better at starting projects than finishing them, but we'll see how it goes. Added Ayn Rand author page.</p>",
                     PostedDate = new DateTime(2026, 1, 14, 12, 0, 0, DateTimeKind.Utc), Author = "Phil",
                     Tags = new List<Tag> { tags.Single(t => t.Name == "Website Update") }
+                },
+                new UpdatePost
+                {
+                    Id = 15,
+                    Title = "New events page",
+                    Content = "<p>I've added a new events page with a listing of upcoming events. Again trying to make public things I track in my head or on spreadsheets.</p>",
+                    PostedDate = new DateTime(2026, 2, 3, 12, 0, 0, DateTimeKind.Utc), Author = "Phil",
+                    Tags = new List<Tag> { tags.Single(t => t.Name == "Website Update") }
                 }
 
             };

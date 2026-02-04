@@ -13,3 +13,24 @@ Add to Sudoers:
     sudo visudo and add: botserver ALL=(ALL) NOPASSWD: /usr/bin/systemctl restart asp-site.service
 Windows Remote:
     git remote add production botserver@ip:repos/asp-site.git
+
+
+Work: git checkout -b feature/new-ui -> Write code.
+    Test on Dev:
+    git checkout develop
+    git merge feature/new-ui
+    git push staging develop:main (This pushes your local develop branch to the server's main branch to trigger the build).
+Deploy to Prod:
+    git checkout main
+    git merge develop
+    git push production main
+
+On your Staging server, you can set an environment variable in the .env file:
+    ASPNETCORE_ENVIRONMENT=Staging
+Your .NET code can then use this to:
+    Use a different database (e.g., Games_Dev.db).
+    Show a "BETA" ribbon on the website.
+    Enable more verbose logging.
+
+You could write a pre-receive hook that runs dotnet test. If the tests fail, the server rejects the push entirely.
+    Your Windows terminal would show a big red error, and your server's files wouldn't even be touched.
