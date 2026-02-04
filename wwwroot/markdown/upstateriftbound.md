@@ -1,6 +1,6 @@
 # Upstate Riftbound
 
-This page has information about the Riftbound scene in Upstate South Carolina as of January 26, 2026.
+This page has information about the Riftbound scene in Upstate South Carolina as of February 4, 2026.
 Nothing is guaranteed to be accurate or up to date, be sure to preregister on the [Riftbound Events Locator](https://locator.riftbound.uvsgames.com/events), and validate the dates and times with the store, especially if traveling. To my knowledge, every store has been able to accomidate every player that's shown up to every event, so definitely go ahead of time even if the event is showing full.  
 Let me know if you find any errors or if you have any updates.
 
@@ -25,12 +25,21 @@ Let me know if you find any errors or if you have any updates.
     - [Vegas Regionals](#vegas-regionals)
     - [Spiritforged Summoner Skirmish 1](#spiritforged-summoner-skirmish-1)
     - [Spiritforged Summoner Skirmish 2](#spiritforged-summoner-skirmish-2)
+    - [Lille Regionals](#lille-regionals)
+    - [Atlanta Regionals](#atlanta-regionals)
     - [Unleashed Set Pre-release](#unleashed-set-pre-release)
+    - [Sydney Regionals](#sydney-regionals)
+    - [Vancouver Regionals](#vancouver-regionals)
     - [Unleashed Summoner Skirmish 1](#unleashed-summoner-skirmish-1)
+    - [Utrecht Regionals](#utrecht-regionals)
+    - [Hartford Regionals](#hartford-regionals)
     - [Unleashed Summoner Skirmish 2](#unleashed-summoner-skirmish-2)
     - [Vendetta Set Pre-release](#vendetta-set-pre-release)
     - [Vendetta Summoner Skirmish 1](#vendetta-summoner-skirmish-1)
     - [Vendetta Summoner Skirmish 2](#vendetta-summoner-skirmish-2)
+    - [Barcelona Regionals](#barcelona-regionals)
+    - [Singapore Regionals](#singapore-regionals)
+    - [Los Angeles Regionals](#los-angeles-regionals)
     - [Radiance Set Pre-release](#radiance-set-pre-release)
     - [Radiance Summoner Skirmish 1](#radiance-summoner-skirmish-1)
     - [Radiance Summoner Skirmish 2](#radiance-summoner-skirmish-2)
@@ -40,11 +49,9 @@ Let me know if you find any errors or if you have any updates.
 
 ## Retail availability
 
-There is essentially no retail product available anywhere. Your best bet is actually finding it on the shelf at Walmart, which gets random restocks.  
-Most people are trading for their decks or buying online.  
+More stores are keeping product in stock now. I think Boardwalk, Borderlands and Game Kastle all had packs available. 
 Game Kastle Greenville have some commons in their bulk bins.  
 Borderlands Greenville have a limited amount of singles.  
-Toon Gaming Greenville have some singles? Open Friday-Monday till January 31st when they will be closing.
 Limit Break Fountain Inn have some singles?  
 Manathril Williamston have some singles?  
 
@@ -194,6 +201,15 @@ Las Vegas, Nevada	February 27-March 1, 2026
 | Limit Break Fountain Inn      | Saturday April 18th, 2026 2:00 pm     | TBD |
 | Boardwalk Greenville          | Sunday April 19th, 2026 11:00 am      | TBD |
 
+### Lille Regionals
+
+Lille, France	April 17-19, 2026
+
+### Atlanta Regionals
+
+To be held at the Cobb Galleria Center in Atlanta, Georgia,	April 24-26, 2026.
+Tickets will go on sale on February 23rd, 2026.
+
 ### Unleashed Set Pre-release
 
 | Event                         | Date                                  | Winner                                                                 |
@@ -202,6 +218,14 @@ Las Vegas, Nevada	February 27-March 1, 2026
 | Boardwalk Greenville          | Saturday May 2nd, 2026 12:00 pm       | TBD |
 | Meeple Merchants Easley       | Sunday May 3rd, 2026 4:00 pm          | TBD |
 
+### Sydney Regionals
+
+Sydney, Australia	May 15-17, 2026
+
+### Vancouver Regionals
+
+Vancouver, British Columbia	May 29-31, 2026
+
 ### Unleashed Summoner Skirmish 1
 
 | Event                         | Date                                  | Winner                                                                 |
@@ -209,6 +233,14 @@ Las Vegas, Nevada	February 27-March 1, 2026
 | Meeple Merchants Easley       | Saturday May 31st, 2026 4:00 pm       | TBD |
 | Boardwalk Greenville          | Sunday June 7th, 2026 11:00 pm        | TBD |
 | Borderlands Greenville        | Friday June 19th, 2026 12:00 pm?      | Scheduled noon on a Friday? |
+
+### Utrecht Regionals
+
+Utrecht, Netherlands	June 12-14, 2026
+
+### Hartford Regionals
+
+Hartford, Connecticut	June 19-21, 2026
 
 ### Unleashed Summoner Skirmish 2
 
@@ -229,6 +261,18 @@ TBD. Q3 2026
 ### Vendetta Summoner Skirmish 2
 
 TBD. Q3 2026
+
+### Barcelona Regionals
+
+Barcelona, Spain	August 21-23, 2026
+
+### Singapore Regionals
+
+Singapore	September 4-6, 2026
+
+### Los Angeles Regionals
+
+Los Angeles, California	September 25-27, 2026
 
 ### Radiance Set Pre-release
 
