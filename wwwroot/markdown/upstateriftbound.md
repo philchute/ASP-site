@@ -139,7 +139,7 @@ Houston, Texas	December 5-7, 2025
 | Cheerful Games Spartanburg    | Sunday January 11th, 2026 2:00 pm     | 9 players [LoreGoblin47](https://locator.riftbound.uvsgames.com/events/236281) |
 | Limit Break Fountain Inn      | Sunday January 11th, 2026 2:00 pm     | 6 players [the kreatcher](https://locator.riftbound.uvsgames.com/events/224700) |
 | Game Kastle Greenville        | Sunday January 11th, 2026 4:00 pm     | 6 players [Token](https://locator.riftbound.uvsgames.com/events/233791) |
-| ~~Toon Gaming Greenville~~    | ~~Friday January 23rd, 2026 5:30 pm   | [Cancelled](https://locator.riftbound.uvsgames.com/events/217629) |
+| ~~Toon Gaming Greenville~~    | ~~Friday January 23rd, 2026 5:30 pm~~ | [Cancelled](https://locator.riftbound.uvsgames.com/events/217629) |
 
 ### Spiritforged Set Pre-release
 
@@ -150,9 +150,8 @@ Houston, Texas	December 5-7, 2025
 | Card Universe Boiling Springs | Friday February 6th, 2026 6:00 pm     | TBD |
 | Upstate TCG Spartanburg       | Friday February 6th, 2026 6:00 pm     | TBD |
 | Empire Games Anderson         | Friday February 6th, 2026 6:00 pm     | TBD |
-| Borderlands Greenville        | Friday February 6th, 2026 6:00 pm     | TBD |
 | ~~Toon Gaming Greenville~~    | ~~Friday February 6th, 2026 7:30 pm~~ | Cancelled due to Toon Gaming closing |
-| Manathril Williamston         | Friday February 6th, 2026 7:00 pm     | TBD |
+| Manathril Williamston         | Saturday February 7th, 2026 12:30 pm     | TBD |
 | Boardwalk Greenville          | Saturday February 7th, 2026 12:00 pm  | TBD. currently showing invite only, i'm planning to just show up. |
 | Epic Battlegrounds            | Saturday February 7th, 2026 12:00 pm  | TBD |
 | Manathril Williamston         | Saturday February 7th, 2026 12:30 pm  | TBD |
@@ -165,6 +164,7 @@ Houston, Texas	December 5-7, 2025
 | Game Kastle Greenville        | Sunday February 8th, 2026 4:00 pm     | TBD |
 | Cheerful Games Spartanburg    | Sunday February 8th, 2026 4:00 pm     | TBD |
 | Critical Hits Simpsonville    | Monday February 9th, 2026 6:00 pm     | TBD |
+| Borderlands Greenville        | Thursday February 12th, 2026 6:00 pm  | moved from feb 6th? |
 
 ### Italian Regionals
 
