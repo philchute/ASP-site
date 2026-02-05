@@ -161,7 +161,7 @@ Houston, Texas	December 5-7, 2025
 | Decks and Dice Seneca         | Saturday February 7th, 2026 2:30 pm   | TBD |
 | The Deck Box, Fletcher NC     | Saturday February 7th, 2026 4:00 pm   | TBD |
 | Game Kastle Greenville        | Sunday February 8th, 2026 12:00 pm    | TBD |
-| Game Kastle Greenville        | Sunday February 8th, 2026 4:00 pm     | TBD |
+| Game Kastle Greenville        | Sunday February 8th, 2026 4:00 pm     | Their store schedule is showing this on the 15th? |
 | Cheerful Games Spartanburg    | Sunday February 8th, 2026 4:00 pm     | TBD |
 | Critical Hits Simpsonville    | Monday February 9th, 2026 6:00 pm     | TBD |
 | Borderlands Greenville        | Thursday February 12th, 2026 6:00 pm  | moved from feb 6th? |
@@ -301,7 +301,7 @@ With the closing of Toon Gaming, Gundam is now played:
 |------------------------|---------------------------------------|-|
 |Boardwalk Greenville    | Sunday January 31st, 2026 1:00 pm     | |
 |Cheerful Games Spartanburg | Thursday February 5th, 2026 2:00 pm?   | Scheduled 2:00pm on a Thursday..? |
-|Game Kastle Greenville  | Thursday February 5th, 2026 6:30 pm   | |
+|Game Kastle Greenville  | Thursday February 5th, 2026 6:30 pm   | TBD |
 
 ## Bonus Lorcana Section
 
@@ -313,10 +313,11 @@ Weekly Leagues:
  
 | Winterspell Pre-release               | Date                                  |
 |---------------------------------------|---------------------------------------|
+| Boardwalk Greenville                  | Saturday February 14th, 2026 12:00 pm |
 | Game Kastle Greenville                | Sunday February 15th, 2026 1:00 pm    |
 | Limit Break Fountain Inn              | Sunday February 15th, 2026 2:00 pm    |
-| Borderlands Greenville                | Thursday February 19th, 2026 2:00 pm  |
+| Borderlands Greenville                | Thursday February 19th, 2026 6:00 pm  |
 
 | Winterspell Set Championship          | Date                                  |
 |---------------------------------------|---------------------------------------|
-| Borderlands Greenville                | Sunday April 19th, 2026 9:00 am       |
+| Borderlands Greenville                | Saturday April 18th, 2026 9:00 am     |
