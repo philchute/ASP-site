@@ -23,6 +23,7 @@ A lot of vintage rulebooks are available as PDFs [here](https://www.vintageccg.c
   - [Flesh and Blood](#flesh-and-blood)
   - [Gundam Card Game](#gundam-card-game)
   - [Keyforge](#keyforge)
+  - [Palworld](#palworld)
   - [Union Arena](#union-arena)
   - [UniVersus](#universus)
 - [Tier 4: The Small Ones](#tier-4-the-small-ones)
@@ -549,6 +550,11 @@ Gundam Card Game is a brand new CCG based on the Gundam Franchise and published 
 | 8   | Æmber Skies          | October 18, 2024   |
 | 9   | Prophetic Visions    | July 18, 2025      |
 | 10  | Draconian Measures   | Early 2026         |
+
+
+## Palworld
+
+Palworld is a new CCG based on the video game 'Palworld'. The card game releases July 30th, 2026 simultaneously in English, Japanese, and Chinese.
 
 
 ## Union Arena

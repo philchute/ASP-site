@@ -145,23 +145,21 @@ Houston, Texas	December 5-7, 2025
 
 | Event                         | Date                                  | Winner                                                                 |
 |-------------------------------|---------------------------------------|------------------------------------------------------------------------|
-| Cheerful Games Spartanburg    | Friday February 6th, 2026 5:00 pm     | TBD |
-| Lake Hartwell Collectibles    | Friday February 6th, 2026 6:00 pm     | TBD |
-| Card Universe Boiling Springs | Friday February 6th, 2026 6:00 pm     | TBD |
-| Upstate TCG Spartanburg       | Friday February 6th, 2026 6:00 pm     | TBD |
-| Empire Games Anderson         | Friday February 6th, 2026 6:00 pm     | TBD |
-| ~~Toon Gaming Greenville~~    | ~~Friday February 6th, 2026 7:30 pm~~ | Cancelled due to Toon Gaming closing |
-| Manathril Williamston         | Saturday February 7th, 2026 12:30 pm     | TBD |
-| Boardwalk Greenville          | Saturday February 7th, 2026 12:00 pm  | TBD. currently showing invite only, i'm planning to just show up. |
-| Epic Battlegrounds            | Saturday February 7th, 2026 12:00 pm  | TBD |
-| Manathril Williamston         | Saturday February 7th, 2026 12:30 pm  | TBD |
-| Tapstart Games Westminster    | Saturday February 7th, 2026 1:00 pm   | TBD |
-| Empire Games Anderson         | Saturday February 7th, 2026 1:00 pm   | TBD |
-| Limit Break Fountain Inn      | Saturday February 7th, 2026 1:00 pm   | TBD |
+| Cheerful Games Spartanburg    | Friday February 6th, 2026 5:00 pm     | Didn't actually happen..? |
+| Lake Hartwell Collectibles    | Friday February 6th, 2026 6:00 pm     | 7 players [IncineratorX](https://locator.riftbound.uvsgames.com/events/223740) |
+| Card Universe Boiling Springs | Friday February 6th, 2026 6:00 pm     | 12 Players [Pushentier](https://locator.riftbound.uvsgames.com/events/276211) |
+| Empire Games Anderson         | Friday February 6th, 2026 6:00 pm     | [TBD](https://locator.riftbound.uvsgames.com/events/233842) |
+| ~~Toon Gaming Greenville~~    | ~~Friday February 6th, 2026 7:30 pm~~ | [They're actually faking events there now?](https://locator.riftbound.uvsgames.com/events/217614)|
+| Manathril Williamston         | Saturday February 7th, 2026 12:30 pm  | 15 players [VexAtrey](https://locator.riftbound.uvsgames.com/events/245198) |
+| Boardwalk Greenville          | Saturday February 7th, 2026 12:00 pm  | 22 players [ToFu](https://locator.riftbound.uvsgames.com/events/218292) |
+| Epic Battlegrounds            | Saturday February 7th, 2026 12:00 pm  | 10 players [Darkwiredheart](https://locator.riftbound.uvsgames.com/events/224442) | |
+| Tapstart Games Westminster    | Saturday February 7th, 2026 1:00 pm   | 4 players [TBD](https://locator.riftbound.uvsgames.com/events/294026) |
+| Empire Games Anderson         | Saturday February 7th, 2026 1:00 pm   | [TBD](https://locator.riftbound.uvsgames.com/events/233843) |
+| Limit Break Fountain Inn      | Saturday February 7th, 2026 1:00 pm   | 18 players [TooTawl](https://locator.riftbound.uvsgames.com/events/267889) |
 | Decks and Dice Seneca         | Saturday February 7th, 2026 2:30 pm   | TBD |
-| The Deck Box, Fletcher NC     | Saturday February 7th, 2026 4:00 pm   | TBD |
+| The Deck Box, Fletcher NC     | Saturday February 7th, 2026 4:00 pm   | 15 players [Fio](https://locator.riftbound.uvsgames.com/events/261153) |
 | Game Kastle Greenville        | Sunday February 8th, 2026 12:00 pm    | TBD |
-| Game Kastle Greenville        | Sunday February 8th, 2026 4:00 pm     | Their store schedule is showing this on the 15th? |
+| Game Kastle Greenville        | Sunday February 8th, 2026 4:00 pm     | TBD |
 | Cheerful Games Spartanburg    | Sunday February 8th, 2026 4:00 pm     | TBD |
 | Critical Hits Simpsonville    | Monday February 9th, 2026 6:00 pm     | TBD |
 | Borderlands Greenville        | Thursday February 12th, 2026 6:00 pm  | moved from feb 6th? |
@@ -291,17 +289,6 @@ TBD. January 2027?
 With the closing of Toon Gaming, Gundam is now played:
 * Thursday nights at 7:00 at Game Kastle Greenville
 * Sometimes at Borderlands Greenville? They were scheduling on Thursday nights on top of Game Kastle but now seem to schedule some Fridays.
-
-| ST07/08 Release        | Date                                  | |
-|------------------------|---------------------------------------|-|
-|Toon Gaming Greenville? | Saturday January 17th, 2026 1:00 pm?  | Cancelled due to Toon Gaming closing |
-|Boardwalk Greenville    | Sunday February 8th, 2026 1:00 pm     | Rescheduled from January 25th due to weather |
-
-| GD03 Release           | Date                                  |  |
-|------------------------|---------------------------------------|-|
-|Boardwalk Greenville    | Sunday January 31st, 2026 1:00 pm     | |
-|Cheerful Games Spartanburg | Thursday February 5th, 2026 2:00 pm?   | Scheduled 2:00pm on a Thursday..? |
-|Game Kastle Greenville  | Thursday February 5th, 2026 6:30 pm   | TBD |
 
 ## Bonus Lorcana Section
 
