@@ -1,6 +1,6 @@
 # Customizable Card Games (CCGs)
 
-This page provides an overview of active Customizable Card Games (CCGs), also known as Trading Card Games (TCGs), in North America as of February 2026, along with some links and resources. There is also some information about games that are not available, as well as some boxed and living card games which share some CCG elements.
+This page provides an overview of active Customizable Card Games (CCGs), also known as Trading Card Games (TCGs), in North America as of February 9th, 2026, along with some links and resources. There is also some information about games that are not available, as well as some boxed and living card games which share some CCG elements.
 This is as much to organize my own thoughts as it is to provide as service to others, but I hope you find this useful. 
 In some ways this is a better organized version of the [wikipedia list of CCGS](https://en.wikipedia.org/wiki/List_of_collectible_card_games).
 Most of the upcoming release dates are gathered from this [article](https://www.vintageccg.com/ccg-news/tcg-release-schedule-2026-2027/).
@@ -46,6 +46,7 @@ A lot of vintage rulebooks are available as PDFs [here](https://www.vintageccg.c
   - [Cryptid Camp](#cryptid-camp)
   - [Gate Ruler](#gate-ruler)
   - [OshiPush](#oshipush)
+  - [Primal](#primal)
   - [Round Table](#round-table)
   - [Redemption](#redemption)
   - [Shadowfist](#shadowfist)
@@ -143,11 +144,13 @@ Sets currently in Standard:
 | SPM | Marvel's Spider-Man         | September 26, 2025 | September 26, 2025 |  
 | TLA | Avatar: The Last Airbender  | November 21, 2025  | November 21, 2025  |
 | ECL | Lorwyn Eclipsed             | January 23, 2026   | January 23, 2026   |  
-| TBA | Secrets of Strixhaven       | Q2 2026            | Q2 2026            |  
+| TBA | Secrets of Strixhaven       |                    | April 24, 2026     | 
+| TBA | Marvel Super Heroes         |                    | June 26, 2026      | 
 | TBA | Reality Fracture            | Q3 2026            | Q3 2026            |  
 | TBA | TBA                         | Q1 2027            | Q1 2027            |  
 | TBA | TBA                         | Q2 2027            | Q2 2027            |  
 | TBA | TBA                         | Q3 2027            | Q3 2027            |  
+
 
 
 ### Pokemon Trading Card Game
@@ -186,6 +189,7 @@ Current formats:
 | MEG | Mega Evolution                         | Main Series Expansion | September 26, 2025|
 | PHA | Mega Evolution–Phantasmal Flames       | Main Series Expansion | November 14, 2025 |
 | AHE | Mega Evolution–Ascended Heroes         | Main Series Expansion | January 30, 2026  |
+| WCH | World Championship 2025 Deck            | Collector's Set        | April 3, 2026     |
 
 
 ### Yu-Gi-Oh
@@ -234,6 +238,7 @@ Packs are 8 commons and 1 rare card. Rares are 1/6 Ultra Rare, 1/12 Secret Rare,
 | MZMU| Maze of Muertos                       | Booster Pack             | February 19, 2026 |
 | L26D| Legendary Modern Decks 2026           | Collector's Set          | March 13, 2026    |
 | RA05| Rarity Collection 5                   | Booster pack             | April 9, 2026     |
+| BDO2| Blazing Dominion                       | Booster pack             | May 7, 2026       |
 
 Yu-Gi-Oh! World Championship 2024  - September 7-8, 2024
 North America World Championship Qualifier 2025 - July 11-13, 2025 - Indiana Convention Center, Indianapolis, IN
@@ -308,7 +313,7 @@ These new gameplay mechanics and distinct feeling for many different decks has m
 | OGN | Lee Sin, Jinx, Annie, and Viktor Starter Decks                            | October 31, 2025  |
 | OGS | Origins: Proving Grounds (24 new cards in 4 decks: Yi, Garen, Lux, Annie) | October 31, 2025  |
 |     | Spiritforged                                                              | February 27, 2026 |
-|     | Unleashed                                                                 | May 2026          |
+|     | Unleashed                                                                 | May 8, 2026       |
 |     | Vendetta                                                                  | Q3 2026           |
 |     | Radiance                                                                  | Q4 2026           |
 
@@ -398,11 +403,12 @@ Events: [Digimon Card Game Official Events](https://world.digimoncard.com/event/
 |  5  |PB21| Tamer's Evolution Box Rise Of Digimon  | December 26, 2025  |
 |  5  |BT24| Time Stranger                          | January 23, 2026   |
 |  5  |PB22| Digimon Liberator Debuggers Set        | February 6, 2026   |
+|  5  |EX11| Dawn of Liberator                      | February 13, 2026  |
 |  5  |PB23| Premium Heroines Set Ver. 2            | March 20, 2026     |
-|  5  |AD01| DIGIMON GENERATION AD-01 Advanced      | March 27, 2026     |
-|  5  |LM07| Limited Card Pack Another Knight       | March 27, 2026     |
-|  5  |    | Data Squad and Beatbreak Starter Decks | May 22, 2026       |
-|  5  |LM08| Final Crest                            | August 28, 2026    |
+|  6  |AD01| DIGIMON GENERATION AD-01 Advanced      | March 27, 2026     |
+|  6  |LM07| Limited Card Pack Another Knight       | March 27, 2026     |
+|  6  |    | Data Squad and Beatbreak Starter Decks | May 22, 2026       |
+|  6  |LM08| Final Crest                            | August 28, 2026    |
 
 
 ### Dragon Ball Super Card Game: Masters
@@ -450,8 +456,6 @@ Events: [Digimon Card Game Official Events](https://world.digimoncard.com/event/
 | BT31 | Ultra-Bout Series Set 04      | B31                                       | July 30, 2026      |
 
 
-
-
 ### Dragon Ball Super Card Game: Fusion World
 
 [Dragon Ball Super Card Game: Fusion World](https://www.dbs-cardgame.com/fw/) is a reboot of the Dragon Ball Super Card Game created by [Bandai](https://www.bandai.com/en-us/) in 2024. This aims to lower the complexity of the game and keep things more accessible for new players.
@@ -481,6 +485,7 @@ Events: [Digimon Card Game Official Events](https://world.digimoncard.com/event/
 | FS11| Fusion World FS11 Starter Deck           | March 13, 2026    |
 | FS12| Fusion World FS12 Starter Deck           | March 13, 2026    |
 | FB09| Fusion World - FB09                      | March 20, 2026    |
+|     | Fusion World Special Booster             | August 7, 2026    |
 
 
 ### Flesh and Blood
@@ -512,6 +517,26 @@ Events: [Digimon Card Game Official Events](https://world.digimoncard.com/event/
 |    |     | Silver Age: Chapter 1 and 2 | February 13, 2026 |
 
 
+### Grand Archive
+
+[Grand Archive](https://www.gatcg.com/) is a CCG published in 2023 by Weebs of the Shore LLC that describes itself as an anime TCG with western game design. This means it features the ascetic design of Japanese CCGs, but since it is written in English first, the card text is simpler than what is available in many translated CCGs. There are some innovative new mechanics in the game and so it has been developing an increasingly large player base and competitive scene.
+
+| Name                                       | Release           |
+|--------------------------------------------|-------------------|
+| Dawn of Ashes (Standard Set)               | April 28th, 2023  |
+| Fractured Crown (Expansion Set)            | August 25th, 2023 |
+| Alchemical Revolution (Standard Set)       | January 26th, 2024|
+| Mercurial Heart (Expansion Set)            | May 17th, 2024    |
+| Mortal Ambition (Standard Set)             | October 11th, 2024|
+| Abyssal Heaven (Expansion Set)             | March 7th, 2025   |
+| Distorted Reflections (Standard Set)       | July 25th, 2025   |
+| Merlin Re:Collection - Brilliant Vestige   | December 5, 2025  |
+| Phantom Monarchs 1st Edition               | December 5, 2025  |
+| Mortal Ambition Alter Edition              | January 30, 2026  |
+| Radiant Origins 1st Edition                | April 3, 2026    |
+| Mordred Re:Collection - Aurelian Regent    | April 3, 2026    |
+
+
 ### Gundam Card Game
 
 Gundam Card Game is a brand new CCG based on the Gundam Franchise and published by [Bandai](https://www.bandai.com/en-us/). Combat mechanics are a refinement of other Bandai CCGs, where attacks occur one at a time at any point during the turn, targetting a specific tapped creature or the player's shields, where there is a chance the shield card could be drawn or have another effect with a 'Burst' mechanic. There is also an innovative 'Pilot' system which allows Pilot cards to be played as upgrades to Gundam creature cards, giving them additional stats and abilities. The resource system is a relatively simple seperate deck of energy cards drawn once per turn, although the predictability does allow for some fine tuned balance. The second player starts with an additional 'EX' energy card which can only be used once.
@@ -532,6 +557,8 @@ Gundam Card Game is a brand new CCG based on the Gundam Franchise and published 
 |      | Gundam Assemble Premium Collection   | February 27, 2026  |
 |      | Ultimate Deck 01                     | March 27, 2026     |
 | GD04 | Phantom Aria Booster Box             | April 24, 2026     |
+| ST10 | Starter Deck ST-10                   | June 26, 2026      |
+|      | Freedom Ascension                    | July 24, 2026      |
 
 
 ### Keyforge
@@ -745,26 +772,8 @@ This is a new card game published by BushiRoad in 2025.
 | Godzilla vs Godzilla Booster Pack  | July 5, 2025      |
 | G Monsters Raid Again Booster Pack | October 25, 2025  |
 | Resonance of Rivals                | January 31, 2026  |
-| Dual Starter Deck Set              | February 21, 2026 |
-
-
-
-### Grand Archive
-
-[Grand Archive](https://www.gatcg.com/) is a CCG published in 2023 by Weebs of the Shore LLC that describes itself as an anime TCG with western game design.
-
-| Name                                       | Release           |
-|--------------------------------------------|-------------------|
-| Dawn of Ashes (Standard Set)               | April 28th, 2023  |
-| Fractured Crown (Expansion Set)            | August 25th, 2023 |
-| Alchemical Revolution (Standard Set)       | January 26th, 2024|
-| Mercurial Heart (Expansion Set)            | May 17th, 2024    |
-| Mortal Ambition (Standard Set)             | October 11th, 2024|
-| Abyssal Heaven (Expansion Set)             | March 7th, 2025   |
-| Distorted Reflections (Standard Set)       | July 25th, 2025   |
-| Merlin Re:Collection - Brilliant Vestige   | December 5, 2025  |
-| Phantom Monarchs 1st Edition               | December 5, 2025  |
-| Mortal Ambition Alter Edition              | January 30, 2026 |
+| Starter Deck Set "Godzilla Minus One" & "Heisei Series" | February 21, 2026 |
+| Endless Wars                          | May 23, 2026     |
 
 
 ## Hololive Official Card Game
@@ -873,6 +882,23 @@ Unlike some other biblical CCGs, Animo uses traditional CCG packaging and produc
 ### OshiPush
 
 [OshiPush](https://oshipush.com) is a new CCG from Japanime Games, featuring vtubers, launching in 2025.
+
+
+### Primal
+
+[Primal](https://primaltcg.com/) is a new Indy CCG available in some stores.
+
+| Set   | Name                             | Release           |
+|-------|----------------------------------|-------------------|
+| Promo | Promo Pack 2023                  | Q2/Q3 2023        |
+| ST01  | Sea Invasion                     | Q2 2024           |
+| ST02  | Slayer Guild                     | Q2 2024           |
+| BT01  | Awakened Primordials             | Q2 2024           |
+| ST03  | Zoltan Strike                    | Q3 2024           |
+| BT02  | Brothers of Bethesda             | Q4 2024           |
+| ST04  | Therian Origins                  | Q2 2025           |
+| BT03  | Warden of the Seven Deadly Sins  | Q2 2025           |
+| BT04  | New Genesis                      | Q1 2026           |
 
 
 ### Redemption

@@ -148,20 +148,21 @@ Houston, Texas	December 5-7, 2025
 | Cheerful Games Spartanburg    | Friday February 6th, 2026 5:00 pm     | Didn't actually happen..? |
 | Lake Hartwell Collectibles    | Friday February 6th, 2026 6:00 pm     | 7 players [IncineratorX](https://locator.riftbound.uvsgames.com/events/223740) |
 | Card Universe Boiling Springs | Friday February 6th, 2026 6:00 pm     | 12 Players [Pushentier](https://locator.riftbound.uvsgames.com/events/276211) |
-| Empire Games Anderson         | Friday February 6th, 2026 6:00 pm     | [TBD](https://locator.riftbound.uvsgames.com/events/233842) |
+| Empire Games Anderson         | Friday February 6th, 2026 6:00 pm     | 14 players [SphereOfSafety/OneManTwoSides](https://locator.riftbound.uvsgames.com/events/233842) |
 | ~~Toon Gaming Greenville~~    | ~~Friday February 6th, 2026 7:30 pm~~ | [They're actually faking events there now?](https://locator.riftbound.uvsgames.com/events/217614)|
 | Manathril Williamston         | Saturday February 7th, 2026 12:30 pm  | 15 players [VexAtrey](https://locator.riftbound.uvsgames.com/events/245198) |
 | Boardwalk Greenville          | Saturday February 7th, 2026 12:00 pm  | 22 players [ToFu](https://locator.riftbound.uvsgames.com/events/218292) |
 | Epic Battlegrounds            | Saturday February 7th, 2026 12:00 pm  | 10 players [Darkwiredheart](https://locator.riftbound.uvsgames.com/events/224442) | |
 | Tapstart Games Westminster    | Saturday February 7th, 2026 1:00 pm   | 4 players [TBD](https://locator.riftbound.uvsgames.com/events/294026) |
-| Empire Games Anderson         | Saturday February 7th, 2026 1:00 pm   | [TBD](https://locator.riftbound.uvsgames.com/events/233843) |
+| Empire Games Anderson         | Saturday February 7th, 2026 1:00 pm   | 13 players [Liott](https://locator.riftbound.uvsgames.com/events/233843) |
 | Limit Break Fountain Inn      | Saturday February 7th, 2026 1:00 pm   | 18 players [TooTawl](https://locator.riftbound.uvsgames.com/events/267889) |
-| Decks and Dice Seneca         | Saturday February 7th, 2026 2:30 pm   | TBD |
 | The Deck Box, Fletcher NC     | Saturday February 7th, 2026 4:00 pm   | 15 players [Fio](https://locator.riftbound.uvsgames.com/events/261153) |
-| Game Kastle Greenville        | Sunday February 8th, 2026 12:00 pm    | TBD |
-| Game Kastle Greenville        | Sunday February 8th, 2026 4:00 pm     | TBD |
-| Cheerful Games Spartanburg    | Sunday February 8th, 2026 4:00 pm     | TBD |
-| Critical Hits Simpsonville    | Monday February 9th, 2026 6:00 pm     | TBD |
+| Game Kastle Greenville        | Sunday February 8th, 2026 12:00 pm    | 21 players [ToFu/KeeblerX](https://locator.riftbound.uvsgames.com/events/302841) |
+| Decks and Dice Seneca         | Saturday February 8th, 2026 3:00 pm   | 11 players [GrimD3X/Slomppers](https://locator.riftbound.uvsgames.com/events/276242) |
+| Upstate TCG Spartanburg       | Saturday February 8th, 2026 6:00 pm   | 4 players [Its Effin Andew](https://locator.riftbound.uvsgames.com/events/295924) |
+| Game Kastle Greenville        | Sunday February 8th, 2026 4:00 pm     | 18 players [ToFu/KeeblerX/TooTawl](https://locator.riftbound.uvsgames.com/events/250818) |
+| Cheerful Games Spartanburg    | Sunday February 8th, 2026 4:00 pm     | 19 players [BigHenk](https://locator.riftbound.uvsgames.com/events/296453) |
+| Critical Hits Simpsonville    | Monday February 9th, 2026 6:00 pm     | not there now? |
 | Borderlands Greenville        | Thursday February 12th, 2026 6:00 pm  | moved from feb 6th? |
 
 ### Italian Regionals
@@ -174,17 +175,19 @@ Las Vegas, Nevada	February 27-March 1, 2026
 
 ### Spiritforged Summoner Skirmish 1
 
-| Event                         | Date                                  | Winner                                                                 |
-|-------------------------------|---------------------------------------|------------------------------------------------------------------------|
-| Cheerful Games Spartanburg    | Saturday March 1st, 2026 4:00 pm      | TBD |
-| Manathril Williamston         | Monday March 2nd, 2026 6:00 pm        | TBD |
-| ~~Toon Gaming Greenville~~    | ~~Friday March 6th, 2026 7:30 pm~~    | Cancelled due to Toon Gaming closing |
-| Limit Break Fountain Inn      | Saturday March 7th, 2026 7:45am?      | Scheduled 7:45am on a Saturday? |
-| Boardwalk Greenville          | Sunday March 15th, 2026 11:00 am      | TBD |
-| Cheerful Games Spartanburg    | Sunday March 15th, 2026 2:00 pm       | TBD |
-| Game Kastle Greenville        | Sunday March 15th, 2026 4:00 pm       | TBD |
-| Critical Hits Simpsonville    | Monday March 16th, 2026 6:00 pm       | TBD |
-| Borderlands Greenville        | Saturday March 21st, 2026 11:00 am    | TBD |
+| Event                         | Date                                | Winner                                                                 |
+|-------------------------------|-------------------------------------|------------------------------------------------------------------------|
+| ~~Toon Gaming Greenville~~    | ~~Friday March 6th, 2026 7:30 pm~~  | Cancelled due to Toon Gaming closing |
+| Limit Break Fountain Inn      | Saturday March 7th, 2026 7:45am     | [TBD](https://locator.riftbound.uvsgames.com/events/278489) |
+| Empire Games Anderson         | Saturday March 7th, 2026 1:00 pm    | [TBD](https://locator.riftbound.uvsgames.com/events/233999) |
+| Card Universe Boiling Springs | Friday March 13th, 2026 6:00 pm     | [TBD](https://locator.riftbound.uvsgames.com/events/276228) |
+| Epic Battlegrounds Cowpens    | Saturday March 14th, 2026 12:00 pm  | [TBD](https://locator.riftbound.uvsgames.com/events/276121) |
+| Boardwalk Greenville          | Sunday March 15th, 2026 11:00 am    | [TBD](https://locator.riftbound.uvsgames.com/events/227384) |
+| Cheerful Games Spartanburg    | Sunday March 15th, 2026 2:00 pm     | [TBD](https://locator.riftbound.uvsgames.com/events/236282) |
+| Game Kastle Greenville        | Sunday March 15th, 2026 4:00 pm     | [TBD](https://locator.riftbound.uvsgames.com/events/266249) |
+| Critical Hits Simpsonville    | Monday March 16th, 2026 6:00 pm     | Not there now? |
+| Borderlands Greenville        | Saturday March 21st, 2026 11:00 am  | [TBD](https://locator.riftbound.uvsgames.com/events/275888) |
+| Decks and Dice Seneca         | Saturday March 21st, 2026 3:00 pm   | [TBD](https://locator.riftbound.uvsgames.com/events/276266) |
 
 ### Spiritforged Summoner Skirmish 2
 
