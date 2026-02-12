@@ -1,6 +1,6 @@
 # Upstate Riftbound
 
-This page has information about the Riftbound scene in Upstate South Carolina as of February 4, 2026.
+This page has information about the Riftbound scene in Upstate South Carolina as of February 12, 2026.
 Nothing is guaranteed to be accurate or up to date, be sure to preregister on the [Riftbound Events Locator](https://locator.riftbound.uvsgames.com/events), and validate the dates and times with the store, especially if traveling. To my knowledge, every store has been able to accomidate every player that's shown up to every event, so definitely go ahead of time even if the event is showing full.  
 Let me know if you find any errors or if you have any updates.
 
@@ -60,8 +60,8 @@ Manathril Williamston have some singles?
 
 ### Sunday
 
-4:00 pm Weekly Nexus Night at Game Kastle Greenville until 3/5/2026
-5:00 pm Weekly Nexus Night at Meeple Merchants Easley
+4:00 pm Weekly Nexus Night at Game Kastle Greenville until 3/5/2026  
+5:00 pm Weekly Nexus Night at Meeple Merchants Easley  
 
 ### Monday
 
