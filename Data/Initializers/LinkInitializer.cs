@@ -980,8 +980,6 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Community, Url = "https://strategywiki.org/wiki/Super_Street_Fighter_II_Turbo/Moves" },
         new Link { GameID = "ssf2t", Label = "Street Fighter 2 is fair and balanced", Description = "Street Fighter 2 is fair and balanced",
           LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=XjrB9jgzA6M" },
-        new Link { GameID = "ssf2t", Label = "Super Street Fighter 2 Turbo Wiki", Description = "Tons of info and guides",
-          LinkType = LinkType.Community, Url = "https://wiki.supercombo.gg/w/Super_Street_Fighter_2_Turbo" },
         
         // Super Puzzle Fighter 2 Turbo 
         new Link { GameID = "spf2t", Label = "Super Puzzle Fighter 2 Turbo Chaining Tutorial", Description = "Super Puzzle Fighter 2 Turbo Chaining Tutorial",
