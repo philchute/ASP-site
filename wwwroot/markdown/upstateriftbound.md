@@ -60,7 +60,8 @@ Manathril Williamston have some singles?
 
 ### Sunday
 
-4:00 pm Weekly Nexus Night at Game Kastle Greenville
+4:00 pm Weekly Nexus Night at Game Kastle Greenville until 3/5/2026
+5:00 pm Weekly Nexus Night at Meeple Merchants Easley
 
 ### Monday
 
@@ -75,7 +76,7 @@ Manathril Williamston have some singles?
 
 ### Thursday
 
-6:00 pm Card game night at Borderlands Greenville (some people going for Riftbound?)
+6:00 pm Weekly Nexus Night at Game Kastle Greenville starting 3/5/2026
 
 ### Friday
 
@@ -178,7 +179,7 @@ Las Vegas, Nevada	February 27-March 1, 2026
 | Event                         | Date                                | Winner                                                                 |
 |-------------------------------|-------------------------------------|------------------------------------------------------------------------|
 | ~~Toon Gaming Greenville~~    | ~~Friday March 6th, 2026 7:30 pm~~  | Cancelled due to Toon Gaming closing |
-| Limit Break Fountain Inn      | Saturday March 7th, 2026 7:45am     | [TBD](https://locator.riftbound.uvsgames.com/events/278489) |
+| Limit Break Fountain Inn      | Saturday March 7th, 2026 7:30am     | [At the Simpsonville Card Show. $25 includes entry](https://locator.riftbound.uvsgames.com/events/278489) |
 | Empire Games Anderson         | Saturday March 7th, 2026 1:00 pm    | [TBD](https://locator.riftbound.uvsgames.com/events/233999) |
 | Card Universe Boiling Springs | Friday March 13th, 2026 6:00 pm     | [TBD](https://locator.riftbound.uvsgames.com/events/276228) |
 | Epic Battlegrounds Cowpens    | Saturday March 14th, 2026 12:00 pm  | [TBD](https://locator.riftbound.uvsgames.com/events/276121) |
@@ -310,4 +311,5 @@ Weekly Leagues:
 
 | Winterspell Set Championship          | Date                                  |
 |---------------------------------------|---------------------------------------|
+| Limit Break Fountain Inn              | Saturday April 4th, 2026 1:00 pm      |
 | Borderlands Greenville                | Saturday April 18th, 2026 9:00 am     |

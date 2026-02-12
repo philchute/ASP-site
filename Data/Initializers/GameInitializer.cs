@@ -211,6 +211,76 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
+          GameID = "AvP(Arcade)",
+          Name = "Alien vs. Predator",
+          Description = "Alien vs. Predator is a 1994 beat 'em up video game developed and released by Capcom for the CPS-2 arcade game system.",
+          Developer = "Capcom",
+          EngineID = "CPS-2",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.Adventure,
+          PlayWith = new List<int> { 1, 2, 3 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 1994}
+          ]
+        },    
+        new Game {
+          GameID = "AvP(1994)",
+          Name = "Alien vs. Predator (1994)",
+          Description = "Alien vs. Predator is a 1994 first-person shooter developed by Rebellion Developments and published by Atari Corporation for the Atari Jaguar.",
+          Developer = "Rebellion Developments",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = true,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = true,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 1994, Month = 10, Day = 20}
+          ]
+        },
+        new Game {
+          GameID = "AvP(1999)",
+          Name = "Alien vs. Predator (1999)",
+          Description = "Aliens Versus Predator is a 1999 first-person shooter video game developed by Rebellion Developments and published by Fox Interactive for Microsoft Windows, Mac OS, and Mac OS X. Re-released as Aliens Versus Predator Classic 2000.",
+          Developer = "Rebellion Developments",
+          EngineID = "Asura Engine",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = true,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = true,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 1999, Month = 5, Day = 13, Region = Region.NA},
+            new ReleaseDate{Year = 1999, Month = 6, Day = 25, Region = Region.EU}
+          ]
+        },
+        new Game {
+          GameID = "AvP(2010)",
+          Name = "Alien vs. Predator (2010)",
+          Description = "Aliens Versus Predator is a 2010 first-person shooter video game developed by Rebellion Developments and published by Sega for Microsoft Windows, PlayStation 3 and Xbox 360.",
+          Developer = "Rebellion Developments",
+          EngineID = "Asura Engine",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2010, Month = 2, Day = 16, Region = Region.NA},
+            new ReleaseDate{Year = 2010, Month = 2, Day = 18, Region = Region.AU},
+            new ReleaseDate{Year = 2010, Month = 2, Day = 19, Region = Region.EU}
+          ]
+        },
+        new Game {
           GameID = "bangbangpewpew",
           Name = "Bang Bang Pew Pew",
           Description = "Bang Bang Pew Pew is a lightgun game available on Steam featuring online multiplayer minigames.",
@@ -800,6 +870,21 @@ namespace ASP_site.Data.Initializers {
           PlayWith = new List<int> { 1, 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 2001, Month = 8}
+          ]
+        },
+        new Game {
+          GameID = "catacomb3d",
+          Name = "Catacomb 3-D",
+          Description = "Catacomb 3-D is a first-person shooter video game, the third in the Catacomb series, the first of which to feature 3D computer graphics. It was developed by id Software and originally published by Softdisk under the Gamer's Edge label, released in November 1991.",
+          EngineID = "idtech0",
+          Developer = "id Software",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 1991, Month = 11}
           ]
         },
         new Game {
@@ -3119,6 +3204,20 @@ namespace ASP_site.Data.Initializers {
             new ReleaseDate{Year = 2009, Month = 11, Day = 17},
           ]
         },
+        new Game {
+          GameID = "legionsoverdrive",
+          Name = "Legions Overdrive",
+          Description = "Legions Overdrive is a spiritual successor to Tribes, originally a browser based game, now has a standalone client.",
+          EngineID = "torque",
+          Developer = "GarageGames",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = true,
+          IsDeveloperMaintained = true,
+          IsCommunityMaintained = true,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+        },
         new Game {  
           GameID = "madbullets",
           Name = "Mad Bullets",
@@ -5322,7 +5421,7 @@ namespace ASP_site.Data.Initializers {
           GameID = "tribes2",
           Name = "Tribes 2",
           Description = "Tribes 2 is a first-person shooter game developed by Dynamix.",
-          EngineID = "",
+          EngineID = "Torque",
           Developer = "Dynamix",
           SteamID = 1234560,
           IsFree = false,
@@ -5333,7 +5432,8 @@ namespace ASP_site.Data.Initializers {
           Genre = Genre.FPS,
           PlayWith = new List<int> { 0 },
           ReleaseDates = [
-            new ReleaseDate{Year = 2001, Month = 12, Day = 1}
+            new ReleaseDate{Year = 2001, Month = 3, Day = 29, Region = Region.NA},
+            new ReleaseDate{Year = 2001, Month = 4, Day = 13, Region = Region.EU}
           ]
         },
         new Game {
@@ -5599,6 +5699,24 @@ namespace ASP_site.Data.Initializers {
             IconPath = "img/icons/wanted",
             GameDirectory = "wantedsp"
           }
+        },
+        new Game {
+          GameID = "warsow",
+          Name = "Warsow",
+          Description = "Warsow, also stylized as War§ow, is an open source first-person shooter video game, first publicly released on 8 June 2005 as an alpha version. The stable version 1.0 was released on 28 July 2012, after 7 years of development. Current active development is on a fork called Warfork.",
+          EngineID = "idtech2",
+          Developer = "Warsow Team",
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = true,
+          IsDeveloperMaintained = true,
+          IsCommunityMaintained = true,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2005, Month = 6, Day = 8},
+            new ReleaseDate{Year = 2012, Month = 7, Day = 28}
+          ]
         },
         new Game {
           GameID = "wot",

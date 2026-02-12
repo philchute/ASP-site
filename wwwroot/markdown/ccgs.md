@@ -322,6 +322,9 @@ These new gameplay mechanics and distinct feeling for many different decks has m
 
 Based on the anime 'One Piece'. Since it was published in 2022 by [Bandai](https://www.bandai.com/en-us/), this card game has been extremely popular, balancing casual and competitive play. Mechanics are similar to other Bandai CCGs, iterating on the success of Dragon Ball. A set rotation was recently announced with block 1 sets rotating out in April 2026.
 
+[Which One Piece Deck Is For You? - Which One Piece Deck Is Best For A New Player? OP11 Edition](https://www.youtube.com/watch?v=1I4MAe7rQDA)  
+[One Piece Card Game - Learn to Play Deck Opening + Deck Upgrade Guide](https://www.youtube.com/watch?v=SwFTUJnXlbI)
+
 |Block| Set   | Name                                          | Release           |
 |-----|-------|-----------------------------------------------|-------------------|
 |  1  | OP01  | Romance Dawn Booster Set                      | December 2, 2022  |
@@ -490,7 +493,9 @@ Events: [Digimon Card Game Official Events](https://world.digimoncard.com/event/
 
 ### Flesh and Blood
 
-[Flesh and Blood](https://fabtcg.com/) is a new CCG created in 2019 by former Magic players at Legend Story Studios. The game has been well received and has a Pro Tour circuit forming.
+[Flesh and Blood TCG](https://fabtcg.com/) is a new card game created in 2019 by former Magic players at Legend Story Studios. The game has been well received and has a Pro Tour circuit forming. The publishers have taken a different business strategy, where they do not print reprints of the cards, intentionally keeping card prices high so cards retain their value over time.
+
+[Flesh and Blood TCG - Learn to Play](https://www.youtube.com/watch?v=416k-Rs8hgQ)   
 
 | #  | Set | Name                        | Release           |  
 |----|-----|-----------------------------|-------------------|
@@ -520,6 +525,8 @@ Events: [Digimon Card Game Official Events](https://world.digimoncard.com/event/
 ### Grand Archive
 
 [Grand Archive](https://www.gatcg.com/) is a CCG published in 2023 by Weebs of the Shore LLC that describes itself as an anime TCG with western game design. This means it features the ascetic design of Japanese CCGs, but since it is written in English first, the card text is simpler than what is available in many translated CCGs. There are some innovative new mechanics in the game and so it has been developing an increasingly large player base and competitive scene.
+
+[The Ultimate HOW TO PLAY - Grand Archive TCG](https://www.youtube.com/watch?v=I_MjH_qyVcI)
 
 | Name                                       | Release           |
 |--------------------------------------------|-------------------|
@@ -621,7 +628,7 @@ The game features a two line mechanic where players play cards to their energy l
 
 ### UniVersus
 
-UniVersus, previously known as the Universal Fighting System, was created in 2006 by Ryan Miller of Sabertooth Games. Fantasy Flight aquired the game in 2008, and in 2021 the system was renamed to [UniVersus](https://uvsgames.com/universus).
+UniVersus, previously known as the Universal Fighting System, was created in 2006 by Ryan Miller of Sabertooth Games. Fantasy Flight aquired the game in 2008, and in 2021 the system was renamed to [UniVersus](https://uvsgames.com/universus). All of those cards are legal in the Retro format, along with cards from the My Hero Academia card game, which shared the same mechanics.
 
 Formats:  
 * Sealed Deck (build your deck from 6 packs)
@@ -630,6 +637,7 @@ Formats:
 * Standard (last two years of cards)
 * Retro (all cards from Universal Fighting System, My Hero Academia, and UniVersus)
 
+[Everything You NEED to Know to Play the Universus CCG](https://www.youtube.com/watch?v=15xgfgJxM44)
 
 | Name                          | Release           |
 |-------------------------------|-------------------|
@@ -764,6 +772,8 @@ Events: [https://play.cookieruntcg.com/](https://play.cookieruntcg.com/)
 ### Godzilla Card Game
 
 This is a new card game published by BushiRoad in 2025. 
+
+[Godzilla Card Game Tutorial Video](https://www.youtube.com/watch?v=N1WpLBTUdSI)
 
 | Name                               | Release           |
 |------------------------------------|-------------------|

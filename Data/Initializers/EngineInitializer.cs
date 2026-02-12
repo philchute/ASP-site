@@ -180,6 +180,18 @@ namespace ASP_site.Data.Initializers {
           ParentID = "frostbite2", Year = 2013
         },
         new Engine {
+          EngineID = "Asura Engine",
+          Name = "Asura Engine",
+          Description = "Asura Engine is a game engine developed by Rebellion Developments, first used in Aliens vs. Predator. Typically will default your monitor to 60 hz.",
+          ParentID = "", Year = 2010
+        },
+        new Engine {
+          EngineID = "build",
+          Name = "Build Engine",
+          Description = "Build Engine is a first-person shooter engine created by Ken Silverman, author of Ken's Labyrinth, for 3D Realms.",
+          ParentID = "", Year = 1995
+        },
+        new Engine {
           EngineID = "seriousengine",
           Name = "Serious Engine",
           Description = "Serious Engine is a game engine developed by Croteam, first used in Serious Sam: The First Encounter.",
@@ -204,10 +216,16 @@ namespace ASP_site.Data.Initializers {
           ParentID = "seriousengine3", Year = 2014
         },
         new Engine {
-          EngineID = "build",
-          Name = "Build Engine",
-          Description = "Build Engine is a first-person shooter engine created by Ken Silverman, author of Ken's Labyrinth, for 3D Realms.",
-          ParentID = "", Year = 1995
+          EngineID = "tombraider",
+          Name = "Tomb Raider Engine",
+          Description = "Tomb Raider Engine is a game engine developed by Core Design, first used in Tomb Raider and heavily upgraded for each of the sequels.",
+          ParentID = "", Year = 1996
+        },
+        new Engine {
+          EngineID = "torque",
+          Name = "Torque Engine",
+          Description = "Torque Engine is a game engine originally developed by Dynamix for Tribes 2, later licensed by GarageGames then released as Open Source.",
+          ParentID = "", Year = 2009
         },
         new Engine {
           EngineID = "unity",
@@ -256,12 +274,6 @@ namespace ASP_site.Data.Initializers {
           Name = "Sith Engine",
           Description = "Sith Engine is a game engine developed by LucasArts, similar to the Quake Engine, first used in Star Wars: Jedi Knight 2: Jedi Outcast.",
           ParentID = "jedi", Year = 2002
-        },
-        new Engine {
-          EngineID = "tombraider",
-          Name = "Tomb Raider Engine",
-          Description = "Tomb Raider Engine is a game engine developed by Core Design, first used in Tomb Raider and heavily upgraded for each of the sequels.",
-          ParentID = "", Year = 1996
         },
         new Engine {
           EngineID = "CPS-1",

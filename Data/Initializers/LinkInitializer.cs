@@ -67,12 +67,21 @@ namespace ASP_site.Data.Initializers {
         new Link { GameID = "", Label = "eHero on YouTube", Description = "eHero is a kids movie about a competitive gamer. Game footage was taken from Reflex Arena.",
           LinkType = LinkType.Video, Url = "https://www.youtube.com/watch?v=3xzIV7uhU-U" },
 
+        // 0 A.D.
+        new Link { GameID = "0ad", Label = "0 A.D. Official site", Description = "0 A.D. is a free, open-source, real-time strategy game",
+          LinkType = LinkType.Download, Url = "https://play0ad.com/" },
 
         // ActionHalfLife
         new Link { GameID = "actionhalflife", Label = "Action Half-Life gameplay", Description = "Me playing Action Half-Life on napoli and streets", 
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=j5g048zyO2c" },
         new Link { GameID = "actionhalflife", Label = "Action Half-Life on ModDB", Description = "Action Half-Life on ModDB",
           LinkType = LinkType.Download, Url = "https://www.moddb.com/mods/action-half-life" },
+
+        // AoE1
+        new Link { GameID = "aoe1", Label = "AoE1: Beginner Guide and Tips (Return of Rome DLC)", Description = "AoE1 Beginner Guide and Tips (Return of Rome DLC)",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=AB0WOQ2BFT4" },
+        new Link { GameID = "aoe1", Label = "AoE1: Important differences between AoE I & AoE II", Description = "Important differences between AoE I & AoE II",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=2QVsC63Xf9Q" },
 
         // AoE2
         new Link { GameID = "aoe2", Label = "Age of Empires 2 Overview", Description = "My overview of Age of Empires 2 in its current state", 
@@ -95,10 +104,16 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Community, Url = "https://mods.aoe2.se/" },
         new Link { GameID = "aoe2", Label = "AoE2 Tournaments List", Description = "AoE2 tournaments list",
           LinkType = LinkType.Community, Url = "https://liquipedia.net/ageofempires/Age_of_Empires_II/Tournaments/2024-25" },
-
-
-        new Link { GameID = "0ad", Label = "0 A.D. Official site", Description = "0 A.D. is a free, open-source, real-time strategy game",
-          LinkType = LinkType.Download, Url = "https://play0ad.com/" },
+        new Link { GameID = "aoe2", Label = "AoE2: Beginner guide to the first 15 villagers", Description = "Beginner guide to the first 15 villagers [AoE2]",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=O7zaXjaJVWM" },
+        new Link { GameID = "aoe2", Label = "AoE2: Best Civilizations in AoE2 (2023)", Description = "Best Civilizations in AoE2 (2023)",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=fWpvEP4_7nY" },
+        new Link { GameID = "aoe2", Label = "AoE2: 10 Tricks I use to play faster", Description = "10 Tricks I use to play faster [AoE2]",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=DGUGkEfQjKE" },
+        new Link { GameID = "aoe2", Label = "AoE2: Things to know before playing Online/Multiplayer", Description = "Things to know before playing Online/Multiplayer [AoE2]",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=yOC5gUM7fQM" },
+        new Link { GameID = "aoe2", Label = "AoE2: The BEST Beginner Build Order In AoE2 (Fast Castle Boom)", Description = "The BEST Beginner Build Order In AoE2 (Fast Castle Boom)",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=JsTNM7j6fs4" },
 
         // AoE4
         new Link { GameID = "aoe4", Label = "Age of Empires 4 Overview", Description = "My overview of Age of Empires 4 in its current state", 
@@ -116,6 +131,22 @@ namespace ASP_site.Data.Initializers {
         new Link { GameID = "aoe4", Label = "AoE4 Tournaments List", Description = "AoE4 tournaments list",
           LinkType = LinkType.Community, Url = "https://liquipedia.net/ageofempires/Age_of_Empires_IV/Tournaments" },
 
+        // Aliens vs Predator
+        new Link { GameID = "AvP(Arcade)", Label = "Aliens vs Predator (Arcade) on Wikipedia", Description = "Aliens vs Predator (Arcade) on Wikipedia",
+          LinkType = LinkType.Community, Url = "https://en.wikipedia.org/wiki/Alien_vs._Predator_(arcade_game)" },
+        new Link { GameID = "AvP(1994)", Label = "Aliens vs Predator (1994) on Wikipedia", Description = "Aliens vs Predator (1994) on Wikipedia",
+          LinkType = LinkType.Community, Url = "https://en.wikipedia.org/wiki/Alien_vs_Predator_(Atari_Jaguar_game)" },
+        new Link { GameID = "AvP(1999)", Label = "Aliens vs Predator (1999) on PCGamingWiki", Description = "Aliens vs Predator (1999) on PCGamingWiki",
+          LinkType = LinkType.Community, Url = "https://www.pcgamingwiki.com/wiki/Aliens_Versus_Predator" },
+        new Link { GameID = "AvP(1999)", Label = "Documentary: How Aliens versus Predator's Late Design Change Made It a Classic", Description = "Discussion on the development of Aliens versus Predator (1999)",
+          LinkType = LinkType.Documentary, Url = "https://www.youtube.com/watch?v=YERrs7FYkxo" },
+        new Link { GameID = "AvP(1999)", Label = "Aliens vs Predator (1999) on Wikipedia", Description = "Aliens vs Predator (1999) on Wikipedia",
+          LinkType = LinkType.Community, Url = "https://en.wikipedia.org/wiki/Aliens_Versus_Predator_(1999_video_game)" },
+        new Link { GameID = "AvP(2010)", Label = "Aliens vs Predator (2010) on PCGamingWiki", Description = "Aliens vs Predator (2010) on PCGamingWiki",
+          LinkType = LinkType.Community, Url = "https://www.pcgamingwiki.com/wiki/Aliens_Versus_Predator_(2010)" },
+        new Link { GameID = "AvP(2010)", Label = "Aliens vs Predator (2010) on Wikipedia", Description = "Aliens vs Predator (2010) on Wikipedia",
+          LinkType = LinkType.Community, Url = "https://en.wikipedia.org/wiki/Aliens_vs._Predator_(2010_video_game)" },
+        
         // Base Defense
         new Link { GameID = "basedefense", Label = "Base Defense Gameplay", Description = "Me playing Base Defense with GoldSource Saturdays", 
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=nQOoBNpz9Q0" },
@@ -167,6 +198,10 @@ namespace ASP_site.Data.Initializers {
         // Capcom vs SNK 2
         new Link { GameID = "cvssnk2", Label = "Capcom Vs SNK 2 is broken", Description = "Some broken things about Capcom vs. SNK 2",
           LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=6bsHoIAZRBc" },
+
+        // Catacomb 3-D
+        new Link { GameID = "catacomb3d", Label = "Making Catacomb 3-D", Description = "Making Catacomb 3-D Documentary by John Romero",
+          LinkType = LinkType.Documentary, Url = "https://www.youtube.com/watch?v=ZcUqwMf01pI" },
 
         // Chess
         new Link { GameID = "chess", Label = "Chess on Lichess", Description = "My profile on lichess", 
@@ -600,9 +635,21 @@ namespace ASP_site.Data.Initializers {
         new Link { GameID = "lambdafortress", Label = "Lambda Fortress", Description = "Me playing Lambda Fortress as Demoman on Half-Life 2: Episode 2",
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=-zptVQGm8sk" },
 
+        //Left4Dead
+        new Link { GameID = "left4dead", Label = "How Tryhards Play Left 4 Dead 2 - esports and CEDAPug", Description = "Competitive Left4Dead2 discussion",
+          LinkType = LinkType.Video, Url = "https://www.youtube.com/watch?v=plv6qs8g0ro" },
+
+        // Legions Overdrive
+        new Link { GameID = "legionsoverdrive", Label = "Intro to Legions Overdrive", Description = "Intro to Legions Overdrive",
+          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=N77JsJ1pOi0" },
+        new Link { GameID = "legionsoverdrive", Label = "Getting started with Legions: Overdrive", Description = "Getting started with Legions: Overdrive",
+          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=YGGlfxqiJ-U" },
+
         // Midair2
         new Link { GameID = "midair2", Label = "Midair 2", Description = "Me playing CTF on map crater", 
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=lc269BpmM0I" },
+        new Link { GameID = "midair2", Label = "Bring 'Em Back' BYO5 Teaser - 11/14/20 - BRING THE HYPE", Description = "Bring 'Em Back' BYO5 Teaser",
+          LinkType = LinkType.Trailer, Url = "https://www.youtube.com/watch?v=4WPFr-0c-xo" },
 
         // Marvel vs Capcom 2
         new Link { GameID = "mvc2", Label = "MvC2 101 - Competitive Fundamentals!", Description = "2 hour lecture on Marvel vs Capcom 2",
@@ -732,6 +779,8 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Documentary, Url = "https://www.youtube.com/watch?v=l3cgGZgpeDM" },
         new Link { GameID = "quake1", Label = "Joe Rogan & Derek, MPMD Talk about Quake and Half-Life", Description = "Joe Rogan & Derek, MPMD Talk about Quake and Half-Life",
           LinkType = LinkType.Documentary, Url = "https://www.youtube.com/watch?v=5bvrr4ukDZg" },
+        new Link { GameID = "quake1", Label = "If Quake was done today", Description = "If Quake was done today sketch",
+          LinkType = LinkType.Video, Url = "https://www.youtube.com/watch?v=W1ZtBCpo0eU" },
           
         //Frags
         new Link { GameID = "quake1", Label = "Frags Done Extreme", Description = "Retro frag video",
@@ -845,6 +894,8 @@ namespace ASP_site.Data.Initializers {
         // QuakeLive
         new Link { GameID = "quakelive", Label = "Quake Live Trailer", Description = "Quake Live Launch Trailer",
           LinkType = LinkType.Trailer, Url = "https://youtu.be/4aNG7cd7rGM" },
+        new Link { GameID = "quakelive", Label = "Quake Live Basics Playlist", Description = "Quake Live Basics Playlist",
+          LinkType = LinkType.Guide, Url = "https://youtube.com/playlist?list=PLtp_oJ9n771kwCK2AA4STsAI0sYmPhwxP&si=ngRS45vujMeysrVw" },
 
         // Ricochet
         new Link { GameID = "ricochet", Label = "Ricochet discord", Description = "Ricochet community discord",
@@ -867,6 +918,8 @@ namespace ASP_site.Data.Initializers {
         // Rocket League
         new Link { GameID = "rocketleague", Label = "Top 10 Rocket League Goals Of All-Time", Description = "Rocket League featured on SportsNet",
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=l0xE-X64MtE" },
+        new Link { GameID = "rocketleague", Label = "Most Iconic Goal From Every RLCS Season (Seasons 1-9)", Description = "Most Iconic Goal From Every RLCS Season (Seasons 1-9)",
+          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=fYd8drwxp1I" },
 
         // RTCW
         new Link { GameID = "rtcw", Label = "Steam Sale Sleepers: Return to Castle Wolfenstein", Description = "My video about Return to Castle Wolfenstein", 
@@ -927,10 +980,15 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Community, Url = "https://strategywiki.org/wiki/Super_Street_Fighter_II_Turbo/Moves" },
         new Link { GameID = "ssf2t", Label = "Street Fighter 2 is fair and balanced", Description = "Street Fighter 2 is fair and balanced",
           LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=XjrB9jgzA6M" },
+        new Link { GameID = "ssf2t", Label = "Super Street Fighter 2 Turbo Wiki", Description = "Tons of info and guides",
+          LinkType = LinkType.Community, Url = "https://wiki.supercombo.gg/w/Super_Street_Fighter_2_Turbo" },
         
         // Super Puzzle Fighter 2 Turbo 
         new Link { GameID = "spf2t", Label = "Super Puzzle Fighter 2 Turbo Chaining Tutorial", Description = "Super Puzzle Fighter 2 Turbo Chaining Tutorial",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=CwrHWsssgzw" },
+
+        new Link { GameID = "sfalpha3", Label = "How did Street Fighter Alpha 3 manage to fit on a single Game Boy Advance Cart?", Description = "How did Street Fighter Alpha 3 manage to fit on a single Game Boy Advance Cart?",
+          LinkType = LinkType.Documentary, Url = "https://www.youtube.com/watch?v=V1uCqk0DqBE" },
 
         // Syndicate Black Ops
         new Link { GameID = "syndicateblackops", Label = "Syndicate Black Ops on ModDB", Description = "Syndicate Black Ops on ModDB",
@@ -999,10 +1057,20 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Download, Url = "https://icculus.org/ut99-emscripten/flyby/wasm/" },
         new Link { GameID = "ut", Label = "UT's living on", Description = "Unreal Tournament 99 frag movie",
           LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=lbvX9sqCnSU" },
+        new Link { GameID = "ut", Label = "History of Unreal Tournament maps: Deck16", Description = "History of Unreal Tournament maps: Deck16",
+          LinkType = LinkType.Documentary, Url = "https://www.youtube.com/watch?v=6ltG1aoMXdI" },
 
         // UT 2k4
+        new Link { GameID = "ut2004", Label = "UT2004 Fragmovie: EDGE by F51", Description = "UT2004 Fragmovie: EDGE by F51",
+          LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=6Idg-3txsfk" },
+        new Link { GameID = "ut2004", Label = "UT2004 Fragmovie: EDGE2 by F51 (2015)", Description = "UT2004 Fragmovie: EDGE2 by F51 (2015)",
+          LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=eFWU_oETR60" },
         new Link { GameID = "ut2004", Label = "UT2004 Fragmovie: EDGE3 by F51 (2026)", Description = "UT2004 Fragmovie: EDGE3 by F51 (2026)",
           LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=TdMC7MoaARg" },
+        
+        // Warsow
+        new Link { GameID = "warsow", Label = "Warsow frag movie Made in Japan", Description = "Warsow frag movie Made in Japan",
+          LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=_sxSkiC8EEY" },
 
         // Wolfenstein 3D
         new Link { GameID = "wolf3d", Label = "RetroAhoy: Wolfenstein 3D", Description = "Documentary about Wolfenstein 3D",
