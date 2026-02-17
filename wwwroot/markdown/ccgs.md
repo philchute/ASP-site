@@ -566,6 +566,10 @@ Gundam Card Game is a brand new CCG based on the Gundam Franchise and published 
 | GD04 | Phantom Aria Booster Box             | April 24, 2026     |
 | ST10 | Starter Deck ST-10                   | June 26, 2026      |
 |      | Freedom Ascension                    | July 24, 2026      |
+| ST11 | Aquatic Assault Starter Deck         | September 25, 2026 |
+| ST12 | Ragin Onslaught Starter Deck         | September 25, 2026 |
+| ST13 | Silent Barrage Starter Deck          | September 25, 2026 |
+| ST14 | Heavy Dominion Starter Deck          | September 25, 2026 |
 
 
 ### Keyforge

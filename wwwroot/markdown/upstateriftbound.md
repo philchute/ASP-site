@@ -164,7 +164,14 @@ Houston, Texas	December 5-7, 2025
 | Game Kastle Greenville        | Sunday February 8th, 2026 4:00 pm     | 18 players [ToFu/KeeblerX/TooTawl](https://locator.riftbound.uvsgames.com/events/250818) |
 | Cheerful Games Spartanburg    | Sunday February 8th, 2026 4:00 pm     | 19 players [BigHenk](https://locator.riftbound.uvsgames.com/events/296453) |
 | Critical Hits Simpsonville    | Monday February 9th, 2026 6:00 pm     | not there now? |
-| Borderlands Greenville        | Thursday February 12th, 2026 6:00 pm  | moved from feb 6th? |
+| Borderlands Greenville        | Thursday February 12th, 2026 6:00 pm  | 14 players [they split it i guess?](https://locator.riftbound.uvsgames.com/events/280868) |
+
+
+### Manathril Store Tournament
+
+| Event                         | Date                                  | Winner                                                                 |
+|-------------------------------|---------------------------------------|------------------------------------------------------------------------|
+| Manathril Williamston         | Saturday February 20st, 2026 1:00 pm   | Case Tournament |
 
 ### Italian Regionals
 
