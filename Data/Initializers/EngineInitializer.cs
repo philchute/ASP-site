@@ -216,6 +216,12 @@ namespace ASP_site.Data.Initializers {
           ParentID = "seriousengine3", Year = 2014
         },
         new Engine {
+          EngineID = "SWARM",
+          Name = "SWARM Engine",
+          Description = "SWARM Engine is a game engine developed by Strangelite, only used in the 2005 game Starship Troopers.",
+          ParentID = "", Year = 2005
+        },
+        new Engine {
           EngineID = "tombraider",
           Name = "Tomb Raider Engine",
           Description = "Tomb Raider Engine is a game engine developed by Core Design, first used in Tomb Raider and heavily upgraded for each of the sequels.",

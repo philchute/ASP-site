@@ -947,6 +947,10 @@ namespace ASP_site.Data.Initializers {
         new Link { GameID = "starcraft2", Label = "How to get started with Starcraft 2", Description = "Macro tutorial all three races",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=OJs6qS5TQyo" },
 
+        // Starship Troopers
+        new Link { GameID = "starshiptroopersextermination", Label = "Starship Troopers: Extermination gameplay", Description = "Starship Troopers: Extermination gameplay",
+          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=M331nuhBhgo" },
+
         // Street Fighter 3 
         new Link { GameID = "sf33rdstrike", Label = "Street Fighter 3: 3rd Strike is broken", Description = "3rd Strike is broken",
           LinkType = LinkType.Highlights, Url = "https://www.youtube.com/watch?v=iOuVA1wYMic" },

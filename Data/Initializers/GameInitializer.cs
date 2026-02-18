@@ -4645,6 +4645,40 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
+          GameID = "starshiptroopers",
+          Name = "Starship Troopers",
+          Description = "Starship Troopers is a 2005 first-person shooter game developed by Strangelite.",
+          EngineID = "SWARM",
+          Developer = "Strangelite",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = true,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2005}
+          ]
+        },
+        new Game {
+          GameID = "starshiptroopersextermination",
+          Name = "Starship Troopers: Extermination",
+          Description = "Starship Troopers: Extermination is a 2024 first-person shooter game developed by Offworld.",
+          EngineID = "unreal5",
+          Developer = "Offworld",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = true,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1, 16 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2024}
+          ]
+        },
+        new Game {
           GameID = "starwarsdarkforces",
           Name = "Star Wars: Dark Forces",
           Description = "Star Wars: Dark Forces is a first-person shooter game developed by LucasArts. A remaster was released by Aspyer in 2024.",
