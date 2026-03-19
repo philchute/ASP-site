@@ -330,6 +330,24 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
+          GameID = "battlecryoffreedom",
+          Name = "Battle Cry of Freedom",
+          Description = "A first-person shooter game set during the American Civil War.",
+          Developer = "Flying Squirrel Entertainment",
+          EngineID = "unity",
+          SteamID = 1358710,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2022, Month = 3, Day = 1}
+          ]
+        },
+        new Game {
           GameID = "bfield1942",
           Name = "Battlefield 1942",
           Description = "A first-person shooter game set during World War II.",
@@ -662,6 +680,24 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/bg3"
           }
+        },
+        new Game {
+          GameID = "beyondthewire",
+          Name = "Beyond The Wire",
+          Description = "A large scale WW1 shooter allowing up to 100 players on a server.",
+          Developer = "Redstone Interactive",
+          EngineID = "unreal4",
+          SteamID = 1058650,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = true,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 100 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2022, Month = 8, Day = 31}
+          ]
         },
         new Game {
           GameID = "bigbuckhunter",
@@ -3031,6 +3067,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Isonzo",
           Description = "A World War I first-person shooter focusing on the Italian Front.",
           Developer = "BlackMill Games",
+          EngineID = "unity",
           SteamID = 1556790,
           IsFree = false,
           IsPaid = true,
@@ -3073,6 +3110,23 @@ namespace ASP_site.Data.Initializers {
           Genre = Genre.FPS,
           PlayWith = new List<int> { 0 },
           SteamID = 2158860,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/jbmod"
+          }
+        },
+        new Game {
+          GameID = "jakinbacon",
+          Name = "Jakin' Bacon",
+          Description = "Despite the name, 'Half-Life 2 Jakin' Bacon: Source' is a goldsource mod for Half-Life 1 with a large number of weapons, which inspired the later Jabroni Brawl mods.",
+          ModForGameID = "halflife",
+          EngineID = "goldsrc",
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/jbmod"
           }
@@ -3784,6 +3838,24 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
+          GameID = "overthetopwwi",
+          Name = "Over the Top: WWI",
+          Description = "A large scale WW1 shooter allowing up to 200 players on a server.",
+          Developer = "Flying Squirrel Entertainment",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = true,
+          IsCommunityMaintained = false,
+          EngineID = "unity",
+          SteamID = 2778610,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 200 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2026, Month = 3, Day = 6}
+          ]
+        },
+        new Game {
           GameID = "pavlovvr",
           Name = "Pavlov VR",
           Description = "A virtual reality first-person shooter featuring realistic weapon handling and multiplayer modes.",
@@ -4101,7 +4173,7 @@ namespace ASP_site.Data.Initializers {
             + "Quake 3 Arena has largely been replaced by the Quake Live Remake but maintains a small player base, particularly in DeFrag movement servers.",
           EngineID = "idtech3",
           Developer = "id Software",
-          SteamID = 2220,
+          SteamID = 2200,
           IsFree = true,
           IsPaid = true,
           IsOpenSource = true,
@@ -4679,6 +4751,24 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
+          GameID = "starshiptroopersultimatebugwar",
+          Name = "Starship Troopers: Ultimate Bug War",
+          Description = "Starship Troopers: Ultimate Bug War is a first-person shooter game developed by Strangelite.",
+          EngineID = "unreal5",
+          Developer = "Auroch Digital",
+          SteamID = 2321780,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = true,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2026, Month = 3, Day = 15}
+          ]
+        },
+        new Game {
           GameID = "starwarsdarkforces",
           Name = "Star Wars: Dark Forces",
           Description = "Star Wars: Dark Forces is a first-person shooter game developed by LucasArts. A remaster was released by Aspyer in 2024.",
@@ -5057,6 +5147,24 @@ namespace ASP_site.Data.Initializers {
             IconPath = "img/icons/synergy",
             GameDirectory = "synergy"
           }
+        },
+        new Game {
+          GameID = "tannenberg",
+          Name = "Tannenberg",
+          Description = "A large scale WW1 squad based shooter allowing focusing on the Eastern Front.",
+          Developer = "Black Mill Games",
+          EngineID = "unity",
+          SteamID = 633460,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = true,
+          IsCommunityMaintained = true,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2019, Month = 2, Day = 13, Region = Region.Worldwide}
+          ]
         },
         new Game {
           GameID = "thetalosprinciple",
@@ -5670,6 +5778,24 @@ namespace ASP_site.Data.Initializers {
             GameDirectory = "vs"
           }
         },
+        new Game {
+          GameID = "verdun",
+          Name = "Verdun",
+          Description = "A World War I first-person shooter focusing on the trench warfare.",
+          Developer = "BlackMill Games",
+          EngineID = "unity",
+          SteamID = 242860,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = true,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2015, Month = 4, Day = 28}
+          ]
+        },
         new Game {  
           GameID = "vs",
           Name = "Vampire Savior",
@@ -5733,6 +5859,23 @@ namespace ASP_site.Data.Initializers {
             IconPath = "img/icons/wanted",
             GameDirectory = "wantedsp"
           }
+        },
+        new Game {
+          GameID = "warofrights",
+          Name = "War of Rights",
+          Description = "War of Rights is a first-person shooter based on the American Civil War with up to 400 players on a server.",
+          EngineID = "cryengine5",
+          Developer = "Campfire Games",
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 400 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2018, Month = 12, Day = 3}
+          ]
         },
         new Game {
           GameID = "warsow",

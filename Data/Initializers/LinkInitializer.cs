@@ -629,6 +629,12 @@ namespace ASP_site.Data.Initializers {
         new Link { GameID = "isonzo", Label = "Isonzo Gameplay", Description = "Me playing Isonzo as Rifleman on piana", 
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=ioxdqxe6oT8" },
 
+        // Jakin' Bacon
+        new Link { GameID = "jakinbacon", Label = "Jakin' Bacon on ModDB", Description = "Jakin' Bacon on ModDB",
+          LinkType = LinkType.Download, Url = "https://www.moddb.com/mods/jaykin-bacon-source" },
+        new Link { GameID = "jakinbacon", Label = "Jakin' Bacon gameplay", Description = "Jakin' Bacon gameplay",
+          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=6OtPz8f7Gto" },
+
         // LambdaFortress
         new Link { GameID = "lambdafortress", Label = "Lambda Fortress", Description = "Me playing Lambda Fortress as Medic on Half-Life 2: Episode 2", 
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=Roa8lmfpR4Q" },
@@ -682,6 +688,10 @@ namespace ASP_site.Data.Initializers {
         // NeoTokyo
         new Link { GameID = "neotokyo", Label = "Neo Tokyo Guide", Description = "Neo Tokyo Guide",
           LinkType = LinkType.Guide, Url = "https://bonahnsa.com/guide.html" },
+
+        // Over the Top: WWI
+        new Link { GameID = "overthetopwwi", Label = "Over the Top: WWI intro and gameplay", Description = "Over the Top: WWI intro and gameplay",
+          LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=FL7jEbHFp7Q" },
 
         // PavlovVR
         new Link { GameID = "pavlovvr", Label = "i drop things and get killed on dod_anzio", Description = "Me playing on dod_anzio", 
@@ -876,6 +886,10 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Download, Url = "https://sidequestvr.com/app/8601/quake3quest" },
         new Link { GameID = "quake3", Label = "Quake 3 VR for Pico 4", Description = "Quake 3 VR for Pico 4",
           LinkType = LinkType.Download, Url = "https://sidequestvr.com/app/12683/quake3pico" },
+        new Link { GameID = "quake3", Label = "quake3e source port install and gameplay", Description = "quake3e source port install and gameplay",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=w_iRIb9nkd0" },
+        new Link { GameID = "quake3", Label = "Quake3e source port on GitHub", Description = "Quake3e source port on GitHub",
+          LinkType = LinkType.Download, Url = "https://github.com/ec-/Quake3e" },
 
         // QuakeChampions
         new Link { GameID = "qc", Label = "Quake Champions Trailer", Description = "Quake Champions GameplayTrailer",

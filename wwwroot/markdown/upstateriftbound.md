@@ -82,10 +82,7 @@ Manathril Williamston have some singles?
 
 6:00 pm Weekly Nexus Night at Card Universe Boiling Springs  
 6:00 pm Weekly Nexus Night at Lake Hartwell Collectibles
-
-### Saturday
-
-2:00 pm Weekly Nexus Night at Empire Games Anderson
+7:00 pm Weekly Nexus Night at Empire Games Anderson
 
 ## Event Calendar
 
@@ -186,13 +183,13 @@ Las Vegas, Nevada	February 27-March 1, 2026
 | Event                         | Date                                | Winner                                                                 |
 |-------------------------------|-------------------------------------|------------------------------------------------------------------------|
 | ~~Toon Gaming Greenville~~    | ~~Friday March 6th, 2026 7:30 pm~~  | Cancelled due to Toon Gaming closing |
-| Limit Break Fountain Inn      | Saturday March 7th, 2026 7:30am     | [At the Simpsonville Card Show. $25 includes entry](https://locator.riftbound.uvsgames.com/events/278489) |
-| Empire Games Anderson         | Saturday March 7th, 2026 1:00 pm    | [TBD](https://locator.riftbound.uvsgames.com/events/233999) |
-| Card Universe Boiling Springs | Friday March 13th, 2026 6:00 pm     | [TBD](https://locator.riftbound.uvsgames.com/events/276228) |
-| Epic Battlegrounds Cowpens    | Saturday March 14th, 2026 12:00 pm  | [TBD](https://locator.riftbound.uvsgames.com/events/276121) |
-| Boardwalk Greenville          | Sunday March 15th, 2026 11:00 am    | [TBD](https://locator.riftbound.uvsgames.com/events/227384) |
-| Cheerful Games Spartanburg    | Sunday March 15th, 2026 2:00 pm     | [TBD](https://locator.riftbound.uvsgames.com/events/236282) |
-| Game Kastle Greenville        | Sunday March 15th, 2026 4:00 pm     | [TBD](https://locator.riftbound.uvsgames.com/events/266249) |
+| Limit Break Fountain Inn      | Saturday March 7th, 2026 7:30am     | 16 players [TooTawl](https://locator.riftbound.uvsgames.com/events/278489) |
+| Empire Games Anderson         | Saturday March 7th, 2026 1:00 pm    | 9 players [Moemmoth](https://locator.riftbound.uvsgames.com/events/233999) |
+| Card Universe Boiling Springs | Friday March 13th, 2026 6:00 pm     | 7 players [Røbért and TooTawl](https://locator.riftbound.uvsgames.com/events/276228) |
+| Epic Battlegrounds Cowpens    | Saturday March 14th, 2026 12:00 pm  | 4 players [GoldExp](https://locator.riftbound.uvsgames.com/events/276121) |
+| Boardwalk Greenville          | Sunday March 15th, 2026 11:00 am    | 15 players [Lμna](https://locator.riftbound.uvsgames.com/events/227384) |
+| Cheerful Games Spartanburg    | Sunday March 15th, 2026 2:00 pm     | 8 players [jefticles](https://locator.riftbound.uvsgames.com/events/236282) |
+| Game Kastle Greenville        | Sunday March 15th, 2026 1:00 pm     | 6 players [Røbért](https://locator.riftbound.uvsgames.com/events/266249) |
 | Critical Hits Simpsonville    | Monday March 16th, 2026 6:00 pm     | Not there now? |
 | Borderlands Greenville        | Saturday March 21st, 2026 11:00 am  | [TBD](https://locator.riftbound.uvsgames.com/events/275888) |
 | Decks and Dice Seneca         | Saturday March 21st, 2026 3:00 pm   | [TBD](https://locator.riftbound.uvsgames.com/events/276266) |
@@ -202,13 +199,16 @@ Las Vegas, Nevada	February 27-March 1, 2026
 | Event                         | Date                                  | Winner                                                                 |
 |-------------------------------|---------------------------------------|------------------------------------------------------------------------|
 | ~~Toon Gaming Greenville~~    | ~~Friday April 3rd, 2026 7:30 pm~~    | Cancelled due to Toon Gaming closing |
-| Manathril Williamston         | Friday April 10th?, 2026 6:00 pm      | TBD |
-| Cheerful Games Spartanburg    | Sunday April 12th, 2026 2:00 pm       | TBD |
-| Game Kastle Greenville        | Sunday April 12th, 2026 4:00 pm       | TBD | 
-| Critical Hits Simpsonville    | Monday April 13th, 2026 6:00 pm       | TBD |
-| Borderlands Greenville        | Saturday April 18th, 2026 11:00 am    | TBD |
-| Limit Break Fountain Inn      | Saturday April 18th, 2026 2:00 pm     | TBD |
-| Boardwalk Greenville          | Sunday April 19th, 2026 11:00 am      | TBD |
+| Empire Games Anderson         | Saturday April 4th, 2026 1:00 pm      | [TBD](https://locator.riftbound.uvsgames.com/events/234001) |
+| Epic Battlegrounds Cowpens    | Saturday April 11th, 2026 12:00 pm    | [TBD](https://locator.riftbound.uvsgames.com/events/276125) |
+| Manathril Williamston         | Saturday April 11th, 2026 1:00 pm      | [TBD](https://locator.riftbound.uvsgames.com/events/278223) |
+| Decks and Dice Seneca         | Saturday April 11th, 2026 2:30 pm     | [TBD](https://locator.riftbound.uvsgames.com/events/276270) |
+| Cheerful Games Spartanburg    | Sunday April 12th, 2026 1:00 pm       | [TBD](https://locator.riftbound.uvsgames.com/events/236283) |
+| Game Kastle Greenville        | Sunday April 12th, 2026 1:00 pm       | [TBD](https://locator.riftbound.uvsgames.com/events/266252) | 
+| Critical Hits Simpsonville    | Monday April 13th, 2026 6:00 pm       | Not there now? |
+| Borderlands Greenville        | Saturday April 18th, 2026 12:00 am    | [TBD](https://locator.riftbound.uvsgames.com/events/275901) |
+| Limit Break Fountain Inn      | Saturday April 18th, 2026 2:00 pm     | [TBD](https://locator.riftbound.uvsgames.com/events/278491) |
+| Boardwalk Greenville          | Sunday April 19th, 2026 11:00 am      | [TBD](https://locator.riftbound.uvsgames.com/events/227398) |
 
 ### Lille Regionals
 
@@ -217,15 +217,31 @@ Lille, France	April 17-19, 2026
 ### Atlanta Regionals
 
 To be held at the Cobb Galleria Center in Atlanta, Georgia,	April 24-26, 2026.
-Tickets will go on sale on February 23rd, 2026.
 
 ### Unleashed Set Pre-release
 
 | Event                         | Date                                  | Winner                                                                 |
 |-------------------------------|---------------------------------------|------------------------------------------------------------------------|
-| Borderlands Greenville        | Friday May 1st, 2026 6:00 pm          | TBD |
-| Boardwalk Greenville          | Saturday May 2nd, 2026 12:00 pm       | TBD |
-| Meeple Merchants Easley       | Sunday May 3rd, 2026 4:00 pm          | TBD |
+| Borderlands Greenville        | Friday May 1st, 2026 6:00 pm          | [TBD](https://locator.riftbound.uvsgames.com/events/350423) |
+| Manathril Williamston         | Friday May 1st, 2026 6:00 pm          | [TBD](https://locator.riftbound.uvsgames.com/events/357304) |
+| Card Universe Boiling Springs | Friday May 1st, 2026 6:00 pm          | [TBD](https://locator.riftbound.uvsgames.com/events/407273) |
+| Empire Games Anderson         | Friday May 1st, 2026 6:00 pm          | [TBD](https://locator.riftbound.uvsgames.com/events/342033) |
+| Lake Hartwell Collectibles    | Friday May 1st, 2026 6:00 pm          | [TBD](https://locator.riftbound.uvsgames.com/events/374113) |
+| Dragons Lair Piedmont         | Friday May 1st, 2026 7:30 pm          | [TBD](https://locator.riftbound.uvsgames.com/events/410486) |
+| Boardwalk Greenville          | Saturday May 2nd, 2026 12:00 pm       | [TBD](https://locator.riftbound.uvsgames.com/events/348162) |
+| Epic Battlegrounds            | Saturday May 2nd, 2026 12:00 pm       | [TBD](https://locator.riftbound.uvsgames.com/events/404027) |
+| Empire Games Anderson         | Saturday May 2nd, 2026 1:00 pm       | [TBD](https://locator.riftbound.uvsgames.com/events/342040) |
+| Tapstart Games Westminster    | Saturday May 2nd, 2026 3:00 pm       | [TBD](https://locator.riftbound.uvsgames.com/events/406200) |
+| Decks and Dice Seneca         | Saturday May 2nd, 2026 3:00 pm       | [TBD](https://locator.riftbound.uvsgames.com/events/359164) |
+| Manathril Williamston         | Saturday May 2nd, 2026 3:30 pm       | [TBD](https://locator.riftbound.uvsgames.com/events/357308) |
+| ~~Toon Gaming Greenville~~        | ~~Saturday May 2nd, 2026 7:00 pm~~       | They are actually still scheduling new events? |
+| Limit Break Fountain Inn      | Sunday May 3rd, 2026 1:00 pm          | [TBD](https://locator.riftbound.uvsgames.com/events/361850) |
+| Cheerful Games Spartanburg    | Sunday May 3rd, 2026 1:00 pm          | [TBD](https://locator.riftbound.uvsgames.com/events/360647) |
+| Game Kastle Greenville        | Sunday May 3rd, 2026 1:00 pm          | [TBD](https://locator.riftbound.uvsgames.com/events/431235) |
+| Decks and Dice Seneca         | Sunday May 3rd, 2026 3:00 pm          | [TBD](https://locator.riftbound.uvsgames.com/events/359172) |
+| Upstate TCG Spartanburg       | Sunday May 3rd, 2026 3:00 pm          | [TBD](https://locator.riftbound.uvsgames.com/events/400325) |
+| Meeple Merchants Easley       | Sunday May 3rd, 2026 4:00 pm          | [TBD](https://locator.riftbound.uvsgames.com/events/348328) |
+| Limit Break Fountain Inn      | Tuesday May 5th, 2026 5:00 pm          | [TBD](https://locator.riftbound.uvsgames.com/events/361903) |
 
 ### Sydney Regionals
 

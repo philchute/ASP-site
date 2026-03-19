@@ -24,6 +24,7 @@ A lot of vintage rulebooks are available as PDFs [here](https://www.vintageccg.c
   - [Grand Archive](#grand-archive)
   - [Gundam Card Game](#gundam-card-game)
   - [Keyforge](#keyforge)
+  - [Naruto Mythos TCG](#naruto-mythos-tcg)
   - [Palworld](#palworld)
   - [Union Arena](#union-arena)
   - [UniVersus](#universus)
@@ -143,10 +144,13 @@ Sets currently in Standard:
 | EOE | Edge of Eternities          | July 25, 2025      | August 1, 2025     |  
 | SPM | Marvel's Spider-Man         | September 26, 2025 | September 26, 2025 |  
 | TLA | Avatar: The Last Airbender  | November 21, 2025  | November 21, 2025  |
-| ECL | Lorwyn Eclipsed             | January 23, 2026   | January 23, 2026   |  
-| TBA | Secrets of Strixhaven       |                    | April 24, 2026     | 
-| TBA | Marvel Super Heroes         |                    | June 26, 2026      | 
-| TBA | Reality Fracture            | Q3 2026            | Q3 2026            |  
+| ECL | Lorwyn Eclipsed             | January 23, 2026   | January 23, 2026   | 
+| TMT | Teenage Mutant Ninja Turtles | February 27, 2026  | March 6, 2026     | 
+| SOS | Secrets of Strixhaven       | April 17, 2026     | April 24, 2026     | 
+| MSH | Marvel Super Heroes         | June 19, 2026      | June 26, 2026      | 
+| TBA | The Hobbit                  |                    | August 14, 2026    |  
+| TBA | Reality Fracture            |                    | October 2, 2026    |  
+| TBA | Star Trek                   |                    | November 20, 2026  |  
 | TBA | TBA                         | Q1 2027            | Q1 2027            |  
 | TBA | TBA                         | Q2 2027            | Q2 2027            |  
 | TBA | TBA                         | Q3 2027            | Q3 2027            |  
@@ -238,7 +242,8 @@ Packs are 8 commons and 1 rare card. Rares are 1/6 Ultra Rare, 1/12 Secret Rare,
 | MZMU| Maze of Muertos                       | Booster Pack             | February 19, 2026 |
 | L26D| Legendary Modern Decks 2026           | Collector's Set          | March 13, 2026    |
 | RA05| Rarity Collection 5                   | Booster pack             | April 9, 2026     |
-| BDO2| Blazing Dominion                       | Booster pack             | May 7, 2026       |
+| BDO2| Blazing Dominion                      | Booster pack             | May 7, 2026       |
+|     | Glorious Gallery                      | Booster pack             | June 4, 2026      |
 
 Yu-Gi-Oh! World Championship 2024  - September 7-8, 2024
 North America World Championship Qualifier 2025 - July 11-13, 2025 - Indiana Convention Center, Indianapolis, IN
@@ -314,8 +319,9 @@ These new gameplay mechanics and distinct feeling for many different decks has m
 | OGS | Origins: Proving Grounds (24 new cards in 4 decks: Yi, Garen, Lux, Annie) | October 31, 2025  |
 |     | Spiritforged                                                              | February 27, 2026 |
 |     | Unleashed                                                                 | May 8, 2026       |
-|     | Vendetta                                                                  | Q3 2026           |
-|     | Radiance                                                                  | Q4 2026           |
+|     | Vendetta                                                                  | July 31, 2026     |
+|     | Evelynn vs Seraphine Showdown Deck                                        | October 23, 2026  |
+|     | Radiance                                                                  | Q4 2026     |
 
 
 ### One Piece Card Game
@@ -588,6 +594,20 @@ Gundam Card Game is a brand new CCG based on the Gundam Franchise and published 
 | 8   | Æmber Skies          | October 18, 2024   |
 | 9   | Prophetic Visions    | July 18, 2025      |
 | 10  | Draconian Measures   | Early 2026         |
+
+
+### Naruto Mythos TCG
+
+[Naruto Mythos TCG](https://www.narutotcgmythos.com/) is a Naruto themed CCG created by Bandai in 2026. Different editions have the same card sets but different chase cards.
+
+| Name                       | Release            |
+|----------------------------|--------------------|
+| Naruto Set 1 Edition 1     | March, 2026        |
+| Naruto Set 1 Edition 2     | April, 2026        |
+| Naruto Set 2 Edition 1     | Early July, 2026   |
+| Naruto Set 2 Edition 2     | Mid August, 2026   |
+| Naruto Set 3 Edition 1     | Early October, 2026|
+| Naruto Set 3 Edition 2     | November, 2026     |
 
 
 ## Palworld
@@ -1698,7 +1718,7 @@ A new second edition was recently announced coming in 2026 which promises to be 
 | Film Fatale Scenario Pack        | August 15, 2025    |
 | Arkham Horror: Chapter Two       | March 20, 2026     |
 | Arkham Horror: Five Investigator Decks | April 1, 2026 |
-| Arkham Horror: Children of Blood  | Summer 2026        |
+| Arkham Horror: Children of Blood | Summer 2026        |
 | Arkham Horror: Traces to Nowhere | Fall 2026          |
 
 
