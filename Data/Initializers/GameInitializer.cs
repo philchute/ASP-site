@@ -195,6 +195,23 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
+          GameID = "americanmcgeesalice",
+          Name = "American McGee's Alice",
+          Description = "American McGee's Alice is a 2000 action-adventure game developed by Rouge Entertainment and published by Electronic Arts.",
+          Developer = "Rouge Entertainment",
+          EngineID = "idtech3",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.Adventure,
+          PlayWith = new List<int> { 0 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2000, Month = 12, Day = 5}
+          ]
+        },
+        new Game {
           GameID = "attackersgored",
           Name = "Attackers Go Red",
           Description = "A team-based multiplayer mod for Quake.",
