@@ -5166,24 +5166,6 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
-          GameID = "tannenberg",
-          Name = "Tannenberg",
-          Description = "A large scale WW1 squad based shooter allowing focusing on the Eastern Front.",
-          Developer = "Black Mill Games",
-          EngineID = "unity",
-          SteamID = 633460,
-          IsFree = false,
-          IsPaid = true,
-          IsOpenSource = false,
-          IsDeveloperMaintained = true,
-          IsCommunityMaintained = true,
-          Genre = Genre.FPS,
-          PlayWith = new List<int> { 0 },
-          ReleaseDates = [
-            new ReleaseDate{Year = 2019, Month = 2, Day = 13, Region = Region.Worldwide}
-          ]
-        },
-        new Game {
           GameID = "thetalosprinciple",
           Name = "The Talos Principle",
           Description = "The Talos Principle is a first-person puzzle game developed by Croteam.",
@@ -5222,8 +5204,10 @@ namespace ASP_site.Data.Initializers {
         new Game {
           GameID = "tannenberg",
           Name = "Tannenberg",
-          Description = "A large scale WW1 squad based shooter allowing up to 64 players on a server.",
-          Developer = "M2H, Black Mill Games",
+          Description = "A large scale WW1 squad based shooter allowing focusing on the Eastern Front.",
+          Developer = "Black Mill Games",
+          EngineID = "unity",
+          SteamID = 633460,
           IsFree = false,
           IsPaid = true,
           IsOpenSource = false,
