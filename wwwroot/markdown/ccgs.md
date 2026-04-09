@@ -244,6 +244,7 @@ Packs are 8 commons and 1 rare card. Rares are 1/6 Ultra Rare, 1/12 Secret Rare,
 | RA05| Rarity Collection 5                   | Booster pack             | April 9, 2026     |
 | BDO2| Blazing Dominion                      | Booster pack             | May 7, 2026       |
 |     | Glorious Gallery                      | Booster pack             | June 4, 2026      |
+|     | Chaos Origin                          | Booster pack             | July 2, 2026      |
 
 Yu-Gi-Oh! World Championship 2024  - September 7-8, 2024
 North America World Championship Qualifier 2025 - July 11-13, 2025 - Indiana Convention Center, Indianapolis, IN
@@ -292,7 +293,8 @@ Current formats:
 |   3   |   9 | Fabled               | August 29, 2025   | September 5, 2025 |
 |   3   |  10 | Whispers in the Well | November 6, 2025  | November 14, 2025 |
 |   3   |  11 | Winterspell          | February, 2026    | February 20, 2026 |
-|   3   |  12 | Wilds Unknown        | Q2 2026           | Q2 2026           |
+|   3   |  12 | Wilds Unknown        | May, 2026         | May 15, 2026      |
+
 
 Season 2 North American Challenge Events: (Other events in EU, Asia, Australia, and Brazil)
 * October 25-26, 2025 Milwaukee, WI
@@ -367,6 +369,10 @@ Based on the anime 'One Piece'. Since it was published in 2022 by [Bandai](https
 |  4  | ST34  | Starter Deck ST-34                            | July 31, 2026     |
 |  4  | ST35  | Starter Deck ST-35                            | July 31, 2026     |
 |  4  | ST36  | Starter Deck ST-36                            | July 31, 2026     |
+|  4  |       | Premium Card Collection -Best Selection Vol.6 | July 31, 2026     |
+|  4  | DP12  | Double Pack DP-12                             | August 28, 2026   |
+|  4  | OP17  | OP-17 Booster Packs                           | August 28, 2026   |
+|  4  |       | Heroines Special Set                          | September 25, 2026|
 
 
 ### Star Wars: Unlimited
@@ -382,6 +388,7 @@ Star Wars: Unlimited is the latest of several Star Wars CCGs published by [Fanta
 | 2     | 5   | Legends of the Force    | July 11, 2025    |
 | 2     | 6   | Secrets of Power        | November 7, 2025 |
 | 3     | 7   | A Lawless Time          | March 13, 2026   |
+|       |     | Twin Suns Decks         | May 8, 2026      |
 | 3     | 8   | Ashes of the Empire     | July 2026        |
 | 3     | 9   | Homeworlds              | November 2026    |
 
@@ -418,6 +425,7 @@ Events: [Digimon Card Game Official Events](https://world.digimoncard.com/event/
 |  6  |LM07| Limited Card Pack Another Knight       | March 27, 2026     |
 |  6  |    | Data Squad and Beatbreak Starter Decks | May 22, 2026       |
 |  6  |LM08| Final Crest                            | August 28, 2026    |
+|  6  |BT26| Timeless Bonds                         | September 4, 2026  |
 
 
 ### Dragon Ball Super Card Game: Masters
@@ -526,6 +534,8 @@ Events: [Digimon Card Game Official Events](https://world.digimoncard.com/event/
 | 17 | MPG | Mastery Pack Guardian       | August 8, 2025    |
 |    |     | Smash Palace                | August 29, 2025   |
 |    |     | Silver Age: Chapter 1 and 2 | February 13, 2026 |
+|    |     | Silver Age: Chapter 3       | June 5, 2026     |
+|    |     | Omens of the Third Age      | June 5, 2026     |
 
 
 ### Grand Archive
@@ -614,6 +624,9 @@ Gundam Card Game is a brand new CCG based on the Gundam Franchise and published 
 
 Palworld is a new CCG based on the video game 'Palworld'. The card game releases July 30th, 2026 simultaneously in English, Japanese, and Chinese.
 
+| Name                       | Release            |
+|----------------------------|--------------------|
+| Official Launch            | July 30, 2026      |
 
 ## Union Arena
 
@@ -726,7 +739,8 @@ Battle Spirits Saga is [Bandai](https://www.bandai.com/en-us/)'s new attempt to 
 | 13  | Parallactic Clash                    | May 8, 2026       |
 |     | Blaster Blade                        | May 22, 2026      |
 |     | Dragonic Overlord                    | May 22, 2026      |
-|     | Envoys of the Crimson Moon            | June 26, 2026     |
+|     | Envoys of the Crimson Moon           | June 26, 2026     |
+|     | The Legendary Vanguards               | July 31, 2026    |
 
 
 ### Cookie Run: Braverse
@@ -757,8 +771,9 @@ Events: [https://play.cookieruntcg.com/](https://play.cookieruntcg.com/)
 | First Edition    | Moonrise                    | January 21, 2025  |
 | Divine Champions | Firestorm                   | May 23, 2025      |
 | Divine Champions | Lifestream                  | July 31, 2025     |
-|     | Double Starter Decks        | March 2, 2026     |
-|     | Sunstrike                   | April 10, 2026    |
+| Divine Champions | Double Starter Decks        | March 2, 2026     |
+| Divine Champions | Sunstrike                   | April 10, 2026    |
+| Divine Champions | Sunstrike                   | May 22, 2026      |
 
 
 ### Final Fantasy
@@ -808,6 +823,7 @@ This is a new card game published by BushiRoad in 2025.
 | Resonance of Rivals                | January 31, 2026  |
 | Starter Deck Set "Godzilla Minus One" & "Heisei Series" | February 21, 2026 |
 | Endless Wars                          | May 23, 2026     |
+| Ink-Brushed Monster Rampage | July 2, 2026 |
 
 
 ## Hololive Official Card Game
@@ -824,6 +840,9 @@ Hololive Official Card Game is a V-tuber themed CCG that was ported to English i
 | Start Deck White Todoroki Hajime | December 19, 2025 |
 | Start Deck Green Kazama Iroha    | December 19, 2025 |
 | Start Deck Yellow Shiranui Flare | December 19, 2025 |
+| Enchant Regalia                  | April 17, 2026    |
+| Ayakashi Vermilion               | June 19, 2026     |
+| Start Deck Oshi Advent & Justice | July 24, 2026     |
 
 
 ### Shadowverse: Evolve
@@ -852,6 +871,8 @@ Published in 2023 by [Bushiroad](https://www.bushiroad.com/)
 | 11  | Bullet of Fate                                  | September 26, 2025|
 |     | Seaside Memories Special Set                    | October 24, 2025  |
 |12+13| Worldreaver's Descent + Dominion of Darkness    | November 21, 2025 |
+|     | Convergent Destinies                            | June 22, 2026     |
+|     | Neometropolis                                   | July 24, 2026     |
 
 
 ### Sorcery: Contested Realm
@@ -916,6 +937,10 @@ Unlike some other biblical CCGs, Animo uses traditional CCG packaging and produc
 ### OshiPush
 
 [OshiPush](https://oshipush.com) is a new CCG from Japanime Games, featuring vtubers, launching in 2025.
+
+| Set | Name                            | Release            |
+|-----|---------------------------------|--------------------|
+| 2   | Hidden Links                    | April 30, 2026     |
 
 
 ### Primal
@@ -994,7 +1019,11 @@ Weiß Schwarz is a Japanese anime themed CCG created in 2007 by Bushiroad and so
 |------------------------------------|-------------------|
 | Persona 3 Reload Reprint           | December 31, 2025 |
 | Fairy Tail 100 Years Quest         | March 13, 2026    |
+| The Eminence in Shadow             | April 24, 2026    |
 | Nazarick: Tomb of the Undead Vol.3 | May 15, 2026      |
+| Umamusume: Pretty Derby Race Trial Decks | June 26, 2026    |
+| BanG Dream! 10th Anniversary! | July 17, 2026    |
+| Blue Archive The Animation | July 31, 2026    |
 
 
 ### Wixoss
@@ -1769,6 +1798,10 @@ Dominion plays a lot like a CCG but is designed to be a boxed deckbuilding game.
 ### Earthborne Rangers
 
 [Earthborne Rangers](https://boardgamegeek.com/boardgame/342900/earthborne-rangers) is a customizable cooperative card game publiushed by Earthborne Games in 2023 with several expansions released since then.  It is a similar story-based game to Arkham Horror: The Card Game with a far future exploration theme.
+
+| Name                          | Release           |
+|-------------------------------|-------------------|
+| Shadow of the Storm           | April 15, 2026    |
 
 
 ### Gwent 

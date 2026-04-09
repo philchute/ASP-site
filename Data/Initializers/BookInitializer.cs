@@ -13903,6 +13903,268 @@ namespace ASP_site.Data.Initializers
                     Type = BookType.NonFiction,
                     Description = "Edited by Robert Mayhew and published in 2005.",
                 },
+                new Book
+                {
+                    Title = "Ed",
+                    Author = "qntm",
+                    PublicationYear = 2005,
+                    PublicationMonth = 4,
+                    Type = BookType.Novel,
+                    Description = "A brilliant inventor repeatedly saves the world.",
+                },
+                new Book
+                {
+                    Title = "Fine Structure",
+                    Author = "qntm",
+                    PublicationYear = 2021,
+                    PublicationMonth = 5,
+                    Type = BookType.Novel,
+                    Description = "A novel about a physicist.",
+                },
+                new Book
+                {
+                    Title = "Ra",
+                    Author = "qntm",
+                    PublicationYear = 2021,
+                    PublicationMonth = 6,
+                    Type = BookType.Novel,
+                    Description = "Magic is a real science.",
+                },
+                new Book
+                {
+                    Title = "There Is No Antimemetics Division (V1)",
+                    Author = "qntm",
+                    PublicationYear = 2018,
+                    PublicationMonth = 11,
+                    Type = BookType.Novel,
+                    Description = "The original collection of SCP stories.",
+                    Tags = new List<Tag>
+                    {
+                        new Tag { Name = "SCP" }
+                    }
+                },
+                new Book
+                {
+                    Title = "There Is No Antimemetics Division: A Novel",
+                    Author = "qntm",
+                    PublicationYear = 2025,
+                    PublicationMonth = 11,
+                    Type = BookType.Novel,
+                    Description = "Expanded version of the SCP stories without reference to SCP.",
+                    Tags = new List<Tag>
+                    {
+                        new Tag { Name = "SCP" }
+                    }
+                },
+                new Book
+                {
+                    Title = "Lena",
+                    Author = "qntm",
+                    PublicationYear = 2022,
+                    PublicationMonth = 11,
+                    Type = BookType.ShortStory,
+                    Description = "Completed version of a draft available online. Article about an uploaded mind.",
+                    Tags = new List<Tag>
+                    {
+                        new Tag { Name = "Collection: Valuable Humans in Transit and Other Stories" }
+                    }
+                },
+                new Book
+                {
+                    Title = "If You Are Reading This",
+                    Author = "qntm",
+                    PublicationYear = 2022,
+                    PublicationMonth = 11,
+                    Type = BookType.ShortStory,
+                    Description = "Updated version of a story available online. Speedrunning is a sub-plot of this story.",
+                    Tags = new List<Tag>
+                    {
+                        new Tag { Name = "Collection: Valuable Humans in Transit and Other Stories" }
+                    }
+                },
+                new Book
+                {
+                    Title = "The Frame-by-Frame",
+                    Author = "qntm",
+                    PublicationYear = 2022,
+                    PublicationMonth = 11,
+                    Type = BookType.ShortStory,
+                    Description = "Completed version of a draft available online. Story about a car deciding what to do next.",
+                    Tags = new List<Tag>
+                    {
+                        new Tag { Name = "Collection: Valuable Humans in Transit and Other Stories" }
+                    }
+                },
+                new Book
+                {
+                    Title = "The Difference",
+                    Author = "qntm",
+                    PublicationYear = 2022,
+                    PublicationMonth = 11,
+                    Type = BookType.ShortStory,
+                    Description = "An updated version of a story available online. Story about a chatbot who might be a person.",
+                    Tags = new List<Tag>
+                    {
+                        new Tag { Name = "Collection: Valuable Humans in Transit and Other Stories" }
+                    }
+                },
+                new Book
+                {
+                    Title = "Gorge",
+                    Author = "qntm",
+                    PublicationYear = 2022,
+                    PublicationMonth = 11,
+                    Type = BookType.ShortStory,
+                    Description = "An updated version of a story available online. Story about a discovered anomoly in space.",
+                    Tags = new List<Tag>
+                    {
+                        new Tag { Name = "Collection: Valuable Humans in Transit and Other Stories" }
+                    }
+                },
+                new Book
+                {
+                    Title = "cripes does anybody remember Google People",
+                    Author = "qntm",
+                    PublicationYear = 2022,
+                    PublicationMonth = 11,
+                    Type = BookType.ShortStory,
+                    Description = "An updated version of a story available online. Story about an old Google service.",
+                    Tags = new List<Tag>
+                    {
+                        new Tag { Name = "Collection: Valuable Humans in Transit and Other Stories" }
+                    }
+                },
+                new Book
+                {
+                    Title = "Driver",
+                    Author = "qntm",
+                    PublicationYear = 2022,
+                    PublicationMonth = 11,
+                    Type = BookType.ShortStory,
+                    Description = "A new story for this collection. A sequel to Lena, an article about an uploaded mind.",
+                    Tags = new List<Tag>
+                    {
+                        new Tag { Name = "Collection: Valuable Humans in Transit and Other Stories" }
+                    }
+                },
+                new Book
+                {
+                    Title = "I Don't Know, Timmy, Being God Is a Big Responsibility",
+                    Author = "qntm",
+                    PublicationYear = 2022,
+                    PublicationMonth = 11,
+                    Type = BookType.ShortStory,
+                    Description = "An updated version of a story available online. Story about a very powerful computer.",
+                    Tags = new List<Tag>
+                    {
+                        new Tag { Name = "Collection: Valuable Humans in Transit and Other Stories" }
+                    }
+                },
+                new Book
+                {
+                    Title = "A Powerful Culture",
+                    Author = "qntm",
+                    PublicationYear = 2022,
+                    PublicationMonth = 11,
+                    Type = BookType.ShortStory,
+                    Description = "A completed version of a draft available online. Story about a hole being opened through the Earth.",
+                    Tags = new List<Tag>
+                    {
+                        new Tag { Name = "Collection: Valuable Humans in Transit and Other Stories" }
+                    }
+                },
+                new Book
+                {
+                    Title = "Valuable Humans in Transit",
+                    Author = "qntm",
+                    PublicationYear = 2022,
+                    PublicationMonth = 11,
+                    Type = BookType.ShortStory,
+                    Description = "An updated version of a story available online. Story about an AI transporting humans off the planet.",
+                    Tags = new List<Tag>
+                    {
+                        new Tag { Name = "Collection: Valuable Humans in Transit and Other Stories" }
+                    }
+                },
+                new Book
+                {
+                    Title = "The Knowledge Cosmic",
+                    Author = "qntm",
+                    PublicationYear = 2020,
+                    PublicationMonth = 12,
+                    Type = BookType.ShortStory,
+                    Description = "Fan fiction about Marvel's Galactus being stopped by the US Consumer ProductSafety Commission.",
+                    Tags = new List<Tag>
+                    {
+                        new Tag { Name = "Fan Fiction" }
+                    }
+                },
+                new Book
+                {
+                    Title = "The Future",
+                    Author = "qntm",
+                    PublicationYear = 2021,
+                    PublicationMonth = 4,
+                    Type = BookType.ShortStory,
+                    Description = "Fan fiction about events before and after Back to the Future.",
+                    Tags = new List<Tag>
+                    {
+                        new Tag { Name = "Fan Fiction" }
+                    }
+                },
+                new Book
+                {
+                    Title = "Urbane In Urbana",
+                    Author = "qntm",
+                    PublicationYear = 2021,
+                    PublicationMonth = 4,
+                    Type = BookType.ShortStory,
+                    Description = "Fan fiction correcting an issue with 2001: A Space Odyssey.",
+                    Tags = new List<Tag>
+                    {
+                        new Tag { Name = "Fan Fiction" }
+                    }
+                },
+                new Book
+                {
+                    Title = "The Swan With No Name",
+                    Author = "qntm",
+                    PublicationYear = 2021,
+                    PublicationMonth = 4,
+                    Type = BookType.ShortStory,
+                    Description = "Fan fiction from Untitled Goose Game.",
+                    Tags = new List<Tag>
+                    {
+                        new Tag { Name = "Fan Fiction" }
+                    }
+                },
+                new Book
+                {
+                    Title = "Where He Belongs",
+                    Author = "qntm",
+                    PublicationYear = 2021,
+                    PublicationMonth = 4,
+                    Type = BookType.ShortStory,
+                    Description = "Fan fiction taking place after Indiana Jones and the Last Crusade.",
+                    Tags = new List<Tag>
+                    {
+                        new Tag { Name = "Fan Fiction" }
+                    }
+                },
+                new Book
+                {
+                    Title = "FBC/SCP: Ignition",
+                    Author = "qntm",
+                    PublicationYear = 2021,
+                    PublicationMonth = 5,
+                    Type = BookType.ShortStory,
+                    Description = "Fan fiction from the Control game and SCP characters.",
+                    Tags = new List<Tag>
+                    {
+                        new Tag { Name = "Fan Fiction" },
+                        new Tag { Name = "SCP" }
+                    }
+                },
             };
 
             var links = new List<Link>
@@ -14446,6 +14708,22 @@ namespace ASP_site.Data.Initializers
                 new Link { BookTitle = "ChatGPT Is a Blurry JPEG of the Web", Url = "https://web.archive.org/web/20251213234718/https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web", Label = "ChatGPT Is a Blurry JPEG of the Web on Archive.org", LinkType = LinkType.Download },
                 new Link { BookTitle = "Will AI Become the New McKinsey?", Url = "https://web.archive.org/web/20251217111646/https://www.newyorker.com/science/annals-of-artificial-intelligence/will-ai-become-the-new-mckinsey", Label = "Will AI Become the New McKinsey? on Archive.org", LinkType = LinkType.Download },
                 new Link { BookTitle = "Why A.I. Isn't Going to Make Art", Url = "https://web.archive.org/web/20240901011514/https://www.newyorker.com/culture/the-weekend-essay/why-ai-isnt-going-to-make-art", Label = "Why A.I. Isn't Going to Make Art on Archive.org", LinkType = LinkType.Download },
+                new Link { BookTitle = "There Is No Antimemetics Division", Url = "https://qntm.org/antimemetics", Label = "Info about There Is No Antimemetics Division on qntm.org", LinkType = LinkType.Download },
+                new Link { BookTitle = "Lena", Url = "https://qntm.org/lena", Label = "Original draft of Lena on qntm.org", LinkType = LinkType.Download },
+                new Link { BookTitle = "If You Are Reading This", Url = "https://qntm.org/if-you-are-reading-this", Label = "Original version of If You Are Reading This on qntm.org", LinkType = LinkType.Download },
+                new Link { BookTitle = "The Frame-by-Frame", Url = "https://qntm.org/frame", Label = "Original draft of The Frame-by-Frame on qntm.org", LinkType = LinkType.Download },
+                new Link { BookTitle = "The Difference", Url = "https://qntm.org/difference", Label = "Original version of The Difference on qntm.org", LinkType = LinkType.Download },
+                new Link { BookTitle = "Gorge", Url = "https://qntm.org/gorge", Label = "Original version of Gorge on qntm.org", LinkType = LinkType.Download },
+                new Link { BookTitle = "cripes does anybody remember Google People", Url = "https://qntm.org/person", Label = "Original version of cripes does anybody remember Google People on qntm.org", LinkType = LinkType.Download },
+                new Link { BookTitle = "I Don't Know, Timmy, Being God Is a Big Responsibility", Url = "https://qntm.org/responsibility", Label = "Original version of I Don't Know, Timmy, Being God Is a Big Responsibility on qntm.org", LinkType = LinkType.Download },
+                new Link { BookTitle = "A Powerful Culture", Url = "https://qntm.org/drill", Label = "Original draft of A Powerful Culture on qntm.org", LinkType = LinkType.Download },
+                new Link { BookTitle = "Valuable Humans in Transit", Url = "https://qntm.org/transit", Label = "Original version of Valuable Humans in Transit on qntm.org", LinkType = LinkType.Download },
+                new Link { BookTitle = "The Knowledge Cosmic", Url = "https://archiveofourown.org/works/28429305", Label = "The Knowledge Cosmic on Archive of Our Own", LinkType = LinkType.Download },
+                new Link { BookTitle = "The Future", Url = "https://archiveofourown.org/works/30665690", Label = "The Future on Archive of Our Own", LinkType = LinkType.Download },
+                new Link { BookTitle = "Urbane In Urbana", Url = "https://archiveofourown.org/works/30681107", Label = "Urbane In Urbana on Archive of Our Own", LinkType = LinkType.Download },
+                new Link { BookTitle = "The Swan With No Name", Url = "https://archiveofourown.org/works/30682232", Label = "The Swan With No Name on Archive of Our Own", LinkType = LinkType.Download },
+                new Link { BookTitle = "Where He Belongs", Url = "https://archiveofourown.org/works/31032671/chapters/76659218", Label = "Where He Belongs on Archive of Our Own", LinkType = LinkType.Download },
+                new Link { BookTitle = "FBC/SCP: Ignition", Url = "https://archiveofourown.org/works/31032671/chapters/76659218", Label = "FBC/SCP: Ignition on Archive of Our Own", LinkType = LinkType.Download },
             };
 
             return (books, links);

@@ -136,6 +136,14 @@ namespace ASP_site.Data.Initializers
                     Content = "<p>I've added a new events page with a listing of upcoming events. Again trying to make public things I track in my head or on spreadsheets.</p>",
                     PostedDate = new DateTime(2026, 2, 3, 12, 0, 0, DateTimeKind.Utc), Author = "Phil",
                     Tags = new List<Tag> { tags.Single(t => t.Name == "Website Update") }
+                },
+                new UpdatePost
+                {
+                    Id = 16,
+                    Title = "New qntm author page",
+                    Content = "<p>I discovered how awesome qntm's books are so I made a new author page for him as I'll quickly read all his stuff. Added a bunch of other links and stuff. Tough to find motivation and time for working on this hobby stuff with bigger ideas and projects in the works.</p>",
+                    PostedDate = new DateTime(2026, 4, 9, 12, 0, 0, DateTimeKind.Utc), Author = "Phil",
+                    Tags = new List<Tag> { tags.Single(t => t.Name == "Website Update") }
                 }
 
             };
