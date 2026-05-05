@@ -879,17 +879,8 @@ namespace ASP_site.Data.Initializers
           Description = "orbit - Fortress Forever map by ian.c.moreno, original TFC map Orbit_l3 by jungle",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "ff", FileName = "ff_orbit_b1", Author = "ian.c.moreno", Description = "FF" }
-          }
-        },
-        new Map
-        {
-          MapID = "orbit",
-          IsCompetitive = true,
-          Description = "orbit_tfp - Competitive TFC map with 2 MIRV grenades",
-          GameInfo = new List<MapGameInfo>
-          {
-            new MapGameInfo { GameID = "tfc", FileName = "orbit_tfp", Author = "", Description = "TFC" }
+            new MapGameInfo { GameID = "tfc", FileName = "orbit_tfp", Author = "", Description = "Competitive TFC map with 2 MIRV grenades" },
+            new MapGameInfo { GameID = "ff", FileName = "ff_orbit_b1", Author = "ian.c.moreno", Description = "Fortress Forever map by ian.c.moreno, original TFC map Orbit_l3 by jungle" }
           }
         },
         new Map
@@ -1044,7 +1035,8 @@ namespace ASP_site.Data.Initializers
           Description = "redgiant - Fortress Forever map",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "ff", FileName = "ff_redgiant", Author = "", Description = "FF" }
+            new MapGameInfo { GameID = "ff", FileName = "ff_redgiant", Author = "", Description = "FF" },
+            new MapGameInfo { GameID = "tfc", FileName = "redgiant", Author = "", Description = "TFC" }
           }
         },
         new Map

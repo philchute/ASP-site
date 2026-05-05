@@ -426,6 +426,7 @@ Events: [Digimon Card Game Official Events](https://world.digimoncard.com/event/
 |  6  |    | Data Squad and Beatbreak Starter Decks | May 22, 2026       |
 |  6  |LM08| Final Crest                            | August 28, 2026    |
 |  6  |BT26| Timeless Bonds                         | September 4, 2026  |
+|  6  |EX13| Chivalrous XIII                        | October 2, 2026   |
 
 
 ### Dragon Ball Super Card Game: Masters
@@ -503,6 +504,7 @@ Events: [Digimon Card Game Official Events](https://world.digimoncard.com/event/
 | FS12| Fusion World FS12 Starter Deck           | March 13, 2026    |
 | FB09| Fusion World - FB09                      | March 20, 2026    |
 |     | Fusion World Special Booster             | August 7, 2026    |
+|     | Fusion World FS-13&14 Starter Deck       | October 16, 2026  |
 
 
 ### Flesh and Blood
@@ -534,8 +536,10 @@ Events: [Digimon Card Game Official Events](https://world.digimoncard.com/event/
 | 17 | MPG | Mastery Pack Guardian       | August 8, 2025    |
 |    |     | Smash Palace                | August 29, 2025   |
 |    |     | Silver Age: Chapter 1 and 2 | February 13, 2026 |
-|    |     | Silver Age: Chapter 3       | June 5, 2026     |
-|    |     | Omens of the Third Age      | June 5, 2026     |
+|    |     | Armory Deck Origins: Hala   | April 17, 2026    |
+|    |     | Silver Age: Chapter 3       | June 5, 2026      |
+|    |     | Omens of the Third Age      | June 5, 2026      |
+|    |     | Mastery Pack Warrior        | August 7, 2026    |
 
 
 ### Grand Archive
@@ -586,6 +590,7 @@ Gundam Card Game is a brand new CCG based on the Gundam Franchise and published 
 | ST12 | Ragin Onslaught Starter Deck         | September 25, 2026 |
 | ST13 | Silent Barrage Starter Deck          | September 25, 2026 |
 | ST14 | Heavy Dominion Starter Deck          | September 25, 2026 |
+| GD06 | Gundam Set 06 Booster Box            | January 30, 2027   |
 
 
 ### Keyforge
@@ -703,6 +708,7 @@ Formats:
 | Siege of the Forgotten: PvE Boxed Game          | August 31, 2025   |
 | Siege of the Forgotten: Spoils of the Forgotten | August 31, 2025   |
 | Ancient Alphas                                  | February 23, 2026 |
+| Spoils of the Vault                             | June 22, 2026     |
 
 
 ### Altered
@@ -740,7 +746,8 @@ Battle Spirits Saga is [Bandai](https://www.bandai.com/en-us/)'s new attempt to 
 |     | Blaster Blade                        | May 22, 2026      |
 |     | Dragonic Overlord                    | May 22, 2026      |
 |     | Envoys of the Crimson Moon           | June 26, 2026     |
-|     | The Legendary Vanguards               | July 31, 2026    |
+|     | The Legendary Vanguards              | July 31, 2026     |
+|     | Strike of Illusionary Shadows        | August 28, 2026   |
 
 
 ### Cookie Run: Braverse

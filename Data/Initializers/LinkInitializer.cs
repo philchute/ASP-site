@@ -635,6 +635,10 @@ namespace ASP_site.Data.Initializers {
         new Link { GameID = "jakinbacon", Label = "Jakin' Bacon gameplay", Description = "Jakin' Bacon gameplay",
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=6OtPz8f7Gto" },
 
+        // KOF
+        new Link { GameID = "kof", Label = "The Beginner's Incomplete Guide to KOF (by Dandy J)", Description = "The Beginner's Incomplete Guide to KOF (by Dandy J)",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=Ye3KVgI1LvU" },
+
         // LambdaFortress
         new Link { GameID = "lambdafortress", Label = "Lambda Fortress", Description = "Me playing Lambda Fortress as Medic on Half-Life 2: Episode 2", 
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=Roa8lmfpR4Q" },
@@ -1003,8 +1007,41 @@ namespace ASP_site.Data.Initializers {
         new Link { GameID = "spf2t", Label = "Super Puzzle Fighter 2 Turbo Chaining Tutorial", Description = "Super Puzzle Fighter 2 Turbo Chaining Tutorial",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=CwrHWsssgzw" },
 
-        new Link { GameID = "sfalpha3", Label = "How did Street Fighter Alpha 3 manage to fit on a single Game Boy Advance Cart?", Description = "How did Street Fighter Alpha 3 manage to fit on a single Game Boy Advance Cart?",
+        // Street Fighter Alpha 2
+       new Link { GameID = "sfalpha2", Label = "https://www.youtube.com/watch?v=qUVFu4LwZDg ", Description = "V-ism juggle guide",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=qUVFu4LwZDg " },
+
+        // Street Fighter Alpha 3
+        new Link { GameID = "sfalpha3", Label = "Getting started with V-ISM - How the juggles work", Description = "V-ism juggle guide",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=eSEGj_IMwLs" },
+        new Link { GameID = "sfalpha3", Label = "How did Street Fighter Alpha 3 manage to fit on a single Game Boy Advance Cart?", Description = "Documentary",
           LinkType = LinkType.Documentary, Url = "https://www.youtube.com/watch?v=V1uCqk0DqBE" },
+        new Link { GameID = "sfalpha3", Label = "Street Fighter Alpha 3 (Tutorial) - Mechanics Guide", Description = "Guide",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=s4txy8ArNdU" },
+
+        // Street Fighter 3
+        new Link { GameID = "sf33rdstrike", Label = "Analysis: The Consequences of Reducing the Skill Gap", Description = "Analysis: The Consequences of Reducing the Skill Gap",
+          LinkType = LinkType.Documentary, Url = "https://www.youtube.com/watch?v=iSgA_nK_w3A" },
+        new Link { GameID = "sf33rdstrike", Label = "SF3 Primer: Pianoing and Negative Edge", Description = "SF3 Primer: Pianoing and Negative Edge",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=BQrDnEK8ehI" },
+        new Link { GameID = "sf33rdstrike", Label = "SF3 Primer: Parries", Description = "SF3 Primer: Parries",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=lx7DFR0UCA8" },
+        new Link { GameID = "sf33rdstrike", Label = "SF3 Primer: Juggles", Description = "SF3 Primer: Juggles",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=J3zZuGRXQKQ" },
+        new Link { GameID = "sf33rdstrike", Label = "SF3 Primer: Taunts", Description = "SF3 Primer: Taunts",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=DrZFhanPc1s" },
+        new Link { GameID = "sf33rdstrike", Label = "SF3 Primer: Anti Air", Description = "SF3 Primer: Anti Air",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=ilYZvmpycg8" },
+        new Link { GameID = "sf33rdstrike", Label = "SF3 Primer: Wakeup and Okizeme", Description = "SF3 Primer: Wakeup and Okizeme",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=pU8OQRhgPYc" },
+        new Link { GameID = "sf33rdstrike", Label = "SF3 Bread and Butter Combo Guide and General Notes - Ken", Description = "Ken",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=va8fK7GQdew" },
+        new Link { GameID = "sf33rdstrike", Label = "SF3 Bread and Butter Combo Guide and General Notes - Ryu", Description = "Ryu",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=bdvDs0BcZYg" },
+        new Link { GameID = "sf33rdstrike", Label = "SF3 Bread and Butter Combo Guide and General Notes - Alex", Description = "Alex",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=WGhq4vEIuEo" },
+        new Link { GameID = "sf33rdstrike", Label = "Kuroda Ken DVD", Description = "High level Ken matches and combos",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=ETCbExtLlfE" },
 
         // Syndicate Black Ops
         new Link { GameID = "syndicateblackops", Label = "Syndicate Black Ops on ModDB", Description = "Syndicate Black Ops on ModDB",

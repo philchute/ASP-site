@@ -166,6 +166,8 @@ namespace ASP_site.Data.Initializers
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=ml3Np9ZewZI" },
         new Link { GameID = "cs2", MapID = "dust2", Label = "de_dust2 positioning guide", Description = "dust2 positioning guide",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=hG14sNLcHAg" },
+        new Link { GameID = "cs2", MapID = "dust2", Label = "The Pros' Approach to Holding Dust2 Mid/B", Description = "The Pros' Approach to Holding Dust2 Mid/B",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=7qLzNEdAuzM" },
         // de_inferno
         new Link { GameID = "cs2", MapID = "inferno", Label = "de_inferno CT guide", Description = "Bird's inferno CT side guide",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=DYUyvAYq0tg" },
@@ -242,6 +244,8 @@ namespace ASP_site.Data.Initializers
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/shorts/E4AuFTOI3W4" },
         new Link { GameID = "cs2", MapID = "overpass", Label = "de_overpass T guide", Description = "mahone's overpass short guide",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=20jZxH6_8YU" },
+        new Link { GameID = "cs2", MapID = "overpass", Label = "The Pros' Approach to Holding Overpass A", Description = "mahone's overpass A guide",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=enXDh2KrEWA" },
         // de_train
         new Link { GameID = "cs2", MapID = "train", Label = "de_train CT guide", Description = "Bird's train CT side guide",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=U-a6IwdYl-U" },
