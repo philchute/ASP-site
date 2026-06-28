@@ -193,7 +193,8 @@ Current formats:
 | MEG | Mega Evolution                         | Main Series Expansion | September 26, 2025|
 | PHA | Mega Evolution–Phantasmal Flames       | Main Series Expansion | November 14, 2025 |
 | AHE | Mega Evolution–Ascended Heroes         | Main Series Expansion | January 30, 2026  |
-| WCH | World Championship 2025 Deck            | Collector's Set        | April 3, 2026     |
+| WCH | World Championship 2025 Deck           | Collector's Set        | April 3, 2026    |
+| CHR | Mega Evolution - Chaos Rising          | Main Series Expansion | May 22, 2026      |
 
 
 ### Yu-Gi-Oh

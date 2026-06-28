@@ -307,7 +307,7 @@ Hartford, Connecticut	June 19-21, 2026
 | Meeple Merchants Easley       | Sunday July 26th, 2026 2:00 pm        | [TBD] (https://locator.riftbound.uvsgames.com/events/516061) |
 | Critical Hits Simpsonville    | Sunday July 26th, 2026 2:00 pm        | [TBD] (https://locator.riftbound.uvsgames.com/events/504323) |
 | Limit Break Fountain Inn      | Tuesday July 28th, 2026 5:00 pm       | [Scheduled at a time normal people are working] (https://locator.riftbound.uvsgames.com/events/497154) |
-| Critical Hits Simpsonville    | Tuesday July 28th, 2026 5:00 pm       | [Scheduled their event at a time normal people are working and exactly at the same time as their closest competitor Limit Break. Anti-gamer, anti-consumer, absolutely fuck them.] (https://locator.riftbound.uvsgames.com/events/534543) |
+| Critical Hits Simpsonville    | Tuesday July 28th, 2026 5:00 pm       | [Scheduled their event at a time normal people are working and exactly at the same time as their closest competitor Limit Break.] (https://locator.riftbound.uvsgames.com/events/534543) |
 
 ### Barcelona Regionals
 
