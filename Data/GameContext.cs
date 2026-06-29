@@ -32,6 +32,10 @@ namespace ASP_site.Data
     public DbSet<GunplaKit> GunplaKits { get; set; } = null!;
     public DbSet<UserKitEntry> UserKitEntries { get; set; } = null!;
     public DbSet<KitRelationship> KitRelationships { get; set; } = null!;
+    public DbSet<ComicIssue> ComicIssues { get; set; } = null!;
+    public DbSet<StoryArc> StoryArcs { get; set; } = null!;
+    public DbSet<CollectedEdition> CollectedEditions { get; set; } = null!;
+    public DbSet<AdaptedMedia> AdaptedMedia { get; set; } = null!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

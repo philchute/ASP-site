@@ -244,6 +244,51 @@ namespace ASP_site.Data {
       }
       
       context.SaveChanges();
+
+      // Initialize Comics Data
+      var comicIssues = ComicInitializer.GetComicIssues();
+      foreach (var issue in comicIssues) {
+        try {
+          context.ComicIssues.Add(issue);
+        }
+        catch (Exception ex) {
+          Console.WriteLine($"Failed to add comic issue (ID: {issue.IssueID}, Title: {issue.SeriesTitle}): {ex.Message}");
+        }
+      }
+      context.SaveChanges();
+
+      var storyArcs = ComicInitializer.GetStoryArcs();
+      foreach (var arc in storyArcs) {
+        try {
+          context.StoryArcs.Add(arc);
+        }
+        catch (Exception ex) {
+          Console.WriteLine($"Failed to add story arc (ID: {arc.ArcID}, Title: {arc.Title}): {ex.Message}");
+        }
+      }
+      context.SaveChanges();
+
+      var collectedEditions = ComicInitializer.GetCollectedEditions();
+      foreach (var edition in collectedEditions) {
+        try {
+          context.CollectedEditions.Add(edition);
+        }
+        catch (Exception ex) {
+          Console.WriteLine($"Failed to add collected edition (ID: {edition.EditionID}, Title: {edition.Title}): {ex.Message}");
+        }
+      }
+      context.SaveChanges();
+
+      var adaptedMedia = ComicInitializer.GetAdaptedMedia();
+      foreach (var media in adaptedMedia) {
+        try {
+          context.AdaptedMedia.Add(media);
+        }
+        catch (Exception ex) {
+          Console.WriteLine($"Failed to add adapted media (ID: {media.AdaptedMediaID}, Title: {media.Title}): {ex.Message}");
+        }
+      }
+      context.SaveChanges();
     }
   }
 }

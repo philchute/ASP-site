@@ -917,7 +917,7 @@ namespace ASP_site.Data.Initializers
                 new Event { Name = "World Cup Colombia vs Ghana", Description = "World Cup soccer Round of 32 match between Colombia and Ghana from Arrowhead Stadium, Kansas City.", 
                     CategoryGroup = EventCategoryGroup.Sports, Category = EventCategory.Soccer, Platform = WatchPlatform.BroadcastTV, Channel = "FOX",
                     Day = new DateOnly(2026, 7, 3), SortTime = new TimeOnly(21, 30) },
-                new Event { Name = "World Cup Round of 16 Match", Description = "World Cup soccer Round of 16 match between winner match 73 and winner match 75 from NRG Stadium, Houston.", 
+                new Event { Name = "World Cup Round of 16 Match", Description = "World Cup soccer Round of 16 match between Canada and winner match 75 from NRG Stadium, Houston.", 
                     CategoryGroup = EventCategoryGroup.Sports, Category = EventCategory.Soccer, Platform = WatchPlatform.BroadcastTV, Channel = "FOX",
                     Day = new DateOnly(2026, 7, 4), SortTime = new TimeOnly(14, 0) },
                 new Event { Name = "World Cup Round of 16 Match", Description = "World Cup soccer Round of 16 match between winner match 74 and winner match 77 from Lincoln Financial Field, Philadelphia.", 
