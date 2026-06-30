@@ -11,6 +11,8 @@ namespace ASP_site.Models
         public string Description { get; set; } = "";
         public MediaType MediaType { get; set; }
         public int ReleaseYear { get; set; }
+        public int? ReleaseMonth { get; set; }
+        public int? ReleaseDay { get; set; }
         public List<string> AdaptedFromArcIDs { get; set; } = new List<string>();
     }
 }
