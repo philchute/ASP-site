@@ -38,5 +38,11 @@ namespace ASP_site.Models
 
         // Navigation property for many-to-many relationship
         public ICollection<Tag> Tags { get; set; } = new List<Tag>();
+
+        // Navigation property for comic story arc adaptations
+        public ICollection<StoryArc> AdaptedFromArcs { get; set; } = new List<StoryArc>();
+        
+        [System.ComponentModel.DataAnnotations.Schema.NotMapped]
+        public List<string> AdaptedFromArcIDs { get; set; } = new List<string>();
     }
 } 

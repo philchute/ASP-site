@@ -35,6 +35,10 @@ namespace ASP_site.Models {
     public List<Game> Mods { get; set; } = new List<Game>();
     public List<Server> Servers { get; set; } = new List<Server>();
     public List<int> PlayWith { get; set; } = [];
+    public ICollection<StoryArc> AdaptedFromArcs { get; set; } = new List<StoryArc>();
+    
+    [System.ComponentModel.DataAnnotations.Schema.NotMapped]
+    public List<string> AdaptedFromArcIDs { get; set; } = new List<string>();
     
     public static Game InitializeYear(Game g, List<Game> allGames) {
       if(g.ReleaseDates.Length > 0) {

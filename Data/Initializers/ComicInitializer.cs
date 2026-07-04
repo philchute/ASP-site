@@ -3,1180 +3,1091 @@ using ASP_site.Models;
 namespace ASP_site.Data.Initializers {
   public static class ComicInitializer {
     public static ComicIssue[] GetComicIssues() {
-      return new ComicIssue[] {
-        new ComicIssue { IssueID = "all-star-superman-1", SeriesTitle = "All-Star Superman", IssueNumber = "1", PublishMonth = 1, PublishYear = 2006, Description = "…Faster…" },
-        new ComicIssue { IssueID = "all-star-superman-2", SeriesTitle = "All-Star Superman", IssueNumber = "2", PublishMonth = 2, PublishYear = 2006, Description = "Superman's Forbidden Room" },
-        new ComicIssue { IssueID = "all-star-superman-3", SeriesTitle = "All-Star Superman", IssueNumber = "3", PublishMonth = 5, PublishYear = 2006, Description = "Sweet Dreams, Superwoman..." },
-        new ComicIssue { IssueID = "all-star-superman-4", SeriesTitle = "All-Star Superman", IssueNumber = "4", PublishMonth = 7, PublishYear = 2007, Description = "The Superman/Olsen War..." },
-        new ComicIssue { IssueID = "all-star-superman-5", SeriesTitle = "All-Star Superman", IssueNumber = "5", PublishMonth = 9, PublishYear = 2006, Description = "The Gospel According to Lex Luthor" },
-        new ComicIssue { IssueID = "all-star-superman-6", SeriesTitle = "All-Star Superman", IssueNumber = "6", PublishMonth = 3, PublishYear = 2007, Description = "Funeral in Smallville" },
-        new ComicIssue { IssueID = "all-star-superman-7", SeriesTitle = "All-Star Superman", IssueNumber = "7", PublishMonth = 6, PublishYear = 2007, Description = "Being Bizarro" },
-        new ComicIssue { IssueID = "all-star-superman-8", SeriesTitle = "All-Star Superman", IssueNumber = "8", PublishMonth = 8, PublishYear = 2007, Description = "Us Do Opposite" },
-        new ComicIssue { IssueID = "all-star-superman-9", SeriesTitle = "All-Star Superman", IssueNumber = "9", PublishMonth = 12, PublishYear = 2007, Description = "Curse of the Replacement Supermen" },
-        new ComicIssue { IssueID = "all-star-superman-10", SeriesTitle = "All-Star Superman", IssueNumber = "10", PublishMonth = 5, PublishYear = 2008, Description = "Neverending" },
-        new ComicIssue { IssueID = "all-star-superman-11", SeriesTitle = "All-Star Superman", IssueNumber = "11", PublishMonth = 7, PublishYear = 2008, Description = "Red Sun Day" },
-        new ComicIssue { IssueID = "all-star-superman-12", SeriesTitle = "All-Star Superman", IssueNumber = "12", PublishMonth = 10, PublishYear = 2008, Description = "Superman in Excelsis" },
-        new ComicIssue { IssueID = "superman-batman-1", SeriesTitle = "Superman/Batman", IssueNumber = "1", PublishMonth = 10, PublishYear = 2003, Description = "The World's Finest, Part 1" },
-        new ComicIssue { IssueID = "superman-batman-2", SeriesTitle = "Superman/Batman", IssueNumber = "2", PublishMonth = 11, PublishYear = 2003, Description = "The World's Finest, Part 2: Early Warning" },
-        new ComicIssue { IssueID = "superman-batman-3", SeriesTitle = "Superman/Batman", IssueNumber = "3", PublishMonth = 12, PublishYear = 2003, Description = "The World's Finest, Part 3: Running Wild" },
-        new ComicIssue { IssueID = "superman-batman-4", SeriesTitle = "Superman/Batman", IssueNumber = "4", PublishMonth = 1, PublishYear = 2004, Description = "The World's Finest, Part 4: Battle On" },
-        new ComicIssue { IssueID = "superman-batman-5", SeriesTitle = "Superman/Batman", IssueNumber = "5", PublishMonth = 2, PublishYear = 2004, Description = "The World's Finest, Part 5: State of Siege" },
-        new ComicIssue { IssueID = "superman-batman-6", SeriesTitle = "Superman/Batman", IssueNumber = "6", PublishMonth = 3, PublishYear = 2004, Description = "The World's Finest, Part 6: Final Countdown" },
-        new ComicIssue { IssueID = "superman-batman-7", SeriesTitle = "Superman/Batman", IssueNumber = "7", PublishMonth = 4, PublishYear = 2004, Description = "Protégé" },
-        new ComicIssue { IssueID = "superman-batman-8", SeriesTitle = "Superman/Batman", IssueNumber = "8", PublishMonth = 5, PublishYear = 2004, Description = "The Supergirl From Krypton, Part 1: Alone" },
-        new ComicIssue { IssueID = "superman-batman-9", SeriesTitle = "Superman/Batman", IssueNumber = "9", PublishMonth = 6, PublishYear = 2004, Description = "The Supergirl from Krypton, Part 2: Visitor" },
-        new ComicIssue { IssueID = "superman-batman-10", SeriesTitle = "Superman/Batman", IssueNumber = "10", PublishMonth = 7, PublishYear = 2004, Description = "The Supergirl from Krypton, Part 3: Warrior" },
-        new ComicIssue { IssueID = "superman-batman-11", SeriesTitle = "Superman/Batman", IssueNumber = "11", PublishMonth = 8, PublishYear = 2004, Description = "The Supergirl from Krypton, Part 4: Prisoner" },
-        new ComicIssue { IssueID = "superman-batman-12", SeriesTitle = "Superman/Batman", IssueNumber = "12", PublishMonth = 9, PublishYear = 2004, Description = "The Supergirl from Krypton, Part 5: Traitor" },
-        new ComicIssue { IssueID = "superman-batman-13", SeriesTitle = "Superman/Batman", IssueNumber = "13", PublishMonth = 10, PublishYear = 2004, Description = "The Supergirl from Krypton, Part 6: Hero" },
-        new ComicIssue { IssueID = "superman-batman-secret-files-and-origins-2003", SeriesTitle = "Superman/Batman Secret Files & Origins 2003", IssueNumber = "1", PublishMonth = 11, PublishYear = 2003, Description = "When Clark Met Bruce: A Tale from the Days of Smallville" },
-        new ComicIssue { IssueID = "superman-birthright-1", SeriesTitle = "Superman: Birthright", IssueNumber = "1", PublishMonth = 9, PublishYear = 2003, Description = "In the Beginning" },
-        new ComicIssue { IssueID = "superman-birthright-2", SeriesTitle = "Superman: Birthright", IssueNumber = "2", PublishMonth = 10, PublishYear = 2003, Description = "Heart of Darkness" },
-        new ComicIssue { IssueID = "superman-birthright-3", SeriesTitle = "Superman: Birthright", IssueNumber = "3", PublishMonth = 11, PublishYear = 2003, Description = "A Legacy Reborn" },
-        new ComicIssue { IssueID = "superman-birthright-4", SeriesTitle = "Superman: Birthright", IssueNumber = "4", PublishMonth = 12, PublishYear = 2004, Description = "Part Four" },
-        new ComicIssue { IssueID = "superman-birthright-5", SeriesTitle = "Superman: Birthright", IssueNumber = "5", PublishMonth = 1, PublishYear = 2004, Description = "Menace to Metropolis" },
-        new ComicIssue { IssueID = "superman-birthright-6", SeriesTitle = "Superman: Birthright", IssueNumber = "6", PublishMonth = 3, PublishYear = 2004, Description = "The Remains of Krypton" },
-        new ComicIssue { IssueID = "superman-birthright-7", SeriesTitle = "Superman: Birthright", IssueNumber = "7", PublishMonth = 4, PublishYear = 2004, Description = "Friend or Foe?" },
-        new ComicIssue { IssueID = "superman-birthright-8", SeriesTitle = "Superman: Birthright", IssueNumber = "8", PublishMonth = 5, PublishYear = 2004, Description = "Every Town Has a Secret... Lex Luthor in Smallville" },
-        new ComicIssue { IssueID = "superman-birthright-9", SeriesTitle = "Superman: Birthright", IssueNumber = "9", PublishMonth = 6, PublishYear = 2004, Description = "Krypton Lives" },
-        new ComicIssue { IssueID = "superman-birthright-10", SeriesTitle = "Superman: Birthright", IssueNumber = "10", PublishMonth = 7, PublishYear = 2004, Description = "Part Ten" },
-        new ComicIssue { IssueID = "superman-birthright-11", SeriesTitle = "Superman: Birthright", IssueNumber = "11", PublishMonth = 8, PublishYear = 2004, Description = "Kneel Before..." },
-        new ComicIssue { IssueID = "superman-birthright-12", SeriesTitle = "Superman: Birthright", IssueNumber = "12", PublishMonth = 9, PublishYear = 2004, Description = "The Hero Emerges" },
-        new ComicIssue { IssueID = "superman-red-son-1", SeriesTitle = "Superman: Red Son", IssueNumber = "1" },
-        new ComicIssue { IssueID = "superman-red-son-2", SeriesTitle = "Superman: Red Son", IssueNumber = "2" },
-        new ComicIssue { IssueID = "superman-red-son-3", SeriesTitle = "Superman: Red Son", IssueNumber = "3" },
-        new ComicIssue { IssueID = "arkham-asylum-a-serious-house-on-serious-earth-1", SeriesTitle = "Arkham Asylum: A Serious House on Serious Earth", IssueNumber = "1", PublishMonth = 10, PublishYear = 1989, Description = "Chapter Zero: The Joker" },
-        new ComicIssue { IssueID = "batman-the-long-halloween-1", SeriesTitle = "Batman: The Long Halloween", IssueNumber = "1" },
-        new ComicIssue { IssueID = "batman-the-long-halloween-2", SeriesTitle = "Batman: The Long Halloween", IssueNumber = "2" },
-        new ComicIssue { IssueID = "batman-the-long-halloween-3", SeriesTitle = "Batman: The Long Halloween", IssueNumber = "3" },
-        new ComicIssue { IssueID = "batman-the-long-halloween-4", SeriesTitle = "Batman: The Long Halloween", IssueNumber = "4" },
-        new ComicIssue { IssueID = "batman-the-long-halloween-5", SeriesTitle = "Batman: The Long Halloween", IssueNumber = "5" },
-        new ComicIssue { IssueID = "batman-the-long-halloween-6", SeriesTitle = "Batman: The Long Halloween", IssueNumber = "6" },
-        new ComicIssue { IssueID = "batman-the-long-halloween-7", SeriesTitle = "Batman: The Long Halloween", IssueNumber = "7" },
-        new ComicIssue { IssueID = "batman-the-long-halloween-8", SeriesTitle = "Batman: The Long Halloween", IssueNumber = "8" },
-        new ComicIssue { IssueID = "batman-the-long-halloween-9", SeriesTitle = "Batman: The Long Halloween", IssueNumber = "9" },
-        new ComicIssue { IssueID = "batman-the-long-halloween-10", SeriesTitle = "Batman: The Long Halloween", IssueNumber = "10" },
-        new ComicIssue { IssueID = "batman-the-long-halloween-11", SeriesTitle = "Batman: The Long Halloween", IssueNumber = "11" },
-        new ComicIssue { IssueID = "batman-the-long-halloween-12", SeriesTitle = "Batman: The Long Halloween", IssueNumber = "12" },
-        new ComicIssue { IssueID = "batman-the-long-halloween-13", SeriesTitle = "Batman: The Long Halloween", IssueNumber = "13" },
-        new ComicIssue { IssueID = "batman-gotham-by-gaslight-1", SeriesTitle = "Batman: Gotham by Gaslight", IssueNumber = "1" },
-        new ComicIssue { IssueID = "batman-master-of-the-future-1", SeriesTitle = "Batman: Master of the Future", IssueNumber = "1" },
-        new ComicIssue { IssueID = "batman-the-dark-knight-returns-1", SeriesTitle = "Batman: The Dark Knight Returns", IssueNumber = "1", PublishYear = 1986 },
-        new ComicIssue { IssueID = "batman-the-dark-knight-returns-2", SeriesTitle = "Batman: The Dark Knight Returns", IssueNumber = "2", PublishYear = 1986 },
-        new ComicIssue { IssueID = "batman-the-dark-knight-returns-3", SeriesTitle = "Batman: The Dark Knight Returns", IssueNumber = "3", PublishYear = 1986 },
-        new ComicIssue { IssueID = "batman-the-dark-knight-returns-4", SeriesTitle = "Batman: The Dark Knight Returns", IssueNumber = "4", PublishYear = 1986 },
-        new ComicIssue { IssueID = "batman-white-knight-1", SeriesTitle = "Batman: White Knight", IssueNumber = "1" },
-        new ComicIssue { IssueID = "batman-white-knight-2", SeriesTitle = "Batman: White Knight", IssueNumber = "2" },
-        new ComicIssue { IssueID = "batman-white-knight-3", SeriesTitle = "Batman: White Knight", IssueNumber = "3" },
-        new ComicIssue { IssueID = "batman-white-knight-4", SeriesTitle = "Batman: White Knight", IssueNumber = "4" },
-        new ComicIssue { IssueID = "batman-white-knight-5", SeriesTitle = "Batman: White Knight", IssueNumber = "5" },
-        new ComicIssue { IssueID = "batman-white-knight-6", SeriesTitle = "Batman: White Knight", IssueNumber = "6" },
-        new ComicIssue { IssueID = "batman-white-knight-7", SeriesTitle = "Batman: White Knight", IssueNumber = "7" },
-        new ComicIssue { IssueID = "batman-white-knight-8", SeriesTitle = "Batman: White Knight", IssueNumber = "8" },
-        new ComicIssue { IssueID = "batman-608", SeriesTitle = "Batman", IssueNumber = "608", PublishMonth = 12, PublishYear = 2002, Description = "Chapter One: The Ransom" },
-        new ComicIssue { IssueID = "batman-609", SeriesTitle = "Batman", IssueNumber = "609", PublishMonth = 1, PublishYear = 2003, Description = "Chapter Two: The Friend" },
-        new ComicIssue { IssueID = "batman-610", SeriesTitle = "Batman", IssueNumber = "610", PublishMonth = 2, PublishYear = 2003, Description = "Chapter Three: The Beast" },
-        new ComicIssue { IssueID = "batman-611", SeriesTitle = "Batman", IssueNumber = "611", PublishMonth = 3, PublishYear = 2003, Description = "Chapter Four: The City" },
-        new ComicIssue { IssueID = "batman-612", SeriesTitle = "Batman", IssueNumber = "612", PublishMonth = 4, PublishYear = 2003, Description = "Chapter Five: The Battle" },
-        new ComicIssue { IssueID = "batman-613", SeriesTitle = "Batman", IssueNumber = "613", PublishMonth = 5, PublishYear = 2003, Description = "Chapter Six: The Opera" },
-        new ComicIssue { IssueID = "batman-614", SeriesTitle = "Batman", IssueNumber = "614", PublishMonth = 6, PublishYear = 2003, Description = "Chapter Seven: The Joke" },
-        new ComicIssue { IssueID = "batman-615", SeriesTitle = "Batman", IssueNumber = "615", PublishMonth = 7, PublishYear = 2003, Description = "Chapter Eight: The Dead" },
-        new ComicIssue { IssueID = "batman-616", SeriesTitle = "Batman", IssueNumber = "616", PublishMonth = 8, PublishYear = 2003, Description = "Chapter Nine: The Assassins" },
-        new ComicIssue { IssueID = "wizard-0", SeriesTitle = "Wizard", IssueNumber = "0", Description = "Interlude: The Cave" },
-        new ComicIssue { IssueID = "batman-617", SeriesTitle = "Batman", IssueNumber = "617", PublishMonth = 9, PublishYear = 2003, Description = "Chapter Ten: The Grave" },
-        new ComicIssue { IssueID = "batman-618", SeriesTitle = "Batman", IssueNumber = "618", PublishMonth = 10, PublishYear = 2003, Description = "Chapter Eleven: The Game" },
-        new ComicIssue { IssueID = "batman-619", SeriesTitle = "Batman", IssueNumber = "619", PublishMonth = 11, PublishYear = 2003, Description = "Chapter Twelve: The End" },
-        new ComicIssue { IssueID = "batman-635", SeriesTitle = "Batman", IssueNumber = "635" },
-        new ComicIssue { IssueID = "batman-636", SeriesTitle = "Batman", IssueNumber = "636" },
-        new ComicIssue { IssueID = "batman-637", SeriesTitle = "Batman", IssueNumber = "637" },
-        new ComicIssue { IssueID = "batman-638", SeriesTitle = "Batman", IssueNumber = "638" },
-        new ComicIssue { IssueID = "batman-639", SeriesTitle = "Batman", IssueNumber = "639" },
-        new ComicIssue { IssueID = "batman-640", SeriesTitle = "Batman", IssueNumber = "640" },
-        new ComicIssue { IssueID = "batman-641", SeriesTitle = "Batman", IssueNumber = "641" },
-        new ComicIssue { IssueID = "batman-645", SeriesTitle = "Batman", IssueNumber = "645" },
-        new ComicIssue { IssueID = "batman-646", SeriesTitle = "Batman", IssueNumber = "646" },
-        new ComicIssue { IssueID = "batman-647", SeriesTitle = "Batman", IssueNumber = "647" },
-        new ComicIssue { IssueID = "batman-648", SeriesTitle = "Batman", IssueNumber = "648" },
-        new ComicIssue { IssueID = "batman-649", SeriesTitle = "Batman", IssueNumber = "649" },
-        new ComicIssue { IssueID = "batman-650", SeriesTitle = "Batman", IssueNumber = "650" },
-        new ComicIssue { IssueID = "batman-655", SeriesTitle = "Batman", IssueNumber = "655" },
-        new ComicIssue { IssueID = "batman-656", SeriesTitle = "Batman", IssueNumber = "656" },
-        new ComicIssue { IssueID = "batman-657", SeriesTitle = "Batman", IssueNumber = "657" },
-        new ComicIssue { IssueID = "batman-658", SeriesTitle = "Batman", IssueNumber = "658" },
-        new ComicIssue { IssueID = "batman-663", SeriesTitle = "Batman", IssueNumber = "663" },
-        new ComicIssue { IssueID = "batman-664", SeriesTitle = "Batman", IssueNumber = "664" },
-        new ComicIssue { IssueID = "batman-665", SeriesTitle = "Batman", IssueNumber = "665" },
-        new ComicIssue { IssueID = "batman-666", SeriesTitle = "Batman", IssueNumber = "666" },
-        new ComicIssue { IssueID = "batman-volume-2-1", SeriesTitle = "Batman (Volume 2)", IssueNumber = "1", PublishMonth = 11, PublishYear = 2011, Description = "Part One: Knife Trick" },
-        new ComicIssue { IssueID = "batman-volume-2-2", SeriesTitle = "Batman (Volume 2)", IssueNumber = "2", PublishMonth = 12, PublishYear = 2011, Description = "Part Two: Trust Fall" },
-        new ComicIssue { IssueID = "batman-volume-2-3", SeriesTitle = "Batman (Volume 2)", IssueNumber = "3", PublishMonth = 1, PublishYear = 2012, Description = "Part Three: The Thirteenth Hour" },
-        new ComicIssue { IssueID = "batman-volume-2-4", SeriesTitle = "Batman (Volume 2)", IssueNumber = "4", PublishMonth = 2, PublishYear = 2012, Description = "Part Four: Face the Court, Part One" },
-        new ComicIssue { IssueID = "batman-volume-2-5", SeriesTitle = "Batman (Volume 2)", IssueNumber = "5", PublishMonth = 3, PublishYear = 2012, Description = "Part Five: Face the Court, Part Two" },
-        new ComicIssue { IssueID = "batman-volume-2-6", SeriesTitle = "Batman (Volume 2)", IssueNumber = "6", PublishMonth = 4, PublishYear = 2012, Description = "Part Six: Beneath the Glass" },
-        new ComicIssue { IssueID = "batman-volume-2-7", SeriesTitle = "Batman (Volume 2)", IssueNumber = "7", PublishMonth = 5, PublishYear = 2012, Description = "The Talons Strike!" },
-        new ComicIssue { IssueID = "batman-volume-2-8", SeriesTitle = "Batman (Volume 2)", IssueNumber = "8", PublishMonth = 6, PublishYear = 2012, Description = "Attack on Wayne Manor" },
-        new ComicIssue { IssueID = "batman-volume-2-9", SeriesTitle = "Batman (Volume 2)", IssueNumber = "9", PublishMonth = 7, PublishYear = 2012, Description = "Night of the Owls" },
-        new ComicIssue { IssueID = "batman-volume-2-10", SeriesTitle = "Batman (Volume 2)", IssueNumber = "10", PublishMonth = 8, PublishYear = 2012, Description = "Assault on the Court" },
-        new ComicIssue { IssueID = "batman-volume-2-11", SeriesTitle = "Batman (Volume 2)", IssueNumber = "11", PublishMonth = 9, PublishYear = 2012, Description = "My Brother's Keeper" },
-        new ComicIssue { IssueID = "annual-batman-25", SeriesTitle = "Annual Batman", IssueNumber = "25" },
-        new ComicIssue { IssueID = "annual-batgirl-3", SeriesTitle = "Annual Batgirl", IssueNumber = "3" },
-        new ComicIssue { IssueID = "batgirl-35", SeriesTitle = "Batgirl", IssueNumber = "35" },
-        new ComicIssue { IssueID = "batgirl-36", SeriesTitle = "Batgirl", IssueNumber = "36" },
-        new ComicIssue { IssueID = "batgirl-37", SeriesTitle = "Batgirl", IssueNumber = "37" },
-        new ComicIssue { IssueID = "batgirl-38", SeriesTitle = "Batgirl", IssueNumber = "38" },
-        new ComicIssue { IssueID = "batgirl-39", SeriesTitle = "Batgirl", IssueNumber = "39" },
-        new ComicIssue { IssueID = "batgirl-40", SeriesTitle = "Batgirl", IssueNumber = "40" },
-        new ComicIssue { IssueID = "batgirl-41", SeriesTitle = "Batgirl", IssueNumber = "41" },
-        new ComicIssue { IssueID = "batgirl-42", SeriesTitle = "Batgirl", IssueNumber = "42" },
-        new ComicIssue { IssueID = "batgirl-43", SeriesTitle = "Batgirl", IssueNumber = "43" },
-        new ComicIssue { IssueID = "batgirl-44", SeriesTitle = "Batgirl", IssueNumber = "44" },
-        new ComicIssue { IssueID = "batgirl-45", SeriesTitle = "Batgirl", IssueNumber = "45" },
-        new ComicIssue { IssueID = "secret-origins-10", SeriesTitle = "Secret Origins", IssueNumber = "10" },
-        new ComicIssue { IssueID = "dc-sneak-peek-batgirl-1", SeriesTitle = "DC Sneak Peek: Batgirl", IssueNumber = "1" },
-        new ComicIssue { IssueID = "dark-nights-metal-1", SeriesTitle = "Dark Nights: Metal", IssueNumber = "1" },
-        new ComicIssue { IssueID = "dark-nights-metal-2", SeriesTitle = "Dark Nights: Metal", IssueNumber = "2" },
-        new ComicIssue { IssueID = "dark-nights-metal-3", SeriesTitle = "Dark Nights: Metal", IssueNumber = "3" },
-        new ComicIssue { IssueID = "dark-nights-metal-4", SeriesTitle = "Dark Nights: Metal", IssueNumber = "4" },
-        new ComicIssue { IssueID = "dark-nights-metal-5", SeriesTitle = "Dark Nights: Metal", IssueNumber = "5" },
-        new ComicIssue { IssueID = "dark-nights-metal-6", SeriesTitle = "Dark Nights: Metal", IssueNumber = "6" },
-        new ComicIssue { IssueID = "batman-lost", SeriesTitle = "Batman: Lost", IssueNumber = "1" },
-        new ComicIssue { IssueID = "dark-knights-rising-the-wild-hunt", SeriesTitle = "Dark Knights Rising: The Wild Hunt", IssueNumber = "1" },
-        new ComicIssue { IssueID = "batman-harley-and-ivy-1", SeriesTitle = "Batman: Harley and Ivy", IssueNumber = "1" },
-        new ComicIssue { IssueID = "batman-harley-and-ivy-2", SeriesTitle = "Batman: Harley and Ivy", IssueNumber = "2" },
-        new ComicIssue { IssueID = "batman-harley-and-ivy-3", SeriesTitle = "Batman: Harley and Ivy", IssueNumber = "3" },
-        new ComicIssue { IssueID = "the-batman-adventures-annual-1", SeriesTitle = "The Batman Adventures Annual", IssueNumber = "1" },
-        new ComicIssue { IssueID = "the-batman-adventures-holiday-special-1", SeriesTitle = "The Batman Adventures Holiday Special", IssueNumber = "1" },
-        new ComicIssue { IssueID = "the-batman-and-robin-adventures-8", SeriesTitle = "The Batman and Robin Adventures", IssueNumber = "8" },
-        new ComicIssue { IssueID = "the-batgirl-adventures-1", SeriesTitle = "The Batgirl Adventures", IssueNumber = "1" },
-        new ComicIssue { IssueID = "batman-gotham-knights-14", SeriesTitle = "Batman: Gotham Knights", IssueNumber = "14" },
-        new ComicIssue { IssueID = "batman-black-and-white-3", SeriesTitle = "Batman Black and White", IssueNumber = "3" },
-        new ComicIssue { IssueID = "detective-comics-759", SeriesTitle = "Detective Comics", IssueNumber = "759", Description = "Trail of the Catwoman, Part One" },
-        new ComicIssue { IssueID = "detective-comics-760", SeriesTitle = "Detective Comics", IssueNumber = "760", Description = "Trail of the Catwoman, Part Two" },
-        new ComicIssue { IssueID = "detective-comics-761", SeriesTitle = "Detective Comics", IssueNumber = "761", Description = "Trail of the Catwoman, Part Three" },
-        new ComicIssue { IssueID = "detective-comics-762", SeriesTitle = "Detective Comics", IssueNumber = "762", Description = "Trail of the Catwoman, Part Four" },
-        new ComicIssue { IssueID = "detective-comics-854", SeriesTitle = "Detective Comics", IssueNumber = "854", Description = "Elegy, Part One: Agitato" },
-        new ComicIssue { IssueID = "detective-comics-855", SeriesTitle = "Detective Comics", IssueNumber = "855", Description = "Elegy, Part Two: Misterioso" },
-        new ComicIssue { IssueID = "detective-comics-856", SeriesTitle = "Detective Comics", IssueNumber = "856", Description = "Elegy, Part Three: Affettuoso" },
-        new ComicIssue { IssueID = "detective-comics-857", SeriesTitle = "Detective Comics", IssueNumber = "857", Description = "Elegy, Part Four: Rubato!" },
-        new ComicIssue { IssueID = "detective-comics-858", SeriesTitle = "Detective Comics", IssueNumber = "858", Description = "GO, Part One" },
-        new ComicIssue { IssueID = "detective-comics-859", SeriesTitle = "Detective Comics", IssueNumber = "859", Description = "GO, Part Two" },
-        new ComicIssue { IssueID = "detective-comics-860", SeriesTitle = "Detective Comics", IssueNumber = "860", Description = "GO, Part Three" },
-        new ComicIssue { IssueID = "detective-comics-861", SeriesTitle = "Detective Comics", IssueNumber = "861", Description = "Cutter, Part One" },
-        new ComicIssue { IssueID = "detective-comics-862", SeriesTitle = "Detective Comics", IssueNumber = "862", Description = "Cutter, Part Two" },
-        new ComicIssue { IssueID = "detective-comics-863", SeriesTitle = "Detective Comics", IssueNumber = "863", Description = "Cutter, Part Three" },
-        new ComicIssue { IssueID = "catwoman-selinas-big-score", PublishMonth = 9, PublishYear = 2002 },
-        new ComicIssue { IssueID = "catwoman-volume-3-1", SeriesTitle = "Catwoman (Volume 3)", IssueNumber = "1" },
-        new ComicIssue { IssueID = "catwoman-volume-3-2", SeriesTitle = "Catwoman (Volume 3)", IssueNumber = "2" },
-        new ComicIssue { IssueID = "catwoman-volume-3-3", SeriesTitle = "Catwoman (Volume 3)", IssueNumber = "3" },
-        new ComicIssue { IssueID = "catwoman-volume-3-4", SeriesTitle = "Catwoman (Volume 3)", IssueNumber = "4" },
-        new ComicIssue { IssueID = "catwoman-volume-3-5", SeriesTitle = "Catwoman (Volume 3)", IssueNumber = "5" },
-        new ComicIssue { IssueID = "catwoman-volume-3-6", SeriesTitle = "Catwoman (Volume 3)", IssueNumber = "6" },
-        new ComicIssue { IssueID = "catwoman-volume-3-7", SeriesTitle = "Catwoman (Volume 3)", IssueNumber = "7" },
-        new ComicIssue { IssueID = "catwoman-volume-3-8", SeriesTitle = "Catwoman (Volume 3)", IssueNumber = "8" },
-        new ComicIssue { IssueID = "catwoman-volume-3-9", SeriesTitle = "Catwoman (Volume 3)", IssueNumber = "9" },
-        new ComicIssue { IssueID = "gotham-central-1", SeriesTitle = "Gotham Central", IssueNumber = "1" },
-        new ComicIssue { IssueID = "gotham-central-2", SeriesTitle = "Gotham Central", IssueNumber = "2" },
-        new ComicIssue { IssueID = "gotham-central-3", SeriesTitle = "Gotham Central", IssueNumber = "3" },
-        new ComicIssue { IssueID = "gotham-central-4", SeriesTitle = "Gotham Central", IssueNumber = "4" },
-        new ComicIssue { IssueID = "gotham-central-5", SeriesTitle = "Gotham Central", IssueNumber = "5" },
-        new ComicIssue { IssueID = "gotham-central-6", SeriesTitle = "Gotham Central", IssueNumber = "6" },
-        new ComicIssue { IssueID = "gotham-central-7", SeriesTitle = "Gotham Central", IssueNumber = "7" },
-        new ComicIssue { IssueID = "gotham-central-8", SeriesTitle = "Gotham Central", IssueNumber = "8" },
-        new ComicIssue { IssueID = "gotham-central-9", SeriesTitle = "Gotham Central", IssueNumber = "9" },
-        new ComicIssue { IssueID = "gotham-central-10", SeriesTitle = "Gotham Central", IssueNumber = "10" },
-        new ComicIssue { IssueID = "gotham-city-sirens-1", SeriesTitle = "Gotham City Sirens", IssueNumber = "1", Description = "Union" },
-        new ComicIssue { IssueID = "gotham-city-sirens-2", SeriesTitle = "Gotham City Sirens", IssueNumber = "2", Description = "Girls Talk" },
-        new ComicIssue { IssueID = "gotham-city-sirens-3", SeriesTitle = "Gotham City Sirens", IssueNumber = "3", Description = "Riddle Me This" },
-        new ComicIssue { IssueID = "gotham-city-sirens-4", SeriesTitle = "Gotham City Sirens", IssueNumber = "4", Description = "Date Nite" },
-        new ComicIssue { IssueID = "gotham-city-sirens-5", SeriesTitle = "Gotham City Sirens", IssueNumber = "5", Description = "Out of the Pest" },
-        new ComicIssue { IssueID = "gotham-city-sirens-6", SeriesTitle = "Gotham City Sirens", IssueNumber = "6", Description = "The Last Gag" },
-        new ComicIssue { IssueID = "gotham-city-sirens-7", SeriesTitle = "Gotham City Sirens", IssueNumber = "7", Description = "Holiday Story" },
-        new ComicIssue { IssueID = "gotham-city-sirens-8", SeriesTitle = "Gotham City Sirens", IssueNumber = "8", Description = "" },
-        new ComicIssue { IssueID = "gotham-city-sirens-9", SeriesTitle = "Gotham City Sirens", IssueNumber = "9", Description = "Pieces of the Puzzle" },
-        new ComicIssue { IssueID = "gotham-city-sirens-10", SeriesTitle = "Gotham City Sirens", IssueNumber = "10", Description = "Taking Sides" },
-        new ComicIssue { IssueID = "gotham-city-sirens-11", SeriesTitle = "Gotham City Sirens", IssueNumber = "11", Description = "On the Job" },
-        new ComicIssue { IssueID = "gotham-city-sirens-12", SeriesTitle = "Gotham City Sirens", IssueNumber = "12", Description = "Sister Zero, Part 1 of 2" },
-        new ComicIssue { IssueID = "gotham-city-sirens-13", SeriesTitle = "Gotham City Sirens", IssueNumber = "13", Description = "Sister Zero, Part 2 of 2" },
-        new ComicIssue { IssueID = "harley-quinn-volume-2-0", SeriesTitle = "Harley Quinn (Volume 2)", IssueNumber = "0", Description = "Picky Sicky" },
-        new ComicIssue { IssueID = "harley-quinn-volume-2-1", SeriesTitle = "Harley Quinn (Volume 2)", IssueNumber = "1", Description = "Hot in the City" },
-        new ComicIssue { IssueID = "harley-quinn-volume-2-2", SeriesTitle = "Harley Quinn (Volume 2)", IssueNumber = "2", Description = "Helter Shelter" },
-        new ComicIssue { IssueID = "harley-quinn-volume-2-3", SeriesTitle = "Harley Quinn (Volume 2)", IssueNumber = "3", Description = "Love Stinks!" },
-        new ComicIssue { IssueID = "harley-quinn-volume-2-4", SeriesTitle = "Harley Quinn (Volume 2)", IssueNumber = "4", Description = "Very Old Spice" },
-        new ComicIssue { IssueID = "harley-quinn-volume-2-5", SeriesTitle = "Harley Quinn (Volume 2)", IssueNumber = "5", Description = "The Hunt for Red Octogenarians" },
-        new ComicIssue { IssueID = "harley-quinn-volume-2-6", SeriesTitle = "Harley Quinn (Volume 2)", IssueNumber = "6", Description = "Better Nuthead than Яed" },
-        new ComicIssue { IssueID = "harley-quinn-volume-2-7", SeriesTitle = "Harley Quinn (Volume 2)", IssueNumber = "7", Description = "Nocturnal Omission" },
-        new ComicIssue { IssueID = "harley-quinn-volume-2-8", SeriesTitle = "Harley Quinn (Volume 2)", IssueNumber = "8", Description = "Pies in the Skies" },
-        new ComicIssue { IssueID = "harley-quinn-volume-2-9", SeriesTitle = "Harley Quinn (Volume 2)", IssueNumber = "9", Description = "Some Nerd Rage with Your Birdcage?" },
-        new ComicIssue { IssueID = "harley-quinn-volume-2-10", SeriesTitle = "Harley Quinn (Volume 2)", IssueNumber = "10", Description = "There Are No Rules!" },
-        new ComicIssue { IssueID = "harley-quinn-futures-end-1", SeriesTitle = "Harley Quinn: Futures End", IssueNumber = "1", Description = "Crappily Ever After" },
-        new ComicIssue { IssueID = "harley-quinn-volume-2-11", SeriesTitle = "Harley Quinn (Volume 2)", IssueNumber = "11", Description = "Power Outage" },
-        new ComicIssue { IssueID = "harley-quinn-volume-2-12", SeriesTitle = "Harley Quinn (Volume 2)", IssueNumber = "12", Description = "Not Kansas" },
-        new ComicIssue { IssueID = "harley-quinn-volume-2-13", SeriesTitle = "Harley Quinn (Volume 2)", IssueNumber = "13", Description = "Clock Blockers" },
-        new ComicIssue { IssueID = "harley-quinn-invades-comic-con-international-san-diego-1", SeriesTitle = "Harley Quinn Invades Comic-Con International: San Diego", IssueNumber = "1", Description = "Harley Quinn Invades Comic-Con International: San Diego #1" },
-        new ComicIssue { IssueID = "secret-origins-volume-3-4", SeriesTitle = "Secret Origins (Volume 3)", IssueNumber = "4", Description = "Harley Quinn" },   
-        new ComicIssue { IssueID = "joker", SeriesTitle = "Joker", IssueNumber = "1", PublishMonth = 12, PublishYear = 2008, Description = "Joker (graphic novel)" },
-        new ComicIssue { IssueID = "nightwing-vol-4-78", SeriesTitle = "Nightwing (vol. 4)", IssueNumber = "78" },
-        new ComicIssue { IssueID = "nightwing-vol-4-79", SeriesTitle = "Nightwing (vol. 4)", IssueNumber = "79" },
-        new ComicIssue { IssueID = "nightwing-vol-4-80", SeriesTitle = "Nightwing (vol. 4)", IssueNumber = "80" },
-        new ComicIssue { IssueID = "nightwing-vol-4-81", SeriesTitle = "Nightwing (vol. 4)", IssueNumber = "81" },
-        new ComicIssue { IssueID = "nightwing-vol-4-82", SeriesTitle = "Nightwing (vol. 4)", IssueNumber = "82" },
-        new ComicIssue { IssueID = "nightwing-vol-4-83", SeriesTitle = "Nightwing (vol. 4)", IssueNumber = "83" },
-        new ComicIssue { IssueID = "nightwing-vol-4-87", SeriesTitle = "Nightwing (vol. 4)", IssueNumber = "87" },
-        new ComicIssue { IssueID = "nightwing-vol-4-88", SeriesTitle = "Nightwing (vol. 4)", IssueNumber = "88" },
-        new ComicIssue { IssueID = "nightwing-vol-4-89", SeriesTitle = "Nightwing (vol. 4)", IssueNumber = "89" },
-        new ComicIssue { IssueID = "nightwing-vol-4-90", SeriesTitle = "Nightwing (vol. 4)", IssueNumber = "90" },
-        new ComicIssue { IssueID = "nightwing-vol-4-91", SeriesTitle = "Nightwing (vol. 4)", IssueNumber = "91" },
-        new ComicIssue { IssueID = "superman-son-of-kal-el-9", SeriesTitle = "Superman: Son of Kal-El", IssueNumber = "9" },
-        new ComicIssue { IssueID = "the-flash-rebirth-1", SeriesTitle = "The Flash: Rebirth", IssueNumber = "1" },
-        new ComicIssue { IssueID = "the-flash-rebirth-2", SeriesTitle = "The Flash: Rebirth", IssueNumber = "2" },
-        new ComicIssue { IssueID = "the-flash-rebirth-3", SeriesTitle = "The Flash: Rebirth", IssueNumber = "3" },
-        new ComicIssue { IssueID = "the-flash-rebirth-4", SeriesTitle = "The Flash: Rebirth", IssueNumber = "4" },
-        new ComicIssue { IssueID = "the-flash-rebirth-5", SeriesTitle = "The Flash: Rebirth", IssueNumber = "5" },
-        new ComicIssue { IssueID = "the-flash-rebirth-6", SeriesTitle = "The Flash: Rebirth", IssueNumber = "6" },
-        new ComicIssue { IssueID = "the-flash-vol-3-1", SeriesTitle = "The Flash (vol. 3)", IssueNumber = "1" },
-        new ComicIssue { IssueID = "the-flash-vol-3-2", SeriesTitle = "The Flash (vol. 3)", IssueNumber = "2" },
-        new ComicIssue { IssueID = "the-flash-vol-3-3", SeriesTitle = "The Flash (vol. 3)", IssueNumber = "3" },
-        new ComicIssue { IssueID = "the-flash-vol-3-4", SeriesTitle = "The Flash (vol. 3)", IssueNumber = "4" },
-        new ComicIssue { IssueID = "the-flash-vol-3-5", SeriesTitle = "The Flash (vol. 3)", IssueNumber = "5" },
-        new ComicIssue { IssueID = "the-flash-vol-3-6", SeriesTitle = "The Flash (vol. 3)", IssueNumber = "6" },
-        new ComicIssue { IssueID = "the-flash-vol-3-7", SeriesTitle = "The Flash (vol. 3)", IssueNumber = "7" },
-        new ComicIssue { IssueID = "crisis-on-infinite-earths-1", SeriesTitle = "Crisis on Infinite Earths", IssueNumber = "1" },
-        new ComicIssue { IssueID = "crisis-on-infinite-earths-2", SeriesTitle = "Crisis on Infinite Earths", IssueNumber = "2" },
-        new ComicIssue { IssueID = "crisis-on-infinite-earths-3", SeriesTitle = "Crisis on Infinite Earths", IssueNumber = "3" },
-        new ComicIssue { IssueID = "crisis-on-infinite-earths-4", SeriesTitle = "Crisis on Infinite Earths", IssueNumber = "4" },
-        new ComicIssue { IssueID = "crisis-on-infinite-earths-5", SeriesTitle = "Crisis on Infinite Earths", IssueNumber = "5" },
-        new ComicIssue { IssueID = "crisis-on-infinite-earths-6", SeriesTitle = "Crisis on Infinite Earths", IssueNumber = "6" },
-        new ComicIssue { IssueID = "crisis-on-infinite-earths-7", SeriesTitle = "Crisis on Infinite Earths", IssueNumber = "7" },
-        new ComicIssue { IssueID = "crisis-on-infinite-earths-8", SeriesTitle = "Crisis on Infinite Earths", IssueNumber = "8" },
-        new ComicIssue { IssueID = "crisis-on-infinite-earths-9", SeriesTitle = "Crisis on Infinite Earths", IssueNumber = "9" },
-        new ComicIssue { IssueID = "crisis-on-infinite-earths-10", SeriesTitle = "Crisis on Infinite Earths", IssueNumber = "10" },
-        new ComicIssue { IssueID = "crisis-on-infinite-earths-11", SeriesTitle = "Crisis on Infinite Earths", IssueNumber = "11" },
-        new ComicIssue { IssueID = "crisis-on-infinite-earths-12", SeriesTitle = "Crisis on Infinite Earths", IssueNumber = "12" },
-        new ComicIssue { IssueID = "justice-league-vol-2-1", SeriesTitle = "Justice League (vol. 2)", IssueNumber = "1" },
-        new ComicIssue { IssueID = "justice-league-vol-2-2", SeriesTitle = "Justice League (vol. 2)", IssueNumber = "2" },
-        new ComicIssue { IssueID = "justice-league-vol-2-3", SeriesTitle = "Justice League (vol. 2)", IssueNumber = "3" },
-        new ComicIssue { IssueID = "justice-league-vol-2-4", SeriesTitle = "Justice League (vol. 2)", IssueNumber = "4" },
-        new ComicIssue { IssueID = "justice-league-vol-2-5", SeriesTitle = "Justice League (vol. 2)", IssueNumber = "5" },
-        new ComicIssue { IssueID = "justice-league-vol-2-6", SeriesTitle = "Justice League (vol. 2)", IssueNumber = "6" },
-        new ComicIssue { IssueID = "dc-the-new-frontier-1", SeriesTitle = "DC: The New Frontier", IssueNumber = "1", PublishYear = 2004, Description = "The New Frontier, Part 1" },
-        new ComicIssue { IssueID = "dc-the-new-frontier-2", SeriesTitle = "DC: The New Frontier", IssueNumber = "2", PublishYear = 2004, Description = "The New Frontier, Part 2" },
-        new ComicIssue { IssueID = "dc-the-new-frontier-3", SeriesTitle = "DC: The New Frontier", IssueNumber = "3", PublishYear = 2004, Description = "The New Frontier, Part 3" },
-        new ComicIssue { IssueID = "dc-the-new-frontier-4", SeriesTitle = "DC: The New Frontier", IssueNumber = "4", PublishYear = 2004, Description = "The New Frontier, Part 4" },
-        new ComicIssue { IssueID = "dc-the-new-frontier-5", SeriesTitle = "DC: The New Frontier", IssueNumber = "5", PublishYear = 2004, Description = "The New Frontier, Part 5" },
-        new ComicIssue { IssueID = "dc-the-new-frontier-6", SeriesTitle = "DC: The New Frontier", IssueNumber = "6", PublishYear = 2004, Description = "The New Frontier, Part 6" },
-        new ComicIssue { IssueID = "justice-league-the-new-frontier-special", SeriesTitle = "Justice League: The New Frontier Special", IssueNumber = "1", PublishYear = 2004, Description = "Justice League: The New Frontier Special" },
-        new ComicIssue { IssueID = "american-vampire-1", SeriesTitle = "American Vampire", IssueNumber = "1", PublishMonth = 1, PublishYear = 2009, Description = "Big Break, Bad Blood" },
-        new ComicIssue { IssueID = "american-vampire-2", SeriesTitle = "American Vampire", IssueNumber = "2", PublishMonth = 2, PublishYear = 2009, Description = "Morning Star, Deep Water" },
-        new ComicIssue { IssueID = "american-vampire-3", SeriesTitle = "American Vampire", IssueNumber = "3", PublishMonth = 3, PublishYear = 2009, Description = "Rough Cut, Blood Vengeance" },
-        new ComicIssue { IssueID = "american-vampire-4", SeriesTitle = "American Vampire", IssueNumber = "4", PublishMonth = 4, PublishYear = 2009, Description = "Double Exposure, One Drop of Blood" },
-        new ComicIssue { IssueID = "american-vampire-5", SeriesTitle = "American Vampire", IssueNumber = "5", PublishMonth = 5, PublishYear = 2009, Description = "Curtain Call, If They Right Hand Offend Thee, Cut It Off" },
-        new ComicIssue { IssueID = "american-vampire-6", SeriesTitle = "American Vampire", IssueNumber = "6", PublishMonth = 6, PublishYear = 2009, Description = "Devil in the Sand, Part One" },
-        new ComicIssue { IssueID = "american-vampire-7", SeriesTitle = "American Vampire", IssueNumber = "7", PublishMonth = 7, PublishYear = 2009, Description = "Devil in the Sand, Part Two" },
-        new ComicIssue { IssueID = "american-vampire-8", SeriesTitle = "American Vampire", IssueNumber = "8", PublishMonth = 8, PublishYear = 2009, Description = "Devil in the Sand, Part Three" },
-        new ComicIssue { IssueID = "american-vampire-9", SeriesTitle = "American Vampire", IssueNumber = "9", PublishMonth = 9, PublishYear = 2009, Description = "Devil in the Sand, Conclusion" },
-        new ComicIssue { IssueID = "american-vampire-10", SeriesTitle = "American Vampire", IssueNumber = "10", PublishMonth = 10, PublishYear = 2009, Description = "The Way Out, Part One of Two" },
-        new ComicIssue { IssueID = "american-vampire-11", SeriesTitle = "American Vampire", IssueNumber = "11", PublishMonth = 11, PublishYear = 2009, Description = "The Way Out, Part Two of Two" },
-        new ComicIssue { IssueID = "dc-eased-1", SeriesTitle = "DCeased", IssueNumber = "1", Description = "Going Viral" },
-        new ComicIssue { IssueID = "dc-eased-2", SeriesTitle = "DCeased", IssueNumber = "2", Description = "The Monster Inside of Us All" },
-        new ComicIssue { IssueID = "dc-eased-3", SeriesTitle = "DCeased", IssueNumber = "3", Description = "Red Sea" },
-        new ComicIssue { IssueID = "dc-eased-4", SeriesTitle = "DCeased", IssueNumber = "4", Description = "Nuclear Option" },
-        new ComicIssue { IssueID = "dc-eased-a-good-day-to-die-1", SeriesTitle = "DCeased: A Good Day to Die", IssueNumber = "1", Description = "A Good Day to to Die" },
-        new ComicIssue { IssueID = "dc-eased-5", SeriesTitle = "DCeased", IssueNumber = "5", Description = "Hope Lost" },
-        new ComicIssue { IssueID = "dc-eased-6", SeriesTitle = "DCeased", IssueNumber = "6", Description = "End of the World" },
-        new ComicIssue { IssueID = "fables-1", SeriesTitle = "Fables", IssueNumber = "1" },
-        new ComicIssue { IssueID = "fables-2", SeriesTitle = "Fables", IssueNumber = "2" },
-        new ComicIssue { IssueID = "fables-3", SeriesTitle = "Fables", IssueNumber = "3" },
-        new ComicIssue { IssueID = "fables-4", SeriesTitle = "Fables", IssueNumber = "4" },
-        new ComicIssue { IssueID = "fables-5", SeriesTitle = "Fables", IssueNumber = "5" },
-        new ComicIssue { IssueID = "fables-6", SeriesTitle = "Fables", IssueNumber = "6" },
-        new ComicIssue { IssueID = "fables-7", SeriesTitle = "Fables", IssueNumber = "7" },
-        new ComicIssue { IssueID = "fables-8", SeriesTitle = "Fables", IssueNumber = "8" },
-        new ComicIssue { IssueID = "fables-9", SeriesTitle = "Fables", IssueNumber = "9" },
-        new ComicIssue { IssueID = "fables-10", SeriesTitle = "Fables", IssueNumber = "10" },
-        new ComicIssue { IssueID = "far-sector-1", SeriesTitle = "Far Sector", IssueNumber = "1" },
-        new ComicIssue { IssueID = "far-sector-2", SeriesTitle = "Far Sector", IssueNumber = "2" },
-        new ComicIssue { IssueID = "far-sector-3", SeriesTitle = "Far Sector", IssueNumber = "3" },
-        new ComicIssue { IssueID = "far-sector-4", SeriesTitle = "Far Sector", IssueNumber = "4" },
-        new ComicIssue { IssueID = "far-sector-5", SeriesTitle = "Far Sector", IssueNumber = "5" },
-        new ComicIssue { IssueID = "far-sector-6", SeriesTitle = "Far Sector", IssueNumber = "6" },
-        new ComicIssue { IssueID = "far-sector-7", SeriesTitle = "Far Sector", IssueNumber = "7" },
-        new ComicIssue { IssueID = "far-sector-8", SeriesTitle = "Far Sector", IssueNumber = "8" },
-        new ComicIssue { IssueID = "far-sector-9", SeriesTitle = "Far Sector", IssueNumber = "9" },
-        new ComicIssue { IssueID = "far-sector-10", SeriesTitle = "Far Sector", IssueNumber = "10" },
-        new ComicIssue { IssueID = "far-sector-11", SeriesTitle = "Far Sector", IssueNumber = "11" },
-        new ComicIssue { IssueID = "far-sector-12", SeriesTitle = "Far Sector", IssueNumber = "12" },
-        new ComicIssue { IssueID = "green-arrow-year-one-1", SeriesTitle = "Green Arrow: Year One", IssueNumber = "1" },
-        new ComicIssue { IssueID = "green-arrow-year-one-2", SeriesTitle = "Green Arrow: Year One", IssueNumber = "2" },
-        new ComicIssue { IssueID = "green-arrow-year-one-3", SeriesTitle = "Green Arrow: Year One", IssueNumber = "3" },
-        new ComicIssue { IssueID = "green-arrow-year-one-4", SeriesTitle = "Green Arrow: Year One", IssueNumber = "4" },
-        new ComicIssue { IssueID = "green-arrow-year-one-5", SeriesTitle = "Green Arrow: Year One", IssueNumber = "5" },
-        new ComicIssue { IssueID = "green-arrow-year-one-6", SeriesTitle = "Green Arrow: Year One", IssueNumber = "6" },
-        new ComicIssue { IssueID = "injustice-gods-among-us-1", SeriesTitle = "Injustice: Gods Among Us", IssueNumber = "1" },
-        new ComicIssue { IssueID = "injustice-gods-among-us-2", SeriesTitle = "Injustice: Gods Among Us", IssueNumber = "2" },
-        new ComicIssue { IssueID = "injustice-gods-among-us-3", SeriesTitle = "Injustice: Gods Among Us", IssueNumber = "3" },
-        new ComicIssue { IssueID = "injustice-gods-among-us-4", SeriesTitle = "Injustice: Gods Among Us", IssueNumber = "4" },
-        new ComicIssue { IssueID = "injustice-gods-among-us-5", SeriesTitle = "Injustice: Gods Among Us", IssueNumber = "5" },
-        new ComicIssue { IssueID = "injustice-gods-among-us-6", SeriesTitle = "Injustice: Gods Among Us", IssueNumber = "6" },
-        new ComicIssue { IssueID = "injustice-gods-among-us-7", SeriesTitle = "Injustice: Gods Among Us", IssueNumber = "7" },
-        new ComicIssue { IssueID = "injustice-gods-among-us-8", SeriesTitle = "Injustice: Gods Among Us", IssueNumber = "8" },
-        new ComicIssue { IssueID = "injustice-gods-among-us-9", SeriesTitle = "Injustice: Gods Among Us", IssueNumber = "9" },
-        new ComicIssue { IssueID = "injustice-gods-among-us-10", SeriesTitle = "Injustice: Gods Among Us", IssueNumber = "10" },
-        new ComicIssue { IssueID = "injustice-gods-among-us-11", SeriesTitle = "Injustice: Gods Among Us", IssueNumber = "11" },
-        new ComicIssue { IssueID = "injustice-gods-among-us-12", SeriesTitle = "Injustice: Gods Among Us", IssueNumber = "12" },
-        new ComicIssue { IssueID = "injustice-gods-among-us-annual-1", SeriesTitle = "Injustice: Gods Among Us Annual", IssueNumber = "1" },
-        new ComicIssue { IssueID = "kingdom-come-1", SeriesTitle = "Kingdom Come", IssueNumber = "1", Description = "Strange Visitor" },
-        new ComicIssue { IssueID = "kingdom-come-2", SeriesTitle = "Kingdom Come", IssueNumber = "2", Description = "Truth and Justice" },
-        new ComicIssue { IssueID = "kingdom-come-3", SeriesTitle = "Kingdom Come", IssueNumber = "3", Description = "Up in the Sky" },
-        new ComicIssue { IssueID = "kingdom-come-4", SeriesTitle = "Kingdom Come", IssueNumber = "4", Description = "Never-Ending Battle" },
-        new ComicIssue { IssueID = "mister-miracle-vol-4-1", SeriesTitle = "Mister Miracle (vol. 4)", IssueNumber = "1" },
-        new ComicIssue { IssueID = "mister-miracle-vol-4-2", SeriesTitle = "Mister Miracle (vol. 4)", IssueNumber = "2" },
-        new ComicIssue { IssueID = "mister-miracle-vol-4-3", SeriesTitle = "Mister Miracle (vol. 4)", IssueNumber = "3" },
-        new ComicIssue { IssueID = "mister-miracle-vol-4-4", SeriesTitle = "Mister Miracle (vol. 4)", IssueNumber = "4" },
-        new ComicIssue { IssueID = "mister-miracle-vol-4-5", SeriesTitle = "Mister Miracle (vol. 4)", IssueNumber = "5" },
-        new ComicIssue { IssueID = "mister-miracle-vol-4-6", SeriesTitle = "Mister Miracle (vol. 4)", IssueNumber = "6" },
-        new ComicIssue { IssueID = "mister-miracle-vol-4-7", SeriesTitle = "Mister Miracle (vol. 4)", IssueNumber = "7" },
-        new ComicIssue { IssueID = "mister-miracle-vol-4-8", SeriesTitle = "Mister Miracle (vol. 4)", IssueNumber = "8" },
-        new ComicIssue { IssueID = "mister-miracle-vol-4-9", SeriesTitle = "Mister Miracle (vol. 4)", IssueNumber = "9" },
-        new ComicIssue { IssueID = "mister-miracle-vol-4-10", SeriesTitle = "Mister Miracle (vol. 4)", IssueNumber = "10" },
-        new ComicIssue { IssueID = "mister-miracle-vol-4-11", SeriesTitle = "Mister Miracle (vol. 4)", IssueNumber = "11" },
-        new ComicIssue { IssueID = "mister-miracle-vol-4-12", SeriesTitle = "Mister Miracle (vol. 4)", IssueNumber = "12" },
-        new ComicIssue { IssueID = "milestone-returns-infinite-edition-0", SeriesTitle = "Milestone Returns: Infinite Edition", IssueNumber = "0", Description = "The Big Bang, Fandome Preview" },
-        new ComicIssue { IssueID = "static-season-one-1", SeriesTitle = "Static: Season One", IssueNumber = "1", Description = "Episode One: Trial by Fire" },
-        new ComicIssue { IssueID = "static-season-one-2", SeriesTitle = "Static: Season One", IssueNumber = "2", Description = "Episode Two: Family Meeting" },
-        new ComicIssue { IssueID = "static-season-one-3", SeriesTitle = "Static: Season One", IssueNumber = "3", Description = "Episode Three: Run It Back" },
-        new ComicIssue { IssueID = "static-season-one-4", SeriesTitle = "Static: Season One", IssueNumber = "4", Description = "Episode Four: Naming Names" },
-        new ComicIssue { IssueID = "static-season-one-5", SeriesTitle = "Static: Season One", IssueNumber = "5", Description = "Episode Five: Prison Break" },
-        new ComicIssue { IssueID = "static-season-one-6", SeriesTitle = "Static: Season One", IssueNumber = "6", Description = "Episode Six: Shock to the System" },
-        new ComicIssue { IssueID = "supergirl-woman-of-tomorrow-1", SeriesTitle = "Supergirl: Woman of Tomorrow", IssueNumber = "1", Description = "Supergirl: Woman of Tomorrow #1" },
-        new ComicIssue { IssueID = "supergirl-woman-of-tomorrow-2", SeriesTitle = "Supergirl: Woman of Tomorrow", IssueNumber = "2", Description = "Supergirl: Woman of Tomorrow #2" },
-        new ComicIssue { IssueID = "supergirl-woman-of-tomorrow-3", SeriesTitle = "Supergirl: Woman of Tomorrow", IssueNumber = "3", Description = "Supergirl: Woman of Tomorrow #3" },
-        new ComicIssue { IssueID = "supergirl-woman-of-tomorrow-4", SeriesTitle = "Supergirl: Woman of Tomorrow", IssueNumber = "4", Description = "Supergirl: Woman of Tomorrow #4" },
-        new ComicIssue { IssueID = "supergirl-woman-of-tomorrow-5", SeriesTitle = "Supergirl: Woman of Tomorrow", IssueNumber = "5", Description = "Supergirl: Woman of Tomorrow #5" },
-        new ComicIssue { IssueID = "supergirl-woman-of-tomorrow-6", SeriesTitle = "Supergirl: Woman of Tomorrow", IssueNumber = "6", Description = "Supergirl: Woman of Tomorrow #6" },
-        new ComicIssue { IssueID = "supergirl-woman-of-tomorrow-7", SeriesTitle = "Supergirl: Woman of Tomorrow", IssueNumber = "7", Description = "Supergirl: Woman of Tomorrow #7" },
-        new ComicIssue { IssueID = "supergirl-woman-of-tomorrow-8", SeriesTitle = "Supergirl: Woman of Tomorrow", IssueNumber = "8", Description = "Supergirl: Woman of Tomorrow #8" },
-        new ComicIssue { IssueID = "the-saga-of-the-swamp-thing-20", SeriesTitle = "The Saga of the Swamp Thing", IssueNumber = "20" },
-        new ComicIssue { IssueID = "the-saga-of-the-swamp-thing-21", SeriesTitle = "The Saga of the Swamp Thing", IssueNumber = "21" },
-        new ComicIssue { IssueID = "the-saga-of-the-swamp-thing-22", SeriesTitle = "The Saga of the Swamp Thing", IssueNumber = "22" },
-        new ComicIssue { IssueID = "the-saga-of-the-swamp-thing-23", SeriesTitle = "The Saga of the Swamp Thing", IssueNumber = "23" },
-        new ComicIssue { IssueID = "the-saga-of-the-swamp-thing-24", SeriesTitle = "The Saga of the Swamp Thing", IssueNumber = "24" },
-        new ComicIssue { IssueID = "the-saga-of-the-swamp-thing-25", SeriesTitle = "The Saga of the Swamp Thing", IssueNumber = "25" },
-        new ComicIssue { IssueID = "the-saga-of-the-swamp-thing-26", SeriesTitle = "The Saga of the Swamp Thing", IssueNumber = "26" },
-        new ComicIssue { IssueID = "the-saga-of-the-swamp-thing-27", SeriesTitle = "The Saga of the Swamp Thing", IssueNumber = "27" },
-        new ComicIssue { IssueID = "the-authority-1", SeriesTitle = "The Authority", IssueNumber = "1", Description = "The Circle: Part I" },
-        new ComicIssue { IssueID = "the-authority-2", SeriesTitle = "The Authority", IssueNumber = "2", Description = "The Circle: Part II" },
-        new ComicIssue { IssueID = "the-authority-3", SeriesTitle = "The Authority", IssueNumber = "3", Description = "The Circle: Part III" },
-        new ComicIssue { IssueID = "the-authority-4", SeriesTitle = "The Authority", IssueNumber = "4", Description = "The Circle: Part IV" },
-        new ComicIssue { IssueID = "the-authority-5", SeriesTitle = "The Authority", IssueNumber = "5", Description = "Shiftships: Part I" },
-        new ComicIssue { IssueID = "the-authority-6", SeriesTitle = "The Authority", IssueNumber = "6", Description = "Shiftships: Part II" },
-        new ComicIssue { IssueID = "the-authority-7", SeriesTitle = "The Authority", IssueNumber = "7", Description = "Shiftships: Part III" },
-        new ComicIssue { IssueID = "the-authority-8", SeriesTitle = "The Authority", IssueNumber = "8", Description = "Shiftships: Part IV" },
-        new ComicIssue { IssueID = "the-authority-9", SeriesTitle = "The Authority", IssueNumber = "9", Description = "Outer Dark: Part I" },
-        new ComicIssue { IssueID = "the-authority-10", SeriesTitle = "The Authority", IssueNumber = "10", Description = "Outer Dark: Part II" },
-        new ComicIssue { IssueID = "the-authority-11", SeriesTitle = "The Authority", IssueNumber = "11", Description = "Outer Dark: Part III" },
-        new ComicIssue { IssueID = "the-authority-12", SeriesTitle = "The Authority", IssueNumber = "12", Description = "Outer Dark: Part IV" },
-        new ComicIssue { IssueID = "planetary-the-authority-ruling-the-world", SeriesTitle = "Planetary/The Authority: Ruling the World", IssueNumber = "1", Description = "Planetary/The Authority: Ruling the World" },
-        new ComicIssue { IssueID = "wildstorm-a-celebration-of-25-years-collected-the-authority-requiem", SeriesTitle = "Wildstorm: A Celebration of 25 Years (Collected)", IssueNumber = "1", Description = "The Authority: Requiem" },
-        new ComicIssue { IssueID = "v-for-vendetta-1", SeriesTitle = "V For Vendetta", IssueNumber = "1", PublishMonth = 9, PublishYear = 1988, Description = "V For Vendetta #1" },
-        new ComicIssue { IssueID = "v-for-vendetta-2", SeriesTitle = "V For Vendetta", IssueNumber = "2", PublishMonth = 10, PublishYear = 1988, Description = "V For Vendetta #2" },
-        new ComicIssue { IssueID = "v-for-vendetta-3", SeriesTitle = "V For Vendetta", IssueNumber = "3", PublishMonth = 11, PublishYear = 1988, Description = "V For Vendetta #3" },
-        new ComicIssue { IssueID = "v-for-vendetta-4", SeriesTitle = "V For Vendetta", IssueNumber = "4", PublishMonth = 12, PublishYear = 1988, Description = "V For Vendetta #4" },
-        new ComicIssue { IssueID = "v-for-vendetta-5", SeriesTitle = "V For Vendetta", IssueNumber = "5", PublishMonth = 1, PublishYear = 1989, Description = "V For Vendetta #5" },
-        new ComicIssue { IssueID = "v-for-vendetta-6", SeriesTitle = "V For Vendetta", IssueNumber = "6", PublishMonth = 2, PublishYear = 1989, Description = "V For Vendetta #6" },
-        new ComicIssue { IssueID = "v-for-vendetta-7", SeriesTitle = "V For Vendetta", IssueNumber = "7", PublishMonth = 3, PublishYear = 1989, Description = "V For Vendetta #7" },
-        new ComicIssue { IssueID = "v-for-vendetta-8", SeriesTitle = "V For Vendetta", IssueNumber = "8", PublishMonth = 4, PublishYear = 1989, Description = "V For Vendetta #8" },
-        new ComicIssue { IssueID = "v-for-vendetta-9", SeriesTitle = "V For Vendetta", IssueNumber = "9", PublishMonth = 5, PublishYear = 1989, Description = "V For Vendetta #9" },
-        new ComicIssue { IssueID = "v-for-vendetta-10", SeriesTitle = "V For Vendetta", IssueNumber = "10", PublishMonth = 6, PublishYear = 1989, Description = "V For Vendetta #10" },
-        new ComicIssue { IssueID = "v-for-vendetta-11", SeriesTitle = "V For Vendetta", IssueNumber = "11", PublishMonth = 7, PublishYear = 1989, Description = "V For Vendetta #11" },
-        new ComicIssue { IssueID = "v-for-vendetta-12", SeriesTitle = "V For Vendetta", IssueNumber = "12", PublishMonth = 8, PublishYear = 1989, Description = "V For Vendetta #12" },
-        new ComicIssue { IssueID = "watchmen-1", SeriesTitle = "Watchmen", IssueNumber = "1", PublishMonth = 9, PublishYear = 1986, Description = "At Midnight, All the Agents..." },
-        new ComicIssue { IssueID = "watchmen-2", SeriesTitle = "Watchmen", IssueNumber = "2", PublishMonth = 10, PublishYear = 1986, Description = "Absent Friends" },
-        new ComicIssue { IssueID = "watchmen-3", SeriesTitle = "Watchmen", IssueNumber = "3", PublishMonth = 11, PublishYear = 1986, Description = "The Judge of All the Earth" },
-        new ComicIssue { IssueID = "watchmen-4", SeriesTitle = "Watchmen", IssueNumber = "4", PublishMonth = 12, PublishYear = 1986, Description = "Watchmaker" },
-        new ComicIssue { IssueID = "watchmen-5", SeriesTitle = "Watchmen", IssueNumber = "5", PublishMonth = 1, PublishYear = 1987, Description = "Fearful Symmetry" },
-        new ComicIssue { IssueID = "watchmen-6", SeriesTitle = "Watchmen", IssueNumber = "6", PublishMonth = 2, PublishYear = 1987, Description = "The Abyss Gazes Also" },
-        new ComicIssue { IssueID = "watchmen-7", SeriesTitle = "Watchmen", IssueNumber = "7", PublishMonth = 3, PublishYear = 1987, Description = "A Brother to Dragons" },
-        new ComicIssue { IssueID = "watchmen-8", SeriesTitle = "Watchmen", IssueNumber = "8", PublishMonth = 4, PublishYear = 1987, Description = "Old Ghosts" },
-        new ComicIssue { IssueID = "watchmen-9", SeriesTitle = "Watchmen", IssueNumber = "9", PublishMonth = 5, PublishYear = 1987, Description = "The Darkness of Mere Being" },
-        new ComicIssue { IssueID = "watchmen-10", SeriesTitle = "Watchmen", IssueNumber = "10", PublishMonth = 6, PublishYear = 1987, Description = "Two Riders Were Approaching" },
-        new ComicIssue { IssueID = "watchmen-11", SeriesTitle = "Watchmen", IssueNumber = "11", PublishMonth = 7, PublishYear = 1987, Description = "Look On My Works, Ye Mighty..." },
-        new ComicIssue { IssueID = "watchmen-12", SeriesTitle = "Watchmen", IssueNumber = "12", PublishMonth = 8, PublishYear = 1987, Description = "A Stronger Loving World" },
-        new ComicIssue { IssueID = "we3-1", SeriesTitle = "We3", IssueNumber = "1", PublishYear = 2004, Description = "We3 #1" },
-        new ComicIssue { IssueID = "we3-2", SeriesTitle = "We3", IssueNumber = "2", PublishYear = 2004, Description = "We3 #2" },
-        new ComicIssue { IssueID = "we3-3", SeriesTitle = "We3", IssueNumber = "3", PublishYear = 2004, Description = "We3 #3" },
-        new ComicIssue { IssueID = "wonder-woman-vol-4-1", SeriesTitle = "Wonder Woman (vol. 4)", IssueNumber = "1", PublishMonth = 9, PublishYear = 2011, Description = "Wonder Woman (vol. 4) #1" },
-        new ComicIssue { IssueID = "wonder-woman-vol-4-2", SeriesTitle = "Wonder Woman (vol. 4)", IssueNumber = "2", PublishMonth = 10, PublishYear = 2011, Description = "Wonder Woman (vol. 4) #2" },
-        new ComicIssue { IssueID = "wonder-woman-vol-4-3", SeriesTitle = "Wonder Woman (vol. 4)", IssueNumber = "3", PublishMonth = 11, PublishYear = 2011, Description = "Wonder Woman (vol. 4) #3" },
-        new ComicIssue { IssueID = "wonder-woman-vol-4-4", SeriesTitle = "Wonder Woman (vol. 4)", IssueNumber = "4", PublishMonth = 12, PublishYear = 2011, Description = "Wonder Woman (vol. 4) #4" },
-        new ComicIssue { IssueID = "wonder-woman-vol-4-5", SeriesTitle = "Wonder Woman (vol. 4)", IssueNumber = "5", PublishMonth = 1, PublishYear = 2012, Description = "Wonder Woman (vol. 4) #5" },
-        new ComicIssue { IssueID = "wonder-woman-vol-4-6", SeriesTitle = "Wonder Woman (vol. 4)", IssueNumber = "6", PublishMonth = 2, PublishYear = 2012, Description = "Wonder Woman (vol. 4) #6" },
-        new ComicIssue { IssueID = "wonder-woman-vol-4-7", SeriesTitle = "Wonder Woman (vol. 4)", IssueNumber = "7", PublishMonth = 3, PublishYear = 2012, Description = "Wonder Woman (vol. 4) #7" },
-        new ComicIssue { IssueID = "wonder-woman-vol-4-8", SeriesTitle = "Wonder Woman (vol. 4)", IssueNumber = "8", PublishMonth = 4, PublishYear = 2012, Description = "Wonder Woman (vol. 4) #8" },
-        new ComicIssue { IssueID = "wonder-woman-vol-4-9", SeriesTitle = "Wonder Woman (vol. 4)", IssueNumber = "9", PublishMonth = 5, PublishYear = 2012, Description = "Wonder Woman (vol. 4) #9" },
-        new ComicIssue { IssueID = "wonder-woman-vol-4-10", SeriesTitle = "Wonder Woman (vol. 4)", IssueNumber = "10", PublishMonth = 6, PublishYear = 2012, Description = "Wonder Woman (vol. 4) #10" },
-        new ComicIssue { IssueID = "wonder-woman-vol-4-11", SeriesTitle = "Wonder Woman (vol. 4)", IssueNumber = "11", PublishMonth = 7, PublishYear = 2012, Description = "Wonder Woman (vol. 4) #11" },
-        new ComicIssue { IssueID = "wonder-woman-vol-4-12", SeriesTitle = "Wonder Woman (vol. 4)", IssueNumber = "12", PublishMonth = 8, PublishYear = 2012, Description = "Wonder Woman (vol. 4) #12" },
-        new ComicIssue { IssueID = "wonder-woman-earth-one-1", SeriesTitle = "Wonder Woman: Earth One", IssueNumber = "1", PublishMonth = 6, PublishYear = 2016, Description = "Wonder Woman: Earth One #1" },
-        new ComicIssue { IssueID = "wonder-woman-earth-one-2", SeriesTitle = "Wonder Woman: Earth One", IssueNumber = "2", PublishMonth = 10, PublishYear = 2017, Description = "Wonder Woman: Earth One #2" },
-        new ComicIssue { IssueID = "wonder-woman-earth-one-3", SeriesTitle = "Wonder Woman: Earth One", IssueNumber = "3", PublishMonth = 5, PublishYear = 2018, Description = "Wonder Woman: Earth One #3" },
-        new ComicIssue { IssueID = "y-the-last-man-1", SeriesTitle = "Y: The Last Man", IssueNumber = "1", PublishMonth = 1, PublishYear = 2002, Description = "Y: The Last Man #1" },
-        new ComicIssue { IssueID = "y-the-last-man-2", SeriesTitle = "Y: The Last Man", IssueNumber = "2", PublishMonth = 2, PublishYear = 2002, Description = "Y: The Last Man #2" },
-        new ComicIssue { IssueID = "y-the-last-man-3", SeriesTitle = "Y: The Last Man", IssueNumber = "3", PublishMonth = 3, PublishYear = 2002, Description = "Y: The Last Man #3" },
-        new ComicIssue { IssueID = "y-the-last-man-4", SeriesTitle = "Y: The Last Man", IssueNumber = "4", PublishMonth = 4, PublishYear = 2002, Description = "Y: The Last Man #4" },
-        new ComicIssue { IssueID = "y-the-last-man-5", SeriesTitle = "Y: The Last Man", IssueNumber = "5", PublishMonth = 5, PublishYear = 2002, Description = "Y: The Last Man #5" },
-        new ComicIssue { IssueID = "y-the-last-man-6", SeriesTitle = "Y: The Last Man", IssueNumber = "6", PublishMonth = 6, PublishYear = 2002, Description = "Y: The Last Man #6" },
-        new ComicIssue { IssueID = "y-the-last-man-7", SeriesTitle = "Y: The Last Man", IssueNumber = "7", PublishMonth = 7, PublishYear = 2002, Description = "Y: The Last Man #7" },
-        new ComicIssue { IssueID = "y-the-last-man-8", SeriesTitle = "Y: The Last Man", IssueNumber = "8", PublishMonth = 8, PublishYear = 2002, Description = "Y: The Last Man #8" },
-        new ComicIssue { IssueID = "y-the-last-man-9", SeriesTitle = "Y: The Last Man", IssueNumber = "9", PublishMonth = 9, PublishYear = 2002, Description = "Y: The Last Man #9" },
-        new ComicIssue { IssueID = "y-the-last-man-10", SeriesTitle = "Y: The Last Man", IssueNumber = "10", PublishMonth = 10, PublishYear = 2002, Description = "Y: The Last Man #10" },
+      var issues = new List<ComicIssue>();
 
-        // Marvel Comics
-        new ComicIssue { IssueID = "black-panther-volume-5-1", SeriesTitle = "Black Panther (Volume 5)", IssueNumber = "1", PublishYear = 2016, Description = "Black Panther (Volume 5) #1" },
-        new ComicIssue { IssueID = "black-panther-volume-5-2", SeriesTitle = "Black Panther (Volume 5)", IssueNumber = "2", PublishYear = 2016, Description = "Black Panther (Volume 5) #2" },
-        new ComicIssue { IssueID = "black-panther-volume-5-3", SeriesTitle = "Black Panther (Volume 5)", IssueNumber = "3", PublishYear = 2016, Description = "Black Panther (Volume 5) #3" },
-        new ComicIssue { IssueID = "black-panther-volume-5-4", SeriesTitle = "Black Panther (Volume 5)", IssueNumber = "4", PublishYear = 2016, Description = "Black Panther (Volume 5) #4" },
-        new ComicIssue { IssueID = "black-panther-volume-5-5", SeriesTitle = "Black Panther (Volume 5)", IssueNumber = "5", PublishYear = 2016, Description = "Black Panther (Volume 5) #5" },
-        new ComicIssue { IssueID = "black-panther-volume-5-6", SeriesTitle = "Black Panther (Volume 5)", IssueNumber = "6", PublishYear = 2016, Description = "Black Panther (Volume 5) #6" },
-        new ComicIssue { IssueID = "black-panther-volume-5-7", SeriesTitle = "Black Panther (Volume 5)", IssueNumber = "7", PublishYear = 2016, Description = "Black Panther (Volume 5) #7" },
-        new ComicIssue { IssueID = "black-panther-volume-5-8", SeriesTitle = "Black Panther (Volume 5)", IssueNumber = "8", PublishYear = 2016, Description = "Black Panther (Volume 5) #8" },
-        new ComicIssue { IssueID = "black-panther-volume-5-9", SeriesTitle = "Black Panther (Volume 5)", IssueNumber = "9", PublishYear = 2016, Description = "Black Panther (Volume 5) #9" },
-        new ComicIssue { IssueID = "black-panther-volume-5-10", SeriesTitle = "Black Panther (Volume 5)", IssueNumber = "10", PublishYear = 2016, Description = "Black Panther (Volume 5) #10" },
-        new ComicIssue { IssueID = "black-panther-volume-5-11", SeriesTitle = "Black Panther (Volume 5)", IssueNumber = "11", PublishYear = 2016, Description = "Black Panther (Volume 5) #11" },
-        new ComicIssue { IssueID = "black-panther-volume-5-12", SeriesTitle = "Black Panther (Volume 5)", IssueNumber = "12", PublishYear = 2016, Description = "Black Panther (Volume 5) #12" },
-        new ComicIssue { IssueID = "daredevil-volume-1-226", SeriesTitle = "Daredevil (Volume 1)", IssueNumber = "226", PublishYear = 1986, Description = "Daredevil (Volume 1) #226" },
-        new ComicIssue { IssueID = "daredevil-volume-1-227", SeriesTitle = "Daredevil (Volume 1)", IssueNumber = "227", PublishYear = 1986, Description = "Daredevil (Volume 1) #227" },
-        new ComicIssue { IssueID = "daredevil-volume-1-228", SeriesTitle = "Daredevil (Volume 1)", IssueNumber = "228", PublishYear = 1986, Description = "Daredevil (Volume 1) #228" },
-        new ComicIssue { IssueID = "daredevil-volume-1-229", SeriesTitle = "Daredevil (Volume 1)", IssueNumber = "229", PublishYear = 1986, Description = "Daredevil (Volume 1) #229" },
-        new ComicIssue { IssueID = "daredevil-volume-1-230", SeriesTitle = "Daredevil (Volume 1)", IssueNumber = "230", PublishYear = 1986, Description = "Daredevil (Volume 1) #230" },
-        new ComicIssue { IssueID = "daredevil-volume-1-231", SeriesTitle = "Daredevil (Volume 1)", IssueNumber = "231", PublishYear = 1986, Description = "Daredevil (Volume 1) #231" },
-        new ComicIssue { IssueID = "daredevil-volume-1-232", SeriesTitle = "Daredevil (Volume 1)", IssueNumber = "232", PublishYear = 1986, Description = "Daredevil (Volume 1) #232" },
-        new ComicIssue { IssueID = "daredevil-volume-1-233", SeriesTitle = "Daredevil (Volume 1)", IssueNumber = "233", PublishYear = 1986, Description = "Daredevil (Volume 1) #233" },
-        new ComicIssue { IssueID = "captain-america-volume-5-1", SeriesTitle = "Captain America (Volume 5)", IssueNumber = "1", PublishYear = 2005, Description = "Captain America (Volume 5) #1" },
-        new ComicIssue { IssueID = "captain-america-volume-5-2", SeriesTitle = "Captain America (Volume 5)", IssueNumber = "2", PublishYear = 2005, Description = "Captain America (Volume 5) #2" },
-        new ComicIssue { IssueID = "captain-america-volume-5-3", SeriesTitle = "Captain America (Volume 5)", IssueNumber = "3", PublishYear = 2005, Description = "Captain America (Volume 5) #3" },
-        new ComicIssue { IssueID = "captain-america-volume-5-4", SeriesTitle = "Captain America (Volume 5)", IssueNumber = "4", PublishYear = 2005, Description = "Captain America (Volume 5) #4" },
-        new ComicIssue { IssueID = "captain-america-volume-5-5", SeriesTitle = "Captain America (Volume 5)", IssueNumber = "5", PublishYear = 2005, Description = "Captain America (Volume 5) #5" },
-        new ComicIssue { IssueID = "captain-america-volume-5-6", SeriesTitle = "Captain America (Volume 5)", IssueNumber = "6", PublishYear = 2005, Description = "Captain America (Volume 5) #6" },
-        new ComicIssue { IssueID = "captain-america-volume-5-7", SeriesTitle = "Captain America (Volume 5)", IssueNumber = "7", PublishYear = 2005, Description = "Captain America (Volume 5) #7" },
-        new ComicIssue { IssueID = "captain-america-volume-5-8", SeriesTitle = "Captain America (Volume 5)", IssueNumber = "8", PublishYear = 2005, Description = "Captain America (Volume 5) #8" },
-        new ComicIssue { IssueID = "captain-america-volume-5-9", SeriesTitle = "Captain America (Volume 5)", IssueNumber = "9", PublishYear = 2005, Description = "Captain America (Volume 5) #9" },
-        new ComicIssue { IssueID = "captain-america-volume-5-10", SeriesTitle = "Captain America (Volume 5)", IssueNumber = "10", PublishYear = 2005, Description = "Captain America (Volume 5) #10" },
-        new ComicIssue { IssueID = "captain-america-volume-5-11", SeriesTitle = "Captain America (Volume 5)", IssueNumber = "11", PublishYear = 2005, Description = "Captain America (Volume 5) #11" },
-        new ComicIssue { IssueID = "captain-america-volume-5-12", SeriesTitle = "Captain America (Volume 5)", IssueNumber = "12", PublishYear = 2005, Description = "Captain America (Volume 5) #12" },
-        new ComicIssue { IssueID = "captain-america-volume-5-13", SeriesTitle = "Captain America (Volume 5)", IssueNumber = "13", PublishYear = 2005, Description = "Captain America (Volume 5) #13" },
-        new ComicIssue { IssueID = "captain-america-volume-5-14", SeriesTitle = "Captain America (Volume 5)", IssueNumber = "14", PublishYear = 2005, Description = "Captain America (Volume 5) #14" },
-        new ComicIssue { IssueID = "civil-war-1", SeriesTitle = "Civil War", IssueNumber = "1", PublishYear = 2006, Description = "Civil War #1" },
-        new ComicIssue { IssueID = "civil-war-2", SeriesTitle = "Civil War", IssueNumber = "2", PublishYear = 2006, Description = "Civil War #2" },
-        new ComicIssue { IssueID = "civil-war-3", SeriesTitle = "Civil War", IssueNumber = "3", PublishYear = 2006, Description = "Civil War #3" },
-        new ComicIssue { IssueID = "civil-war-4", SeriesTitle = "Civil War", IssueNumber = "4", PublishYear = 2006, Description = "Civil War #4" },
-        new ComicIssue { IssueID = "civil-war-5", SeriesTitle = "Civil War", IssueNumber = "5", PublishYear = 2006, Description = "Civil War #5" },
-        new ComicIssue { IssueID = "civil-war-6", SeriesTitle = "Civil War", IssueNumber = "6", PublishYear = 2006, Description = "Civil War #6" },
-        new ComicIssue { IssueID = "civil-war-7", SeriesTitle = "Civil War", IssueNumber = "7", PublishYear = 2006, Description = "Civil War #7" },
-        new ComicIssue { IssueID = "wolverine-volume-3-66", SeriesTitle = "Wolverine (Volume 3)", IssueNumber = "66", PublishYear = 2008, Description = "Wolverine (Volume 3) #66" },
-        new ComicIssue { IssueID = "wolverine-volume-3-67", SeriesTitle = "Wolverine (Volume 3)", IssueNumber = "67", PublishYear = 2008, Description = "Wolverine (Volume 3) #67" },
-        new ComicIssue { IssueID = "wolverine-volume-3-68", SeriesTitle = "Wolverine (Volume 3)", IssueNumber = "68", PublishYear = 2008, Description = "Wolverine (Volume 3) #68" },
-        new ComicIssue { IssueID = "wolverine-volume-3-69", SeriesTitle = "Wolverine (Volume 3)", IssueNumber = "69", PublishYear = 2008, Description = "Wolverine (Volume 3) #69" },
-        new ComicIssue { IssueID = "wolverine-volume-3-70", SeriesTitle = "Wolverine (Volume 3)", IssueNumber = "70", PublishYear = 2008, Description = "Wolverine (Volume 3) #70" },
-        new ComicIssue { IssueID = "wolverine-volume-3-71", SeriesTitle = "Wolverine (Volume 3)", IssueNumber = "71", PublishYear = 2008, Description = "Wolverine (Volume 3) #71" },
-        new ComicIssue { IssueID = "wolverine-volume-3-72", SeriesTitle = "Wolverine (Volume 3)", IssueNumber = "72", PublishYear = 2008, Description = "Wolverine (Volume 3) #72" },
-        new ComicIssue { IssueID = "wolverine-old-man-logan-giant-size-1", SeriesTitle = "Wolverine: Old Man Logan Giant-Size", IssueNumber = "1", PublishYear = 2009, Description = "Wolverine: Old Man Logan Giant-Size #1" },
-        new ComicIssue { IssueID = "hawkeye-volume-4-1", SeriesTitle = "Hawkeye (Volume 4)", IssueNumber = "1", PublishYear = 2012, Description = "Hawkeye (Volume 4) #1" },
-        new ComicIssue { IssueID = "hawkeye-volume-4-2", SeriesTitle = "Hawkeye (Volume 4)", IssueNumber = "2", PublishYear = 2012, Description = "Hawkeye (Volume 4) #2" },
-        new ComicIssue { IssueID = "hawkeye-volume-4-3", SeriesTitle = "Hawkeye (Volume 4)", IssueNumber = "3", PublishYear = 2012, Description = "Hawkeye (Volume 4) #3" },
-        new ComicIssue { IssueID = "hawkeye-volume-4-4", SeriesTitle = "Hawkeye (Volume 4)", IssueNumber = "4", PublishYear = 2012, Description = "Hawkeye (Volume 4) #4" },
-        new ComicIssue { IssueID = "hawkeye-volume-4-5", SeriesTitle = "Hawkeye (Volume 4)", IssueNumber = "5", PublishYear = 2012, Description = "Hawkeye (Volume 4) #5" },
-        new ComicIssue { IssueID = "hawkeye-volume-4-6", SeriesTitle = "Hawkeye (Volume 4)", IssueNumber = "6", PublishYear = 2012, Description = "Hawkeye (Volume 4) #6" },
-        new ComicIssue { IssueID = "hawkeye-volume-4-7", SeriesTitle = "Hawkeye (Volume 4)", IssueNumber = "7", PublishYear = 2012, Description = "Hawkeye (Volume 4) #7" },
-        new ComicIssue { IssueID = "hawkeye-volume-4-8", SeriesTitle = "Hawkeye (Volume 4)", IssueNumber = "8", PublishYear = 2012, Description = "Hawkeye (Volume 4) #8" },
-        new ComicIssue { IssueID = "hawkeye-volume-4-9", SeriesTitle = "Hawkeye (Volume 4)", IssueNumber = "9", PublishYear = 2012, Description = "Hawkeye (Volume 4) #9" },
-        new ComicIssue { IssueID = "hawkeye-volume-4-10", SeriesTitle = "Hawkeye (Volume 4)", IssueNumber = "10", PublishYear = 2012, Description = "Hawkeye (Volume 4) #10" },
-        new ComicIssue { IssueID = "hawkeye-volume-4-11", SeriesTitle = "Hawkeye (Volume 4)", IssueNumber = "11", PublishYear = 2012, Description = "Hawkeye (Volume 4) #11" },
-        new ComicIssue { IssueID = "hawkeye-young-avengers-presents-6", SeriesTitle = "Young Avengers Presents", IssueNumber = "6", PublishYear = 2012, Description = "Young Avengers Presents #6" },
-        new ComicIssue { IssueID = "punisher-volume-5-1", SeriesTitle = "Punisher (Volume 5)", IssueNumber = "1", PublishYear = 2000, Description = "Punisher (Volume 5) #1" },
-        new ComicIssue { IssueID = "punisher-volume-5-2", SeriesTitle = "Punisher (Volume 5)", IssueNumber = "2", PublishYear = 2000, Description = "Punisher (Volume 5) #2" },
-        new ComicIssue { IssueID = "punisher-volume-5-3", SeriesTitle = "Punisher (Volume 5)", IssueNumber = "3", PublishYear = 2000, Description = "Punisher (Volume 5) #3" },
-        new ComicIssue { IssueID = "punisher-volume-5-4", SeriesTitle = "Punisher (Volume 5)", IssueNumber = "4", PublishYear = 2000, Description = "Punisher (Volume 5) #4" },
-        new ComicIssue { IssueID = "punisher-volume-5-5", SeriesTitle = "Punisher (Volume 5)", IssueNumber = "5", PublishYear = 2000, Description = "Punisher (Volume 5) #5" },
-        new ComicIssue { IssueID = "punisher-volume-5-6", SeriesTitle = "Punisher (Volume 5)", IssueNumber = "6", PublishYear = 2000, Description = "Punisher (Volume 5) #6" },
-        new ComicIssue { IssueID = "punisher-volume-5-7", SeriesTitle = "Punisher (Volume 5)", IssueNumber = "7", PublishYear = 2000, Description = "Punisher (Volume 5) #7" },
-        new ComicIssue { IssueID = "punisher-volume-5-8", SeriesTitle = "Punisher (Volume 5)", IssueNumber = "8", PublishYear = 2000, Description = "Punisher (Volume 5) #8" },
-        new ComicIssue { IssueID = "punisher-volume-5-9", SeriesTitle = "Punisher (Volume 5)", IssueNumber = "9", PublishYear = 2000, Description = "Punisher (Volume 5) #9" },
-        new ComicIssue { IssueID = "punisher-volume-5-10", SeriesTitle = "Punisher (Volume 5)", IssueNumber = "10", PublishYear = 2000, Description = "Punisher (Volume 5) #10" },
-        new ComicIssue { IssueID = "punisher-volume-5-11", SeriesTitle = "Punisher (Volume 5)", IssueNumber = "11", PublishYear = 2000, Description = "Punisher (Volume 5) #11" },
-        new ComicIssue { IssueID = "punisher-volume-5-12", SeriesTitle = "Punisher (Volume 5)", IssueNumber = "12", PublishYear = 2000, Description = "Punisher (Volume 5) #12" },
-        new ComicIssue { IssueID = "incredible-hulk-volume-2-92", SeriesTitle = "Incredible Hulk (Volume 2)", IssueNumber = "92", PublishYear = 2006, Description = "Incredible Hulk (Volume 2) #92" },
-        new ComicIssue { IssueID = "incredible-hulk-volume-2-93", SeriesTitle = "Incredible Hulk (Volume 2)", IssueNumber = "93", PublishYear = 2006, Description = "Incredible Hulk (Volume 2) #93" },
-        new ComicIssue { IssueID = "incredible-hulk-volume-2-94", SeriesTitle = "Incredible Hulk (Volume 2)", IssueNumber = "94", PublishYear = 2006, Description = "Incredible Hulk (Volume 2) #94" },
-        new ComicIssue { IssueID = "incredible-hulk-volume-2-95", SeriesTitle = "Incredible Hulk (Volume 2)", IssueNumber = "95", PublishYear = 2006, Description = "Incredible Hulk (Volume 2) #95" },
-        new ComicIssue { IssueID = "incredible-hulk-volume-2-96", SeriesTitle = "Incredible Hulk (Volume 2)", IssueNumber = "96", PublishYear = 2006, Description = "Incredible Hulk (Volume 2) #96" },
-        new ComicIssue { IssueID = "incredible-hulk-volume-2-97", SeriesTitle = "Incredible Hulk (Volume 2)", IssueNumber = "97", PublishYear = 2006, Description = "Incredible Hulk (Volume 2) #97" },
-        new ComicIssue { IssueID = "incredible-hulk-volume-2-98", SeriesTitle = "Incredible Hulk (Volume 2)", IssueNumber = "98", PublishYear = 2006, Description = "Incredible Hulk (Volume 2) #98" },
-        new ComicIssue { IssueID = "incredible-hulk-volume-2-99", SeriesTitle = "Incredible Hulk (Volume 2)", IssueNumber = "99", PublishYear = 2006, Description = "Incredible Hulk (Volume 2) #99" },
-        new ComicIssue { IssueID = "incredible-hulk-volume-2-100", SeriesTitle = "Incredible Hulk (Volume 2)", IssueNumber = "100", PublishYear = 2006, Description = "Incredible Hulk (Volume 2) #100" },
-        new ComicIssue { IssueID = "incredible-hulk-volume-2-101", SeriesTitle = "Incredible Hulk (Volume 2)", IssueNumber = "101", PublishYear = 2006, Description = "Incredible Hulk (Volume 2) #101" },
-        new ComicIssue { IssueID = "incredible-hulk-volume-2-102", SeriesTitle = "Incredible Hulk (Volume 2)", IssueNumber = "102", PublishYear = 2006, Description = "Incredible Hulk (Volume 2) #102" },
-        new ComicIssue { IssueID = "incredible-hulk-volume-2-103", SeriesTitle = "Incredible Hulk (Volume 2)", IssueNumber = "103", PublishYear = 2006, Description = "Incredible Hulk (Volume 2) #103" },
-        new ComicIssue { IssueID = "incredible-hulk-volume-2-104", SeriesTitle = "Incredible Hulk (Volume 2)", IssueNumber = "104", PublishYear = 2006, Description = "Incredible Hulk (Volume 2) #104" },
-        new ComicIssue { IssueID = "incredible-hulk-volume-2-105", SeriesTitle = "Incredible Hulk (Volume 2)", IssueNumber = "105", PublishYear = 2006, Description = "Incredible Hulk (Volume 2) #105" },
-        new ComicIssue { IssueID = "giant-size-hulk-1", SeriesTitle = "Giant-Size Hulk", IssueNumber = "1", PublishYear = 2006, Description = "Giant-Size Hulk #1" },
-        new ComicIssue { IssueID = "the-visions-1", SeriesTitle = "The Visions", IssueNumber = "1", PublishYear = 2015, Description = "The Visions #1" },
-        new ComicIssue { IssueID = "the-visions-2", SeriesTitle = "The Visions", IssueNumber = "2", PublishYear = 2015, Description = "The Visions #2" },
-        new ComicIssue { IssueID = "the-visions-3", SeriesTitle = "The Visions", IssueNumber = "3", PublishYear = 2015, Description = "The Visions #3" },
-        new ComicIssue { IssueID = "the-visions-4", SeriesTitle = "The Visions", IssueNumber = "4", PublishYear = 2015, Description = "The Visions #4" },
-        new ComicIssue { IssueID = "the-visions-5", SeriesTitle = "The Visions", IssueNumber = "5", PublishYear = 2015, Description = "The Visions #5" },
-        new ComicIssue { IssueID = "the-visions-6", SeriesTitle = "The Visions", IssueNumber = "6", PublishYear = 2015, Description = "The Visions #6" },
-        new ComicIssue { IssueID = "the-visions-7", SeriesTitle = "The Visions", IssueNumber = "7", PublishYear = 2015, Description = "The Visions #7" },
-        new ComicIssue { IssueID = "the-visions-8", SeriesTitle = "The Visions", IssueNumber = "8", PublishYear = 2015, Description = "The Visions #8" },
-        new ComicIssue { IssueID = "the-visions-9", SeriesTitle = "The Visions", IssueNumber = "9", PublishYear = 2015, Description = "The Visions #9" },
-        new ComicIssue { IssueID = "the-visions-10", SeriesTitle = "The Visions", IssueNumber = "10", PublishYear = 2015, Description = "The Visions #10" },
-        new ComicIssue { IssueID = "the-visions-11", SeriesTitle = "The Visions", IssueNumber = "11", PublishYear = 2015, Description = "The Visions #11" },
-        new ComicIssue { IssueID = "the-visions-12", SeriesTitle = "The Visions", IssueNumber = "12", PublishYear = 2015, Description = "The Visions #12" },
-        new ComicIssue { IssueID = "spider-men-1", SeriesTitle = "Spider-Men", IssueNumber = "1", PublishYear = 2012, Description = "Spider-Men #1" },
-        new ComicIssue { IssueID = "spider-men-2", SeriesTitle = "Spider-Men", IssueNumber = "2", PublishYear = 2012, Description = "Spider-Men #2" },
-        new ComicIssue { IssueID = "spider-men-3", SeriesTitle = "Spider-Men", IssueNumber = "3", PublishYear = 2012, Description = "Spider-Men #3" },
-        new ComicIssue { IssueID = "spider-men-4", SeriesTitle = "Spider-Men", IssueNumber = "4", PublishYear = 2012, Description = "Spider-Men #4" },
-        new ComicIssue { IssueID = "spider-men-5", SeriesTitle = "Spider-Men", IssueNumber = "5", PublishYear = 2012, Description = "Spider-Men #5" },
-        new ComicIssue { IssueID = "spider-men-ii-1", SeriesTitle = "Spider-Men II", IssueNumber = "1", PublishYear = 2017, Description = "Spider-Men II #1" },
-        new ComicIssue { IssueID = "spider-men-ii-2", SeriesTitle = "Spider-Men II", IssueNumber = "2", PublishYear = 2017, Description = "Spider-Men II #2" },
-        new ComicIssue { IssueID = "spider-men-ii-3", SeriesTitle = "Spider-Men II", IssueNumber = "3", PublishYear = 2017, Description = "Spider-Men II #3" },
-        new ComicIssue { IssueID = "spider-men-ii-4", SeriesTitle = "Spider-Men II", IssueNumber = "4", PublishYear = 2017, Description = "Spider-Men II #4" },
-        new ComicIssue { IssueID = "spider-men-ii-5", SeriesTitle = "Spider-Men II", IssueNumber = "5", PublishYear = 2017, Description = "Spider-Men II #5" },
-        new ComicIssue { IssueID = "the-ultimates-1", SeriesTitle = "The Ultimates", IssueNumber = "1" },
-        new ComicIssue { IssueID = "the-ultimates-2", SeriesTitle = "The Ultimates", IssueNumber = "2" },
-        new ComicIssue { IssueID = "the-ultimates-3", SeriesTitle = "The Ultimates", IssueNumber = "3" },
-        new ComicIssue { IssueID = "the-ultimates-4", SeriesTitle = "The Ultimates", IssueNumber = "4" },
-        new ComicIssue { IssueID = "the-ultimates-5", SeriesTitle = "The Ultimates", IssueNumber = "5" },
-        new ComicIssue { IssueID = "the-ultimates-6", SeriesTitle = "The Ultimates", IssueNumber = "6" },
-        new ComicIssue { IssueID = "the-ultimates-7", SeriesTitle = "The Ultimates", IssueNumber = "7" },
-        new ComicIssue { IssueID = "the-ultimates-8", SeriesTitle = "The Ultimates", IssueNumber = "8" },
-        new ComicIssue { IssueID = "the-ultimates-9", SeriesTitle = "The Ultimates", IssueNumber = "9" },
-        new ComicIssue { IssueID = "the-ultimates-10", SeriesTitle = "The Ultimates", IssueNumber = "10" },
-        new ComicIssue { IssueID = "the-ultimates-11", SeriesTitle = "The Ultimates", IssueNumber = "11" },
-        new ComicIssue { IssueID = "the-ultimates-12", SeriesTitle = "The Ultimates", IssueNumber = "12" },
-        new ComicIssue { IssueID = "the-ultimates-13", SeriesTitle = "The Ultimates", IssueNumber = "13" },
-        new ComicIssue { IssueID = "avengers-2012-35", SeriesTitle = "Avengers (2012)", IssueNumber = "35", PublishYear = 2014, Description = "Avengers (2012) #35" },
-        new ComicIssue { IssueID = "avengers-2012-36", SeriesTitle = "Avengers (2012)", IssueNumber = "36", PublishYear = 2014, Description = "Avengers (2012) #36" },
-        new ComicIssue { IssueID = "avengers-2012-37", SeriesTitle = "Avengers (2012)", IssueNumber = "37", PublishYear = 2014, Description = "Avengers (2012) #37" },
-        new ComicIssue { IssueID = "avengers-2012-38", SeriesTitle = "Avengers (2012)", IssueNumber = "38", PublishYear = 2014, Description = "Avengers (2012) #38" },
-        new ComicIssue { IssueID = "avengers-2012-39", SeriesTitle = "Avengers (2012)", IssueNumber = "39", PublishYear = 2014, Description = "Avengers (2012) #39" },
-        new ComicIssue { IssueID = "avengers-2012-40", SeriesTitle = "Avengers (2012)", IssueNumber = "40", PublishYear = 2014, Description = "Avengers (2012) #40" },
-        new ComicIssue { IssueID = "avengers-2012-41", SeriesTitle = "Avengers (2012)", IssueNumber = "41", PublishYear = 2014, Description = "Avengers (2012) #41" },
-        new ComicIssue { IssueID = "avengers-2012-42", SeriesTitle = "Avengers (2012)", IssueNumber = "42", PublishYear = 2014, Description = "Avengers (2012) #42" },
-        new ComicIssue { IssueID = "avengers-2012-43", SeriesTitle = "Avengers (2012)", IssueNumber = "43", PublishYear = 2014, Description = "Avengers (2012) #43" },
-        new ComicIssue { IssueID = "avengers-2012-44", SeriesTitle = "Avengers (2012)", IssueNumber = "44", PublishYear = 2014, Description = "Avengers (2012) #44" },
-        new ComicIssue { IssueID = "new-avengers-2013-24", SeriesTitle = "New Avengers (2013)", IssueNumber = "24", PublishYear = 2014, Description = "New Avengers (2013) #24" },
-        new ComicIssue { IssueID = "new-avengers-2013-25", SeriesTitle = "New Avengers (2013)", IssueNumber = "25", PublishYear = 2014, Description = "New Avengers (2013) #25" },
-        new ComicIssue { IssueID = "new-avengers-2013-26", SeriesTitle = "New Avengers (2013)", IssueNumber = "26", PublishYear = 2014, Description = "New Avengers (2013) #26" },
-        new ComicIssue { IssueID = "new-avengers-2013-27", SeriesTitle = "New Avengers (2013)", IssueNumber = "27", PublishYear = 2014, Description = "New Avengers (2013) #27" },
-        new ComicIssue { IssueID = "new-avengers-2013-28", SeriesTitle = "New Avengers (2013)", IssueNumber = "28", PublishYear = 2014, Description = "New Avengers (2013) #28" },
-        new ComicIssue { IssueID = "new-avengers-2013-29", SeriesTitle = "New Avengers (2013)", IssueNumber = "29", PublishYear = 2014, Description = "New Avengers (2013) #29" },
-        new ComicIssue { IssueID = "new-avengers-2013-30", SeriesTitle = "New Avengers (2013)", IssueNumber = "30", PublishYear = 2014, Description = "New Avengers (2013) #30" },
-        new ComicIssue { IssueID = "new-avengers-2013-31", SeriesTitle = "New Avengers (2013)", IssueNumber = "31", PublishYear = 2014, Description = "New Avengers (2013) #31" },
-        new ComicIssue { IssueID = "new-avengers-2013-32", SeriesTitle = "New Avengers (2013)", IssueNumber = "32", PublishYear = 2014, Description = "New Avengers (2013) #32" },
-        new ComicIssue { IssueID = "new-avengers-2013-33", SeriesTitle = "New Avengers (2013)", IssueNumber = "33", PublishYear = 2014, Description = "New Avengers (2013) #33" },
-        new ComicIssue { IssueID = "secret-wars-2015-1", SeriesTitle = "Secret Wars (2015)", IssueNumber = "1", PublishYear = 2015, Description = "Secret Wars (2015) #1" },
-        new ComicIssue { IssueID = "secret-wars-2015-2", SeriesTitle = "Secret Wars (2015)", IssueNumber = "2", PublishYear = 2015, Description = "Secret Wars (2015) #2" },
-        new ComicIssue { IssueID = "secret-wars-2015-3", SeriesTitle = "Secret Wars (2015)", IssueNumber = "3", PublishYear = 2015, Description = "Secret Wars (2015) #3" },
-        new ComicIssue { IssueID = "secret-wars-2015-4", SeriesTitle = "Secret Wars (2015)", IssueNumber = "4", PublishYear = 2015, Description = "Secret Wars (2015) #4" },
-        new ComicIssue { IssueID = "secret-wars-2015-5", SeriesTitle = "Secret Wars (2015)", IssueNumber = "5", PublishYear = 2015, Description = "Secret Wars (2015) #5" },
-        new ComicIssue { IssueID = "secret-wars-2015-6", SeriesTitle = "Secret Wars (2015)", IssueNumber = "6", PublishYear = 2015, Description = "Secret Wars (2015) #6" },
-        new ComicIssue { IssueID = "secret-wars-2015-7", SeriesTitle = "Secret Wars (2015)", IssueNumber = "7", PublishYear = 2015, Description = "Secret Wars (2015) #7" },
-        new ComicIssue { IssueID = "secret-wars-2015-8", SeriesTitle = "Secret Wars (2015)", IssueNumber = "8", PublishYear = 2015, Description = "Secret Wars (2015) #8" },
-        new ComicIssue { IssueID = "secret-wars-2015-9", SeriesTitle = "Secret Wars (2015)", IssueNumber = "9", PublishYear = 2015, Description = "Secret Wars (2015) #9" },
-        new ComicIssue { IssueID = "secret-wars-2015-free-comic-book-day-2015-1", SeriesTitle = "Secret Wars (2015) Free Comic Book Day 2015", IssueNumber = "1", PublishYear = 2015, Description = "Secret Wars (2015) Free Comic Book Day 2015 #1" },
-        new ComicIssue { IssueID = "all-new-x-men-2012-1", SeriesTitle = "All-New X-Men (2012)", IssueNumber = "1", PublishYear = 2012, Description = "All-New X-Men (2012) #1" },
-        new ComicIssue { IssueID = "all-new-x-men-2012-2", SeriesTitle = "All-New X-Men (2012)", IssueNumber = "2", PublishYear = 2012, Description = "All-New X-Men (2012) #2" },
-        new ComicIssue { IssueID = "all-new-x-men-2012-3", SeriesTitle = "All-New X-Men (2012)", IssueNumber = "3", PublishYear = 2012, Description = "All-New X-Men (2012) #3" },
-        new ComicIssue { IssueID = "all-new-x-men-2012-4", SeriesTitle = "All-New X-Men (2012)", IssueNumber = "4", PublishYear = 2012, Description = "All-New X-Men (2012) #4" },
-        new ComicIssue { IssueID = "all-new-x-men-2012-5", SeriesTitle = "All-New X-Men (2012)", IssueNumber = "5", PublishYear = 2012, Description = "All-New X-Men (2012) #5" },
-        new ComicIssue { IssueID = "all-new-x-men-2012-6", SeriesTitle = "All-New X-Men (2012)", IssueNumber = "6", PublishYear = 2012, Description = "All-New X-Men (2012) #6" },
-        new ComicIssue { IssueID = "all-new-x-men-2012-7", SeriesTitle = "All-New X-Men (2012)", IssueNumber = "7", PublishYear = 2012, Description = "All-New X-Men (2012) #7" },
-        new ComicIssue { IssueID = "all-new-x-men-2012-8", SeriesTitle = "All-New X-Men (2012)", IssueNumber = "8", PublishYear = 2012, Description = "All-New X-Men (2012) #8" },
-        new ComicIssue { IssueID = "all-new-x-men-2012-9", SeriesTitle = "All-New X-Men (2012)", IssueNumber = "9", PublishYear = 2012, Description = "All-New X-Men (2012) #9" },
-        new ComicIssue { IssueID = "all-new-x-men-2012-10", SeriesTitle = "All-New X-Men (2012)", IssueNumber = "10", PublishYear = 2012, Description = "All-New X-Men (2012) #10" },
-        new ComicIssue { IssueID = "captain-america-2004-22", SeriesTitle = "Captain America (2004)", IssueNumber = "22", PublishYear = 2007, Description = "Captain America (2004) #22" },
-        new ComicIssue { IssueID = "captain-america-2004-23", SeriesTitle = "Captain America (2004)", IssueNumber = "23", PublishYear = 2007, Description = "Captain America (2004) #23" },
-        new ComicIssue { IssueID = "captain-america-2004-24", SeriesTitle = "Captain America (2004)", IssueNumber = "24", PublishYear = 2007, Description = "Captain America (2004) #24" },
-        new ComicIssue { IssueID = "captain-america-2004-25", SeriesTitle = "Captain America (2004)", IssueNumber = "25", PublishYear = 2007, Description = "Captain America (2004) #25" },
-        new ComicIssue { IssueID = "captain-america-2004-26", SeriesTitle = "Captain America (2004)", IssueNumber = "26", PublishYear = 2007, Description = "Captain America (2004) #26" },
-        new ComicIssue { IssueID = "captain-america-2004-27", SeriesTitle = "Captain America (2004)", IssueNumber = "27", PublishYear = 2007, Description = "Captain America (2004) #27" },
-        new ComicIssue { IssueID = "captain-america-2004-28", SeriesTitle = "Captain America (2004)", IssueNumber = "28", PublishYear = 2007, Description = "Captain America (2004) #28" },
-        new ComicIssue { IssueID = "captain-america-2004-29", SeriesTitle = "Captain America (2004)", IssueNumber = "29", PublishYear = 2007, Description = "Captain America (2004) #29" },
-        new ComicIssue { IssueID = "captain-america-2004-30", SeriesTitle = "Captain America (2004)", IssueNumber = "30", PublishYear = 2007, Description = "Captain America (2004) #30" },
-        new ComicIssue { IssueID = "winter-soldier-winter-kills-1", SeriesTitle = "Winter Soldier: Winter Kills", IssueNumber = "1", PublishYear = 2006, Description = "Winter Soldier: Winter Kills #1" },
+      issues.AddRange(ComicBuilder.GenerateRun(
+        seriesIdPrefix: "batman-the-long-halloween",
+        seriesTitle: "Batman: The Long Halloween",
+        startIssue: 1,
+        endIssue: 13
+      ));
+      issues.Add(new ComicIssue { IssueID = "all-star-superman-1", SeriesTitle = "All-Star Superman", IssueNumber = "1", PublishMonth = 1, PublishYear = 2006, Description = "…Faster…" });
+      issues.Add(new ComicIssue { IssueID = "all-star-superman-2", SeriesTitle = "All-Star Superman", IssueNumber = "2", PublishMonth = 2, PublishYear = 2006, Description = "Superman's Forbidden Room" });
+      issues.Add(new ComicIssue { IssueID = "all-star-superman-3", SeriesTitle = "All-Star Superman", IssueNumber = "3", PublishMonth = 5, PublishYear = 2006, Description = "Sweet Dreams, Superwoman..." });
+      issues.Add(new ComicIssue { IssueID = "all-star-superman-4", SeriesTitle = "All-Star Superman", IssueNumber = "4", PublishMonth = 7, PublishYear = 2007, Description = "The Superman/Olsen War..." });
+      issues.Add(new ComicIssue { IssueID = "all-star-superman-5", SeriesTitle = "All-Star Superman", IssueNumber = "5", PublishMonth = 9, PublishYear = 2006, Description = "The Gospel According to Lex Luthor" });
+      issues.Add(new ComicIssue { IssueID = "all-star-superman-6", SeriesTitle = "All-Star Superman", IssueNumber = "6", PublishMonth = 3, PublishYear = 2007, Description = "Funeral in Smallville" });
+      issues.Add(new ComicIssue { IssueID = "all-star-superman-7", SeriesTitle = "All-Star Superman", IssueNumber = "7", PublishMonth = 6, PublishYear = 2007, Description = "Being Bizarro" });
+      issues.Add(new ComicIssue { IssueID = "all-star-superman-8", SeriesTitle = "All-Star Superman", IssueNumber = "8", PublishMonth = 8, PublishYear = 2007, Description = "Us Do Opposite" });
+      issues.Add(new ComicIssue { IssueID = "all-star-superman-9", SeriesTitle = "All-Star Superman", IssueNumber = "9", PublishMonth = 12, PublishYear = 2007, Description = "Curse of the Replacement Supermen" });
+      issues.Add(new ComicIssue { IssueID = "all-star-superman-10", SeriesTitle = "All-Star Superman", IssueNumber = "10", PublishMonth = 5, PublishYear = 2008, Description = "Neverending" });
+      issues.Add(new ComicIssue { IssueID = "all-star-superman-11", SeriesTitle = "All-Star Superman", IssueNumber = "11", PublishMonth = 7, PublishYear = 2008, Description = "Red Sun Day" });
+      issues.Add(new ComicIssue { IssueID = "all-star-superman-12", SeriesTitle = "All-Star Superman", IssueNumber = "12", PublishMonth = 10, PublishYear = 2008, Description = "Superman in Excelsis" });
+      issues.Add(new ComicIssue { IssueID = "superman-batman-1", SeriesTitle = "Superman/Batman", IssueNumber = "1", PublishMonth = 10, PublishYear = 2003, Description = "The World's Finest, Part 1" });
+      issues.Add(new ComicIssue { IssueID = "superman-batman-2", SeriesTitle = "Superman/Batman", IssueNumber = "2", PublishMonth = 11, PublishYear = 2003, Description = "The World's Finest, Part 2: Early Warning" });
+      issues.Add(new ComicIssue { IssueID = "superman-batman-3", SeriesTitle = "Superman/Batman", IssueNumber = "3", PublishMonth = 12, PublishYear = 2003, Description = "The World's Finest, Part 3: Running Wild" });
+      issues.Add(new ComicIssue { IssueID = "superman-batman-4", SeriesTitle = "Superman/Batman", IssueNumber = "4", PublishMonth = 1, PublishYear = 2004, Description = "The World's Finest, Part 4: Battle On" });
+      issues.Add(new ComicIssue { IssueID = "superman-batman-5", SeriesTitle = "Superman/Batman", IssueNumber = "5", PublishMonth = 2, PublishYear = 2004, Description = "The World's Finest, Part 5: State of Siege" });
+      issues.Add(new ComicIssue { IssueID = "superman-batman-6", SeriesTitle = "Superman/Batman", IssueNumber = "6", PublishMonth = 3, PublishYear = 2004, Description = "The World's Finest, Part 6: Final Countdown" });
+      issues.Add(new ComicIssue { IssueID = "superman-batman-7", SeriesTitle = "Superman/Batman", IssueNumber = "7", PublishMonth = 4, PublishYear = 2004, Description = "Protégé" });
+      issues.Add(new ComicIssue { IssueID = "superman-batman-8", SeriesTitle = "Superman/Batman", IssueNumber = "8", PublishMonth = 5, PublishYear = 2004, Description = "The Supergirl From Krypton, Part 1: Alone" });
+      issues.Add(new ComicIssue { IssueID = "superman-batman-9", SeriesTitle = "Superman/Batman", IssueNumber = "9", PublishMonth = 6, PublishYear = 2004, Description = "The Supergirl from Krypton, Part 2: Visitor" });
+      issues.Add(new ComicIssue { IssueID = "superman-batman-10", SeriesTitle = "Superman/Batman", IssueNumber = "10", PublishMonth = 7, PublishYear = 2004, Description = "The Supergirl from Krypton, Part 3: Warrior" });
+      issues.Add(new ComicIssue { IssueID = "superman-batman-11", SeriesTitle = "Superman/Batman", IssueNumber = "11", PublishMonth = 8, PublishYear = 2004, Description = "The Supergirl from Krypton, Part 4: Prisoner" });
+      issues.Add(new ComicIssue { IssueID = "superman-batman-12", SeriesTitle = "Superman/Batman", IssueNumber = "12", PublishMonth = 9, PublishYear = 2004, Description = "The Supergirl from Krypton, Part 5: Traitor" });
+      issues.Add(new ComicIssue { IssueID = "superman-batman-13", SeriesTitle = "Superman/Batman", IssueNumber = "13", PublishMonth = 10, PublishYear = 2004, Description = "The Supergirl from Krypton, Part 6: Hero" });
+      issues.Add(new ComicIssue { IssueID = "superman-batman-secret-files-and-origins-2003", SeriesTitle = "Superman/Batman Secret Files & Origins 2003", IssueNumber = "1", PublishMonth = 11, PublishYear = 2003, Description = "When Clark Met Bruce: A Tale from the Days of Smallville" });
+      issues.Add(new ComicIssue { IssueID = "superman-birthright-1", SeriesTitle = "Superman: Birthright", IssueNumber = "1", PublishMonth = 9, PublishYear = 2003, Description = "In the Beginning" });
+      issues.Add(new ComicIssue { IssueID = "superman-birthright-2", SeriesTitle = "Superman: Birthright", IssueNumber = "2", PublishMonth = 10, PublishYear = 2003, Description = "Heart of Darkness" });
+      issues.Add(new ComicIssue { IssueID = "superman-birthright-3", SeriesTitle = "Superman: Birthright", IssueNumber = "3", PublishMonth = 11, PublishYear = 2003, Description = "A Legacy Reborn" });
+      issues.Add(new ComicIssue { IssueID = "superman-birthright-4", SeriesTitle = "Superman: Birthright", IssueNumber = "4", PublishMonth = 12, PublishYear = 2004, Description = "Part Four" });
+      issues.Add(new ComicIssue { IssueID = "superman-birthright-5", SeriesTitle = "Superman: Birthright", IssueNumber = "5", PublishMonth = 1, PublishYear = 2004, Description = "Menace to Metropolis" });
+      issues.Add(new ComicIssue { IssueID = "superman-birthright-6", SeriesTitle = "Superman: Birthright", IssueNumber = "6", PublishMonth = 3, PublishYear = 2004, Description = "The Remains of Krypton" });
+      issues.Add(new ComicIssue { IssueID = "superman-birthright-7", SeriesTitle = "Superman: Birthright", IssueNumber = "7", PublishMonth = 4, PublishYear = 2004, Description = "Friend or Foe?" });
+      issues.Add(new ComicIssue { IssueID = "superman-birthright-8", SeriesTitle = "Superman: Birthright", IssueNumber = "8", PublishMonth = 5, PublishYear = 2004, Description = "Every Town Has a Secret... Lex Luthor i); Smallville" } );
+      issues.Add(new ComicIssue { IssueID = "superman-birthright-9", SeriesTitle = "Superman: Birthright", IssueNumber = "9", PublishMonth = 6, PublishYear = 2004, Description = "Krypton Lives" });
+      issues.Add(new ComicIssue { IssueID = "superman-birthright-10", SeriesTitle = "Superman: Birthright", IssueNumber = "10", PublishMonth = 7, PublishYear = 2004, Description = "Part Ten" });
+      issues.Add(new ComicIssue { IssueID = "superman-birthright-11", SeriesTitle = "Superman: Birthright", IssueNumber = "11", PublishMonth = 8, PublishYear = 2004, Description = "Kneel Before..." });
+      issues.Add(new ComicIssue { IssueID = "superman-birthright-12", SeriesTitle = "Superman: Birthright", IssueNumber = "12", PublishMonth = 9, PublishYear = 2004, Description = "The Hero Emerges" });
+      issues.Add(new ComicIssue { IssueID = "superman-red-son-1", SeriesTitle = "Superman: Red Son", IssueNumber = "1" });
+      issues.Add(new ComicIssue { IssueID = "superman-red-son-2", SeriesTitle = "Superman: Red Son", IssueNumber = "2" });
+      issues.Add(new ComicIssue { IssueID = "superman-red-son-3", SeriesTitle = "Superman: Red Son", IssueNumber = "3" });
+      issues.Add(new ComicIssue { IssueID = "arkham-asylum-a-serious-house-on-serious-earth-1", SeriesTitle = "Arkham Asylum: A Serious House on Serious Earth", IssueNumber = "1", PublishMonth = 10, PublishYear = 1989, Description = "Chapter Zero: The Joker" } );
+      issues.Add(new ComicIssue { IssueID = "batman-gotham-by-gaslight-1", SeriesTitle = "Batman: Gotham by Gaslight", IssueNumber = "1" });
+      issues.Add(new ComicIssue { IssueID = "batman-master-of-the-future-1", SeriesTitle = "Batman: Master of the Future", IssueNumber = "1" });
+      issues.Add(new ComicIssue { IssueID = "batman-the-dark-knight-returns-1", SeriesTitle = "Batman: The Dark Knight Returns", IssueNumber = "1", PublishYear = 1986 });
+      issues.Add(new ComicIssue { IssueID = "batman-the-dark-knight-returns-2", SeriesTitle = "Batman: The Dark Knight Returns", IssueNumber = "2", PublishYear = 1986 });
+      issues.Add(new ComicIssue { IssueID = "batman-the-dark-knight-returns-3", SeriesTitle = "Batman: The Dark Knight Returns", IssueNumber = "3", PublishYear = 1986 });
+      issues.Add(new ComicIssue { IssueID = "batman-the-dark-knight-returns-4", SeriesTitle = "Batman: The Dark Knight Returns", IssueNumber = "4", PublishYear = 1986 });
+      issues.Add(new ComicIssue { IssueID = "batman-white-knight-1", SeriesTitle = "Batman: White Knight", IssueNumber = "1" });
+      issues.Add(new ComicIssue { IssueID = "batman-white-knight-2", SeriesTitle = "Batman: White Knight", IssueNumber = "2" });
+      issues.Add(new ComicIssue { IssueID = "batman-white-knight-3", SeriesTitle = "Batman: White Knight", IssueNumber = "3" });
+      issues.Add(new ComicIssue { IssueID = "batman-white-knight-4", SeriesTitle = "Batman: White Knight", IssueNumber = "4" });
+      issues.Add(new ComicIssue { IssueID = "batman-white-knight-5", SeriesTitle = "Batman: White Knight", IssueNumber = "5" });
+      issues.Add(new ComicIssue { IssueID = "batman-white-knight-6", SeriesTitle = "Batman: White Knight", IssueNumber = "6" });
+      issues.Add(new ComicIssue { IssueID = "batman-white-knight-7", SeriesTitle = "Batman: White Knight", IssueNumber = "7" });
+      issues.Add(new ComicIssue { IssueID = "batman-white-knight-8", SeriesTitle = "Batman: White Knight", IssueNumber = "8" });
+      issues.Add(new ComicIssue { IssueID = "batman-608", SeriesTitle = "Batman", IssueNumber = "608", PublishMonth = 12, PublishYear = 2002, Description = "Chapter One: The Ransom" });
+      issues.Add(new ComicIssue { IssueID = "batman-609", SeriesTitle = "Batman", IssueNumber = "609", PublishMonth = 1, PublishYear = 2003, Description = "Chapter Two: The Friend" });
+      issues.Add(new ComicIssue { IssueID = "batman-610", SeriesTitle = "Batman", IssueNumber = "610", PublishMonth = 2, PublishYear = 2003, Description = "Chapter Three: The Beast" });
+      issues.Add(new ComicIssue { IssueID = "batman-611", SeriesTitle = "Batman", IssueNumber = "611", PublishMonth = 3, PublishYear = 2003, Description = "Chapter Four: The City" });
+      issues.Add(new ComicIssue { IssueID = "batman-612", SeriesTitle = "Batman", IssueNumber = "612", PublishMonth = 4, PublishYear = 2003, Description = "Chapter Five: The Battle" });
+      issues.Add(new ComicIssue { IssueID = "batman-613", SeriesTitle = "Batman", IssueNumber = "613", PublishMonth = 5, PublishYear = 2003, Description = "Chapter Six: The Opera" });
+      issues.Add(new ComicIssue { IssueID = "batman-614", SeriesTitle = "Batman", IssueNumber = "614", PublishMonth = 6, PublishYear = 2003, Description = "Chapter Seven: The Joke" });
+      issues.Add(new ComicIssue { IssueID = "batman-615", SeriesTitle = "Batman", IssueNumber = "615", PublishMonth = 7, PublishYear = 2003, Description = "Chapter Eight: The Dead" });
+      issues.Add(new ComicIssue { IssueID = "batman-616", SeriesTitle = "Batman", IssueNumber = "616", PublishMonth = 8, PublishYear = 2003, Description = "Chapter Nine: The Assassins" });
+      issues.Add(new ComicIssue { IssueID = "wizard-0", SeriesTitle = "Wizard", IssueNumber = "0", Description = "Interlude: The Cave" });
+      issues.Add(new ComicIssue { IssueID = "batman-617", SeriesTitle = "Batman", IssueNumber = "617", PublishMonth = 9, PublishYear = 2003, Description = "Chapter Ten: The Grave" });
+      issues.Add(new ComicIssue { IssueID = "batman-618", SeriesTitle = "Batman", IssueNumber = "618", PublishMonth = 10, PublishYear = 2003, Description = "Chapter Eleven: The Game" });
+      issues.Add(new ComicIssue { IssueID = "batman-619", SeriesTitle = "Batman", IssueNumber = "619", PublishMonth = 11, PublishYear = 2003, Description = "Chapter Twelve: The End" });
+      issues.Add(new ComicIssue { IssueID = "batman-635", SeriesTitle = "Batman", IssueNumber = "635" });
+      issues.Add(new ComicIssue { IssueID = "batman-636", SeriesTitle = "Batman", IssueNumber = "636" });
+      issues.Add(new ComicIssue { IssueID = "batman-637", SeriesTitle = "Batman", IssueNumber = "637" });
+      issues.Add(new ComicIssue { IssueID = "batman-638", SeriesTitle = "Batman", IssueNumber = "638" });
+      issues.Add(new ComicIssue { IssueID = "batman-639", SeriesTitle = "Batman", IssueNumber = "639" });
+      issues.Add(new ComicIssue { IssueID = "batman-640", SeriesTitle = "Batman", IssueNumber = "640" });
+      issues.Add(new ComicIssue { IssueID = "batman-641", SeriesTitle = "Batman", IssueNumber = "641" });
+      issues.Add(new ComicIssue { IssueID = "batman-645", SeriesTitle = "Batman", IssueNumber = "645" });
+      issues.Add(new ComicIssue { IssueID = "batman-646", SeriesTitle = "Batman", IssueNumber = "646" });
+      issues.Add(new ComicIssue { IssueID = "batman-647", SeriesTitle = "Batman", IssueNumber = "647" });
+      issues.Add(new ComicIssue { IssueID = "batman-648", SeriesTitle = "Batman", IssueNumber = "648" });
+      issues.Add(new ComicIssue { IssueID = "batman-649", SeriesTitle = "Batman", IssueNumber = "649" });
+      issues.Add(new ComicIssue { IssueID = "batman-650", SeriesTitle = "Batman", IssueNumber = "650" });
+      issues.Add(new ComicIssue { IssueID = "batman-655", SeriesTitle = "Batman", IssueNumber = "655" });
+      issues.Add(new ComicIssue { IssueID = "batman-656", SeriesTitle = "Batman", IssueNumber = "656" });
+      issues.Add(new ComicIssue { IssueID = "batman-657", SeriesTitle = "Batman", IssueNumber = "657" });
+      issues.Add(new ComicIssue { IssueID = "batman-658", SeriesTitle = "Batman", IssueNumber = "658" });
+      issues.Add(new ComicIssue { IssueID = "batman-663", SeriesTitle = "Batman", IssueNumber = "663" });
+      issues.Add(new ComicIssue { IssueID = "batman-664", SeriesTitle = "Batman", IssueNumber = "664" });
+      issues.Add(new ComicIssue { IssueID = "batman-665", SeriesTitle = "Batman", IssueNumber = "665" });
+      issues.Add(new ComicIssue { IssueID = "batman-666", SeriesTitle = "Batman", IssueNumber = "666" });
+      issues.Add(new ComicIssue { IssueID = "batman-volume-2-1", SeriesTitle = "Batman (Volume 2)", IssueNumber = "1", PublishMonth = 11, PublishYear = 2011, Description = "Part One: Knife Trick" });
+      issues.Add(new ComicIssue { IssueID = "batman-volume-2-2", SeriesTitle = "Batman (Volume 2)", IssueNumber = "2", PublishMonth = 12, PublishYear = 2011, Description = "Part Two: Trust Fall" });
+      issues.Add(new ComicIssue { IssueID = "batman-volume-2-3", SeriesTitle = "Batman (Volume 2)", IssueNumber = "3", PublishMonth = 1, PublishYear = 2012, Description = "Part Three: The Thirteenth Hour" });
+      issues.Add(new ComicIssue { IssueID = "batman-volume-2-4", SeriesTitle = "Batman (Volume 2)", IssueNumber = "4", PublishMonth = 2, PublishYear = 2012, Description = "Part Four: Face the Court, Part One" });
+      issues.Add(new ComicIssue { IssueID = "batman-volume-2-5", SeriesTitle = "Batman (Volume 2)", IssueNumber = "5", PublishMonth = 3, PublishYear = 2012, Description = "Part Five: Face the Court, Part Two" });
+      issues.Add(new ComicIssue { IssueID = "batman-volume-2-6", SeriesTitle = "Batman (Volume 2)", IssueNumber = "6", PublishMonth = 4, PublishYear = 2012, Description = "Part Six: Beneath the Glass" });
+      issues.Add(new ComicIssue { IssueID = "batman-volume-2-7", SeriesTitle = "Batman (Volume 2)", IssueNumber = "7", PublishMonth = 5, PublishYear = 2012, Description = "The Talons Strike!" });
+      issues.Add(new ComicIssue { IssueID = "batman-volume-2-8", SeriesTitle = "Batman (Volume 2)", IssueNumber = "8", PublishMonth = 6, PublishYear = 2012, Description = "Attack on Wayne Manor" });
+      issues.Add(new ComicIssue { IssueID = "batman-volume-2-9", SeriesTitle = "Batman (Volume 2)", IssueNumber = "9", PublishMonth = 7, PublishYear = 2012, Description = "Night of the Owls" });
+      issues.Add(new ComicIssue { IssueID = "batman-volume-2-10", SeriesTitle = "Batman (Volume 2)", IssueNumber = "10", PublishMonth = 8, PublishYear = 2012, Description = "Assault on the Court" });
+      issues.Add(new ComicIssue { IssueID = "batman-volume-2-11", SeriesTitle = "Batman (Volume 2)", IssueNumber = "11", PublishMonth = 9, PublishYear = 2012, Description = "My Brother's Keeper" });
+      issues.Add(new ComicIssue { IssueID = "annual-batman-25", SeriesTitle = "Annual Batman", IssueNumber = "25" });
+      issues.Add(new ComicIssue { IssueID = "annual-batgirl-3", SeriesTitle = "Annual Batgirl", IssueNumber = "3" });
+      issues.Add(new ComicIssue { IssueID = "batgirl-35", SeriesTitle = "Batgirl", IssueNumber = "35" });
+      issues.Add(new ComicIssue { IssueID = "batgirl-36", SeriesTitle = "Batgirl", IssueNumber = "36" });
+      issues.Add(new ComicIssue { IssueID = "batgirl-37", SeriesTitle = "Batgirl", IssueNumber = "37" });
+      issues.Add(new ComicIssue { IssueID = "batgirl-38", SeriesTitle = "Batgirl", IssueNumber = "38" });
+      issues.Add(new ComicIssue { IssueID = "batgirl-39", SeriesTitle = "Batgirl", IssueNumber = "39" });
+      issues.Add(new ComicIssue { IssueID = "batgirl-40", SeriesTitle = "Batgirl", IssueNumber = "40" });
+      issues.Add(new ComicIssue { IssueID = "batgirl-41", SeriesTitle = "Batgirl", IssueNumber = "41" });
+      issues.Add(new ComicIssue { IssueID = "batgirl-42", SeriesTitle = "Batgirl", IssueNumber = "42" });
+      issues.Add(new ComicIssue { IssueID = "batgirl-43", SeriesTitle = "Batgirl", IssueNumber = "43" });
+      issues.Add(new ComicIssue { IssueID = "batgirl-44", SeriesTitle = "Batgirl", IssueNumber = "44" });
+      issues.Add(new ComicIssue { IssueID = "batgirl-45", SeriesTitle = "Batgirl", IssueNumber = "45" });
+      issues.Add(new ComicIssue { IssueID = "secret-origins-10", SeriesTitle = "Secret Origins", IssueNumber = "10" });
+      issues.Add(new ComicIssue { IssueID = "dc-sneak-peek-batgirl-1", SeriesTitle = "DC Sneak Peek: Batgirl", IssueNumber = "1" });
+      issues.Add(new ComicIssue { IssueID = "dark-nights-metal-1", SeriesTitle = "Dark Nights: Metal", IssueNumber = "1" });
+      issues.Add(new ComicIssue { IssueID = "dark-nights-metal-2", SeriesTitle = "Dark Nights: Metal", IssueNumber = "2" });
+      issues.Add(new ComicIssue { IssueID = "dark-nights-metal-3", SeriesTitle = "Dark Nights: Metal", IssueNumber = "3" });
+      issues.Add(new ComicIssue { IssueID = "dark-nights-metal-4", SeriesTitle = "Dark Nights: Metal", IssueNumber = "4" });
+      issues.Add(new ComicIssue { IssueID = "dark-nights-metal-5", SeriesTitle = "Dark Nights: Metal", IssueNumber = "5" });
+      issues.Add(new ComicIssue { IssueID = "dark-nights-metal-6", SeriesTitle = "Dark Nights: Metal", IssueNumber = "6" });
+      issues.Add(new ComicIssue { IssueID = "batman-lost", SeriesTitle = "Batman: Lost", IssueNumber = "1" });
+      issues.Add(new ComicIssue { IssueID = "dark-knights-rising-the-wild-hunt", SeriesTitle = "Dark Knights Rising: The Wild Hunt", IssueNumber = "1" });
+      issues.Add(new ComicIssue { IssueID = "batman-harley-and-ivy-1", SeriesTitle = "Batman: Harley and Ivy", IssueNumber = "1" });
+      issues.Add(new ComicIssue { IssueID = "batman-harley-and-ivy-2", SeriesTitle = "Batman: Harley and Ivy", IssueNumber = "2" });
+      issues.Add(new ComicIssue { IssueID = "batman-harley-and-ivy-3", SeriesTitle = "Batman: Harley and Ivy", IssueNumber = "3" });
+      issues.Add(new ComicIssue { IssueID = "the-batman-adventures-annual-1", SeriesTitle = "The Batman Adventures Annual", IssueNumber = "1" });
+      issues.Add(new ComicIssue { IssueID = "the-batman-adventures-holiday-special-1", SeriesTitle = "The Batman Adventures Holiday Special", IssueNumber = "1" });
+      issues.Add(new ComicIssue { IssueID = "the-batman-and-robin-adventures-8", SeriesTitle = "The Batman and Robin Adventures", IssueNumber = "8" });
+      issues.Add(new ComicIssue { IssueID = "the-batgirl-adventures-1", SeriesTitle = "The Batgirl Adventures", IssueNumber = "1" });
+      issues.Add(new ComicIssue { IssueID = "batman-gotham-knights-14", SeriesTitle = "Batman: Gotham Knights", IssueNumber = "14" });
+      issues.Add(new ComicIssue { IssueID = "batman-black-and-white-3", SeriesTitle = "Batman Black and White", IssueNumber = "3" });
+      issues.Add(new ComicIssue { IssueID = "detective-comics-759", SeriesTitle = "Detective Comics", IssueNumber = "759", Description = "Trail of the Catwoman, Part One" });
+      issues.Add(new ComicIssue { IssueID = "detective-comics-760", SeriesTitle = "Detective Comics", IssueNumber = "760", Description = "Trail of the Catwoman, Part Two" });
+      issues.Add(new ComicIssue { IssueID = "detective-comics-761", SeriesTitle = "Detective Comics", IssueNumber = "761", Description = "Trail of the Catwoman, Part Three" });
+      issues.Add(new ComicIssue { IssueID = "detective-comics-762", SeriesTitle = "Detective Comics", IssueNumber = "762", Description = "Trail of the Catwoman, Part Four" });
+      issues.Add(new ComicIssue { IssueID = "detective-comics-854", SeriesTitle = "Detective Comics", IssueNumber = "854", Description = "Elegy, Part One: Agitato" });
+      issues.Add(new ComicIssue { IssueID = "detective-comics-855", SeriesTitle = "Detective Comics", IssueNumber = "855", Description = "Elegy, Part Two: Misterioso" });
+      issues.Add(new ComicIssue { IssueID = "detective-comics-856", SeriesTitle = "Detective Comics", IssueNumber = "856", Description = "Elegy, Part Three: Affettuoso" });
+      issues.Add(new ComicIssue { IssueID = "detective-comics-857", SeriesTitle = "Detective Comics", IssueNumber = "857", Description = "Elegy, Part Four: Rubato!" });
+      issues.Add(new ComicIssue { IssueID = "detective-comics-858", SeriesTitle = "Detective Comics", IssueNumber = "858", Description = "GO, Part One" });
+      issues.Add(new ComicIssue { IssueID = "detective-comics-859", SeriesTitle = "Detective Comics", IssueNumber = "859", Description = "GO, Part Two" });
+      issues.Add(new ComicIssue { IssueID = "detective-comics-860", SeriesTitle = "Detective Comics", IssueNumber = "860", Description = "GO, Part Three" });
+      issues.Add(new ComicIssue { IssueID = "detective-comics-861", SeriesTitle = "Detective Comics", IssueNumber = "861", Description = "Cutter, Part One" });
+      issues.Add(new ComicIssue { IssueID = "detective-comics-862", SeriesTitle = "Detective Comics", IssueNumber = "862", Description = "Cutter, Part Two" });
+      issues.Add(new ComicIssue { IssueID = "detective-comics-863", SeriesTitle = "Detective Comics", IssueNumber = "863", Description = "Cutter, Part Three" });
+      issues.Add(new ComicIssue { IssueID = "catwoman-selinas-big-score", PublishMonth = 9, PublishYear = 2002 });
+      issues.Add(new ComicIssue { IssueID = "catwoman-volume-3-1", SeriesTitle = "Catwoman (Volume 3)", IssueNumber = "1" });
+      issues.Add(new ComicIssue { IssueID = "catwoman-volume-3-2", SeriesTitle = "Catwoman (Volume 3)", IssueNumber = "2" });
+      issues.Add(new ComicIssue { IssueID = "catwoman-volume-3-3", SeriesTitle = "Catwoman (Volume 3)", IssueNumber = "3" });
+      issues.Add(new ComicIssue { IssueID = "catwoman-volume-3-4", SeriesTitle = "Catwoman (Volume 3)", IssueNumber = "4" });
+      issues.Add(new ComicIssue { IssueID = "catwoman-volume-3-5", SeriesTitle = "Catwoman (Volume 3)", IssueNumber = "5" });
+      issues.Add(new ComicIssue { IssueID = "catwoman-volume-3-6", SeriesTitle = "Catwoman (Volume 3)", IssueNumber = "6" });
+      issues.Add(new ComicIssue { IssueID = "catwoman-volume-3-7", SeriesTitle = "Catwoman (Volume 3)", IssueNumber = "7" });
+      issues.Add(new ComicIssue { IssueID = "catwoman-volume-3-8", SeriesTitle = "Catwoman (Volume 3)", IssueNumber = "8" });
+      issues.Add(new ComicIssue { IssueID = "catwoman-volume-3-9", SeriesTitle = "Catwoman (Volume 3)", IssueNumber = "9" });
+      issues.Add(new ComicIssue { IssueID = "gotham-central-1", SeriesTitle = "Gotham Central", IssueNumber = "1" });
+      issues.Add(new ComicIssue { IssueID = "gotham-central-2", SeriesTitle = "Gotham Central", IssueNumber = "2" });
+      issues.Add(new ComicIssue { IssueID = "gotham-central-3", SeriesTitle = "Gotham Central", IssueNumber = "3" });
+      issues.Add(new ComicIssue { IssueID = "gotham-central-4", SeriesTitle = "Gotham Central", IssueNumber = "4" });
+      issues.Add(new ComicIssue { IssueID = "gotham-central-5", SeriesTitle = "Gotham Central", IssueNumber = "5" });
+      issues.Add(new ComicIssue { IssueID = "gotham-central-6", SeriesTitle = "Gotham Central", IssueNumber = "6" });
+      issues.Add(new ComicIssue { IssueID = "gotham-central-7", SeriesTitle = "Gotham Central", IssueNumber = "7" });
+      issues.Add(new ComicIssue { IssueID = "gotham-central-8", SeriesTitle = "Gotham Central", IssueNumber = "8" });
+      issues.Add(new ComicIssue { IssueID = "gotham-central-9", SeriesTitle = "Gotham Central", IssueNumber = "9" });
+      issues.Add(new ComicIssue { IssueID = "gotham-central-10", SeriesTitle = "Gotham Central", IssueNumber = "10" });
+      issues.Add(new ComicIssue { IssueID = "gotham-city-sirens-1", SeriesTitle = "Gotham City Sirens", IssueNumber = "1", Description = "Union" });
+      issues.Add(new ComicIssue { IssueID = "gotham-city-sirens-2", SeriesTitle = "Gotham City Sirens", IssueNumber = "2", Description = "Girls Talk" });
+      issues.Add(new ComicIssue { IssueID = "gotham-city-sirens-3", SeriesTitle = "Gotham City Sirens", IssueNumber = "3", Description = "Riddle Me This" });
+      issues.Add(new ComicIssue { IssueID = "gotham-city-sirens-4", SeriesTitle = "Gotham City Sirens", IssueNumber = "4", Description = "Date Nite" });
+      issues.Add(new ComicIssue { IssueID = "gotham-city-sirens-5", SeriesTitle = "Gotham City Sirens", IssueNumber = "5", Description = "Out of the Pest" });
+      issues.Add(new ComicIssue { IssueID = "gotham-city-sirens-6", SeriesTitle = "Gotham City Sirens", IssueNumber = "6", Description = "The Last Gag" });
+      issues.Add(new ComicIssue { IssueID = "gotham-city-sirens-7", SeriesTitle = "Gotham City Sirens", IssueNumber = "7", Description = "Holiday Story" });
+      issues.Add(new ComicIssue { IssueID = "gotham-city-sirens-8", SeriesTitle = "Gotham City Sirens", IssueNumber = "8", Description = "" });
+      issues.Add(new ComicIssue { IssueID = "gotham-city-sirens-9", SeriesTitle = "Gotham City Sirens", IssueNumber = "9", Description = "Pieces of the Puzzle" });
+      issues.Add(new ComicIssue { IssueID = "gotham-city-sirens-10", SeriesTitle = "Gotham City Sirens", IssueNumber = "10", Description = "Taking Sides" });
+      issues.Add(new ComicIssue { IssueID = "gotham-city-sirens-11", SeriesTitle = "Gotham City Sirens", IssueNumber = "11", Description = "On the Job" });
+      issues.Add(new ComicIssue { IssueID = "gotham-city-sirens-12", SeriesTitle = "Gotham City Sirens", IssueNumber = "12", Description = "Sister Zero, Part 1 of 2" });
+      issues.Add(new ComicIssue { IssueID = "gotham-city-sirens-13", SeriesTitle = "Gotham City Sirens", IssueNumber = "13", Description = "Sister Zero, Part 2 of 2" });
+      issues.Add(new ComicIssue { IssueID = "harley-quinn-volume-2-0", SeriesTitle = "Harley Quinn (Volume 2)", IssueNumber = "0", Description = "Picky Sicky" });
+      issues.Add(new ComicIssue { IssueID = "harley-quinn-volume-2-1", SeriesTitle = "Harley Quinn (Volume 2)", IssueNumber = "1", Description = "Hot in the City" });
+      issues.Add(new ComicIssue { IssueID = "harley-quinn-volume-2-2", SeriesTitle = "Harley Quinn (Volume 2)", IssueNumber = "2", Description = "Helter Shelter" });
+      issues.Add(new ComicIssue { IssueID = "harley-quinn-volume-2-3", SeriesTitle = "Harley Quinn (Volume 2)", IssueNumber = "3", Description = "Love Stinks!" });
+      issues.Add(new ComicIssue { IssueID = "harley-quinn-volume-2-4", SeriesTitle = "Harley Quinn (Volume 2)", IssueNumber = "4", Description = "Very Old Spice" });
+      issues.Add(new ComicIssue { IssueID = "harley-quinn-volume-2-5", SeriesTitle = "Harley Quinn (Volume 2)", IssueNumber = "5", Description = "The Hunt for Red Octogenarians" });
+      issues.Add(new ComicIssue { IssueID = "harley-quinn-volume-2-6", SeriesTitle = "Harley Quinn (Volume 2)", IssueNumber = "6", Description = "Better Nuthead than Яed" });
+      issues.Add(new ComicIssue { IssueID = "harley-quinn-volume-2-7", SeriesTitle = "Harley Quinn (Volume 2)", IssueNumber = "7", Description = "Nocturnal Omission" });
+      issues.Add(new ComicIssue { IssueID = "harley-quinn-volume-2-8", SeriesTitle = "Harley Quinn (Volume 2)", IssueNumber = "8", Description = "Pies in the Skies" });
+      issues.Add(new ComicIssue { IssueID = "harley-quinn-volume-2-9", SeriesTitle = "Harley Quinn (Volume 2)", IssueNumber = "9", Description = "Some Nerd Rage with Your Birdcage?" });
+      issues.Add(new ComicIssue { IssueID = "harley-quinn-volume-2-10", SeriesTitle = "Harley Quinn (Volume 2)", IssueNumber = "10", Description = "There Are No Rules!" });
+      issues.Add(new ComicIssue { IssueID = "harley-quinn-futures-end-1", SeriesTitle = "Harley Quinn: Futures End", IssueNumber = "1", Description = "Crappily Ever After" });
+      issues.Add(new ComicIssue { IssueID = "harley-quinn-volume-2-11", SeriesTitle = "Harley Quinn (Volume 2)", IssueNumber = "11", Description = "Power Outage" });
+      issues.Add(new ComicIssue { IssueID = "harley-quinn-volume-2-12", SeriesTitle = "Harley Quinn (Volume 2)", IssueNumber = "12", Description = "Not Kansas" });
+      issues.Add(new ComicIssue { IssueID = "harley-quinn-volume-2-13", SeriesTitle = "Harley Quinn (Volume 2)", IssueNumber = "13", Description = "Clock Blockers" });
+      issues.Add(new ComicIssue { IssueID = "harley-quinn-invades-comic-con-international-san-diego-1", SeriesTitle = "Harley Quinn Invades Comic-Con International: San Diego", IssueNumber = "1", Description = "Harley Quinn Invades Comic-Con International: San Diego #1" } );
+      issues.Add(new ComicIssue { IssueID = "secret-origins-volume-3-4", SeriesTitle = "Secret Origins (Volume 3)", IssueNumber = "4", Description = "Harley Quinn" });
+      issues.Add(new ComicIssue { IssueID = "joker", SeriesTitle = "Joker", IssueNumber = "1", PublishMonth = 12, PublishYear = 2008, Description = "Joker (graphic novel)" });
+      issues.Add(new ComicIssue { IssueID = "nightwing-vol-4-78", SeriesTitle = "Nightwing (vol. 4)", IssueNumber = "78" });
+      issues.Add(new ComicIssue { IssueID = "nightwing-vol-4-79", SeriesTitle = "Nightwing (vol. 4)", IssueNumber = "79" });
+      issues.Add(new ComicIssue { IssueID = "nightwing-vol-4-80", SeriesTitle = "Nightwing (vol. 4)", IssueNumber = "80" });
+      issues.Add(new ComicIssue { IssueID = "nightwing-vol-4-81", SeriesTitle = "Nightwing (vol. 4)", IssueNumber = "81" });
+      issues.Add(new ComicIssue { IssueID = "nightwing-vol-4-82", SeriesTitle = "Nightwing (vol. 4)", IssueNumber = "82" });
+      issues.Add(new ComicIssue { IssueID = "nightwing-vol-4-83", SeriesTitle = "Nightwing (vol. 4)", IssueNumber = "83" });
+      issues.Add(new ComicIssue { IssueID = "nightwing-vol-4-87", SeriesTitle = "Nightwing (vol. 4)", IssueNumber = "87" });
+      issues.Add(new ComicIssue { IssueID = "nightwing-vol-4-88", SeriesTitle = "Nightwing (vol. 4)", IssueNumber = "88" });
+      issues.Add(new ComicIssue { IssueID = "nightwing-vol-4-89", SeriesTitle = "Nightwing (vol. 4)", IssueNumber = "89" });
+      issues.Add(new ComicIssue { IssueID = "nightwing-vol-4-90", SeriesTitle = "Nightwing (vol. 4)", IssueNumber = "90" });
+      issues.Add(new ComicIssue { IssueID = "nightwing-vol-4-91", SeriesTitle = "Nightwing (vol. 4)", IssueNumber = "91" });
+      issues.Add(new ComicIssue { IssueID = "superman-son-of-kal-el-9", SeriesTitle = "Superman: Son of Kal-El", IssueNumber = "9" });
+      issues.Add(new ComicIssue { IssueID = "the-flash-rebirth-1", SeriesTitle = "The Flash: Rebirth", IssueNumber = "1" });
+      issues.Add(new ComicIssue { IssueID = "the-flash-rebirth-2", SeriesTitle = "The Flash: Rebirth", IssueNumber = "2" });
+      issues.Add(new ComicIssue { IssueID = "the-flash-rebirth-3", SeriesTitle = "The Flash: Rebirth", IssueNumber = "3" });
+      issues.Add(new ComicIssue { IssueID = "the-flash-rebirth-4", SeriesTitle = "The Flash: Rebirth", IssueNumber = "4" });
+      issues.Add(new ComicIssue { IssueID = "the-flash-rebirth-5", SeriesTitle = "The Flash: Rebirth", IssueNumber = "5" });
+      issues.Add(new ComicIssue { IssueID = "the-flash-rebirth-6", SeriesTitle = "The Flash: Rebirth", IssueNumber = "6" });
+      issues.Add(new ComicIssue { IssueID = "the-flash-vol-3-1", SeriesTitle = "The Flash (vol. 3)", IssueNumber = "1" });
+      issues.Add(new ComicIssue { IssueID = "the-flash-vol-3-2", SeriesTitle = "The Flash (vol. 3)", IssueNumber = "2" });
+      issues.Add(new ComicIssue { IssueID = "the-flash-vol-3-3", SeriesTitle = "The Flash (vol. 3)", IssueNumber = "3" });
+      issues.Add(new ComicIssue { IssueID = "the-flash-vol-3-4", SeriesTitle = "The Flash (vol. 3)", IssueNumber = "4" });
+      issues.Add(new ComicIssue { IssueID = "the-flash-vol-3-5", SeriesTitle = "The Flash (vol. 3)", IssueNumber = "5" });
+      issues.Add(new ComicIssue { IssueID = "the-flash-vol-3-6", SeriesTitle = "The Flash (vol. 3)", IssueNumber = "6" });
+      issues.Add(new ComicIssue { IssueID = "the-flash-vol-3-7", SeriesTitle = "The Flash (vol. 3)", IssueNumber = "7" });
+      issues.Add(new ComicIssue { IssueID = "crisis-on-infinite-earths-1", SeriesTitle = "Crisis on Infinite Earths", IssueNumber = "1" });
+      issues.Add(new ComicIssue { IssueID = "crisis-on-infinite-earths-2", SeriesTitle = "Crisis on Infinite Earths", IssueNumber = "2" });
+      issues.Add(new ComicIssue { IssueID = "crisis-on-infinite-earths-3", SeriesTitle = "Crisis on Infinite Earths", IssueNumber = "3" });
+      issues.Add(new ComicIssue { IssueID = "crisis-on-infinite-earths-4", SeriesTitle = "Crisis on Infinite Earths", IssueNumber = "4" });
+      issues.Add(new ComicIssue { IssueID = "crisis-on-infinite-earths-5", SeriesTitle = "Crisis on Infinite Earths", IssueNumber = "5" });
+      issues.Add(new ComicIssue { IssueID = "crisis-on-infinite-earths-6", SeriesTitle = "Crisis on Infinite Earths", IssueNumber = "6" });
+      issues.Add(new ComicIssue { IssueID = "crisis-on-infinite-earths-7", SeriesTitle = "Crisis on Infinite Earths", IssueNumber = "7" });
+      issues.Add(new ComicIssue { IssueID = "crisis-on-infinite-earths-8", SeriesTitle = "Crisis on Infinite Earths", IssueNumber = "8" });
+      issues.Add(new ComicIssue { IssueID = "crisis-on-infinite-earths-9", SeriesTitle = "Crisis on Infinite Earths", IssueNumber = "9" });
+      issues.Add(new ComicIssue { IssueID = "crisis-on-infinite-earths-10", SeriesTitle = "Crisis on Infinite Earths", IssueNumber = "10" });
+      issues.Add(new ComicIssue { IssueID = "crisis-on-infinite-earths-11", SeriesTitle = "Crisis on Infinite Earths", IssueNumber = "11" });
+      issues.Add(new ComicIssue { IssueID = "crisis-on-infinite-earths-12", SeriesTitle = "Crisis on Infinite Earths", IssueNumber = "12" });
+      issues.Add(new ComicIssue { IssueID = "justice-league-vol-2-1", SeriesTitle = "Justice League (vol. 2)", IssueNumber = "1" });
+      issues.Add(new ComicIssue { IssueID = "justice-league-vol-2-2", SeriesTitle = "Justice League (vol. 2)", IssueNumber = "2" });
+      issues.Add(new ComicIssue { IssueID = "justice-league-vol-2-3", SeriesTitle = "Justice League (vol. 2)", IssueNumber = "3" });
+      issues.Add(new ComicIssue { IssueID = "justice-league-vol-2-4", SeriesTitle = "Justice League (vol. 2)", IssueNumber = "4" });
+      issues.Add(new ComicIssue { IssueID = "justice-league-vol-2-5", SeriesTitle = "Justice League (vol. 2)", IssueNumber = "5" });
+      issues.Add(new ComicIssue { IssueID = "justice-league-vol-2-6", SeriesTitle = "Justice League (vol. 2)", IssueNumber = "6" });
+      issues.Add(new ComicIssue { IssueID = "dc-the-new-frontier-1", SeriesTitle = "DC: The New Frontier", IssueNumber = "1", PublishYear = 2004, Description = "The New Frontier, Part 1" });
+      issues.Add(new ComicIssue { IssueID = "dc-the-new-frontier-2", SeriesTitle = "DC: The New Frontier", IssueNumber = "2", PublishYear = 2004, Description = "The New Frontier, Part 2" });
+      issues.Add(new ComicIssue { IssueID = "dc-the-new-frontier-3", SeriesTitle = "DC: The New Frontier", IssueNumber = "3", PublishYear = 2004, Description = "The New Frontier, Part 3" });
+      issues.Add(new ComicIssue { IssueID = "dc-the-new-frontier-4", SeriesTitle = "DC: The New Frontier", IssueNumber = "4", PublishYear = 2004, Description = "The New Frontier, Part 4" });
+      issues.Add(new ComicIssue { IssueID = "dc-the-new-frontier-5", SeriesTitle = "DC: The New Frontier", IssueNumber = "5", PublishYear = 2004, Description = "The New Frontier, Part 5" });
+      issues.Add(new ComicIssue { IssueID = "dc-the-new-frontier-6", SeriesTitle = "DC: The New Frontier", IssueNumber = "6", PublishYear = 2004, Description = "The New Frontier, Part 6" });
+      issues.Add(new ComicIssue { IssueID = "justice-league-the-new-frontier-special", SeriesTitle = "Justice League: The New Frontier Special", IssueNumber = "1", PublishYear = 2004, Description = "Justice League: The New; Frontier Special" });
+      issues.Add(new ComicIssue { IssueID = "american-vampire-1", SeriesTitle = "American Vampire", IssueNumber = "1", PublishMonth = 1, PublishYear = 2009, Description = "Big Break, Bad Blood" });
+      issues.Add(new ComicIssue { IssueID = "american-vampire-2", SeriesTitle = "American Vampire", IssueNumber = "2", PublishMonth = 2, PublishYear = 2009, Description = "Morning Star, Deep Water" });
+      issues.Add(new ComicIssue { IssueID = "american-vampire-3", SeriesTitle = "American Vampire", IssueNumber = "3", PublishMonth = 3, PublishYear = 2009, Description = "Rough Cut, Blood Vengeance" });
+      issues.Add(new ComicIssue { IssueID = "american-vampire-4", SeriesTitle = "American Vampire", IssueNumber = "4", PublishMonth = 4, PublishYear = 2009, Description = "Double Exposure, One Drop of Blood" });
+      issues.Add(new ComicIssue { IssueID = "american-vampire-5", SeriesTitle = "American Vampire", IssueNumber = "5", PublishMonth = 5, PublishYear = 2009, Description = "Curtain Call, If They Right Hand Offend Thee, Cut It Off" });
+      issues.Add(new ComicIssue { IssueID = "american-vampire-6", SeriesTitle = "American Vampire", IssueNumber = "6", PublishMonth = 6, PublishYear = 2009, Description = "Devil in the Sand, Part One" });
+      issues.Add(new ComicIssue { IssueID = "american-vampire-7", SeriesTitle = "American Vampire", IssueNumber = "7", PublishMonth = 7, PublishYear = 2009, Description = "Devil in the Sand, Part Two" });
+      issues.Add(new ComicIssue { IssueID = "american-vampire-8", SeriesTitle = "American Vampire", IssueNumber = "8", PublishMonth = 8, PublishYear = 2009, Description = "Devil in the Sand, Part Three" });
+      issues.Add(new ComicIssue { IssueID = "american-vampire-9", SeriesTitle = "American Vampire", IssueNumber = "9", PublishMonth = 9, PublishYear = 2009, Description = "Devil in the Sand, Conclusion" });
+      issues.Add(new ComicIssue { IssueID = "american-vampire-10", SeriesTitle = "American Vampire", IssueNumber = "10", PublishMonth = 10, PublishYear = 2009, Description = "The Way Out, Part One of Two" });
+      issues.Add(new ComicIssue { IssueID = "american-vampire-11", SeriesTitle = "American Vampire", IssueNumber = "11", PublishMonth = 11, PublishYear = 2009, Description = "The Way Out, Part Two of Two" });
+      issues.Add(new ComicIssue { IssueID = "dc-eased-1", SeriesTitle = "DCeased", IssueNumber = "1", Description = "Going Viral" });
+      issues.Add(new ComicIssue { IssueID = "dc-eased-2", SeriesTitle = "DCeased", IssueNumber = "2", Description = "The Monster Inside of Us All" });
+      issues.Add(new ComicIssue { IssueID = "dc-eased-3", SeriesTitle = "DCeased", IssueNumber = "3", Description = "Red Sea" });
+      issues.Add(new ComicIssue { IssueID = "dc-eased-4", SeriesTitle = "DCeased", IssueNumber = "4", Description = "Nuclear Option" });
+      issues.Add(new ComicIssue { IssueID = "dc-eased-a-good-day-to-die-1", SeriesTitle = "DCeased: A Good Day to Die", IssueNumber = "1", Description = "A Good Day to to Die" });
+      issues.Add(new ComicIssue { IssueID = "dc-eased-5", SeriesTitle = "DCeased", IssueNumber = "5", Description = "Hope Lost" });
+      issues.Add(new ComicIssue { IssueID = "dc-eased-6", SeriesTitle = "DCeased", IssueNumber = "6", Description = "End of the World" });
+      issues.Add(new ComicIssue { IssueID = "fables-1", SeriesTitle = "Fables", IssueNumber = "1" });
+      issues.Add(new ComicIssue { IssueID = "fables-2", SeriesTitle = "Fables", IssueNumber = "2" });
+      issues.Add(new ComicIssue { IssueID = "fables-3", SeriesTitle = "Fables", IssueNumber = "3" });
+      issues.Add(new ComicIssue { IssueID = "fables-4", SeriesTitle = "Fables", IssueNumber = "4" });
+      issues.Add(new ComicIssue { IssueID = "fables-5", SeriesTitle = "Fables", IssueNumber = "5" });
+      issues.Add(new ComicIssue { IssueID = "fables-6", SeriesTitle = "Fables", IssueNumber = "6" });
+      issues.Add(new ComicIssue { IssueID = "fables-7", SeriesTitle = "Fables", IssueNumber = "7" });
+      issues.Add(new ComicIssue { IssueID = "fables-8", SeriesTitle = "Fables", IssueNumber = "8" });
+      issues.Add(new ComicIssue { IssueID = "fables-9", SeriesTitle = "Fables", IssueNumber = "9" });
+      issues.Add(new ComicIssue { IssueID = "fables-10", SeriesTitle = "Fables", IssueNumber = "10" });
+      issues.Add(new ComicIssue { IssueID = "far-sector-1", SeriesTitle = "Far Sector", IssueNumber = "1" });
+      issues.Add(new ComicIssue { IssueID = "far-sector-2", SeriesTitle = "Far Sector", IssueNumber = "2" });
+      issues.Add(new ComicIssue { IssueID = "far-sector-3", SeriesTitle = "Far Sector", IssueNumber = "3" });
+      issues.Add(new ComicIssue { IssueID = "far-sector-4", SeriesTitle = "Far Sector", IssueNumber = "4" });
+      issues.Add(new ComicIssue { IssueID = "far-sector-5", SeriesTitle = "Far Sector", IssueNumber = "5" });
+      issues.Add(new ComicIssue { IssueID = "far-sector-6", SeriesTitle = "Far Sector", IssueNumber = "6" });
+      issues.Add(new ComicIssue { IssueID = "far-sector-7", SeriesTitle = "Far Sector", IssueNumber = "7" });
+      issues.Add(new ComicIssue { IssueID = "far-sector-8", SeriesTitle = "Far Sector", IssueNumber = "8" });
+      issues.Add(new ComicIssue { IssueID = "far-sector-9", SeriesTitle = "Far Sector", IssueNumber = "9" });
+      issues.Add(new ComicIssue { IssueID = "far-sector-10", SeriesTitle = "Far Sector", IssueNumber = "10" });
+      issues.Add(new ComicIssue { IssueID = "far-sector-11", SeriesTitle = "Far Sector", IssueNumber = "11" });
+      issues.Add(new ComicIssue { IssueID = "far-sector-12", SeriesTitle = "Far Sector", IssueNumber = "12" });
+      issues.Add(new ComicIssue { IssueID = "green-arrow-year-one-1", SeriesTitle = "Green Arrow: Year One", IssueNumber = "1" });
+      issues.Add(new ComicIssue { IssueID = "green-arrow-year-one-2", SeriesTitle = "Green Arrow: Year One", IssueNumber = "2" });
+      issues.Add(new ComicIssue { IssueID = "green-arrow-year-one-3", SeriesTitle = "Green Arrow: Year One", IssueNumber = "3" });
+      issues.Add(new ComicIssue { IssueID = "green-arrow-year-one-4", SeriesTitle = "Green Arrow: Year One", IssueNumber = "4" });
+      issues.Add(new ComicIssue { IssueID = "green-arrow-year-one-5", SeriesTitle = "Green Arrow: Year One", IssueNumber = "5" });
+      issues.Add(new ComicIssue { IssueID = "green-arrow-year-one-6", SeriesTitle = "Green Arrow: Year One", IssueNumber = "6" });
+      issues.Add(new ComicIssue { IssueID = "injustice-gods-among-us-1", SeriesTitle = "Injustice: Gods Among Us", IssueNumber = "1" });
+      issues.Add(new ComicIssue { IssueID = "injustice-gods-among-us-2", SeriesTitle = "Injustice: Gods Among Us", IssueNumber = "2" });
+      issues.Add(new ComicIssue { IssueID = "injustice-gods-among-us-3", SeriesTitle = "Injustice: Gods Among Us", IssueNumber = "3" });
+      issues.Add(new ComicIssue { IssueID = "injustice-gods-among-us-4", SeriesTitle = "Injustice: Gods Among Us", IssueNumber = "4" });
+      issues.Add(new ComicIssue { IssueID = "injustice-gods-among-us-5", SeriesTitle = "Injustice: Gods Among Us", IssueNumber = "5" });
+      issues.Add(new ComicIssue { IssueID = "injustice-gods-among-us-6", SeriesTitle = "Injustice: Gods Among Us", IssueNumber = "6" });
+      issues.Add(new ComicIssue { IssueID = "injustice-gods-among-us-7", SeriesTitle = "Injustice: Gods Among Us", IssueNumber = "7" });
+      issues.Add(new ComicIssue { IssueID = "injustice-gods-among-us-8", SeriesTitle = "Injustice: Gods Among Us", IssueNumber = "8" });
+      issues.Add(new ComicIssue { IssueID = "injustice-gods-among-us-9", SeriesTitle = "Injustice: Gods Among Us", IssueNumber = "9" });
+      issues.Add(new ComicIssue { IssueID = "injustice-gods-among-us-10", SeriesTitle = "Injustice: Gods Among Us", IssueNumber = "10" });
+      issues.Add(new ComicIssue { IssueID = "injustice-gods-among-us-11", SeriesTitle = "Injustice: Gods Among Us", IssueNumber = "11" });
+      issues.Add(new ComicIssue { IssueID = "injustice-gods-among-us-12", SeriesTitle = "Injustice: Gods Among Us", IssueNumber = "12" });
+      issues.Add(new ComicIssue { IssueID = "injustice-gods-among-us-annual-1", SeriesTitle = "Injustice: Gods Among Us Annual", IssueNumber = "1" });
+      issues.Add(new ComicIssue { IssueID = "kingdom-come-1", SeriesTitle = "Kingdom Come", IssueNumber = "1", Description = "Strange Visitor" });
+      issues.Add(new ComicIssue { IssueID = "kingdom-come-2", SeriesTitle = "Kingdom Come", IssueNumber = "2", Description = "Truth and Justice" });
+      issues.Add(new ComicIssue { IssueID = "kingdom-come-3", SeriesTitle = "Kingdom Come", IssueNumber = "3", Description = "Up in the Sky" });
+      issues.Add(new ComicIssue { IssueID = "kingdom-come-4", SeriesTitle = "Kingdom Come", IssueNumber = "4", Description = "Never-Ending Battle" });
+      issues.Add(new ComicIssue { IssueID = "mister-miracle-vol-4-1", SeriesTitle = "Mister Miracle (vol. 4)", IssueNumber = "1" });
+      issues.Add(new ComicIssue { IssueID = "mister-miracle-vol-4-2", SeriesTitle = "Mister Miracle (vol. 4)", IssueNumber = "2" });
+      issues.Add(new ComicIssue { IssueID = "mister-miracle-vol-4-3", SeriesTitle = "Mister Miracle (vol. 4)", IssueNumber = "3" });
+      issues.Add(new ComicIssue { IssueID = "mister-miracle-vol-4-4", SeriesTitle = "Mister Miracle (vol. 4)", IssueNumber = "4" });
+      issues.Add(new ComicIssue { IssueID = "mister-miracle-vol-4-5", SeriesTitle = "Mister Miracle (vol. 4)", IssueNumber = "5" });
+      issues.Add(new ComicIssue { IssueID = "mister-miracle-vol-4-6", SeriesTitle = "Mister Miracle (vol. 4)", IssueNumber = "6" });
+      issues.Add(new ComicIssue { IssueID = "mister-miracle-vol-4-7", SeriesTitle = "Mister Miracle (vol. 4)", IssueNumber = "7" });
+      issues.Add(new ComicIssue { IssueID = "mister-miracle-vol-4-8", SeriesTitle = "Mister Miracle (vol. 4)", IssueNumber = "8" });
+      issues.Add(new ComicIssue { IssueID = "mister-miracle-vol-4-9", SeriesTitle = "Mister Miracle (vol. 4)", IssueNumber = "9" });
+      issues.Add(new ComicIssue { IssueID = "mister-miracle-vol-4-10", SeriesTitle = "Mister Miracle (vol. 4)", IssueNumber = "10" });
+      issues.Add(new ComicIssue { IssueID = "mister-miracle-vol-4-11", SeriesTitle = "Mister Miracle (vol. 4)", IssueNumber = "11" });
+      issues.Add(new ComicIssue { IssueID = "mister-miracle-vol-4-12", SeriesTitle = "Mister Miracle (vol. 4)", IssueNumber = "12" });
+      issues.Add(new ComicIssue { IssueID = "milestone-returns-infinite-edition-0", SeriesTitle = "Milestone Returns: Infinite Edition", IssueNumber = "0", Description = "The Big Bang, Fandome Preview" });
+      issues.Add(new ComicIssue { IssueID = "static-season-one-1", SeriesTitle = "Static: Season One", IssueNumber = "1", Description = "Episode One: Trial by Fire" });
+      issues.Add(new ComicIssue { IssueID = "static-season-one-2", SeriesTitle = "Static: Season One", IssueNumber = "2", Description = "Episode Two: Family Meeting" });
+      issues.Add(new ComicIssue { IssueID = "static-season-one-3", SeriesTitle = "Static: Season One", IssueNumber = "3", Description = "Episode Three: Run It Back" });
+      issues.Add(new ComicIssue { IssueID = "static-season-one-4", SeriesTitle = "Static: Season One", IssueNumber = "4", Description = "Episode Four: Naming Names" });
+      issues.Add(new ComicIssue { IssueID = "static-season-one-5", SeriesTitle = "Static: Season One", IssueNumber = "5", Description = "Episode Five: Prison Break" });
+      issues.Add(new ComicIssue { IssueID = "static-season-one-6", SeriesTitle = "Static: Season One", IssueNumber = "6", Description = "Episode Six: Shock to the System" });
+      issues.Add(new ComicIssue { IssueID = "supergirl-woman-of-tomorrow-1", SeriesTitle = "Supergirl: Woman of Tomorrow", IssueNumber = "1", Description = "Supergirl: Woman of Tomorrow #1" });
+      issues.Add(new ComicIssue { IssueID = "supergirl-woman-of-tomorrow-2", SeriesTitle = "Supergirl: Woman of Tomorrow", IssueNumber = "2", Description = "Supergirl: Woman of Tomorrow #2" });
+      issues.Add(new ComicIssue { IssueID = "supergirl-woman-of-tomorrow-3", SeriesTitle = "Supergirl: Woman of Tomorrow", IssueNumber = "3", Description = "Supergirl: Woman of Tomorrow #3" });
+      issues.Add(new ComicIssue { IssueID = "supergirl-woman-of-tomorrow-4", SeriesTitle = "Supergirl: Woman of Tomorrow", IssueNumber = "4", Description = "Supergirl: Woman of Tomorrow #4" });
+      issues.Add(new ComicIssue { IssueID = "supergirl-woman-of-tomorrow-5", SeriesTitle = "Supergirl: Woman of Tomorrow", IssueNumber = "5", Description = "Supergirl: Woman of Tomorrow #5" });
+      issues.Add(new ComicIssue { IssueID = "supergirl-woman-of-tomorrow-6", SeriesTitle = "Supergirl: Woman of Tomorrow", IssueNumber = "6", Description = "Supergirl: Woman of Tomorrow #6" });
+      issues.Add(new ComicIssue { IssueID = "supergirl-woman-of-tomorrow-7", SeriesTitle = "Supergirl: Woman of Tomorrow", IssueNumber = "7", Description = "Supergirl: Woman of Tomorrow #7" });
+      issues.Add(new ComicIssue { IssueID = "supergirl-woman-of-tomorrow-8", SeriesTitle = "Supergirl: Woman of Tomorrow", IssueNumber = "8", Description = "Supergirl: Woman of Tomorrow #8" });
+      issues.Add(new ComicIssue { IssueID = "the-saga-of-the-swamp-thing-20", SeriesTitle = "The Saga of the Swamp Thing", IssueNumber = "20" });
+      issues.Add(new ComicIssue { IssueID = "the-saga-of-the-swamp-thing-21", SeriesTitle = "The Saga of the Swamp Thing", IssueNumber = "21" });
+      issues.Add(new ComicIssue { IssueID = "the-saga-of-the-swamp-thing-22", SeriesTitle = "The Saga of the Swamp Thing", IssueNumber = "22" });
+      issues.Add(new ComicIssue { IssueID = "the-saga-of-the-swamp-thing-23", SeriesTitle = "The Saga of the Swamp Thing", IssueNumber = "23" });
+      issues.Add(new ComicIssue { IssueID = "the-saga-of-the-swamp-thing-24", SeriesTitle = "The Saga of the Swamp Thing", IssueNumber = "24" });
+      issues.Add(new ComicIssue { IssueID = "the-saga-of-the-swamp-thing-25", SeriesTitle = "The Saga of the Swamp Thing", IssueNumber = "25" });
+      issues.Add(new ComicIssue { IssueID = "the-saga-of-the-swamp-thing-26", SeriesTitle = "The Saga of the Swamp Thing", IssueNumber = "26" });
+      issues.Add(new ComicIssue { IssueID = "the-saga-of-the-swamp-thing-27", SeriesTitle = "The Saga of the Swamp Thing", IssueNumber = "27" });
+      issues.Add(new ComicIssue { IssueID = "the-authority-1", SeriesTitle = "The Authority", IssueNumber = "1", Description = "The Circle: Part I" });
+      issues.Add(new ComicIssue { IssueID = "the-authority-2", SeriesTitle = "The Authority", IssueNumber = "2", Description = "The Circle: Part II" });
+      issues.Add(new ComicIssue { IssueID = "the-authority-3", SeriesTitle = "The Authority", IssueNumber = "3", Description = "The Circle: Part III" });
+      issues.Add(new ComicIssue { IssueID = "the-authority-4", SeriesTitle = "The Authority", IssueNumber = "4", Description = "The Circle: Part IV" });
+      issues.Add(new ComicIssue { IssueID = "the-authority-5", SeriesTitle = "The Authority", IssueNumber = "5", Description = "Shiftships: Part I" });
+      issues.Add(new ComicIssue { IssueID = "the-authority-6", SeriesTitle = "The Authority", IssueNumber = "6", Description = "Shiftships: Part II" });
+      issues.Add(new ComicIssue { IssueID = "the-authority-7", SeriesTitle = "The Authority", IssueNumber = "7", Description = "Shiftships: Part III" });
+      issues.Add(new ComicIssue { IssueID = "the-authority-8", SeriesTitle = "The Authority", IssueNumber = "8", Description = "Shiftships: Part IV" });
+      issues.Add(new ComicIssue { IssueID = "the-authority-9", SeriesTitle = "The Authority", IssueNumber = "9", Description = "Outer Dark: Part I" });
+      issues.Add(new ComicIssue { IssueID = "the-authority-10", SeriesTitle = "The Authority", IssueNumber = "10", Description = "Outer Dark: Part II" });
+      issues.Add(new ComicIssue { IssueID = "the-authority-11", SeriesTitle = "The Authority", IssueNumber = "11", Description = "Outer Dark: Part III" });
+      issues.Add(new ComicIssue { IssueID = "the-authority-12", SeriesTitle = "The Authority", IssueNumber = "12", Description = "Outer Dark: Part IV" });
+      issues.Add(new ComicIssue { IssueID = "planetary-the-authority-ruling-the-world", SeriesTitle = "Planetary/The Authority: Ruling the World", IssueNumber = "1", Description = "Planetary/The Authority: Ruling the World" });
+      issues.Add(new ComicIssue { IssueID = "wildstorm-a-celebration-of-25-years-collected-the-authority-requiem", SeriesTitle = "Wildstorm: A Celebration of 25 Years (Collected)", IssueNumber = "1", Description = "The Authority: Requiem" });
+      issues.Add(new ComicIssue { IssueID = "v-for-vendetta-1", SeriesTitle = "V For Vendetta", IssueNumber = "1", PublishMonth = 9, PublishYear = 1988, Description = "V For Vendetta #1" });
+      issues.Add(new ComicIssue { IssueID = "v-for-vendetta-2", SeriesTitle = "V For Vendetta", IssueNumber = "2", PublishMonth = 10, PublishYear = 1988, Description = "V For Vendetta #2" });
+      issues.Add(new ComicIssue { IssueID = "v-for-vendetta-3", SeriesTitle = "V For Vendetta", IssueNumber = "3", PublishMonth = 11, PublishYear = 1988, Description = "V For Vendetta #3" });
+      issues.Add(new ComicIssue { IssueID = "v-for-vendetta-4", SeriesTitle = "V For Vendetta", IssueNumber = "4", PublishMonth = 12, PublishYear = 1988, Description = "V For Vendetta #4" });
+      issues.Add(new ComicIssue { IssueID = "v-for-vendetta-5", SeriesTitle = "V For Vendetta", IssueNumber = "5", PublishMonth = 1, PublishYear = 1989, Description = "V For Vendetta #5" });
+      issues.Add(new ComicIssue { IssueID = "v-for-vendetta-6", SeriesTitle = "V For Vendetta", IssueNumber = "6", PublishMonth = 2, PublishYear = 1989, Description = "V For Vendetta #6" });
+      issues.Add(new ComicIssue { IssueID = "v-for-vendetta-7", SeriesTitle = "V For Vendetta", IssueNumber = "7", PublishMonth = 3, PublishYear = 1989, Description = "V For Vendetta #7" });
+      issues.Add(new ComicIssue { IssueID = "v-for-vendetta-8", SeriesTitle = "V For Vendetta", IssueNumber = "8", PublishMonth = 4, PublishYear = 1989, Description = "V For Vendetta #8" });
+      issues.Add(new ComicIssue { IssueID = "v-for-vendetta-9", SeriesTitle = "V For Vendetta", IssueNumber = "9", PublishMonth = 5, PublishYear = 1989, Description = "V For Vendetta #9" });
+      issues.Add(new ComicIssue { IssueID = "v-for-vendetta-10", SeriesTitle = "V For Vendetta", IssueNumber = "10", PublishMonth = 6, PublishYear = 1989, Description = "V For Vendetta #10" });
+      issues.Add(new ComicIssue { IssueID = "v-for-vendetta-11", SeriesTitle = "V For Vendetta", IssueNumber = "11", PublishMonth = 7, PublishYear = 1989, Description = "V For Vendetta #11" });
+      issues.Add(new ComicIssue { IssueID = "v-for-vendetta-12", SeriesTitle = "V For Vendetta", IssueNumber = "12", PublishMonth = 8, PublishYear = 1989, Description = "V For Vendetta #12" });
+      issues.Add(new ComicIssue { IssueID = "watchmen-1", SeriesTitle = "Watchmen", IssueNumber = "1", PublishMonth = 9, PublishYear = 1986, Description = "At Midnight, All the Agents..." });
+      issues.Add(new ComicIssue { IssueID = "watchmen-2", SeriesTitle = "Watchmen", IssueNumber = "2", PublishMonth = 10, PublishYear = 1986, Description = "Absent Friends" });
+      issues.Add(new ComicIssue { IssueID = "watchmen-3", SeriesTitle = "Watchmen", IssueNumber = "3", PublishMonth = 11, PublishYear = 1986, Description = "The Judge of All the Earth" });
+      issues.Add(new ComicIssue { IssueID = "watchmen-4", SeriesTitle = "Watchmen", IssueNumber = "4", PublishMonth = 12, PublishYear = 1986, Description = "Watchmaker" });
+      issues.Add(new ComicIssue { IssueID = "watchmen-5", SeriesTitle = "Watchmen", IssueNumber = "5", PublishMonth = 1, PublishYear = 1987, Description = "Fearful Symmetry" });
+      issues.Add(new ComicIssue { IssueID = "watchmen-6", SeriesTitle = "Watchmen", IssueNumber = "6", PublishMonth = 2, PublishYear = 1987, Description = "The Abyss Gazes Also" });
+      issues.Add(new ComicIssue { IssueID = "watchmen-7", SeriesTitle = "Watchmen", IssueNumber = "7", PublishMonth = 3, PublishYear = 1987, Description = "A Brother to Dragons" });
+      issues.Add(new ComicIssue { IssueID = "watchmen-8", SeriesTitle = "Watchmen", IssueNumber = "8", PublishMonth = 4, PublishYear = 1987, Description = "Old Ghosts" });
+      issues.Add(new ComicIssue { IssueID = "watchmen-9", SeriesTitle = "Watchmen", IssueNumber = "9", PublishMonth = 5, PublishYear = 1987, Description = "The Darkness of Mere Being" });
+      issues.Add(new ComicIssue { IssueID = "watchmen-10", SeriesTitle = "Watchmen", IssueNumber = "10", PublishMonth = 6, PublishYear = 1987, Description = "Two Riders Were Approaching" });
+      issues.Add(new ComicIssue { IssueID = "watchmen-11", SeriesTitle = "Watchmen", IssueNumber = "11", PublishMonth = 7, PublishYear = 1987, Description = "Look On My Works, Ye Mighty..." });
+      issues.Add(new ComicIssue { IssueID = "watchmen-12", SeriesTitle = "Watchmen", IssueNumber = "12", PublishMonth = 8, PublishYear = 1987, Description = "A Stronger Loving World" });
+      issues.Add(new ComicIssue { IssueID = "we3-1", SeriesTitle = "We3", IssueNumber = "1", PublishYear = 2004, Description = "We3 #1" });
+      issues.Add(new ComicIssue { IssueID = "we3-2", SeriesTitle = "We3", IssueNumber = "2", PublishYear = 2004, Description = "We3 #2" });
+      issues.Add(new ComicIssue { IssueID = "we3-3", SeriesTitle = "We3", IssueNumber = "3", PublishYear = 2004, Description = "We3 #3" });
+      issues.Add(new ComicIssue { IssueID = "wonder-woman-vol-4-1", SeriesTitle = "Wonder Woman (vol. 4)", IssueNumber = "1", PublishMonth = 9, PublishYear = 2011, Description = "Wonder Woman (vol. 4) #1" });
+      issues.Add(new ComicIssue { IssueID = "wonder-woman-vol-4-2", SeriesTitle = "Wonder Woman (vol. 4)", IssueNumber = "2", PublishMonth = 10, PublishYear = 2011, Description = "Wonder Woman (vol. 4) #2" });
+      issues.Add(new ComicIssue { IssueID = "wonder-woman-vol-4-3", SeriesTitle = "Wonder Woman (vol. 4)", IssueNumber = "3", PublishMonth = 11, PublishYear = 2011, Description = "Wonder Woman (vol. 4) #3" });
+      issues.Add(new ComicIssue { IssueID = "wonder-woman-vol-4-4", SeriesTitle = "Wonder Woman (vol. 4)", IssueNumber = "4", PublishMonth = 12, PublishYear = 2011, Description = "Wonder Woman (vol. 4) #4" });
+      issues.Add(new ComicIssue { IssueID = "wonder-woman-vol-4-5", SeriesTitle = "Wonder Woman (vol. 4)", IssueNumber = "5", PublishMonth = 1, PublishYear = 2012, Description = "Wonder Woman (vol. 4) #5" });
+      issues.Add(new ComicIssue { IssueID = "wonder-woman-vol-4-6", SeriesTitle = "Wonder Woman (vol. 4)", IssueNumber = "6", PublishMonth = 2, PublishYear = 2012, Description = "Wonder Woman (vol. 4) #6" });
+      issues.Add(new ComicIssue { IssueID = "wonder-woman-vol-4-7", SeriesTitle = "Wonder Woman (vol. 4)", IssueNumber = "7", PublishMonth = 3, PublishYear = 2012, Description = "Wonder Woman (vol. 4) #7" });
+      issues.Add(new ComicIssue { IssueID = "wonder-woman-vol-4-8", SeriesTitle = "Wonder Woman (vol. 4)", IssueNumber = "8", PublishMonth = 4, PublishYear = 2012, Description = "Wonder Woman (vol. 4) #8" });
+      issues.Add(new ComicIssue { IssueID = "wonder-woman-vol-4-9", SeriesTitle = "Wonder Woman (vol. 4)", IssueNumber = "9", PublishMonth = 5, PublishYear = 2012, Description = "Wonder Woman (vol. 4) #9" });
+      issues.Add(new ComicIssue { IssueID = "wonder-woman-vol-4-10", SeriesTitle = "Wonder Woman (vol. 4)", IssueNumber = "10", PublishMonth = 6, PublishYear = 2012, Description = "Wonder Woman (vol. 4) #10" });
+      issues.Add(new ComicIssue { IssueID = "wonder-woman-vol-4-11", SeriesTitle = "Wonder Woman (vol. 4)", IssueNumber = "11", PublishMonth = 7, PublishYear = 2012, Description = "Wonder Woman (vol. 4) #11" });
+      issues.Add(new ComicIssue { IssueID = "wonder-woman-vol-4-12", SeriesTitle = "Wonder Woman (vol. 4)", IssueNumber = "12", PublishMonth = 8, PublishYear = 2012, Description = "Wonder Woman (vol. 4) #12" });
+      issues.Add(new ComicIssue { IssueID = "wonder-woman-earth-one-1", SeriesTitle = "Wonder Woman: Earth One", IssueNumber = "1", PublishMonth = 6, PublishYear = 2016, Description = "Wonder Woman: Earth One #1" });
+      issues.Add(new ComicIssue { IssueID = "wonder-woman-earth-one-2", SeriesTitle = "Wonder Woman: Earth One", IssueNumber = "2", PublishMonth = 10, PublishYear = 2017, Description = "Wonder Woman: Earth One #2" });
+      issues.Add(new ComicIssue { IssueID = "wonder-woman-earth-one-3", SeriesTitle = "Wonder Woman: Earth One", IssueNumber = "3", PublishMonth = 5, PublishYear = 2018, Description = "Wonder Woman: Earth One #3" });
+      issues.Add(new ComicIssue { IssueID = "y-the-last-man-1", SeriesTitle = "Y: The Last Man", IssueNumber = "1", PublishMonth = 1, PublishYear = 2002, Description = "Y: The Last Man #1" });
+      issues.Add(new ComicIssue { IssueID = "y-the-last-man-2", SeriesTitle = "Y: The Last Man", IssueNumber = "2", PublishMonth = 2, PublishYear = 2002, Description = "Y: The Last Man #2" });
+      issues.Add(new ComicIssue { IssueID = "y-the-last-man-3", SeriesTitle = "Y: The Last Man", IssueNumber = "3", PublishMonth = 3, PublishYear = 2002, Description = "Y: The Last Man #3" });
+      issues.Add(new ComicIssue { IssueID = "y-the-last-man-4", SeriesTitle = "Y: The Last Man", IssueNumber = "4", PublishMonth = 4, PublishYear = 2002, Description = "Y: The Last Man #4" });
+      issues.Add(new ComicIssue { IssueID = "y-the-last-man-5", SeriesTitle = "Y: The Last Man", IssueNumber = "5", PublishMonth = 5, PublishYear = 2002, Description = "Y: The Last Man #5" });
+      issues.Add(new ComicIssue { IssueID = "y-the-last-man-6", SeriesTitle = "Y: The Last Man", IssueNumber = "6", PublishMonth = 6, PublishYear = 2002, Description = "Y: The Last Man #6" });
+      issues.Add(new ComicIssue { IssueID = "y-the-last-man-7", SeriesTitle = "Y: The Last Man", IssueNumber = "7", PublishMonth = 7, PublishYear = 2002, Description = "Y: The Last Man #7" });
+      issues.Add(new ComicIssue { IssueID = "y-the-last-man-8", SeriesTitle = "Y: The Last Man", IssueNumber = "8", PublishMonth = 8, PublishYear = 2002, Description = "Y: The Last Man #8" });
+      issues.Add(new ComicIssue { IssueID = "y-the-last-man-9", SeriesTitle = "Y: The Last Man", IssueNumber = "9", PublishMonth = 9, PublishYear = 2002, Description = "Y: The Last Man #9" });
+      issues.Add(new ComicIssue { IssueID = "y-the-last-man-10", SeriesTitle = "Y: The Last Man", IssueNumber = "10", PublishMonth = 10, PublishYear = 2002, Description = "Y: The Last Man #10" });
+  
+      // Marvel Comics
+      issues.Add(new ComicIssue { IssueID = "black-panther-volume-5-1", SeriesTitle = "Black Panther (Volume 5)", IssueNumber = "1", PublishYear = 2016, Description = "Black Panther (Volume 5) #1" });
+      issues.Add(new ComicIssue { IssueID = "black-panther-volume-5-2", SeriesTitle = "Black Panther (Volume 5)", IssueNumber = "2", PublishYear = 2016, Description = "Black Panther (Volume 5) #2" });
+      issues.Add(new ComicIssue { IssueID = "black-panther-volume-5-3", SeriesTitle = "Black Panther (Volume 5)", IssueNumber = "3", PublishYear = 2016, Description = "Black Panther (Volume 5) #3" });
+      issues.Add(new ComicIssue { IssueID = "black-panther-volume-5-4", SeriesTitle = "Black Panther (Volume 5)", IssueNumber = "4", PublishYear = 2016, Description = "Black Panther (Volume 5) #4" });
+      issues.Add(new ComicIssue { IssueID = "black-panther-volume-5-5", SeriesTitle = "Black Panther (Volume 5)", IssueNumber = "5", PublishYear = 2016, Description = "Black Panther (Volume 5) #5" });
+      issues.Add(new ComicIssue { IssueID = "black-panther-volume-5-6", SeriesTitle = "Black Panther (Volume 5)", IssueNumber = "6", PublishYear = 2016, Description = "Black Panther (Volume 5) #6" });
+      issues.Add(new ComicIssue { IssueID = "black-panther-volume-5-7", SeriesTitle = "Black Panther (Volume 5)", IssueNumber = "7", PublishYear = 2016, Description = "Black Panther (Volume 5) #7" });
+      issues.Add(new ComicIssue { IssueID = "black-panther-volume-5-8", SeriesTitle = "Black Panther (Volume 5)", IssueNumber = "8", PublishYear = 2016, Description = "Black Panther (Volume 5) #8" });
+      issues.Add(new ComicIssue { IssueID = "black-panther-volume-5-9", SeriesTitle = "Black Panther (Volume 5)", IssueNumber = "9", PublishYear = 2016, Description = "Black Panther (Volume 5) #9" });
+      issues.Add(new ComicIssue { IssueID = "black-panther-volume-5-10", SeriesTitle = "Black Panther (Volume 5)", IssueNumber = "10", PublishYear = 2016, Description = "Black Panther (Volume 5) #10" });
+      issues.Add(new ComicIssue { IssueID = "black-panther-volume-5-11", SeriesTitle = "Black Panther (Volume 5)", IssueNumber = "11", PublishYear = 2016, Description = "Black Panther (Volume 5) #11" });
+      issues.Add(new ComicIssue { IssueID = "black-panther-volume-5-12", SeriesTitle = "Black Panther (Volume 5)", IssueNumber = "12", PublishYear = 2016, Description = "Black Panther (Volume 5) #12" });
+      issues.Add(new ComicIssue { IssueID = "daredevil-volume-1-226", SeriesTitle = "Daredevil (Volume 1)", IssueNumber = "226", PublishYear = 1986, Description = "Daredevil (Volume 1) #226" });
+      issues.Add(new ComicIssue { IssueID = "daredevil-volume-1-227", SeriesTitle = "Daredevil (Volume 1)", IssueNumber = "227", PublishYear = 1986, Description = "Daredevil (Volume 1) #227" });
+      issues.Add(new ComicIssue { IssueID = "daredevil-volume-1-228", SeriesTitle = "Daredevil (Volume 1)", IssueNumber = "228", PublishYear = 1986, Description = "Daredevil (Volume 1) #228" });
+      issues.Add(new ComicIssue { IssueID = "daredevil-volume-1-229", SeriesTitle = "Daredevil (Volume 1)", IssueNumber = "229", PublishYear = 1986, Description = "Daredevil (Volume 1) #229" });
+      issues.Add(new ComicIssue { IssueID = "daredevil-volume-1-230", SeriesTitle = "Daredevil (Volume 1)", IssueNumber = "230", PublishYear = 1986, Description = "Daredevil (Volume 1) #230" });
+      issues.Add(new ComicIssue { IssueID = "daredevil-volume-1-231", SeriesTitle = "Daredevil (Volume 1)", IssueNumber = "231", PublishYear = 1986, Description = "Daredevil (Volume 1) #231" });
+      issues.Add(new ComicIssue { IssueID = "daredevil-volume-1-232", SeriesTitle = "Daredevil (Volume 1)", IssueNumber = "232", PublishYear = 1986, Description = "Daredevil (Volume 1) #232" });
+      issues.Add(new ComicIssue { IssueID = "daredevil-volume-1-233", SeriesTitle = "Daredevil (Volume 1)", IssueNumber = "233", PublishYear = 1986, Description = "Daredevil (Volume 1) #233" });
+      issues.Add(new ComicIssue { IssueID = "captain-america-volume-5-1", SeriesTitle = "Captain America (Volume 5)", IssueNumber = "1", PublishYear = 2005, Description = "Captain America (Volume 5) #1" });
+      issues.Add(new ComicIssue { IssueID = "captain-america-volume-5-2", SeriesTitle = "Captain America (Volume 5)", IssueNumber = "2", PublishYear = 2005, Description = "Captain America (Volume 5) #2" });
+      issues.Add(new ComicIssue { IssueID = "captain-america-volume-5-3", SeriesTitle = "Captain America (Volume 5)", IssueNumber = "3", PublishYear = 2005, Description = "Captain America (Volume 5) #3" });
+      issues.Add(new ComicIssue { IssueID = "captain-america-volume-5-4", SeriesTitle = "Captain America (Volume 5)", IssueNumber = "4", PublishYear = 2005, Description = "Captain America (Volume 5) #4" });
+      issues.Add(new ComicIssue { IssueID = "captain-america-volume-5-5", SeriesTitle = "Captain America (Volume 5)", IssueNumber = "5", PublishYear = 2005, Description = "Captain America (Volume 5) #5" });
+      issues.Add(new ComicIssue { IssueID = "captain-america-volume-5-6", SeriesTitle = "Captain America (Volume 5)", IssueNumber = "6", PublishYear = 2005, Description = "Captain America (Volume 5) #6" });
+      issues.Add(new ComicIssue { IssueID = "captain-america-volume-5-7", SeriesTitle = "Captain America (Volume 5)", IssueNumber = "7", PublishYear = 2005, Description = "Captain America (Volume 5) #7" });
+      issues.Add(new ComicIssue { IssueID = "captain-america-volume-5-8", SeriesTitle = "Captain America (Volume 5)", IssueNumber = "8", PublishYear = 2005, Description = "Captain America (Volume 5) #8" });
+      issues.Add(new ComicIssue { IssueID = "captain-america-volume-5-9", SeriesTitle = "Captain America (Volume 5)", IssueNumber = "9", PublishYear = 2005, Description = "Captain America (Volume 5) #9" });
+      issues.Add(new ComicIssue { IssueID = "captain-america-volume-5-10", SeriesTitle = "Captain America (Volume 5)", IssueNumber = "10", PublishYear = 2005, Description = "Captain America (Volume 5) #10" });
+      issues.Add(new ComicIssue { IssueID = "captain-america-volume-5-11", SeriesTitle = "Captain America (Volume 5)", IssueNumber = "11", PublishYear = 2005, Description = "Captain America (Volume 5) #11" });
+      issues.Add(new ComicIssue { IssueID = "captain-america-volume-5-12", SeriesTitle = "Captain America (Volume 5)", IssueNumber = "12", PublishYear = 2005, Description = "Captain America (Volume 5) #12" });
+      issues.Add(new ComicIssue { IssueID = "captain-america-volume-5-13", SeriesTitle = "Captain America (Volume 5)", IssueNumber = "13", PublishYear = 2005, Description = "Captain America (Volume 5) #13" });
+      issues.Add(new ComicIssue { IssueID = "captain-america-volume-5-14", SeriesTitle = "Captain America (Volume 5)", IssueNumber = "14", PublishYear = 2005, Description = "Captain America (Volume 5) #14" });
+      issues.Add(new ComicIssue { IssueID = "civil-war-1", SeriesTitle = "Civil War", IssueNumber = "1", PublishYear = 2006, Description = "Civil War #1" });
+      issues.Add(new ComicIssue { IssueID = "civil-war-2", SeriesTitle = "Civil War", IssueNumber = "2", PublishYear = 2006, Description = "Civil War #2" });
+      issues.Add(new ComicIssue { IssueID = "civil-war-3", SeriesTitle = "Civil War", IssueNumber = "3", PublishYear = 2006, Description = "Civil War #3" });
+      issues.Add(new ComicIssue { IssueID = "civil-war-4", SeriesTitle = "Civil War", IssueNumber = "4", PublishYear = 2006, Description = "Civil War #4" });
+      issues.Add(new ComicIssue { IssueID = "civil-war-5", SeriesTitle = "Civil War", IssueNumber = "5", PublishYear = 2006, Description = "Civil War #5" });
+      issues.Add(new ComicIssue { IssueID = "civil-war-6", SeriesTitle = "Civil War", IssueNumber = "6", PublishYear = 2006, Description = "Civil War #6" });
+      issues.Add(new ComicIssue { IssueID = "civil-war-7", SeriesTitle = "Civil War", IssueNumber = "7", PublishYear = 2006, Description = "Civil War #7" });
+      issues.Add(new ComicIssue { IssueID = "wolverine-volume-3-66", SeriesTitle = "Wolverine (Volume 3)", IssueNumber = "66", PublishYear = 2008, Description = "Wolverine (Volume 3) #66" });
+      issues.Add(new ComicIssue { IssueID = "wolverine-volume-3-67", SeriesTitle = "Wolverine (Volume 3)", IssueNumber = "67", PublishYear = 2008, Description = "Wolverine (Volume 3) #67" });
+      issues.Add(new ComicIssue { IssueID = "wolverine-volume-3-68", SeriesTitle = "Wolverine (Volume 3)", IssueNumber = "68", PublishYear = 2008, Description = "Wolverine (Volume 3) #68" });
+      issues.Add(new ComicIssue { IssueID = "wolverine-volume-3-69", SeriesTitle = "Wolverine (Volume 3)", IssueNumber = "69", PublishYear = 2008, Description = "Wolverine (Volume 3) #69" });
+      issues.Add(new ComicIssue { IssueID = "wolverine-volume-3-70", SeriesTitle = "Wolverine (Volume 3)", IssueNumber = "70", PublishYear = 2008, Description = "Wolverine (Volume 3) #70" });
+      issues.Add(new ComicIssue { IssueID = "wolverine-volume-3-71", SeriesTitle = "Wolverine (Volume 3)", IssueNumber = "71", PublishYear = 2008, Description = "Wolverine (Volume 3) #71" });
+      issues.Add(new ComicIssue { IssueID = "wolverine-volume-3-72", SeriesTitle = "Wolverine (Volume 3)", IssueNumber = "72", PublishYear = 2008, Description = "Wolverine (Volume 3) #72" });
+      issues.Add(new ComicIssue { IssueID = "wolverine-old-man-logan-giant-size-1", SeriesTitle = "Wolverine: Old Man Logan Giant-Size", IssueNumber = "1", PublishYear = 2009, Description = "Wolverine: Old Man Logan Giaut-Size #1" });
+      issues.Add(new ComicIssue { IssueID = "hawkeye-volume-4-1", SeriesTitle = "Hawkeye (Volume 4)", IssueNumber = "1", PublishYear = 2012, Description = "Hawkeye (Volume 4) #1" });
+      issues.Add(new ComicIssue { IssueID = "hawkeye-volume-4-2", SeriesTitle = "Hawkeye (Volume 4)", IssueNumber = "2", PublishYear = 2012, Description = "Hawkeye (Volume 4) #2" });
+      issues.Add(new ComicIssue { IssueID = "hawkeye-volume-4-3", SeriesTitle = "Hawkeye (Volume 4)", IssueNumber = "3", PublishYear = 2012, Description = "Hawkeye (Volume 4) #3" });
+      issues.Add(new ComicIssue { IssueID = "hawkeye-volume-4-4", SeriesTitle = "Hawkeye (Volume 4)", IssueNumber = "4", PublishYear = 2012, Description = "Hawkeye (Volume 4) #4" });
+      issues.Add(new ComicIssue { IssueID = "hawkeye-volume-4-5", SeriesTitle = "Hawkeye (Volume 4)", IssueNumber = "5", PublishYear = 2012, Description = "Hawkeye (Volume 4) #5" });
+      issues.Add(new ComicIssue { IssueID = "hawkeye-volume-4-6", SeriesTitle = "Hawkeye (Volume 4)", IssueNumber = "6", PublishYear = 2012, Description = "Hawkeye (Volume 4) #6" });
+      issues.Add(new ComicIssue { IssueID = "hawkeye-volume-4-7", SeriesTitle = "Hawkeye (Volume 4)", IssueNumber = "7", PublishYear = 2012, Description = "Hawkeye (Volume 4) #7" });
+      issues.Add(new ComicIssue { IssueID = "hawkeye-volume-4-8", SeriesTitle = "Hawkeye (Volume 4)", IssueNumber = "8", PublishYear = 2012, Description = "Hawkeye (Volume 4) #8" });
+      issues.Add(new ComicIssue { IssueID = "hawkeye-volume-4-9", SeriesTitle = "Hawkeye (Volume 4)", IssueNumber = "9", PublishYear = 2012, Description = "Hawkeye (Volume 4) #9" });
+      issues.Add(new ComicIssue { IssueID = "hawkeye-volume-4-10", SeriesTitle = "Hawkeye (Volume 4)", IssueNumber = "10", PublishYear = 2012, Description = "Hawkeye (Volume 4) #10" });
+      issues.Add(new ComicIssue { IssueID = "hawkeye-volume-4-11", SeriesTitle = "Hawkeye (Volume 4)", IssueNumber = "11", PublishYear = 2012, Description = "Hawkeye (Volume 4) #11" });
+      issues.Add(new ComicIssue { IssueID = "hawkeye-young-avengers-presents-6", SeriesTitle = "Young Avengers Presents", IssueNumber = "6", PublishYear = 2012, Description = "Young Avengers Presents #6" });
+      issues.Add(new ComicIssue { IssueID = "punisher-volume-5-1", SeriesTitle = "Punisher (Volume 5)", IssueNumber = "1", PublishYear = 2000, Description = "Punisher (Volume 5) #1" });
+      issues.Add(new ComicIssue { IssueID = "punisher-volume-5-2", SeriesTitle = "Punisher (Volume 5)", IssueNumber = "2", PublishYear = 2000, Description = "Punisher (Volume 5) #2" });
+      issues.Add(new ComicIssue { IssueID = "punisher-volume-5-3", SeriesTitle = "Punisher (Volume 5)", IssueNumber = "3", PublishYear = 2000, Description = "Punisher (Volume 5) #3" });
+      issues.Add(new ComicIssue { IssueID = "punisher-volume-5-4", SeriesTitle = "Punisher (Volume 5)", IssueNumber = "4", PublishYear = 2000, Description = "Punisher (Volume 5) #4" });
+      issues.Add(new ComicIssue { IssueID = "punisher-volume-5-5", SeriesTitle = "Punisher (Volume 5)", IssueNumber = "5", PublishYear = 2000, Description = "Punisher (Volume 5) #5" });
+      issues.Add(new ComicIssue { IssueID = "punisher-volume-5-6", SeriesTitle = "Punisher (Volume 5)", IssueNumber = "6", PublishYear = 2000, Description = "Punisher (Volume 5) #6" });
+      issues.Add(new ComicIssue { IssueID = "punisher-volume-5-7", SeriesTitle = "Punisher (Volume 5)", IssueNumber = "7", PublishYear = 2000, Description = "Punisher (Volume 5) #7" });
+      issues.Add(new ComicIssue { IssueID = "punisher-volume-5-8", SeriesTitle = "Punisher (Volume 5)", IssueNumber = "8", PublishYear = 2000, Description = "Punisher (Volume 5) #8" });
+      issues.Add(new ComicIssue { IssueID = "punisher-volume-5-9", SeriesTitle = "Punisher (Volume 5)", IssueNumber = "9", PublishYear = 2000, Description = "Punisher (Volume 5) #9" });
+      issues.Add(new ComicIssue { IssueID = "punisher-volume-5-10", SeriesTitle = "Punisher (Volume 5)", IssueNumber = "10", PublishYear = 2000, Description = "Punisher (Volume 5) #10" });
+      issues.Add(new ComicIssue { IssueID = "punisher-volume-5-11", SeriesTitle = "Punisher (Volume 5)", IssueNumber = "11", PublishYear = 2000, Description = "Punisher (Volume 5) #11" });
+      issues.Add(new ComicIssue { IssueID = "punisher-volume-5-12", SeriesTitle = "Punisher (Volume 5)", IssueNumber = "12", PublishYear = 2000, Description = "Punisher (Volume 5) #12" });
+      issues.Add(new ComicIssue { IssueID = "incredible-hulk-volume-2-92", SeriesTitle = "Incredible Hulk (Volume 2)", IssueNumber = "92", PublishYear = 2006, Description = "Incredible Hulk (Volume 2) #92" });
+      issues.Add(new ComicIssue { IssueID = "incredible-hulk-volume-2-93", SeriesTitle = "Incredible Hulk (Volume 2)", IssueNumber = "93", PublishYear = 2006, Description = "Incredible Hulk (Volume 2) #93" });
+      issues.Add(new ComicIssue { IssueID = "incredible-hulk-volume-2-94", SeriesTitle = "Incredible Hulk (Volume 2)", IssueNumber = "94", PublishYear = 2006, Description = "Incredible Hulk (Volume 2) #94" });
+      issues.Add(new ComicIssue { IssueID = "incredible-hulk-volume-2-95", SeriesTitle = "Incredible Hulk (Volume 2)", IssueNumber = "95", PublishYear = 2006, Description = "Incredible Hulk (Volume 2) #95" });
+      issues.Add(new ComicIssue { IssueID = "incredible-hulk-volume-2-96", SeriesTitle = "Incredible Hulk (Volume 2)", IssueNumber = "96", PublishYear = 2006, Description = "Incredible Hulk (Volume 2) #96" });
+      issues.Add(new ComicIssue { IssueID = "incredible-hulk-volume-2-97", SeriesTitle = "Incredible Hulk (Volume 2)", IssueNumber = "97", PublishYear = 2006, Description = "Incredible Hulk (Volume 2) #97" });
+      issues.Add(new ComicIssue { IssueID = "incredible-hulk-volume-2-98", SeriesTitle = "Incredible Hulk (Volume 2)", IssueNumber = "98", PublishYear = 2006, Description = "Incredible Hulk (Volume 2) #98" });
+      issues.Add(new ComicIssue { IssueID = "incredible-hulk-volume-2-99", SeriesTitle = "Incredible Hulk (Volume 2)", IssueNumber = "99", PublishYear = 2006, Description = "Incredible Hulk (Volume 2) #99" });
+      issues.Add(new ComicIssue { IssueID = "incredible-hulk-volume-2-100", SeriesTitle = "Incredible Hulk (Volume 2)", IssueNumber = "100", PublishYear = 2006, Description = "Incredible Hulk (Volume 2) #100" });
+      issues.Add(new ComicIssue { IssueID = "incredible-hulk-volume-2-101", SeriesTitle = "Incredible Hulk (Volume 2)", IssueNumber = "101", PublishYear = 2006, Description = "Incredible Hulk (Volume 2) #101" });
+      issues.Add(new ComicIssue { IssueID = "incredible-hulk-volume-2-102", SeriesTitle = "Incredible Hulk (Volume 2)", IssueNumber = "102", PublishYear = 2006, Description = "Incredible Hulk (Volume 2) #102" });
+      issues.Add(new ComicIssue { IssueID = "incredible-hulk-volume-2-103", SeriesTitle = "Incredible Hulk (Volume 2)", IssueNumber = "103", PublishYear = 2006, Description = "Incredible Hulk (Volume 2) #103" });
+      issues.Add(new ComicIssue { IssueID = "incredible-hulk-volume-2-104", SeriesTitle = "Incredible Hulk (Volume 2)", IssueNumber = "104", PublishYear = 2006, Description = "Incredible Hulk (Volume 2) #104" });
+      issues.Add(new ComicIssue { IssueID = "incredible-hulk-volume-2-105", SeriesTitle = "Incredible Hulk (Volume 2)", IssueNumber = "105", PublishYear = 2006, Description = "Incredible Hulk (Volume 2) #105" });
+      issues.Add(new ComicIssue { IssueID = "giant-size-hulk-1", SeriesTitle = "Giant-Size Hulk", IssueNumber = "1", PublishYear = 2006, Description = "Giant-Size Hulk #1" });
+      issues.Add(new ComicIssue { IssueID = "the-visions-1", SeriesTitle = "The Visions", IssueNumber = "1", PublishYear = 2015, Description = "The Visions #1" });
+      issues.Add(new ComicIssue { IssueID = "the-visions-2", SeriesTitle = "The Visions", IssueNumber = "2", PublishYear = 2015, Description = "The Visions #2" });
+      issues.Add(new ComicIssue { IssueID = "the-visions-3", SeriesTitle = "The Visions", IssueNumber = "3", PublishYear = 2015, Description = "The Visions #3" });
+      issues.Add(new ComicIssue { IssueID = "the-visions-4", SeriesTitle = "The Visions", IssueNumber = "4", PublishYear = 2015, Description = "The Visions #4" });
+      issues.Add(new ComicIssue { IssueID = "the-visions-5", SeriesTitle = "The Visions", IssueNumber = "5", PublishYear = 2015, Description = "The Visions #5" });
+      issues.Add(new ComicIssue { IssueID = "the-visions-6", SeriesTitle = "The Visions", IssueNumber = "6", PublishYear = 2015, Description = "The Visions #6" });
+      issues.Add(new ComicIssue { IssueID = "the-visions-7", SeriesTitle = "The Visions", IssueNumber = "7", PublishYear = 2015, Description = "The Visions #7" });
+      issues.Add(new ComicIssue { IssueID = "the-visions-8", SeriesTitle = "The Visions", IssueNumber = "8", PublishYear = 2015, Description = "The Visions #8" });
+      issues.Add(new ComicIssue { IssueID = "the-visions-9", SeriesTitle = "The Visions", IssueNumber = "9", PublishYear = 2015, Description = "The Visions #9" });
+      issues.Add(new ComicIssue { IssueID = "the-visions-10", SeriesTitle = "The Visions", IssueNumber = "10", PublishYear = 2015, Description = "The Visions #10" });
+      issues.Add(new ComicIssue { IssueID = "the-visions-11", SeriesTitle = "The Visions", IssueNumber = "11", PublishYear = 2015, Description = "The Visions #11" });
+      issues.Add(new ComicIssue { IssueID = "the-visions-12", SeriesTitle = "The Visions", IssueNumber = "12", PublishYear = 2015, Description = "The Visions #12" });
+      issues.Add(new ComicIssue { IssueID = "spider-men-1", SeriesTitle = "Spider-Men", IssueNumber = "1", PublishYear = 2012, Description = "Spider-Men #1" });
+      issues.Add(new ComicIssue { IssueID = "spider-men-2", SeriesTitle = "Spider-Men", IssueNumber = "2", PublishYear = 2012, Description = "Spider-Men #2" });
+      issues.Add(new ComicIssue { IssueID = "spider-men-3", SeriesTitle = "Spider-Men", IssueNumber = "3", PublishYear = 2012, Description = "Spider-Men #3" });
+      issues.Add(new ComicIssue { IssueID = "spider-men-4", SeriesTitle = "Spider-Men", IssueNumber = "4", PublishYear = 2012, Description = "Spider-Men #4" });
+      issues.Add(new ComicIssue { IssueID = "spider-men-5", SeriesTitle = "Spider-Men", IssueNumber = "5", PublishYear = 2012, Description = "Spider-Men #5" });
+      issues.Add(new ComicIssue { IssueID = "spider-men-ii-1", SeriesTitle = "Spider-Men II", IssueNumber = "1", PublishYear = 2017, Description = "Spider-Men II #1" });
+      issues.Add(new ComicIssue { IssueID = "spider-men-ii-2", SeriesTitle = "Spider-Men II", IssueNumber = "2", PublishYear = 2017, Description = "Spider-Men II #2" });
+      issues.Add(new ComicIssue { IssueID = "spider-men-ii-3", SeriesTitle = "Spider-Men II", IssueNumber = "3", PublishYear = 2017, Description = "Spider-Men II #3" });
+      issues.Add(new ComicIssue { IssueID = "spider-men-ii-4", SeriesTitle = "Spider-Men II", IssueNumber = "4", PublishYear = 2017, Description = "Spider-Men II #4" });
+      issues.Add(new ComicIssue { IssueID = "spider-men-ii-5", SeriesTitle = "Spider-Men II", IssueNumber = "5", PublishYear = 2017, Description = "Spider-Men II #5" });
+      issues.Add(new ComicIssue { IssueID = "the-ultimates-1", SeriesTitle = "The Ultimates", IssueNumber = "1" });
+      issues.Add(new ComicIssue { IssueID = "the-ultimates-2", SeriesTitle = "The Ultimates", IssueNumber = "2" });
+      issues.Add(new ComicIssue { IssueID = "the-ultimates-3", SeriesTitle = "The Ultimates", IssueNumber = "3" });
+      issues.Add(new ComicIssue { IssueID = "the-ultimates-4", SeriesTitle = "The Ultimates", IssueNumber = "4" });
+      issues.Add(new ComicIssue { IssueID = "the-ultimates-5", SeriesTitle = "The Ultimates", IssueNumber = "5" });
+      issues.Add(new ComicIssue { IssueID = "the-ultimates-6", SeriesTitle = "The Ultimates", IssueNumber = "6" });
+      issues.Add(new ComicIssue { IssueID = "the-ultimates-7", SeriesTitle = "The Ultimates", IssueNumber = "7" });
+      issues.Add(new ComicIssue { IssueID = "the-ultimates-8", SeriesTitle = "The Ultimates", IssueNumber = "8" });
+      issues.Add(new ComicIssue { IssueID = "the-ultimates-9", SeriesTitle = "The Ultimates", IssueNumber = "9" });
+      issues.Add(new ComicIssue { IssueID = "the-ultimates-10", SeriesTitle = "The Ultimates", IssueNumber = "10" });
+      issues.Add(new ComicIssue { IssueID = "the-ultimates-11", SeriesTitle = "The Ultimates", IssueNumber = "11" });
+      issues.Add(new ComicIssue { IssueID = "the-ultimates-12", SeriesTitle = "The Ultimates", IssueNumber = "12" });
+      issues.Add(new ComicIssue { IssueID = "the-ultimates-13", SeriesTitle = "The Ultimates", IssueNumber = "13" });
+      issues.Add(new ComicIssue { IssueID = "avengers-2012-35", SeriesTitle = "Avengers (2012)", IssueNumber = "35", PublishYear = 2014, Description = "Avengers (2012) #35" });
+      issues.Add(new ComicIssue { IssueID = "avengers-2012-36", SeriesTitle = "Avengers (2012)", IssueNumber = "36", PublishYear = 2014, Description = "Avengers (2012) #36" });
+      issues.Add(new ComicIssue { IssueID = "avengers-2012-37", SeriesTitle = "Avengers (2012)", IssueNumber = "37", PublishYear = 2014, Description = "Avengers (2012) #37" });
+      issues.Add(new ComicIssue { IssueID = "avengers-2012-38", SeriesTitle = "Avengers (2012)", IssueNumber = "38", PublishYear = 2014, Description = "Avengers (2012) #38" });
+      issues.Add(new ComicIssue { IssueID = "avengers-2012-39", SeriesTitle = "Avengers (2012)", IssueNumber = "39", PublishYear = 2014, Description = "Avengers (2012) #39" });
+      issues.Add(new ComicIssue { IssueID = "avengers-2012-40", SeriesTitle = "Avengers (2012)", IssueNumber = "40", PublishYear = 2014, Description = "Avengers (2012) #40" });
+      issues.Add(new ComicIssue { IssueID = "avengers-2012-41", SeriesTitle = "Avengers (2012)", IssueNumber = "41", PublishYear = 2014, Description = "Avengers (2012) #41" });
+      issues.Add(new ComicIssue { IssueID = "avengers-2012-42", SeriesTitle = "Avengers (2012)", IssueNumber = "42", PublishYear = 2014, Description = "Avengers (2012) #42" });
+      issues.Add(new ComicIssue { IssueID = "avengers-2012-43", SeriesTitle = "Avengers (2012)", IssueNumber = "43", PublishYear = 2014, Description = "Avengers (2012) #43" });
+      issues.Add(new ComicIssue { IssueID = "avengers-2012-44", SeriesTitle = "Avengers (2012)", IssueNumber = "44", PublishYear = 2014, Description = "Avengers (2012) #44" });
+      issues.Add(new ComicIssue { IssueID = "new-avengers-2013-24", SeriesTitle = "New Avengers (2013)", IssueNumber = "24", PublishYear = 2014, Description = "New Avengers (2013) #24" });
+      issues.Add(new ComicIssue { IssueID = "new-avengers-2013-25", SeriesTitle = "New Avengers (2013)", IssueNumber = "25", PublishYear = 2014, Description = "New Avengers (2013) #25" });
+      issues.Add(new ComicIssue { IssueID = "new-avengers-2013-26", SeriesTitle = "New Avengers (2013)", IssueNumber = "26", PublishYear = 2014, Description = "New Avengers (2013) #26" });
+      issues.Add(new ComicIssue { IssueID = "new-avengers-2013-27", SeriesTitle = "New Avengers (2013)", IssueNumber = "27", PublishYear = 2014, Description = "New Avengers (2013) #27" });
+      issues.Add(new ComicIssue { IssueID = "new-avengers-2013-28", SeriesTitle = "New Avengers (2013)", IssueNumber = "28", PublishYear = 2014, Description = "New Avengers (2013) #28" });
+      issues.Add(new ComicIssue { IssueID = "new-avengers-2013-29", SeriesTitle = "New Avengers (2013)", IssueNumber = "29", PublishYear = 2014, Description = "New Avengers (2013) #29" });
+      issues.Add(new ComicIssue { IssueID = "new-avengers-2013-30", SeriesTitle = "New Avengers (2013)", IssueNumber = "30", PublishYear = 2014, Description = "New Avengers (2013) #30" });
+      issues.Add(new ComicIssue { IssueID = "new-avengers-2013-31", SeriesTitle = "New Avengers (2013)", IssueNumber = "31", PublishYear = 2014, Description = "New Avengers (2013) #31" });
+      issues.Add(new ComicIssue { IssueID = "new-avengers-2013-32", SeriesTitle = "New Avengers (2013)", IssueNumber = "32", PublishYear = 2014, Description = "New Avengers (2013) #32" });
+      issues.Add(new ComicIssue { IssueID = "new-avengers-2013-33", SeriesTitle = "New Avengers (2013)", IssueNumber = "33", PublishYear = 2014, Description = "New Avengers (2013) #33" });
+      issues.Add(new ComicIssue { IssueID = "secret-wars-2015-1", SeriesTitle = "Secret Wars (2015)", IssueNumber = "1", PublishYear = 2015, Description = "Secret Wars (2015) #1" });
+      issues.Add(new ComicIssue { IssueID = "secret-wars-2015-2", SeriesTitle = "Secret Wars (2015)", IssueNumber = "2", PublishYear = 2015, Description = "Secret Wars (2015) #2" });
+      issues.Add(new ComicIssue { IssueID = "secret-wars-2015-3", SeriesTitle = "Secret Wars (2015)", IssueNumber = "3", PublishYear = 2015, Description = "Secret Wars (2015) #3" });
+      issues.Add(new ComicIssue { IssueID = "secret-wars-2015-4", SeriesTitle = "Secret Wars (2015)", IssueNumber = "4", PublishYear = 2015, Description = "Secret Wars (2015) #4" });
+      issues.Add(new ComicIssue { IssueID = "secret-wars-2015-5", SeriesTitle = "Secret Wars (2015)", IssueNumber = "5", PublishYear = 2015, Description = "Secret Wars (2015) #5" });
+      issues.Add(new ComicIssue { IssueID = "secret-wars-2015-6", SeriesTitle = "Secret Wars (2015)", IssueNumber = "6", PublishYear = 2015, Description = "Secret Wars (2015) #6" });
+      issues.Add(new ComicIssue { IssueID = "secret-wars-2015-7", SeriesTitle = "Secret Wars (2015)", IssueNumber = "7", PublishYear = 2015, Description = "Secret Wars (2015) #7" });
+      issues.Add(new ComicIssue { IssueID = "secret-wars-2015-8", SeriesTitle = "Secret Wars (2015)", IssueNumber = "8", PublishYear = 2015, Description = "Secret Wars (2015) #8" });
+      issues.Add(new ComicIssue { IssueID = "secret-wars-2015-9", SeriesTitle = "Secret Wars (2015)", IssueNumber = "9", PublishYear = 2015, Description = "Secret Wars (2015) #9" });
+      issues.Add(new ComicIssue { IssueID = "secret-wars-2015-free-comic-book-day-2015-1", SeriesTitle = "Secret Wars (2015) Free Comic Book Day 2015", IssueNumber = "1", PublishYear = 2015, Description = "Secret Wars (2015) Free Comic Book Day 2015 #1" });
+      issues.Add(new ComicIssue { IssueID = "all-new-x-men-2012-1", SeriesTitle = "All-New X-Men (2012)", IssueNumber = "1", PublishYear = 2012, Description = "All-New X-Men (2012) #1" });
+      issues.Add(new ComicIssue { IssueID = "all-new-x-men-2012-2", SeriesTitle = "All-New X-Men (2012)", IssueNumber = "2", PublishYear = 2012, Description = "All-New X-Men (2012) #2" });
+      issues.Add(new ComicIssue { IssueID = "all-new-x-men-2012-3", SeriesTitle = "All-New X-Men (2012)", IssueNumber = "3", PublishYear = 2012, Description = "All-New X-Men (2012) #3" });
+      issues.Add(new ComicIssue { IssueID = "all-new-x-men-2012-4", SeriesTitle = "All-New X-Men (2012)", IssueNumber = "4", PublishYear = 2012, Description = "All-New X-Men (2012) #4" });
+      issues.Add(new ComicIssue { IssueID = "all-new-x-men-2012-5", SeriesTitle = "All-New X-Men (2012)", IssueNumber = "5", PublishYear = 2012, Description = "All-New X-Men (2012) #5" });
+      issues.Add(new ComicIssue { IssueID = "all-new-x-men-2012-6", SeriesTitle = "All-New X-Men (2012)", IssueNumber = "6", PublishYear = 2012, Description = "All-New X-Men (2012) #6" });
+      issues.Add(new ComicIssue { IssueID = "all-new-x-men-2012-7", SeriesTitle = "All-New X-Men (2012)", IssueNumber = "7", PublishYear = 2012, Description = "All-New X-Men (2012) #7" });
+      issues.Add(new ComicIssue { IssueID = "all-new-x-men-2012-8", SeriesTitle = "All-New X-Men (2012)", IssueNumber = "8", PublishYear = 2012, Description = "All-New X-Men (2012) #8" });
+      issues.Add(new ComicIssue { IssueID = "all-new-x-men-2012-9", SeriesTitle = "All-New X-Men (2012)", IssueNumber = "9", PublishYear = 2012, Description = "All-New X-Men (2012) #9" });
+      issues.Add(new ComicIssue { IssueID = "all-new-x-men-2012-10", SeriesTitle = "All-New X-Men (2012)", IssueNumber = "10", PublishYear = 2012, Description = "All-New X-Men (2012) #10" });
+      issues.Add(new ComicIssue { IssueID = "captain-america-2004-22", SeriesTitle = "Captain America (2004)", IssueNumber = "22", PublishYear = 2007, Description = "Captain America (2004) #22" });
+      issues.Add(new ComicIssue { IssueID = "captain-america-2004-23", SeriesTitle = "Captain America (2004)", IssueNumber = "23", PublishYear = 2007, Description = "Captain America (2004) #23" });
+      issues.Add(new ComicIssue { IssueID = "captain-america-2004-24", SeriesTitle = "Captain America (2004)", IssueNumber = "24", PublishYear = 2007, Description = "Captain America (2004) #24" });
+      issues.Add(new ComicIssue { IssueID = "captain-america-2004-25", SeriesTitle = "Captain America (2004)", IssueNumber = "25", PublishYear = 2007, Description = "Captain America (2004) #25" });
+      issues.Add(new ComicIssue { IssueID = "captain-america-2004-26", SeriesTitle = "Captain America (2004)", IssueNumber = "26", PublishYear = 2007, Description = "Captain America (2004) #26" });
+      issues.Add(new ComicIssue { IssueID = "captain-america-2004-27", SeriesTitle = "Captain America (2004)", IssueNumber = "27", PublishYear = 2007, Description = "Captain America (2004) #27" });
+      issues.Add(new ComicIssue { IssueID = "captain-america-2004-28", SeriesTitle = "Captain America (2004)", IssueNumber = "28", PublishYear = 2007, Description = "Captain America (2004) #28" });
+      issues.Add(new ComicIssue { IssueID = "captain-america-2004-29", SeriesTitle = "Captain America (2004)", IssueNumber = "29", PublishYear = 2007, Description = "Captain America (2004) #29" });
+      issues.Add(new ComicIssue { IssueID = "captain-america-2004-30", SeriesTitle = "Captain America (2004)", IssueNumber = "30", PublishYear = 2007, Description = "Captain America (2004) #30" });
+      issues.Add(new ComicIssue { IssueID = "winter-soldier-winter-kills-1", SeriesTitle = "Winter Soldier: Winter Kills", IssueNumber = "1", PublishYear = 2006, Description = "Winter Soldier: Winter Kills #1" });
+  
+      issues.Add(new ComicIssue { IssueID = "avengers-annual-10", SeriesTitle = "Avengers Annual", IssueNumber = "10", PublishMonth = 8, PublishYear = 1981, Description = "By Friends - Betrayed!" });
+      issues.Add(new ComicIssue { IssueID = "gambit-1", SeriesTitle = "Gambit", IssueNumber = "1", PublishMonth = 12, PublishYear = 1993, Description = "Tithing" });
+      issues.Add(new ComicIssue { IssueID = "gambit-2", SeriesTitle = "Gambit", IssueNumber = "2", PublishMonth = 1, PublishYear = 1994, Description = "Honor Amongst Thieves" });
+      issues.Add(new ComicIssue { IssueID = "gambit-3", SeriesTitle = "Gambit", IssueNumber = "3", PublishMonth = 2, PublishYear = 1994, Description = "The Benefactress" });
+      issues.Add(new ComicIssue { IssueID = "gambit-4", SeriesTitle = "Gambit", IssueNumber = "4", PublishMonth = 3, PublishYear = 1994, Description = "Thief of Time" });
+      issues.Add(new ComicIssue { IssueID = "giant-size-x-men-1", SeriesTitle = "Giant-Size X-Men", IssueNumber = "1", PublishMonth = 5, PublishYear = 1975, Description = "Deadly Genesis" });
+      issues.Add(new ComicIssue { IssueID = "phalanx-covenant-1", SeriesTitle = "Phalanx Covenant", IssueNumber = "1", PublishMonth = 9, PublishYear = 1994, Description = "The Phalanx Covenant, Part 1" });
+      issues.Add(new ComicIssue { IssueID = "phalanx-covenant-2", SeriesTitle = "Phalanx Covenant", IssueNumber = "2", PublishMonth = 10, PublishYear = 1994, Description = "The Phalanx Covenant, Part 2" });
+      issues.Add(new ComicIssue { IssueID = "the-new-mutants-2", SeriesTitle = "The New Mutants", IssueNumber = "2", Description = "The New Mutants #2" });
+      issues.Add(new ComicIssue { IssueID = "uncanny-x-men-121", SeriesTitle = "Uncanny X-Men", IssueNumber = "121", PublishMonth = 5, PublishYear = 1979, Description = "Shoot-Out at the Stampede" });
+      issues.Add(new ComicIssue { IssueID = "uncanny-x-men-130", SeriesTitle = "Uncanny X-Men", IssueNumber = "130", PublishMonth = 1, PublishYear = 1980, Description = "Dazzled" });
+      issues.Add(new ComicIssue { IssueID = "uncanny-x-men-131", SeriesTitle = "Uncanny X-Men", IssueNumber = "131", PublishMonth = 2, PublishYear = 1980, Description = "Run for Your Life!" });
+      issues.Add(new ComicIssue { IssueID = "uncanny-x-men-132", SeriesTitle = "Uncanny X-Men", IssueNumber = "132", PublishMonth = 3, PublishYear = 1980, Description = "And Hellfire is Their Name!" });
+      issues.Add(new ComicIssue { IssueID = "uncanny-x-men-133", SeriesTitle = "Uncanny X-Men", IssueNumber = "133", PublishMonth = 4, PublishYear = 1980, Description = "Wolverine: Alone!" });
+      issues.Add(new ComicIssue { IssueID = "uncanny-x-men-134", SeriesTitle = "Uncanny X-Men", IssueNumber = "134", PublishMonth = 5, PublishYear = 1980, Description = "Too Late, the Heroes!" });
+      issues.Add(new ComicIssue { IssueID = "uncanny-x-men-135", SeriesTitle = "Uncanny X-Men", IssueNumber = "135", PublishMonth = 6, PublishYear = 1980, Description = "Dark Phoenix" });
+      issues.Add(new ComicIssue { IssueID = "uncanny-x-men-136", SeriesTitle = "Uncanny X-Men", IssueNumber = "136", PublishMonth = 7, PublishYear = 1980, Description = "Child of Light and Darkness!" });
+      issues.Add(new ComicIssue { IssueID = "uncanny-x-men-137", SeriesTitle = "Uncanny X-Men", IssueNumber = "137", PublishMonth = 8, PublishYear = 1980, Description = "The Fate of the Phoenix!" });
+      issues.Add(new ComicIssue { IssueID = "uncanny-x-men-138", SeriesTitle = "Uncanny X-Men", IssueNumber = "138", PublishMonth = 10, PublishYear = 1980, Description = "Elegy" });
+      issues.Add(new ComicIssue { IssueID = "uncanny-x-men-141", SeriesTitle = "Uncanny X-Men", IssueNumber = "141", PublishMonth = 1, PublishYear = 1981, Description = "Days of Future Past" });
+      issues.Add(new ComicIssue { IssueID = "uncanny-x-men-142", SeriesTitle = "Uncanny X-Men", IssueNumber = "142", PublishMonth = 2, PublishYear = 1981, Description = "Mind Out of Time" });
+      issues.Add(new ComicIssue { IssueID = "uncanny-x-men-153", SeriesTitle = "Uncanny X-Men", IssueNumber = "153", PublishMonth = 12, PublishYear = 1981, Description = "Kitty's Fairy Tale" });
+      issues.Add(new ComicIssue { IssueID = "uncanny-x-men-154", SeriesTitle = "Uncanny X-Men", IssueNumber = "154", PublishMonth = 1, PublishYear = 1982, Description = "Reunion" });
+      issues.Add(new ComicIssue { IssueID = "uncanny-x-men-155", SeriesTitle = "Uncanny X-Men", IssueNumber = "155", PublishMonth = 2, PublishYear = 1982, Description = "First Blood" });
+      issues.Add(new ComicIssue { IssueID = "uncanny-x-men-169", SeriesTitle = "Uncanny X-Men", IssueNumber = "169", PublishMonth = 5, PublishYear = 1983, Description = "Catacombs" });
+      issues.Add(new ComicIssue { IssueID = "uncanny-x-men-170", SeriesTitle = "Uncanny X-Men", IssueNumber = "170", PublishMonth = 6, PublishYear = 1983, Description = "Dancin' in the Dark" });
+      issues.Add(new ComicIssue { IssueID = "uncanny-x-men-185", SeriesTitle = "Uncanny X-Men", IssueNumber = "185", PublishMonth = 9, PublishYear = 1984, Description = "Public Enemy" });
+      issues.Add(new ComicIssue { IssueID = "uncanny-x-men-191", SeriesTitle = "Uncanny X-Men", IssueNumber = "191", PublishMonth = 3, PublishYear = 1985, Description = "Raiders of the Lost Temple" });
+      issues.Add(new ComicIssue { IssueID = "uncanny-x-men-194", SeriesTitle = "Uncanny X-Men", IssueNumber = "194", PublishMonth = 3, PublishYear = 1985, Description = "Juggernaut's Back in Town" });
+      issues.Add(new ComicIssue { IssueID = "uncanny-x-men-198", SeriesTitle = "Uncanny X-Men", IssueNumber = "198", PublishMonth = 10, PublishYear = 1985, Description = "Lifedeath II: From the Heart of Darkness" });
+      issues.Add(new ComicIssue { IssueID = "uncanny-x-men-235", SeriesTitle = "Uncanny X-Men", IssueNumber = "235", PublishMonth = 10, PublishYear = 1988, Description = "Welcome to Genosha" });
+      issues.Add(new ComicIssue { IssueID = "uncanny-x-men-236", SeriesTitle = "Uncanny X-Men", IssueNumber = "236", PublishMonth = 10, PublishYear = 1988, Description = "Busting Loose" });
+      issues.Add(new ComicIssue { IssueID = "uncanny-x-men-237", SeriesTitle = "Uncanny X-Men", IssueNumber = "237", PublishMonth = 11, PublishYear = 1988, Description = "Who's Human?" });
+      issues.Add(new ComicIssue { IssueID = "uncanny-x-men-238", SeriesTitle = "Uncanny X-Men", IssueNumber = "238", PublishMonth = 11, PublishYear = 1988, Description = "Gonna be a Revolution" });
+      issues.Add(new ComicIssue { IssueID = "uncanny-x-men-244", SeriesTitle = "Uncanny X-Men", IssueNumber = "244", PublishMonth = 5, PublishYear = 1989, Description = "Ladies' Night" });
+      issues.Add(new ComicIssue { IssueID = "uncanny-x-men-268", SeriesTitle = "Uncanny X-Men", IssueNumber = "268", PublishMonth = 9, PublishYear = 1990, Description = "Madripoor Knights" });
+      issues.Add(new ComicIssue { IssueID = "uncanny-x-men-269", SeriesTitle = "Uncanny X-Men", IssueNumber = "269", PublishMonth = 10, PublishYear = 1990, Description = "Rogue Redux" });
+      issues.Add(new ComicIssue { IssueID = "uncanny-x-men-287", SeriesTitle = "Uncanny X-Men", IssueNumber = "287", PublishMonth = 4, PublishYear = 1992, Description = "Bishop to King's Five!" });
+      issues.Add(new ComicIssue { IssueID = "wolverine-48", SeriesTitle = "Wolverine", IssueNumber = "48", PublishMonth = 11, PublishYear = 1992, Description = "The Shiva Scenario Part 1: Dreams of Gore, Phase 1" });
+      issues.Add(new ComicIssue { IssueID = "wolverine-49", SeriesTitle = "Wolverine", IssueNumber = "49", PublishMonth = 12, PublishYear = 1992, Description = "The Shiva Scenario Part 2: Dreams of Gore: Phase Two" });
+      issues.Add(new ComicIssue { IssueID = "wolverine-50", SeriesTitle = "Wolverine", IssueNumber = "50", PublishMonth = 1, PublishYear = 1993, Description = "The Shiva Scenario Part 3: Dreams of Gore: Phase 3" });
+      issues.Add(new ComicIssue { IssueID = "wolverine-61", SeriesTitle = "Wolverine", IssueNumber = "61", PublishMonth = 9, PublishYear = 1992, Description = "Nightmare Quest!" });
+      issues.Add(new ComicIssue { IssueID = "wolverine-62", SeriesTitle = "Wolverine", IssueNumber = "62", PublishMonth = 10, PublishYear = 1992, Description = "Reunion!" });
+      issues.Add(new ComicIssue { IssueID = "wolverine-63", SeriesTitle = "Wolverine", IssueNumber = "63", PublishMonth = 11, PublishYear = 1992, Description = "Bastions of Glory!" });
+      issues.Add(new ComicIssue { IssueID = "wolverine-64", SeriesTitle = "Wolverine", IssueNumber = "64", PublishMonth = 12, PublishYear = 1992, Description = "What Goes Around..." });
+      issues.Add(new ComicIssue { IssueID = "x-factor-10", SeriesTitle = "X-Factor", IssueNumber = "10", PublishMonth = 1, PublishYear = 1986, Description = "Falling Angel!" });
+      issues.Add(new ComicIssue { IssueID = "x-factor-12", SeriesTitle = "X-Factor", IssueNumber = "12", PublishMonth = 3, PublishYear = 1986, Description = "Boom Boom Boom!" });
+      issues.Add(new ComicIssue { IssueID = "x-factor-15", SeriesTitle = "X-Factor", IssueNumber = "15", PublishMonth = 6, PublishYear = 1986, Description = "Whose Death is it, Anyway?" });
+      issues.Add(new ComicIssue { IssueID = "x-factor-19", SeriesTitle = "X-Factor", IssueNumber = "19", PublishMonth = 10, PublishYear = 1986, Description = "All Together Now!" });
+      issues.Add(new ComicIssue { IssueID = "x-factor-24", SeriesTitle = "X-Factor", IssueNumber = "24", PublishMonth = 2, PublishYear = 1987, Description = "Masks" });
+      issues.Add(new ComicIssue { IssueID = "x-men-1", SeriesTitle = "X-Men", IssueNumber = "1", PublishMonth = 9, PublishYear = 1963, Description = "X-Men #1" });
+      issues.Add(new ComicIssue { IssueID = "x-men-100", SeriesTitle = "X-Men", IssueNumber = "100", PublishMonth = 8, PublishYear = 1976, Description = "Greater Love Hath No X-Man..." });
+      issues.Add(new ComicIssue { IssueID = "x-men-101", SeriesTitle = "X-Men", IssueNumber = "101", PublishMonth = 10, PublishYear = 1976, Description = "Like a Phoenix, from the Ashes" });
+      issues.Add(new ComicIssue { IssueID = "x-men-102", SeriesTitle = "X-Men", IssueNumber = "102", PublishMonth = 12, PublishYear = 1976, Description = "Who Will Stop the Juggernaut?" });
+      issues.Add(new ComicIssue { IssueID = "x-men-103", SeriesTitle = "X-Men", IssueNumber = "103", PublishMonth = 2, PublishYear = 1977, Description = "The Fall of the Tower" });
+      issues.Add(new ComicIssue { IssueID = "x-men-104", SeriesTitle = "X-Men", IssueNumber = "104", PublishMonth = 4, PublishYear = 1977, Description = "The Gentleman's Name is Magneto" });
+      issues.Add(new ComicIssue { IssueID = "x-men-105", SeriesTitle = "X-Men", IssueNumber = "105", PublishMonth = 6, PublishYear = 1977, Description = "Phoenix Unleashed!" });
+      issues.Add(new ComicIssue { IssueID = "x-men-106", SeriesTitle = "X-Men", IssueNumber = "106", PublishMonth = 8, PublishYear = 1977, Description = "Dark Shroud of the Past!" });
+      issues.Add(new ComicIssue { IssueID = "x-men-107", SeriesTitle = "X-Men", IssueNumber = "107", PublishMonth = 10, PublishYear = 1977, Description = "The Cry of the Banshee" });
+      issues.Add(new ComicIssue { IssueID = "x-men-108", SeriesTitle = "X-Men", IssueNumber = "108", PublishMonth = 12, PublishYear = 1977, Description = "Armageddon Now" });
+      issues.Add(new ComicIssue { IssueID = "x-men-12", SeriesTitle = "X-Men", IssueNumber = "12", PublishMonth = 7, PublishYear = 1965, Description = "X-Men #12" });
+      issues.Add(new ComicIssue { IssueID = "x-men-14", SeriesTitle = "X-Men", IssueNumber = "14", PublishMonth = 11, PublishYear = 1965, Description = "Among Us Stalk the Sentinels" });
+      issues.Add(new ComicIssue { IssueID = "x-men-15", SeriesTitle = "X-Men", IssueNumber = "15", PublishMonth = 12, PublishYear = 1965, Description = "Prisoners of the Mysterious Master Mold!" });
+      issues.Add(new ComicIssue { IssueID = "x-men-16", SeriesTitle = "X-Men", IssueNumber = "16", PublishMonth = 1, PublishYear = 1966, Description = "The Supreme Sacrifice!" });
+      issues.Add(new ComicIssue { IssueID = "x-men-97", SeriesTitle = "X-Men", IssueNumber = "97", PublishMonth = 2, PublishYear = 1976, Description = "My Brother, My Enemy!" });
+      issues.Add(new ComicIssue { IssueID = "x-men-99", SeriesTitle = "X-Men", IssueNumber = "99", PublishMonth = 6, PublishYear = 1976, Description = "Deathstar, Rising!" });
+      issues.Add(new ComicIssue { IssueID = "x-men-volume-2-1", SeriesTitle = "X-Men (Volume 2)", IssueNumber = "1", PublishMonth = 10, PublishYear = 1991, Description = "Rubicon" });
+      issues.Add(new ComicIssue { IssueID = "x-men-volume-2-2", SeriesTitle = "X-Men (Volume 2)", IssueNumber = "2", PublishMonth = 11, PublishYear = 1991, Description = "Firestorm" });
+      issues.Add(new ComicIssue { IssueID = "x-men-volume-2-3", SeriesTitle = "X-Men (Volume 2)", IssueNumber = "3", PublishMonth = 12, PublishYear = 1991, Description = "Fallout!" });
+      issues.Add(new ComicIssue { IssueID = "amazing-fantasy-15", SeriesTitle = "Amazing Fantasy", IssueNumber = "15", PublishMonth = 8, PublishYear = 1962, Description = "Spider-Man!" });
+      issues.Add(new ComicIssue { IssueID = "marvel-comics-presents-72", SeriesTitle = "Marvel Comics Presents", IssueNumber = "72", PublishMonth = 3, PublishYear = 1991, Description = "Weapon X" });
+      issues.Add(new ComicIssue { IssueID = "marvel-comics-presents-73", SeriesTitle = "Marvel Comics Presents", IssueNumber = "73", PublishMonth = 3, PublishYear = 1991, Description = "Weapon X" });
+      issues.Add(new ComicIssue { IssueID = "marvel-comics-presents-74", SeriesTitle = "Marvel Comics Presents", IssueNumber = "74", PublishMonth = 4, PublishYear = 1991, Description = "Weapon X" });
+      issues.Add(new ComicIssue { IssueID = "marvel-comics-presents-75", SeriesTitle = "Marvel Comics Presents", IssueNumber = "75", PublishMonth = 4, PublishYear = 1991, Description = "Weapon X" });
+      issues.Add(new ComicIssue { IssueID = "marvel-comics-presents-76", SeriesTitle = "Marvel Comics Presents", IssueNumber = "76", PublishMonth = 5, PublishYear = 1991, Description = "Weapon X" });
+      issues.Add(new ComicIssue { IssueID = "marvel-comics-presents-77", SeriesTitle = "Marvel Comics Presents", IssueNumber = "77", PublishMonth = 5, PublishYear = 1991, Description = "Weapon X" });
+      issues.Add(new ComicIssue { IssueID = "marvel-comics-presents-78", SeriesTitle = "Marvel Comics Presents", IssueNumber = "78", PublishMonth = 6, PublishYear = 1991, Description = "Weapon X" });
+      issues.Add(new ComicIssue { IssueID = "marvel-comics-presents-79", SeriesTitle = "Marvel Comics Presents", IssueNumber = "79", PublishMonth = 6, PublishYear = 1991, Description = "Weapon X" });
+      issues.Add(new ComicIssue { IssueID = "marvel-comics-presents-80", SeriesTitle = "Marvel Comics Presents", IssueNumber = "80", PublishMonth = 7, PublishYear = 1991, Description = "Weapon X" });
+      issues.Add(new ComicIssue { IssueID = "marvel-comics-presents-81", SeriesTitle = "Marvel Comics Presents", IssueNumber = "81", PublishMonth = 7, PublishYear = 1991, Description = "Weapon X" });
+      issues.Add(new ComicIssue { IssueID = "marvel-comics-presents-82", SeriesTitle = "Marvel Comics Presents", IssueNumber = "82", PublishMonth = 8, PublishYear = 1991, Description = "Weapon X" });
+      issues.Add(new ComicIssue { IssueID = "marvel-comics-presents-83", SeriesTitle = "Marvel Comics Presents", IssueNumber = "83", PublishMonth = 8, PublishYear = 1991, Description = "Weapon X" });
+      issues.Add(new ComicIssue { IssueID = "marvel-comics-presents-84", SeriesTitle = "Marvel Comics Presents", IssueNumber = "84", PublishMonth = 9, PublishYear = 1991, Description = "Weapon X" });
+      issues.Add(new ComicIssue { IssueID = "marvel-fanfare-1", SeriesTitle = "Marvel Fanfare", IssueNumber = "1", PublishMonth = 3, PublishYear = 1982, Description = "Fast Descent into Hell!" });
+      issues.Add(new ComicIssue { IssueID = "marvel-fanfare-2", SeriesTitle = "Marvel Fanfare", IssueNumber = "2", PublishMonth = 4, PublishYear = 1982, Description = "To Sacrifice My Soul..." });
+      issues.Add(new ComicIssue { IssueID = "marvel-super-heroes-secret-wars-1", SeriesTitle = "Marvel Super Heroes Secret Wars", IssueNumber = "1", PublishMonth = 5, PublishYear = 1984, Description = "Secret Wars" });
+      issues.Add(new ComicIssue { IssueID = "marvel-super-heroes-secret-wars-10", SeriesTitle = "Marvel Super Heroes Secret Wars", IssueNumber = "10", PublishMonth = 2, PublishYear = 1985, Description = "Secret Wars" });
+      issues.Add(new ComicIssue { IssueID = "marvel-super-heroes-secret-wars-11", SeriesTitle = "Marvel Super Heroes Secret Wars", IssueNumber = "11", PublishMonth = 3, PublishYear = 1985, Description = "Secret Wars" });
+      issues.Add(new ComicIssue { IssueID = "marvel-super-heroes-secret-wars-12", SeriesTitle = "Marvel Super Heroes Secret Wars", IssueNumber = "12", PublishMonth = 4, PublishYear = 1985, Description = "Secret Wars" });
+      issues.Add(new ComicIssue { IssueID = "marvel-super-heroes-secret-wars-2", SeriesTitle = "Marvel Super Heroes Secret Wars", IssueNumber = "2", PublishMonth = 6, PublishYear = 1984, Description = "Secret Wars" });
+      issues.Add(new ComicIssue { IssueID = "marvel-super-heroes-secret-wars-3", SeriesTitle = "Marvel Super Heroes Secret Wars", IssueNumber = "3", PublishMonth = 7, PublishYear = 1984, Description = "Secret Wars" });
+      issues.Add(new ComicIssue { IssueID = "marvel-super-heroes-secret-wars-4", SeriesTitle = "Marvel Super Heroes Secret Wars", IssueNumber = "4", PublishMonth = 8, PublishYear = 1984, Description = "Secret Wars" });
+      issues.Add(new ComicIssue { IssueID = "marvel-super-heroes-secret-wars-5", SeriesTitle = "Marvel Super Heroes Secret Wars", IssueNumber = "5", PublishMonth = 9, PublishYear = 1984, Description = "Secret Wars" });
+      issues.Add(new ComicIssue { IssueID = "marvel-super-heroes-secret-wars-6", SeriesTitle = "Marvel Super Heroes Secret Wars", IssueNumber = "6", PublishMonth = 10, PublishYear = 1984, Description = "Secret Wars" });
+      issues.Add(new ComicIssue { IssueID = "marvel-super-heroes-secret-wars-7", SeriesTitle = "Marvel Super Heroes Secret Wars", IssueNumber = "7", PublishMonth = 11, PublishYear = 1984, Description = "Secret Wars" });
+      issues.Add(new ComicIssue { IssueID = "marvel-super-heroes-secret-wars-8", SeriesTitle = "Marvel Super Heroes Secret Wars", IssueNumber = "8", PublishMonth = 12, PublishYear = 1984, Description = "Secret Wars" });
+      issues.Add(new ComicIssue { IssueID = "marvel-super-heroes-secret-wars-9", SeriesTitle = "Marvel Super Heroes Secret Wars", IssueNumber = "9", PublishMonth = 1, PublishYear = 1985, Description = "Secret Wars" });
+      issues.Add(new ComicIssue { IssueID = "marvel-team-up-141", SeriesTitle = "Marvel Team-Up", IssueNumber = "141", Description = "The Alien Costume Saga" });
+      issues.Add(new ComicIssue { IssueID = "marvel-team-up-142", SeriesTitle = "Marvel Team-Up", IssueNumber = "142", Description = "The Alien Costume Saga" });
+      issues.Add(new ComicIssue { IssueID = "marvel-team-up-143", SeriesTitle = "Marvel Team-Up", IssueNumber = "143", Description = "The Alien Costume Saga" });
+      issues.Add(new ComicIssue { IssueID = "marvel-team-up-144", SeriesTitle = "Marvel Team-Up", IssueNumber = "144", Description = "The Alien Costume Saga" });
+      issues.Add(new ComicIssue { IssueID = "marvel-team-up-145", SeriesTitle = "Marvel Team-Up", IssueNumber = "145", Description = "The Alien Costume Saga" });
+      issues.Add(new ComicIssue { IssueID = "marvel-team-up-146", SeriesTitle = "Marvel Team-Up", IssueNumber = "146", Description = "The Alien Costume Saga" });
+      issues.Add(new ComicIssue { IssueID = "marvel-team-up-147", SeriesTitle = "Marvel Team-Up", IssueNumber = "147", Description = "The Alien Costume Saga" });
+      issues.Add(new ComicIssue { IssueID = "marvel-team-up-148", SeriesTitle = "Marvel Team-Up", IssueNumber = "148", Description = "The Alien Costume Saga" });
+      issues.Add(new ComicIssue { IssueID = "marvel-team-up-149", SeriesTitle = "Marvel Team-Up", IssueNumber = "149", Description = "The Alien Costume Saga" });
+      issues.Add(new ComicIssue { IssueID = "marvel-team-up-150", SeriesTitle = "Marvel Team-Up", IssueNumber = "150", Description = "The Alien Costume Saga" });
+  
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-1", SeriesTitle = "Fantastic Four", IssueNumber = "1", PublishMonth = 11, PublishYear = 1961 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-2", SeriesTitle = "Fantastic Four", IssueNumber = "2", PublishYear = 1961 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-4", SeriesTitle = "Fantastic Four", IssueNumber = "4", PublishYear = 1962 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-5", SeriesTitle = "Fantastic Four", IssueNumber = "5", PublishYear = 1962 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-8", SeriesTitle = "Fantastic Four", IssueNumber = "8", PublishYear = 1962 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-11", SeriesTitle = "Fantastic Four", IssueNumber = "11", PublishYear = 1962 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-12", SeriesTitle = "Fantastic Four", IssueNumber = "12", PublishYear = 1962 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-18", SeriesTitle = "Fantastic Four", IssueNumber = "18", PublishYear = 1963 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-32", SeriesTitle = "Fantastic Four", IssueNumber = "32", PublishYear = 1962 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-37", SeriesTitle = "Fantastic Four", IssueNumber = "37", PublishYear = 1962 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-39", SeriesTitle = "Fantastic Four", IssueNumber = "39", PublishYear = 1962 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-40", SeriesTitle = "Fantastic Four", IssueNumber = "40", PublishYear = 1962 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-41", SeriesTitle = "Fantastic Four", IssueNumber = "41", PublishYear = 1962 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-42", SeriesTitle = "Fantastic Four", IssueNumber = "42", PublishYear = 1962 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-43", SeriesTitle = "Fantastic Four", IssueNumber = "43", PublishYear = 1962 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-44", SeriesTitle = "Fantastic Four", IssueNumber = "44", PublishYear = 1962 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-45", SeriesTitle = "Fantastic Four", IssueNumber = "45", PublishYear = 1962 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-46", SeriesTitle = "Fantastic Four", IssueNumber = "46", PublishYear = 1962 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-47", SeriesTitle = "Fantastic Four", IssueNumber = "47", PublishYear = 1962 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-48", SeriesTitle = "Fantastic Four", IssueNumber = "48", PublishYear = 1962 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-49", SeriesTitle = "Fantastic Four", IssueNumber = "49", PublishYear = 1962 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-50", SeriesTitle = "Fantastic Four", IssueNumber = "50", PublishYear = 1962 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-52", SeriesTitle = "Fantastic Four", IssueNumber = "52", PublishYear = 1962 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-53", SeriesTitle = "Fantastic Four", IssueNumber = "53", PublishYear = 1962 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-57", SeriesTitle = "Fantastic Four", IssueNumber = "57", PublishYear = 1962 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-58", SeriesTitle = "Fantastic Four", IssueNumber = "58", PublishYear = 1962 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-59", SeriesTitle = "Fantastic Four", IssueNumber = "59", PublishYear = 1962 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-60", SeriesTitle = "Fantastic Four", IssueNumber = "60", PublishYear = 1962 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-62", SeriesTitle = "Fantastic Four", IssueNumber = "62", PublishYear = 1962 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-64", SeriesTitle = "Fantastic Four", IssueNumber = "64", PublishYear = 1962 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-76", SeriesTitle = "Fantastic Four", IssueNumber = "76", PublishYear = 1962 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-77", SeriesTitle = "Fantastic Four", IssueNumber = "77", PublishYear = 1962 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-234", SeriesTitle = "Fantastic Four", IssueNumber = "234", PublishYear = 1962 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-235", SeriesTitle = "Fantastic Four", IssueNumber = "235", PublishYear = 1962 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-242", SeriesTitle = "Fantastic Four", IssueNumber = "242", PublishYear = 1962 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-243", SeriesTitle = "Fantastic Four", IssueNumber = "243", PublishYear = 1962 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-244", SeriesTitle = "Fantastic Four", IssueNumber = "244", PublishYear = 1962 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-280", SeriesTitle = "Fantastic Four", IssueNumber = "280", PublishYear = 1962 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-281", SeriesTitle = "Fantastic Four", IssueNumber = "281", PublishYear = 1962 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-282", SeriesTitle = "Fantastic Four", IssueNumber = "282", PublishYear = 1962 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-283", SeriesTitle = "Fantastic Four", IssueNumber = "283", PublishYear = 1962 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-570", SeriesTitle = "Fantastic Four", IssueNumber = "570", PublishYear = 2009, Description = "Fantastic Four #570" });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-571", SeriesTitle = "Fantastic Four", IssueNumber = "571", PublishYear = 2009, Description = "Fantastic Four #571" });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-572", SeriesTitle = "Fantastic Four", IssueNumber = "572", PublishYear = 2009, Description = "Fantastic Four #572" });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-573", SeriesTitle = "Fantastic Four", IssueNumber = "573", PublishYear = 2009, Description = "Fantastic Four #573" });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-574", SeriesTitle = "Fantastic Four", IssueNumber = "574", PublishYear = 2009, Description = "Fantastic Four #574" });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-575", SeriesTitle = "Fantastic Four", IssueNumber = "575", PublishYear = 2009, Description = "Fantastic Four #575" });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-576", SeriesTitle = "Fantastic Four", IssueNumber = "576", PublishYear = 2009, Description = "Fantastic Four #576" });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-577", SeriesTitle = "Fantastic Four", IssueNumber = "577", PublishYear = 2009, Description = "Fantastic Four #577" });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-578", SeriesTitle = "Fantastic Four", IssueNumber = "578", PublishYear = 2009, Description = "Fantastic Four #578" });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-579", SeriesTitle = "Fantastic Four", IssueNumber = "579", PublishYear = 2009, Description = "Fantastic Four #579" });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-580", SeriesTitle = "Fantastic Four", IssueNumber = "580", PublishYear = 2009, Description = "Fantastic Four #580" });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-581", SeriesTitle = "Fantastic Four", IssueNumber = "581", PublishYear = 2009, Description = "Fantastic Four #581" });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-582", SeriesTitle = "Fantastic Four", IssueNumber = "582", PublishYear = 2009, Description = "Fantastic Four #582" });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-583", SeriesTitle = "Fantastic Four", IssueNumber = "583", PublishYear = 2009, Description = "Fantastic Four #583" });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-584", SeriesTitle = "Fantastic Four", IssueNumber = "584", PublishYear = 2009, Description = "Fantastic Four #584" });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-585", SeriesTitle = "Fantastic Four", IssueNumber = "585", PublishYear = 2009, Description = "Fantastic Four #585" });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-586", SeriesTitle = "Fantastic Four", IssueNumber = "586", PublishYear = 2009, Description = "Fantastic Four #586" });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-587", SeriesTitle = "Fantastic Four", IssueNumber = "587", PublishYear = 2009, Description = "Fantastic Four #587" });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-588", SeriesTitle = "Fantastic Four", IssueNumber = "588", PublishYear = 2009, Description = "Fantastic Four #588" });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-annual-2", SeriesTitle = "The Fantastic Four Annual", IssueNumber = "2", PublishYear = 1962 });
+      issues.Add(new ComicIssue { IssueID = "fantastic-four-annual-6", SeriesTitle = "The Fantastic Four Annual", IssueNumber = "6", PublishYear = 1962 });
 
-        new ComicIssue { IssueID = "avengers-annual-10", SeriesTitle = "Avengers Annual", IssueNumber = "10", PublishMonth = 8, PublishYear = 1981, Description = "By Friends - Betrayed!" },
-        new ComicIssue { IssueID = "gambit-1", SeriesTitle = "Gambit", IssueNumber = "1", PublishMonth = 12, PublishYear = 1993, Description = "Tithing" },
-        new ComicIssue { IssueID = "gambit-2", SeriesTitle = "Gambit", IssueNumber = "2", PublishMonth = 1, PublishYear = 1994, Description = "Honor Amongst Thieves" },
-        new ComicIssue { IssueID = "gambit-3", SeriesTitle = "Gambit", IssueNumber = "3", PublishMonth = 2, PublishYear = 1994, Description = "The Benefactress" },
-        new ComicIssue { IssueID = "gambit-4", SeriesTitle = "Gambit", IssueNumber = "4", PublishMonth = 3, PublishYear = 1994, Description = "Thief of Time" },
-        new ComicIssue { IssueID = "giant-size-x-men-1", SeriesTitle = "Giant-Size X-Men", IssueNumber = "1", PublishMonth = 5, PublishYear = 1975, Description = "Deadly Genesis" },
-        new ComicIssue { IssueID = "phalanx-covenant-1", SeriesTitle = "Phalanx Covenant", IssueNumber = "1", PublishMonth = 9, PublishYear = 1994, Description = "The Phalanx Covenant, Part 1" },
-        new ComicIssue { IssueID = "phalanx-covenant-2", SeriesTitle = "Phalanx Covenant", IssueNumber = "2", PublishMonth = 10, PublishYear = 1994, Description = "The Phalanx Covenant, Part 2" },
-        new ComicIssue { IssueID = "the-new-mutants-2", SeriesTitle = "The New Mutants", IssueNumber = "2", Description = "The New Mutants #2" },
-        new ComicIssue { IssueID = "uncanny-x-men-121", SeriesTitle = "Uncanny X-Men", IssueNumber = "121", PublishMonth = 5, PublishYear = 1979, Description = "Shoot-Out at the Stampede" },
-        new ComicIssue { IssueID = "uncanny-x-men-130", SeriesTitle = "Uncanny X-Men", IssueNumber = "130", PublishMonth = 1, PublishYear = 1980, Description = "Dazzled" },
-        new ComicIssue { IssueID = "uncanny-x-men-131", SeriesTitle = "Uncanny X-Men", IssueNumber = "131", PublishMonth = 2, PublishYear = 1980, Description = "Run for Your Life!" },
-        new ComicIssue { IssueID = "uncanny-x-men-132", SeriesTitle = "Uncanny X-Men", IssueNumber = "132", PublishMonth = 3, PublishYear = 1980, Description = "And Hellfire is Their Name!" },
-        new ComicIssue { IssueID = "uncanny-x-men-133", SeriesTitle = "Uncanny X-Men", IssueNumber = "133", PublishMonth = 4, PublishYear = 1980, Description = "Wolverine: Alone!" },
-        new ComicIssue { IssueID = "uncanny-x-men-134", SeriesTitle = "Uncanny X-Men", IssueNumber = "134", PublishMonth = 5, PublishYear = 1980, Description = "Too Late, the Heroes!" },
-        new ComicIssue { IssueID = "uncanny-x-men-135", SeriesTitle = "Uncanny X-Men", IssueNumber = "135", PublishMonth = 6, PublishYear = 1980, Description = "Dark Phoenix" },
-        new ComicIssue { IssueID = "uncanny-x-men-136", SeriesTitle = "Uncanny X-Men", IssueNumber = "136", PublishMonth = 7, PublishYear = 1980, Description = "Child of Light and Darkness!" },
-        new ComicIssue { IssueID = "uncanny-x-men-137", SeriesTitle = "Uncanny X-Men", IssueNumber = "137", PublishMonth = 8, PublishYear = 1980, Description = "The Fate of the Phoenix!" },
-        new ComicIssue { IssueID = "uncanny-x-men-138", SeriesTitle = "Uncanny X-Men", IssueNumber = "138", PublishMonth = 10, PublishYear = 1980, Description = "Elegy" },
-        new ComicIssue { IssueID = "uncanny-x-men-141", SeriesTitle = "Uncanny X-Men", IssueNumber = "141", PublishMonth = 1, PublishYear = 1981, Description = "Days of Future Past" },
-        new ComicIssue { IssueID = "uncanny-x-men-142", SeriesTitle = "Uncanny X-Men", IssueNumber = "142", PublishMonth = 2, PublishYear = 1981, Description = "Mind Out of Time" },
-        new ComicIssue { IssueID = "uncanny-x-men-153", SeriesTitle = "Uncanny X-Men", IssueNumber = "153", PublishMonth = 12, PublishYear = 1981, Description = "Kitty's Fairy Tale" },
-        new ComicIssue { IssueID = "uncanny-x-men-154", SeriesTitle = "Uncanny X-Men", IssueNumber = "154", PublishMonth = 1, PublishYear = 1982, Description = "Reunion" },
-        new ComicIssue { IssueID = "uncanny-x-men-155", SeriesTitle = "Uncanny X-Men", IssueNumber = "155", PublishMonth = 2, PublishYear = 1982, Description = "First Blood" },
-        new ComicIssue { IssueID = "uncanny-x-men-169", SeriesTitle = "Uncanny X-Men", IssueNumber = "169", PublishMonth = 5, PublishYear = 1983, Description = "Catacombs" },
-        new ComicIssue { IssueID = "uncanny-x-men-170", SeriesTitle = "Uncanny X-Men", IssueNumber = "170", PublishMonth = 6, PublishYear = 1983, Description = "Dancin' in the Dark" },
-        new ComicIssue { IssueID = "uncanny-x-men-185", SeriesTitle = "Uncanny X-Men", IssueNumber = "185", PublishMonth = 9, PublishYear = 1984, Description = "Public Enemy" },
-        new ComicIssue { IssueID = "uncanny-x-men-191", SeriesTitle = "Uncanny X-Men", IssueNumber = "191", PublishMonth = 3, PublishYear = 1985, Description = "Raiders of the Lost Temple" },
-        new ComicIssue { IssueID = "uncanny-x-men-194", SeriesTitle = "Uncanny X-Men", IssueNumber = "194", PublishMonth = 3, PublishYear = 1985, Description = "Juggernaut's Back in Town" },
-        new ComicIssue { IssueID = "uncanny-x-men-198", SeriesTitle = "Uncanny X-Men", IssueNumber = "198", PublishMonth = 10, PublishYear = 1985, Description = "Lifedeath II: From the Heart of Darkness" },
-        new ComicIssue { IssueID = "uncanny-x-men-235", SeriesTitle = "Uncanny X-Men", IssueNumber = "235", PublishMonth = 10, PublishYear = 1988, Description = "Welcome to Genosha" },
-        new ComicIssue { IssueID = "uncanny-x-men-236", SeriesTitle = "Uncanny X-Men", IssueNumber = "236", PublishMonth = 10, PublishYear = 1988, Description = "Busting Loose" },
-        new ComicIssue { IssueID = "uncanny-x-men-237", SeriesTitle = "Uncanny X-Men", IssueNumber = "237", PublishMonth = 11, PublishYear = 1988, Description = "Who's Human?" },
-        new ComicIssue { IssueID = "uncanny-x-men-238", SeriesTitle = "Uncanny X-Men", IssueNumber = "238", PublishMonth = 11, PublishYear = 1988, Description = "Gonna be a Revolution" },
-        new ComicIssue { IssueID = "uncanny-x-men-244", SeriesTitle = "Uncanny X-Men", IssueNumber = "244", PublishMonth = 5, PublishYear = 1989, Description = "Ladies' Night" },
-        new ComicIssue { IssueID = "uncanny-x-men-268", SeriesTitle = "Uncanny X-Men", IssueNumber = "268", PublishMonth = 9, PublishYear = 1990, Description = "Madripoor Knights" },
-        new ComicIssue { IssueID = "uncanny-x-men-269", SeriesTitle = "Uncanny X-Men", IssueNumber = "269", PublishMonth = 10, PublishYear = 1990, Description = "Rogue Redux" },
-        new ComicIssue { IssueID = "uncanny-x-men-287", SeriesTitle = "Uncanny X-Men", IssueNumber = "287", PublishMonth = 4, PublishYear = 1992, Description = "Bishop to King's Five!" },
-        new ComicIssue { IssueID = "wolverine-48", SeriesTitle = "Wolverine", IssueNumber = "48", PublishMonth = 11, PublishYear = 1992, Description = "The Shiva Scenario Part 1: Dreams of Gore, Phase 1" },
-        new ComicIssue { IssueID = "wolverine-49", SeriesTitle = "Wolverine", IssueNumber = "49", PublishMonth = 12, PublishYear = 1992, Description = "The Shiva Scenario Part 2: Dreams of Gore: Phase Two" },
-        new ComicIssue { IssueID = "wolverine-50", SeriesTitle = "Wolverine", IssueNumber = "50", PublishMonth = 1, PublishYear = 1993, Description = "The Shiva Scenario Part 3: Dreams of Gore: Phase 3" },
-        new ComicIssue { IssueID = "wolverine-61", SeriesTitle = "Wolverine", IssueNumber = "61", PublishMonth = 9, PublishYear = 1992, Description = "Nightmare Quest!" },
-        new ComicIssue { IssueID = "wolverine-62", SeriesTitle = "Wolverine", IssueNumber = "62", PublishMonth = 10, PublishYear = 1992, Description = "Reunion!" },
-        new ComicIssue { IssueID = "wolverine-63", SeriesTitle = "Wolverine", IssueNumber = "63", PublishMonth = 11, PublishYear = 1992, Description = "Bastions of Glory!" },
-        new ComicIssue { IssueID = "wolverine-64", SeriesTitle = "Wolverine", IssueNumber = "64", PublishMonth = 12, PublishYear = 1992, Description = "What Goes Around..." },
-        new ComicIssue { IssueID = "x-factor-10", SeriesTitle = "X-Factor", IssueNumber = "10", PublishMonth = 1, PublishYear = 1986, Description = "Falling Angel!" },
-        new ComicIssue { IssueID = "x-factor-12", SeriesTitle = "X-Factor", IssueNumber = "12", PublishMonth = 3, PublishYear = 1986, Description = "Boom Boom Boom!" },
-        new ComicIssue { IssueID = "x-factor-15", SeriesTitle = "X-Factor", IssueNumber = "15", PublishMonth = 6, PublishYear = 1986, Description = "Whose Death is it, Anyway?" },
-        new ComicIssue { IssueID = "x-factor-19", SeriesTitle = "X-Factor", IssueNumber = "19", PublishMonth = 10, PublishYear = 1986, Description = "All Together Now!" },
-        new ComicIssue { IssueID = "x-factor-24", SeriesTitle = "X-Factor", IssueNumber = "24", PublishMonth = 2, PublishYear = 1987, Description = "Masks" },
-        new ComicIssue { IssueID = "x-men-1", SeriesTitle = "X-Men", IssueNumber = "1", PublishMonth = 9, PublishYear = 1963, Description = "X-Men #1" },
-        new ComicIssue { IssueID = "x-men-100", SeriesTitle = "X-Men", IssueNumber = "100", PublishMonth = 8, PublishYear = 1976, Description = "Greater Love Hath No X-Man..." },
-        new ComicIssue { IssueID = "x-men-101", SeriesTitle = "X-Men", IssueNumber = "101", PublishMonth = 10, PublishYear = 1976, Description = "Like a Phoenix, from the Ashes" },
-        new ComicIssue { IssueID = "x-men-102", SeriesTitle = "X-Men", IssueNumber = "102", PublishMonth = 12, PublishYear = 1976, Description = "Who Will Stop the Juggernaut?" },
-        new ComicIssue { IssueID = "x-men-103", SeriesTitle = "X-Men", IssueNumber = "103", PublishMonth = 2, PublishYear = 1977, Description = "The Fall of the Tower" },
-        new ComicIssue { IssueID = "x-men-104", SeriesTitle = "X-Men", IssueNumber = "104", PublishMonth = 4, PublishYear = 1977, Description = "The Gentleman's Name is Magneto" },
-        new ComicIssue { IssueID = "x-men-105", SeriesTitle = "X-Men", IssueNumber = "105", PublishMonth = 6, PublishYear = 1977, Description = "Phoenix Unleashed!" },
-        new ComicIssue { IssueID = "x-men-106", SeriesTitle = "X-Men", IssueNumber = "106", PublishMonth = 8, PublishYear = 1977, Description = "Dark Shroud of the Past!" },
-        new ComicIssue { IssueID = "x-men-107", SeriesTitle = "X-Men", IssueNumber = "107", PublishMonth = 10, PublishYear = 1977, Description = "The Cry of the Banshee" },
-        new ComicIssue { IssueID = "x-men-108", SeriesTitle = "X-Men", IssueNumber = "108", PublishMonth = 12, PublishYear = 1977, Description = "Armageddon Now" },
-        new ComicIssue { IssueID = "x-men-12", SeriesTitle = "X-Men", IssueNumber = "12", PublishMonth = 7, PublishYear = 1965, Description = "X-Men #12" },
-        new ComicIssue { IssueID = "x-men-14", SeriesTitle = "X-Men", IssueNumber = "14", PublishMonth = 11, PublishYear = 1965, Description = "Among Us Stalk the Sentinels" },
-        new ComicIssue { IssueID = "x-men-15", SeriesTitle = "X-Men", IssueNumber = "15", PublishMonth = 12, PublishYear = 1965, Description = "Prisoners of the Mysterious Master Mold!" },
-        new ComicIssue { IssueID = "x-men-16", SeriesTitle = "X-Men", IssueNumber = "16", PublishMonth = 1, PublishYear = 1966, Description = "The Supreme Sacrifice!" },
-        new ComicIssue { IssueID = "x-men-97", SeriesTitle = "X-Men", IssueNumber = "97", PublishMonth = 2, PublishYear = 1976, Description = "My Brother, My Enemy!" },
-        new ComicIssue { IssueID = "x-men-99", SeriesTitle = "X-Men", IssueNumber = "99", PublishMonth = 6, PublishYear = 1976, Description = "Deathstar, Rising!" },
-        new ComicIssue { IssueID = "x-men-volume-2-1", SeriesTitle = "X-Men (Volume 2)", IssueNumber = "1", PublishMonth = 10, PublishYear = 1991, Description = "Rubicon" },
-        new ComicIssue { IssueID = "x-men-volume-2-2", SeriesTitle = "X-Men (Volume 2)", IssueNumber = "2", PublishMonth = 11, PublishYear = 1991, Description = "Firestorm" },
-        new ComicIssue { IssueID = "x-men-volume-2-3", SeriesTitle = "X-Men (Volume 2)", IssueNumber = "3", PublishMonth = 12, PublishYear = 1991, Description = "Fallout!" },
-        new ComicIssue { IssueID = "amazing-fantasy-15", SeriesTitle = "Amazing Fantasy", IssueNumber = "15", PublishMonth = 8, PublishYear = 1962, Description = "Spider-Man!" },
-        new ComicIssue { IssueID = "marvel-comics-presents-72", SeriesTitle = "Marvel Comics Presents", IssueNumber = "72", PublishMonth = 3, PublishYear = 1991, Description = "Weapon X" },
-        new ComicIssue { IssueID = "marvel-comics-presents-73", SeriesTitle = "Marvel Comics Presents", IssueNumber = "73", PublishMonth = 3, PublishYear = 1991, Description = "Weapon X" },
-        new ComicIssue { IssueID = "marvel-comics-presents-74", SeriesTitle = "Marvel Comics Presents", IssueNumber = "74", PublishMonth = 4, PublishYear = 1991, Description = "Weapon X" },
-        new ComicIssue { IssueID = "marvel-comics-presents-75", SeriesTitle = "Marvel Comics Presents", IssueNumber = "75", PublishMonth = 4, PublishYear = 1991, Description = "Weapon X" },
-        new ComicIssue { IssueID = "marvel-comics-presents-76", SeriesTitle = "Marvel Comics Presents", IssueNumber = "76", PublishMonth = 5, PublishYear = 1991, Description = "Weapon X" },
-        new ComicIssue { IssueID = "marvel-comics-presents-77", SeriesTitle = "Marvel Comics Presents", IssueNumber = "77", PublishMonth = 5, PublishYear = 1991, Description = "Weapon X" },
-        new ComicIssue { IssueID = "marvel-comics-presents-78", SeriesTitle = "Marvel Comics Presents", IssueNumber = "78", PublishMonth = 6, PublishYear = 1991, Description = "Weapon X" },
-        new ComicIssue { IssueID = "marvel-comics-presents-79", SeriesTitle = "Marvel Comics Presents", IssueNumber = "79", PublishMonth = 6, PublishYear = 1991, Description = "Weapon X" },
-        new ComicIssue { IssueID = "marvel-comics-presents-80", SeriesTitle = "Marvel Comics Presents", IssueNumber = "80", PublishMonth = 7, PublishYear = 1991, Description = "Weapon X" },
-        new ComicIssue { IssueID = "marvel-comics-presents-81", SeriesTitle = "Marvel Comics Presents", IssueNumber = "81", PublishMonth = 7, PublishYear = 1991, Description = "Weapon X" },
-        new ComicIssue { IssueID = "marvel-comics-presents-82", SeriesTitle = "Marvel Comics Presents", IssueNumber = "82", PublishMonth = 8, PublishYear = 1991, Description = "Weapon X" },
-        new ComicIssue { IssueID = "marvel-comics-presents-83", SeriesTitle = "Marvel Comics Presents", IssueNumber = "83", PublishMonth = 8, PublishYear = 1991, Description = "Weapon X" },
-        new ComicIssue { IssueID = "marvel-comics-presents-84", SeriesTitle = "Marvel Comics Presents", IssueNumber = "84", PublishMonth = 9, PublishYear = 1991, Description = "Weapon X" },
-        new ComicIssue { IssueID = "marvel-fanfare-1", SeriesTitle = "Marvel Fanfare", IssueNumber = "1", PublishMonth = 3, PublishYear = 1982, Description = "Fast Descent into Hell!" },
-        new ComicIssue { IssueID = "marvel-fanfare-2", SeriesTitle = "Marvel Fanfare", IssueNumber = "2", PublishMonth = 4, PublishYear = 1982, Description = "To Sacrifice My Soul..." },
-        new ComicIssue { IssueID = "marvel-super-heroes-secret-wars-1", SeriesTitle = "Marvel Super Heroes Secret Wars", IssueNumber = "1", PublishMonth = 5, PublishYear = 1984, Description = "Secret Wars" },
-        new ComicIssue { IssueID = "marvel-super-heroes-secret-wars-10", SeriesTitle = "Marvel Super Heroes Secret Wars", IssueNumber = "10", PublishMonth = 2, PublishYear = 1985, Description = "Secret Wars" },
-        new ComicIssue { IssueID = "marvel-super-heroes-secret-wars-11", SeriesTitle = "Marvel Super Heroes Secret Wars", IssueNumber = "11", PublishMonth = 3, PublishYear = 1985, Description = "Secret Wars" },
-        new ComicIssue { IssueID = "marvel-super-heroes-secret-wars-12", SeriesTitle = "Marvel Super Heroes Secret Wars", IssueNumber = "12", PublishMonth = 4, PublishYear = 1985, Description = "Secret Wars" },
-        new ComicIssue { IssueID = "marvel-super-heroes-secret-wars-2", SeriesTitle = "Marvel Super Heroes Secret Wars", IssueNumber = "2", PublishMonth = 6, PublishYear = 1984, Description = "Secret Wars" },
-        new ComicIssue { IssueID = "marvel-super-heroes-secret-wars-3", SeriesTitle = "Marvel Super Heroes Secret Wars", IssueNumber = "3", PublishMonth = 7, PublishYear = 1984, Description = "Secret Wars" },
-        new ComicIssue { IssueID = "marvel-super-heroes-secret-wars-4", SeriesTitle = "Marvel Super Heroes Secret Wars", IssueNumber = "4", PublishMonth = 8, PublishYear = 1984, Description = "Secret Wars" },
-        new ComicIssue { IssueID = "marvel-super-heroes-secret-wars-5", SeriesTitle = "Marvel Super Heroes Secret Wars", IssueNumber = "5", PublishMonth = 9, PublishYear = 1984, Description = "Secret Wars" },
-        new ComicIssue { IssueID = "marvel-super-heroes-secret-wars-6", SeriesTitle = "Marvel Super Heroes Secret Wars", IssueNumber = "6", PublishMonth = 10, PublishYear = 1984, Description = "Secret Wars" },
-        new ComicIssue { IssueID = "marvel-super-heroes-secret-wars-7", SeriesTitle = "Marvel Super Heroes Secret Wars", IssueNumber = "7", PublishMonth = 11, PublishYear = 1984, Description = "Secret Wars" },
-        new ComicIssue { IssueID = "marvel-super-heroes-secret-wars-8", SeriesTitle = "Marvel Super Heroes Secret Wars", IssueNumber = "8", PublishMonth = 12, PublishYear = 1984, Description = "Secret Wars" },
-        new ComicIssue { IssueID = "marvel-super-heroes-secret-wars-9", SeriesTitle = "Marvel Super Heroes Secret Wars", IssueNumber = "9", PublishMonth = 1, PublishYear = 1985, Description = "Secret Wars" },
-        new ComicIssue { IssueID = "marvel-team-up-141", SeriesTitle = "Marvel Team-Up", IssueNumber = "141", Description = "The Alien Costume Saga" },
-        new ComicIssue { IssueID = "marvel-team-up-142", SeriesTitle = "Marvel Team-Up", IssueNumber = "142", Description = "The Alien Costume Saga" },
-        new ComicIssue { IssueID = "marvel-team-up-143", SeriesTitle = "Marvel Team-Up", IssueNumber = "143", Description = "The Alien Costume Saga" },
-        new ComicIssue { IssueID = "marvel-team-up-144", SeriesTitle = "Marvel Team-Up", IssueNumber = "144", Description = "The Alien Costume Saga" },
-        new ComicIssue { IssueID = "marvel-team-up-145", SeriesTitle = "Marvel Team-Up", IssueNumber = "145", Description = "The Alien Costume Saga" },
-        new ComicIssue { IssueID = "marvel-team-up-146", SeriesTitle = "Marvel Team-Up", IssueNumber = "146", Description = "The Alien Costume Saga" },
-        new ComicIssue { IssueID = "marvel-team-up-147", SeriesTitle = "Marvel Team-Up", IssueNumber = "147", Description = "The Alien Costume Saga" },
-        new ComicIssue { IssueID = "marvel-team-up-148", SeriesTitle = "Marvel Team-Up", IssueNumber = "148", Description = "The Alien Costume Saga" },
-        new ComicIssue { IssueID = "marvel-team-up-149", SeriesTitle = "Marvel Team-Up", IssueNumber = "149", Description = "The Alien Costume Saga" },
-        new ComicIssue { IssueID = "marvel-team-up-150", SeriesTitle = "Marvel Team-Up", IssueNumber = "150", Description = "The Alien Costume Saga" },
+      issues.AddRange(ComicBuilder.GenerateRun( seriesIdPrefix: "amazing-spider-man", seriesTitle: "Amazing Spider-Man", startIssue: 1, endIssue: 257, startYear: 1963, startMonth: 3 ));  
+      issues.UpdateRange("amazing-spider-man", 1, 100, i => {i.Author = "Stan Lee";});
+      issues.UpdateRange("amazing-spider-man", 101, 104, i => {i.Author = "Roy Thomas";});
+      issues.UpdateRange("amazing-spider-man", 105, 110, i => {i.Author = "Stan Lee";});
+      issues.UpdateRange("amazing-spider-man", 111, 149, i => {i.Author = "Gerry Conway";});
 
-        new ComicIssue { IssueID = "fantastic-four-1", SeriesTitle = "Fantastic Four", IssueNumber = "1", PublishMonth = 11, PublishYear = 1961 },
-        new ComicIssue { IssueID = "fantastic-four-2", SeriesTitle = "Fantastic Four", IssueNumber = "2", PublishYear = 1961 },
-        new ComicIssue { IssueID = "fantastic-four-4", SeriesTitle = "Fantastic Four", IssueNumber = "4", PublishYear = 1962 },
-        new ComicIssue { IssueID = "fantastic-four-5", SeriesTitle = "Fantastic Four", IssueNumber = "5", PublishYear = 1962 },
-        new ComicIssue { IssueID = "fantastic-four-8", SeriesTitle = "Fantastic Four", IssueNumber = "8", PublishYear = 1962 },
-        new ComicIssue { IssueID = "fantastic-four-11", SeriesTitle = "Fantastic Four", IssueNumber = "11", PublishYear = 1962 },
-        new ComicIssue { IssueID = "fantastic-four-12", SeriesTitle = "Fantastic Four", IssueNumber = "12", PublishYear = 1962 },
-        new ComicIssue { IssueID = "fantastic-four-18", SeriesTitle = "Fantastic Four", IssueNumber = "18", PublishYear = 1963 },
-        new ComicIssue { IssueID = "fantastic-four-32", SeriesTitle = "Fantastic Four", IssueNumber = "32", PublishYear = 1962 },
-        new ComicIssue { IssueID = "fantastic-four-37", SeriesTitle = "Fantastic Four", IssueNumber = "37", PublishYear = 1962 },
-        new ComicIssue { IssueID = "fantastic-four-39", SeriesTitle = "Fantastic Four", IssueNumber = "39", PublishYear = 1962 },
-        new ComicIssue { IssueID = "fantastic-four-40", SeriesTitle = "Fantastic Four", IssueNumber = "40", PublishYear = 1962 },
-        new ComicIssue { IssueID = "fantastic-four-41", SeriesTitle = "Fantastic Four", IssueNumber = "41", PublishYear = 1962 },
-        new ComicIssue { IssueID = "fantastic-four-42", SeriesTitle = "Fantastic Four", IssueNumber = "42", PublishYear = 1962 },
-        new ComicIssue { IssueID = "fantastic-four-43", SeriesTitle = "Fantastic Four", IssueNumber = "43", PublishYear = 1962 },
-        new ComicIssue { IssueID = "fantastic-four-44", SeriesTitle = "Fantastic Four", IssueNumber = "44", PublishYear = 1962 },
-        new ComicIssue { IssueID = "fantastic-four-45", SeriesTitle = "Fantastic Four", IssueNumber = "45", PublishYear = 1962 },
-        new ComicIssue { IssueID = "fantastic-four-46", SeriesTitle = "Fantastic Four", IssueNumber = "46", PublishYear = 1962 },
-        new ComicIssue { IssueID = "fantastic-four-47", SeriesTitle = "Fantastic Four", IssueNumber = "47", PublishYear = 1962 },
-        new ComicIssue { IssueID = "fantastic-four-48", SeriesTitle = "Fantastic Four", IssueNumber = "48", PublishYear = 1962 },
-        new ComicIssue { IssueID = "fantastic-four-49", SeriesTitle = "Fantastic Four", IssueNumber = "49", PublishYear = 1962 },
-        new ComicIssue { IssueID = "fantastic-four-50", SeriesTitle = "Fantastic Four", IssueNumber = "50", PublishYear = 1962 },
-        new ComicIssue { IssueID = "fantastic-four-52", SeriesTitle = "Fantastic Four", IssueNumber = "52", PublishYear = 1962 },
-        new ComicIssue { IssueID = "fantastic-four-53", SeriesTitle = "Fantastic Four", IssueNumber = "53", PublishYear = 1962 },
-        new ComicIssue { IssueID = "fantastic-four-57", SeriesTitle = "Fantastic Four", IssueNumber = "57", PublishYear = 1962 },
-        new ComicIssue { IssueID = "fantastic-four-58", SeriesTitle = "Fantastic Four", IssueNumber = "58", PublishYear = 1962 },
-        new ComicIssue { IssueID = "fantastic-four-59", SeriesTitle = "Fantastic Four", IssueNumber = "59", PublishYear = 1962 },
-        new ComicIssue { IssueID = "fantastic-four-60", SeriesTitle = "Fantastic Four", IssueNumber = "60", PublishYear = 1962 },
-        new ComicIssue { IssueID = "fantastic-four-62", SeriesTitle = "Fantastic Four", IssueNumber = "62", PublishYear = 1962 },
-        new ComicIssue { IssueID = "fantastic-four-64", SeriesTitle = "Fantastic Four", IssueNumber = "64", PublishYear = 1962 },
-        new ComicIssue { IssueID = "fantastic-four-76", SeriesTitle = "Fantastic Four", IssueNumber = "76", PublishYear = 1962 },
-        new ComicIssue { IssueID = "fantastic-four-77", SeriesTitle = "Fantastic Four", IssueNumber = "77", PublishYear = 1962 },
-        new ComicIssue { IssueID = "fantastic-four-234", SeriesTitle = "Fantastic Four", IssueNumber = "234", PublishYear = 1962 },
-        new ComicIssue { IssueID = "fantastic-four-235", SeriesTitle = "Fantastic Four", IssueNumber = "235", PublishYear = 1962 },
-        new ComicIssue { IssueID = "fantastic-four-242", SeriesTitle = "Fantastic Four", IssueNumber = "242", PublishYear = 1962 },
-        new ComicIssue { IssueID = "fantastic-four-243", SeriesTitle = "Fantastic Four", IssueNumber = "243", PublishYear = 1962 },
-        new ComicIssue { IssueID = "fantastic-four-244", SeriesTitle = "Fantastic Four", IssueNumber = "244", PublishYear = 1962 },
-        new ComicIssue { IssueID = "fantastic-four-280", SeriesTitle = "Fantastic Four", IssueNumber = "280", PublishYear = 1962 },
-        new ComicIssue { IssueID = "fantastic-four-281", SeriesTitle = "Fantastic Four", IssueNumber = "281", PublishYear = 1962 },
-        new ComicIssue { IssueID = "fantastic-four-282", SeriesTitle = "Fantastic Four", IssueNumber = "282", PublishYear = 1962 },
-        new ComicIssue { IssueID = "fantastic-four-283", SeriesTitle = "Fantastic Four", IssueNumber = "283", PublishYear = 1962 },
-        new ComicIssue { IssueID = "fantastic-four-570", SeriesTitle = "Fantastic Four", IssueNumber = "570", PublishYear = 2009, Description = "Fantastic Four #570" },
-        new ComicIssue { IssueID = "fantastic-four-571", SeriesTitle = "Fantastic Four", IssueNumber = "571", PublishYear = 2009, Description = "Fantastic Four #571" },
-        new ComicIssue { IssueID = "fantastic-four-572", SeriesTitle = "Fantastic Four", IssueNumber = "572", PublishYear = 2009, Description = "Fantastic Four #572" },
-        new ComicIssue { IssueID = "fantastic-four-573", SeriesTitle = "Fantastic Four", IssueNumber = "573", PublishYear = 2009, Description = "Fantastic Four #573" },
-        new ComicIssue { IssueID = "fantastic-four-574", SeriesTitle = "Fantastic Four", IssueNumber = "574", PublishYear = 2009, Description = "Fantastic Four #574" },
-        new ComicIssue { IssueID = "fantastic-four-575", SeriesTitle = "Fantastic Four", IssueNumber = "575", PublishYear = 2009, Description = "Fantastic Four #575" },
-        new ComicIssue { IssueID = "fantastic-four-576", SeriesTitle = "Fantastic Four", IssueNumber = "576", PublishYear = 2009, Description = "Fantastic Four #576" },
-        new ComicIssue { IssueID = "fantastic-four-577", SeriesTitle = "Fantastic Four", IssueNumber = "577", PublishYear = 2009, Description = "Fantastic Four #577" },
-        new ComicIssue { IssueID = "fantastic-four-578", SeriesTitle = "Fantastic Four", IssueNumber = "578", PublishYear = 2009, Description = "Fantastic Four #578" },
-        new ComicIssue { IssueID = "fantastic-four-579", SeriesTitle = "Fantastic Four", IssueNumber = "579", PublishYear = 2009, Description = "Fantastic Four #579" },
-        new ComicIssue { IssueID = "fantastic-four-580", SeriesTitle = "Fantastic Four", IssueNumber = "580", PublishYear = 2009, Description = "Fantastic Four #580" },
-        new ComicIssue { IssueID = "fantastic-four-581", SeriesTitle = "Fantastic Four", IssueNumber = "581", PublishYear = 2009, Description = "Fantastic Four #581" },
-        new ComicIssue { IssueID = "fantastic-four-582", SeriesTitle = "Fantastic Four", IssueNumber = "582", PublishYear = 2009, Description = "Fantastic Four #582" },
-        new ComicIssue { IssueID = "fantastic-four-583", SeriesTitle = "Fantastic Four", IssueNumber = "583", PublishYear = 2009, Description = "Fantastic Four #583" },
-        new ComicIssue { IssueID = "fantastic-four-584", SeriesTitle = "Fantastic Four", IssueNumber = "584", PublishYear = 2009, Description = "Fantastic Four #584" },
-        new ComicIssue { IssueID = "fantastic-four-585", SeriesTitle = "Fantastic Four", IssueNumber = "585", PublishYear = 2009, Description = "Fantastic Four #585" },
-        new ComicIssue { IssueID = "fantastic-four-586", SeriesTitle = "Fantastic Four", IssueNumber = "586", PublishYear = 2009, Description = "Fantastic Four #586" },
-        new ComicIssue { IssueID = "fantastic-four-587", SeriesTitle = "Fantastic Four", IssueNumber = "587", PublishYear = 2009, Description = "Fantastic Four #587" },
-        new ComicIssue { IssueID = "fantastic-four-588", SeriesTitle = "Fantastic Four", IssueNumber = "588", PublishYear = 2009, Description = "Fantastic Four #588" },
-        new ComicIssue { IssueID = "fantastic-four-annual-2", SeriesTitle = "The Fantastic Four Annual", IssueNumber = "2", PublishYear = 1962 },
-        new ComicIssue { IssueID = "fantastic-four-annual-6", SeriesTitle = "The Fantastic Four Annual", IssueNumber = "6", PublishYear = 1962 },
-      
-        new ComicIssue { IssueID = "amazing-spider-man-1", SeriesTitle = "Amazing Spider-Man", IssueNumber = "1", PublishMonth = 3, PublishYear = 1963, Description = "Spider-Man Vs. the Chameleon!" },
-        new ComicIssue { IssueID = "amazing-spider-man-3", SeriesTitle = "Amazing Spider-Man", IssueNumber = "3", PublishMonth = 7, PublishYear = 1963, Description = "Spider-Man Versus Doctor Octopus" },
-        new ComicIssue { IssueID = "amazing-spider-man-5", SeriesTitle = "Amazing Spider-Man", IssueNumber = "5", PublishMonth = 10, PublishYear = 1963, Description = "Marked for Destruction by Dr. Doom!" },
-        new ComicIssue { IssueID = "amazing-spider-man-6", SeriesTitle = "Amazing Spider-Man", IssueNumber = "6", PublishMonth = 11, PublishYear = 1963, Description = "Face-to-Face with... the Lizard!" },
-        new ComicIssue { IssueID = "amazing-spider-man-12", SeriesTitle = "Amazing Spider-Man", IssueNumber = "12", PublishMonth = 5, PublishYear = 1964, Description = "Unmasked By Doctor Octopus!" },
-        new ComicIssue { IssueID = "amazing-spider-man-13", SeriesTitle = "Amazing Spider-Man", IssueNumber = "13", PublishMonth = 6, PublishYear = 1964, Description = "The Menace of... Mysterio!" },
-        new ComicIssue { IssueID = "amazing-spider-man-15", SeriesTitle = "Amazing Spider-Man", IssueNumber = "15", PublishMonth = 8, PublishYear = 1964, Description = "Kraven the Hunter" },
-        new ComicIssue { IssueID = "amazing-spider-man-19", SeriesTitle = "Amazing Spider-Man", IssueNumber = "19", PublishMonth = 12, PublishYear = 1964, Description = "The Coming of the Scorpion!" },
-        new ComicIssue { IssueID = "amazing-spider-man-20", SeriesTitle = "Amazing Spider-Man", IssueNumber = "20", PublishMonth = 1, PublishYear = 1965, Description = "Spidey Strikes Back!" },
-        new ComicIssue { IssueID = "amazing-spider-man-25", SeriesTitle = "Amazing Spider-Man", IssueNumber = "25", PublishMonth = 6, PublishYear = 1965, Description = "Captured by J. Jonah Jameson!" },
-        new ComicIssue { IssueID = "amazing-spider-man-31", SeriesTitle = "Amazing Spider-Man", IssueNumber = "31", PublishMonth = 12, PublishYear = 1965, Description = "If This Be My Destiny...!" },
-        new ComicIssue { IssueID = "amazing-spider-man-32", SeriesTitle = "Amazing Spider-Man", IssueNumber = "32", PublishMonth = 1, PublishYear = 1966, Description = "If This Be My Destiny...!" },
-        new ComicIssue { IssueID = "amazing-spider-man-33", SeriesTitle = "Amazing Spider-Man", IssueNumber = "33", PublishMonth = 2, PublishYear = 1966, Description = "If This Be My Destiny...!" },
-        new ComicIssue { IssueID = "amazing-spider-man-39", SeriesTitle = "Amazing Spider-Man", IssueNumber = "39", PublishMonth = 8, PublishYear = 1966, Description = "How Green Was My Goblin!" },
-        new ComicIssue { IssueID = "amazing-spider-man-40", SeriesTitle = "Amazing Spider-Man", IssueNumber = "40", PublishMonth = 9, PublishYear = 1966, Description = "How Green Was My Goblin!" },
-        new ComicIssue { IssueID = "amazing-spider-man-42", SeriesTitle = "Amazing Spider-Man", IssueNumber = "42", PublishMonth = 11, PublishYear = 1966, Description = "The Birth of a Super-Hero!" },
-        new ComicIssue { IssueID = "amazing-spider-man-50", SeriesTitle = "Amazing Spider-Man", IssueNumber = "50", PublishMonth = 7, PublishYear = 1967, Description = "Spider-Man No More!" },
-        new ComicIssue { IssueID = "amazing-spider-man-51", SeriesTitle = "Amazing Spider-Man", IssueNumber = "51", PublishMonth = 8, PublishYear = 1967, Description = "Spider-Man No More!" },
-        new ComicIssue { IssueID = "amazing-spider-man-52", SeriesTitle = "Amazing Spider-Man", IssueNumber = "52", PublishMonth = 9, PublishYear = 1967, Description = "Spider-Man No More!" },
-        new ComicIssue { IssueID = "amazing-spider-man-53", SeriesTitle = "Amazing Spider-Man", IssueNumber = "53", PublishMonth = 10, PublishYear = 1967, Description = "Doc Ock Wins!" },
-        new ComicIssue { IssueID = "amazing-spider-man-54", SeriesTitle = "Amazing Spider-Man", IssueNumber = "54", PublishMonth = 11, PublishYear = 1967, Description = "Doc Ock Wins!" },
-        new ComicIssue { IssueID = "amazing-spider-man-55", SeriesTitle = "Amazing Spider-Man", IssueNumber = "55", PublishMonth = 12, PublishYear = 1967, Description = "Doc Ock Wins!" },
-        new ComicIssue { IssueID = "amazing-spider-man-56", SeriesTitle = "Amazing Spider-Man", IssueNumber = "56", PublishMonth = 1, PublishYear = 1968, Description = "Doc Ock Wins!" },
-        new ComicIssue { IssueID = "amazing-spider-man-57", SeriesTitle = "Amazing Spider-Man", IssueNumber = "57", PublishMonth = 2, PublishYear = 1968, Description = "Doc Ock Wins!" },
-        new ComicIssue { IssueID = "amazing-spider-man-73", SeriesTitle = "Amazing Spider-Man", IssueNumber = "73", PublishMonth = 6, PublishYear = 1969, Description = "The Web Closes!" },
-        new ComicIssue { IssueID = "amazing-spider-man-87", SeriesTitle = "Amazing Spider-Man", IssueNumber = "87", PublishMonth = 8, PublishYear = 1970, Description = "The Death of Captain Stacy" },
-        new ComicIssue { IssueID = "amazing-spider-man-88", SeriesTitle = "Amazing Spider-Man", IssueNumber = "88", PublishMonth = 9, PublishYear = 1970, Description = "The Death of Captain Stacy" },
-        new ComicIssue { IssueID = "amazing-spider-man-89", SeriesTitle = "Amazing Spider-Man", IssueNumber = "89", PublishMonth = 10, PublishYear = 1970, Description = "The Death of Captain Stacy" },
-        new ComicIssue { IssueID = "amazing-spider-man-90", SeriesTitle = "Amazing Spider-Man", IssueNumber = "90", PublishMonth = 11, PublishYear = 1970, Description = "The Death of Captain Stacy" },
-        new ComicIssue { IssueID = "amazing-spider-man-91", SeriesTitle = "Amazing Spider-Man", IssueNumber = "91", PublishMonth = 12, PublishYear = 1970, Description = "The Death of Captain Stacy" },
-        new ComicIssue { IssueID = "amazing-spider-man-92", SeriesTitle = "Amazing Spider-Man", IssueNumber = "92", PublishMonth = 1, PublishYear = 1971, Description = "The Death of Captain Stacy" },
-        new ComicIssue { IssueID = "amazing-spider-man-96", SeriesTitle = "Amazing Spider-Man", IssueNumber = "96", PublishMonth = 5, PublishYear = 1971, Description = "Green Goblin Reborn!" },
-        new ComicIssue { IssueID = "amazing-spider-man-97", SeriesTitle = "Amazing Spider-Man", IssueNumber = "97", PublishMonth = 6, PublishYear = 1971, Description = "Green Goblin Reborn!" },
-        new ComicIssue { IssueID = "amazing-spider-man-98", SeriesTitle = "Amazing Spider-Man", IssueNumber = "98", PublishMonth = 7, PublishYear = 1971, Description = "Green Goblin Reborn!" },
-        new ComicIssue { IssueID = "amazing-spider-man-100", SeriesTitle = "Amazing Spider-Man", IssueNumber = "100", PublishMonth = 9, PublishYear = 1971, Description = "The Spider or the Man?" },
-        new ComicIssue { IssueID = "amazing-spider-man-101", SeriesTitle = "Amazing Spider-Man", IssueNumber = "101", PublishMonth = 10, PublishYear = 1971, Description = "A Monster Called Morbius!" },
-        new ComicIssue { IssueID = "amazing-spider-man-102", SeriesTitle = "Amazing Spider-Man", IssueNumber = "102", PublishMonth = 11, PublishYear = 1971, Description = "Vampire at Large!" },
-        new ComicIssue { IssueID = "amazing-spider-man-121", SeriesTitle = "Amazing Spider-Man", IssueNumber = "121", PublishMonth = 6, PublishYear = 1973, Description = "The Night Gwen Stacy Died" },
-        new ComicIssue { IssueID = "amazing-spider-man-122", SeriesTitle = "Amazing Spider-Man", IssueNumber = "122", PublishMonth = 7, PublishYear = 1973, Description = "The Goblin's Last Stand!" },
-        new ComicIssue { IssueID = "amazing-spider-man-129", SeriesTitle = "Amazing Spider-Man", IssueNumber = "129", PublishMonth = 2, PublishYear = 1974, Description = "The Punisher Strikes Twice!" },
-        new ComicIssue { IssueID = "amazing-spider-man-136", SeriesTitle = "Amazing Spider-Man", IssueNumber = "136", PublishMonth = 9, PublishYear = 1974, Description = "The Green Goblin Lives Again!" },
-        new ComicIssue { IssueID = "amazing-spider-man-137", SeriesTitle = "Amazing Spider-Man", IssueNumber = "137", PublishMonth = 10, PublishYear = 1974, Description = "The Green Goblin Strikes!" },
-        new ComicIssue { IssueID = "amazing-spider-man-139", SeriesTitle = "Amazing Spider-Man", IssueNumber = "139", PublishMonth = 5, PublishYear = 1975, Description = "The Original Clone Saga" },
-        new ComicIssue { IssueID = "amazing-spider-man-140", SeriesTitle = "Amazing Spider-Man", IssueNumber = "140", PublishMonth = 6, PublishYear = 1975, Description = "The Original Clone Saga" },
-        new ComicIssue { IssueID = "amazing-spider-man-141", SeriesTitle = "Amazing Spider-Man", IssueNumber = "141", PublishMonth = 7, PublishYear = 1975, Description = "The Original Clone Saga" },
-        new ComicIssue { IssueID = "amazing-spider-man-142", SeriesTitle = "Amazing Spider-Man", IssueNumber = "142", PublishMonth = 8, PublishYear = 1975, Description = "The Original Clone Saga" },
-        new ComicIssue { IssueID = "amazing-spider-man-143", SeriesTitle = "Amazing Spider-Man", IssueNumber = "143", PublishMonth = 9, PublishYear = 1975, Description = "The Original Clone Saga" },
-        new ComicIssue { IssueID = "amazing-spider-man-144", SeriesTitle = "Amazing Spider-Man", IssueNumber = "144", PublishMonth = 10, PublishYear = 1975, Description = "The Original Clone Saga" },
-        new ComicIssue { IssueID = "amazing-spider-man-145", SeriesTitle = "Amazing Spider-Man", IssueNumber = "145", PublishMonth = 11, PublishYear = 1975, Description = "The Original Clone Saga" },
-        new ComicIssue { IssueID = "amazing-spider-man-146", SeriesTitle = "Amazing Spider-Man", IssueNumber = "146", PublishMonth = 12, PublishYear = 1975, Description = "The Original Clone Saga" },
-        new ComicIssue { IssueID = "amazing-spider-man-147", SeriesTitle = "Amazing Spider-Man", IssueNumber = "147", PublishMonth = 1, PublishYear = 1976, Description = "The Original Clone Saga" },
-        new ComicIssue { IssueID = "amazing-spider-man-148", SeriesTitle = "Amazing Spider-Man", IssueNumber = "148", PublishMonth = 2, PublishYear = 1976, Description = "The Original Clone Saga" },
-        new ComicIssue { IssueID = "amazing-spider-man-149", SeriesTitle = "Amazing Spider-Man", IssueNumber = "149", PublishMonth = 3, PublishYear = 1976, Description = "The Original Clone Saga" },
-        new ComicIssue { IssueID = "amazing-spider-man-150", SeriesTitle = "Amazing Spider-Man", IssueNumber = "150", PublishMonth = 4, PublishYear = 1976, Description = "The Original Clone Saga" },
-        new ComicIssue { IssueID = "amazing-spider-man-172", SeriesTitle = "Amazing Spider-Man", IssueNumber = "172", PublishMonth = 9, PublishYear = 1977, Description = "The Fiend from the Fire!" },
-        new ComicIssue { IssueID = "amazing-spider-man-182", SeriesTitle = "Amazing Spider-Man", IssueNumber = "182", PublishMonth = 7, PublishYear = 1978, Description = "The Rocket Racer's Back in Town!" },
-        new ComicIssue { IssueID = "amazing-spider-man-183", SeriesTitle = "Amazing Spider-Man", IssueNumber = "183", PublishMonth = 8, PublishYear = 1978, Description = "...And Where the Big Wheel Stops, Nobody Knows!" },
-        new ComicIssue { IssueID = "amazing-spider-man-192", SeriesTitle = "Amazing Spider-Man", IssueNumber = "192", PublishMonth = 5, PublishYear = 1979, Description = "24 Hours till Doomsday!" },
-        new ComicIssue { IssueID = "amazing-spider-man-193", SeriesTitle = "Amazing Spider-Man", IssueNumber = "193", PublishMonth = 6, PublishYear = 1979, Description = "The Return Of The Burglar" },
-        new ComicIssue { IssueID = "amazing-spider-man-194", SeriesTitle = "Amazing Spider-Man", IssueNumber = "194", PublishMonth = 7, PublishYear = 1979, Description = "The Return Of The Burglar" },
-        new ComicIssue { IssueID = "amazing-spider-man-195", SeriesTitle = "Amazing Spider-Man", IssueNumber = "195", PublishMonth = 8, PublishYear = 1979, Description = "The Return Of The Burglar" },
-        new ComicIssue { IssueID = "amazing-spider-man-196", SeriesTitle = "Amazing Spider-Man", IssueNumber = "196", PublishMonth = 9, PublishYear = 1979, Description = "The Return Of The Burglar" },
-        new ComicIssue { IssueID = "amazing-spider-man-197", SeriesTitle = "Amazing Spider-Man", IssueNumber = "197", PublishMonth = 10, PublishYear = 1979, Description = "The Return Of The Burglar" },
-        new ComicIssue { IssueID = "amazing-spider-man-198", SeriesTitle = "Amazing Spider-Man", IssueNumber = "198", PublishMonth = 11, PublishYear = 1979, Description = "The Return Of The Burglar" },
-        new ComicIssue { IssueID = "amazing-spider-man-199", SeriesTitle = "Amazing Spider-Man", IssueNumber = "199", PublishMonth = 12, PublishYear = 1979, Description = "The Return Of The Burglar" },
-        new ComicIssue { IssueID = "amazing-spider-man-200", SeriesTitle = "Amazing Spider-Man", IssueNumber = "200", PublishMonth = 1, PublishYear = 1980, Description = "The Return Of The Burglar" },
-        new ComicIssue { IssueID = "amazing-spider-man-212", SeriesTitle = "Amazing Spider-Man", IssueNumber = "212", PublishMonth = 1, PublishYear = 1981, Description = "The Coming of Hydroman!" },
-        new ComicIssue { IssueID = "amazing-spider-man-229", SeriesTitle = "Amazing Spider-Man", IssueNumber = "229", PublishMonth = 6, PublishYear = 1982, Description = "Nothing Can Stop the Juggernaut!" },
-        new ComicIssue { IssueID = "amazing-spider-man-230", SeriesTitle = "Amazing Spider-Man", IssueNumber = "230", PublishMonth = 7, PublishYear = 1982, Description = "Nothing Can Stop the Juggernaut!" },
-        new ComicIssue { IssueID = "amazing-spider-man-231", SeriesTitle = "Amazing Spider-Man", IssueNumber = "231", PublishMonth = 8, PublishYear = 1982, Description = "Hyde & Seek" },
-        new ComicIssue { IssueID = "amazing-spider-man-232", SeriesTitle = "Amazing Spider-Man", IssueNumber = "232", PublishMonth = 9, PublishYear = 1982, Description = "Hyde & Seek" },
-        new ComicIssue { IssueID = "amazing-spider-man-248", SeriesTitle = "Amazing Spider-Man", IssueNumber = "248", PublishMonth = 1, PublishYear = 1984, Description = "The Kid Who Collects Spider-Man!" },
-        new ComicIssue { IssueID = "amazing-spider-man-249", SeriesTitle = "Amazing Spider-Man", IssueNumber = "249", PublishMonth = 2, PublishYear = 1984, Description = "Secrets!" },
-        new ComicIssue { IssueID = "amazing-spider-man-250", SeriesTitle = "Amazing Spider-Man", IssueNumber = "250", PublishMonth = 3, PublishYear = 1984, Description = "Confessions!" },
-        new ComicIssue { IssueID = "amazing-spider-man-251", SeriesTitle = "Amazing Spider-Man", IssueNumber = "251", PublishMonth = 4, PublishYear = 1984, Description = "Endings!" },
-        new ComicIssue { IssueID = "amazing-spider-man-252", SeriesTitle = "Amazing Spider-Man", IssueNumber = "252", PublishMonth = 5, PublishYear = 1984, Description = "The Alien Costume Saga" },
-        new ComicIssue { IssueID = "amazing-spider-man-253", SeriesTitle = "Amazing Spider-Man", IssueNumber = "253", PublishMonth = 6, PublishYear = 1984, Description = "The Alien Costume Saga" },
-        new ComicIssue { IssueID = "amazing-spider-man-254", SeriesTitle = "Amazing Spider-Man", IssueNumber = "254", PublishMonth = 7, PublishYear = 1984, Description = "The Alien Costume Saga" },
-        new ComicIssue { IssueID = "amazing-spider-man-255", SeriesTitle = "Amazing Spider-Man", IssueNumber = "255", PublishMonth = 8, PublishYear = 1984, Description = "The Alien Costume Saga" },
-        new ComicIssue { IssueID = "amazing-spider-man-256", SeriesTitle = "Amazing Spider-Man", IssueNumber = "256", PublishMonth = 9, PublishYear = 1984, Description = "The Alien Costume Saga" },
-        new ComicIssue { IssueID = "amazing-spider-man-257", SeriesTitle = "Amazing Spider-Man", IssueNumber = "257", PublishMonth = 10, PublishYear = 1984, Description = "The Alien Costume Saga" },
-        new ComicIssue { IssueID = "amazing-spider-man-258", SeriesTitle = "Amazing Spider-Man", IssueNumber = "258", PublishMonth = 11, PublishYear = 1984, Description = "The Sinister Secret of Spider-Man's New Costume!" },
-        new ComicIssue { IssueID = "amazing-spider-man-259", SeriesTitle = "Amazing Spider-Man", IssueNumber = "259", PublishMonth = 12, PublishYear = 1984, Description = "The Alien Costume Saga" },
-        new ComicIssue { IssueID = "amazing-spider-man-260", SeriesTitle = "Amazing Spider-Man", IssueNumber = "260", PublishMonth = 1, PublishYear = 1985, Description = "The Alien Costume Saga" },
-        new ComicIssue { IssueID = "amazing-spider-man-261", SeriesTitle = "Amazing Spider-Man", IssueNumber = "261", PublishMonth = 2, PublishYear = 1985, Description = "The Alien Costume Saga" },
-        new ComicIssue { IssueID = "amazing-spider-man-262", SeriesTitle = "Amazing Spider-Man", IssueNumber = "262", PublishMonth = 3, PublishYear = 1985, Description = "The Alien Costume Saga" },
-        new ComicIssue { IssueID = "amazing-spider-man-263", SeriesTitle = "Amazing Spider-Man", IssueNumber = "263", PublishMonth = 6, PublishYear = 1984, Description = "The Alien Costume Saga" },
-        new ComicIssue { IssueID = "amazing-spider-man-293", SeriesTitle = "Amazing Spider-Man", IssueNumber = "293", Description = "Fearful Symmetry: Kraven's Last Hunt" },
-        new ComicIssue { IssueID = "amazing-spider-man-294", SeriesTitle = "Amazing Spider-Man", IssueNumber = "294", Description = "Fearful Symmetry: Kraven's Last Hunt" },
-        new ComicIssue { IssueID = "amazing-spider-man-298", SeriesTitle = "Amazing Spider-Man", IssueNumber = "298", PublishMonth = 3, PublishYear = 1988, Description = "Chance Encounter" },
-        new ComicIssue { IssueID = "amazing-spider-man-312", SeriesTitle = "Amazing Spider-Man", IssueNumber = "312", PublishMonth = 2, PublishYear = 1989, Description = "The Goblin War" },
-        new ComicIssue { IssueID = "amazing-spider-man-315", SeriesTitle = "Amazing Spider-Man", IssueNumber = "315", PublishMonth = 5, PublishYear = 1989, Description = "Venom Strikes Back" },
-        new ComicIssue { IssueID = "amazing-spider-man-316", SeriesTitle = "Amazing Spider-Man", IssueNumber = "316", PublishMonth = 6, PublishYear = 1989, Description = "Venom Strikes Back" },
-        new ComicIssue { IssueID = "amazing-spider-man-317", SeriesTitle = "Amazing Spider-Man", IssueNumber = "317", PublishMonth = 7, PublishYear = 1989, Description = "The Sand and the Fury" },
-        new ComicIssue { IssueID = "amazing-spider-man-320", SeriesTitle = "Amazing Spider-Man", IssueNumber = "320", PublishMonth = 9, PublishYear = 1989, Description = "The Assassin-Nation Plot" },
-        new ComicIssue { IssueID = "amazing-spider-man-321", SeriesTitle = "Amazing Spider-Man", IssueNumber = "321", PublishMonth = 10, PublishYear = 1989, Description = "The Assassin-Nation Plot" },
-        new ComicIssue { IssueID = "amazing-spider-man-322", SeriesTitle = "Amazing Spider-Man", IssueNumber = "322", PublishMonth = 11, PublishYear = 1989, Description = "The Assassin-Nation Plot" },
-        new ComicIssue { IssueID = "amazing-spider-man-323", SeriesTitle = "Amazing Spider-Man", IssueNumber = "323", PublishMonth = 12, PublishYear = 1989, Description = "The Assassin-Nation Plot" },
-        new ComicIssue { IssueID = "amazing-spider-man-324", SeriesTitle = "Amazing Spider-Man", IssueNumber = "324", PublishMonth = 1, PublishYear = 1990, Description = "The Assassin-Nation Plot" },
-        new ComicIssue { IssueID = "amazing-spider-man-325", SeriesTitle = "Amazing Spider-Man", IssueNumber = "325", PublishMonth = 2, PublishYear = 1990, Description = "The Assassin-Nation Plot" },
-        new ComicIssue { IssueID = "amazing-spider-man-334", SeriesTitle = "Amazing Spider-Man", IssueNumber = "334", Description = "The Return of the Sinister Six" },
-        new ComicIssue { IssueID = "amazing-spider-man-335", SeriesTitle = "Amazing Spider-Man", IssueNumber = "335", Description = "The Return of the Sinister Six" },
-        new ComicIssue { IssueID = "amazing-spider-man-336", SeriesTitle = "Amazing Spider-Man", IssueNumber = "336", Description = "The Return of the Sinister Six" },
-        new ComicIssue { IssueID = "amazing-spider-man-337", SeriesTitle = "Amazing Spider-Man", IssueNumber = "337", Description = "The Return of the Sinister Six" },
-        new ComicIssue { IssueID = "amazing-spider-man-338", SeriesTitle = "Amazing Spider-Man", IssueNumber = "338", Description = "The Return of the Sinister Six" },
-        new ComicIssue { IssueID = "amazing-spider-man-339", SeriesTitle = "Amazing Spider-Man", IssueNumber = "339", Description = "The Return of the Sinister Six" },
-        new ComicIssue { IssueID = "amazing-spider-man-340", SeriesTitle = "Amazing Spider-Man", IssueNumber = "340", Description = "The Return of the Sinister Six" },
-        new ComicIssue { IssueID = "amazing-spider-man-341", SeriesTitle = "Amazing Spider-Man", IssueNumber = "341", Description = "The Return of the Sinister Six" },
-        new ComicIssue { IssueID = "amazing-spider-man-342", SeriesTitle = "Amazing Spider-Man", IssueNumber = "342", Description = "The Return of the Sinister Six" },
-        new ComicIssue { IssueID = "amazing-spider-man-343", SeriesTitle = "Amazing Spider-Man", IssueNumber = "343", PublishMonth = 1, PublishYear = 1991, Description = "The Return of the Sinister Six" },
-        new ComicIssue { IssueID = "amazing-spider-man-344", SeriesTitle = "Amazing Spider-Man", IssueNumber = "344", PublishMonth = 2, PublishYear = 1991, Description = "Hearts and Powers" },
-        new ComicIssue { IssueID = "amazing-spider-man-345", SeriesTitle = "Amazing Spider-Man", IssueNumber = "345", PublishMonth = 3, PublishYear = 1991, Description = "Gun From the Heart" },
-        new ComicIssue { IssueID = "amazing-spider-man-346", SeriesTitle = "Amazing Spider-Man", IssueNumber = "346", PublishMonth = 4, PublishYear = 1991, Description = "The Return of the Sinister Six" },
-        new ComicIssue { IssueID = "amazing-spider-man-347", SeriesTitle = "Amazing Spider-Man", IssueNumber = "347", PublishMonth = 5, PublishYear = 1991, Description = "The Return of the Sinister Six" },
-        new ComicIssue { IssueID = "amazing-spider-man-348", SeriesTitle = "Amazing Spider-Man", IssueNumber = "348", PublishMonth = 6, PublishYear = 1991, Description = "The Return of the Sinister Six" },
-        new ComicIssue { IssueID = "amazing-spider-man-349", SeriesTitle = "Amazing Spider-Man", IssueNumber = "349", PublishMonth = 7, PublishYear = 1991, Description = "The Return of the Sinister Six" },
-        new ComicIssue { IssueID = "amazing-spider-man-350", SeriesTitle = "Amazing Spider-Man", IssueNumber = "350", PublishMonth = 8, PublishYear = 1991, Description = "The Return of the Sinister Six" },
-        new ComicIssue { IssueID = "amazing-spider-man-359", SeriesTitle = "Amazing Spider-Man", IssueNumber = "359", PublishMonth = 2, PublishYear = 1992, Description = "Toy Death!" },
-        new ComicIssue { IssueID = "amazing-spider-man-361", SeriesTitle = "Amazing Spider-Man", IssueNumber = "361", PublishMonth = 4, PublishYear = 1992, Description = "Savage Genesis" },
-        new ComicIssue { IssueID = "amazing-spider-man-362", SeriesTitle = "Amazing Spider-Man", IssueNumber = "362", PublishMonth = 5, PublishYear = 1992, Description = "Savage Alliance" },
-        new ComicIssue { IssueID = "amazing-spider-man-363", SeriesTitle = "Amazing Spider-Man", IssueNumber = "363", PublishMonth = 6, PublishYear = 1992, Description = "Savage Grace!" },
-        new ComicIssue { IssueID = "amazing-spider-man-368", SeriesTitle = "Amazing Spider-Man", IssueNumber = "368", Description = "Invasion of the Spider-Slayers" },
-        new ComicIssue { IssueID = "amazing-spider-man-369", SeriesTitle = "Amazing Spider-Man", IssueNumber = "369", Description = "Invasion of the Spider-Slayers" },
-        new ComicIssue { IssueID = "amazing-spider-man-370", SeriesTitle = "Amazing Spider-Man", IssueNumber = "370", Description = "Invasion of the Spider-Slayers" },
-        new ComicIssue { IssueID = "amazing-spider-man-371", SeriesTitle = "Amazing Spider-Man", IssueNumber = "371", Description = "Invasion of the Spider-Slayers" },
-        new ComicIssue { IssueID = "amazing-spider-man-372", SeriesTitle = "Amazing Spider-Man", IssueNumber = "372", PublishMonth = 1, PublishYear = 1993, Description = "Invasion of the Spider Slayers Part 5: Arachnophobia Too!" },
-        new ComicIssue { IssueID = "amazing-spider-man-373", SeriesTitle = "Amazing Spider-Man", IssueNumber = "373", PublishMonth = 1, PublishYear = 1993, Description = "Invasion of the Spider Slayers Part 6: The Bedlam Perspective" },
-        new ComicIssue { IssueID = "amazing-spider-man-378", SeriesTitle = "Amazing Spider-Man", IssueNumber = "378", PublishMonth = 6, PublishYear = 1988, Description = "Maximum Carnage Part 3" },
-        new ComicIssue { IssueID = "amazing-spider-man-379", SeriesTitle = "Amazing Spider-Man", IssueNumber = "379", PublishMonth = 7, PublishYear = 1988, Description = "Maximum Carnage Part 7" },
-        new ComicIssue { IssueID = "amazing-spider-man-380", SeriesTitle = "Amazing Spider-Man", IssueNumber = "380", PublishMonth = 8, PublishYear = 1988, Description = "Maximum Carnage Part 11" },
-        new ComicIssue { IssueID = "amazing-spider-man-386", SeriesTitle = "Amazing Spider-Man", IssueNumber = "386", PublishMonth = 2, PublishYear = 1994, Description = "The Wings of Age!" },
-        new ComicIssue { IssueID = "amazing-spider-man-387", SeriesTitle = "Amazing Spider-Man", IssueNumber = "387", PublishMonth = 3, PublishYear = 1994, Description = "The Thief of Years!" },
-        new ComicIssue { IssueID = "amazing-spider-man-434", SeriesTitle = "Amazing Spider-Man", IssueNumber = "434", Description = "Identity Crisis" },
-        new ComicIssue { IssueID = "amazing-spider-man-435", SeriesTitle = "Amazing Spider-Man", IssueNumber = "435", Description = "Identity Crisis" },
-        new ComicIssue { IssueID = "amazing-spider-man-440", SeriesTitle = "Amazing Spider-Man", IssueNumber = "440", Description = "The Gathering of Five" },
-        new ComicIssue { IssueID = "amazing-spider-man-441", SeriesTitle = "Amazing Spider-Man", IssueNumber = "441", Description = "The Final Chapter" },
-        new ComicIssue { IssueID = "amazing-spider-man-503", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "503", Description = "The Book of Ezekiel" },
-        new ComicIssue { IssueID = "amazing-spider-man-504", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "504", Description = "The Book of Ezekiel" },
-        new ComicIssue { IssueID = "amazing-spider-man-505", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "505", Description = "The Book of Ezekiel" },
-        new ComicIssue { IssueID = "amazing-spider-man-506", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "506", Description = "The Book of Ezekiel" },
-        new ComicIssue { IssueID = "amazing-spider-man-507", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "507", Description = "The Book of Ezekiel" },
-        new ComicIssue { IssueID = "amazing-spider-man-508", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "508", Description = "The Book of Ezekiel" },
-        new ComicIssue { IssueID = "amazing-spider-man-525", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "525", Description = "The Other" },
-        new ComicIssue { IssueID = "amazing-spider-man-526", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "526", Description = "The Other" },
-        new ComicIssue { IssueID = "amazing-spider-man-527", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "527", Description = "The Other" },
-        new ComicIssue { IssueID = "amazing-spider-man-528", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "528", Description = "The Other" },
-        new ComicIssue { IssueID = "amazing-spider-man-529", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "529", Description = "Civil War" },
-        new ComicIssue { IssueID = "amazing-spider-man-530", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "530", Description = "Civil War" },
-        new ComicIssue { IssueID = "amazing-spider-man-531", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "531", Description = "Civil War" },
-        new ComicIssue { IssueID = "amazing-spider-man-532", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "532", Description = "Civil War" },
-        new ComicIssue { IssueID = "amazing-spider-man-533", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "533", Description = "Civil War" },
-        new ComicIssue { IssueID = "amazing-spider-man-534", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "534", Description = "Civil War" },
-        new ComicIssue { IssueID = "amazing-spider-man-535", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "535", Description = "Civil War" },
-        new ComicIssue { IssueID = "amazing-spider-man-536", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "536", Description = "Civil War" },
-        new ComicIssue { IssueID = "amazing-spider-man-537", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "537", Description = "Civil War" },
-        new ComicIssue { IssueID = "amazing-spider-man-538", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "538", Description = "Civil War" },
-        new ComicIssue { IssueID = "amazing-spider-man-539", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "539", Description = "Back in Black" },
-        new ComicIssue { IssueID = "amazing-spider-man-540", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "540", Description = "Back in Black" },
-        new ComicIssue { IssueID = "amazing-spider-man-541", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "541", Description = "Back in Black" },
-        new ComicIssue { IssueID = "amazing-spider-man-542", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "542", Description = "Back in Black" },
-        new ComicIssue { IssueID = "amazing-spider-man-543", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "543", Description = "Back in Black" },
-        new ComicIssue { IssueID = "amazing-spider-man-544", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "544", Description = "One More Day" },
-        new ComicIssue { IssueID = "amazing-spider-man-545", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "545", Description = "One More Day" },
-        new ComicIssue { IssueID = "amazing-spider-man-546", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "546", Description = "Brand New Day" },
-        new ComicIssue { IssueID = "amazing-spider-man-547", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "547", Description = "Brand New Day" },
-        new ComicIssue { IssueID = "amazing-spider-man-548", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "548", Description = "Brand New Day" },
-        new ComicIssue { IssueID = "amazing-spider-man-549", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "549", Description = "Brand New Day" },
-        new ComicIssue { IssueID = "amazing-spider-man-550", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "550", Description = "Brand New Day" },
-        new ComicIssue { IssueID = "amazing-spider-man-551", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "551", Description = "Brand New Day" },
-        new ComicIssue { IssueID = "amazing-spider-man-552", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "552", Description = "Brand New Day" },
-        new ComicIssue { IssueID = "amazing-spider-man-553", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "553", Description = "Brand New Day" },
-        new ComicIssue { IssueID = "amazing-spider-man-554", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "554", Description = "Brand New Day" },
-        new ComicIssue { IssueID = "amazing-spider-man-555", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "555", Description = "Brand New Day" },
-        new ComicIssue { IssueID = "amazing-spider-man-556", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "556", Description = "Brand New Day" },
-        new ComicIssue { IssueID = "amazing-spider-man-557", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "557", Description = "Brand New Day" },
-        new ComicIssue { IssueID = "amazing-spider-man-558", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "558", Description = "Brand New Day" },
-        new ComicIssue { IssueID = "amazing-spider-man-559", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "559", Description = "Brand New Day" },
-        new ComicIssue { IssueID = "amazing-spider-man-560", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "560", Description = "Brand New Day" },
-        new ComicIssue { IssueID = "amazing-spider-man-561", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "561", Description = "Brand New Day" },
-        new ComicIssue { IssueID = "amazing-spider-man-562", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "562", Description = "Brand New Day" },
-        new ComicIssue { IssueID = "amazing-spider-man-563", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "563", Description = "Brand New Day" },
-        new ComicIssue { IssueID = "amazing-spider-man-564", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "564", Description = "Brand New Day" },
-        new ComicIssue { IssueID = "amazing-spider-man-565", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "565", Description = "Kraven's First Hunt" },
-        new ComicIssue { IssueID = "amazing-spider-man-566", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "566", Description = "Kraven's First Hunt" },
-        new ComicIssue { IssueID = "amazing-spider-man-567", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "567", Description = "Kraven's First Hunt" },
-        new ComicIssue { IssueID = "amazing-spider-man-568", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "568", Description = "New Ways to Die" },
-        new ComicIssue { IssueID = "amazing-spider-man-569", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "569", Description = "New Ways to Die" },
-        new ComicIssue { IssueID = "amazing-spider-man-570", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "570", Description = "New Ways to Die" },
-        new ComicIssue { IssueID = "amazing-spider-man-571", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "571", Description = "New Ways to Die" },
-        new ComicIssue { IssueID = "amazing-spider-man-572", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "572", Description = "New Ways to Die" },
-        new ComicIssue { IssueID = "amazing-spider-man-573", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "573", Description = "New Ways to Die" },
-        new ComicIssue { IssueID = "amazing-spider-man-583", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "583", Description = "Spidey Meets the President!" },
-        new ComicIssue { IssueID = "amazing-spider-man-600", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "600", Description = "Died in Your Arms Tonight" },
-        new ComicIssue { IssueID = "amazing-spider-man-601", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "601", Description = "Died in Your Arms Tonight" },
-        new ComicIssue { IssueID = "amazing-spider-man-602", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "602", Description = "Red-Headed Stranger" },
-        new ComicIssue { IssueID = "amazing-spider-man-603", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "603", Description = "Red-Headed Stranger" },
-        new ComicIssue { IssueID = "amazing-spider-man-604", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "604", Description = "Red-Headed Stranger" },
-        new ComicIssue { IssueID = "amazing-spider-man-605", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "605", Description = "Red-Headed Stranger" },
-        new ComicIssue { IssueID = "amazing-spider-man-606", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "606", Description = "Return of the Black Cat" },
-        new ComicIssue { IssueID = "amazing-spider-man-607", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "607", Description = "Return of the Black Cat" },
-        new ComicIssue { IssueID = "amazing-spider-man-608", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "608", Description = "Return of the Black Cat" },
-        new ComicIssue { IssueID = "amazing-spider-man-609", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "609", Description = "Return of the Black Cat" },
-        new ComicIssue { IssueID = "amazing-spider-man-610", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "610", Description = "Return of the Black Cat" },
-        new ComicIssue { IssueID = "amazing-spider-man-611", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "611", Description = "Return of the Black Cat" },
-        new ComicIssue { IssueID = "amazing-spider-man-612", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "612", Description = "The Gauntlet" },
-        new ComicIssue { IssueID = "amazing-spider-man-613", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "613", Description = "The Gauntlet" },
-        new ComicIssue { IssueID = "amazing-spider-man-614", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "614", Description = "The Gauntlet" },
-        new ComicIssue { IssueID = "amazing-spider-man-615", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "615", Description = "The Gauntlet" },
-        new ComicIssue { IssueID = "amazing-spider-man-616", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "616", Description = "The Gauntlet" },
-        new ComicIssue { IssueID = "amazing-spider-man-617", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "617", Description = "The Gauntlet" },
-        new ComicIssue { IssueID = "amazing-spider-man-618", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "618", Description = "The Gauntlet" },
-        new ComicIssue { IssueID = "amazing-spider-man-619", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "619", Description = "The Gauntlet" },
-        new ComicIssue { IssueID = "amazing-spider-man-620", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "620", Description = "The Gauntlet" },
-        new ComicIssue { IssueID = "amazing-spider-man-621", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "621", Description = "The Gauntlet" },
-        new ComicIssue { IssueID = "amazing-spider-man-622", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "622", Description = "The Gauntlet" },
-        new ComicIssue { IssueID = "amazing-spider-man-623", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "623", Description = "The Gauntlet" },
-        new ComicIssue { IssueID = "amazing-spider-man-624", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "624", Description = "The Gauntlet" },
-        new ComicIssue { IssueID = "amazing-spider-man-625", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "625", Description = "The Gauntlet" },
-        new ComicIssue { IssueID = "amazing-spider-man-626", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "626", Description = "The Gauntlet" },
-        new ComicIssue { IssueID = "amazing-spider-man-627", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "627", Description = "The Gauntlet" },
-        new ComicIssue { IssueID = "amazing-spider-man-628", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "628", Description = "The Gauntlet" },
-        new ComicIssue { IssueID = "amazing-spider-man-629", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "629", Description = "The Gauntlet" },
-        new ComicIssue { IssueID = "amazing-spider-man-630", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "630", Description = "The Gauntlet" },
-        new ComicIssue { IssueID = "amazing-spider-man-631", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "631", Description = "The Gauntlet" },
-        new ComicIssue { IssueID = "amazing-spider-man-632", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "632", Description = "The Gauntlet" },
-        new ComicIssue { IssueID = "amazing-spider-man-633", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "633", Description = "The Gauntlet" },
-        new ComicIssue { IssueID = "amazing-spider-man-634", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "634", Description = "Grim Hunt" },
-        new ComicIssue { IssueID = "amazing-spider-man-635", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "635", Description = "Grim Hunt" },
-        new ComicIssue { IssueID = "amazing-spider-man-636", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "636", Description = "Grim Hunt" },
-        new ComicIssue { IssueID = "amazing-spider-man-637", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "637", Description = "Grim Hunt" },
-        new ComicIssue { IssueID = "amazing-spider-man-638", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "638", Description = "One Moment in Time" },
-        new ComicIssue { IssueID = "amazing-spider-man-639", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "639", Description = "One Moment in Time" },
-        new ComicIssue { IssueID = "amazing-spider-man-640", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "640", Description = "One Moment in Time" },
-        new ComicIssue { IssueID = "amazing-spider-man-641", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "641", Description = "One Moment in Time" },
-        new ComicIssue { IssueID = "amazing-spider-man-642", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "642", Description = "Origin of the Species" },
-        new ComicIssue { IssueID = "amazing-spider-man-643", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "643", Description = "Origin of the Species" },
-        new ComicIssue { IssueID = "amazing-spider-man-644", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "644", Description = "Origin of the Species" },
-        new ComicIssue { IssueID = "amazing-spider-man-645", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "645", Description = "Origin of the Species" },
-        new ComicIssue { IssueID = "amazing-spider-man-646", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "646", Description = "Origin of the Species" },
-        new ComicIssue { IssueID = "amazing-spider-man-647", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "647", Description = "Origin of the Species" },
-        new ComicIssue { IssueID = "amazing-spider-man-648", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "648", Description = "Big Time" },
-        new ComicIssue { IssueID = "amazing-spider-man-649", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "649", Description = "Big Time" },
-        new ComicIssue { IssueID = "amazing-spider-man-650", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "650", Description = "Big Time" },
-        new ComicIssue { IssueID = "amazing-spider-man-651", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "651", Description = "Big Time" },
-        new ComicIssue { IssueID = "amazing-spider-man-652", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "652", Description = "Big Time" },
-        new ComicIssue { IssueID = "amazing-spider-man-653", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "653", Description = "Big Time" },
-        new ComicIssue { IssueID = "amazing-spider-man-654", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "654", Description = "Big Time" },
-        new ComicIssue { IssueID = "amazing-spider-man-655", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "655", Description = "Big Time" },
-        new ComicIssue { IssueID = "amazing-spider-man-656", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "656", Description = "Big Time" },
-        new ComicIssue { IssueID = "amazing-spider-man-666", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "666", Description = "Spider-Island" },
-        new ComicIssue { IssueID = "amazing-spider-man-667", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "667", Description = "Spider-Island" },
-        new ComicIssue { IssueID = "amazing-spider-man-668", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "668", Description = "Spider-Island" },
-        new ComicIssue { IssueID = "amazing-spider-man-669", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "669", Description = "Spider-Island" },
-        new ComicIssue { IssueID = "amazing-spider-man-670", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "670", Description = "Spider-Island" },
-        new ComicIssue { IssueID = "amazing-spider-man-671", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "671", Description = "Spider-Island" },
-        new ComicIssue { IssueID = "amazing-spider-man-672", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "672", Description = "Spider-Island" },
-        new ComicIssue { IssueID = "amazing-spider-man-673", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "673", Description = "Spider-Island" },
-        new ComicIssue { IssueID = "amazing-spider-man-682", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "682", Description = "Ends of the Earth" },
-        new ComicIssue { IssueID = "amazing-spider-man-683", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "683", Description = "Ends of the Earth" },
-        new ComicIssue { IssueID = "amazing-spider-man-684", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "684", Description = "Ends of the Earth" },
-        new ComicIssue { IssueID = "amazing-spider-man-685", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "685", Description = "Ends of the Earth" },
-        new ComicIssue { IssueID = "amazing-spider-man-686", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "686", Description = "Ends of the Earth" },
-        new ComicIssue { IssueID = "amazing-spider-man-687", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "687", Description = "Ends of the Earth" },
-        new ComicIssue { IssueID = "amazing-spider-man-688", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "688", Description = "Dying Wish" },
-        new ComicIssue { IssueID = "amazing-spider-man-689", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "689", Description = "Dying Wish" },
-        new ComicIssue { IssueID = "amazing-spider-man-690", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "690", Description = "Dying Wish" },
-        new ComicIssue { IssueID = "amazing-spider-man-691", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "691", Description = "Dying Wish" },
-        new ComicIssue { IssueID = "amazing-spider-man-692", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "692", Description = "Dying Wish" },
-        new ComicIssue { IssueID = "amazing-spider-man-693", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "693", Description = "Dying Wish" },
-        new ComicIssue { IssueID = "amazing-spider-man-694", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "694", Description = "Dying Wish" },
-        new ComicIssue { IssueID = "amazing-spider-man-695", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "695", Description = "Dying Wish" },
-        new ComicIssue { IssueID = "amazing-spider-man-696", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "696", Description = "Dying Wish" },
-        new ComicIssue { IssueID = "amazing-spider-man-697", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "697", Description = "Dying Wish" },
-        new ComicIssue { IssueID = "amazing-spider-man-698", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "698", Description = "Dying Wish" },
-        new ComicIssue { IssueID = "amazing-spider-man-699", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "699", Description = "Dying Wish" },
-        new ComicIssue { IssueID = "amazing-spider-man-700", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "700", Description = "Dying Wish" },
-        new ComicIssue { IssueID = "amazing-spider-man-775", SeriesTitle = "Amazing Spider-Man (Volume 4)", IssueNumber = "775", Description = "4.19: Dead No More: The Clone Conspiracy" },
-        new ComicIssue { IssueID = "amazing-spider-man-776", SeriesTitle = "Amazing Spider-Man (Volume 4)", IssueNumber = "776", Description = "4.20: Dead No More: The Clone Conspiracy" },
-        new ComicIssue { IssueID = "amazing-spider-man-777", SeriesTitle = "Amazing Spider-Man (Volume 4)", IssueNumber = "777", Description = "4.21: Dead No More: The Clone Conspiracy" },
-        new ComicIssue { IssueID = "amazing-spider-man-778", SeriesTitle = "Amazing Spider-Man (Volume 4)", IssueNumber = "778", Description = "4.22: Dead No More: The Clone Conspiracy" },
-        new ComicIssue { IssueID = "amazing-spider-man-779", SeriesTitle = "Amazing Spider-Man (Volume 4)", IssueNumber = "779", Description = "4.23: Dead No More: The Clone Conspiracy" },
-        new ComicIssue { IssueID = "amazing-spider-man-780", SeriesTitle = "Amazing Spider-Man (Volume 4)", IssueNumber = "780", Description = "4.24: Dead No More: The Clone Conspiracy" },
-        new ComicIssue { IssueID = "amazing-spider-man-797", SeriesTitle = "Amazing Spider-Man (Volume 4)", IssueNumber = "797", Description = "Go Down Swinging" },
-        new ComicIssue { IssueID = "amazing-spider-man-798", SeriesTitle = "Amazing Spider-Man (Volume 4)", IssueNumber = "798", Description = "Go Down Swinging" },
-        new ComicIssue { IssueID = "amazing-spider-man-799", SeriesTitle = "Amazing Spider-Man (Volume 4)", IssueNumber = "799", Description = "Go Down Swinging" },
-        new ComicIssue { IssueID = "amazing-spider-man-800", SeriesTitle = "Amazing Spider-Man (Volume 4)", IssueNumber = "800", Description = "Go Down Swinging" },
-        new ComicIssue { IssueID = "amazing-spider-man-817", SeriesTitle = "Amazing Spider-Man (Volume 5)", IssueNumber = "817", Description = "5.16: Hunted" },
-        new ComicIssue { IssueID = "amazing-spider-man-818", SeriesTitle = "Amazing Spider-Man (Volume 5)", IssueNumber = "818", Description = "5.17: Hunted" },
-        new ComicIssue { IssueID = "amazing-spider-man-819", SeriesTitle = "Amazing Spider-Man (Volume 5)", IssueNumber = "819", Description = "5.18: Hunted" },
-        new ComicIssue { IssueID = "amazing-spider-man-820", SeriesTitle = "Amazing Spider-Man (Volume 5)", IssueNumber = "820", Description = "5.19: Hunted" },
-        new ComicIssue { IssueID = "amazing-spider-man-821", SeriesTitle = "Amazing Spider-Man (Volume 5)", IssueNumber = "821", Description = "5.20: Hunted" },
-        new ComicIssue { IssueID = "amazing-spider-man-822", SeriesTitle = "Amazing Spider-Man (Volume 5)", IssueNumber = "822", Description = "5.21: Hunted" },
-        new ComicIssue { IssueID = "amazing-spider-man-823", SeriesTitle = "Amazing Spider-Man (Volume 5)", IssueNumber = "823", Description = "5.22: Hunted" },
-        new ComicIssue { IssueID = "amazing-spider-man-824", SeriesTitle = "Amazing Spider-Man (Volume 5)", IssueNumber = "824", Description = "5.23: Hunted" },
-        new ComicIssue { IssueID = "amazing-spider-man-annual-1", SeriesTitle = "Amazing Spider-Man Annual", IssueNumber = "1", PublishMonth = 10, PublishYear = 1964, Description = "The Sinister Six!" },
-        new ComicIssue { IssueID = "amazing-spider-man-annual-5", SeriesTitle = "Amazing Spider-Man Annual", IssueNumber = "5", PublishMonth = 11, PublishYear = 1968, Description = "The Parents of Peter Parker!" },
-        new ComicIssue { IssueID = "amazing-spider-man-annual-21", SeriesTitle = "Amazing Spider-Man Annual", IssueNumber = "21", PublishMonth = 9, PublishYear = 1987, Description = "The Wedding!" },
-        new ComicIssue { IssueID = "amazing-spider-man-family-business", SeriesTitle = "Amazing Spider-Man: Family Business", IssueNumber = "1", Description = "Family Business" },
-        new ComicIssue { IssueID = "amazing-spider-man-super-special-1", SeriesTitle = "Amazing Spider-Man Super Special", IssueNumber = "1", Description = "Planet of the Symbiotes" },
-        new ComicIssue { IssueID = "friendly-neighborhood-spider-man-1", SeriesTitle = "Friendly Neighborhood Spider-Man", IssueNumber = "1", Description = "The Other" },
-        new ComicIssue { IssueID = "friendly-neighborhood-spider-man-2", SeriesTitle = "Friendly Neighborhood Spider-Man", IssueNumber = "2", Description = "The Other" },
-        new ComicIssue { IssueID = "friendly-neighborhood-spider-man-3", SeriesTitle = "Friendly Neighborhood Spider-Man", IssueNumber = "3", Description = "The Other" },
-        new ComicIssue { IssueID = "friendly-neighborhood-spider-man-4", SeriesTitle = "Friendly Neighborhood Spider-Man", IssueNumber = "4", Description = "The Other" },
-        new ComicIssue { IssueID = "friendly-neighborhood-spider-man-24", SeriesTitle = "Friendly Neighborhood Spider-Man", IssueNumber = "24", Description = "One More Day" },
-        new ComicIssue { IssueID = "giant-size-spider-man-5", SeriesTitle = "Giant Size Spider-Man", IssueNumber = "5", PublishMonth = 5, PublishYear = 1976, Description = "The Original Clone Saga" },
-        new ComicIssue { IssueID = "marvel-knights-spider-man-19", SeriesTitle = "Marvel Knights Spider-Man", IssueNumber = "19", Description = "The Other" },
-        new ComicIssue { IssueID = "marvel-knights-spider-man-20", SeriesTitle = "Marvel Knights Spider-Man", IssueNumber = "20", Description = "The Other" },
-        new ComicIssue { IssueID = "marvel-knights-spider-man-21", SeriesTitle = "Marvel Knights Spider-Man", IssueNumber = "21", Description = "The Other" },
-        new ComicIssue { IssueID = "marvel-knights-spider-man-22", SeriesTitle = "Marvel Knights Spider-Man", IssueNumber = "22", Description = "The Other" },
-        new ComicIssue { IssueID = "sensational-spider-man-27", SeriesTitle = "Sensational Spider-Man", IssueNumber = "27", Description = "Identity Crisis" },
-        new ComicIssue { IssueID = "sensational-spider-man-28", SeriesTitle = "Sensational Spider-Man", IssueNumber = "28", Description = "Identity Crisis" },
-        new ComicIssue { IssueID = "sensational-spider-man-32", SeriesTitle = "Sensational Spider-Man", IssueNumber = "32", Description = "The Gathering of Five" },
-        new ComicIssue { IssueID = "sensational-spider-man-33", SeriesTitle = "Sensational Spider-Man", IssueNumber = "33", Description = "The Gathering of Five" },
-        new ComicIssue { IssueID = "sensational-spider-man-41", SeriesTitle = "Sensational Spider-Man", IssueNumber = "41", Description = "One More Day" },
-        new ComicIssue { IssueID = "sensational-spider-man-42", SeriesTitle = "Sensational Spider-Man", IssueNumber = "42", Description = "One More Day" },
-        new ComicIssue { IssueID = "spectacular-spider-man-1", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "1", PublishMonth = 7, PublishYear = 1968, Description = "Lo, This Monster" },
-        new ComicIssue { IssueID = "spectacular-spider-man-2", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "2", PublishMonth = 8, PublishYear = 1968, Description = "Lo, This Monster" },
-        new ComicIssue { IssueID = "spectacular-spider-man-25", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "25", PublishMonth = 1, PublishYear = 1976, Description = "The Original Clone Saga" },
-        new ComicIssue { IssueID = "spectacular-spider-man-26", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "26", PublishMonth = 2, PublishYear = 1976, Description = "The Original Clone Saga" },
-        new ComicIssue { IssueID = "spectacular-spider-man-27", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "27", PublishMonth = 3, PublishYear = 1976, Description = "The Original Clone Saga" },
-        new ComicIssue { IssueID = "spectacular-spider-man-28", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "28", PublishMonth = 4, PublishYear = 1976, Description = "The Original Clone Saga" },
-        new ComicIssue { IssueID = "spectacular-spider-man-29", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "29", PublishMonth = 5, PublishYear = 1976, Description = "The Original Clone Saga" },
-        new ComicIssue { IssueID = "spectacular-spider-man-30", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "30", PublishMonth = 6, PublishYear = 1976, Description = "The Original Clone Saga" },
-        new ComicIssue { IssueID = "spectacular-spider-man-31", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "31", PublishMonth = 7, PublishYear = 1976, Description = "The Original Clone Saga" },
-        new ComicIssue { IssueID = "spectacular-spider-man-68", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "68", PublishMonth = 1, PublishYear = 1969, Description = "The Lifeline Tablet Saga" },
-        new ComicIssue { IssueID = "spectacular-spider-man-69", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "69", PublishMonth = 2, PublishYear = 1969, Description = "The Lifeline Tablet Saga" },
-        new ComicIssue { IssueID = "spectacular-spider-man-70", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "70", PublishMonth = 3, PublishYear = 1969, Description = "The Lifeline Tablet Saga" },
-        new ComicIssue { IssueID = "spectacular-spider-man-71", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "71", PublishMonth = 4, PublishYear = 1969, Description = "The Lifeline Tablet Saga" },
-        new ComicIssue { IssueID = "spectacular-spider-man-72", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "72", PublishMonth = 5, PublishYear = 1969, Description = "The Lifeline Tablet Saga" },
-        new ComicIssue { IssueID = "spectacular-spider-man-73", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "73", PublishMonth = 6, PublishYear = 1969, Description = "The Lifeline Tablet Saga" },
-        new ComicIssue { IssueID = "spectacular-spider-man-74", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "74", PublishMonth = 7, PublishYear = 1969, Description = "The Lifeline Tablet Saga" },
-        new ComicIssue { IssueID = "spectacular-spider-man-75", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "75", PublishMonth = 8, PublishYear = 1969, Description = "The Lifeline Tablet Saga" },
-        new ComicIssue { IssueID = "spectacular-spider-man-76", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "76", PublishMonth = 9, PublishYear = 1969, Description = "The Lifeline Tablet Saga" },
-        new ComicIssue { IssueID = "spectacular-spider-man-77", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "77", PublishMonth = 10, PublishYear = 1969, Description = "The Lifeline Tablet Saga" },
-        new ComicIssue { IssueID = "spectacular-spider-man-90", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "90", Description = "The Alien Costume Saga" },
-        new ComicIssue { IssueID = "spectacular-spider-man-91", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "91", Description = "Identity Crisis" },
-        new ComicIssue { IssueID = "spectacular-spider-man-92", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "92", Description = "Identity Crisis" },
-        new ComicIssue { IssueID = "spectacular-spider-man-93", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "93", Description = "The Alien Costume Saga" },
-        new ComicIssue { IssueID = "spectacular-spider-man-94", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "94", Description = "The Alien Costume Saga" },
-        new ComicIssue { IssueID = "spectacular-spider-man-95", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "95", Description = "The Alien Costume Saga" },
-        new ComicIssue { IssueID = "spectacular-spider-man-96", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "96", Description = "The Gathering of Five" },
-        new ComicIssue { IssueID = "spectacular-spider-man-97", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "97", Description = "The Final Chapter" },
-        new ComicIssue { IssueID = "spectacular-spider-man-98", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "98", PublishMonth = 1, PublishYear = 1985, Description = "True Confessions!" },
-        new ComicIssue { IssueID = "spectacular-spider-man-99", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "99", PublishMonth = 2, PublishYear = 1985, Description = "Spider on the Spot!" },
-        new ComicIssue { IssueID = "spectacular-spider-man-100", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "100", Description = "The Alien Costume Saga" },
-        new ComicIssue { IssueID = "spectacular-spider-man-107", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "107", Description = "The Death of Jean DeWolff" },
-        new ComicIssue { IssueID = "spectacular-spider-man-108", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "108", Description = "The Death of Jean DeWolff" },
-        new ComicIssue { IssueID = "spectacular-spider-man-109", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "109", Description = "The Death of Jean DeWolff" },
-        new ComicIssue { IssueID = "spectacular-spider-man-110", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "110", Description = "The Death of Jean DeWolff" },
-        new ComicIssue { IssueID = "spectacular-spider-man-131", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "131", Description = "Fearful Symmetry: Kraven's Last Hunt" },
-        new ComicIssue { IssueID = "spectacular-spider-man-132", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "132", Description = "Fearful Symmetry: Kraven's Last Hunt" },
-        new ComicIssue { IssueID = "spectacular-spider-man-139", SeriesTitle = "The Spectacular Spider-Man (vol. 2)", IssueNumber = "139", PublishMonth = 6, PublishYear = 1988, Description = "Grave Memory" },
-        new ComicIssue { IssueID = "spectacular-spider-man-142", SeriesTitle = "The Spectacular Spider-Man (vol. 2)", IssueNumber = "142", PublishMonth = 9, PublishYear = 1988, Description = "Will!" },
-        new ComicIssue { IssueID = "spectacular-spider-man-149", SeriesTitle = "The Spectacular Spider-Man (vol. 2)", IssueNumber = "149", PublishMonth = 4, PublishYear = 1989, Description = "The Original Clone Saga" },
-        new ComicIssue { IssueID = "spectacular-spider-man-150", SeriesTitle = "The Spectacular Spider-Man (vol. 2)", IssueNumber = "150", PublishMonth = 5, PublishYear = 1989, Description = "Guilty!" },
-        new ComicIssue { IssueID = "spectacular-spider-man-151", SeriesTitle = "The Spectacular Spider-Man (vol. 2)", IssueNumber = "151", PublishMonth = 6, PublishYear = 1989, Description = "Lock-Up" },
-        new ComicIssue { IssueID = "spectacular-spider-man-155", SeriesTitle = "The Spectacular Spider-Man (vol. 2)", IssueNumber = "155", PublishMonth = 10, PublishYear = 1989, Description = "Crash Out!" },
-        new ComicIssue { IssueID = "spectacular-spider-man-156", SeriesTitle = "The Spectacular Spider-Man (vol. 2)", IssueNumber = "156", PublishMonth = 11, PublishYear = 1989, Description = "The Return of the Green Goblin!" },
-        new ComicIssue { IssueID = "spectacular-spider-man-157", SeriesTitle = "The Spectacular Spider-Man (vol. 2)", IssueNumber = "157", PublishMonth = 12, PublishYear = 1989, Description = "The Green Goblin Strikes!" },
-        new ComicIssue { IssueID = "spectacular-spider-man-162", SeriesTitle = "The Spectacular Spider-Man (vol. 2)", IssueNumber = "162", PublishMonth = 5, PublishYear = 1976, Description = "The Original Clone Saga" },
-        new ComicIssue { IssueID = "spectacular-spider-man-163", SeriesTitle = "The Spectacular Spider-Man (vol. 2)", IssueNumber = "163", PublishMonth = 6, PublishYear = 1976, Description = "The Original Clone Saga" },
-        new ComicIssue { IssueID = "spectacular-spider-man-201", SeriesTitle = "The Spectacular Spider-Man (vol. 2)", IssueNumber = "201", PublishMonth = 6, PublishYear = 1988, Description = "Maximum Carnage Part 5" },
-        new ComicIssue { IssueID = "spectacular-spider-man-202", SeriesTitle = "The Spectacular Spider-Man (vol. 2)", IssueNumber = "202", PublishMonth = 7, PublishYear = 1988, Description = "Maximum Carnage Part 9" },
-        new ComicIssue { IssueID = "spectacular-spider-man-203", SeriesTitle = "The Spectacular Spider-Man (vol. 2)", IssueNumber = "203", PublishMonth = 8, PublishYear = 1988, Description = "Maximum Carnage Part 13" },
-        new ComicIssue { IssueID = "spectacular-spider-man-257", SeriesTitle = "The Spectacular Spider-Man (vol. 2)", IssueNumber = "257", Description = "Identity Crisis" },
-        new ComicIssue { IssueID = "spectacular-spider-man-258", SeriesTitle = "The Spectacular Spider-Man (vol. 2)", IssueNumber = "258", Description = "Identity Crisis" },
-        new ComicIssue { IssueID = "spectacular-spider-man-262", SeriesTitle = "The Spectacular Spider-Man (vol. 2)", IssueNumber = "262", Description = "The Gathering of Five" },
-        new ComicIssue { IssueID = "spectacular-spider-man-263", SeriesTitle = "The Spectacular Spider-Man (vol. 2)", IssueNumber = "263", Description = "The Final Chapter" },
-        new ComicIssue { IssueID = "spectacular-spider-man-super-special-1", SeriesTitle = "Spectacular Spider-Man Super Special", IssueNumber = "1", Description = "Planet of the Symbiotes" },
-        new ComicIssue { IssueID = "spider-man-1", SeriesTitle = "Spider-Man", IssueNumber = "1", Description = "Torment" },
-        new ComicIssue { IssueID = "spider-man-2", SeriesTitle = "Spider-Man", IssueNumber = "2", Description = "Torment" },
-        new ComicIssue { IssueID = "spider-man-3", SeriesTitle = "Spider-Man", IssueNumber = "3", Description = "Torment" },
-        new ComicIssue { IssueID = "spider-man-4", SeriesTitle = "Spider-Man", IssueNumber = "4", Description = "Torment" },
-        new ComicIssue { IssueID = "spider-man-5", SeriesTitle = "Spider-Man", IssueNumber = "5", Description = "Torment" },
-        new ComicIssue { IssueID = "spider-man-35", SeriesTitle = "Spider-Man", IssueNumber = "35", PublishMonth = 6, PublishYear = 1988, Description = "Maximum Carnage Part 4" },
-        new ComicIssue { IssueID = "spider-man-36", SeriesTitle = "Spider-Man", IssueNumber = "36", PublishMonth = 7, PublishYear = 1988, Description = "Maximum Carnage Part 8" },
-        new ComicIssue { IssueID = "spider-man-37", SeriesTitle = "Spider-Man", IssueNumber = "37", PublishMonth = 8, PublishYear = 1988, Description = "Maximum Carnage Part 12" },
-        new ComicIssue { IssueID = "spider-man-lifeline-1", SeriesTitle = "Spider-Man: Lifeline", IssueNumber = "1", PublishMonth = 1, PublishYear = 1969, Description = "The Lifeline Tablet Saga" },
-        new ComicIssue { IssueID = "spider-man-lifeline-2", SeriesTitle = "Spider-Man: Lifeline", IssueNumber = "2", PublishMonth = 2, PublishYear = 1969, Description = "The Lifeline Tablet Saga" },
-        new ComicIssue { IssueID = "spider-man-lifeline-3", SeriesTitle = "Spider-Man: Lifeline", IssueNumber = "3", PublishMonth = 3, PublishYear = 1969, Description = "The Lifeline Tablet Saga" },
-        new ComicIssue { IssueID = "spider-man-s-tangled-web-5", SeriesTitle = "Spider-Man's Tangled Web", IssueNumber = "5", Description = "Flowers for Rhino" },
-        new ComicIssue { IssueID = "spider-man-s-tangled-web-6", SeriesTitle = "Spider-Man's Tangled Web", IssueNumber = "6", Description = "Flowers for Rhino" },
-        new ComicIssue { IssueID = "spider-man-super-special-1", SeriesTitle = "Spider-Man Super Special", IssueNumber = "1", Description = "Planet of the Symbiotes" },
-        new ComicIssue { IssueID = "spider-man-the-mutant-agenda-1", SeriesTitle = "Spider-Man: The Mutant Agenda", IssueNumber = "1", PublishMonth = 3, PublishYear = 1994, Description = "The Mutant Agenda" },
-        new ComicIssue { IssueID = "spider-man-the-mutant-agenda-2", SeriesTitle = "Spider-Man: The Mutant Agenda", IssueNumber = "2", PublishMonth = 4, PublishYear = 1994, Description = "The Mutant Agenda" },
-        new ComicIssue { IssueID = "spider-man-the-mutant-agenda-3", SeriesTitle = "Spider-Man: The Mutant Agenda", IssueNumber = "3", PublishMonth = 5, PublishYear = 1994, Description = "The Mutant Agenda" },
-        new ComicIssue { IssueID = "spider-man-unlimited-1", SeriesTitle = "Spider-Man Unlimited", IssueNumber = "1", PublishMonth = 5, PublishYear = 1993, Description = "Maximum Carnage Part 1" },
-        new ComicIssue { IssueID = "spider-man-unlimited-2", SeriesTitle = "Spider-Man Unlimited", IssueNumber = "2", PublishMonth = 8, PublishYear = 1988, Description = "Maximum Carnage Part 14" },
-        new ComicIssue { IssueID = "avenging-spider-man-8", SeriesTitle = "Avenging Spider-Man", IssueNumber = "8", Description = "Ends of the Earth" },
-        new ComicIssue { IssueID = "venom-2-6", SeriesTitle = "Venom (vol. 2)", IssueNumber = "6", Description = "Spider-Island" },
-        new ComicIssue { IssueID = "venom-2-7", SeriesTitle = "Venom (vol. 2)", IssueNumber = "7", Description = "Spider-Island" },
-        new ComicIssue { IssueID = "venom-2-8", SeriesTitle = "Venom (vol. 2)", IssueNumber = "8", Description = "Spider-Island" },
-        new ComicIssue { IssueID = "web-of-spider-man-1", SeriesTitle = "Web of Spider-Man", IssueNumber = "1", Description = "The Alien Costume Saga" },
-        new ComicIssue { IssueID = "web-of-spider-man-31", SeriesTitle = "Web of Spider-Man", IssueNumber = "31", Description = "Fearful Symmetry: Kraven's Last Hunt" },
-        new ComicIssue { IssueID = "web-of-spider-man-32", SeriesTitle = "Web of Spider-Man", IssueNumber = "32", Description = "Fearful Symmetry: Kraven's Last Hunt" },
-        new ComicIssue { IssueID = "web-of-spider-man-101", SeriesTitle = "Web of Spider-Man", IssueNumber = "101", PublishMonth = 6, PublishYear = 1985, Description = "Maximum Carnage Part 2" },
-        new ComicIssue { IssueID = "web-of-spider-man-102", SeriesTitle = "Web of Spider-Man", IssueNumber = "102", PublishMonth = 7, PublishYear = 1988, Description = "Maximum Carnage Part 6" },
-        new ComicIssue { IssueID = "web-of-spider-man-103", SeriesTitle = "Web of Spider-Man", IssueNumber = "103", PublishMonth = 8, PublishYear = 1988, Description = "Maximum Carnage Part 10" },
-        new ComicIssue { IssueID = "web-of-spider-man-super-special-1", SeriesTitle = "Web of Spider-Man Super Special", IssueNumber = "1", Description = "Planet of the Symbiotes" },
-        new ComicIssue { IssueID = "what-if-30", SeriesTitle = "What If?", IssueNumber = "30", PublishMonth = 11, PublishYear = 1976, Description = "The Original Clone Saga" },
-      };
+      issues.UpdateRange("amazing-spider-man", 100, 100, i => {i.Description = "The Spider or the Man?";});
+      issues.UpdateRange("amazing-spider-man", 101, 101, i => {i.Description = "A Monster Called Morbius!";});
+      issues.UpdateRange("amazing-spider-man", 102, 102, i => {i.Description = "Vampire at Large!";});
+      issues.UpdateRange("amazing-spider-man", 121, 121, i => {i.Description = "The Night Gwen Stacy Died";});
+      issues.UpdateRange("amazing-spider-man", 122, 122, i => {i.Description = "The Goblin's Last Stand!";});
+      issues.UpdateRange("amazing-spider-man", 129, 129, i => {i.Description = "The Punisher Strikes Twice!";});
+      issues.UpdateRange("amazing-spider-man", 136, 136, i => {i.Description = "The Green Goblin Lives Again!";});
+      issues.UpdateRange("amazing-spider-man", 137, 137, i => {i.Description = "The Green Goblin Strikes!";});
+      issues.UpdateRange("amazing-spider-man", 172, 172, i => {i.Description = "The Fiend from the Fire!";});
+      issues.UpdateRange("amazing-spider-man", 182, 182, i => {i.Description = "The Rocket Racer's Back in Town!";});
+      issues.UpdateRange("amazing-spider-man", 183, 183, i => {i.Description = "...And Where the Big Wheel Stops, Nobody Knows!";});
+      issues.UpdateRange("amazing-spider-man", 192, 192, i => {i.Description = "24 Hours till Doomsday!";});
+      issues.UpdateRange("amazing-spider-man", 212, 212, i => {i.Description = "The Coming of Hydroman!";});
+      issues.UpdateRange("amazing-spider-man", 229, 229, i => {i.Description = "Nothing Can Stop the Juggernaut!";});
+      issues.UpdateRange("amazing-spider-man", 230, 230, i => {i.Description = "Nothing Can Stop the Juggernaut!";});
+      issues.UpdateRange("amazing-spider-man", 231, 231, i => {i.Description = "Hyde & Seek";});
+      issues.UpdateRange("amazing-spider-man", 232, 232, i => {i.Description = "Hyde & Seek";});
+      issues.UpdateRange("amazing-spider-man", 248, 248, i => {i.Description = "The Kid Who Collects Spider-Man!";});
+      issues.UpdateRange("amazing-spider-man", 249, 249, i => {i.Description = "Secrets!";});
+      issues.UpdateRange("amazing-spider-man", 250, 250, i => {i.Description = "Confessions!";});
+      issues.UpdateRange("amazing-spider-man", 251, 251, i => {i.Description = "Endings!";});
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-258", SeriesTitle = "Amazing Spider-Man", IssueNumber = "258", PublishMonth = 11, PublishYear = 1984, Description = "The Sinister Secret of Spider-Man's New Costume!" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-298", SeriesTitle = "Amazing Spider-Man", IssueNumber = "298", PublishMonth = 3, PublishYear = 1988, Description = "Chance Encounter" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-312", SeriesTitle = "Amazing Spider-Man", IssueNumber = "312", PublishMonth = 2, PublishYear = 1989, Description = "The Goblin War" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-317", SeriesTitle = "Amazing Spider-Man", IssueNumber = "317", PublishMonth = 7, PublishYear = 1989, Description = "The Sand and the Fury" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-320", SeriesTitle = "Amazing Spider-Man", IssueNumber = "320", PublishMonth = 9, PublishYear = 1989, Description = "The Assassin-Nation Plot" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-321", SeriesTitle = "Amazing Spider-Man", IssueNumber = "321", PublishMonth = 10, PublishYear = 1989, Description = "The Assassin-Nation Plot" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-322", SeriesTitle = "Amazing Spider-Man", IssueNumber = "322", PublishMonth = 11, PublishYear = 1989, Description = "The Assassin-Nation Plot" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-323", SeriesTitle = "Amazing Spider-Man", IssueNumber = "323", PublishMonth = 12, PublishYear = 1989, Description = "The Assassin-Nation Plot" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-324", SeriesTitle = "Amazing Spider-Man", IssueNumber = "324", PublishMonth = 1, PublishYear = 1990, Description = "The Assassin-Nation Plot" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-325", SeriesTitle = "Amazing Spider-Man", IssueNumber = "325", PublishMonth = 2, PublishYear = 1990, Description = "The Assassin-Nation Plot" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-344", SeriesTitle = "Amazing Spider-Man", IssueNumber = "344", PublishMonth = 2, PublishYear = 1991, Description = "Hearts and Powers" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-345", SeriesTitle = "Amazing Spider-Man", IssueNumber = "345", PublishMonth = 3, PublishYear = 1991, Description = "Gun From the Heart" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-359", SeriesTitle = "Amazing Spider-Man", IssueNumber = "359", PublishMonth = 2, PublishYear = 1992, Description = "Toy Death!" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-361", SeriesTitle = "Amazing Spider-Man", IssueNumber = "361", PublishMonth = 4, PublishYear = 1992, Description = "Savage Genesis" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-362", SeriesTitle = "Amazing Spider-Man", IssueNumber = "362", PublishMonth = 5, PublishYear = 1992, Description = "Savage Alliance" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-363", SeriesTitle = "Amazing Spider-Man", IssueNumber = "363", PublishMonth = 6, PublishYear = 1992, Description = "Savage Grace!" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-378", SeriesTitle = "Amazing Spider-Man", IssueNumber = "378", PublishMonth = 6, PublishYear = 1988, Description = "Maximum Carnage Part 3" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-379", SeriesTitle = "Amazing Spider-Man", IssueNumber = "379", PublishMonth = 7, PublishYear = 1988, Description = "Maximum Carnage Part 7" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-380", SeriesTitle = "Amazing Spider-Man", IssueNumber = "380", PublishMonth = 8, PublishYear = 1988, Description = "Maximum Carnage Part 11" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-386", SeriesTitle = "Amazing Spider-Man", IssueNumber = "386", PublishMonth = 2, PublishYear = 1994, Description = "The Wings of Age!" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-387", SeriesTitle = "Amazing Spider-Man", IssueNumber = "387", PublishMonth = 3, PublishYear = 1994, Description = "The Thief of Years!" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-434", SeriesTitle = "Amazing Spider-Man", IssueNumber = "434", Description = "Identity Crisis" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-435", SeriesTitle = "Amazing Spider-Man", IssueNumber = "435", Description = "Identity Crisis" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-440", SeriesTitle = "Amazing Spider-Man", IssueNumber = "440", Description = "The Gathering of Five" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-441", SeriesTitle = "Amazing Spider-Man", IssueNumber = "441", Description = "The Final Chapter" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-503", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "503", Description = "The Book of Ezekiel" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-504", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "504", Description = "The Book of Ezekiel" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-505", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "505", Description = "The Book of Ezekiel" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-506", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "506", Description = "The Book of Ezekiel" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-507", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "507", Description = "The Book of Ezekiel" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-508", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "508", Description = "The Book of Ezekiel" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-525", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "525", Description = "The Other" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-526", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "526", Description = "The Other" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-527", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "527", Description = "The Other" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-528", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "528", Description = "The Other" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-529", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "529", Description = "Civil War" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-530", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "530", Description = "Civil War" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-531", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "531", Description = "Civil War" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-532", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "532", Description = "Civil War" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-533", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "533", Description = "Civil War" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-534", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "534", Description = "Civil War" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-535", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "535", Description = "Civil War" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-536", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "536", Description = "Civil War" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-537", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "537", Description = "Civil War" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-538", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "538", Description = "Civil War" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-539", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "539", Description = "Back in Black" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-540", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "540", Description = "Back in Black" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-541", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "541", Description = "Back in Black" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-542", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "542", Description = "Back in Black" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-543", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "543", Description = "Back in Black" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-544", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "544", Description = "One More Day" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-545", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "545", Description = "One More Day" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-546", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "546", Description = "Brand New Day" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-547", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "547", Description = "Brand New Day" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-548", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "548", Description = "Brand New Day" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-549", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "549", Description = "Brand New Day" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-550", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "550", Description = "Brand New Day" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-551", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "551", Description = "Brand New Day" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-552", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "552", Description = "Brand New Day" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-553", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "553", Description = "Brand New Day" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-554", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "554", Description = "Brand New Day" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-555", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "555", Description = "Brand New Day" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-556", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "556", Description = "Brand New Day" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-557", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "557", Description = "Brand New Day" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-558", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "558", Description = "Brand New Day" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-559", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "559", Description = "Brand New Day" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-560", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "560", Description = "Brand New Day" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-561", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "561", Description = "Brand New Day" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-562", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "562", Description = "Brand New Day" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-563", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "563", Description = "Brand New Day" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-564", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "564", Description = "Brand New Day" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-565", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "565", Description = "Kraven's First Hunt" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-566", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "566", Description = "Kraven's First Hunt" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-567", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "567", Description = "Kraven's First Hunt" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-568", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "568", Description = "New Ways to Die" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-569", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "569", Description = "New Ways to Die" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-570", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "570", Description = "New Ways to Die" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-571", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "571", Description = "New Ways to Die" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-572", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "572", Description = "New Ways to Die" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-573", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "573", Description = "New Ways to Die" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-583", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "583", Description = "Spidey Meets the President!" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-600", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "600", Description = "Died in Your Arms Tonight" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-601", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "601", Description = "Died in Your Arms Tonight" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-602", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "602", Description = "Red-Headed Stranger" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-603", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "603", Description = "Red-Headed Stranger" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-604", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "604", Description = "Red-Headed Stranger" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-605", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "605", Description = "Red-Headed Stranger" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-606", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "606", Description = "Return of the Black Cat" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-607", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "607", Description = "Return of the Black Cat" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-608", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "608", Description = "Return of the Black Cat" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-609", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "609", Description = "Return of the Black Cat" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-610", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "610", Description = "Return of the Black Cat" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-611", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "611", Description = "Return of the Black Cat" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-612", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "612", Description = "The Gauntlet" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-613", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "613", Description = "The Gauntlet" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-614", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "614", Description = "The Gauntlet" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-615", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "615", Description = "The Gauntlet" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-616", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "616", Description = "The Gauntlet" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-617", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "617", Description = "The Gauntlet" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-618", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "618", Description = "The Gauntlet" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-619", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "619", Description = "The Gauntlet" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-620", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "620", Description = "The Gauntlet" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-621", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "621", Description = "The Gauntlet" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-622", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "622", Description = "The Gauntlet" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-623", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "623", Description = "The Gauntlet" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-624", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "624", Description = "The Gauntlet" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-625", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "625", Description = "The Gauntlet" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-626", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "626", Description = "The Gauntlet" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-627", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "627", Description = "The Gauntlet" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-628", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "628", Description = "The Gauntlet" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-629", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "629", Description = "The Gauntlet" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-630", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "630", Description = "The Gauntlet" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-631", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "631", Description = "The Gauntlet" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-632", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "632", Description = "The Gauntlet" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-633", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "633", Description = "The Gauntlet" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-634", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "634", Description = "Grim Hunt" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-635", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "635", Description = "Grim Hunt" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-636", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "636", Description = "Grim Hunt" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-637", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "637", Description = "Grim Hunt" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-638", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "638", Description = "One Moment in Time" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-639", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "639", Description = "One Moment in Time" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-640", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "640", Description = "One Moment in Time" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-641", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "641", Description = "One Moment in Time" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-642", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "642", Description = "Origin of the Species" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-643", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "643", Description = "Origin of the Species" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-644", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "644", Description = "Origin of the Species" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-645", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "645", Description = "Origin of the Species" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-646", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "646", Description = "Origin of the Species" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-647", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "647", Description = "Origin of the Species" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-648", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "648", Description = "Big Time" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-649", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "649", Description = "Big Time" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-650", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "650", Description = "Big Time" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-651", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "651", Description = "Big Time" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-652", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "652", Description = "Big Time" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-653", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "653", Description = "Big Time" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-654", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "654", Description = "Big Time" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-655", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "655", Description = "Big Time" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-656", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "656", Description = "Big Time" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-666", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "666", Description = "Spider-Island" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-667", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "667", Description = "Spider-Island" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-668", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "668", Description = "Spider-Island" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-669", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "669", Description = "Spider-Island" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-670", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "670", Description = "Spider-Island" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-671", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "671", Description = "Spider-Island" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-672", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "672", Description = "Spider-Island" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-673", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "673", Description = "Spider-Island" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-682", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "682", Description = "Ends of the Earth" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-683", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "683", Description = "Ends of the Earth" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-684", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "684", Description = "Ends of the Earth" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-685", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "685", Description = "Ends of the Earth" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-686", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "686", Description = "Ends of the Earth" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-687", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "687", Description = "Ends of the Earth" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-688", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "688", Description = "Dying Wish" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-689", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "689", Description = "Dying Wish" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-690", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "690", Description = "Dying Wish" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-691", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "691", Description = "Dying Wish" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-692", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "692", Description = "Dying Wish" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-693", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "693", Description = "Dying Wish" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-694", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "694", Description = "Dying Wish" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-695", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "695", Description = "Dying Wish" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-696", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "696", Description = "Dying Wish" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-697", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "697", Description = "Dying Wish" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-698", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "698", Description = "Dying Wish" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-699", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "699", Description = "Dying Wish" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-700", SeriesTitle = "Amazing Spider-Man (Volume 2)", IssueNumber = "700", Description = "Dying Wish" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-775", SeriesTitle = "Amazing Spider-Man (Volume 4)", IssueNumber = "775", Description = "4.19: Dead No More: The Clone Conspiracy" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-776", SeriesTitle = "Amazing Spider-Man (Volume 4)", IssueNumber = "776", Description = "4.20: Dead No More: The Clone Conspiracy" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-777", SeriesTitle = "Amazing Spider-Man (Volume 4)", IssueNumber = "777", Description = "4.21: Dead No More: The Clone Conspiracy" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-778", SeriesTitle = "Amazing Spider-Man (Volume 4)", IssueNumber = "778", Description = "4.22: Dead No More: The Clone Conspiracy" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-779", SeriesTitle = "Amazing Spider-Man (Volume 4)", IssueNumber = "779", Description = "4.23: Dead No More: The Clone Conspiracy" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-780", SeriesTitle = "Amazing Spider-Man (Volume 4)", IssueNumber = "780", Description = "4.24: Dead No More: The Clone Conspiracy" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-797", SeriesTitle = "Amazing Spider-Man (Volume 4)", IssueNumber = "797", Description = "Go Down Swinging" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-798", SeriesTitle = "Amazing Spider-Man (Volume 4)", IssueNumber = "798", Description = "Go Down Swinging" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-799", SeriesTitle = "Amazing Spider-Man (Volume 4)", IssueNumber = "799", Description = "Go Down Swinging" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-800", SeriesTitle = "Amazing Spider-Man (Volume 4)", IssueNumber = "800", Description = "Go Down Swinging" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-817", SeriesTitle = "Amazing Spider-Man (Volume 5)", IssueNumber = "817", Description = "5.16: Hunted" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-818", SeriesTitle = "Amazing Spider-Man (Volume 5)", IssueNumber = "818", Description = "5.17: Hunted" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-819", SeriesTitle = "Amazing Spider-Man (Volume 5)", IssueNumber = "819", Description = "5.18: Hunted" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-820", SeriesTitle = "Amazing Spider-Man (Volume 5)", IssueNumber = "820", Description = "5.19: Hunted" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-821", SeriesTitle = "Amazing Spider-Man (Volume 5)", IssueNumber = "821", Description = "5.20: Hunted" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-822", SeriesTitle = "Amazing Spider-Man (Volume 5)", IssueNumber = "822", Description = "5.21: Hunted" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-823", SeriesTitle = "Amazing Spider-Man (Volume 5)", IssueNumber = "823", Description = "5.22: Hunted" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-824", SeriesTitle = "Amazing Spider-Man (Volume 5)", IssueNumber = "824", Description = "5.23: Hunted" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-annual-1", SeriesTitle = "Amazing Spider-Man Annual", IssueNumber = "1", PublishMonth = 10, PublishYear = 1964, Description = "The Sinister Six!" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-annual-5", SeriesTitle = "Amazing Spider-Man Annual", IssueNumber = "5", PublishMonth = 11, PublishYear = 1968, Description = "The Parents of Peter Parker!" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-annual-21", SeriesTitle = "Amazing Spider-Man Annual", IssueNumber = "21", PublishMonth = 9, PublishYear = 1987, Description = "The Wedding!" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-family-business", SeriesTitle = "Amazing Spider-Man: Family Business", IssueNumber = "1", Description = "Family Business" });
+      issues.Add(new ComicIssue { IssueID = "amazing-spider-man-super-special-1", SeriesTitle = "Amazing Spider-Man Super Special", IssueNumber = "1", Description = "Planet of the Symbiotes" });
+      issues.Add(new ComicIssue { IssueID = "friendly-neighborhood-spider-man-1", SeriesTitle = "Friendly Neighborhood Spider-Man", IssueNumber = "1", Description = "The Other" });
+      issues.Add(new ComicIssue { IssueID = "friendly-neighborhood-spider-man-2", SeriesTitle = "Friendly Neighborhood Spider-Man", IssueNumber = "2", Description = "The Other" });
+      issues.Add(new ComicIssue { IssueID = "friendly-neighborhood-spider-man-3", SeriesTitle = "Friendly Neighborhood Spider-Man", IssueNumber = "3", Description = "The Other" });
+      issues.Add(new ComicIssue { IssueID = "friendly-neighborhood-spider-man-4", SeriesTitle = "Friendly Neighborhood Spider-Man", IssueNumber = "4", Description = "The Other" });
+      issues.Add(new ComicIssue { IssueID = "friendly-neighborhood-spider-man-24", SeriesTitle = "Friendly Neighborhood Spider-Man", IssueNumber = "24", Description = "One More Day" });
+      issues.Add(new ComicIssue { IssueID = "giant-size-spider-man-5", SeriesTitle = "Giant Size Spider-Man", IssueNumber = "5", PublishMonth = 5, PublishYear = 1976, Description = "The Original Clone Saga" });
+      issues.Add(new ComicIssue { IssueID = "marvel-knights-spider-man-19", SeriesTitle = "Marvel Knights Spider-Man", IssueNumber = "19", Description = "The Other" });
+      issues.Add(new ComicIssue { IssueID = "marvel-knights-spider-man-20", SeriesTitle = "Marvel Knights Spider-Man", IssueNumber = "20", Description = "The Other" });
+      issues.Add(new ComicIssue { IssueID = "marvel-knights-spider-man-21", SeriesTitle = "Marvel Knights Spider-Man", IssueNumber = "21", Description = "The Other" });
+      issues.Add(new ComicIssue { IssueID = "marvel-knights-spider-man-22", SeriesTitle = "Marvel Knights Spider-Man", IssueNumber = "22", Description = "The Other" });
+      issues.Add(new ComicIssue { IssueID = "sensational-spider-man-27", SeriesTitle = "Sensational Spider-Man", IssueNumber = "27", Description = "Identity Crisis" });
+      issues.Add(new ComicIssue { IssueID = "sensational-spider-man-28", SeriesTitle = "Sensational Spider-Man", IssueNumber = "28", Description = "Identity Crisis" });
+      issues.Add(new ComicIssue { IssueID = "sensational-spider-man-32", SeriesTitle = "Sensational Spider-Man", IssueNumber = "32", Description = "The Gathering of Five" });
+      issues.Add(new ComicIssue { IssueID = "sensational-spider-man-33", SeriesTitle = "Sensational Spider-Man", IssueNumber = "33", Description = "The Gathering of Five" });
+      issues.Add(new ComicIssue { IssueID = "sensational-spider-man-41", SeriesTitle = "Sensational Spider-Man", IssueNumber = "41", Description = "One More Day" });
+      issues.Add(new ComicIssue { IssueID = "sensational-spider-man-42", SeriesTitle = "Sensational Spider-Man", IssueNumber = "42", Description = "One More Day" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-1", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "1", PublishMonth = 7, PublishYear = 1968, Description = "Lo, This Monster" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-2", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "2", PublishMonth = 8, PublishYear = 1968, Description = "Lo, This Monster" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-25", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "25", PublishMonth = 1, PublishYear = 1976, Description = "The Original Clone Saga" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-26", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "26", PublishMonth = 2, PublishYear = 1976, Description = "The Original Clone Saga" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-27", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "27", PublishMonth = 3, PublishYear = 1976, Description = "The Original Clone Saga" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-28", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "28", PublishMonth = 4, PublishYear = 1976, Description = "The Original Clone Saga" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-29", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "29", PublishMonth = 5, PublishYear = 1976, Description = "The Original Clone Saga" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-30", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "30", PublishMonth = 6, PublishYear = 1976, Description = "The Original Clone Saga" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-31", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "31", PublishMonth = 7, PublishYear = 1976, Description = "The Original Clone Saga" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-68", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "68", PublishMonth = 1, PublishYear = 1969, Description = "The Lifeline Tables Saga" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-69", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "69", PublishMonth = 2, PublishYear = 1969, Description = "The Lifeline Tables Saga" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-70", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "70", PublishMonth = 3, PublishYear = 1969, Description = "The Lifeline Tables Saga" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-71", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "71", PublishMonth = 4, PublishYear = 1969, Description = "The Lifeline Tables Saga" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-72", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "72", PublishMonth = 5, PublishYear = 1969, Description = "The Lifeline Tables Saga" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-73", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "73", PublishMonth = 6, PublishYear = 1969, Description = "The Lifeline Tables Saga" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-74", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "74", PublishMonth = 7, PublishYear = 1969, Description = "The Lifeline Tables Saga" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-75", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "75", PublishMonth = 8, PublishYear = 1969, Description = "The Lifeline Tables Saga" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-76", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "76", PublishMonth = 9, PublishYear = 1969, Description = "The Lifeline Tables Saga" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-77", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "77", PublishMonth = 10, PublishYear = 1969, Description = "The Lifeline Tables Saga" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-90", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "90", Description = "The Alien Costume Saga" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-91", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "91", Description = "Identity Crisis" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-92", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "92", Description = "Identity Crisis" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-93", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "93", Description = "The Alien Costume Saga" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-94", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "94", Description = "The Alien Costume Saga" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-95", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "95", Description = "The Alien Costume Saga" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-96", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "96", Description = "The Gathering of Five" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-97", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "97", Description = "The Final Chapter" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-98", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "98", PublishMonth = 1, PublishYear = 1985, Description = "True Confessions!" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-99", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "99", PublishMonth = 2, PublishYear = 1985, Description = "Spider on the Spot!" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-100", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "100", Description = "The Alien Costume Saga" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-107", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "107", Description = "The Death of Jean DeWolff" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-108", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "108", Description = "The Death of Jean DeWolff" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-109", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "109", Description = "The Death of Jean DeWolff" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-110", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "110", Description = "The Death of Jean DeWolff" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-131", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "131", Description = "Fearful Symmetry: Kraven's Last Hunt" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-132", SeriesTitle = "Peter Parker, the Spectacular Spider-Man", IssueNumber = "132", Description = "Fearful Symmetry: Kraven's Last Hunt" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-139", SeriesTitle = "The Spectacular Spider-Man (vol. 2)", IssueNumber = "139", PublishMonth = 6, PublishYear = 1988, Description = "Grave Memory" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-142", SeriesTitle = "The Spectacular Spider-Man (vol. 2)", IssueNumber = "142", PublishMonth = 9, PublishYear = 1988, Description = "Will!" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-149", SeriesTitle = "The Spectacular Spider-Man (vol. 2)", IssueNumber = "149", PublishMonth = 4, PublishYear = 1989, Description = "The Original Clone Saga" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-150", SeriesTitle = "The Spectacular Spider-Man (vol. 2)", IssueNumber = "150", PublishMonth = 5, PublishYear = 1989, Description = "Guilty!" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-151", SeriesTitle = "The Spectacular Spider-Man (vol. 2)", IssueNumber = "151", PublishMonth = 6, PublishYear = 1989, Description = "Lock-Up" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-155", SeriesTitle = "The Spectacular Spider-Man (vol. 2)", IssueNumber = "155", PublishMonth = 10, PublishYear = 1989, Description = "Crash Out!" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-156", SeriesTitle = "The Spectacular Spider-Man (vol. 2)", IssueNumber = "156", PublishMonth = 11, PublishYear = 1989, Description = "The Return of the Gree); Goblin!" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-157", SeriesTitle = "The Spectacular Spider-Man (vol. 2)", IssueNumber = "157", PublishMonth = 12, PublishYear = 1989, Description = "The Green Gobli); Strikes!" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-162", SeriesTitle = "The Spectacular Spider-Man (vol. 2)", IssueNumber = "162", PublishMonth = 5, PublishYear = 1976, Description = "The Original Clone Saga" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-163", SeriesTitle = "The Spectacular Spider-Man (vol. 2)", IssueNumber = "163", PublishMonth = 6, PublishYear = 1976, Description = "The Original Clone Saga" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-201", SeriesTitle = "The Spectacular Spider-Man (vol. 2)", IssueNumber = "201", PublishMonth = 6, PublishYear = 1988, Description = "Maximum Carnage Part 5" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-202", SeriesTitle = "The Spectacular Spider-Man (vol. 2)", IssueNumber = "202", PublishMonth = 7, PublishYear = 1988, Description = "Maximum Carnage Part 9" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-203", SeriesTitle = "The Spectacular Spider-Man (vol. 2)", IssueNumber = "203", PublishMonth = 8, PublishYear = 1988, Description = "Maximum Carnage Part 13" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-257", SeriesTitle = "The Spectacular Spider-Man (vol. 2)", IssueNumber = "257", Description = "Identity Crisis" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-258", SeriesTitle = "The Spectacular Spider-Man (vol. 2)", IssueNumber = "258", Description = "Identity Crisis" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-262", SeriesTitle = "The Spectacular Spider-Man (vol. 2)", IssueNumber = "262", Description = "The Gathering of Five" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-263", SeriesTitle = "The Spectacular Spider-Man (vol. 2)", IssueNumber = "263", Description = "The Final Chapter" });
+      issues.Add(new ComicIssue { IssueID = "spectacular-spider-man-super-special-1", SeriesTitle = "Spectacular Spider-Man Super Special", IssueNumber = "1", Description = "Planet of the Symbiotes" });
+      issues.Add(new ComicIssue { IssueID = "spider-man-1", SeriesTitle = "Spider-Man", IssueNumber = "1", Description = "Torment" });
+      issues.Add(new ComicIssue { IssueID = "spider-man-2", SeriesTitle = "Spider-Man", IssueNumber = "2", Description = "Torment" });
+      issues.Add(new ComicIssue { IssueID = "spider-man-3", SeriesTitle = "Spider-Man", IssueNumber = "3", Description = "Torment" });
+      issues.Add(new ComicIssue { IssueID = "spider-man-4", SeriesTitle = "Spider-Man", IssueNumber = "4", Description = "Torment" });
+      issues.Add(new ComicIssue { IssueID = "spider-man-5", SeriesTitle = "Spider-Man", IssueNumber = "5", Description = "Torment" });
+      issues.Add(new ComicIssue { IssueID = "spider-man-35", SeriesTitle = "Spider-Man", IssueNumber = "35", PublishMonth = 6, PublishYear = 1988, Description = "Maximum Carnage Part 4" });
+      issues.Add(new ComicIssue { IssueID = "spider-man-36", SeriesTitle = "Spider-Man", IssueNumber = "36", PublishMonth = 7, PublishYear = 1988, Description = "Maximum Carnage Part 8" });
+      issues.Add(new ComicIssue { IssueID = "spider-man-37", SeriesTitle = "Spider-Man", IssueNumber = "37", PublishMonth = 8, PublishYear = 1988, Description = "Maximum Carnage Part 12" });
+      issues.Add(new ComicIssue { IssueID = "spider-man-lifeline-1", SeriesTitle = "Spider-Man: Lifeline", IssueNumber = "1", PublishMonth = 1, PublishYear = 1969, Description = "The Lifeline Tablet Saga" });
+      issues.Add(new ComicIssue { IssueID = "spider-man-lifeline-2", SeriesTitle = "Spider-Man: Lifeline", IssueNumber = "2", PublishMonth = 2, PublishYear = 1969, Description = "The Lifeline Tablet Saga" });
+      issues.Add(new ComicIssue { IssueID = "spider-man-lifeline-3", SeriesTitle = "Spider-Man: Lifeline", IssueNumber = "3", PublishMonth = 3, PublishYear = 1969, Description = "The Lifeline Tablet Saga" });
+      issues.Add(new ComicIssue { IssueID = "spider-man-s-tangled-web-5", SeriesTitle = "Spider-Man's Tangled Web", IssueNumber = "5", Description = "Flowers for Rhino" });
+      issues.Add(new ComicIssue { IssueID = "spider-man-s-tangled-web-6", SeriesTitle = "Spider-Man's Tangled Web", IssueNumber = "6", Description = "Flowers for Rhino" });
+      issues.Add(new ComicIssue { IssueID = "spider-man-super-special-1", SeriesTitle = "Spider-Man Super Special", IssueNumber = "1", Description = "Planet of the Symbiotes" });
+      issues.Add(new ComicIssue { IssueID = "spider-man-the-mutant-agenda-1", SeriesTitle = "Spider-Man: The Mutant Agenda", IssueNumber = "1", PublishMonth = 3, PublishYear = 1994, Description = "The Mutant Agenda" });
+      issues.Add(new ComicIssue { IssueID = "spider-man-the-mutant-agenda-2", SeriesTitle = "Spider-Man: The Mutant Agenda", IssueNumber = "2", PublishMonth = 4, PublishYear = 1994, Description = "The Mutant Agenda" });
+      issues.Add(new ComicIssue { IssueID = "spider-man-the-mutant-agenda-3", SeriesTitle = "Spider-Man: The Mutant Agenda", IssueNumber = "3", PublishMonth = 5, PublishYear = 1994, Description = "The Mutant Agenda" });
+      issues.Add(new ComicIssue { IssueID = "spider-man-unlimited-1", SeriesTitle = "Spider-Man Unlimited", IssueNumber = "1", PublishMonth = 5, PublishYear = 1993, Description = "Maximum Carnage Part 1" });
+      issues.Add(new ComicIssue { IssueID = "spider-man-unlimited-2", SeriesTitle = "Spider-Man Unlimited", IssueNumber = "2", PublishMonth = 8, PublishYear = 1988, Description = "Maximum Carnage Part 14" });
+      issues.Add(new ComicIssue { IssueID = "avenging-spider-man-8", SeriesTitle = "Avenging Spider-Man", IssueNumber = "8", Description = "Ends of the Earth" });
+      issues.Add(new ComicIssue { IssueID = "venom-2-6", SeriesTitle = "Venom (vol. 2)", IssueNumber = "6", Description = "Spider-Island" });
+      issues.Add(new ComicIssue { IssueID = "venom-2-7", SeriesTitle = "Venom (vol. 2)", IssueNumber = "7", Description = "Spider-Island" });
+      issues.Add(new ComicIssue { IssueID = "venom-2-8", SeriesTitle = "Venom (vol. 2)", IssueNumber = "8", Description = "Spider-Island" });
+      issues.Add(new ComicIssue { IssueID = "web-of-spider-man-1", SeriesTitle = "Web of Spider-Man", IssueNumber = "1", Description = "The Alien Costume Saga" });
+      issues.Add(new ComicIssue { IssueID = "web-of-spider-man-31", SeriesTitle = "Web of Spider-Man", IssueNumber = "31", Description = "Fearful Symmetry: Kraven's Last Hunt" });
+      issues.Add(new ComicIssue { IssueID = "web-of-spider-man-32", SeriesTitle = "Web of Spider-Man", IssueNumber = "32", Description = "Fearful Symmetry: Kraven's Last Hunt" });
+      issues.Add(new ComicIssue { IssueID = "web-of-spider-man-101", SeriesTitle = "Web of Spider-Man", IssueNumber = "101", PublishMonth = 6, PublishYear = 1985, Description = "Maximum Carnage Part 2" });
+      issues.Add(new ComicIssue { IssueID = "web-of-spider-man-102", SeriesTitle = "Web of Spider-Man", IssueNumber = "102", PublishMonth = 7, PublishYear = 1988, Description = "Maximum Carnage Part 6" });
+      issues.Add(new ComicIssue { IssueID = "web-of-spider-man-103", SeriesTitle = "Web of Spider-Man", IssueNumber = "103", PublishMonth = 8, PublishYear = 1988, Description = "Maximum Carnage Part 10" });
+      issues.Add(new ComicIssue { IssueID = "web-of-spider-man-super-special-1", SeriesTitle = "Web of Spider-Man Super Special", IssueNumber = "1", Description = "Planet of the Symbiotes" });
+      issues.Add(new ComicIssue { IssueID = "what-if-30", SeriesTitle = "What If?", IssueNumber = "30", PublishMonth = 11, PublishYear = 1976, Description = "The Original Clone Saga" });
+
+      return issues.ToArray();
     }
     public static StoryArc[] GetStoryArcs() {
       return new StoryArc[] {
@@ -1298,7 +1209,7 @@ namespace ASP_site.Data.Initializers {
         new StoryArc { ArcID = "arc-marvel-secret-wars", Title = "Secret Wars!", IssueIDs = new List<string> { "marvel-super-heroes-secret-wars-1", "marvel-super-heroes-secret-wars-2", "marvel-super-heroes-secret-wars-3", "marvel-super-heroes-secret-wars-4", "marvel-super-heroes-secret-wars-5", "marvel-super-heroes-secret-wars-6", "marvel-super-heroes-secret-wars-7", "marvel-super-heroes-secret-wars-8", "marvel-super-heroes-secret-wars-9", "marvel-super-heroes-secret-wars-10", "marvel-super-heroes-secret-wars-11", "marvel-super-heroes-secret-wars-12" } },
         
         // X-men
-        new StoryArc { ArcID = "arc-x-men-the-dark-phoenix-saga", Title = "X-Men: The Dark Phoenix Saga", Description = "By Chris Claremont and John Byrne and Terry Austin", IssueIDs = new List<string> { "uncanny-x-men-129", "uncanny-x-men-130", "uncanny-x-men-131", "uncanny-x-men-132", "uncanny-x-men-133", "uncanny-x-men-134", "uncanny-x-men-135", "uncanny-x-men-136", "uncanny-x-men-137", "uncanny-x-men-138" } },
+        new StoryArc { ArcID = "arc-x-men-the-dark-phoenix-saga", Title = "X-Men: The Dark Phoenix Saga", Description = "By Chris Claremont and John Byrne and Terry Austin", IssueIDs = ComicBuilder.GetIssueIds("uncanny-x-men", 129, 138) },
 
         new StoryArc { ArcID = "arc-x-men-armageddon-now", Title = "X-Men: Armageddon Now", Description = "By Chris Claremont and John Byrne and Terry Austin", IssueIDs = new List<string> { "x-men-108" } },
         new StoryArc { ArcID = "arc-x-men-bastions-of-glory", Title = "X-Men: Bastions of Glory!", Description = "By Larry Hama and Mark Texeira", IssueIDs = new List<string> { "wolverine-63" } },
@@ -1358,7 +1269,7 @@ namespace ASP_site.Data.Initializers {
         new StoryArc { ArcID = "arc-spider-man-24-hours-till-doomsday", Title = "Spider-Man: 24 Hours till Doomsday!", IssueIDs = new List<string> { "amazing-spider-man-192" } },
         new StoryArc { ArcID = "arc-spider-man-invasion-of-the-spider-slayers-part-5-arachnophobia-too", Title = "Spider-Man: Invasion of the Spider Slayers Part 5: Arachnophobia Too!", IssueIDs = new List<string> { "amazing-spider-man-372" } },
         new StoryArc { ArcID = "arc-spider-man-the-birth-of-a-super-hero", Title = "Spider-Man: The Birth of a Super-Hero!", IssueIDs = new List<string> { "amazing-spider-man-42" } },
-        new StoryArc { ArcID = "arc-spider-man-doctor-octopus-armed-and-dangerous", Title = "Spider-Man: Doctor Octopus: Armed and Dangerous", IssueIDs = new List<string> { "amazing-spider-man-3" } },
+        new StoryArc { ArcID = "arc-spider-man--versus-doctor-octopus", Title = "Spider-Man Versus Doctor Octopus", IssueIDs = new List<string> { "amazing-spider-man-3" } },
         new StoryArc { ArcID = "arc-spider-man-the-menace-of-mysterio", Title = "Spider-Man: The Menace of Mysterio!", IssueIDs = new List<string> { "amazing-spider-man-13" } },
         new StoryArc { ArcID = "arc-spider-man-the-coming-of-the-scorpion", Title = "Spider-Man: The Coming of the Scorpion!", IssueIDs = new List<string> { "amazing-spider-man-19" } },
         new StoryArc { ArcID = "arc-spider-man-spidey-strikes-back", Title = "Spider-Man: Spidey Strikes Back!", IssueIDs = new List<string> { "amazing-spider-man-20" } },
@@ -1371,12 +1282,10 @@ namespace ASP_site.Data.Initializers {
         new StoryArc { ArcID = "arc-spider-man-endings", Title = "Spider-Man: Endings!", IssueIDs = new List<string> { "amazing-spider-man-251" } },
         new StoryArc { ArcID = "arc-spider-man-spider-man-vs-the-chameleon", Title = "Spider-Man: Spider-Man Vs. the Chameleon!", IssueIDs = new List<string> { "amazing-spider-man-1" } },
         new StoryArc { ArcID = "arc-spider-man-the-insidious-six", Title = "Spider-Man: The Insidious Six", IssueIDs = new List<string> { "amazing-spider-man-annual-1" } },
-        new StoryArc { ArcID = "arc-spider-man-battle-of-the-insidious-six", Title = "Spider-Man: Battle of the Insidious Six", IssueIDs = new List<string> { "amazing-spider-man-12" } },
+        new StoryArc { ArcID = "arc-spider-man-unmasked-by-doctor-octopus", Title = "Unmasked By Doctor Octopus!", IssueIDs = new List<string> { "amazing-spider-man-12" } },
         new StoryArc { ArcID = "arc-spider-man-hydro-man", Title = "Spider-Man: Hydro-Man", IssueIDs = new List<string> { "amazing-spider-man-212" } },
         new StoryArc { ArcID = "arc-spider-man-the-mutant-agenda", Title = "Spider-Man: The Mutant Agenda", IssueIDs = new List<string> { "spider-man-the-mutant-agenda-1", "spider-man-the-mutant-agenda-2", "spider-man-the-mutant-agenda-3" } },
         new StoryArc { ArcID = "arc-spider-man-enter-the-punisher", Title = "Spider-Man: Enter the Punisher", IssueIDs = new List<string> { "amazing-spider-man-129" } },
-        new StoryArc { ArcID = "arc-spider-man-tablet-of-time", Title = "Spider-Man: Tablet of Time", IssueIDs = new List<string> { "amazing-spider-man-73" } },
-        new StoryArc { ArcID = "arc-spider-man-ravages-of-time", Title = "Spider-Man: Ravages of Time", IssueIDs = new List<string> { "amazing-spider-man-74", "amazing-spider-man-75" } },
         new StoryArc { ArcID = "arc-spider-man-duel-to-the-death-with-the-vulture", Title = "Spider-Man: Duel to the Death with the Vulture", IssueIDs = new List<string> { "amazing-spider-man-2" } },
         new StoryArc { ArcID = "arc-spider-man-the-thief-of-years", Title = "Spider-Man: The Thief of Years", IssueIDs = new List<string> { "amazing-spider-man-387" } },
         new StoryArc { ArcID = "arc-spider-man-the-coming-of-morbius", Title = "Spider-Man: The Coming of Morbius", IssueIDs = new List<string> { "amazing-spider-man-101" } },
@@ -1388,7 +1297,6 @@ namespace ASP_site.Data.Initializers {
         new StoryArc { ArcID = "arc-spider-man-venom-returns", Title = "Spider-Man: Venom Returns!", IssueIDs = new List<string> { "amazing-spider-man-344", "amazing-spider-man-345", "amazing-spider-man-359" } },
         new StoryArc { ArcID = "arc-spider-man-carnage", Title = "Spider-Man: Carnage!", IssueIDs = new List<string> { "amazing-spider-man-361", "amazing-spider-man-362", "amazing-spider-man-363" } },
         new StoryArc { ArcID = "arc-spider-man-the-spot", Title = "Spider-Man: The Spot!", IssueIDs = new List<string> { "peter-parker-spectacular-spider-man-98", "peter-parker-spectacular-spider-man-99" } },
-        new StoryArc { ArcID = "arc-spider-man-goblin-war", Title = "Spider-Man: Goblin War!", IssueIDs = new List<string> { "amazing-spider-man-312" } },
         new StoryArc { ArcID = "arc-spider-man-turning-point", Title = "Spider-Man: Turning Point!", IssueIDs = new List<string> { "amazing-spider-man-39", "amazing-spider-man-121", "amazing-spider-man-122" } },
         new StoryArc { ArcID = "arc-spider-man-guilty", Title = "Spider-Man: Guilty!", IssueIDs = new List<string> { "spectacular-spider-man-150", "spectacular-spider-man-151" } },
         new StoryArc { ArcID = "arc-spider-man-the-black-cat", Title = "Spider-Man: The Black Cat!", IssueIDs = new List<string> { "amazing-spider-man-194" } },
@@ -1397,32 +1305,32 @@ namespace ASP_site.Data.Initializers {
         new StoryArc { ArcID = "arc-spider-man-spider-wars", Title = "Spider-Man: Spider Wars!", IssueIDs = new List<string> { "amazing-spider-man-312" } },
 
         // Spiderman
-        new StoryArc { ArcID = "arc-spider-man-if-this-be-my-destiny", Title = "Spider-Man: If This Be My Destiny!", Description = "By Stan Lee and Steve Ditko", IssueIDs = new List<string> { "amazing-spider-man-31", "amazing-spider-man-32" } },
-        new StoryArc { ArcID = "arc-spider-man-how-green-was-my-goblin", Title = "Spider-Man: How Green Was My Goblin!", Description = "By Stan Lee and John Romita Sr.", IssueIDs = new List<string> { "amazing-spider-man-39", "amazing-spider-man-40" } },
-        new StoryArc { ArcID = "arc-spider-man-spider-man-no-more", Title = "Spider-Man: Spider-Man No More!", Description = "By Stan Lee and John Romita Sr.", IssueIDs = new List<string> { "amazing-spider-man-50", "amazing-spider-man-51", "amazing-spider-man-52" } },
-        new StoryArc { ArcID = "arc-spider-man-doc-ock-wins", Title = "Spider-Man: Doc Ock Wins!", Description = "By Stan Lee and John Romita Sr.", IssueIDs = new List<string> { "amazing-spider-man-53", "amazing-spider-man-54", "amazing-spider-man-55", "amazing-spider-man-56", "amazing-spider-man-57" } },
+        new StoryArc { ArcID = "arc-spider-man-if-this-be-my-destiny", Title = "Spider-Man: If This Be My Destiny!", Description = "By Stan Lee and Steve Ditko", IssueIDs = ComicBuilder.GetIssueIds("amazing-spider-man", 31, 33) },
+        new StoryArc { ArcID = "arc-spider-man-how-green-was-my-goblin", Title = "Spider-Man: How Green Was My Goblin!", Description = "By Stan Lee and John Romita Sr.", IssueIDs = ComicBuilder.GetIssueIds("amazing-spider-man", 39, 40) },
+        new StoryArc { ArcID = "arc-spider-man-spider-man-no-more", Title = "Spider-Man: Spider-Man No More!", Description = "By Stan Lee and John Romita Sr.", IssueIDs = ComicBuilder.GetIssueIds("amazing-spider-man", 50, 52) },
+        new StoryArc { ArcID = "arc-spider-man-doc-ock-wins", Title = "Spider-Man: Doc Ock Wins!", Description = "By Stan Lee and John Romita Sr.", IssueIDs = ComicBuilder.GetIssueIds("amazing-spider-man", 53, 57) },
         new StoryArc { ArcID = "arc-spider-man-lo-this-monster", Title = "Spider-Man: Lo, This Monster!", Description = "By Stan Lee and John Romita Sr.", IssueIDs = new List<string> { "spectacular-spider-man-1", "spectacular-spider-man-2" } },
         new StoryArc { ArcID = "arc-spider-man-the-lifeline-tablet-saga", Title = "Spider-Man: The Lifeline Tablet Saga!", Description = "By Stan Lee and John Romita Sr.", IssueIDs = new List<string> { "amazing-spider-man-68", "amazing-spider-man-69", "amazing-spider-man-70", "amazing-spider-man-71", "amazing-spider-man-72", "amazing-spider-man-73", "amazing-spider-man-74", "amazing-spider-man-75", "amazing-spider-man-76", "amazing-spider-man-77", "spider-man-lifeline-1", "spider-man-lifeline-2", "spider-man-lifeline-3" } },
-        new StoryArc { ArcID = "arc-spider-man-the-death-of-captain-stacy", Title = "Spider-Man: The Death of Captain Stacy!", Description = "By Stan Lee and Gil Kane", IssueIDs = new List<string> { "amazing-spider-man-87", "amazing-spider-man-88", "amazing-spider-man-89", "amazing-spider-man-90", "amazing-spider-man-91", "amazing-spider-man-92" } },
-        new StoryArc { ArcID = "arc-spider-man-green-goblin-reborn", Title = "Spider-Man: Green Goblin Reborn!", Description = "By Stan Lee and Gil Kane", IssueIDs = new List<string> { "amazing-spider-man-96", "amazing-spider-man-97", "amazing-spider-man-98" } },
-        new StoryArc { ArcID = "arc-spider-man-the-six-arms-saga", Title = "Spider-Man: The Six Arms Saga!", Description = "By Stan Lee and Roy Thomas and Gil Kane", IssueIDs = new List<string> { "amazing-spider-man-100", "amazing-spider-man-101", "amazing-spider-man-102" } },
-        new StoryArc { ArcID = "arc-spider-man-the-night-gwen-stacy-died", Title = "Spider-Man: The Night Gwen Stacy Died!", Description = "By Gerry Conway and Gil Kane", IssueIDs = new List<string> { "amazing-spider-man-121", "amazing-spider-man-122" } },
+        new StoryArc { ArcID = "arc-spider-man-the-death-of-captain-stacy", Title = "Spider-Man: The Death of Captain Stacy!", Description = "By Stan Lee and Gil Kane", IssueIDs = ComicBuilder.GetIssueIds("amazing-spider-man", 87, 92) },
+        new StoryArc { ArcID = "arc-spider-man-green-goblin-reborn", Title = "Spider-Man: Green Goblin Reborn!", Description = "By Stan Lee and Gil Kane", IssueIDs = ComicBuilder.GetIssueIds("amazing-spider-man", 96, 98) },
+        new StoryArc { ArcID = "arc-spider-man-the-six-arms-saga", Title = "Spider-Man: The Six Arms Saga!", Description = "By Stan Lee and Roy Thomas and Gil Kane", IssueIDs = ComicBuilder.GetIssueIds("amazing-spider-man", 100, 102) },
+        new StoryArc { ArcID = "arc-spider-man-the-night-gwen-stacy-died", Title = "Spider-Man: The Night Gwen Stacy Died!", Description = "By Gerry Conway and Gil Kane", IssueIDs = ComicBuilder.GetIssueIds("amazing-spider-man", 121, 122) },
         new StoryArc { ArcID = "arc-spider-man-the-original-clone-saga", Title = "Spider-Man: The Original Clone Saga!", Description = "By Stan Lee and Gil Kane", IssueIDs = new List<string> { "amazing-spider-man-139", "amazing-spider-man-140", "amazing-spider-man-141", "amazing-spider-man-142", "amazing-spider-man-143", "amazing-spider-man-144", "amazing-spider-man-145", "amazing-spider-man-146", "amazing-spider-man-147", "amazing-spider-man-148", "amazing-spider-man-149", "amazing-spider-man-150", 
         "giant-size-spider-man-5", "peter-parker-spectacular-spider-man-25", "peter-parker-spectacular-spider-man-26", "peter-parker-spectacular-spider-man-27", "peter-parker-spectacular-spider-man-28", "peter-parker-spectacular-spider-man-29", "peter-parker-spectacular-spider-man-30", "peter-parker-spectacular-spider-man-31", "peter-parker-spectacular-spider-man-149", "peter-parker-spectacular-spider-man-162", "peter-parker-spectacular-spider-man-163", "peter-parker-spectacular-spider-man-annual-8", "what-if-30"   } },
-        new StoryArc { ArcID = "arc-spider-man-the-return-of-the-burglar", Title = "Spider-Man: The Return Of The Burglar!", Description = "By Marv Wolfman and Various", IssueIDs = new List<string> { "amazing-spider-man-193", "amazing-spider-man-194", "amazing-spider-man-195", "amazing-spider-man-196", "amazing-spider-man-197", "amazing-spider-man-198", "amazing-spider-man-199", "amazing-spider-man-200" } },
-        new StoryArc { ArcID = "arc-spider-man-nothing-can-stop-the-juggernaut", Title = "Spider-Man: Nothing Can Stop the Juggernaut!", Description = "By Roger Stern and John Romita Jr.", IssueIDs = new List<string> { "amazing-spider-man-229", "amazing-spider-man-230" } },
-        new StoryArc { ArcID = "arc-spider-man-hyde-seek", Title = "Spider-Man: Hyde & Seek!", Description = "By Roger Stern and John Romita Jr.", IssueIDs = new List<string> { "amazing-spider-man-231", "amazing-spider-man-232" } },
+        new StoryArc { ArcID = "arc-spider-man-the-return-of-the-burglar", Title = "Spider-Man: The Return Of The Burglar!", Description = "By Marv Wolfman and Various", IssueIDs = ComicBuilder.GetIssueIds("amazing-spider-man", 193, 200) },
+        new StoryArc { ArcID = "arc-spider-man-nothing-can-stop-the-juggernaut", Title = "Spider-Man: Nothing Can Stop the Juggernaut!", Description = "By Roger Stern and John Romita Jr.", IssueIDs = ComicBuilder.GetIssueIds("amazing-spider-man", 229, 230) },
+        new StoryArc { ArcID = "arc-spider-man-hyde-seek", Title = "Spider-Man: Hyde & Seek!", Description = "By Roger Stern and John Romita Jr.", IssueIDs = ComicBuilder.GetIssueIds("amazing-spider-man", 231, 231) },
         new StoryArc { ArcID = "arc-spider-man-the-kid-who-collects-spider-man", Title = "Spider-Man: The Kid Who Collects Spider-Man!", Description = "By Roger Stern and Ron Frenz", IssueIDs = new List<string> { "amazing-spider-man-248" } },
-        new StoryArc { ArcID = "arc-spider-man-secret-wars", Title = "Spider-Man: Secret Wars!", Description = "By Jim Shooter and Various", IssueIDs = new List<string> { "amazing-spider-man-249", "amazing-spider-man-250", "amazing-spider-man-251", "amazing-spider-man-252" } },
+        new StoryArc { ArcID = "arc-spider-man-secret-wars", Title = "Spider-Man: Secret Wars!", Description = "By Jim Shooter and Various", IssueIDs = ComicBuilder.GetIssueIds("amazing-spider-man", 249, 252) },
         new StoryArc { ArcID = "arc-spider-man-the-alien-costume-saga", Title = "Spider-Man: The Alien Costume Saga!", Description = "By Jim Shooter and Various", IssueIDs = new List<string> { "amazing-spider-man-252", "amazing-spider-man-253", "amazing-spider-man-254", "amazing-spider-man-255", "amazing-spider-man-256", "amazing-spider-man-257", "amazing-spider-man-258", "amazing-spider-man-259", "amazing-spider-man-260", "amazing-spider-man-261", "amazing-spider-man-262",
         "marvel-team-up-141", "marvel-team-up-142", "marvel-team-up-143", "marvel-team-up-144", "marvel-team-up-145", "marvel-team-up-146", "marvel-team-up-147", "marvel-team-up-148", "marvel-team-up-149", "marvel-team-up-150", "peter-parker-spectacular-spider-man-90", "peter-parker-spectacular-spider-man-91", "peter-parker-spectacular-spider-man-92", "peter-parker-spectacular-spider-man-93", "peter-parker-spectacular-spider-man-94", "peter-parker-spectacular-spider-man-95", "peter-parker-spectacular-spider-man-96", "peter-parker-spectacular-spider-man-97", "peter-parker-spectacular-spider-man-98", "peter-parker-spectacular-spider-man-99", "peter-parker-spectacular-spider-man-100", "web-of-spider-man-1" } },
         new StoryArc { ArcID = "arc-spider-man-the-death-of-jean-dewolff", Title = "Spider-Man: The Death of Jean DeWolff!", Description = "By Peter David and Rich Buckler", IssueIDs = new List<string> { "peter-parker-spectacular-spider-man-107", "peter-parker-spectacular-spider-man-108", "peter-parker-spectacular-spider-man-109", "peter-parker-spectacular-spider-man-110" } },
         new StoryArc { ArcID = "arc-spider-man-the-wedding", Title = "Spider-Man: The Wedding!", Description = "By Jim Shooter and David Michelinie and Paul Ryan", IssueIDs = new List<string> { "amazing-spider-man-annual-21" } },
         new StoryArc { ArcID = "arc-spider-man-fearful-symmetry-kravens-last-hunt", Title = "Spider-Man: Fearful Symmetry: Kraven's Last Hunt!", Description = "By J. M. DeMatteis and Mike Zeck", IssueIDs = new List<string> { "web-of-spider-man-31", "web-of-spider-man-32", "amazing-spider-man-293", "amazing-spider-man-294", "peter-parker-spectacular-spider-man-131", "peter-parker-spectacular-spider-man-132" } },
-        new StoryArc { ArcID = "arc-spider-man-venom-strikes-back", Title = "Spider-Man: Venom Strikes Back!", Description = "By David Michelinie and Todd McFarlane", IssueIDs = new List<string> { "amazing-spider-man-315", "amazing-spider-man-316", "amazing-spider-man-317" } },
+        new StoryArc { ArcID = "arc-spider-man-venom-strikes-back", Title = "Spider-Man: Venom Strikes Back!", Description = "By David Michelinie and Todd McFarlane", IssueIDs = ComicBuilder.GetIssueIds("amazing-spider-man", 315, 317) },
         new StoryArc { ArcID = "arc-spider-man-torment", Title = "Spider-Man: Torment!", Description = "By Todd McFarlane", IssueIDs = new List<string> { "spider-man-1", "spider-man-2", "spider-man-3", "spider-man-4", "spider-man-5" } },
-        new StoryArc { ArcID = "arc-spider-man-the-return-of-the-sinister-six", Title = "Spider-Man: The Return of the Sinister Six!", Description = "By David Michelinie and Erik Larsen", IssueIDs = new List<string> { "amazing-spider-man-334", "amazing-spider-man-335", "amazing-spider-man-336", "amazing-spider-man-337", "amazing-spider-man-338", "amazing-spider-man-339", "amazing-spider-man-340", "amazing-spider-man-341", "amazing-spider-man-342", "amazing-spider-man-343", "amazing-spider-man-344", "amazing-spider-man-345", "amazing-spider-man-346", "amazing-spider-man-347", "amazing-spider-man-348", "amazing-spider-man-349" } },
-        new StoryArc { ArcID = "arc-spider-man-invasion-of-the-spider-slayers", Title = "Spider-Man: Invasion of the Spider-Slayers!", Description = "By David Michelinie and Mark Bagley", IssueIDs = new List<string> { "amazing-spider-man-368", "amazing-spider-man-369", "amazing-spider-man-370", "amazing-spider-man-371", "amazing-spider-man-372", "amazing-spider-man-373" } },
+        new StoryArc { ArcID = "arc-spider-man-the-return-of-the-sinister-six", Title = "Spider-Man: The Return of the Sinister Six!", Description = "By David Michelinie and Erik Larsen", IssueIDs = ComicBuilder.GetIssueIds("amazing-spider-man", 334, 349) },
+        new StoryArc { ArcID = "arc-spider-man-invasion-of-the-spider-slayers", Title = "Spider-Man: Invasion of the Spider-Slayers!", Description = "By David Michelinie and Mark Bagley",  IssueIDs = ComicBuilder.GetIssueIds("amazing-spider-man", 368, 373) },
         new StoryArc { ArcID = "arc-spider-man-maximum-carnage", Title = "Spider-Man: Maximum Carnage!", Description = "By David Michelinie and Todd McFarlane", IssueIDs = new List<string> { "spider-man-35", "spider-man-36", "spider-man-37", "amazing-spider-man-378", "amazing-spider-man-380" } },
         new StoryArc { ArcID = "arc-spider-man-the-clone-saga", Title = "Spider-Man: The Clone Saga!", Description = "By Various", IssueIDs = new List<string> { "the-clone-saga-1", "the-clone-saga-2", "the-clone-saga-3", "the-clone-saga-4", "the-clone-saga-5", "the-clone-saga-6", "the-clone-saga-7", "the-clone-saga-8", "the-clone-saga-9", "the-clone-saga-10", "the-clone-saga-11", "the-clone-saga-12" } },
         new StoryArc { ArcID = "arc-spider-man-planet-of-the-symbiotes", Title = "Spider-Man: Planet of the Symbiotes!", Description = "By David Michelinie and Various", IssueIDs = new List<string> { "amazing-spider-man-super-special-1", "spider-man-super-special-1", "spectacular-spider-man-super-special-1", "web-of-spider-man-super-special-1" } },
@@ -1498,9 +1406,9 @@ namespace ASP_site.Data.Initializers {
     public static CollectedEdition[] GetCollectedEditions() {
       return new CollectedEdition[] {
         new CollectedEdition { EditionID = "book-dc-compact-batman-court-of-owls-saga", Line = "DC Compact Comics", Title = "Batman: The Court of Owls Saga", Format = "Softcover (Digest)", ReleaseMonth = 6, ReleaseDay = 4, ReleaseYear = 2024, CollectedIssueIDs = new List<string> { "batman-volume-2-1", "batman-volume-2-2", "batman-volume-2-3", "batman-volume-2-4", "batman-volume-2-5", "batman-volume-2-6", "batman-volume-2-7", "batman-volume-2-8", "batman-volume-2-9", "batman-volume-2-10", "batman-volume-2-11" } },
-        new CollectedEdition { EditionID = "book-dc-compact-far-sector", Line = "DC Compact Comics", Title = "Far Sector", Format = "Softcover (Digest)", ReleaseMonth = 6, ReleaseDay = 4, ReleaseYear = 2024, CollectedIssueIDs = new List<string> { "far-sector-1", "far-sector-2", "far-sector-3", "far-sector-4", "far-sector-5", "far-sector-6", "far-sector-7", "far-sector-8", "far-sector-9", "far-sector-10", "far-sector-11", "far-sector-12" } },
-        new CollectedEdition { EditionID = "book-dc-compact-watchmen", Line = "DC Compact Comics", Title = "Watchmen", Format = "Softcover (Digest)", ReleaseMonth = 6, ReleaseDay = 4, ReleaseYear = 2024, CollectedIssueIDs = new List<string> { "watchmen-1", "watchmen-2", "watchmen-3", "watchmen-4", "watchmen-5", "watchmen-6", "watchmen-7", "watchmen-8", "watchmen-9", "watchmen-10", "watchmen-11", "watchmen-12" } },
-        new CollectedEdition { EditionID = "book-dc-compact-all-star-superman-saga", Line = "DC Compact Comics", Title = "All-Star Superman Saga", Format = "Softcover (Digest)", ReleaseMonth = 6, ReleaseDay = 4, ReleaseYear = 2024, CollectedIssueIDs = new List<string> { "all-star-superman-1", "all-star-superman-2", "all-star-superman-3", "all-star-superman-4", "all-star-superman-5", "all-star-superman-6", "all-star-superman-7", "all-star-superman-8", "all-star-superman-9", "all-star-superman-10", "all-star-superman-11", "all-star-superman-12" } },
+        new CollectedEdition { EditionID = "book-dc-compact-far-sector", Line = "DC Compact Comics", Title = "Far Sector", Format = "Softcover (Digest)", ReleaseMonth = 6, ReleaseDay = 4, ReleaseYear = 2024, CollectedIssueIDs = ComicBuilder.GetIssueIds("far-sector", 1, 12) },
+        new CollectedEdition { EditionID = "book-dc-compact-watchmen", Line = "DC Compact Comics", Title = "Watchmen", Format = "Softcover (Digest)", ReleaseMonth = 6, ReleaseDay = 4, ReleaseYear = 2024, CollectedIssueIDs =ComicBuilder.GetIssueIds("watchmen", 1, 12) },
+        new CollectedEdition { EditionID = "book-dc-compact-all-star-superman-saga", Line = "DC Compact Comics", Title = "All-Star Superman Saga", Format = "Softcover (Digest)", ReleaseMonth = 6, ReleaseDay = 4, ReleaseYear = 2024, CollectedIssueIDs = ComicBuilder.GetIssueIds("all-star-superman", 1, 12) },
         new CollectedEdition { EditionID = "book-dc-compact-batman-hush", Line = "DC Compact Comics", Title = "Batman: Hush", Format = "Softcover (Digest)", ReleaseMonth = 8, ReleaseDay = 6, ReleaseYear = 2024, CollectedIssueIDs = new List<string> { "batman-608", "batman-609", "batman-610", "batman-611", "batman-612", "batman-613", "batman-614", "batman-615", "batman-616", "wizard-0", "batman-617", "batman-618", "batman-619" } },
         new CollectedEdition { EditionID = "book-dc-compact-wonder-woman-earth-one", Line = "DC Compact Comics", Title = "Wonder Woman: Earth One", Format = "Softcover (Digest)", ReleaseMonth = 8, ReleaseDay = 6, ReleaseYear = 2024, CollectedIssueIDs = new List<string> { "wonder-woman-earth-one-1", "wonder-woman-earth-one-2", "wonder-woman-earth-one-3" } },
         new CollectedEdition { EditionID = "book-dc-compact-gotham-city-sirens", Line = "DC Compact Comics", Title = "Gotham City Sirens", Format = "Softcover (Digest)", ReleaseMonth = 9, ReleaseDay = 3, ReleaseYear = 2024, CollectedIssueIDs = new List<string> { "gotham-city-sirens-1", "gotham-city-sirens-2", "gotham-city-sirens-3", "gotham-city-sirens-4", "gotham-city-sirens-5", "gotham-city-sirens-6", "gotham-city-sirens-7", "gotham-city-sirens-8", "gotham-city-sirens-9", "gotham-city-sirens-10", "gotham-city-sirens-11", "gotham-city-sirens-12", "gotham-city-sirens-13" } },
@@ -1562,264 +1470,264 @@ namespace ASP_site.Data.Initializers {
       };
     }
 
-    public static AdaptedMedia[] GetAdaptedMedia() {
-      return new AdaptedMedia[] {
-        new AdaptedMedia { AdaptedMediaID = "media-watchmen-movie", Title = "Watchmen", MediaType = MediaType.Movie, ReleaseYear = 2009, AdaptedFromArcIDs = new List<string> { "arc-watchmen" } },
+    public static Media[] GetMedia() {
+      return new Media[] {
+        new Media { MediaID = "media-watchmen-movie", Title = "Watchmen", MediaType = MediaType.Movie, ReleaseYear = 2009, AdaptedFromArcIDs = new List<string> { "arc-watchmen" } },
         
         // DC Animated Movie Universe 
         // First story arc "New 52" (2013–2020)
-        new AdaptedMedia { AdaptedMediaID = "media-justice-league-the-flashpoint-paradox", Title = "Justice League: The Flashpoint Paradox", MediaType = MediaType.Movie, ReleaseYear = 2013, AdaptedFromArcIDs = new List<string> { "arc-flashpoint" } },
-        new AdaptedMedia { AdaptedMediaID = "media-justice-league-war", Title = "Justice League: War", MediaType = MediaType.Movie, ReleaseYear = 2014, AdaptedFromArcIDs = new List<string> { "arc-justice-league-origin" } },
-        new AdaptedMedia { AdaptedMediaID = "media-son-of-batman", Title = "Son of Batman", MediaType = MediaType.Movie, ReleaseYear = 2014, AdaptedFromArcIDs = new List<string> { "arc-batman-and-son" } },
-        new AdaptedMedia { AdaptedMediaID = "media-justice-league-throne-of-atlantis", Title = "Justice League: Throne of Atlantis", MediaType = MediaType.Movie, ReleaseYear = 2015, AdaptedFromArcIDs = new List<string> { "arc-justice-league-throne-of-atlantis" } },
-        new AdaptedMedia { AdaptedMediaID = "media-batman-vs-robin", Title = "Batman vs. Robin", MediaType = MediaType.Movie, ReleaseYear = 2015, Description = "Sequel to Son of Batman", AdaptedFromArcIDs = new List<string> { "arc-batman-court-of-owls-saga", "arc-batman-and-robin-born-to-kill", "arc-detective-comics-faces-of-death" } },
-        new AdaptedMedia { AdaptedMediaID = "media-batman-bad-blood", Title = "Batman: Bad Blood", MediaType = MediaType.Movie, ReleaseYear = 2016, Description = "Sequel to Batman vs. Robin", AdaptedFromArcIDs = new List<string> { "arc-batman-leviathan" } },
-        new AdaptedMedia { AdaptedMediaID = "media-justice-league-vs-teen-titans", Title = "Justice League vs. Teen Titans", MediaType = MediaType.Movie, ReleaseYear = 2016, AdaptedFromArcIDs = new List<string> { "arc-justice-league-vs-teen-titans" } },
-        new AdaptedMedia { AdaptedMediaID = "media-justice-league-dark", Title = "Justice League Dark", MediaType = MediaType.Movie, ReleaseYear = 2017, AdaptedFromArcIDs = new List<string> { "arc-justice-league-dark" } },
-        new AdaptedMedia { AdaptedMediaID = "media-teen-titans-the-judas-contract", Title = "Teen Titans: The Judas Contract", MediaType = MediaType.Movie, ReleaseYear = 2017, AdaptedFromArcIDs = new List<string> { "arc-teen-titans-the-judas-contract" } },
-        new AdaptedMedia { AdaptedMediaID = "media-suicide-squad-hell-to-pay", Title = "Suicide Squad: Hell to Pay", MediaType = MediaType.Movie, ReleaseYear = 2018, AdaptedFromArcIDs = new List<string> { "arc-suicide-squad-hell-to-pay" } },
-        new AdaptedMedia { AdaptedMediaID = "media-the-death-of-superman", Title = "The Death of Superman", MediaType = MediaType.Movie, ReleaseYear = 2018, AdaptedFromArcIDs = new List<string> { "arc-the-death-of-superman" } },
-        new AdaptedMedia { AdaptedMediaID = "media-constantine-city-of-demons", Title = "Constantine: City of Demons", MediaType = MediaType.Movie, ReleaseYear = 2018, AdaptedFromArcIDs = new List<string> { "arc-constantine-city-of-demons" } },
-        new AdaptedMedia { AdaptedMediaID = "media-reign-of-the-supermen", Title = "Reign of the Supermen", MediaType = MediaType.Movie, ReleaseYear = 2019, AdaptedFromArcIDs = new List<string> { "arc-reign-of-the-supermen" } },
-        new AdaptedMedia { AdaptedMediaID = "media-batman-hush", Title = "Batman: Hush", MediaType = MediaType.Movie, ReleaseYear = 2019, AdaptedFromArcIDs = new List<string> { "arc-batman-hush" } },
-        new AdaptedMedia { AdaptedMediaID = "media-wonder-woman-bloodlines", Title = "Wonder Woman: Bloodlines", MediaType = MediaType.Movie, ReleaseYear = 2019, AdaptedFromArcIDs = new List<string> { "arc-wonder-woman-bloodlines" } },
-        new AdaptedMedia { AdaptedMediaID = "media-justice-league-dark-apokolips-war", Title = "Justice League Dark: Apokolips War", MediaType = MediaType.Movie, ReleaseYear = 2020, AdaptedFromArcIDs = new List<string> { "arc-justice-league-dark-apokolips-war" } },
+        new Media { MediaID = "media-justice-league-the-flashpoint-paradox", Title = "Justice League: The Flashpoint Paradox", MediaType = MediaType.Movie, ReleaseYear = 2013, AdaptedFromArcIDs = new List<string> { "arc-flashpoint" } },
+        new Media { MediaID = "media-justice-league-war", Title = "Justice League: War", MediaType = MediaType.Movie, ReleaseYear = 2014, AdaptedFromArcIDs = new List<string> { "arc-justice-league-origin" } },
+        new Media { MediaID = "media-son-of-batman", Title = "Son of Batman", MediaType = MediaType.Movie, ReleaseYear = 2014, AdaptedFromArcIDs = new List<string> { "arc-batman-and-son" } },
+        new Media { MediaID = "media-justice-league-throne-of-atlantis", Title = "Justice League: Throne of Atlantis", MediaType = MediaType.Movie, ReleaseYear = 2015, AdaptedFromArcIDs = new List<string> { "arc-justice-league-throne-of-atlantis" } },
+        new Media { MediaID = "media-batman-vs-robin", Title = "Batman vs. Robin", MediaType = MediaType.Movie, ReleaseYear = 2015, Description = "Sequel to Son of Batman", AdaptedFromArcIDs = new List<string> { "arc-batman-court-of-owls-saga", "arc-batman-and-robin-born-to-kill", "arc-detective-comics-faces-of-death" } },
+        new Media { MediaID = "media-batman-bad-blood", Title = "Batman: Bad Blood", MediaType = MediaType.Movie, ReleaseYear = 2016, Description = "Sequel to Batman vs. Robin", AdaptedFromArcIDs = new List<string> { "arc-batman-leviathan" } },
+        new Media { MediaID = "media-justice-league-vs-teen-titans", Title = "Justice League vs. Teen Titans", MediaType = MediaType.Movie, ReleaseYear = 2016, AdaptedFromArcIDs = new List<string> { "arc-justice-league-vs-teen-titans" } },
+        new Media { MediaID = "media-justice-league-dark", Title = "Justice League Dark", MediaType = MediaType.Movie, ReleaseYear = 2017, AdaptedFromArcIDs = new List<string> { "arc-justice-league-dark" } },
+        new Media { MediaID = "media-teen-titans-the-judas-contract", Title = "Teen Titans: The Judas Contract", MediaType = MediaType.Movie, ReleaseYear = 2017, AdaptedFromArcIDs = new List<string> { "arc-teen-titans-the-judas-contract" } },
+        new Media { MediaID = "media-suicide-squad-hell-to-pay", Title = "Suicide Squad: Hell to Pay", MediaType = MediaType.Movie, ReleaseYear = 2018, AdaptedFromArcIDs = new List<string> { "arc-suicide-squad-hell-to-pay" } },
+        new Media { MediaID = "media-the-death-of-superman", Title = "The Death of Superman", MediaType = MediaType.Movie, ReleaseYear = 2018, AdaptedFromArcIDs = new List<string> { "arc-the-death-of-superman" } },
+        new Media { MediaID = "media-constantine-city-of-demons", Title = "Constantine: City of Demons", MediaType = MediaType.Movie, ReleaseYear = 2018, AdaptedFromArcIDs = new List<string> { "arc-constantine-city-of-demons" } },
+        new Media { MediaID = "media-reign-of-the-supermen", Title = "Reign of the Supermen", MediaType = MediaType.Movie, ReleaseYear = 2019, AdaptedFromArcIDs = new List<string> { "arc-reign-of-the-supermen" } },
+        new Media { MediaID = "media-batman-hush", Title = "Batman: Hush", MediaType = MediaType.Movie, ReleaseYear = 2019, AdaptedFromArcIDs = new List<string> { "arc-batman-hush" } },
+        new Media { MediaID = "media-wonder-woman-bloodlines", Title = "Wonder Woman: Bloodlines", MediaType = MediaType.Movie, ReleaseYear = 2019, AdaptedFromArcIDs = new List<string> { "arc-wonder-woman-bloodlines" } },
+        new Media { MediaID = "media-justice-league-dark-apokolips-war", Title = "Justice League Dark: Apokolips War", MediaType = MediaType.Movie, ReleaseYear = 2020, AdaptedFromArcIDs = new List<string> { "arc-justice-league-dark-apokolips-war" } },
 
         // Second story arc: "Tomorrowverse" (2020–2024)
-        new AdaptedMedia { AdaptedMediaID = "media-superman-man-of-tomorrow", Title = "Superman: Man of Tomorrow", MediaType = MediaType.Movie, ReleaseYear = 2020, AdaptedFromArcIDs = new List<string> { "arc-superman-man-of-tomorrow" } },
-        new AdaptedMedia { AdaptedMediaID = "media-justice-society-world-war-ii", Title = "Justice Society: World War II", MediaType = MediaType.Movie, ReleaseYear = 2021, AdaptedFromArcIDs = new List<string> { "arc-justice-society-world-war-ii" } },
-        new AdaptedMedia { AdaptedMediaID = "media-batman-the-long-halloween-part-one", Title = "Batman: The Long Halloween - Part One", MediaType = MediaType.Movie, ReleaseYear = 2021, AdaptedFromArcIDs = new List<string> { "arc-batman-the-long-halloween" } },
-        new AdaptedMedia { AdaptedMediaID = "media-batman-the-long-halloween-part-two", Title = "Batman: The Long Halloween - Part Two", MediaType = MediaType.Movie, ReleaseYear = 2021, AdaptedFromArcIDs = new List<string> { "arc-batman-the-long-halloween" } },
-        new AdaptedMedia { AdaptedMediaID = "media-green-lantern-beware-my-power", Title = "Green Lantern: Beware My Power", MediaType = MediaType.Movie, ReleaseYear = 2022, AdaptedFromArcIDs = new List<string> { "arc-green-lantern-beware-my-power" } },
-        new AdaptedMedia { AdaptedMediaID = "media-legion-of-super-heroes", Title = "Legion of Super-Heroes", MediaType = MediaType.Movie, ReleaseYear = 2023, AdaptedFromArcIDs = new List<string> { "arc-legion-of-super-heroes" } },
-        new AdaptedMedia { AdaptedMediaID = "media-justice-league-warworld", Title = "Justice League: Warworld", MediaType = MediaType.Movie, ReleaseYear = 2023, AdaptedFromArcIDs = new List<string> { "arc-justice-league-warworld" } },
-        new AdaptedMedia { AdaptedMediaID = "media-justice-league-crisis-on-infinite-earths-part-one", Title = "Justice League: Crisis on Infinite Earths - Part One", MediaType = MediaType.Movie, ReleaseYear = 2024, AdaptedFromArcIDs = new List<string> { "arc-justice-league-crisis-on-infinite-earths" } },
-        new AdaptedMedia { AdaptedMediaID = "media-justice-league-crisis-on-infinite-earths-part-two", Title = "Justice League: Crisis on Infinite Earths - Part Two", MediaType = MediaType.Movie, ReleaseYear = 2024, AdaptedFromArcIDs = new List<string> { "arc-justice-league-crisis-on-infinite-earths" } },
-        new AdaptedMedia { AdaptedMediaID = "media-justice-league-crisis-on-infinite-earths-part-three", Title = "Justice League: Crisis on Infinite Earths - Part Three", MediaType = MediaType.Movie, ReleaseYear = 2024, AdaptedFromArcIDs = new List<string> { "arc-justice-league-crisis-on-infinite-earths" } },
+        new Media { MediaID = "media-superman-man-of-tomorrow", Title = "Superman: Man of Tomorrow", MediaType = MediaType.Movie, ReleaseYear = 2020, AdaptedFromArcIDs = new List<string> { "arc-superman-man-of-tomorrow" } },
+        new Media { MediaID = "media-justice-society-world-war-ii", Title = "Justice Society: World War II", MediaType = MediaType.Movie, ReleaseYear = 2021, AdaptedFromArcIDs = new List<string> { "arc-justice-society-world-war-ii" } },
+        new Media { MediaID = "media-batman-the-long-halloween-part-one", Title = "Batman: The Long Halloween - Part One", MediaType = MediaType.Movie, ReleaseYear = 2021, AdaptedFromArcIDs = new List<string> { "arc-batman-the-long-halloween" } },
+        new Media { MediaID = "media-batman-the-long-halloween-part-two", Title = "Batman: The Long Halloween - Part Two", MediaType = MediaType.Movie, ReleaseYear = 2021, AdaptedFromArcIDs = new List<string> { "arc-batman-the-long-halloween" } },
+        new Media { MediaID = "media-green-lantern-beware-my-power", Title = "Green Lantern: Beware My Power", MediaType = MediaType.Movie, ReleaseYear = 2022, AdaptedFromArcIDs = new List<string> { "arc-green-lantern-beware-my-power" } },
+        new Media { MediaID = "media-legion-of-super-heroes", Title = "Legion of Super-Heroes", MediaType = MediaType.Movie, ReleaseYear = 2023, AdaptedFromArcIDs = new List<string> { "arc-legion-of-super-heroes" } },
+        new Media { MediaID = "media-justice-league-warworld", Title = "Justice League: Warworld", MediaType = MediaType.Movie, ReleaseYear = 2023, AdaptedFromArcIDs = new List<string> { "arc-justice-league-warworld" } },
+        new Media { MediaID = "media-justice-league-crisis-on-infinite-earths-part-one", Title = "Justice League: Crisis on Infinite Earths - Part One", MediaType = MediaType.Movie, ReleaseYear = 2024, AdaptedFromArcIDs = new List<string> { "arc-justice-league-crisis-on-infinite-earths" } },
+        new Media { MediaID = "media-justice-league-crisis-on-infinite-earths-part-two", Title = "Justice League: Crisis on Infinite Earths - Part Two", MediaType = MediaType.Movie, ReleaseYear = 2024, AdaptedFromArcIDs = new List<string> { "arc-justice-league-crisis-on-infinite-earths" } },
+        new Media { MediaID = "media-justice-league-crisis-on-infinite-earths-part-three", Title = "Justice League: Crisis on Infinite Earths - Part Three", MediaType = MediaType.Movie, ReleaseYear = 2024, AdaptedFromArcIDs = new List<string> { "arc-justice-league-crisis-on-infinite-earths" } },
 
         // Standalone DC Animated Movies
-        new AdaptedMedia { AdaptedMediaID = "media-superman-doomsday", Title = "Superman: Doomsday", MediaType = MediaType.Movie, ReleaseYear = 2007, AdaptedFromArcIDs = new List<string> { "arc-the-death-of-superman" } },
-        new AdaptedMedia { AdaptedMediaID = "media-justice-league-the-new-frontier", Title = "Justice League: The New Frontier", MediaType = MediaType.Movie, ReleaseYear = 2008, AdaptedFromArcIDs = new List<string> { "arc-dc-the-new-frontier" } },
-        new AdaptedMedia { AdaptedMediaID = "media-wonder-woman", Title = "Wonder Woman", MediaType = MediaType.Movie, ReleaseYear = 2009, AdaptedFromArcIDs = new List<string> { "arc-wonder-woman-gods-and-mortals" } },
-        new AdaptedMedia { AdaptedMediaID = "media-green-lantern-first-flight", Title = "Green Lantern: First Flight", MediaType = MediaType.Movie, ReleaseYear = 2009, AdaptedFromArcIDs = new List<string> { "arc-green-lantern" } },
-        new AdaptedMedia { AdaptedMediaID = "media-batman-under-the-red-hood", Title = "Batman: Under the Red Hood", MediaType = MediaType.Movie, ReleaseYear = 2010, AdaptedFromArcIDs = new List<string> { "arc-batman-a-death-in-the-family", "arc-batman-under-the-hood" } },
-        new AdaptedMedia { AdaptedMediaID = "media-all-star-superman", Title = "All-Star Superman", MediaType = MediaType.Movie, ReleaseYear = 2011, AdaptedFromArcIDs = new List<string> { "arc-all-star-superman" } },
-        new AdaptedMedia { AdaptedMediaID = "media-green-lantern-emerald-knights", Title = "Green Lantern: Emerald Knights", MediaType = MediaType.Movie, ReleaseYear = 2011, AdaptedFromArcIDs = new List<string> { "arc-new-blood", "arc-what-price-honor", "arc-mogo-doesn-t-socialize", "arc-tygers" } },
-        new AdaptedMedia { AdaptedMediaID = "media-superman-vs-the-elite", Title = "Superman vs. The Elite", MediaType = MediaType.Movie, ReleaseYear = 2012, AdaptedFromArcIDs = new List<string> { "arc-what-s-so-funny-about-truth-justice-and-the-american-way" } },
-        new AdaptedMedia { AdaptedMediaID = "media-superman-unbound", Title = "Superman: Unbound", MediaType = MediaType.Movie, ReleaseYear = 2013, AdaptedFromArcIDs = new List<string> { "arc-superman-brainiac" } },
-        new AdaptedMedia { AdaptedMediaID = "media-justice-league-gods-and-monsters", Title = "Justice League: Gods and Monsters", MediaType = MediaType.Movie, ReleaseYear = 2015, AdaptedFromArcIDs = new List<string> { "arc-justice-league-gods-and-monsters" } },
-        new AdaptedMedia { AdaptedMediaID = "media-batman-the-killing-joke", Title = "Batman: The Killing Joke", MediaType = MediaType.Movie, ReleaseYear = 2016, AdaptedFromArcIDs = new List<string> { "arc-batman-the-killing-joke" } },
-        new AdaptedMedia { AdaptedMediaID = "media-batman-gotham-by-gaslight", Title = "Batman: Gotham by Gaslight", MediaType = MediaType.Movie, ReleaseYear = 2018, AdaptedFromArcIDs = new List<string> { "arc-gotham-by-gaslight" } },
-        new AdaptedMedia { AdaptedMediaID = "media-superman-red-son", Title = "Superman: Red Son", MediaType = MediaType.Movie, ReleaseYear = 2020, AdaptedFromArcIDs = new List<string> { "arc-superman-red-son" } },
-        new AdaptedMedia { AdaptedMediaID = "media-deathstroke-knights-and-dragons", Title = "Deathstroke: Knights & Dragons", MediaType = MediaType.Movie, ReleaseYear = 2020, AdaptedFromArcIDs = new List<string> { "arc-deathstroke-knights-and-dragons" } },
-        new AdaptedMedia { AdaptedMediaID = "media-batman-soul-of-the-dragon", Title = "Batman: Soul of the Dragon", MediaType = MediaType.Movie, ReleaseYear = 2021, AdaptedFromArcIDs = new List<string> { "arc-batman-soul-of-the-dragon" } },
-        new AdaptedMedia { AdaptedMediaID = "media-injustice", Title = "Injustice", MediaType = MediaType.Movie, ReleaseYear = 2021, AdaptedFromArcIDs = new List<string> { "arc-injustice-gods-among-us" } },
-        new AdaptedMedia { AdaptedMediaID = "media-catwoman-hunted", Title = "Catwoman: Hunted", MediaType = MediaType.Movie, ReleaseYear = 2022, AdaptedFromArcIDs = new List<string> { "arc-catwoman-hunted" } },
-        new AdaptedMedia { AdaptedMediaID = "media-batman-and-superman-battle-of-the-super-sons", Title = "Batman and Superman: Battle of the Super Sons", MediaType = MediaType.Movie, ReleaseYear = 2022, AdaptedFromArcIDs = new List<string> { "arc-batman-and-superman-battle-of-the-super-sons" } },
-        new AdaptedMedia { AdaptedMediaID = "media-batman-the-doom-that-came-to-gotham", Title = "Batman: The Doom That Came to Gotham", MediaType = MediaType.Movie, ReleaseYear = 2023, AdaptedFromArcIDs = new List<string> { "arc-batman-the-doom-that-came-to-gotham" } },
-        new AdaptedMedia { AdaptedMediaID = "media-watchmen-chapter-i", Title = "Watchmen Chapter I", MediaType = MediaType.Movie, ReleaseYear = 2024, AdaptedFromArcIDs = new List<string> { "arc-watchmen" } },
-        new AdaptedMedia { AdaptedMediaID = "media-watchmen-chapter-ii", Title = "Watchmen Chapter II", MediaType = MediaType.Movie, ReleaseYear = 2024, AdaptedFromArcIDs = new List<string> { "arc-watchmen" } },
-        new AdaptedMedia { AdaptedMediaID = "media-batman-knightfall-part-i", Title = "Batman: Knightfall Part I", MediaType = MediaType.Movie, ReleaseYear = 2026, AdaptedFromArcIDs = new List<string> { "arc-batman-knightfall" } },
-        new AdaptedMedia { AdaptedMediaID = "media-superman-batman-public-enemies", Title = "Superman/Batman: Public Enemies", MediaType = MediaType.Movie, ReleaseYear = 2009, AdaptedFromArcIDs = new List<string> { "arc-superman-batman-public-enemies" } },
-        new AdaptedMedia { AdaptedMediaID = "media-superman-batman-apocalypse", Title = "Superman/Batman: Apocalypse", MediaType = MediaType.Movie, ReleaseYear = 2010, AdaptedFromArcIDs = new List<string> { "arc-superman-batman-the-supergirl-from-krypton" } },
-        new AdaptedMedia { AdaptedMediaID = "media-batman-gotham-knight", Title = "Batman: Gotham Knight", MediaType = MediaType.Movie, ReleaseYear = 2008 },
-        new AdaptedMedia { AdaptedMediaID = "media-batman-year-one", Title = "Batman: Year One", MediaType = MediaType.Movie, ReleaseYear = 2011, AdaptedFromArcIDs = new List<string> { "arc-batman-year-one" } },
-        new AdaptedMedia { AdaptedMediaID = "media-batman-the-dark-knight-returns-part-1", Title = "Batman: The Dark Knight Returns - Part 1", MediaType = MediaType.Movie, ReleaseYear = 2012, AdaptedFromArcIDs = new List<string> { "arc-batman-the-dark-knight-returns" } },
-        new AdaptedMedia { AdaptedMediaID = "media-batman-the-dark-knight-returns-part-2", Title = "Batman: The Dark Knight Returns - Part 2", MediaType = MediaType.Movie, ReleaseYear = 2013, AdaptedFromArcIDs = new List<string> { "arc-batman-the-dark-knight-returns" } },
+        new Media { MediaID = "media-superman-doomsday", Title = "Superman: Doomsday", MediaType = MediaType.Movie, ReleaseYear = 2007, AdaptedFromArcIDs = new List<string> { "arc-the-death-of-superman" } },
+        new Media { MediaID = "media-justice-league-the-new-frontier", Title = "Justice League: The New Frontier", MediaType = MediaType.Movie, ReleaseYear = 2008, AdaptedFromArcIDs = new List<string> { "arc-dc-the-new-frontier" } },
+        new Media { MediaID = "media-wonder-woman", Title = "Wonder Woman", MediaType = MediaType.Movie, ReleaseYear = 2009, AdaptedFromArcIDs = new List<string> { "arc-wonder-woman-gods-and-mortals" } },
+        new Media { MediaID = "media-green-lantern-first-flight", Title = "Green Lantern: First Flight", MediaType = MediaType.Movie, ReleaseYear = 2009, AdaptedFromArcIDs = new List<string> { "arc-green-lantern" } },
+        new Media { MediaID = "media-batman-under-the-red-hood", Title = "Batman: Under the Red Hood", MediaType = MediaType.Movie, ReleaseYear = 2010, AdaptedFromArcIDs = new List<string> { "arc-batman-a-death-in-the-family", "arc-batman-under-the-hood" } },
+        new Media { MediaID = "media-all-star-superman", Title = "All-Star Superman", MediaType = MediaType.Movie, ReleaseYear = 2011, AdaptedFromArcIDs = new List<string> { "arc-all-star-superman" } },
+        new Media { MediaID = "media-green-lantern-emerald-knights", Title = "Green Lantern: Emerald Knights", MediaType = MediaType.Movie, ReleaseYear = 2011, AdaptedFromArcIDs = new List<string> { "arc-new-blood", "arc-what-price-honor", "arc-mogo-doesn-t-socialize", "arc-tygers" } },
+        new Media { MediaID = "media-superman-vs-the-elite", Title = "Superman vs. The Elite", MediaType = MediaType.Movie, ReleaseYear = 2012, AdaptedFromArcIDs = new List<string> { "arc-what-s-so-funny-about-truth-justice-and-the-american-way" } },
+        new Media { MediaID = "media-superman-unbound", Title = "Superman: Unbound", MediaType = MediaType.Movie, ReleaseYear = 2013, AdaptedFromArcIDs = new List<string> { "arc-superman-brainiac" } },
+        new Media { MediaID = "media-justice-league-gods-and-monsters", Title = "Justice League: Gods and Monsters", MediaType = MediaType.Movie, ReleaseYear = 2015, AdaptedFromArcIDs = new List<string> { "arc-justice-league-gods-and-monsters" } },
+        new Media { MediaID = "media-batman-the-killing-joke", Title = "Batman: The Killing Joke", MediaType = MediaType.Movie, ReleaseYear = 2016, AdaptedFromArcIDs = new List<string> { "arc-batman-the-killing-joke" } },
+        new Media { MediaID = "media-batman-gotham-by-gaslight", Title = "Batman: Gotham by Gaslight", MediaType = MediaType.Movie, ReleaseYear = 2018, AdaptedFromArcIDs = new List<string> { "arc-gotham-by-gaslight" } },
+        new Media { MediaID = "media-superman-red-son", Title = "Superman: Red Son", MediaType = MediaType.Movie, ReleaseYear = 2020, AdaptedFromArcIDs = new List<string> { "arc-superman-red-son" } },
+        new Media { MediaID = "media-deathstroke-knights-and-dragons", Title = "Deathstroke: Knights & Dragons", MediaType = MediaType.Movie, ReleaseYear = 2020, AdaptedFromArcIDs = new List<string> { "arc-deathstroke-knights-and-dragons" } },
+        new Media { MediaID = "media-batman-soul-of-the-dragon", Title = "Batman: Soul of the Dragon", MediaType = MediaType.Movie, ReleaseYear = 2021, AdaptedFromArcIDs = new List<string> { "arc-batman-soul-of-the-dragon" } },
+        new Media { MediaID = "media-injustice", Title = "Injustice", MediaType = MediaType.Movie, ReleaseYear = 2021, AdaptedFromArcIDs = new List<string> { "arc-injustice-gods-among-us" } },
+        new Media { MediaID = "media-catwoman-hunted", Title = "Catwoman: Hunted", MediaType = MediaType.Movie, ReleaseYear = 2022, AdaptedFromArcIDs = new List<string> { "arc-catwoman-hunted" } },
+        new Media { MediaID = "media-batman-and-superman-battle-of-the-super-sons", Title = "Batman and Superman: Battle of the Super Sons", MediaType = MediaType.Movie, ReleaseYear = 2022, AdaptedFromArcIDs = new List<string> { "arc-batman-and-superman-battle-of-the-super-sons" } },
+        new Media { MediaID = "media-batman-the-doom-that-came-to-gotham", Title = "Batman: The Doom That Came to Gotham", MediaType = MediaType.Movie, ReleaseYear = 2023, AdaptedFromArcIDs = new List<string> { "arc-batman-the-doom-that-came-to-gotham" } },
+        new Media { MediaID = "media-watchmen-chapter-i", Title = "Watchmen Chapter I", MediaType = MediaType.Movie, ReleaseYear = 2024, AdaptedFromArcIDs = new List<string> { "arc-watchmen" } },
+        new Media { MediaID = "media-watchmen-chapter-ii", Title = "Watchmen Chapter II", MediaType = MediaType.Movie, ReleaseYear = 2024, AdaptedFromArcIDs = new List<string> { "arc-watchmen" } },
+        new Media { MediaID = "media-batman-knightfall-part-i", Title = "Batman: Knightfall Part I", MediaType = MediaType.Movie, ReleaseYear = 2026, AdaptedFromArcIDs = new List<string> { "arc-batman-knightfall" } },
+        new Media { MediaID = "media-superman-batman-public-enemies", Title = "Superman/Batman: Public Enemies", MediaType = MediaType.Movie, ReleaseYear = 2009, AdaptedFromArcIDs = new List<string> { "arc-superman-batman-public-enemies" } },
+        new Media { MediaID = "media-superman-batman-apocalypse", Title = "Superman/Batman: Apocalypse", MediaType = MediaType.Movie, ReleaseYear = 2010, AdaptedFromArcIDs = new List<string> { "arc-superman-batman-the-supergirl-from-krypton" } },
+        new Media { MediaID = "media-batman-gotham-knight", Title = "Batman: Gotham Knight", MediaType = MediaType.Movie, ReleaseYear = 2008 },
+        new Media { MediaID = "media-batman-year-one", Title = "Batman: Year One", MediaType = MediaType.Movie, ReleaseYear = 2011, AdaptedFromArcIDs = new List<string> { "arc-batman-year-one" } },
+        new Media { MediaID = "media-batman-the-dark-knight-returns-part-1", Title = "Batman: The Dark Knight Returns - Part 1", MediaType = MediaType.Movie, ReleaseYear = 2012, AdaptedFromArcIDs = new List<string> { "arc-batman-the-dark-knight-returns" } },
+        new Media { MediaID = "media-batman-the-dark-knight-returns-part-2", Title = "Batman: The Dark Knight Returns - Part 2", MediaType = MediaType.Movie, ReleaseYear = 2013, AdaptedFromArcIDs = new List<string> { "arc-batman-the-dark-knight-returns" } },
 
         // Arkhamverse
-        new AdaptedMedia { AdaptedMediaID = "media-batman-assault-on-arkham", Title = "Batman: Assault on Arkham", MediaType = MediaType.Movie, ReleaseYear = 2014, AdaptedFromArcIDs = new List<string> { "arc-batman-assault-on-arkham" } },
+        new Media { MediaID = "media-batman-assault-on-arkham", Title = "Batman: Assault on Arkham", MediaType = MediaType.Movie, ReleaseYear = 2014, AdaptedFromArcIDs = new List<string> { "arc-batman-assault-on-arkham" } },
         
         // Crisis on Two Earths / Doom
-        new AdaptedMedia { AdaptedMediaID = "media-justice-league-crisis-on-two-earths", Title = "Justice League: Crisis on Two Earths", MediaType = MediaType.Movie, ReleaseYear = 2010, AdaptedFromArcIDs = new List<string> { "arc-justice-league-crisis-on-two-earths" } },
-        new AdaptedMedia { AdaptedMediaID = "media-justice-league-doom", Title = "Justice League: Doom", MediaType = MediaType.Movie, ReleaseYear = 2012, AdaptedFromArcIDs = new List<string> { "arc-justice-league-doom" } },
+        new Media { MediaID = "media-justice-league-crisis-on-two-earths", Title = "Justice League: Crisis on Two Earths", MediaType = MediaType.Movie, ReleaseYear = 2010, AdaptedFromArcIDs = new List<string> { "arc-justice-league-crisis-on-two-earths" } },
+        new Media { MediaID = "media-justice-league-doom", Title = "Justice League: Doom", MediaType = MediaType.Movie, ReleaseYear = 2012, AdaptedFromArcIDs = new List<string> { "arc-justice-league-doom" } },
 
         // DC Animated Universe
-        new AdaptedMedia { AdaptedMediaID = "media-batman-mask-of-the-phantasm", Title = "Batman: Mask of the Phantasm", MediaType = MediaType.Movie, ReleaseYear = 1993, AdaptedFromArcIDs = new List<string> { "arc-batman-year-one, arc-batman-year-two" } },
-        new AdaptedMedia { AdaptedMediaID = "media-batman-mr-freeze-subzero", Title = "Batman & Mr. Freeze: SubZero", MediaType = MediaType.Movie, ReleaseYear = 1998, AdaptedFromArcIDs = new List<string> { "arc-batman-mr-freeze-subzero" } },
-        new AdaptedMedia { AdaptedMediaID = "media-batman-beyond-return-of-the-joker", Title = "Batman Beyond: Return of the Joker", MediaType = MediaType.Movie, ReleaseYear = 2000, AdaptedFromArcIDs = new List<string> { "arc-batman-beyond-return-of-the-joker" } },
-        new AdaptedMedia { AdaptedMediaID = "media-batman-mystery-of-the-batwoman", Title = "Batman: Mystery of the Batwoman", MediaType = MediaType.Movie, ReleaseYear = 2003, AdaptedFromArcIDs = new List<string> { "arc-batman-mystery-of-the-batwoman" } },
-        new AdaptedMedia { AdaptedMediaID = "media-batman-and-harley-quinn", Title = "Batman and Harley Quinn", MediaType = MediaType.Movie, ReleaseYear = 2017, AdaptedFromArcIDs = new List<string> { "arc-batman-and-harley-quinn" } },
-        new AdaptedMedia { AdaptedMediaID = "media-justice-league-vs-the-fatal-five", Title = "Justice League vs. the Fatal Five", MediaType = MediaType.Movie, ReleaseYear = 2019, AdaptedFromArcIDs = new List<string> { "arc-justice-league-vs-the-fatal-five" } },
+        new Media { MediaID = "media-batman-mask-of-the-phantasm", Title = "Batman: Mask of the Phantasm", MediaType = MediaType.Movie, ReleaseYear = 1993, AdaptedFromArcIDs = new List<string> { "arc-batman-year-one, arc-batman-year-two" } },
+        new Media { MediaID = "media-batman-mr-freeze-subzero", Title = "Batman & Mr. Freeze: SubZero", MediaType = MediaType.Movie, ReleaseYear = 1998, AdaptedFromArcIDs = new List<string> { "arc-batman-mr-freeze-subzero" } },
+        new Media { MediaID = "media-batman-beyond-return-of-the-joker", Title = "Batman Beyond: Return of the Joker", MediaType = MediaType.Movie, ReleaseYear = 2000, AdaptedFromArcIDs = new List<string> { "arc-batman-beyond-return-of-the-joker" } },
+        new Media { MediaID = "media-batman-mystery-of-the-batwoman", Title = "Batman: Mystery of the Batwoman", MediaType = MediaType.Movie, ReleaseYear = 2003, AdaptedFromArcIDs = new List<string> { "arc-batman-mystery-of-the-batwoman" } },
+        new Media { MediaID = "media-batman-and-harley-quinn", Title = "Batman and Harley Quinn", MediaType = MediaType.Movie, ReleaseYear = 2017, AdaptedFromArcIDs = new List<string> { "arc-batman-and-harley-quinn" } },
+        new Media { MediaID = "media-justice-league-vs-the-fatal-five", Title = "Justice League vs. the Fatal Five", MediaType = MediaType.Movie, ReleaseYear = 2019, AdaptedFromArcIDs = new List<string> { "arc-justice-league-vs-the-fatal-five" } },
 
         // Marvel Animated Universe
-        new AdaptedMedia { AdaptedMediaID = "media-ultimate-avengers-the-movie", Title = "Ultimate Avengers: The Movie", MediaType = MediaType.Movie, ReleaseYear = 2006, AdaptedFromArcIDs = new List<string> { "arc-the-ultimates" } },
-        new AdaptedMedia { AdaptedMediaID = "media-ultimate-avengers-2-rise-of-the-panther", Title = "Ultimate Avengers 2: Rise of the Panther", MediaType = MediaType.Movie, ReleaseYear = 2006, AdaptedFromArcIDs = new List<string> { "arc-the-ultimates" } },
-        new AdaptedMedia { AdaptedMediaID = "media-the-invincible-iron-man", Title = "The Invincible Iron Man", MediaType = MediaType.Movie, ReleaseYear = 2007, AdaptedFromArcIDs = new List<string> { "arc-the-invincible-iron-man" } },
-        new AdaptedMedia { AdaptedMediaID = "media-doctor-strange-the-sorcerer-supreme", Title = "Doctor Strange: The Sorcerer Supreme", MediaType = MediaType.Movie, ReleaseYear = 2007, AdaptedFromArcIDs = new List<string> { "arc-doctor-strange-the-sorcerer-supreme" } },
-        new AdaptedMedia { AdaptedMediaID = "media-next-avengers-heroes-of-tomorrow", Title = "Next Avengers: Heroes of Tomorrow", MediaType = MediaType.Movie, ReleaseYear = 2008, AdaptedFromArcIDs = new List<string> { "arc-next-avengers-heroes-of-tomorrow" } },
-        new AdaptedMedia { AdaptedMediaID = "media-hulk-vs", Title = "Hulk vs.", MediaType = MediaType.Movie, ReleaseYear = 2009, AdaptedFromArcIDs = new List<string> { "arc-hulk-vs-thor", "arc-hulk-vs-wolverine" } },
-        new AdaptedMedia { AdaptedMediaID = "media-planet-hulk", Title = "Planet Hulk", MediaType = MediaType.Movie, ReleaseYear = 2010, AdaptedFromArcIDs = new List<string> { "arc-planet-hulk" } },
-        new AdaptedMedia { AdaptedMediaID = "media-thor-tales-of-asgard", Title = "Thor: Tales of Asgard", MediaType = MediaType.Movie, ReleaseYear = 2011, AdaptedFromArcIDs = new List<string> { "arc-thor-tales-of-asgard" } },
+        new Media { MediaID = "media-ultimate-avengers-the-movie", Title = "Ultimate Avengers: The Movie", MediaType = MediaType.Movie, ReleaseYear = 2006, AdaptedFromArcIDs = new List<string> { "arc-the-ultimates" } },
+        new Media { MediaID = "media-ultimate-avengers-2-rise-of-the-panther", Title = "Ultimate Avengers 2: Rise of the Panther", MediaType = MediaType.Movie, ReleaseYear = 2006, AdaptedFromArcIDs = new List<string> { "arc-the-ultimates" } },
+        new Media { MediaID = "media-the-invincible-iron-man", Title = "The Invincible Iron Man", MediaType = MediaType.Movie, ReleaseYear = 2007, AdaptedFromArcIDs = new List<string> { "arc-the-invincible-iron-man" } },
+        new Media { MediaID = "media-doctor-strange-the-sorcerer-supreme", Title = "Doctor Strange: The Sorcerer Supreme", MediaType = MediaType.Movie, ReleaseYear = 2007, AdaptedFromArcIDs = new List<string> { "arc-doctor-strange-the-sorcerer-supreme" } },
+        new Media { MediaID = "media-next-avengers-heroes-of-tomorrow", Title = "Next Avengers: Heroes of Tomorrow", MediaType = MediaType.Movie, ReleaseYear = 2008, AdaptedFromArcIDs = new List<string> { "arc-next-avengers-heroes-of-tomorrow" } },
+        new Media { MediaID = "media-hulk-vs", Title = "Hulk vs.", MediaType = MediaType.Movie, ReleaseYear = 2009, AdaptedFromArcIDs = new List<string> { "arc-hulk-vs-thor", "arc-hulk-vs-wolverine" } },
+        new Media { MediaID = "media-planet-hulk", Title = "Planet Hulk", MediaType = MediaType.Movie, ReleaseYear = 2010, AdaptedFromArcIDs = new List<string> { "arc-planet-hulk" } },
+        new Media { MediaID = "media-thor-tales-of-asgard", Title = "Thor: Tales of Asgard", MediaType = MediaType.Movie, ReleaseYear = 2011, AdaptedFromArcIDs = new List<string> { "arc-thor-tales-of-asgard" } },
 
         // X-Men Animated Series
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-1-1", Title = "X-Men Animated Series: Season 1, Episode 1: Night of the Sentinels Part 1", MediaType = MediaType.TVShow, ReleaseYear = 1992, ReleaseMonth = 10, ReleaseDay = 31, AdaptedFromArcIDs = new List<string> { "arc-x-men-days-of-future-past", "arc-x-men-ladies-night" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-1-2", Title = "X-Men Animated Series: Season 1, Episode 2: Night of the Sentinals Part 2", MediaType = MediaType.TVShow, ReleaseYear = 1992, ReleaseMonth = 11, ReleaseDay = 7, AdaptedFromArcIDs = new List<string> { "arc-x-men-days-of-future-past", "arc-x-men-ladies-night"  } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-1-3", Title = "X-Men Animated Series: Season 1, Episode 3: Enter Magneto", MediaType = MediaType.TVShow, ReleaseYear = 1992, ReleaseMonth = 11, ReleaseDay = 27, AdaptedFromArcIDs = new List<string> { "arc-x-men-enter-magneto" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-1-4", Title = "X-Men Animated Series: Season 1, Episode 4: Deadly Reunions", MediaType = MediaType.TVShow, ReleaseYear = 1993, ReleaseMonth = 1, ReleaseDay = 23, AdaptedFromArcIDs = new List<string> { "arc-x-men-deadly-reunions" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-1-5", Title = "X-Men Animated Series: Season 1, Episode 5: Captive Hearts", MediaType = MediaType.TVShow, ReleaseYear = 1993, ReleaseMonth = 1, ReleaseDay = 30, AdaptedFromArcIDs = new List<string> { "arc-x-men-catacombs", "arc-x-men-dancin-in-the-dark" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-1-6", Title = "X-Men Animated Series: Season 1, Episode 6: Cold Vengeance", MediaType = MediaType.TVShow, ReleaseYear = 1993, ReleaseMonth = 2, ReleaseDay = 6, AdaptedFromArcIDs = new List<string> { "arc-x-men-cold-vengeance" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-1-7", Title = "X-Men Animated Series: Season 1, Episode 7: Slave Island", MediaType = MediaType.TVShow, ReleaseYear = 1993, ReleaseMonth = 2, ReleaseDay = 13, AdaptedFromArcIDs = new List<string> { "arc-x-men-welcome-to-genosha", "arc-x-men-busting-loose", "arc-x-men-who's-human" , "arc-x-men-gonna-be-a-revolution" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-1-8", Title = "X-Men Animated Series: Season 1, Episode 8: The Unstoppable Juggernaut", MediaType = MediaType.TVShow, ReleaseYear = 1993, ReleaseMonth = 3, ReleaseDay = 6, AdaptedFromArcIDs = new List<string> { "arc-x-men-the-origin-of-professor-x", "arc-x-men-the-juggernauts-back-in-town", "arc-x-men-deadly-genesis" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-1-9", Title = "X-Men Animated Series: Season 1, Episode 9: The Cure", MediaType = MediaType.TVShow, ReleaseYear = 1993, ReleaseMonth = 2, ReleaseDay = 20, AdaptedFromArcIDs = new List<string> {"arc-x-men-public-enemy" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-1-10", Title = "X-Men Animated Series: Season 1, Episode 10: Come the Apocalypse", MediaType = MediaType.TVShow, ReleaseYear = 1993, ReleaseMonth = 2, ReleaseDay = 27, AdaptedFromArcIDs = new List<string> { "arc-x-men-come-the-apocalypse" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-1-11", Title = "X-Men Animated Series: Season 1, Episode 11: Days of Future Past Part 1", MediaType = MediaType.TVShow, ReleaseYear = 1993, ReleaseMonth = 3, ReleaseDay = 13, AdaptedFromArcIDs = new List<string> { "arc-x-men-days-of-future-past" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-1-12", Title = "X-Men Animated Series: Season 1, Episode 12: Days of Future Past Part 2", MediaType = MediaType.TVShow, ReleaseYear = 1993, ReleaseMonth = 3, ReleaseDay = 20, AdaptedFromArcIDs = new List<string> { "arc-x-men-days-of-future-past" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-1-13", Title = "X-Men Animated Series: Season 1, Episode 13: The Final Decision", MediaType = MediaType.TVShow, ReleaseYear = 1993, ReleaseMonth = 3, ReleaseDay = 27, AdaptedFromArcIDs = new List<string> { "arc-x-men-the-final-decision" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-2-1", Title = "X-Men Animated Series: Season 2, Episode 1: Till Death Do Us Part Part 1", MediaType = MediaType.TVShow, ReleaseYear = 1993, ReleaseMonth = 10, ReleaseDay = 23, AdaptedFromArcIDs = new List<string> { "arc-x-men-till-death-do-us-part-part-1" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-2-2", Title = "X-Men Animated Series: Season 2, Episode 2: Till Death Do Us Part Part 2", MediaType = MediaType.TVShow, ReleaseYear = 1993, ReleaseMonth = 10, ReleaseDay = 30, AdaptedFromArcIDs = new List<string> { "arc-x-men-till-death-do-us-part-part-2" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-2-3", Title = "X-Men Animated Series: Season 2, Episode 3: Whatever It Takes", MediaType = MediaType.TVShow, ReleaseYear = 1993, ReleaseMonth = 11, ReleaseDay = 6, AdaptedFromArcIDs = new List<string> { "arc-x-men-whatever-it-takes", "arc-x-men-lifedeath-ii-from-the-heart-of-darkness" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-2-4", Title = "X-Men Animated Series: Season 2, Episode 4: Red Dawn", MediaType = MediaType.TVShow, ReleaseYear = 1993, ReleaseMonth = 11, ReleaseDay = 13, AdaptedFromArcIDs = new List<string> { "arc-x-men-red-dawn" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-2-5", Title = "X-Men Animated Series: Season 2, Episode 5: Repo Man", MediaType = MediaType.TVShow, ReleaseYear = 1993, ReleaseMonth = 11, ReleaseDay = 20, AdaptedFromArcIDs = new List<string> { "arc-x-men-shoot-out-at-the-stampede", "arc-x-men-weapon-x" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-2-6", Title = "X-Men Animated Series: Season 2, Episode 6: X-Ternally Yours", MediaType = MediaType.TVShow, ReleaseYear = 1993, ReleaseMonth = 11, ReleaseDay = 27, AdaptedFromArcIDs = new List<string> { "arc-x-men-x-ternally-yours" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-2-7", Title = "X-Men Animated Series: Season 2, Episode 7: Time Fugitives Part 1", MediaType = MediaType.TVShow, ReleaseYear = 1993, ReleaseMonth = 12, ReleaseDay = 4, AdaptedFromArcIDs = new List<string> { "arc-x-men-time-fugitives-part-1" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-2-8", Title = "X-Men Animated Series: Season 2, Episode 8: Time Fugitives Part 2", MediaType = MediaType.TVShow, ReleaseYear = 1993, ReleaseMonth = 12, ReleaseDay = 11, AdaptedFromArcIDs = new List<string> { "arc-x-men-time-fugitives-part-2" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-2-9", Title = "X-Men Animated Series: Season 2, Episode 9: A Rogue's Tale", MediaType = MediaType.TVShow, ReleaseYear = 1993, ReleaseMonth = 12, ReleaseDay = 18, AdaptedFromArcIDs = new List<string> { "arc-x-men-rogue-redux", "arc-x-men-by-friends-betrayed" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-2-10", Title = "X-Men Animated Series: Season 2, Episode 10: Beauty & the Beast", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 1, ReleaseDay = 8, AdaptedFromArcIDs = new List<string> { "arc-x-men-beauty-and-the-beast" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-2-11", Title = "X-Men Animated Series: Season 2, Episode 11: Mojovision", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 1, ReleaseDay = 15, AdaptedFromArcIDs = new List<string> { "arc-x-men-mojovision" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-2-12", Title = "X-Men Animated Series: Season 2, Episode 12: Reunion", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 1, ReleaseDay = 22, AdaptedFromArcIDs = new List<string> { "arc-x-men-reunion" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-2-13", Title = "X-Men Animated Series: Season 2, Episode 13: Reunion Part 2", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 1, ReleaseDay = 29, AdaptedFromArcIDs = new List<string> { "arc-x-men-reunion" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-3-1", Title = "X-Men Animated Series: Season 3, Episode 1: Out of the Past", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 7, ReleaseDay = 29, AdaptedFromArcIDs = new List<string> { "arc-x-men-out-of the past" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-3-2", Title = "X-Men Animated Series: Season 3, Episode 2: Len Wein", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 8, ReleaseDay = 5, AdaptedFromArcIDs = new List<string> { "arc-x-men-len-wein" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-3-3", Title = "X-Men Animated Series: Season 3, Episode 3: The Phoenix Saga, Part I: Sacrifice", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 8, ReleaseDay = 12, AdaptedFromArcIDs = new List<string> { "arc-x-men-my-brother-my-enemy", "arc-x-men-deathstar-rising", "arc-x-men-greater-love-hath-no-x-man", "arc-x-men-phoenix-unleashed" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-3-4", Title = "X-Men Animated Series: Season 3, Episode 4: The Phoenix Saga, Part II: The Dark Shroud", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 8, ReleaseDay = 19, AdaptedFromArcIDs = new List<string> { "arc-x-men-like-a-phoenix-from-the-ashes", "arc-x-men-dark-shroud-of-the-past" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-3-5", Title = "X-Men Animated Series: Season 3, Episode 5: The Phoenix Saga, Part III: The Cry of the Banshee", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 8, ReleaseDay = 26, AdaptedFromArcIDs = new List<string> { "arc-x-men-who-will-stop-the-juggernaut", "arc-x-men-the-cry-of-the-banshee", "arc-x-men-the-starjammers", "arc-x-men-armageddon-now" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-3-6", Title = "X-Men Animated Series: Season 3, Episode 6: The Phoenix Saga, Part IV: The Starjammers", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 9, ReleaseDay = 5, AdaptedFromArcIDs = new List<string> { "arc-x-men-where-no-x-man-has-gone-before" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-3-7", Title = "X-Men Animated Series: Season 3, Episode 7: The Phoenix Saga, Part V: Child of Light", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 9, ReleaseDay = 12, AdaptedFromArcIDs = new List<string> { "arc-x-men-armageddon-now" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-3-8", Title = "X-Men Animated Series: Season 3, Episode 8: No Mutant Is an Island", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 9, ReleaseDay = 19, AdaptedFromArcIDs = new List<string> { "arc-x-men-no-mutant-is-an-island" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-3-9", Title = "X-Men Animated Series: Season 3, Episode 9: Obsession", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 9, ReleaseDay = 24, AdaptedFromArcIDs = new List<string> { "arc-x-men-obsession" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-3-10", Title = "X-Men Animated Series: Season 3, Episode 10: Longshot", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 9, ReleaseDay = 24, AdaptedFromArcIDs = new List<string> { "arc-x-men-longshot" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-3-11", Title = "X-Men Animated Series: Season 3, Episode 11: Cold Comfort", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 9, ReleaseDay = 24, AdaptedFromArcIDs = new List<string> { "arc-x-men-cold-comfort" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-3-12", Title = "X-Men Animated Series: Season 3, Episode 12: Savage Land, Strange Heart Part 1", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 9, ReleaseDay = 24, AdaptedFromArcIDs = new List<string> { "arc-x-men-savage-land-strange-heart" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-3-13", Title = "X-Men Animated Series: Season 3, Episode 13: Savage Land, Strange Heart Part 2", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 9, ReleaseDay = 24, AdaptedFromArcIDs = new List<string> { "arc-x-men-savage-land-strange-heart" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-3-14", Title = "X-Men Animated Series: Season 3, Episode 14: The Dark Phoenix, Part I: Dazzled", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 11, ReleaseDay = 12, AdaptedFromArcIDs = new List<string> { "arc-x-men-dark-phoenix-saga" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-3-15", Title = "X-Men Animated Series: Season 3, Episode 15: The Dark Phoenix, Part II: The Inner Circle", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 11, ReleaseDay = 19, AdaptedFromArcIDs = new List<string> { "arc-x-men-dark-phoenix-saga" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-3-16", Title = "X-Men Animated Series: Season 3, Episode 16: The Dark Phoenix, Part III: The Dark Phoenix", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 11, ReleaseDay = 26, AdaptedFromArcIDs = new List<string> { "arc-x-men-dark-phoenix-saga" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-3-17", Title = "X-Men Animated Series: Season 3, Episode 17: The Dark Phoenix, Part IV: The Fate of the Phoenix", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 12, ReleaseDay = 3, AdaptedFromArcIDs = new List<string> { "arc-x-men-dark-phoenix-saga" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-3-18", Title = "X-Men Animated Series: Season 3, Episode 18: Orphan's End", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 12, ReleaseDay = 10, AdaptedFromArcIDs = new List<string> { "arc-x-men-reunion", "arc-x-men-first-blood" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-3-19", Title = "X-Men Animated Series: Season 3, Episode 19: Love in Vain", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 12, ReleaseDay = 17, AdaptedFromArcIDs = new List<string> { "arc-x-men-love-in-vain" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-4-1", Title = "X-Men Animated Series: Season 4, Episode 1: The Juggernaut Returns", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 5, ReleaseDay = 6, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-4-1" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-4-2", Title = "X-Men Animated Series: Season 4, Episode 2: A Deal with the Devil", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 9, ReleaseDay = 14, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-4-2" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-4-3", Title = "X-Men Animated Series: Season 4, Episode 3: Sanctuary Part 1", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 9, ReleaseDay = 21, AdaptedFromArcIDs = new List<string> { "arc-x-men-rubicon", "arc-x-men-firestorm", "arc-x-men-fatal-attractions" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-4-4", Title = "X-Men Animated Series: Season 4, Episode 4: Sanctuary Part 2", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 9, ReleaseDay = 28, AdaptedFromArcIDs = new List<string> { "arc-x-men-fallout", "arc-x-men-fatal-attractions" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-4-5", Title = "X-Men Animated Series: Season 4, Episode 5: Xavier Remembers", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 10, ReleaseDay = 5, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-4-5" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-4-6", Title = "X-Men Animated Series: Season 4, Episode 6: Courage", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 10, ReleaseDay = 12, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-4-6" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-4-7", Title = "X-Men Animated Series: Season 4, Episode 7: Secrets, Not Long Buried", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 10, ReleaseDay = 19, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-4-7" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-4-8", Title = "X-Men Animated Series: Season 4, Episode 8: Nightcrawler", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 10, ReleaseDay = 26, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-4-8" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-4-9", Title = "X-Men Animated Series: Season 4, Episode 9: One Man's Worth", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 11, ReleaseDay = 2, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-4-9" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-4-10", Title = "X-Men Animated Series: Season 4, Episode 10: Longshot", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 11, ReleaseDay = 9, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-4-10" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-4-11", Title = "X-Men Animated Series: Season 4, Episode 11: Proteus Part 1", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 11, ReleaseDay = 16, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-4-11" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-4-12", Title = "X-Men Animated Series: Season 4, Episode 12: Proteus Part 2", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 11, ReleaseDay = 23, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-4-12" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-4-13", Title = "X-Men Animated Series: Season 4, Episode 13: Family Ties", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 11, ReleaseDay = 30, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-4-13" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-4-14", Title = "X-Men Animated Series: Season 4, Episode 14: Bloodlines", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 12, ReleaseDay = 7, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-4-14" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-4-15", Title = "X-Men Animated Series: Season 4, Episode 15: Lotus and the Steel", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 12, ReleaseDay = 14, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-4-15" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-4-16", Title = "X-Men Animated Series: Season 4, Episode 16: Weapon X, Lies, and Video Tape", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 12, ReleaseDay = 21, AdaptedFromArcIDs = new List<string> { "arc-x-men-the-shiva-scenario", "arc-x-men-nightmare-quest", "arc-x-men-reunion", "arc-x-men-bastions-of-glory", "arc-x-men-what-goes-around" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-4-17", Title = "X-Men Animated Series: Season 4, Episode 17: Have Yourself a Morlock Little X-Mas", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 12, ReleaseDay = 28, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-4-17" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-4-18", Title = "X-Men Animated Series: Season 4, Episode 18: Beyond Good and Evil, Part 1: The End of Time", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 1, ReleaseDay = 4, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-4-18" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-4-19", Title = "X-Men Animated Series: Season 4, Episode 19: Beyond Good and Evil, Part 2: Promise of Apocalypse", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 1, ReleaseDay = 11, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-4-19" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-4-20", Title = "X-Men Animated Series: Season 4, Episode 20: Beyond Good and Evil, Part 3: The Lazarus Chamber", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 1, ReleaseDay = 18, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-4-20" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-4-21", Title = "X-Men Animated Series: Season 4, Episode 21: Beyond Good and Evil, Part 4: End and Beginning", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 1, ReleaseDay = 25, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-4-21" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-5-1", Title = "X-Men Animated Series: Season 5, Episode 1: The Phalanx Covenant, Part 1", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 9, ReleaseDay = 7, AdaptedFromArcIDs = new List<string> { "arc-x-men-the-phalanx-covenant" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-5-2", Title = "X-Men Animated Series: Season 5, Episode 2: The Phalanx Covenant, Part 2", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 9, ReleaseDay = 14, AdaptedFromArcIDs = new List<string> { "arc-x-men-the-phalanx-covenant" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-5-3", Title = "X-Men Animated Series: Season 5, Episode 3: Storm Front, Part 1", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 11, ReleaseDay = 2, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-5-3" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-5-4", Title = "X-Men Animated Series: Season 5, Episode 4: Storm Front, Part 2", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 11, ReleaseDay = 9, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-5-4" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-5-5", Title = "X-Men Animated Series: Season 5, Episode 5: The Fifth Horseman", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 2, ReleaseDay = 8, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-5-5" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-5-6", Title = "X-Men Animated Series: Season 5, Episode 6: Jubilee's Fairytale Theatre", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 11, ReleaseDay = 16, AdaptedFromArcIDs = new List<string> { "arc-x-men-kitty's-fairy-tale" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-5-7", Title = "X-Men Animated Series: Season 5, Episode 7: Old Soldiers", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 2, ReleaseDay = 22, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-5-7" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-5-8", Title = "X-Men Animated Series: Season 5, Episode 8: Hidden Agendas", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 9, ReleaseDay = 6, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-5-8" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-5-9", Title = "X-Men Animated Series: Season 5, Episode 9: Descent", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 9, ReleaseDay = 13, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-5-9" } },
-        new AdaptedMedia { AdaptedMediaID = "media-x-men-animated-series-5-10", Title = "X-Men Animated Series: Season 5, Episode 10: Graduation Day", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 9, ReleaseDay = 20, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-5-10" } },
+        new Media { MediaID = "media-x-men-animated-series-1-1", Title = "X-Men Animated Series: Season 1, Episode 1: Night of the Sentinels Part 1", MediaType = MediaType.TVShow, ReleaseYear = 1992, ReleaseMonth = 10, ReleaseDay = 31, AdaptedFromArcIDs = new List<string> { "arc-x-men-days-of-future-past", "arc-x-men-ladies-night" } },
+        new Media { MediaID = "media-x-men-animated-series-1-2", Title = "X-Men Animated Series: Season 1, Episode 2: Night of the Sentinals Part 2", MediaType = MediaType.TVShow, ReleaseYear = 1992, ReleaseMonth = 11, ReleaseDay = 7, AdaptedFromArcIDs = new List<string> { "arc-x-men-days-of-future-past", "arc-x-men-ladies-night"  } },
+        new Media { MediaID = "media-x-men-animated-series-1-3", Title = "X-Men Animated Series: Season 1, Episode 3: Enter Magneto", MediaType = MediaType.TVShow, ReleaseYear = 1992, ReleaseMonth = 11, ReleaseDay = 27, AdaptedFromArcIDs = new List<string> { "arc-x-men-enter-magneto" } },
+        new Media { MediaID = "media-x-men-animated-series-1-4", Title = "X-Men Animated Series: Season 1, Episode 4: Deadly Reunions", MediaType = MediaType.TVShow, ReleaseYear = 1993, ReleaseMonth = 1, ReleaseDay = 23, AdaptedFromArcIDs = new List<string> { "arc-x-men-deadly-reunions" } },
+        new Media { MediaID = "media-x-men-animated-series-1-5", Title = "X-Men Animated Series: Season 1, Episode 5: Captive Hearts", MediaType = MediaType.TVShow, ReleaseYear = 1993, ReleaseMonth = 1, ReleaseDay = 30, AdaptedFromArcIDs = new List<string> { "arc-x-men-catacombs", "arc-x-men-dancin-in-the-dark" } },
+        new Media { MediaID = "media-x-men-animated-series-1-6", Title = "X-Men Animated Series: Season 1, Episode 6: Cold Vengeance", MediaType = MediaType.TVShow, ReleaseYear = 1993, ReleaseMonth = 2, ReleaseDay = 6, AdaptedFromArcIDs = new List<string> { "arc-x-men-cold-vengeance" } },
+        new Media { MediaID = "media-x-men-animated-series-1-7", Title = "X-Men Animated Series: Season 1, Episode 7: Slave Island", MediaType = MediaType.TVShow, ReleaseYear = 1993, ReleaseMonth = 2, ReleaseDay = 13, AdaptedFromArcIDs = new List<string> { "arc-x-men-welcome-to-genosha", "arc-x-men-busting-loose", "arc-x-men-who's-human" , "arc-x-men-gonna-be-a-revolution" } },
+        new Media { MediaID = "media-x-men-animated-series-1-8", Title = "X-Men Animated Series: Season 1, Episode 8: The Unstoppable Juggernaut", MediaType = MediaType.TVShow, ReleaseYear = 1993, ReleaseMonth = 3, ReleaseDay = 6, AdaptedFromArcIDs = new List<string> { "arc-x-men-the-origin-of-professor-x", "arc-x-men-the-juggernauts-back-in-town", "arc-x-men-deadly-genesis" } },
+        new Media { MediaID = "media-x-men-animated-series-1-9", Title = "X-Men Animated Series: Season 1, Episode 9: The Cure", MediaType = MediaType.TVShow, ReleaseYear = 1993, ReleaseMonth = 2, ReleaseDay = 20, AdaptedFromArcIDs = new List<string> {"arc-x-men-public-enemy" } },
+        new Media { MediaID = "media-x-men-animated-series-1-10", Title = "X-Men Animated Series: Season 1, Episode 10: Come the Apocalypse", MediaType = MediaType.TVShow, ReleaseYear = 1993, ReleaseMonth = 2, ReleaseDay = 27, AdaptedFromArcIDs = new List<string> { "arc-x-men-come-the-apocalypse" } },
+        new Media { MediaID = "media-x-men-animated-series-1-11", Title = "X-Men Animated Series: Season 1, Episode 11: Days of Future Past Part 1", MediaType = MediaType.TVShow, ReleaseYear = 1993, ReleaseMonth = 3, ReleaseDay = 13, AdaptedFromArcIDs = new List<string> { "arc-x-men-days-of-future-past" } },
+        new Media { MediaID = "media-x-men-animated-series-1-12", Title = "X-Men Animated Series: Season 1, Episode 12: Days of Future Past Part 2", MediaType = MediaType.TVShow, ReleaseYear = 1993, ReleaseMonth = 3, ReleaseDay = 20, AdaptedFromArcIDs = new List<string> { "arc-x-men-days-of-future-past" } },
+        new Media { MediaID = "media-x-men-animated-series-1-13", Title = "X-Men Animated Series: Season 1, Episode 13: The Final Decision", MediaType = MediaType.TVShow, ReleaseYear = 1993, ReleaseMonth = 3, ReleaseDay = 27, AdaptedFromArcIDs = new List<string> { "arc-x-men-the-final-decision" } },
+        new Media { MediaID = "media-x-men-animated-series-2-1", Title = "X-Men Animated Series: Season 2, Episode 1: Till Death Do Us Part Part 1", MediaType = MediaType.TVShow, ReleaseYear = 1993, ReleaseMonth = 10, ReleaseDay = 23, AdaptedFromArcIDs = new List<string> { "arc-x-men-till-death-do-us-part-part-1" } },
+        new Media { MediaID = "media-x-men-animated-series-2-2", Title = "X-Men Animated Series: Season 2, Episode 2: Till Death Do Us Part Part 2", MediaType = MediaType.TVShow, ReleaseYear = 1993, ReleaseMonth = 10, ReleaseDay = 30, AdaptedFromArcIDs = new List<string> { "arc-x-men-till-death-do-us-part-part-2" } },
+        new Media { MediaID = "media-x-men-animated-series-2-3", Title = "X-Men Animated Series: Season 2, Episode 3: Whatever It Takes", MediaType = MediaType.TVShow, ReleaseYear = 1993, ReleaseMonth = 11, ReleaseDay = 6, AdaptedFromArcIDs = new List<string> { "arc-x-men-whatever-it-takes", "arc-x-men-lifedeath-ii-from-the-heart-of-darkness" } },
+        new Media { MediaID = "media-x-men-animated-series-2-4", Title = "X-Men Animated Series: Season 2, Episode 4: Red Dawn", MediaType = MediaType.TVShow, ReleaseYear = 1993, ReleaseMonth = 11, ReleaseDay = 13, AdaptedFromArcIDs = new List<string> { "arc-x-men-red-dawn" } },
+        new Media { MediaID = "media-x-men-animated-series-2-5", Title = "X-Men Animated Series: Season 2, Episode 5: Repo Man", MediaType = MediaType.TVShow, ReleaseYear = 1993, ReleaseMonth = 11, ReleaseDay = 20, AdaptedFromArcIDs = new List<string> { "arc-x-men-shoot-out-at-the-stampede", "arc-x-men-weapon-x" } },
+        new Media { MediaID = "media-x-men-animated-series-2-6", Title = "X-Men Animated Series: Season 2, Episode 6: X-Ternally Yours", MediaType = MediaType.TVShow, ReleaseYear = 1993, ReleaseMonth = 11, ReleaseDay = 27, AdaptedFromArcIDs = new List<string> { "arc-x-men-x-ternally-yours" } },
+        new Media { MediaID = "media-x-men-animated-series-2-7", Title = "X-Men Animated Series: Season 2, Episode 7: Time Fugitives Part 1", MediaType = MediaType.TVShow, ReleaseYear = 1993, ReleaseMonth = 12, ReleaseDay = 4, AdaptedFromArcIDs = new List<string> { "arc-x-men-time-fugitives-part-1" } },
+        new Media { MediaID = "media-x-men-animated-series-2-8", Title = "X-Men Animated Series: Season 2, Episode 8: Time Fugitives Part 2", MediaType = MediaType.TVShow, ReleaseYear = 1993, ReleaseMonth = 12, ReleaseDay = 11, AdaptedFromArcIDs = new List<string> { "arc-x-men-time-fugitives-part-2" } },
+        new Media { MediaID = "media-x-men-animated-series-2-9", Title = "X-Men Animated Series: Season 2, Episode 9: A Rogue's Tale", MediaType = MediaType.TVShow, ReleaseYear = 1993, ReleaseMonth = 12, ReleaseDay = 18, AdaptedFromArcIDs = new List<string> { "arc-x-men-rogue-redux", "arc-x-men-by-friends-betrayed" } },
+        new Media { MediaID = "media-x-men-animated-series-2-10", Title = "X-Men Animated Series: Season 2, Episode 10: Beauty & the Beast", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 1, ReleaseDay = 8, AdaptedFromArcIDs = new List<string> { "arc-x-men-beauty-and-the-beast" } },
+        new Media { MediaID = "media-x-men-animated-series-2-11", Title = "X-Men Animated Series: Season 2, Episode 11: Mojovision", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 1, ReleaseDay = 15, AdaptedFromArcIDs = new List<string> { "arc-x-men-mojovision" } },
+        new Media { MediaID = "media-x-men-animated-series-2-12", Title = "X-Men Animated Series: Season 2, Episode 12: Reunion", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 1, ReleaseDay = 22, AdaptedFromArcIDs = new List<string> { "arc-x-men-reunion" } },
+        new Media { MediaID = "media-x-men-animated-series-2-13", Title = "X-Men Animated Series: Season 2, Episode 13: Reunion Part 2", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 1, ReleaseDay = 29, AdaptedFromArcIDs = new List<string> { "arc-x-men-reunion" } },
+        new Media { MediaID = "media-x-men-animated-series-3-1", Title = "X-Men Animated Series: Season 3, Episode 1: Out of the Past", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 7, ReleaseDay = 29, AdaptedFromArcIDs = new List<string> { "arc-x-men-out-of the past" } },
+        new Media { MediaID = "media-x-men-animated-series-3-2", Title = "X-Men Animated Series: Season 3, Episode 2: Len Wein", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 8, ReleaseDay = 5, AdaptedFromArcIDs = new List<string> { "arc-x-men-len-wein" } },
+        new Media { MediaID = "media-x-men-animated-series-3-3", Title = "X-Men Animated Series: Season 3, Episode 3: The Phoenix Saga, Part I: Sacrifice", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 8, ReleaseDay = 12, AdaptedFromArcIDs = new List<string> { "arc-x-men-my-brother-my-enemy", "arc-x-men-deathstar-rising", "arc-x-men-greater-love-hath-no-x-man", "arc-x-men-phoenix-unleashed" } },
+        new Media { MediaID = "media-x-men-animated-series-3-4", Title = "X-Men Animated Series: Season 3, Episode 4: The Phoenix Saga, Part II: The Dark Shroud", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 8, ReleaseDay = 19, AdaptedFromArcIDs = new List<string> { "arc-x-men-like-a-phoenix-from-the-ashes", "arc-x-men-dark-shroud-of-the-past" } },
+        new Media { MediaID = "media-x-men-animated-series-3-5", Title = "X-Men Animated Series: Season 3, Episode 5: The Phoenix Saga, Part III: The Cry of the Banshee", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 8, ReleaseDay = 26, AdaptedFromArcIDs = new List<string> { "arc-x-men-who-will-stop-the-juggernaut", "arc-x-men-the-cry-of-the-banshee", "arc-x-men-the-starjammers", "arc-x-men-armageddon-now" } },
+        new Media { MediaID = "media-x-men-animated-series-3-6", Title = "X-Men Animated Series: Season 3, Episode 6: The Phoenix Saga, Part IV: The Starjammers", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 9, ReleaseDay = 5, AdaptedFromArcIDs = new List<string> { "arc-x-men-where-no-x-man-has-gone-before" } },
+        new Media { MediaID = "media-x-men-animated-series-3-7", Title = "X-Men Animated Series: Season 3, Episode 7: The Phoenix Saga, Part V: Child of Light", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 9, ReleaseDay = 12, AdaptedFromArcIDs = new List<string> { "arc-x-men-armageddon-now" } },
+        new Media { MediaID = "media-x-men-animated-series-3-8", Title = "X-Men Animated Series: Season 3, Episode 8: No Mutant Is an Island", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 9, ReleaseDay = 19, AdaptedFromArcIDs = new List<string> { "arc-x-men-no-mutant-is-an-island" } },
+        new Media { MediaID = "media-x-men-animated-series-3-9", Title = "X-Men Animated Series: Season 3, Episode 9: Obsession", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 9, ReleaseDay = 24, AdaptedFromArcIDs = new List<string> { "arc-x-men-obsession" } },
+        new Media { MediaID = "media-x-men-animated-series-3-10", Title = "X-Men Animated Series: Season 3, Episode 10: Longshot", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 9, ReleaseDay = 24, AdaptedFromArcIDs = new List<string> { "arc-x-men-longshot" } },
+        new Media { MediaID = "media-x-men-animated-series-3-11", Title = "X-Men Animated Series: Season 3, Episode 11: Cold Comfort", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 9, ReleaseDay = 24, AdaptedFromArcIDs = new List<string> { "arc-x-men-cold-comfort" } },
+        new Media { MediaID = "media-x-men-animated-series-3-12", Title = "X-Men Animated Series: Season 3, Episode 12: Savage Land, Strange Heart Part 1", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 9, ReleaseDay = 24, AdaptedFromArcIDs = new List<string> { "arc-x-men-savage-land-strange-heart" } },
+        new Media { MediaID = "media-x-men-animated-series-3-13", Title = "X-Men Animated Series: Season 3, Episode 13: Savage Land, Strange Heart Part 2", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 9, ReleaseDay = 24, AdaptedFromArcIDs = new List<string> { "arc-x-men-savage-land-strange-heart" } },
+        new Media { MediaID = "media-x-men-animated-series-3-14", Title = "X-Men Animated Series: Season 3, Episode 14: The Dark Phoenix, Part I: Dazzled", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 11, ReleaseDay = 12, AdaptedFromArcIDs = new List<string> { "arc-x-men-dark-phoenix-saga" } },
+        new Media { MediaID = "media-x-men-animated-series-3-15", Title = "X-Men Animated Series: Season 3, Episode 15: The Dark Phoenix, Part II: The Inner Circle", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 11, ReleaseDay = 19, AdaptedFromArcIDs = new List<string> { "arc-x-men-dark-phoenix-saga" } },
+        new Media { MediaID = "media-x-men-animated-series-3-16", Title = "X-Men Animated Series: Season 3, Episode 16: The Dark Phoenix, Part III: The Dark Phoenix", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 11, ReleaseDay = 26, AdaptedFromArcIDs = new List<string> { "arc-x-men-dark-phoenix-saga" } },
+        new Media { MediaID = "media-x-men-animated-series-3-17", Title = "X-Men Animated Series: Season 3, Episode 17: The Dark Phoenix, Part IV: The Fate of the Phoenix", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 12, ReleaseDay = 3, AdaptedFromArcIDs = new List<string> { "arc-x-men-dark-phoenix-saga" } },
+        new Media { MediaID = "media-x-men-animated-series-3-18", Title = "X-Men Animated Series: Season 3, Episode 18: Orphan's End", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 12, ReleaseDay = 10, AdaptedFromArcIDs = new List<string> { "arc-x-men-reunion", "arc-x-men-first-blood" } },
+        new Media { MediaID = "media-x-men-animated-series-3-19", Title = "X-Men Animated Series: Season 3, Episode 19: Love in Vain", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 12, ReleaseDay = 17, AdaptedFromArcIDs = new List<string> { "arc-x-men-love-in-vain" } },
+        new Media { MediaID = "media-x-men-animated-series-4-1", Title = "X-Men Animated Series: Season 4, Episode 1: The Juggernaut Returns", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 5, ReleaseDay = 6, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-4-1" } },
+        new Media { MediaID = "media-x-men-animated-series-4-2", Title = "X-Men Animated Series: Season 4, Episode 2: A Deal with the Devil", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 9, ReleaseDay = 14, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-4-2" } },
+        new Media { MediaID = "media-x-men-animated-series-4-3", Title = "X-Men Animated Series: Season 4, Episode 3: Sanctuary Part 1", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 9, ReleaseDay = 21, AdaptedFromArcIDs = new List<string> { "arc-x-men-rubicon", "arc-x-men-firestorm", "arc-x-men-fatal-attractions" } },
+        new Media { MediaID = "media-x-men-animated-series-4-4", Title = "X-Men Animated Series: Season 4, Episode 4: Sanctuary Part 2", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 9, ReleaseDay = 28, AdaptedFromArcIDs = new List<string> { "arc-x-men-fallout", "arc-x-men-fatal-attractions" } },
+        new Media { MediaID = "media-x-men-animated-series-4-5", Title = "X-Men Animated Series: Season 4, Episode 5: Xavier Remembers", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 10, ReleaseDay = 5, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-4-5" } },
+        new Media { MediaID = "media-x-men-animated-series-4-6", Title = "X-Men Animated Series: Season 4, Episode 6: Courage", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 10, ReleaseDay = 12, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-4-6" } },
+        new Media { MediaID = "media-x-men-animated-series-4-7", Title = "X-Men Animated Series: Season 4, Episode 7: Secrets, Not Long Buried", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 10, ReleaseDay = 19, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-4-7" } },
+        new Media { MediaID = "media-x-men-animated-series-4-8", Title = "X-Men Animated Series: Season 4, Episode 8: Nightcrawler", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 10, ReleaseDay = 26, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-4-8" } },
+        new Media { MediaID = "media-x-men-animated-series-4-9", Title = "X-Men Animated Series: Season 4, Episode 9: One Man's Worth", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 11, ReleaseDay = 2, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-4-9" } },
+        new Media { MediaID = "media-x-men-animated-series-4-10", Title = "X-Men Animated Series: Season 4, Episode 10: Longshot", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 11, ReleaseDay = 9, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-4-10" } },
+        new Media { MediaID = "media-x-men-animated-series-4-11", Title = "X-Men Animated Series: Season 4, Episode 11: Proteus Part 1", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 11, ReleaseDay = 16, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-4-11" } },
+        new Media { MediaID = "media-x-men-animated-series-4-12", Title = "X-Men Animated Series: Season 4, Episode 12: Proteus Part 2", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 11, ReleaseDay = 23, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-4-12" } },
+        new Media { MediaID = "media-x-men-animated-series-4-13", Title = "X-Men Animated Series: Season 4, Episode 13: Family Ties", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 11, ReleaseDay = 30, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-4-13" } },
+        new Media { MediaID = "media-x-men-animated-series-4-14", Title = "X-Men Animated Series: Season 4, Episode 14: Bloodlines", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 12, ReleaseDay = 7, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-4-14" } },
+        new Media { MediaID = "media-x-men-animated-series-4-15", Title = "X-Men Animated Series: Season 4, Episode 15: Lotus and the Steel", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 12, ReleaseDay = 14, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-4-15" } },
+        new Media { MediaID = "media-x-men-animated-series-4-16", Title = "X-Men Animated Series: Season 4, Episode 16: Weapon X, Lies, and Video Tape", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 12, ReleaseDay = 21, AdaptedFromArcIDs = new List<string> { "arc-x-men-the-shiva-scenario", "arc-x-men-nightmare-quest", "arc-x-men-reunion", "arc-x-men-bastions-of-glory", "arc-x-men-what-goes-around" } },
+        new Media { MediaID = "media-x-men-animated-series-4-17", Title = "X-Men Animated Series: Season 4, Episode 17: Have Yourself a Morlock Little X-Mas", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 12, ReleaseDay = 28, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-4-17" } },
+        new Media { MediaID = "media-x-men-animated-series-4-18", Title = "X-Men Animated Series: Season 4, Episode 18: Beyond Good and Evil, Part 1: The End of Time", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 1, ReleaseDay = 4, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-4-18" } },
+        new Media { MediaID = "media-x-men-animated-series-4-19", Title = "X-Men Animated Series: Season 4, Episode 19: Beyond Good and Evil, Part 2: Promise of Apocalypse", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 1, ReleaseDay = 11, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-4-19" } },
+        new Media { MediaID = "media-x-men-animated-series-4-20", Title = "X-Men Animated Series: Season 4, Episode 20: Beyond Good and Evil, Part 3: The Lazarus Chamber", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 1, ReleaseDay = 18, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-4-20" } },
+        new Media { MediaID = "media-x-men-animated-series-4-21", Title = "X-Men Animated Series: Season 4, Episode 21: Beyond Good and Evil, Part 4: End and Beginning", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 1, ReleaseDay = 25, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-4-21" } },
+        new Media { MediaID = "media-x-men-animated-series-5-1", Title = "X-Men Animated Series: Season 5, Episode 1: The Phalanx Covenant, Part 1", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 9, ReleaseDay = 7, AdaptedFromArcIDs = new List<string> { "arc-x-men-the-phalanx-covenant" } },
+        new Media { MediaID = "media-x-men-animated-series-5-2", Title = "X-Men Animated Series: Season 5, Episode 2: The Phalanx Covenant, Part 2", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 9, ReleaseDay = 14, AdaptedFromArcIDs = new List<string> { "arc-x-men-the-phalanx-covenant" } },
+        new Media { MediaID = "media-x-men-animated-series-5-3", Title = "X-Men Animated Series: Season 5, Episode 3: Storm Front, Part 1", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 11, ReleaseDay = 2, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-5-3" } },
+        new Media { MediaID = "media-x-men-animated-series-5-4", Title = "X-Men Animated Series: Season 5, Episode 4: Storm Front, Part 2", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 11, ReleaseDay = 9, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-5-4" } },
+        new Media { MediaID = "media-x-men-animated-series-5-5", Title = "X-Men Animated Series: Season 5, Episode 5: The Fifth Horseman", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 2, ReleaseDay = 8, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-5-5" } },
+        new Media { MediaID = "media-x-men-animated-series-5-6", Title = "X-Men Animated Series: Season 5, Episode 6: Jubilee's Fairytale Theatre", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 11, ReleaseDay = 16, AdaptedFromArcIDs = new List<string> { "arc-x-men-kitty's-fairy-tale" } },
+        new Media { MediaID = "media-x-men-animated-series-5-7", Title = "X-Men Animated Series: Season 5, Episode 7: Old Soldiers", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 2, ReleaseDay = 22, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-5-7" } },
+        new Media { MediaID = "media-x-men-animated-series-5-8", Title = "X-Men Animated Series: Season 5, Episode 8: Hidden Agendas", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 9, ReleaseDay = 6, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-5-8" } },
+        new Media { MediaID = "media-x-men-animated-series-5-9", Title = "X-Men Animated Series: Season 5, Episode 9: Descent", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 9, ReleaseDay = 13, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-5-9" } },
+        new Media { MediaID = "media-x-men-animated-series-5-10", Title = "X-Men Animated Series: Season 5, Episode 10: Graduation Day", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 9, ReleaseDay = 20, AdaptedFromArcIDs = new List<string> { "arc-x-men-animated-series-5-10" } },
 
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-1-1", Title = "Spider-Man Animated Series: Season 1, Episode 1: Night of the Lizard", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 11, ReleaseDay = 19, AdaptedFromArcIDs = new List<string> { "arc-spider-man-face-to-face-with-the-lizard" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-1-2", Title = "Spider-Man Animated Series: Season 1, Episode 2: The Spider Slayer", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 2, ReleaseDay = 4, AdaptedFromArcIDs = new List<string> { "arc-spider-man-captured-by-j-jonah-jameson" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-1-3", Title = "Spider-Man Animated Series: Season 1, Episode 3: Return of the Spider Slayers", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 2, ReleaseDay = 11, AdaptedFromArcIDs = new List<string> { "arc-spider-man-marked-for-destruction-by-dr-doom" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-1-4", Title = "Spider-Man Animated Series: Season 1, Episode 4: Doctor Octopus: Armed and Dangerous", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 2, ReleaseDay = 18, AdaptedFromArcIDs = new List<string> { "arc-spider-man-doctor-octopus-armed-and-dangerous" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-1-5", Title = "Spider-Man Animated Series: Season 1, Episode 5: The Menace of Mysterio", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 2, ReleaseDay = 25, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-menace-of-mysterio" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-1-6", Title = "Spider-Man Animated Series: Season 1, Episode 6: The Sting of the Scorpion", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 3, ReleaseDay = 11, AdaptedFromArcIDs = new List<string> { "arc-spider-man-spidey-strikes-back" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-1-7", Title = "Spider-Man Animated Series: Season 1, Episode 7: Kraven the Hunter", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 4, ReleaseDay = 1, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-coming-of-the-scorpion" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-1-8", Title = "Spider-Man Animated Series: Season 1, Episode 8: The Alien Costume, Part 1", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 4, ReleaseDay = 29, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-alien-costume" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-1-9", Title = "Spider-Man Animated Series: Season 1, Episode 9: The Alien Costume, Part 2", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 5, ReleaseDay = 6, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-alien-costume" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-1-10", Title = "Spider-Man Animated Series: Season 1, Episode 10: The Alien Costume, Part 3", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 5, ReleaseDay = 13, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-alien-costume" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-1-11", Title = "Spider-Man Animated Series: Season 1, Episode 11: The Hobgoblin, Part 1", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 5, ReleaseDay = 20, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-hobgoblin" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-1-12", Title = "Spider-Man Animated Series: Season 1, Episode 12: The Hobgoblin, Part 2", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 5, ReleaseDay = 27, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-hobgoblin" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-1-13", Title = "Spider-Man Animated Series: Season 1, Episode 13: Day of the Chameleon", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 6, ReleaseDay = 11, AdaptedFromArcIDs = new List<string> { "arc-spider-man-spider-man-vs-the-chameleon" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-2-1", Title = "Spider-Man Animated Series: Season 2, Episode 1: The Insidious Six", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 9, ReleaseDay = 9, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-insidious-six" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-2-2", Title = "Spider-Man Animated Series: Season 2, Episode 2: Battle of the Insidious Six", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 9, ReleaseDay = 16, AdaptedFromArcIDs = new List<string> { "arc-spider-man-battle-of-the-insidious-six" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-2-3", Title = "Spider-Man Animated Series: Season 2, Episode 3: Hydro-Man", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 9, ReleaseDay = 23, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-coming-of-hydroman" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-2-4", Title = "Spider-Man Animated Series: Season 2, Episode 4: The Mutant Agenda", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 9, ReleaseDay = 30, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-mutant-agenda" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-2-5", Title = "Spider-Man Animated Series: Season 2, Episode 5: Mutant's Revenge", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 10, ReleaseDay = 7, AdaptedFromArcIDs = new List<string> { "arc-spider-man-mutants-revenge" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-2-6", Title = "Spider-Man Animated Series: Season 2, Episode 6: Morbius", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 10, ReleaseDay = 28, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-coming-of-morbius" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-2-7", Title = "Spider-Man Animated Series: Season 2, Episode 7: Enter the Punisher", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 11, ReleaseDay = 4, AdaptedFromArcIDs = new List<string> { "arc-spider-man-enter-the-punisher" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-2-8", Title = "Spider-Man Animated Series: Season 2, Episode 8: Duel of the Hunters", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 11, ReleaseDay = 11, AdaptedFromArcIDs = new List<string> { "arc-spider-man-duel-of-the-hunters" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-2-9", Title = "Spider-Man Animated Series: Season 2, Episode 9: Blade, the Vampire Hunter", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 2, ReleaseDay = 3, AdaptedFromArcIDs = new List<string> { "arc-spider-man-blade-the-vampire-hunter" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-2-10", Title = "Spider-Man Animated Series: Season 2, Episode 10: The Immortal Vampire", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 2, ReleaseDay = 10, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-immortal-vampire" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-2-11", Title = "Spider-Man Animated Series: Season 2, Episode 11: Tablet of Time", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 11, ReleaseDay = 18, AdaptedFromArcIDs = new List<string> { "arc-spider-man-tablet-of-time" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-2-12", Title = "Spider-Man Animated Series: Season 2, Episode 12: Ravages of Time", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 11, ReleaseDay = 25, AdaptedFromArcIDs = new List<string> { "arc-spider-man-ravages-of-time" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-2-13", Title = "Spider-Man Animated Series: Season 2, Episode 13: Shriek of the Vulture", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 2, ReleaseDay = 17, AdaptedFromArcIDs = new List<string> { "arc-spider-man-duel-to-the-death-with-the-vulture" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-3-1", Title = "Spider-Man Animated Series: Season 3, Episode 1: Doctor Strange", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 4, ReleaseDay = 27, AdaptedFromArcIDs = new List<string> { "arc-spider-man-doctor-strange" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-3-2", Title = "Spider-Man Animated Series: Season 3, Episode 2: Make a Wish", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 5, ReleaseDay = 4, AdaptedFromArcIDs = new List<string> { "arc-spider-man-make-a-wish" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-3-3", Title = "Spider-Man Animated Series: Season 3, Episode 3: Attack of the Octobot", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 5, ReleaseDay = 11, AdaptedFromArcIDs = new List<string> { "arc-spider-man-attack-of-the-octobot" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-3-4", Title = "Spider-Man Animated Series: Season 3, Episode 4: Enter the Green Goblin", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 5, ReleaseDay = 18, AdaptedFromArcIDs = new List<string> { "arc-spider-man-enter-the-green-goblin" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-3-5", Title = "Spider-Man Animated Series: Season 3, Episode 5: Rocket Racer", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 9, ReleaseDay = 14, AdaptedFromArcIDs = new List<string> { "arc-spider-man-rocket-racer" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-3-6", Title = "Spider-Man Animated Series: Season 3, Episode 6: Framed", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 9, ReleaseDay = 21, AdaptedFromArcIDs = new List<string> { "arc-spider-man-framed" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-3-7", Title = "Spider-Man Animated Series: Season 3, Episode 7: The Man Without Fear", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 9, ReleaseDay = 28, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-man-without-fear" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-3-8", Title = "Spider-Man Animated Series: Season 3, Episode 8: The Ultimate Slayer", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 10, ReleaseDay = 5, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-ultimate-slayer" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-3-9", Title = "Spider-Man Animated Series: Season 3, Episode 9: Tombstone", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 10, ReleaseDay = 12, AdaptedFromArcIDs = new List<string> { "arc-spider-man-tombstone" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-3-10", Title = "Spider-Man Animated Series: Season 3, Episode 10: Venom Returns", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 11, ReleaseDay = 2, AdaptedFromArcIDs = new List<string> { "arc-spider-man-venom-returns" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-3-11", Title = "Spider-Man Animated Series: Season 3, Episode 11: Carnage", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 11, ReleaseDay = 9, AdaptedFromArcIDs = new List<string> { "arc-spider-man-carnage" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-3-12", Title = "Spider-Man Animated Series: Season 3, Episode 12: The Spot", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 10, ReleaseDay = 26, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-spot" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-3-13", Title = "Spider-Man Animated Series: Season 3, Episode 13: Goblin War!", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 11, ReleaseDay = 16, AdaptedFromArcIDs = new List<string> { "arc-spider-man-goblin-war!" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-4-1", Title = "Spider-Man Animated Series: Season 4, Episode 1: Guilty", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 2, ReleaseDay = 1, AdaptedFromArcIDs = new List<string> { "arc-spider-man-guilty" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-4-2", Title = "Spider-Man Animated Series: Season 4, Episode 2: The Cat", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 2, ReleaseDay = 8, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-cat" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-4-3", Title = "Spider-Man Animated Series: Season 4, Episode 3: The Black Cat", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 2, ReleaseDay = 15, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-black-cat" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-4-4", Title = "Spider-Man Animated Series: Season 4, Episode 4: The Return of Kraven", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 2, ReleaseDay = 22, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-return-of-kraven" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-4-5", Title = "Spider-Man Animated Series: Season 4, Episode 5: Partners", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 5, ReleaseDay = 3, AdaptedFromArcIDs = new List<string> { "arc-spider-man-partners" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-4-6", Title = "Spider-Man Animated Series: Season 4, Episode 6: The Awakening", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 5, ReleaseDay = 10, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-awakening" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-4-7", Title = "Spider-Man Animated Series: Season 4, Episode 7: The Vampire Queen", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 5, ReleaseDay = 17, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-vampire-queen" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-4-8", Title = "Spider-Man Animated Series: Season 4, Episode 8: The Return of the Green Goblin", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 5, ReleaseDay = 24, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-return-of-the-green-goblin" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-4-9", Title = "Spider-Man Animated Series: Season 4, Episode 9: The Haunting of Mary Jane Watson", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 5, ReleaseDay = 31, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-haunting-of-mary-jane-watson" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-4-10", Title = "Spider-Man Animated Series: Season 4, Episode 10: The Lizard King", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 6, ReleaseDay = 7, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-lizard-king" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-4-11", Title = "Spider-Man Animated Series: Season 4, Episode 11: The Prowler", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 6, ReleaseDay = 14, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-prowler" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-5-1", Title = "Spider-Man Animated Series: Season 5, Episode 1: The Wedding", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 6, ReleaseDay = 21, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-wedding" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-5-2", Title = "Spider-Man Animated Series: Season 5, Episode 2: Six Forgotton Warriors", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 6, ReleaseDay = 28, AdaptedFromArcIDs = new List<string> { "arc-spider-man-six-forgotten-warriors" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-5-3", Title = "Spider-Man Animated Series: Season 5, Episode 3: Unclaimed Legacy", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 7, ReleaseDay = 5, AdaptedFromArcIDs = new List<string> { "arc-spider-man-unclaimed-legacy" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-5-4", Title = "Spider-Man Animated Series: Season 5, Episode 4: Secrets of the Six", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 7, ReleaseDay = 12, AdaptedFromArcIDs = new List<string> { "arc-spider-man-secrets-of-the-six" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-5-5", Title = "Spider-Man Animated Series: Season 5, Episode 5: The Six Fight Again", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 7, ReleaseDay = 19, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-six-fight-again" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-5-6", Title = "Spider-Man Animated Series: Season 5, Episode 6: The Price of Heroism", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 7, ReleaseDay = 26, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-price-of-heroism" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-5-7", Title = "Spider-Man Animated Series: Season 5, Episode 7: The Return of Hydro-Man Part 1", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 8, ReleaseDay = 2, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-return-of-hydro-man" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-5-8", Title = "Spider-Man Animated Series: Season 5, Episode 8: The Return of Hydro-Man Part 2", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 8, ReleaseDay = 9, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-return-of-hydro-man" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-5-9", Title = "Spider-Man Animated Series: Season 5, Episode 9: Secret Wars Chapter I: Arrival", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 8, ReleaseDay = 16, AdaptedFromArcIDs = new List<string> { "arc-spider-man-secret-wars", "arc-marvel-secret-wars" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-5-10", Title = "Spider-Man Animated Series: Season 5, Episode 10: Secret Wars Chapter II: The Gauntlet of the Red Skull", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 8, ReleaseDay = 23, AdaptedFromArcIDs = new List<string> { "arc-spider-man-secret-wars", "arc-marvel-secret-wars" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-5-11", Title = "Spider-Man Animated Series: Season 5, Episode 11: Secret Wars Chapter III: Doom", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 8, ReleaseDay = 30, AdaptedFromArcIDs = new List<string> { "arc-spider-man-secret-wars", "arc-marvel-secret-wars" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-5-12", Title = "Spider-Man Animated Series: Season 5, Episode 12: Spider Wars Chapter I: I Really, Really Hate Clones", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 9, ReleaseDay = 6, AdaptedFromArcIDs = new List<string> { "arc-spider-man-spider-wars" } },
-        new AdaptedMedia { AdaptedMediaID = "media-spider-man-animated-series-5-13", Title = "Spider-Man Animated Series: Season 5, Episode 13: Spider Wars Chapter II: Farewell, Spider-Man", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 9, ReleaseDay = 13, AdaptedFromArcIDs = new List<string> { "arc-spider-man-spider-wars" } },
+        new Media { MediaID = "media-spider-man-animated-series-1-1", Title = "Spider-Man Animated Series: Season 1, Episode 1: Night of the Lizard", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 11, ReleaseDay = 19, AdaptedFromArcIDs = new List<string> { "arc-spider-man-face-to-face-with-the-lizard" } },
+        new Media { MediaID = "media-spider-man-animated-series-1-2", Title = "Spider-Man Animated Series: Season 1, Episode 2: The Spider Slayer", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 2, ReleaseDay = 4, AdaptedFromArcIDs = new List<string> { "arc-spider-man-captured-by-j-jonah-jameson" } },
+        new Media { MediaID = "media-spider-man-animated-series-1-3", Title = "Spider-Man Animated Series: Season 1, Episode 3: Return of the Spider Slayers", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 2, ReleaseDay = 11, AdaptedFromArcIDs = new List<string> { "arc-spider-man-marked-for-destruction-by-dr-doom" } },
+        new Media { MediaID = "media-spider-man-animated-series-1-4", Title = "Spider-Man Animated Series: Season 1, Episode 4: Doctor Octopus: Armed and Dangerous", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 2, ReleaseDay = 18, AdaptedFromArcIDs = new List<string> { "arc-spider-man--versus-doctor-octopus" } },
+        new Media { MediaID = "media-spider-man-animated-series-1-5", Title = "Spider-Man Animated Series: Season 1, Episode 5: The Menace of Mysterio", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 2, ReleaseDay = 25, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-menace-of-mysterio" } },
+        new Media { MediaID = "media-spider-man-animated-series-1-6", Title = "Spider-Man Animated Series: Season 1, Episode 6: The Sting of the Scorpion", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 3, ReleaseDay = 11, AdaptedFromArcIDs = new List<string> { "arc-spider-man-spidey-strikes-back" } },
+        new Media { MediaID = "media-spider-man-animated-series-1-7", Title = "Spider-Man Animated Series: Season 1, Episode 7: Kraven the Hunter", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 4, ReleaseDay = 1, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-coming-of-the-scorpion" } },
+        new Media { MediaID = "media-spider-man-animated-series-1-8", Title = "Spider-Man Animated Series: Season 1, Episode 8: The Alien Costume, Part 1", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 4, ReleaseDay = 29, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-alien-costume" } },
+        new Media { MediaID = "media-spider-man-animated-series-1-9", Title = "Spider-Man Animated Series: Season 1, Episode 9: The Alien Costume, Part 2", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 5, ReleaseDay = 6, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-alien-costume" } },
+        new Media { MediaID = "media-spider-man-animated-series-1-10", Title = "Spider-Man Animated Series: Season 1, Episode 10: The Alien Costume, Part 3", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 5, ReleaseDay = 13, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-alien-costume" } },
+        new Media { MediaID = "media-spider-man-animated-series-1-11", Title = "Spider-Man Animated Series: Season 1, Episode 11: The Hobgoblin, Part 1", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 5, ReleaseDay = 20, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-hobgoblin" } },
+        new Media { MediaID = "media-spider-man-animated-series-1-12", Title = "Spider-Man Animated Series: Season 1, Episode 12: The Hobgoblin, Part 2", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 5, ReleaseDay = 27, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-hobgoblin" } },
+        new Media { MediaID = "media-spider-man-animated-series-1-13", Title = "Spider-Man Animated Series: Season 1, Episode 13: Day of the Chameleon", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 6, ReleaseDay = 11, AdaptedFromArcIDs = new List<string> { "arc-spider-man-spider-man-vs-the-chameleon" } },
+        new Media { MediaID = "media-spider-man-animated-series-2-1", Title = "Spider-Man Animated Series: Season 2, Episode 1: The Insidious Six", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 9, ReleaseDay = 9, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-insidious-six" } },
+        new Media { MediaID = "media-spider-man-animated-series-2-2", Title = "Spider-Man Animated Series: Season 2, Episode 2: Battle of the Insidious Six", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 9, ReleaseDay = 16, AdaptedFromArcIDs = new List<string> { "arc-spider-man-unmasked-by-doctor-octopus" } },
+        new Media { MediaID = "media-spider-man-animated-series-2-3", Title = "Spider-Man Animated Series: Season 2, Episode 3: Hydro-Man", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 9, ReleaseDay = 23, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-coming-of-hydroman" } },
+        new Media { MediaID = "media-spider-man-animated-series-2-4", Title = "Spider-Man Animated Series: Season 2, Episode 4: The Mutant Agenda", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 9, ReleaseDay = 30, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-mutant-agenda" } },
+        new Media { MediaID = "media-spider-man-animated-series-2-5", Title = "Spider-Man Animated Series: Season 2, Episode 5: Mutant's Revenge", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 10, ReleaseDay = 7, AdaptedFromArcIDs = new List<string> { "arc-spider-man-mutants-revenge" } },
+        new Media { MediaID = "media-spider-man-animated-series-2-6", Title = "Spider-Man Animated Series: Season 2, Episode 6: Morbius", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 10, ReleaseDay = 28, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-coming-of-morbius" } },
+        new Media { MediaID = "media-spider-man-animated-series-2-7", Title = "Spider-Man Animated Series: Season 2, Episode 7: Enter the Punisher", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 11, ReleaseDay = 4, AdaptedFromArcIDs = new List<string> { "arc-spider-man-enter-the-punisher" } },
+        new Media { MediaID = "media-spider-man-animated-series-2-8", Title = "Spider-Man Animated Series: Season 2, Episode 8: Duel of the Hunters", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 11, ReleaseDay = 11, AdaptedFromArcIDs = new List<string> { "arc-spider-man-duel-of-the-hunters" } },
+        new Media { MediaID = "media-spider-man-animated-series-2-9", Title = "Spider-Man Animated Series: Season 2, Episode 9: Blade, the Vampire Hunter", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 2, ReleaseDay = 3, AdaptedFromArcIDs = new List<string> { "arc-spider-man-blade-the-vampire-hunter" } },
+        new Media { MediaID = "media-spider-man-animated-series-2-10", Title = "Spider-Man Animated Series: Season 2, Episode 10: The Immortal Vampire", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 2, ReleaseDay = 10, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-immortal-vampire" } },
+        new Media { MediaID = "media-spider-man-animated-series-2-11", Title = "Spider-Man Animated Series: Season 2, Episode 11: Tablet of Time", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 11, ReleaseDay = 18, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-lifeline-tablet-saga" } },
+        new Media { MediaID = "media-spider-man-animated-series-2-12", Title = "Spider-Man Animated Series: Season 2, Episode 12: Ravages of Time", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 11, ReleaseDay = 25, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-lifeline-tablet-saga"} },
+        new Media { MediaID = "media-spider-man-animated-series-2-13", Title = "Spider-Man Animated Series: Season 2, Episode 13: Shriek of the Vulture", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 2, ReleaseDay = 17, AdaptedFromArcIDs = new List<string> { "arc-spider-man-duel-to-the-death-with-the-vulture" } },
+        new Media { MediaID = "media-spider-man-animated-series-3-1", Title = "Spider-Man Animated Series: Season 3, Episode 1: Doctor Strange", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 4, ReleaseDay = 27, AdaptedFromArcIDs = new List<string> { "arc-spider-man-doctor-strange" } },
+        new Media { MediaID = "media-spider-man-animated-series-3-2", Title = "Spider-Man Animated Series: Season 3, Episode 2: Make a Wish", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 5, ReleaseDay = 4, AdaptedFromArcIDs = new List<string> { "arc-spider-man-make-a-wish" } },
+        new Media { MediaID = "media-spider-man-animated-series-3-3", Title = "Spider-Man Animated Series: Season 3, Episode 3: Attack of the Octobot", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 5, ReleaseDay = 11, AdaptedFromArcIDs = new List<string> { "arc-spider-man-attack-of-the-octobot" } },
+        new Media { MediaID = "media-spider-man-animated-series-3-4", Title = "Spider-Man Animated Series: Season 3, Episode 4: Enter the Green Goblin", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 5, ReleaseDay = 18, AdaptedFromArcIDs = new List<string> { "arc-spider-man-enter-the-green-goblin" } },
+        new Media { MediaID = "media-spider-man-animated-series-3-5", Title = "Spider-Man Animated Series: Season 3, Episode 5: Rocket Racer", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 9, ReleaseDay = 14, AdaptedFromArcIDs = new List<string> { "arc-spider-man-rocket-racer" } },
+        new Media { MediaID = "media-spider-man-animated-series-3-6", Title = "Spider-Man Animated Series: Season 3, Episode 6: Framed", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 9, ReleaseDay = 21, AdaptedFromArcIDs = new List<string> { "arc-spider-man-framed" } },
+        new Media { MediaID = "media-spider-man-animated-series-3-7", Title = "Spider-Man Animated Series: Season 3, Episode 7: The Man Without Fear", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 9, ReleaseDay = 28, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-man-without-fear" } },
+        new Media { MediaID = "media-spider-man-animated-series-3-8", Title = "Spider-Man Animated Series: Season 3, Episode 8: The Ultimate Slayer", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 10, ReleaseDay = 5, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-ultimate-slayer" } },
+        new Media { MediaID = "media-spider-man-animated-series-3-9", Title = "Spider-Man Animated Series: Season 3, Episode 9: Tombstone", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 10, ReleaseDay = 12, AdaptedFromArcIDs = new List<string> { "arc-spider-man-tombstone" } },
+        new Media { MediaID = "media-spider-man-animated-series-3-10", Title = "Spider-Man Animated Series: Season 3, Episode 10: Venom Returns", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 11, ReleaseDay = 2, AdaptedFromArcIDs = new List<string> { "arc-spider-man-venom-returns" } },
+        new Media { MediaID = "media-spider-man-animated-series-3-11", Title = "Spider-Man Animated Series: Season 3, Episode 11: Carnage", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 11, ReleaseDay = 9, AdaptedFromArcIDs = new List<string> { "arc-spider-man-carnage" } },
+        new Media { MediaID = "media-spider-man-animated-series-3-12", Title = "Spider-Man Animated Series: Season 3, Episode 12: The Spot", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 10, ReleaseDay = 26, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-spot" } },
+        new Media { MediaID = "media-spider-man-animated-series-3-13", Title = "Spider-Man Animated Series: Season 3, Episode 13: Goblin War!", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 11, ReleaseDay = 16, AdaptedFromArcIDs = new List<string> { "arc-spider-man-spider-wars" } },
+        new Media { MediaID = "media-spider-man-animated-series-4-1", Title = "Spider-Man Animated Series: Season 4, Episode 1: Guilty", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 2, ReleaseDay = 1, AdaptedFromArcIDs = new List<string> { "arc-spider-man-guilty" } },
+        new Media { MediaID = "media-spider-man-animated-series-4-2", Title = "Spider-Man Animated Series: Season 4, Episode 2: The Cat", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 2, ReleaseDay = 8, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-cat" } },
+        new Media { MediaID = "media-spider-man-animated-series-4-3", Title = "Spider-Man Animated Series: Season 4, Episode 3: The Black Cat", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 2, ReleaseDay = 15, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-black-cat" } },
+        new Media { MediaID = "media-spider-man-animated-series-4-4", Title = "Spider-Man Animated Series: Season 4, Episode 4: The Return of Kraven", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 2, ReleaseDay = 22, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-return-of-kraven" } },
+        new Media { MediaID = "media-spider-man-animated-series-4-5", Title = "Spider-Man Animated Series: Season 4, Episode 5: Partners", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 5, ReleaseDay = 3, AdaptedFromArcIDs = new List<string> { "arc-spider-man-partners" } },
+        new Media { MediaID = "media-spider-man-animated-series-4-6", Title = "Spider-Man Animated Series: Season 4, Episode 6: The Awakening", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 5, ReleaseDay = 10, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-awakening" } },
+        new Media { MediaID = "media-spider-man-animated-series-4-7", Title = "Spider-Man Animated Series: Season 4, Episode 7: The Vampire Queen", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 5, ReleaseDay = 17, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-vampire-queen" } },
+        new Media { MediaID = "media-spider-man-animated-series-4-8", Title = "Spider-Man Animated Series: Season 4, Episode 8: The Return of the Green Goblin", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 5, ReleaseDay = 24, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-return-of-the-green-goblin" } },
+        new Media { MediaID = "media-spider-man-animated-series-4-9", Title = "Spider-Man Animated Series: Season 4, Episode 9: The Haunting of Mary Jane Watson", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 5, ReleaseDay = 31, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-haunting-of-mary-jane-watson" } },
+        new Media { MediaID = "media-spider-man-animated-series-4-10", Title = "Spider-Man Animated Series: Season 4, Episode 10: The Lizard King", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 6, ReleaseDay = 7, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-lizard-king" } },
+        new Media { MediaID = "media-spider-man-animated-series-4-11", Title = "Spider-Man Animated Series: Season 4, Episode 11: The Prowler", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 6, ReleaseDay = 14, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-prowler" } },
+        new Media { MediaID = "media-spider-man-animated-series-5-1", Title = "Spider-Man Animated Series: Season 5, Episode 1: The Wedding", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 6, ReleaseDay = 21, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-wedding" } },
+        new Media { MediaID = "media-spider-man-animated-series-5-2", Title = "Spider-Man Animated Series: Season 5, Episode 2: Six Forgotton Warriors", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 6, ReleaseDay = 28, AdaptedFromArcIDs = new List<string> { "arc-spider-man-six-forgotten-warriors" } },
+        new Media { MediaID = "media-spider-man-animated-series-5-3", Title = "Spider-Man Animated Series: Season 5, Episode 3: Unclaimed Legacy", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 7, ReleaseDay = 5, AdaptedFromArcIDs = new List<string> { "arc-spider-man-unclaimed-legacy" } },
+        new Media { MediaID = "media-spider-man-animated-series-5-4", Title = "Spider-Man Animated Series: Season 5, Episode 4: Secrets of the Six", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 7, ReleaseDay = 12, AdaptedFromArcIDs = new List<string> { "arc-spider-man-secrets-of-the-six" } },
+        new Media { MediaID = "media-spider-man-animated-series-5-5", Title = "Spider-Man Animated Series: Season 5, Episode 5: The Six Fight Again", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 7, ReleaseDay = 19, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-six-fight-again" } },
+        new Media { MediaID = "media-spider-man-animated-series-5-6", Title = "Spider-Man Animated Series: Season 5, Episode 6: The Price of Heroism", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 7, ReleaseDay = 26, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-price-of-heroism" } },
+        new Media { MediaID = "media-spider-man-animated-series-5-7", Title = "Spider-Man Animated Series: Season 5, Episode 7: The Return of Hydro-Man Part 1", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 8, ReleaseDay = 2, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-return-of-hydro-man" } },
+        new Media { MediaID = "media-spider-man-animated-series-5-8", Title = "Spider-Man Animated Series: Season 5, Episode 8: The Return of Hydro-Man Part 2", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 8, ReleaseDay = 9, AdaptedFromArcIDs = new List<string> { "arc-spider-man-the-return-of-hydro-man" } },
+        new Media { MediaID = "media-spider-man-animated-series-5-9", Title = "Spider-Man Animated Series: Season 5, Episode 9: Secret Wars Chapter I: Arrival", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 8, ReleaseDay = 16, AdaptedFromArcIDs = new List<string> { "arc-spider-man-secret-wars", "arc-marvel-secret-wars" } },
+        new Media { MediaID = "media-spider-man-animated-series-5-10", Title = "Spider-Man Animated Series: Season 5, Episode 10: Secret Wars Chapter II: The Gauntlet of the Red Skull", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 8, ReleaseDay = 23, AdaptedFromArcIDs = new List<string> { "arc-spider-man-secret-wars", "arc-marvel-secret-wars" } },
+        new Media { MediaID = "media-spider-man-animated-series-5-11", Title = "Spider-Man Animated Series: Season 5, Episode 11: Secret Wars Chapter III: Doom", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 8, ReleaseDay = 30, AdaptedFromArcIDs = new List<string> { "arc-spider-man-secret-wars", "arc-marvel-secret-wars" } },
+        new Media { MediaID = "media-spider-man-animated-series-5-12", Title = "Spider-Man Animated Series: Season 5, Episode 12: Spider Wars Chapter I: I Really, Really Hate Clones", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 9, ReleaseDay = 6, AdaptedFromArcIDs = new List<string> { "arc-spider-man-spider-wars" } },
+        new Media { MediaID = "media-spider-man-animated-series-5-13", Title = "Spider-Man Animated Series: Season 5, Episode 13: Spider Wars Chapter II: Farewell, Spider-Man", MediaType = MediaType.TVShow, ReleaseYear = 1997, ReleaseMonth = 9, ReleaseDay = 13, AdaptedFromArcIDs = new List<string> { "arc-spider-man-spider-wars" } },
 
-        new AdaptedMedia { AdaptedMediaID = "media-fantastic-four-animated-series-1-1", Title = "Fantastic Four Animated Series: Season 1, Episode 1: The Origin of the Fantastic Four Part 1", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 9, ReleaseDay = 24, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-the-origin-of-fantastic-four" } },
-        new AdaptedMedia { AdaptedMediaID = "media-fantastic-four-animated-series-1-2", Title = "Fantastic Four Animated Series: Season 1, Episode 2: The Origin of the Fantastic Four Part 2", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 10, ReleaseDay = 1, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-the-origin-of-fantastic-four" } },
-        new AdaptedMedia { AdaptedMediaID = "media-fantastic-four-animated-series-1-3", Title = "Fantastic Four Animated Series: Season 1, Episode 3: Now Comes the Sub-Mariner", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 10, ReleaseDay = 8, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-now-comes-the-sub-mariner" } },
-        new AdaptedMedia { AdaptedMediaID = "media-fantastic-four-animated-series-1-4", Title = "Fantastic Four Animated Series: Season 1, Episode 4: Incursion of the Skrulls", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 10, ReleaseDay = 15, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-incursion-of-the-skrulls" } },
-        new AdaptedMedia { AdaptedMediaID = "media-fantastic-four-animated-series-1-5", Title = "Fantastic Four Animated Series: Season 1, Episode 5: The Silver Surfer and the Coming of Galactus Part 1", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 10, ReleaseDay = 22, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-the-silver-surfer-and-the-coming-of-galactus" } },
-        new AdaptedMedia { AdaptedMediaID = "media-fantastic-four-animated-series-1-6", Title = "Fantastic Four Animated Series: Season 1, Episode 6: The Silver Surfer and the Coming of Galactus Part 2", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 10, ReleaseDay = 29, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-the-silver-surfer-and-the-coming-of-galactus" } },
-        new AdaptedMedia { AdaptedMediaID = "media-fantastic-four-animated-series-1-7", Title = "Fantastic Four Animated Series: Season 1, Episode 7: Super Skrull", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 11, ReleaseDay = 5, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-super-skrull" } },
-        new AdaptedMedia { AdaptedMediaID = "media-fantastic-four-animated-series-1-8", Title = "Fantastic Four Animated Series: Season 1, Episode 8: The Mask of Doom, Part I", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 11, ReleaseDay = 12, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-the-mask-of-doom-part-i" } },
-        new AdaptedMedia { AdaptedMediaID = "media-fantastic-four-animated-series-1-9", Title = "Fantastic Four Animated Series: Season 1, Episode 9: The Mask of Doom, Part II", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 11, ReleaseDay = 19, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-the-mask-of-doom-part-ii" } },
-        new AdaptedMedia { AdaptedMediaID = "media-fantastic-four-animated-series-1-10", Title = "Fantastic Four Animated Series: Season 1, Episode 10: The Mask of Doom, Part III", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 11, ReleaseDay = 26, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-the-mask-of-doom-part-iii" } },
-        new AdaptedMedia { AdaptedMediaID = "media-fantastic-four-animated-series-1-11", Title = "Fantastic Four Animated Series: Season 1, Episode 11: Mole Man", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 12, ReleaseDay = 3, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-mole-man" } },
-        new AdaptedMedia { AdaptedMediaID = "media-fantastic-four-animated-series-1-12", Title = "Fantastic Four Animated Series: Season 1, Episode 12: Behold the Negative Zone", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 12, ReleaseDay = 10, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-behold-the-negative-zone" } },
-        new AdaptedMedia { AdaptedMediaID = "media-fantastic-four-animated-series-1-13", Title = "Fantastic Four Animated Series: Season 1, Episode 13: The Silver Surfer and the Return of Galactus", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 12, ReleaseDay = 17, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-the-silver-surfer-and-the-return-of-galactus" } },
-        new AdaptedMedia { AdaptedMediaID = "media-fantastic-four-animated-series-2-1", Title = "Fantastic Four Animated Series: Season 2, Episode 1: And a Blind Man Shall Lead Them", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 9, ReleaseDay = 23, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-and-a-blind-man-shall-lead-them" } },
-        new AdaptedMedia { AdaptedMediaID = "media-fantastic-four-animated-series-2-2", Title = "Fantastic Four Animated Series: Season 2, Episode 2: Inhumans Saga, Part 1: And the Wind Cries Medusa", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 9, ReleaseDay = 30, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-inhumans-saga-part-1-and-the-wind-cryes-medusa" } },
-        new AdaptedMedia { AdaptedMediaID = "media-fantastic-four-animated-series-2-3", Title = "Fantastic Four Animated Series: Season 2, Episode 3: Inhumans Saga, Part 2: The Inhumans Among Us", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 10, ReleaseDay = 7, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-inhumans-saga-part-2-the-inhumans-among-us" } },
-        new AdaptedMedia { AdaptedMediaID = "media-fantastic-four-animated-series-2-4", Title = "Fantastic Four Animated Series: Season 2, Episode 4: Inhumans Saga, Part 3: Beware the Hidden Land", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 10, ReleaseDay = 14, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-inhumans-saga-part-3-beware-the-hidden-land" } },
-        new AdaptedMedia { AdaptedMediaID = "media-fantastic-four-animated-series-2-5", Title = "Fantastic Four Animated Series: Season 2, Episode 5: Worlds Within Worlds", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 10, ReleaseDay = 21, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-worlds-within-worlds" } },
-        new AdaptedMedia { AdaptedMediaID = "media-fantastic-four-animated-series-2-6", Title = "Fantastic Four Animated Series: Season 2, Episode 6: To Battle the Living Planet", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 11, ReleaseDay = 4, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-to-battle-the-living-planet" } },
-        new AdaptedMedia { AdaptedMediaID = "media-fantastic-four-animated-series-2-7", Title = "Fantastic Four Animated Series: Season 2, Episode 7: Prey of the Black Panther", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 11, ReleaseDay = 11, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-prey-of-the-black-panther" } },
-        new AdaptedMedia { AdaptedMediaID = "media-fantastic-four-animated-series-2-8", Title = "Fantastic Four Animated Series: Season 2, Episode 8: When Calls Galactus", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 11, ReleaseDay = 18, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-when-calls-galactus" } },
-        new AdaptedMedia { AdaptedMediaID = "media-fantastic-four-animated-series-2-9", Title = "Fantastic Four Animated Series: Season 2, Episode 9: Nightmare in Green", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 11, ReleaseDay = 25, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-nightmare-in-green" } },
-        new AdaptedMedia { AdaptedMediaID = "media-fantastic-four-animated-series-2-10", Title = "Fantastic Four Animated Series: Season 2, Episode 10: Behold, a Distant Star", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 2, ReleaseDay = 3, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-behold-a-distant-star" } },
-        new AdaptedMedia { AdaptedMediaID = "media-fantastic-four-animated-series-2-11", Title = "Fantastic Four Animated Series: Season 2, Episode 11: Hopelessly Impossible", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 2, ReleaseDay = 10, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-hopelessly-impossible" } },
-        new AdaptedMedia { AdaptedMediaID = "media-fantastic-four-animated-series-2-12", Title = "Fantastic Four Animated Series: Season 2, Episode 12: The Sentry Sinister", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 2, ReleaseDay = 17, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-the-sentry-sinister" } },
-        new AdaptedMedia { AdaptedMediaID = "media-fantastic-four-animated-series-2-13", Title = "Fantastic Four Animated Series: Season 2, Episode 13: Doomsday", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 2, ReleaseDay = 24, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-doomsday" } },
+        new Media { MediaID = "media-fantastic-four-animated-series-1-1", Title = "Fantastic Four Animated Series: Season 1, Episode 1: The Origin of the Fantastic Four Part 1", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 9, ReleaseDay = 24, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-the-origin-of-fantastic-four" } },
+        new Media { MediaID = "media-fantastic-four-animated-series-1-2", Title = "Fantastic Four Animated Series: Season 1, Episode 2: The Origin of the Fantastic Four Part 2", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 10, ReleaseDay = 1, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-the-origin-of-fantastic-four" } },
+        new Media { MediaID = "media-fantastic-four-animated-series-1-3", Title = "Fantastic Four Animated Series: Season 1, Episode 3: Now Comes the Sub-Mariner", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 10, ReleaseDay = 8, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-now-comes-the-sub-mariner" } },
+        new Media { MediaID = "media-fantastic-four-animated-series-1-4", Title = "Fantastic Four Animated Series: Season 1, Episode 4: Incursion of the Skrulls", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 10, ReleaseDay = 15, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-incursion-of-the-skrulls" } },
+        new Media { MediaID = "media-fantastic-four-animated-series-1-5", Title = "Fantastic Four Animated Series: Season 1, Episode 5: The Silver Surfer and the Coming of Galactus Part 1", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 10, ReleaseDay = 22, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-the-silver-surfer-and-the-coming-of-galactus" } },
+        new Media { MediaID = "media-fantastic-four-animated-series-1-6", Title = "Fantastic Four Animated Series: Season 1, Episode 6: The Silver Surfer and the Coming of Galactus Part 2", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 10, ReleaseDay = 29, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-the-silver-surfer-and-the-coming-of-galactus" } },
+        new Media { MediaID = "media-fantastic-four-animated-series-1-7", Title = "Fantastic Four Animated Series: Season 1, Episode 7: Super Skrull", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 11, ReleaseDay = 5, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-super-skrull" } },
+        new Media { MediaID = "media-fantastic-four-animated-series-1-8", Title = "Fantastic Four Animated Series: Season 1, Episode 8: The Mask of Doom, Part I", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 11, ReleaseDay = 12, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-the-mask-of-doom-part-i" } },
+        new Media { MediaID = "media-fantastic-four-animated-series-1-9", Title = "Fantastic Four Animated Series: Season 1, Episode 9: The Mask of Doom, Part II", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 11, ReleaseDay = 19, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-the-mask-of-doom-part-ii" } },
+        new Media { MediaID = "media-fantastic-four-animated-series-1-10", Title = "Fantastic Four Animated Series: Season 1, Episode 10: The Mask of Doom, Part III", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 11, ReleaseDay = 26, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-the-mask-of-doom-part-iii" } },
+        new Media { MediaID = "media-fantastic-four-animated-series-1-11", Title = "Fantastic Four Animated Series: Season 1, Episode 11: Mole Man", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 12, ReleaseDay = 3, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-mole-man" } },
+        new Media { MediaID = "media-fantastic-four-animated-series-1-12", Title = "Fantastic Four Animated Series: Season 1, Episode 12: Behold the Negative Zone", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 12, ReleaseDay = 10, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-behold-the-negative-zone" } },
+        new Media { MediaID = "media-fantastic-four-animated-series-1-13", Title = "Fantastic Four Animated Series: Season 1, Episode 13: The Silver Surfer and the Return of Galactus", MediaType = MediaType.TVShow, ReleaseYear = 1994, ReleaseMonth = 12, ReleaseDay = 17, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-the-silver-surfer-and-the-return-of-galactus" } },
+        new Media { MediaID = "media-fantastic-four-animated-series-2-1", Title = "Fantastic Four Animated Series: Season 2, Episode 1: And a Blind Man Shall Lead Them", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 9, ReleaseDay = 23, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-and-a-blind-man-shall-lead-them" } },
+        new Media { MediaID = "media-fantastic-four-animated-series-2-2", Title = "Fantastic Four Animated Series: Season 2, Episode 2: Inhumans Saga, Part 1: And the Wind Cries Medusa", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 9, ReleaseDay = 30, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-inhumans-saga-part-1-and-the-wind-cryes-medusa" } },
+        new Media { MediaID = "media-fantastic-four-animated-series-2-3", Title = "Fantastic Four Animated Series: Season 2, Episode 3: Inhumans Saga, Part 2: The Inhumans Among Us", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 10, ReleaseDay = 7, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-inhumans-saga-part-2-the-inhumans-among-us" } },
+        new Media { MediaID = "media-fantastic-four-animated-series-2-4", Title = "Fantastic Four Animated Series: Season 2, Episode 4: Inhumans Saga, Part 3: Beware the Hidden Land", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 10, ReleaseDay = 14, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-inhumans-saga-part-3-beware-the-hidden-land" } },
+        new Media { MediaID = "media-fantastic-four-animated-series-2-5", Title = "Fantastic Four Animated Series: Season 2, Episode 5: Worlds Within Worlds", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 10, ReleaseDay = 21, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-worlds-within-worlds" } },
+        new Media { MediaID = "media-fantastic-four-animated-series-2-6", Title = "Fantastic Four Animated Series: Season 2, Episode 6: To Battle the Living Planet", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 11, ReleaseDay = 4, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-to-battle-the-living-planet" } },
+        new Media { MediaID = "media-fantastic-four-animated-series-2-7", Title = "Fantastic Four Animated Series: Season 2, Episode 7: Prey of the Black Panther", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 11, ReleaseDay = 11, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-prey-of-the-black-panther" } },
+        new Media { MediaID = "media-fantastic-four-animated-series-2-8", Title = "Fantastic Four Animated Series: Season 2, Episode 8: When Calls Galactus", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 11, ReleaseDay = 18, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-when-calls-galactus" } },
+        new Media { MediaID = "media-fantastic-four-animated-series-2-9", Title = "Fantastic Four Animated Series: Season 2, Episode 9: Nightmare in Green", MediaType = MediaType.TVShow, ReleaseYear = 1995, ReleaseMonth = 11, ReleaseDay = 25, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-nightmare-in-green" } },
+        new Media { MediaID = "media-fantastic-four-animated-series-2-10", Title = "Fantastic Four Animated Series: Season 2, Episode 10: Behold, a Distant Star", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 2, ReleaseDay = 3, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-behold-a-distant-star" } },
+        new Media { MediaID = "media-fantastic-four-animated-series-2-11", Title = "Fantastic Four Animated Series: Season 2, Episode 11: Hopelessly Impossible", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 2, ReleaseDay = 10, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-hopelessly-impossible" } },
+        new Media { MediaID = "media-fantastic-four-animated-series-2-12", Title = "Fantastic Four Animated Series: Season 2, Episode 12: The Sentry Sinister", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 2, ReleaseDay = 17, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-the-sentry-sinister" } },
+        new Media { MediaID = "media-fantastic-four-animated-series-2-13", Title = "Fantastic Four Animated Series: Season 2, Episode 13: Doomsday", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 2, ReleaseDay = 24, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-doomsday" } },
 
       };
     }

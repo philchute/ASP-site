@@ -31,6 +31,40 @@ namespace ASP_site.Data {
       catch (Exception ex) {
         Console.WriteLine($"Failed to initialize chess data: {ex.Message}");
       }
+
+      // Initialize Comics Base Data (Issues, Arcs, Editions) so they can be referenced by other media
+      var comicIssues = ComicInitializer.GetComicIssues();
+      foreach (var issue in comicIssues) {
+        try {
+          context.ComicIssues.Add(issue);
+        }
+        catch (Exception ex) {
+          Console.WriteLine($"Failed to add comic issue (ID: {issue.IssueID}, Title: {issue.SeriesTitle}): {ex.Message}");
+        }
+      }
+      context.SaveChanges();
+
+      var storyArcs = ComicInitializer.GetStoryArcs();
+      foreach (var arc in storyArcs) {
+        try {
+          context.StoryArcs.Add(arc);
+        }
+        catch (Exception ex) {
+          Console.WriteLine($"Failed to add story arc (ID: {arc.ArcID}, Title: {arc.Title}): {ex.Message}");
+        }
+      }
+      context.SaveChanges();
+
+      var collectedEditions = ComicInitializer.GetCollectedEditions();
+      foreach (var edition in collectedEditions) {
+        try {
+          context.CollectedEditions.Add(edition);
+        }
+        catch (Exception ex) {
+          Console.WriteLine($"Failed to add collected edition (ID: {edition.EditionID}, Title: {edition.Title}): {ex.Message}");
+        }
+      }
+      context.SaveChanges();
       
       // Initialize engines
       var engines = EngineInitializer.GetEngines();
@@ -49,6 +83,9 @@ namespace ASP_site.Data {
         try {
           Game h = Game.InitializeYear(game, games.ToList());
           h = Game.InitializeEngine(h, games.ToList());
+          if (h.AdaptedFromArcIDs != null && h.AdaptedFromArcIDs.Any()) {
+              h.AdaptedFromArcs = context.StoryArcs.Local.Where(arc => h.AdaptedFromArcIDs.Contains(arc.ArcID)).ToList();
+          }
           context.Games.Add(h);
         }
         catch (Exception ex) {
@@ -233,6 +270,11 @@ namespace ASP_site.Data {
               tagsForBook.AddRange(tagsFromDb.Where(t => tagNamesForBook.Contains(t.Name)));
           }
           book.Tags = tagsForBook;
+          
+          if (book.AdaptedFromArcIDs != null && book.AdaptedFromArcIDs.Any()) {
+              book.AdaptedFromArcs = context.StoryArcs.Local.Where(arc => book.AdaptedFromArcIDs.Contains(arc.ArcID)).ToList();
+          }
+          
           context.Books.Add(book);
       }
       
@@ -245,47 +287,17 @@ namespace ASP_site.Data {
       
       context.SaveChanges();
 
-      // Initialize Comics Data
-      var comicIssues = ComicInitializer.GetComicIssues();
-      foreach (var issue in comicIssues) {
-        try {
-          context.ComicIssues.Add(issue);
-        }
-        catch (Exception ex) {
-          Console.WriteLine($"Failed to add comic issue (ID: {issue.IssueID}, Title: {issue.SeriesTitle}): {ex.Message}");
-        }
-      }
-      context.SaveChanges();
-
-      var storyArcs = ComicInitializer.GetStoryArcs();
-      foreach (var arc in storyArcs) {
-        try {
-          context.StoryArcs.Add(arc);
-        }
-        catch (Exception ex) {
-          Console.WriteLine($"Failed to add story arc (ID: {arc.ArcID}, Title: {arc.Title}): {ex.Message}");
-        }
-      }
-      context.SaveChanges();
-
-      var collectedEditions = ComicInitializer.GetCollectedEditions();
-      foreach (var edition in collectedEditions) {
-        try {
-          context.CollectedEditions.Add(edition);
-        }
-        catch (Exception ex) {
-          Console.WriteLine($"Failed to add collected edition (ID: {edition.EditionID}, Title: {edition.Title}): {ex.Message}");
-        }
-      }
-      context.SaveChanges();
-
-      var adaptedMedia = ComicInitializer.GetAdaptedMedia();
+      var adaptedMedia = ComicInitializer.GetMedia();
       foreach (var media in adaptedMedia) {
         try {
-          context.AdaptedMedia.Add(media);
+          // Link the media to the actual StoryArc objects using the string IDs
+          if (media.AdaptedFromArcIDs != null && media.AdaptedFromArcIDs.Any()) {
+            media.AdaptedFromArcs = context.StoryArcs.Local.Where(arc => media.AdaptedFromArcIDs.Contains(arc.ArcID)).ToList();
+          }
+          context.Media.Add(media);
         }
         catch (Exception ex) {
-          Console.WriteLine($"Failed to add adapted media (ID: {media.AdaptedMediaID}, Title: {media.Title}): {ex.Message}");
+          Console.WriteLine($"Failed to add media (ID: {media.MediaID}, Title: {media.Title}): {ex.Message}");
         }
       }
       context.SaveChanges();

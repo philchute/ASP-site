@@ -185,6 +185,9 @@ namespace ASP_site.Data.Initializers
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=aN5Hpva7AZ4" },
         new Link { GameID = "cs2", MapID = "inferno", Label = "The Pros' Approach to Taking Inferno B", Description = "mahone's inferno B guide",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=z3YogGOML3c" },
+        new Link { GameID = "cs2", MapID = "inferno", Label = "The Pros' Approach to Holding Inferno B", Description = "The Pros' Approach to Holding Inferno B",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=hx_zM91WmyA" },
+
         // de_mirage
         new Link { GameID = "cs2", MapID = "mirage", Label = "de_mirage CT guide", Description = "Bird's mirage CT side guide",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=VyhGmGoRUNg" },
@@ -278,6 +281,8 @@ namespace ASP_site.Data.Initializers
         // de_cache
         new Link { GameID = "cs2", MapID = "cache", Label = "de_cache AWP guide", Description = "Flom's cache AWP guide",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=X6Slzv5bk-Y" },
+        new Link { GameID = "cs2", MapID = "cache", Label = "How to play Cache", Description = "How to play Cache",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=hifm963JXcI" },
         // de_vertigo
         new Link { GameID = "cs2", MapID = "vertigo", Label = "de_vertigo CT guide", Description = "Bird's vertigo CT side guide",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=hlT2YcIabhM" },
