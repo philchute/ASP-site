@@ -78,9 +78,9 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Download, Url = "https://www.moddb.com/mods/action-half-life" },
 
         // AoE1
-        new Link { GameID = "aoe1", Label = "AoE1: Beginner Guide and Tips (Return of Rome DLC)", Description = "AoE1 Beginner Guide and Tips (Return of Rome DLC)",
+        new Link { GameID = "aoe", Label = "AoE1: Beginner Guide and Tips (Return of Rome DLC)", Description = "AoE1 Beginner Guide and Tips (Return of Rome DLC)",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=AB0WOQ2BFT4" },
-        new Link { GameID = "aoe1", Label = "AoE1: Important differences between AoE I & AoE II", Description = "Important differences between AoE I & AoE II",
+        new Link { GameID = "aoe", Label = "AoE1: Important differences between AoE I & AoE II", Description = "Important differences between AoE I & AoE II",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=2QVsC63Xf9Q" },
 
         // AoE2
@@ -678,7 +678,7 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Gameplay, Url = "https://www.youtube.com/watch?v=xJ6WapkO81U" },
 
         // Momentum
-        new Link { GameID = "momentum", Label = "Momentum Mod showcase", Description = "Momentum Mod showcase and current status updated 12/12/25.", 
+        new Link { GameID = "momentummod", Label = "Momentum Mod showcase", Description = "Momentum Mod showcase and current status updated 12/12/25.", 
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=uHCqfhH1Ah0" },
 
         // NaturalSelection

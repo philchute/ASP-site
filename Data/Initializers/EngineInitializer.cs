@@ -234,6 +234,48 @@ namespace ASP_site.Data.Initializers {
           ParentID = "", Year = 2009
         },
         new Engine {
+          EngineID = "CryEngine1",
+          Name = "CryEngine 1",
+          Description = "CryEngine 1 is a game engine developed by Crytek, first used in Far Cry.",
+          ParentID = "", Year = 2007
+        },
+        new Engine {
+          EngineID = "Dunia",
+          Name = "Dunia Engine",
+          Description = "Dunia Engine is a fork of the Cry Engine used by Ubisoft for soubsecquent Far Cry titles.",
+          ParentID = "CryEngine1", Year = 2007
+        },
+        new Engine {
+          EngineID = "Dunia2",
+          Name = "Dunia 2 Engine",
+          Description = "Dunia 2 Engine is a fork of the Dunia Engine used by Ubisoft for soubsecquent Far Cry titles.",
+          ParentID = "Dunia", Year = 2007
+        },
+        new Engine {
+          EngineID = "CryEngine2",
+          Name = "CryEngine 2",
+          Description = "CryEngine 2 is a game engine developed by Crytek, first used in Crysis.",
+          ParentID = "CryEngine1", Year = 2007
+        },
+        new Engine {
+          EngineID = "CryEngine3",
+          Name = "CryEngine 3",
+          Description = "CryEngine 3 is a game engine developed by Crytek, first used in Crysis 2.",
+          ParentID = "CryEngine2", Year = 2013
+        },
+        new Engine {
+          EngineID = "AmazonLumberyard",
+          Name = "Amazon Lumberyard Engine",
+          Description = "Amazon Lumberyard Engine is a game engine developed by Amazon.",
+          ParentID = "CryEngine3", Year = 2015
+        },
+        new Engine {
+          EngineID = "CryEngineV",
+          Name = "CryEngine V",
+          Description = "After skipping CryEngine 4, CryEngine V is a game engine developed by Crytek, first used in Crysis.",
+          ParentID = "CryEngine3", Year = 2007
+        },
+        new Engine {
           EngineID = "unity",
           Name = "Unity Engine",
           Description = "Unity Engine is a game engine developed by Unity Technologies, first used in 2005 for MacOS titles, it has become a common engine for cross-platform and mobile development. In 2023 they announced they would charge per-install royalties to their developers, prompting many to switch away from Unity.",

@@ -1,7 +1,6 @@
 @page
 @model ASP_site.Pages.Years.IndexModel
 @using ASP_site.Models
-@using System.ComponentModel.DataAnnotations
 
 @{
     ViewData["Title"] = "Years Timeline";
@@ -12,7 +11,7 @@
         <div class="row align-items-end">
             <div class="col-md-7">
                  <h1 class="display-3">Years</h1>
-                 <p class="lead">Timeline of media in historical settings.</p>
+                 <p class="lead">Timeline of media in historical settings. For real-world release dates, see <a asp-page="/Releases/Index">Releases</a>.</p>
             </div>
             <div class="col-md-5">
                 <div class="d-flex justify-content-end align-items-end flex-wrap gap-2">
@@ -70,9 +69,9 @@
     </form>
 
     <p>
-        This page is an evolving list of movies, books, games, and other media in historical settings, arranged chronologically. 
+        This page is an evolving list of movies, books, games, and other media in historical settings, arranged chronologically.
         This is not a precise timeline or a comprehensive list, but will allow you find media from a particular time period.
-        Hover the titles for more information.
+        Click a row for more information. Linked titles go to the matching game, book, movie, or comic arc when one exists in the catalog.
     </p>
 
     <section class="grid mt-3">
@@ -86,31 +85,64 @@
         </div>
 
         @if(Model.TimelineEntries != null && Model.TimelineEntries.Any()) {
-            foreach (var entry in Model.TimelineEntries) { 
-                <div class="row g-0 border-bottom table-row-hover">
-                    <div class="p-1 text-center col-sm-1">
+            foreach (var entry in Model.TimelineEntries) {
+                <div class="timeline-row table-row-hover border-bottom" tabindex="0" role="button" aria-expanded="false">
+                    <div class="row g-0">
+                        <div class="p-1 text-center col-sm-1">
+                            @{
+                                if (entry.Year < 0) { @($"{Math.Abs(entry.Year)} BC") }
+                                else { @($"{entry.Year}") }
+                            }
+                        </div>
+                        <div class="p-1 text-center col-sm-2 text-muted">@ASP_site.Pages.Years.IndexModel.GetEra(entry.Year)</div>
+                        <div class="p-1 text-center col-sm-1 text-muted">@ASP_site.Pages.Years.IndexModel.GetEnumDisplayName(entry.Age)</div>
+                        <div class="p-1 text-center col-sm-1">
+                            @if (entry.Type.HasValue) {
+                                <img src="~/image/@(entry.Type.Value.ToString()).svg" alt="@entry.Type.Value.ToString()" title="@entry.Type.Value.ToString()" style="width: 24px; height: 24px; filter: invert(0.8);" />
+                            } else {
+                                <span>-</span>
+                            }
+                        </div>
+                        <div class="p-1 text-center col-sm-1 text-muted">
+                            @if (!string.IsNullOrEmpty(entry.Published)) {
+                                <span>@entry.Published</span>
+                            } else {
+                                <span>-</span>
+                            }
+                        </div>
+                        <div class="p-1 text-start col-sm fw-bold">
+                            @{
+                                var primary = entry.GetPrimaryLink();
+                            }
+                            @if (primary != null) {
+                                <a asp-page="@primary.Page" asp-route-id="@(primary.RouteName == "id" ? primary.RouteValue : null)" asp-route-GameID="@(primary.RouteName == "GameID" ? primary.RouteValue : null)" asp-route-BookTitle="@(primary.RouteName == "BookTitle" ? primary.RouteValue : null)">@(entry.Title ?? "-")</a>
+                            } else {
+                                @(entry.Title ?? "-")
+                            }
+                        </div>
+                    </div>
+                    <div class="timeline-detail px-2 pb-2 text-muted">
+                        @if (!string.IsNullOrEmpty(entry.Description)) {
+                            <div>@entry.Description</div>
+                        }
+                        @if (!string.IsNullOrEmpty(entry.Availability)) {
+                            <div>Availability: @entry.Availability</div>
+                        }
                         @{
-                            if (entry.Year < 0) { @($"{Math.Abs(entry.Year)} BC") }
-                            else { @($"{entry.Year}") }
+                            var catalogLinks = entry.GetCatalogLinks();
+                        }
+                        @if (catalogLinks.Any()) {
+                            <div class="mt-1">
+                                Catalog:
+                                @foreach (var link in catalogLinks) {
+                                    <a class="me-2" asp-page="@link.Page" asp-route-id="@(link.RouteName == "id" ? link.RouteValue : null)" asp-route-GameID="@(link.RouteName == "GameID" ? link.RouteValue : null)" asp-route-BookTitle="@(link.RouteName == "BookTitle" ? link.RouteValue : null)">@link.Label</a>
+                                }
+                            </div>
+                        }
+                        @if (string.IsNullOrEmpty(entry.Description) && string.IsNullOrEmpty(entry.Availability) && !catalogLinks.Any()) {
+                            <div>No additional notes.</div>
                         }
                     </div>
-                    <div class="p-1 text-center col-sm-2 text-muted">@ASP_site.Pages.Years.IndexModel.GetEra(entry.Year)</div>
-                    <div class="p-1 text-center col-sm-1 text-muted">@ASP_site.Pages.Years.IndexModel.GetEnumDisplayName(entry.Age)</div>
-                    <div class="p-1 text-center col-sm-1">
-                        @if (entry.Type.HasValue) {
-                            <img src="~/image/@(entry.Type.Value.ToString()).svg" alt="@entry.Type.Value.ToString()" title="@entry.Type.Value.ToString()" style="width: 24px; height: 24px; filter: invert(0.8);" />
-                        } else {
-                            <span>-</span>
-                        }
-                    </div>
-                    <div class="p-1 text-center col-sm-1 text-muted">
-                        @if (!string.IsNullOrEmpty(entry.Published)) {
-                            <span>@entry.Published</span>
-                        } else {
-                            <span>-</span>
-                        }
-                    </div>
-                    <div class="p-1 text-start col-sm fw-bold" title="@(entry.Description + (!string.IsNullOrEmpty(entry.Availability) ? $"\n\nAvailability: {entry.Availability}" : ""))">@(entry.Title ?? "-")</div>
                 </div>
             }
         } else {
@@ -118,9 +150,3 @@
         }
     </section>
 </div>
-
-<style>
-    .table-row-hover:hover {
-        background-color: #1a1a1a;
-    }
-</style>

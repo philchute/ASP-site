@@ -77,6 +77,19 @@
   <hr/>
 } else { <div>No release dates available.</div>
 <hr/>}
+@if(Model.Game?.AdaptedFromArcs != null && Model.Game.AdaptedFromArcs.Any())
+{
+  <div>
+    <h4>Adapted from</h4>
+    <ul>
+      @foreach(var arc in Model.Game.AdaptedFromArcs)
+      {
+        <li><a asp-page="/Comics/Arc" asp-route-id="@arc.ArcID">@arc.Title</a></li>
+      }
+    </ul>
+  </div>
+  <hr/>
+}
 @if(Model.Game?.Mods.Count > 0) 
 {
   <div>

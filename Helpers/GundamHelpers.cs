@@ -21,7 +21,9 @@ namespace ASP_site.Helpers
         {
             if (string.IsNullOrEmpty(series)) return GunplaConstants.Timelines.Other;
 
-            return series switch
+            var resolved = GetSeriesFullName(series);
+
+            return resolved switch
             {
                 // Universal Century
                 GunplaConstants.Series.MSG or
@@ -54,6 +56,9 @@ namespace ASP_site.Helpers
                 GunplaConstants.Series.SilhouetteFormula91 or
                 GunplaConstants.Series.Crossbone or
                 GunplaConstants.Series.Victory => GunplaConstants.Timelines.UC,
+
+                // The Origin / related UC
+                "GTO" or "Gundam The Origin" => GunplaConstants.Timelines.UC,
 
                 // Future Century
                 GunplaConstants.Series.GGundam => GunplaConstants.Timelines.FC,
@@ -108,7 +113,9 @@ namespace ASP_site.Helpers
             // We can now use GetTimeline logic if we wanted to group colors by timeline,
             // but for now we keep the specific series mapping for colors as they are more granular.
             
-            return series switch
+            var resolved = GetSeriesFullName(series);
+
+            return resolved switch
             {
                 GunplaConstants.Series.MSG or 
                 "MSV" or 

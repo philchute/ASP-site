@@ -100,16 +100,20 @@ namespace ASP_site.Pages.Years
             {
                 case "Title":
                     entriesQuery = entriesQuery.OrderBy(e => e.Title).ThenBy(e => e.Year);
+                    TimelineEntries = await entriesQuery.ToListAsync();
                     break;
                 case "Published":
-                    entriesQuery = entriesQuery.OrderBy(e => string.IsNullOrEmpty(e.Published)).ThenBy(e => e.Published).ThenBy(e => e.Year);
+                    TimelineEntries = (await entriesQuery.ToListAsync())
+                        .OrderBy(e => e.GetPublishedYear() ?? int.MaxValue)
+                        .ThenBy(e => e.Year)
+                        .ThenBy(e => e.Title)
+                        .ToList();
                     break;
                 default: // Year
                     entriesQuery = entriesQuery.OrderBy(e => e.Year).ThenBy(e => e.Title);
+                    TimelineEntries = await entriesQuery.ToListAsync();
                     break;
             }
-            // Execute the query asynchronously
-            TimelineEntries = await entriesQuery.ToListAsync();
         }
 
         // Helper to get DisplayName for enums

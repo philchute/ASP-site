@@ -1,5 +1,6 @@
 using ASP_site.Models;
 using ASP_site.Data.Initializers;
+using ASP_site.Helpers;
 
 namespace ASP_site.Data {
   public static class DbInitializer {
@@ -34,36 +35,18 @@ namespace ASP_site.Data {
 
       // Initialize Comics Base Data (Issues, Arcs, Editions) so they can be referenced by other media
       var comicIssues = ComicInitializer.GetComicIssues();
-      foreach (var issue in comicIssues) {
-        try {
-          context.ComicIssues.Add(issue);
-        }
-        catch (Exception ex) {
-          Console.WriteLine($"Failed to add comic issue (ID: {issue.IssueID}, Title: {issue.SeriesTitle}): {ex.Message}");
-        }
-      }
+      ThrowIfDuplicateIds(comicIssues, i => i.IssueID, "ComicIssue.IssueID");
+      context.ComicIssues.AddRange(comicIssues);
       context.SaveChanges();
 
       var storyArcs = ComicInitializer.GetStoryArcs();
-      foreach (var arc in storyArcs) {
-        try {
-          context.StoryArcs.Add(arc);
-        }
-        catch (Exception ex) {
-          Console.WriteLine($"Failed to add story arc (ID: {arc.ArcID}, Title: {arc.Title}): {ex.Message}");
-        }
-      }
+      ThrowIfDuplicateIds(storyArcs, a => a.ArcID, "StoryArc.ArcID");
+      context.StoryArcs.AddRange(storyArcs);
       context.SaveChanges();
 
       var collectedEditions = ComicInitializer.GetCollectedEditions();
-      foreach (var edition in collectedEditions) {
-        try {
-          context.CollectedEditions.Add(edition);
-        }
-        catch (Exception ex) {
-          Console.WriteLine($"Failed to add collected edition (ID: {edition.EditionID}, Title: {edition.Title}): {ex.Message}");
-        }
-      }
+      ThrowIfDuplicateIds(collectedEditions, e => e.EditionID, "CollectedEdition.EditionID");
+      context.CollectedEditions.AddRange(collectedEditions);
       context.SaveChanges();
       
       // Initialize engines
@@ -79,18 +62,14 @@ namespace ASP_site.Data {
       
       // Initialize games
       var games = GameInitializer.GetGames();
+      ThrowIfDuplicateIds(games, g => g.GameID, "Game.GameID");
       foreach (var game in games) {
-        try {
-          Game h = Game.InitializeYear(game, games.ToList());
-          h = Game.InitializeEngine(h, games.ToList());
-          if (h.AdaptedFromArcIDs != null && h.AdaptedFromArcIDs.Any()) {
-              h.AdaptedFromArcs = context.StoryArcs.Local.Where(arc => h.AdaptedFromArcIDs.Contains(arc.ArcID)).ToList();
-          }
-          context.Games.Add(h);
+        Game h = Game.InitializeYear(game, games.ToList());
+        h = Game.InitializeEngine(h, games.ToList());
+        if (h.AdaptedFromArcIDs != null && h.AdaptedFromArcIDs.Any()) {
+            h.AdaptedFromArcs = context.StoryArcs.Local.Where(arc => h.AdaptedFromArcIDs.Contains(arc.ArcID)).ToList();
         }
-        catch (Exception ex) {
-          Console.WriteLine($"Failed to add game {game.GameID}: {ex.Message}");
-        }
+        context.Games.Add(h);
       }
       context.SaveChanges(); // Persist game entities immediately
       
@@ -274,8 +253,26 @@ namespace ASP_site.Data {
           if (book.AdaptedFromArcIDs != null && book.AdaptedFromArcIDs.Any()) {
               book.AdaptedFromArcs = context.StoryArcs.Local.Where(arc => book.AdaptedFromArcIDs.Contains(arc.ArcID)).ToList();
           }
+
+          if (string.IsNullOrEmpty(book.Slug))
+          {
+              book.Slug = StringUtils.ToSlug(book.Title);
+          }
           
           context.Books.Add(book);
+      }
+
+      var duplicateSlugs = context.Books.Local
+          .Where(b => !string.IsNullOrEmpty(b.Slug))
+          .GroupBy(b => b.Slug)
+          .Where(g => g.Count() > 1);
+      foreach (var group in duplicateSlugs)
+      {
+          int n = 2;
+          foreach (var book in group.Skip(1))
+          {
+              book.Slug = $"{book.Slug}-{n++}";
+          }
       }
       
       context.SaveChanges();
@@ -288,19 +285,34 @@ namespace ASP_site.Data {
       context.SaveChanges();
 
       var adaptedMedia = ComicInitializer.GetMedia();
+      ThrowIfDuplicateIds(adaptedMedia, m => m.MediaID, "Media.MediaID");
       foreach (var media in adaptedMedia) {
-        try {
-          // Link the media to the actual StoryArc objects using the string IDs
-          if (media.AdaptedFromArcIDs != null && media.AdaptedFromArcIDs.Any()) {
-            media.AdaptedFromArcs = context.StoryArcs.Local.Where(arc => media.AdaptedFromArcIDs.Contains(arc.ArcID)).ToList();
-          }
-          context.Media.Add(media);
+        if (media.AdaptedFromArcIDs != null && media.AdaptedFromArcIDs.Any()) {
+          media.AdaptedFromArcs = context.StoryArcs.Local.Where(arc => media.AdaptedFromArcIDs.Contains(arc.ArcID)).ToList();
         }
-        catch (Exception ex) {
-          Console.WriteLine($"Failed to add media (ID: {media.MediaID}, Title: {media.Title}): {ex.Message}");
-        }
+        context.Media.Add(media);
       }
       context.SaveChanges();
+
+      CatalogLinker.LinkYearEntries(context);
+      context.SaveChanges();
+    }
+
+    private static void ThrowIfDuplicateIds<T>(IEnumerable<T> items, Func<T, string> idSelector, string label)
+    {
+      var dupes = items
+        .Select(idSelector)
+        .Where(id => !string.IsNullOrWhiteSpace(id))
+        .GroupBy(id => id, StringComparer.OrdinalIgnoreCase)
+        .Where(g => g.Count() > 1)
+        .Select(g => $"{g.Key} x{g.Count()}")
+        .ToList();
+
+      if (dupes.Count > 0)
+      {
+        throw new InvalidOperationException(
+          $"Duplicate {label} values (refusing to skip):\n  " + string.Join("\n  ", dupes));
+      }
     }
   }
 }

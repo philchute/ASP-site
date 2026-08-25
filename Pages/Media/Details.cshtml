@@ -1,0 +1,47 @@
+@page "/Media/{id}"
+@model ASP_site.Pages.MediaPages.DetailsModel
+@using ASP_site.Helpers
+
+@{
+    ViewData["Title"] = Model.Item?.Title ?? "Media";
+}
+
+@if (Model.Item == null)
+{
+    <p>Media not found.</p>
+}
+else
+{
+    <div class="jumbotron p-2">
+        <h1 class="display-4">
+            @Model.Item.Title
+            <small class="text-muted">
+                - @Model.Item.MediaType -
+                @if (Model.Item.ReleaseMonth.HasValue)
+                {
+                    @ViewHelper.GetMonthName(Model.Item.ReleaseMonth) <text> </text>
+                }
+                @Model.Item.ReleaseYear
+            </small>
+        </h1>
+    </div>
+    <hr />
+
+    @if (!string.IsNullOrEmpty(Model.Item.Description))
+    {
+        <div>@Model.Item.Description</div>
+        <hr />
+    }
+
+    @if (Model.Item.AdaptedFromArcs.Any())
+    {
+        <h4>Adapted from</h4>
+        <ul>
+            @foreach (var arc in Model.Item.AdaptedFromArcs)
+            {
+                <li><a asp-page="/Comics/Arc" asp-route-id="@arc.ArcID">@arc.Title</a></li>
+            }
+        </ul>
+        <hr />
+    }
+}

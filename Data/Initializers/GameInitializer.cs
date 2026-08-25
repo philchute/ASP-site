@@ -1536,6 +1536,24 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
+          GameID = "crysis",
+          Name = "Crysis",
+          Description = "Crysis is a first-person shooter game developed by Crytek.",
+          EngineID = "CryEngine2",
+          Developer = "Crytek",
+          SteamID = 1715130,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2007, Month = 11, Day = 13}
+          ]
+        },
+        new Game {
           GameID = "cs16",
           Name = "Counter-Strike 1.6",
           Description = "The classic version of Counter-Strike that defined competitive FPS gaming. Features tactical gameplay between terrorists and counter-terrorists.",
@@ -2305,6 +2323,272 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/eye"
           }
+        },
+        new Game {
+          GameID = "farCry",
+          Name = "Far Cry",
+          Description = "Far Cry is a first-person shooter game developed by Crytek for PC.",
+          EngineID = "CryEngine1",
+          Developer = "Crytek",
+          SteamID = 2004,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2004, Month = 3, Day = 3}
+          ]
+        },
+        new Game {
+          GameID = "farCryInstincts",
+          Name = "Far Cry Instincts",
+          Description = "Far Cry Instincts is a first-person shooter game for the XBox.",
+          EngineID = "CryEngine1",
+          Developer = "Crytek",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2005, Month = 3, Day = 3}
+          ]
+        },
+        new Game {
+          GameID = "farCryInstinctsEvolution",
+          Name = "Far Cry Instincts: Evolution",
+          Description = "Far Cry Instincts: Evolution is a first-person shooter game for the XBox.",
+          EngineID = "CryEngine1",
+          Developer = "Crytek",
+          SteamID = 2006,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2006, Month = 3, Day = 3}
+          ]
+        },
+        new Game {
+          GameID = "farCryInstinctsPredator",
+          Name = "Far Cry Instincts: Predator",
+          Description = "Far Cry Instincts: Predator is a first-person shooter game for the XBox 360.",
+          EngineID = "CryEngine1",
+          Developer = "Crytek",
+          SteamID = 2007,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2007, Month = 3, Day = 3}
+          ]
+        },
+        new Game {
+          GameID = "farCryVengeance",
+          Name = "Far Cry Vengeance",
+          Description = "Far Cry Vengeance is a first-person shooter game for the Wii.",
+          EngineID = "CryEngine1",
+          Developer = "Crytek",
+          SteamID = 2008,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2008, Month = 3, Day = 3}
+          ]
+        },
+        new Game {
+          GameID = "paradiseLost",
+          Name = "Paradise Lost",
+          Description = "Paradise Lost is a rail shooter arcade game port of Far Cry: Instincts.",
+          EngineID = "CryEngine1",
+          Developer = "Crytek",
+          SteamID = 2009,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2009, Month = 3, Day = 3}
+          ]
+        },
+        new Game {
+          GameID = "farCry2",
+          Name = "Far Cry 2",
+          Description = "Far Cry 2 is a first-person shooter game developed by Ubisoft.",
+          EngineID = "Dunia",
+          Developer = "Ubisoft",
+          SteamID = 2010,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2008, Month = 3, Day = 3}
+          ]
+        },
+        new Game {
+          GameID = "farCry3",
+          Name = "Far Cry 3",
+          Description = "Far Cry 3 is a first-person shooter game developed by Ubisoft.",
+          EngineID = "Dunia2",
+          Developer = "Ubisoft",
+          SteamID = 2011,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2012, Month = 3, Day = 3}
+          ]
+        },
+        new Game {
+          GameID = "farCry3BloodDragon",
+          Name = "Far Cry 3: Blood Dragon",
+          Description = "Far Cry 3: Blood Dragon is a first-person shooter game developed by Ubisoft.",
+          EngineID = "Dunia2",
+          Developer = "Ubisoft",
+          SteamID = 2012,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2013, Month = 3, Day = 3}
+          ]
+        },
+        new Game {
+          GameID = "farCry4",
+          Name = "Far Cry 4",
+          Description = "Far Cry 4 is a first-person shooter game developed by Ubisoft.",
+          EngineID = "Dunia2",
+          Developer = "Ubisoft",
+          SteamID = 2013,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2014, Month = 3, Day = 3}
+          ]
+        },
+        new Game {
+          GameID = "farCryPrimal",
+          Name = "Far Cry Primal",
+          Description = "Far Cry Primal is a first-person shooter game developed by Ubisoft.",
+          EngineID = "Dunia2",
+          Developer = "Ubisoft",
+          SteamID = 2015,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2016, Month = 3, Day = 3}
+          ]
+        },
+        new Game {
+          GameID = "farCry5",
+          Name = "Far Cry 5",
+          Description = "Far Cry 5 is a first-person shooter game developed by Ubisoft.",
+          EngineID = "Dunia2",
+          Developer = "Ubisoft",
+          SteamID = 2017,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2018, Month = 3, Day = 3}
+          ]
+        },
+        new Game {
+          GameID = "farCryNewDawn",
+          Name = "Far Cry New Dawn",
+          Description = "Far Cry New Dawn is a first-person shooter game developed by Ubisoft.",
+          EngineID = "Dunia2",
+          Developer = "Ubisoft",
+          SteamID = 2019,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          ReleaseDates = [
+            new ReleaseDate{Year = 2020, Month = 3, Day = 3}
+          ]
+        },
+        new Game {
+          GameID = "farCryVR",
+          Name = "Far Cry VR: Dive Into Insanity",
+          Description = "Far Cry VR: Dive Into Insanity is a first-person shooter game developed by Ubisoft.",
+          EngineID = "Dunia2",
+          Developer = "Ubisoft",
+          SteamID = 2021,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          ReleaseDates = [
+            new ReleaseDate{Year = 2021, Month = 3, Day = 3}
+          ]
+        },
+        new Game {
+          GameID = "farCry6",
+          Name = "Far Cry 6",
+          Description = "Far Cry 6 is a first-person shooter game developed by Ubisoft.",
+          EngineID = "Dunia2",
+          Developer = "Ubisoft",
+          SteamID = 2022,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          ReleaseDates = [
+            new ReleaseDate{Year = 2022, Month = 3, Day = 3}
+          ]
         },
         new Game {
           GameID = "fightingforce",
@@ -3213,6 +3497,20 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
+          GameID = "kof",
+          Name = "King of Fighters",
+          Description = "King of Fighters is a fighting game seriesdeveloped by SNK.",
+          Developer = "SNK",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          Genre = Genre.Fighting,
+          PlayWith = new List<int> { 1, 2 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 1994, Month = 8, Day = 25}  	
+          ]
+        },
+        new Game {
           GameID = "lambdafortress",
           Name = "Lambda Fortress",
           Description = "A Source engine mod that allows for co-op gameplay of Half-Life 2 with the mercenaries from Team Fortress 2.",
@@ -4066,6 +4364,24 @@ namespace ASP_site.Data.Initializers {
           PlayWith = new List<int> { 0 },
           ReleaseDates = [
             new ReleaseDate{Year = 2007},
+          ]
+        },
+        new Game {
+          GameID = "prey",
+          Name = "Prey",
+          Description = "Prey is a first-person shooter game developed by Arkane Studios.",
+          EngineID = "CryEngineV",
+          Developer = "Arkane Studios",
+          SteamID = 480490,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2017, Month = 5, Day = 4},
           ]
         },
         new Game {

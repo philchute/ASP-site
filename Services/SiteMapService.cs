@@ -34,9 +34,11 @@ public class SiteMapService
                     Label = "Chess",
                     Children = new List<SiteNode>
                     {
+                        new SiteNode { Id = "chess", Label = "Chess", Url = "/Chess/Index" },
                         new SiteNode { Id = "pieces", Label = "Pieces", Url = "/Chess/Pieces" },
                         new SiteNode { Id = "armies", Label = "Armies", Url = "/Chess/Armies/Index" },
                         new SiteNode { Id = "variants", Label = "Variants", Url = "/Chess/Variants/Index" },
+                        new SiteNode { Id = "history", Label = "History", Url = "/Chess/History" },
                         new SiteNode { Id = "parser", Label = "Betza Parser", Url = "/Chess/Parser" },
                     }
                 },
@@ -68,6 +70,7 @@ public class SiteMapService
                         new SiteNode { Id = "events", Label = "Events", Url = "/Events/Index" },
                         new SiteNode { Id = "links", Label = "Links", Url = "/Links/Index" },
                         new SiteNode { Id = "years", Label = "Years", Url = "/Years/Index" },
+                        new SiteNode { Id = "releases", Label = "Releases", Url = "/Releases/Index" },
                     }
                 },
             }

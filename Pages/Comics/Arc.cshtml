@@ -1,0 +1,62 @@
+@page "/Comics/{id}"
+@model ASP_site.Pages.Comics.ArcModel
+
+@{
+    ViewData["Title"] = Model.Arc?.Title ?? "Story Arc";
+}
+
+@if (Model.Arc == null)
+{
+    <p>Story arc not found.</p>
+}
+else
+{
+    <div class="jumbotron p-2">
+        <h1 class="display-4">@Model.Arc.Title</h1>
+    </div>
+    <hr />
+
+    @if (!string.IsNullOrEmpty(Model.Arc.Description))
+    {
+        <div>@Model.Arc.Description</div>
+        <hr />
+    }
+
+    @if (Model.Issues.Any())
+    {
+        <h4>Issues</h4>
+        <ul>
+            @foreach (var issue in Model.Issues)
+            {
+                <li>
+                    @issue.SeriesTitle #@issue.IssueNumber
+                    @if (issue.PublishYear.HasValue)
+                    {
+                        <span class="text-muted">(@issue.PublishYear)</span>
+                    }
+                </li>
+            }
+        </ul>
+        <hr />
+    }
+
+    @if (Model.Arc.AdaptedMedia.Any() || Model.Arc.AdaptedGames.Any() || Model.Arc.AdaptedBooks.Any())
+    {
+        <h4>Adaptations</h4>
+        <ul>
+            @foreach (var media in Model.Arc.AdaptedMedia)
+            {
+                <li>Movie / TV: <a asp-page="/Media/Details" asp-route-id="@media.MediaID">@media.Title</a> (@media.ReleaseYear)</li>
+            }
+            @foreach (var game in Model.Arc.AdaptedGames)
+            {
+                <li>Game: <a asp-page="/Games/Game" asp-route-GameID="@game.GameID">@game.Name</a></li>
+            }
+            @foreach (var book in Model.Arc.AdaptedBooks)
+            {
+                <li>Book: <a asp-page="/Books/Book" asp-route-BookTitle="@book.Title">@book.Title</a></li>
+            }
+        </ul>
+        <hr />
+    }
+}

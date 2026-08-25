@@ -55,6 +55,20 @@
     }
 }
 
+@if(Model.Book?.AdaptedFromArcs != null && Model.Book.AdaptedFromArcs.Any())
+{
+    <div>
+        <h4>Adapted from</h4>
+        <ul>
+            @foreach (var arc in Model.Book.AdaptedFromArcs)
+            {
+                <li><a asp-page="/Comics/Arc" asp-route-id="@arc.ArcID">@arc.Title</a></li>
+            }
+        </ul>
+    </div>
+    <hr/>
+}
+
 @if(Model.BookLinks.Any()) 
 {
     <div>

@@ -37,5 +37,13 @@ namespace ASP_site.Helpers
 
             return decodedString.Trim();
         }
+
+        public static string ToSlug(string value)
+        {
+            if (string.IsNullOrWhiteSpace(value)) return "";
+            var slug = value.Trim().ToLowerInvariant();
+            slug = Regex.Replace(slug, @"[^a-z0-9]+", "-");
+            return slug.Trim('-');
+        }
     }
 } 

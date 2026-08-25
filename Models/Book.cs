@@ -36,6 +36,8 @@ namespace ASP_site.Models
         public string? ParentCollectionTitle { get; set; }
         public Book? ParentCollection { get; set; }
 
+        public string? Slug { get; set; }
+
         // Navigation property for many-to-many relationship
         public ICollection<Tag> Tags { get; set; } = new List<Tag>();
 

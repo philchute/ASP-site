@@ -22,12 +22,13 @@ namespace ASP_site.Pages.Books
     {
       Book = await _context.Books
         .Include(b => b.Tags)
-        .FirstOrDefaultAsync(b => b.Title == BookTitle);
+        .Include(b => b.AdaptedFromArcs)
+        .FirstOrDefaultAsync(b => b.Title == BookTitle || b.Slug == BookTitle);
 
       if (Book != null)
       {
           BookLinks = await _context.Links
-              .Where(l => l.BookTitle == BookTitle)
+              .Where(l => l.BookTitle == Book.Title)
               .ToListAsync();
       }
     }

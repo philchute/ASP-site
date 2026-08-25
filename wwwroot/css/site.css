@@ -298,9 +298,31 @@ section.grid a:hover {
 }
 
 /* 7. Shared Table Utilities */
-.table-row-hover:hover {
+.table-row-hover:hover,
+.table-row-hover.is-open {
     background-color: #1a1a1a;
     transition: background-color 0.15s ease-in-out;
+}
+
+.timeline-row {
+    cursor: pointer;
+}
+
+.timeline-row:focus {
+    outline: 1px solid rgba(100, 140, 255, 0.4);
+}
+
+.timeline-detail {
+    display: none;
+}
+
+.timeline-row.is-open .timeline-detail {
+    display: block;
+}
+
+.server-row.copied-feedback td {
+    background-color: rgba(100, 140, 255, 0.25) !important;
+    transition: background-color 0.1s ease-in-out;
 }
 
 /* ==========================================================================

@@ -5,8 +5,6 @@ using ASP_site.Helpers;
 using ASP_site.Services;
 using ASP_site.Models.ServerBrowser;
 using Microsoft.Extensions.Logging;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace ASP_site.Pages.Servers
 {
@@ -25,126 +23,140 @@ namespace ASP_site.Pages.Servers
             _serverBrowserService = serverBrowserService;
             _gameDataService = gameDataService;
             _logger = logger;
-            GamesList = new List<Game>(); // Initialize lists
-            ServerList = new List<GameServerItem>();
+            GamesList = new List<Game>();
         }
 
-        // Properties to hold data for the view
         public List<Game> GamesList { get; set; }
-        public List<GameServerItem> ServerList { get; set; }
         public Game? SelectedGame { get; set; }
         public bool IsLoading { get; set; }
         public string? ErrorMessage { get; set; }
 
-        // Bind properties for Game Selection, Sorting, and Filtering
         [BindProperty(SupportsGet = true)]
         public string? GameId { get; set; }
 
         [BindProperty(SupportsGet = true)]
-        public string SortBy { get; set; } = "players"; // Default sort
+        public string SortBy { get; set; } = "players";
 
         [BindProperty(SupportsGet = true)]
-        public string VacFilter { get; set; } = "all"; // all, yes, no
+        public string VacFilter { get; set; } = "all";
 
         [BindProperty(SupportsGet = true)]
-        public string PopulationFilter { get; set; } = "all"; // Changed from EmptyFilter, new default "all"
+        public string PopulationFilter { get; set; } = "all";
 
         [BindProperty(SupportsGet = true)]
-        public string PasswordFilter { get; set; } = "all"; // all, yes, no
+        public string PasswordFilter { get; set; } = "all";
 
         public async Task OnGetAsync()
         {
-            _logger.LogInformation("Servers page accessed.");
-            IsLoading = false;
-            ErrorMessage = null;
+            ViewData["ActivePage"] = "Servers";
+            await _gameDataService.InitializeAsync();
+            GamesList = _gameDataService.GetGames().OrderBy(g => g.Name).ToList();
+
+            if (!string.IsNullOrEmpty(GameId))
+            {
+                SelectedGame = _gameDataService.GetGameById(GameId);
+                if (SelectedGame == null)
+                {
+                    ErrorMessage = $"Selected game with ID '{GameId}' not found.";
+                }
+                else
+                {
+                    IsLoading = true;
+                }
+            }
+        }
+
+        public async Task<IActionResult> OnGetListAsync()
+        {
+            await _gameDataService.InitializeAsync();
+            if (string.IsNullOrEmpty(GameId))
+            {
+                return JsonError("No game selected.");
+            }
+
+            var game = _gameDataService.GetGameById(GameId);
+            if (game == null)
+            {
+                return JsonError($"Selected game with ID '{GameId}' not found.");
+            }
 
             try
             {
-                ViewData["ActivePage"] = "Servers";
-
-                // Always load the game list for the dropdown
-                await _gameDataService.InitializeAsync(); // Ensure games are loaded
-                GamesList = _gameDataService.GetGames().OrderBy(g => g.Name).ToList();
-                _logger.LogInformation($"Loaded {GamesList.Count} games for display.");
-
-                // Check if a game ID is selected
-                if (!string.IsNullOrEmpty(GameId))
+                var rawServerList = await _serverBrowserService.FetchServers(game);
+                if (rawServerList == null)
                 {
-                    _logger.LogInformation($"Game ID '{GameId}' selected. Fetching servers...");
-                    IsLoading = true; // Set loading true before fetch
-                    SelectedGame = _gameDataService.GetGameById(GameId);
-
-                    if (SelectedGame != null)
-                    {
-                        // Fetch the raw server list
-                        var rawServerList = await _serverBrowserService.FetchServers(SelectedGame);
-                        IsLoading = false; // Set loading false after fetch
-
-                        if (rawServerList == null)
-                        {
-                            ErrorMessage = $"Could not fetch server list for {SelectedGame.Name}. The game server browser service might be unavailable or the game might not be supported correctly.";
-                            ServerList = new List<GameServerItem>();
-                        }
-                        else
-                        {
-                            _logger.LogInformation($"Fetched {rawServerList.Count} servers for {SelectedGame.Name}. Applying filters and sorting...");
-                            // Apply Filters
-                            IEnumerable<GameServerItem> filteredList = rawServerList;
-
-                            if (VacFilter == "yes")
-                                filteredList = filteredList.Where(s => s.RequiresVAC == true);
-                            else if (VacFilter == "no")
-                                filteredList = filteredList.Where(s => s.RequiresVAC == false);
-
-                            // Apply Population Filter
-                            if (PopulationFilter == "hide_empty") 
-                            {
-                                filteredList = filteredList.Where(s => s.Players > 0);
-                            }
-                            else if (PopulationFilter == "hide_full")
-                            {
-                                filteredList = filteredList.Where(s => s.Players < s.MaxPlayers);
-                            }
-                            // "all" case requires no action here
-
-                            if (PasswordFilter == "yes")
-                                filteredList = filteredList.Where(s => s.PasswordProtected == true);
-                            else if (PasswordFilter == "no")
-                                filteredList = filteredList.Where(s => s.PasswordProtected == false);
-
-                            // Apply Sorting
-                            switch (SortBy?.ToLowerInvariant())
-                            {
-                                case "name":
-                                    filteredList = filteredList.OrderBy(s => s.Name);
-                                    break;
-                                case "map":
-                                    filteredList = filteredList.OrderBy(s => s.Map).ThenByDescending(s => s.Players);
-                                    break;
-                                case "players": // Default
-                                default:
-                                    filteredList = filteredList.OrderByDescending(s => s.Players).ThenBy(s => s.Name);
-                                    break;
-                            }
-
-                            ServerList = filteredList.ToList();
-                            _logger.LogInformation($"Displaying {ServerList.Count} servers after filtering and sorting.");
-                        }
-                    }
-                    else
-                    {
-                        IsLoading = false; // Also set loading false if game not found
-                        ErrorMessage = $"Selected game with ID '{GameId}' not found.";
-                    }
+                    return JsonError($"Could not fetch server list for {game.Name}. The game server browser service might be unavailable or the game might not be supported correctly.");
                 }
+
+                var filtered = ApplyFiltersAndSort(rawServerList);
+                return new JsonResult(new
+                {
+                    gameName = game.Name,
+                    servers = filtered.Select(s => new ServerListDto
+                    {
+                        Name = s.Name,
+                        Map = s.Map,
+                        PlayersStr = s.PlayersStr,
+                        IpPort = $"{s.Address}:{s.Port}",
+                        Environment = s.Environment.ToString(),
+                        ServerType = s.ServerType.ToString(),
+                        RequiresVAC = s.RequiresVAC,
+                        PasswordProtected = s.PasswordProtected
+                    }).ToList()
+                }, new System.Text.Json.JsonSerializerOptions { PropertyNamingPolicy = System.Text.Json.JsonNamingPolicy.CamelCase });
             }
             catch (Exception ex)
             {
-                IsLoading = false;
-                _logger.LogError(ex, "Error loading server page data.");
-                ErrorMessage = "An error occurred while trying to load server data. Please try again later.";
-                ServerList = new List<GameServerItem>(); // Ensure list is empty on error
+                _logger.LogError(ex, "Error fetching server list for {GameId}", GameId);
+                return JsonError("An error occurred while trying to load server data. Please try again later.");
             }
+        }
+
+        private List<GameServerItem> ApplyFiltersAndSort(IEnumerable<GameServerItem> rawServerList)
+        {
+            IEnumerable<GameServerItem> filteredList = rawServerList;
+
+            if (VacFilter == "yes")
+                filteredList = filteredList.Where(s => s.RequiresVAC == true);
+            else if (VacFilter == "no")
+                filteredList = filteredList.Where(s => s.RequiresVAC == false);
+
+            if (PopulationFilter == "hide_empty")
+                filteredList = filteredList.Where(s => s.Players > 0);
+            else if (PopulationFilter == "hide_full")
+                filteredList = filteredList.Where(s => s.Players < s.MaxPlayers);
+
+            if (PasswordFilter == "yes")
+                filteredList = filteredList.Where(s => s.PasswordProtected == true);
+            else if (PasswordFilter == "no")
+                filteredList = filteredList.Where(s => s.PasswordProtected == false);
+
+            filteredList = SortBy?.ToLowerInvariant() switch
+            {
+                "name" => filteredList.OrderBy(s => s.Name),
+                "map" => filteredList.OrderBy(s => s.Map).ThenByDescending(s => s.Players),
+                _ => filteredList.OrderByDescending(s => s.Players).ThenBy(s => s.Name)
+            };
+
+            return filteredList.ToList();
+        }
+
+        private JsonResult JsonError(string message)
+        {
+            return new JsonResult(new { error = message, servers = Array.Empty<ServerListDto>() },
+                new System.Text.Json.JsonSerializerOptions { PropertyNamingPolicy = System.Text.Json.JsonNamingPolicy.CamelCase });
+        }
+
+        public class ServerListDto
+        {
+            public string Name { get; set; } = "";
+            public string Map { get; set; } = "";
+            public string PlayersStr { get; set; } = "";
+            public string IpPort { get; set; } = "";
+            public string Environment { get; set; } = "";
+            public string ServerType { get; set; } = "";
+            public bool? RequiresVAC { get; set; }
+            public bool? PasswordProtected { get; set; }
         }
     }
 }

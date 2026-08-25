@@ -97,12 +97,10 @@ namespace ASP_site.Services
 
         public async Task<List<string>> GetAllTimelinesAsync()
         {
-            var allSeries = await _context.Gundams
-                .SelectMany(g => g.Series)
-                .Distinct()
-                .ToListAsync();
+            var gundams = await _context.Gundams.ToListAsync();
 
-            return allSeries
+            return gundams
+                .SelectMany(g => g.Series)
                 .Select(s => GundamHelpers.GetTimeline(s))
                 .Distinct()
                 .OrderBy(t => t)
