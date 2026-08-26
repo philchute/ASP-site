@@ -195,57 +195,6 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
-          GameID = "americanmcgeesalice",
-          Name = "American McGee's Alice",
-          Description = "American McGee's Alice is a 2000 action-adventure game developed by Rouge Entertainment and published by Electronic Arts.",
-          Developer = "Rouge Entertainment",
-          EngineID = "idtech3",
-          IsFree = false,
-          IsPaid = true,
-          IsOpenSource = false,
-          IsDeveloperMaintained = false,
-          IsCommunityMaintained = false,
-          Genre = Genre.Adventure,
-          PlayWith = new List<int> { 0 },
-          ReleaseDates = [
-            new ReleaseDate{Year = 2000, Month = 12, Day = 5}
-          ]
-        },
-        new Game {
-          GameID = "alienisolation",
-          Name = "Alien: Isolation",
-          Description = "A 2014 survival horror game set 15 years after Alien. Amanda Ripley investigates the disappearance of her mother aboard the Sevastopol space station while evading a single xenomorph.",
-          Developer = "Creative Assembly",
-          SteamID = 214490,
-          IsFree = false,
-          IsPaid = true,
-          IsOpenSource = false,
-          IsDeveloperMaintained = false,
-          IsCommunityMaintained = false,
-          Genre = Genre.Adventure,
-          SettingYear = 2137,
-          PlayWith = new List<int> { 0 },
-          ReleaseDates = [
-            new ReleaseDate{Year = 2014, Month = 10, Day = 7}
-          ]
-        },
-        new Game {
-          GameID = "attackersgored",
-          Name = "Attackers Go Red",
-          Description = "A team-based multiplayer mod for Quake.",
-          ModForGameID = "quake1",
-          IsFree = true,
-          IsPaid = false,
-          IsOpenSource = false,
-          IsDeveloperMaintained = false,
-          IsCommunityMaintained = true,
-          Genre = Genre.FPS,
-          PlayWith = new List<int> { 0 },
-          ReleaseDates = [
-            new ReleaseDate{Year = 2000}
-          ]
-        },
-        new Game {
           GameID = "AvP(Arcade)",
           Name = "Alien vs. Predator",
           Description = "Alien vs. Predator is a 1994 beat 'em up video game developed and released by Capcom for the CPS-2 arcade game system.",
@@ -313,6 +262,213 @@ namespace ASP_site.Data.Initializers {
             new ReleaseDate{Year = 2010, Month = 2, Day = 16, Region = Region.NA},
             new ReleaseDate{Year = 2010, Month = 2, Day = 18, Region = Region.AU},
             new ReleaseDate{Year = 2010, Month = 2, Day = 19, Region = Region.EU}
+          ]
+        },
+        new Game {
+          GameID = "alienscolonialmarines",
+          Name = "Aliens: Colonial Marines",
+          Description = "Aliens: Colonial Marines is a first-person shooter developed by Gearbox Software and published by Sega for PlayStation 3, Windows, and Xbox 360. Based on the Alien 20th Century Fox universe and set shortly after the 1986 film Aliens, the game follows the story of a squad of Marines sent to investigate a distress signal from a colony on the planet LV-426.",
+          Developer = "Gearbox Software",
+          EngineID = "unreal3",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2013, Month = 2, Day = 12}
+          ]
+        },
+
+        new Game {
+          GameID = "alien:descent",
+          Name = "Alien: Descent",
+          Description = "Alien: Descent is a virtual reality game developed by Pure Imagination Studios and published by Pure Imagination Studios.",
+          Developer = "Pure Imagination Studios",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2018}
+          ]
+        },
+
+        new Game {
+          GameID = "predatorvr",
+          Name = "Predator VR",
+          Description = "Predator VR is a virtual reality game developed by 20th Century Fox and published by 20th Century Fox.",
+          Developer = "20th Century Fox",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2018}
+          ]
+        },
+        new Game {
+          GameID = "predatorhuntinggrounds",
+          Name = "Predator: Hunting Grounds",
+          Description = "Predator: Hunting Grounds is a first-person shooter video game developed by Illfonic and published by Sony Interactive Entertainment for PlayStation 4, PlayStation 5, Windows, and Xbox Series X/S.",
+          Developer = "Illfonic",
+          EngineID = "unreal4",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1, 4, 5 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2020, Month = 4, Day = 24}
+          ]
+        },
+        new Game {
+          GameID = "aliensrogueincursion",
+          Name = "Aliens: Rogue Incursion",
+          Description = "Aliens: Rogue Incursion is a virtual reality game developed and published by Survios. It is based on the Alien franchise, taking place between the films Alien and Aliens. An action and survival horror game, it follows Zula Hendricks, a character from several Alien comics and novels, as she navigates a facility overrun by xenomorphs.",
+          Developer = "Survios",
+          EngineID = "unreal5",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2024, Month = 12, Day = 19}
+
+          ]
+        },
+        new Game {
+          GameID = "aliensdarkdescent",
+          Name = "Aliens: Dark Descent",
+          Description = "Aliens: Dark Descent is a real-time tactics video game developed by Tindalos Interactive in collaboration with 20th Century Games and published by Focus Entertainment. Set in the Alien universe, the game was released for PlayStation 4, PlayStation 5, Windows, Xbox One, and Xbox Series X/S on June 20, 2023. It received generally positive reviews from critics.",
+          Developer = "Tindalos Interactive",
+          EngineID = "unreal5",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.RTS,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2023, Month = 6, Day = 20}
+          ]
+        },
+        new Game {
+          GameID = "aliensfireteamelite",
+          Name = "Aliens: Fireteam Elite",
+          Description = "Aliens: Fireteam Elite is a 2021 first-person shooter video game developed by Cold Iron Studios and published by Sega for PlayStation 4, PlayStation 5, Windows, Xbox One, Xbox Series X/S, and Nintendo Switch.",
+          Developer = "Cold Iron Studios",
+          EngineID = "unreal4",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.TPS,
+          PlayWith = new List<int> { 0, 1, 4 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2021, Month = 8, Day = 24}
+          ]
+        },
+        new Game {
+          GameID = "aliensfireteamelite2",
+          Name = "Aliens: Fireteam Elite 2",
+          Description = "Aliens: Fireteam Elite 2 is an upcoming first-person shooter video game developed by Cold Iron Studios and published by Sega.",
+          Developer = "Cold Iron Studios",
+          EngineID = "unreal5",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.TPS,
+          PlayWith = new List<int> { 0, 1, 4 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2026, Month = 8, Day = 25}
+          ]
+        },
+        new Game {
+          GameID = "alienisolation",
+          Name = "Alien: Isolation",
+          Description = "A 2014 survival horror game set 15 years after Alien. Amanda Ripley investigates the disappearance of her mother aboard the Sevastopol space station while evading a single xenomorph.",
+          Developer = "Creative Assembly",
+          SteamID = 214490,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.Adventure,
+          SettingYear = 2137,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2014, Month = 10, Day = 7}
+          ]
+        },
+        new Game {
+          GameID = "alienisolation2",
+          Name = "Alien: Isolation 2",
+          Description = "Alien: Isolation 2 is an upcoming survival horror video game developed by Creative Assembly and published by Sega.",
+          Developer = "Creative Assembly",
+          EngineID = "unreal5",
+          SteamID = 4665290,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.Adventure,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2027}
+          ]
+        },
+
+        new Game {
+          GameID = "americanmcgeesalice",
+          Name = "American McGee's Alice",
+          Description = "American McGee's Alice is a 2000 action-adventure game developed by Rouge Entertainment and published by Electronic Arts.",
+          Developer = "Rouge Entertainment",
+          EngineID = "idtech3",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.Adventure,
+          PlayWith = new List<int> { 0 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2000, Month = 12, Day = 5}
+          ]
+        },
+        new Game {
+          GameID = "attackersgored",
+          Name = "Attackers Go Red",
+          Description = "A team-based multiplayer mod for Quake.",
+          ModForGameID = "quake1",
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = true,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2000}
           ]
         },
         new Game {

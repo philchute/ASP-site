@@ -149,7 +149,7 @@ namespace ASP_site.Data.Initializers
                 {
                     Id = 17,
                     Title = "Engine page updates, Aliens page added",
-                    Content = "<p>I am deep in work on the greatest development project yet, but I did find the time today to update this site. Made some internal tweaks and enhanced the Game [Engines](./Engines) page with more information and added a new Aliens vs Predator page.</p>",
+                    Content = "<p>I am deep in work on the greatest development project yet, but I did find the time today to update this site. Made some internal tweaks and enhanced the Game Engines page with more information and added a new Alien vs Predator page.</p>",
                     PostedDate = new DateTime(2026, 8, 25, 12, 0, 0, DateTimeKind.Utc), Author = "Phil",
                     Tags = new List<Tag> { tags.Single(t => t.Name == "Website Update") }
                 },

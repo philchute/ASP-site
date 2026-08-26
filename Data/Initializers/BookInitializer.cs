@@ -14265,7 +14265,7 @@ namespace ASP_site.Data.Initializers
                     Description = "Set between the events of Alien and Aliens, the novel tells the story of a group of miners harvesting trimonite, the hardest material known to man, on the planet LV-178. Deep within the mines, they uncover the ruins of an ancient civilization infested with Xenomorphs, which infiltrate the miners' spaceship, the Marion. Ellen Ripley's shuttle, the Narcissus, picks up a distress call from the Marion and docks with it, and she is left to help the miners survive the Xenomorphs as well as uncover why the shuttle seemed to dock on its own accord. Published by Titan Books. 344 pages",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Collection: The Complete Alien Collection: The Shadow Archive" }
+                        new Tag { Name = "Collection: The Complete Aliens Collection - The Shadow Archive" }
                     }
                 },
                 new Book
@@ -14280,7 +14280,7 @@ namespace ASP_site.Data.Initializers
                     Description = "The novel tells the life story of Jenette Vasquez long before the doomed mission to Hadley's Hope, from joining a street gang, followed by prison, joining the Colonial Marines, and giving up her twin children Leticia and Ramón to be raised by her sister, leading into the events of Aliens, before cutting decades later to the Vasquez twins respectively joining the military and Weyland-Yutani, their independent investigations into their mother's death leading the two to a world soon-to-be-ravaged by Xenomorphs. Published by Titan Books. 432 pages",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Collection: The Complete Alien Collection: The Living Nightmares" }
+                        new Tag { Name = "Collection: The Complete Aliens Collection - Living Nightmares" }
                     }
                 },
                 new Book
@@ -14306,7 +14306,7 @@ namespace ASP_site.Data.Initializers
                     Description = "In this novel, the Xenomorph infestation of Hadley's Hope on Acheron (LV-426), which occurred off-screen in Aliens, is depicted. It notably incorporates several sequences previously seen in the comic Aliens: Newt's Tale and also references the events of the Fire and Stone comic. Published by Titan Books. 341 pages",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Collection: The Complete Alien Collection: The Shadow Archive" }
+                        new Tag { Name = "Collection: The Complete Aliens Collection - The Shadow Archive" }
                     }
                 },
                 new Book
@@ -14365,7 +14365,7 @@ namespace ASP_site.Data.Initializers
                     Description = "The Weyland-Yutani Corporation breeds Xenomorphs from eggs acquired through unknown means aboard the Cold Forge, a secret deep space research station on which the company is hoping to develop the creatures as biological weapons. Dr. Blue Marsalis, the physically handicapped scientist heading the experiments, secretly seeks to harvest a sample of a virulent mutagen produced by the Xenomorphs to cure her terminal degenerative illness. Her research is put in jeopardy when Dorian Sudler, a malicious auditor from Weyland-Yutani, is sent to review the station's work. Things are only further complicated when an unknown saboteur unleashes the Xenomorph specimens from containment, setting them loose aboard the station. Published by Titan Books. 332 pages",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Collection: The Complete Alien Collection: Symphony of Death" }
+                        new Tag { Name = "Collection: The Complete Aliens Collection - Symphony of Death" }
                     }
                 },
                 new Book
@@ -14380,7 +14380,7 @@ namespace ASP_site.Data.Initializers
                     Description = "A follow-up to The Cold Forge, Into Charybdis follows the crew of the science vessel USS Gardenia, which is working for the technology supplier company McAllen Integrations. Under the company's instructions, the ship travels to Charybdis, an Iranian colony set up on the planet LV-991, to design and install vital systems to the colony's infrastructure. They instead find a Xenomorph running lose in the facility, and the chaos brewed from the creature's rampage threatens to cause a diplomatic crisis between the Americans and the Iranians, prompting the Colonial Marines to respond. Published by Titan Books. 560 pages",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Collection: The Complete Alien Collection: Symphony of Death" }
+                        new Tag { Name = "Collection: The Complete Aliens Collection - Symphony of Death" }
                     }
                 },
                 new Book
@@ -14395,7 +14395,7 @@ namespace ASP_site.Data.Initializers
                     Description = "A prequel to the video game Aliens: Fireteam Elite, Infiltrator stars Weyland-Yutani scientist Dr. Timothy Hoenikker. Hired by the company under the presumption that he is needed to study extraterrestrial artifacts, Hoenikker instead ends up on Pala Station, a facility run by a warped bureaucracy where Xenomorphs are being bred and the species' bio-materials are being used on other life forms. Due to the actions of an unknown saboteur, the operation predictably falls out of control. Published by Titan Books. 344 pages",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Collection: The Complete Alien Collection: Living Nightmares" }
+                        new Tag { Name = "Collection: The Complete Aliens Collection - Living Nightmares" }
                     }
                 },
                 new Book
@@ -14420,7 +14420,7 @@ namespace ASP_site.Data.Initializers
                     Description = "Although this book is based on the second film of the franchise, it is the sequel to the 1997 film Alien Resurrection. It brings back characters like Ripley 8, the clone of Lt. Ellen Ripley, and android Call. It also sorts out unanswered questions from the movies and raises entirely new ones. Was it just coincidence that the Nostromo happened to pass by the desolate planet? Why was the Alien on the crashed ship in the first place? Published by DH Press. 252 pages",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Collection: The Complete Aliens Omnibus: Volume 5" }
+                        new Tag { Name = "Collection: The Complete Aliens Omnibus - Volume 5" }
                     }
                 },
                 new Book
@@ -14434,7 +14434,7 @@ namespace ASP_site.Data.Initializers
                     Description = "It follows detective Rory Malvaux and the crew of the Vinza as they attempt to extract a group of scientists — including Rory's mother Jocasta — who have unexpectedly encountered Xenomorphs on the planet Rosamond 6. However, upon arriving, the Vinza's crew discover the scientists are not only unwilling to leave, but may be engaging in foul play to preserve the very creatures that stalk them. Published by DH Press. 269 pages",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Collection: The Complete Aliens Omnibus: Volume 5" }
+                        new Tag { Name = "Collection: The Complete Aliens Omnibus - Volume 5" }
                     }
                 },
                 new Book
@@ -14448,7 +14448,7 @@ namespace ASP_site.Data.Initializers
                     Description = "It follows the crews of two cargo starships, the Virginia and the Umiak, as an attempt to illicitly smuggle live Xenomorphs unleashes the deadly creatures upon them. Published by DH Press. 284 pages",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Collection: The Complete Aliens Omnibus: Volume 6" }
+                        new Tag { Name = "Collection: The Complete Aliens Omnibus - Volume 6" }
                     }
                 },
                 new Book
@@ -14462,7 +14462,7 @@ namespace ASP_site.Data.Initializers
                     Description = "Set several decades before the events of the original Alien, the story concerns the crew of the UNIC Hornblower, who are dispatched on a routine survey mission to Saturn where they discover an ancient extraterrestrial spacecraft in orbit around Iapetus, one of the planet's moons. Upon boarding the mysterious vessel, the unprepared crew soon find themselves trapped in a fight for survival against the Xenomorphs that they accidentally awaken on board. Published by DH Press. 270 pages",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Collection: The Complete Aliens Omnibus: Volume 6" }
+                        new Tag { Name = "Collection: The Complete Aliens Omnibus - Volume 6" }
                     }
                 },
                 new Book
@@ -14476,7 +14476,7 @@ namespace ASP_site.Data.Initializers
                     Description = "When his brother falls into debt with ruthless drug dealers, Tommy Chase is forced to take a one-time assignment piloting one of the organization's transport ships to wipe the slate clean. The journey takes him to the remote planet called Fantasia, where the dealers operate a secret drug lab kept safe by the horde of frenetic Xenomorphs that swarm Fantasia's surface. However, when the facility comes under attack from rival forces, the creatures intended to keep the operation safe become an unstoppable threat to everyone on the planet. Published by DH Press. 222 pages",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Collection: The Complete Aliens Omnibus: Volume 7" }
+                        new Tag { Name = "Collection: The Complete Aliens Omnibus - Volume 7" }
                     }
                 },
                 new Book
@@ -14490,7 +14490,7 @@ namespace ASP_site.Data.Initializers
                     Description = "The story follows a group of scientists who are sent to a remote planet to study the Xenomorphs. However, upon arriving, they discover that the Xenomorphs are not alone and are being used by a group of scientists to create a new weapon. Published by DH Press. 283 pages",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Collection: The Complete Aliens Omnibus: Volume 7" }
+                        new Tag { Name = "Collection: The Complete Aliens Omnibus - Volume 7" }
                     }
                 },
                 new Book
@@ -14545,7 +14545,7 @@ namespace ASP_site.Data.Initializers
                     Description = "A follow-up to Out of the Shadows, set many years after Alien Resurrection. LV-178 is now colonized and renamed New Galveston, with Alan Decker, a deputy commissioner for the ICC, charged with making sure the settlements on the planet follow all the rules. While investigating region of the planet with incredibly toxic sands, dubbed the Sea of Sorrows, Decker's previously latent empathic abilities cause him to briefly connect with the Xenomorphs still lying dormant beneath the planet. The Weyland-Yutani Corporation sees this as another opportunity to capture one of the creatures, forcibly recruiting Decker onto a team of mercenaries to accomplish this. Decker is unable to refuse, as centuries ago, his ancestor fought the Xenomorphs, launching a bloody vendetta that was never satisfied. That was when the creatures swore revenge on the Destroyer… Ellen Ripley. Published by Titan Books. 351 pages",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Collection: The Complete Aliens Collection: Living Nightmares" }
+                        new Tag { Name = "Collection: The Complete Aliens Collection - Living Nightmares" }
                     }
                 },
                 new Book
@@ -14609,7 +14609,7 @@ namespace ASP_site.Data.Initializers
                     Description = "Adapted from the Dark Horse Comics series Aliens vol. 1 (Also known as Aliens: Outbreak) (1988–1989). Wilks was a space marine with a near-fatal flaw: he had a heart. Billie was a child, the only survivor of a far-flung colony outpost. Thrown together in the last hellish night of an Alien invasion, Billie and Wilks helped each other get out alive. Thirteen years later Wilks is in prison, and Billie lives in a mental institution, the nightmare memories of the massacre at Rim seared into her mind. Now the government has tapped Wilks to lead an expedition to the Aliens' home planet to bring back a live Alien. But the competition on Earth to develop the Aliens as a new weapons system is brutal. When Wilks's team departs on their mission, a trained assassin trails them. And what follows is no less than guerrilla warfare on the Aliens' planet — and Alien conquest on Earth! Published by Bantam Books. 278 pages",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Collection: The Complete Aliens Omnibus: Volume 1" }
+                        new Tag { Name = "Collection: The Complete Aliens Omnibus - Volume 1" }
                     }
                 },
                 new Book
@@ -14623,7 +14623,7 @@ namespace ASP_site.Data.Initializers
                     Description = "Adapted from the Dark Horse Comics series Aliens vol. 2 (Also known as Aliens: Nightmare Asylum) (1989–1990). Wilks, Billie, and Bueller were the last survivors of a devastating assault on the Aliens' home planet. But once their return to the Solar System made them refugees once more, fleeing Earth and its Alien infestation in a desperate attempt to stay alive. Now, in an otherwise unmanned military transport, they hurtle through space. Destination: unknown. Little do they know that the cargo they carry with them is a legacy of death that they will ultimately have to face. Nor do they know that they head toward a remote colony and military outpost. This pocket of humanity at the very edges of space is at the mercy of a general named Spears with an agenda all his own. Now Billie, Wilks, and Bueller face a new nightmare, and it is nothing they could ever have imagined: a gift of madness from an Alien world, unbalanced mind, and the experiences of a mysterious pilot named Lieutenant Ellen Ripley. Published by Bantam Books. 277 pages",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Collection: The Complete Aliens Omnibus: Volume 1" }
+                        new Tag { Name = "Collection: The Complete Aliens Omnibus - Volume 1" }
                     }
                 },
                 new Book
@@ -14637,7 +14637,7 @@ namespace ASP_site.Data.Initializers
                     Description = "Adapted from the Dark Horse Comics series Aliens: Earth War (also known as Aliens: Female War) (1990). Lieutenant Ellen Ripley awoke from her long journey in space with a hole in her memory and an overwhelming drive to survive. When she meets Wilks and Billie, two battered veterans in the war against the Aliens she realizes she's found two comrades in arms — and she's ready to take up the fight. Only then does she discover the devastating secret that lurks behind her long sleep. When she, Wilks, and Billie prepare to meet the Aliens head-on to turn a powerful Alien queen against her spawn in a battle intended to save Earth, that secret becomes her greatest weapon — and her greatest liability. As the fate of Earth hangs in the balance, Ripley and Billie must come to terms with what it means to be Alien… and what it means to be human. Published by Bantam Books. 293 pages",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Collection: The Complete Aliens Omnibus: Volume 1" }
+                        new Tag { Name = "Collection: The Complete Aliens Omnibus - Volume 1" }
                     }
                 },
                 new Book
@@ -14651,7 +14651,7 @@ namespace ASP_site.Data.Initializers
                     Description = "Adapted from the Dark Horse Comics series Aliens: Genocide (1991–1992). Published by Bantam Books. 181 pages",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Collection: The Complete Aliens Omnibus: Volume 2" }
+                        new Tag { Name = "Collection: The Complete Aliens Omnibus - Volume 2" }
                     }
                 },
                 new Book
@@ -14665,7 +14665,7 @@ namespace ASP_site.Data.Initializers
                     Description = "Adapted from the Dark Horse Comics series Aliens: Hive (also known as Aliens: Harvest) (1992). A dying man becomes involved in a plot to steal royal jelly from an Alien hive, believing it to be a cure for his cancer. Published by Bantam Spectra. 296 pages",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Collection: The Complete Aliens Omnibus: Volume 2" }
+                        new Tag { Name = "Collection: The Complete Aliens Omnibus - Volume 2" }
                     }
                 },
                 new Book
@@ -14679,7 +14679,7 @@ namespace ASP_site.Data.Initializers
                     Description = "Adapted from the Dark Horse Comics series Aliens: Rogue (1993). Welcome to the former penal colony of Charon, where a labyrinth of tunnels offer shelter to an Alien hive. Professor Ernst Kleist rules—a paranoid tyrant whose speciality is making humans disappear. Captain Joyce Palmer is bound for Charon. Only she and a few hand-picked Marines can stop Kleist in his tracks. Only they can stop the professor’s most insane creation—the Rogue. Published by Bantam Spectra. 288 pages",   
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Collection: The Complete Aliens Omnibus: Volume 3" }
+                        new Tag { Name = "Collection: The Complete Aliens Omnibus - Volume 3" }
                     }
                 },
                 new Book
@@ -14693,7 +14693,7 @@ namespace ASP_site.Data.Initializers
                     Description = "Adapted from the Dark Horse Comics series Aliens: Labyrinth (1993–1994). On the space station Innominata the infamous Dr. Paul Church has built a maze of tunnels. Church is hiding the results of his latest experiments. His aim: to bring human and Alien together as one being. Colonel Dr. Tony Crespi has one ambition — to work with Church. But one by one the men on Innominata have been dying in the attempt to meld Alien and man. When Crespi finds his way to the heart of the labyrinth he discovers a chamber of horrors—will he ever be able to find a way out? Published by Bantam Spectra. 243 pages",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Collection: The Complete Aliens Omnibus: Volume 3" }
+                        new Tag { Name = "Collection: The Complete Aliens Omnibus - Volume 3" }
                     }
                 },
                 new Book
@@ -14707,7 +14707,7 @@ namespace ASP_site.Data.Initializers
                     Description = "Adapted from the Dark Horse Comics series Aliens: Music of the Spears (1994). Published by Bantam Spectra. 275 pages",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Collection: The Complete Aliens Omnibus: Volume 4" }
+                        new Tag { Name = "Collection: The Complete Aliens Omnibus - Volume 4" }
                     }
                 },
                 new Book
@@ -14721,7 +14721,7 @@ namespace ASP_site.Data.Initializers
                     Description = "Adapted from the Dark Horse Comics series Aliens: Berserker (1995).",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Collection: The Complete Aliens Omnibus: Volume 4" }
+                        new Tag { Name = "Collection: The Complete Aliens Omnibus - Volume 4" }
                     }
                 },
 
