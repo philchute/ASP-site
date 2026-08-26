@@ -75,7 +75,7 @@ namespace ASP_site.Data.Initializers
             yield return Book(FranchiseBranch.Alien, "Aliens: Steel Egg");
             yield return Book(FranchiseBranch.Alien, "Aliens: Criminal Enterprise");
             yield return Book(FranchiseBranch.Alien, "Aliens: No Exit");
-            yield return Book(FranchiseBranch.Alien, "Aliens: Sea of Sorrows");
+            yield return Book(FranchiseBranch.Alien, "Alien: Sea of Sorrows");
             yield return Book(FranchiseBranch.Crossover, "The Rage War: Predator: Incursion");
             yield return Book(FranchiseBranch.Crossover, "The Rage War: Alien: Invasion");
             yield return Book(FranchiseBranch.Crossover, "The Rage War: Alien vs. Predator: Armageddon");
