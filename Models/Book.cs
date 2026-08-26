@@ -22,10 +22,13 @@ namespace ASP_site.Models
         public string Author { get; set; } = "";
 
         public string? WrittenAs { get; set; } // Pseudonym
+        public int? SettingYear { get; set; }
 
         public int? PublicationYear { get; set; }
 
         public int? PublicationMonth { get; set; }
+
+        public int? PublicationDay { get; set; }
 
         public BookType Type { get; set; }
         

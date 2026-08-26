@@ -13,6 +13,7 @@ namespace ASP_site.Models
         public int ReleaseYear { get; set; }
         public int? ReleaseMonth { get; set; }
         public int? ReleaseDay { get; set; }
+        public int? SettingYear { get; set; }
         
         // Used only for initialization, not saved to DB
         [System.ComponentModel.DataAnnotations.Schema.NotMapped]

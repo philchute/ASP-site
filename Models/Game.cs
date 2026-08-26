@@ -23,6 +23,7 @@ namespace ASP_site.Models {
     public int? SteamID { get; set; }
     public ServerBrowserConfig? ServerConfig { get; set; }
     public int? Year { get; set; }
+    public int? SettingYear { get; set; }
     public ReleaseDate[] ReleaseDates { get; set; } = [];
     public bool IsReleased { get; set; } = true;
     public bool IsPlayable { get; set; } = true;

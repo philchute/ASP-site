@@ -1,20 +1,71 @@
 @model ASP_site.Models.Engine
-
-<div class="mb-2">
-    <div class="card shadow-sm node-card">
+@{
+    var selectedId = ViewData["SelectedEngineID"] as string;
+    var isSelected = string.Equals(Model.EngineID, selectedId, StringComparison.OrdinalIgnoreCase);
+    var games = Model.Games ?? new List<Game>();
+    var gameCount = games.Count;
+    string? previewHtml = null;
+    if (gameCount > 0)
+    {
+        const int maxPreview = 8;
+        var items = new System.Text.StringBuilder();
+        items.Append("<ul class='engine-popover-games mb-0 ps-3'>");
+        foreach (var game in games.Take(maxPreview))
+        {
+            items.Append("<li>");
+            items.Append(System.Net.WebUtility.HtmlEncode(game.Name));
+            if (game.Year.HasValue)
+            {
+                items.Append(" <span class='text-muted'>(").Append(game.Year).Append(")</span>");
+            }
+            items.Append("</li>");
+        }
+        items.Append("</ul>");
+        if (gameCount > maxPreview)
+        {
+            items.Append("<div class='text-muted mt-1'>and ").Append(gameCount - maxPreview).Append(" more</div>");
+        }
+        previewHtml = items.ToString();
+    }
+}
+<div class="engine-node@(isSelected ? " is-selected" : "")" id="engine-@Model.EngineID">
+    <a class="node-card card shadow-sm text-decoration-none"
+       asp-page="/Engines/Index"
+       asp-route-engineID="@Model.EngineID"
+       data-bs-toggle="@(previewHtml != null ? "popover" : null)"
+       data-bs-html="true"
+       data-bs-title="@Model.Name"
+       data-bs-content="@previewHtml">
         <div class="card-body p-2">
-            <h5 class="card-title h6 mb-1">
-                <a asp-page="./Engine" asp-route-EngineID="@Model.EngineID" class="text-decoration-none">@Model.Name</a>
-            </h5>
-            @if(Model.Year != null) {
-                <div class="text-muted small" style="font-size: 0.75em">@Model.Year</div>
+            <div class="d-flex justify-content-between align-items-start gap-2">
+                <h5 class="card-title h6 mb-1">@Model.Name</h5>
+                @if (gameCount > 0)
+                {
+                    <span class="badge engine-game-count">@gameCount</span>
+                }
+            </div>
+            @if (Model.Year != null)
+            {
+                <div class="text-muted small">@Model.Year</div>
+            }
+            @if (!string.IsNullOrEmpty(Model.Developer))
+            {
+                <div class="text-muted small">@Model.Developer</div>
+            }
+            @if (!string.IsNullOrEmpty(Model.DebutGameID))
+            {
+                var names = ViewData["GameNames"] as Dictionary<string, string>;
+                var debutName = names != null && names.TryGetValue(Model.DebutGameID, out var name)
+                    ? name
+                    : Model.DebutGameID;
+                <div class="text-muted small">Debut: @debutName</div>
             }
         </div>
-    </div>
-    
+    </a>
+
     @if (Model.Children != null && Model.Children.Any())
     {
-        <ul>
+        <ul class="engine-node-children">
             @foreach (var child in Model.Children)
             {
                 <li>
@@ -24,4 +75,3 @@
         </ul>
     }
 </div>
-

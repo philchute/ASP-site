@@ -36,6 +36,8 @@ namespace ASP_site.Data
     public DbSet<StoryArc> StoryArcs { get; set; } = null!;
     public DbSet<CollectedEdition> CollectedEditions { get; set; } = null!;
     public DbSet<Media> Media { get; set; } = null!;
+    public DbSet<Franchise> Franchises { get; set; } = null!;
+    public DbSet<FranchiseWork> FranchiseWorks { get; set; } = null!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -269,6 +271,13 @@ namespace ASP_site.Data
             (c1, c2) => JsonSerializer.Serialize(c1, new JsonSerializerOptions()) == JsonSerializer.Serialize(c2, new JsonSerializerOptions()),
             c => c.Aggregate(0, (a, v) => HashCode.Combine(a, v.GetHashCode())),
             c => JsonSerializer.Deserialize<List<string>>(JsonSerializer.Serialize(c, new JsonSerializerOptions()), new JsonSerializerOptions())!));
+
+      modelBuilder.Entity<Franchise>().ToTable("Franchises");
+      modelBuilder.Entity<FranchiseWork>().ToTable("FranchiseWorks");
+      modelBuilder.Entity<Franchise>()
+        .HasMany(f => f.Works)
+        .WithOne(w => w.Franchise)
+        .HasForeignKey(w => w.FranchiseID);
     }
   }
 }

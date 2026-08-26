@@ -1,0 +1,142 @@
+@page "/Universe/{id}"
+@model ASP_site.Pages.Universe.UniverseModel
+@using ASP_site.Helpers
+@using ASP_site.Models
+
+@{
+    ViewData["Title"] = Model.Universe?.Name ?? "Universe";
+    ViewData["ActivePage"] = "Universes";
+}
+
+<div class="container mt-4">
+@if (Model.Universe == null)
+{
+    <p>Universe not found.</p>
+}
+else
+{
+    <form class="mb-4" method="get">
+        <div class="row align-items-end">
+            <div class="col-md-5">
+                <h1 class="display-3">@Model.Universe.Name</h1>
+            </div>
+            <div class="col-md-7">
+                <div class="d-flex justify-content-end align-items-end">
+                    <div class="form-group me-2">
+                        <label class="form-label" for="search-input">Search:</label>
+                        <div class="d-flex">
+                            <input id="search-input" class="form-control" type="text" asp-for="SearchString" />
+                            <button class="btn btn-secondary ms-1" type="submit">Search</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="sort-select">Sort by:</label>
+                        <select id="sort-select" class="form-control" asp-for="SortField" asp-items="Model.SortOptions" onchange="this.form.submit();"></select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="row mt-3">
+            <div class="col-md-2">
+                <label class="form-label fw-bold">Branch:</label>
+                @foreach (var branch in Model.AllBranches)
+                {
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="SelectedBranches" value="@branch.Key" id="branch_@branch.Key" checked="@(Model.SelectedBranches.Contains(branch.Key))" onchange="this.form.submit();" />
+                        <label class="form-check-label" for="branch_@branch.Key">@branch.Value</label>
+                    </div>
+                }
+            </div>
+            <div class="col-md-2">
+                <label class="form-label fw-bold">Type:</label>
+                @foreach (var kind in Model.AllKinds)
+                {
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="SelectedKinds" value="@kind.Key" id="kind_@kind.Key" checked="@(Model.SelectedKinds.Contains(kind.Key))" onchange="this.form.submit();" />
+                        <label class="form-check-label" for="kind_@kind.Key">@kind.Value</label>
+                    </div>
+                }
+            </div>
+            <div class="col-md-8">
+                <label class="form-label fw-bold">Collections:</label>
+                @if (Model.AllCollections.Any())
+                {
+                    <div class="row">
+                        @{
+                            var chunkSize = Math.Max(1, (int)Math.Ceiling(Model.AllCollections.Count / 3.0));
+                        }
+                        @foreach (var chunk in Model.AllCollections.Select((value, i) => new { i, value }).GroupBy(x => x.i / chunkSize))
+                        {
+                            <div class="col-4">
+                                @foreach (var item in chunk)
+                                {
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="SelectedCollections" value="@item.value.Key" id="coll_@item.value.Key.GetHashCode()" checked="@(Model.SelectedCollections.Contains(item.value.Key))" onchange="this.form.submit();" />
+                                        <label class="form-check-label" for="coll_@item.value.Key.GetHashCode()">@item.value.Value</label>
+                                    </div>
+                                }
+                            </div>
+                        }
+                    </div>
+                }
+            </div>
+        </div>
+    </form>
+
+    @if (!string.IsNullOrEmpty(Model.Universe.Description))
+    {
+        <p>@Model.Universe.Description</p>
+    }
+
+    @if (Model.Works.Any())
+    {
+        <section class="grid mt-3">
+            <div class="row g-0 bg-dark text-white fw-bold">
+                <div class="p-1 text-center col-sm-1">Setting</div>
+                <div class="p-1 text-center col-sm-2">Released</div>
+                <div class="p-1 text-center col-sm-1">Type</div>
+                <div class="p-1 text-center col-sm-1">Branch</div>
+                <div class="p-1 text-start col-sm-4">Title <i>(@Model.Works.Count shown)</i></div>
+                <div class="p-1 text-start col-sm-3">Collections</div>
+            </div>
+            @foreach (var work in Model.Works)
+            {
+                var link = work.GetCatalogLink();
+                <div class="row g-0 border-bottom table-row-hover">
+                    <div class="p-1 text-center col-12 col-sm-1">@(work.SettingYear?.ToString() ?? "—")</div>
+                    <div class="p-1 text-center col-12 col-sm-2 text-muted">
+                        @if (work.ReleasedMonth.HasValue)
+                        {
+                            <span>@ViewHelper.GetMonthName(work.ReleasedMonth), </span>
+                        }
+                        @(work.ReleasedYear?.ToString() ?? "—")
+                    </div>
+                    <div class="p-1 text-center col-12 col-sm-1">@FranchiseWork.FormatKindShort(work.Kind)</div>
+                    <div class="p-1 text-center col-12 col-sm-1">@FranchiseWork.FormatBranch(work.Branch)</div>
+                    <div class="p-1 text-start col-12 col-sm-4">
+                        @if (link != null)
+                        {
+                            <a asp-page="@link.Page" asp-route-id="@(link.RouteName == "id" ? link.RouteValue : null)" asp-route-GameID="@(link.RouteName == "GameID" ? link.RouteValue : null)" asp-route-BookTitle="@(link.RouteName == "BookTitle" ? link.RouteValue : null)">@work.Title</a>
+                        }
+                        else
+                        {
+                            @work.Title
+                        }
+                    </div>
+                    <div class="p-1 text-start col-12 col-sm-3 d-flex flex-wrap align-content-start">
+                        @foreach (var collection in work.CollectionNames)
+                        {
+                            <span class="badge bg-secondary me-1 mb-1">@collection.Replace("Collection: ", "")</span>
+                        }
+                    </div>
+                </div>
+            }
+        </section>
+    }
+    else
+    {
+        <p class="p-2">No works found matching your criteria.</p>
+    }
+}
+</div>

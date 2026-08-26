@@ -1,0 +1,130 @@
+@model ASP_site.Pages.Engines.IndexModel
+
+<aside class="engine-inspector">
+    @if (Model.Engine != null)
+    {
+        <div class="card engine-inspector-card">
+            <div class="card-body">
+                <h3 class="h4 mb-1">@Model.Engine.Name</h3>
+                @if (Model.Engine.Year != null)
+                {
+                    <div class="text-muted mb-2">@Model.Engine.Year</div>
+                }
+
+                @if (!string.IsNullOrEmpty(Model.Engine.Developer)
+                    || !string.IsNullOrEmpty(Model.Engine.License)
+                    || !string.IsNullOrEmpty(Model.Engine.DebutGameID))
+                {
+                    <dl class="engine-meta mb-3">
+                        @if (!string.IsNullOrEmpty(Model.Engine.Developer))
+                        {
+                            <div>
+                                <dt>Developer</dt>
+                                <dd>@Model.Engine.Developer</dd>
+                            </div>
+                        }
+                        @if (!string.IsNullOrEmpty(Model.Engine.License))
+                        {
+                            <div>
+                                <dt>License</dt>
+                                <dd>@Model.Engine.License</dd>
+                            </div>
+                        }
+                        @if (!string.IsNullOrEmpty(Model.Engine.DebutGameID))
+                        {
+                            var debutName = Model.GameNames.GetValueOrDefault(Model.Engine.DebutGameID, Model.Engine.DebutGameID);
+                            <div>
+                                <dt>Debut</dt>
+                                <dd>
+                                    <a asp-page="/Games/Game" asp-route-GameID="@Model.Engine.DebutGameID">@debutName</a>
+                                </dd>
+                            </div>
+                        }
+                    </dl>
+                }
+
+                @if (Model.Ancestry.Count > 0)
+                {
+                    <nav class="engine-lineage mb-3" aria-label="Engine ancestry">
+                        @for (var i = 0; i < Model.Ancestry.Count; i++)
+                        {
+                            var ancestor = Model.Ancestry[i];
+                            <a asp-page="/Engines/Index" asp-route-engineID="@ancestor.EngineID">@ancestor.Name</a>
+                            <span class="text-muted"> / </span>
+                        }
+                        <span class="text-white">@Model.Engine.Name</span>
+                    </nav>
+                }
+
+                @if (!string.IsNullOrEmpty(Model.Engine.Description))
+                {
+                    <p class="mb-3">@Model.Engine.Description</p>
+                }
+
+                @if (Model.Engine.Children.Count > 0)
+                {
+                    <div class="mb-3">
+                        <div class="text-muted small mb-1">Branches</div>
+                        <div class="d-flex flex-wrap gap-1">
+                            @foreach (var child in Model.Engine.Children)
+                            {
+                                <a class="badge engine-child-chip text-decoration-none" asp-page="/Engines/Index" asp-route-engineID="@child.EngineID">
+                                    @child.Name
+                                    @if (child.Year != null)
+                                    {
+                                        <span>(@child.Year)</span>
+                                    }
+                                </a>
+                            }
+                        </div>
+                    </div>
+                }
+
+                <hr />
+
+                <h4 class="h6">Games (@Model.Engine.Games.Count)</h4>
+                @if (Model.Engine.Games.Count > 0)
+                {
+                    <div class="engine-game-list">
+                        @foreach (var game in Model.Engine.Games)
+                        {
+                            <div class="engine-game-row">
+                                <span class="engine-game-year text-muted">@(game.Year?.ToString() ?? "—")</span>
+                                <span>
+                                    <a asp-page="/Games/Game" asp-route-GameID="@game.GameID">@game.Name</a>
+                                    @if (!string.IsNullOrEmpty(game.ModForGameID))
+                                    {
+                                        var parentName = Model.GameNames.GetValueOrDefault(game.ModForGameID, game.ModForGameID);
+                                        <span class="text-muted small"> · mod of @parentName</span>
+                                    }
+                                </span>
+                            </div>
+                        }
+                    </div>
+                }
+                else
+                {
+                    <p class="text-muted mb-0">No games listed for this engine.</p>
+                }
+            </div>
+        </div>
+    }
+    else if (!string.IsNullOrEmpty(Model.EngineID))
+    {
+        <div class="card engine-inspector-card">
+            <div class="card-body">
+                <h3 class="h5">Engine not found</h3>
+                <p class="text-muted mb-0">No engine matches <code>@Model.EngineID</code>. Pick a node from the tree.</p>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="card engine-inspector-card engine-inspector-empty">
+            <div class="card-body">
+                <h3 class="h5">Pick an engine</h3>
+                <p class="text-muted mb-0">Select a node in the tree to see its lineage, description, and games.</p>
+            </div>
+        </div>
+    }
+</aside>

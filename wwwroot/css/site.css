@@ -195,48 +195,176 @@ section.grid a:hover {
   column-gap: 1.5rem;
 }
 
-.evolution-tree ul {
-    list-style-type: none;
-    padding-left: 20px;
-    margin-left: 10px;
+.engine-family + .engine-family {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
-.evolution-tree li {
-    margin-bottom: 5px;
+
+.evolution-tree {
+    overflow-x: auto;
+}
+
+.evolution-tree .engine-node {
+    margin: 0.15rem 0;
+}
+
+.evolution-tree .engine-node-children {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.evolution-tree .engine-node-children > li {
     position: relative;
+    margin: 0;
+    padding: 0.35rem 0 0.1rem 1.25rem;
 }
-.evolution-tree li::before {
-    content: '';
+
+.evolution-tree .engine-node-children > li::before {
+    content: "";
     position: absolute;
-    left: -20px;
-    top: 15px;
-    width: 1px;
-    height: 25px;
-    background-color: #ccc;
+    top: 0;
+    left: 0;
+    width: 1.25rem;
+    height: 1.55rem;
+    border-left: 1px solid rgba(100, 140, 255, 0.35);
+    border-bottom: 1px solid rgba(100, 140, 255, 0.35);
 }
-.evolution-tree li::after {
-    content: '';
+
+.evolution-tree .engine-node-children > li::after {
+    content: "";
     position: absolute;
-    left: -20px;
-    top: 15px;
-    width: 15px;
-    height: 1px;
-    background-color: #ccc;
+    top: 1.55rem;
+    left: 0;
+    bottom: 0;
+    border-left: 1px solid rgba(100, 140, 255, 0.35);
 }
-.evolution-tree ul > li:not(:last-child)::before {
-    height: 100%;
-    top: 0;
+
+.evolution-tree .engine-node-children > li:last-child::after {
+    display: none;
 }
-.evolution-tree ul > li:first-child::before {
-     top: 0; 
-     height: 100%;
-}
-.evolution-tree ul > li:last-child::before {
-    height: 15px;
-    top: 0;
-}
+
 .node-card {
     display: inline-block;
     min-width: 250px;
+    max-width: 100%;
+    border: 1px solid #333;
+    background-color: #0a0a0a;
+    color: inherit;
+    vertical-align: top;
+}
+
+.node-card:hover {
+    border-color: #648cff;
+}
+
+.engine-node.is-selected > .node-card {
+    border-color: #648cff;
+    box-shadow: 0 0 12px rgba(100, 140, 255, 0.4);
+}
+
+.engine-game-count {
+    background-color: rgba(100, 140, 255, 0.2);
+    color: #8daeff;
+    font-weight: 500;
+}
+
+@media (min-width: 992px) {
+    .engine-inspector {
+        position: sticky;
+        top: 4.5rem;
+        max-height: calc(100vh - 6rem);
+        overflow-y: auto;
+    }
+}
+
+.engine-inspector-card {
+    border: 1px solid #333;
+}
+
+.engine-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    margin-bottom: 0;
+}
+
+.engine-meta > div {
+    display: grid;
+    grid-template-columns: 5.5rem 1fr;
+    gap: 0.5rem;
+    align-items: baseline;
+}
+
+.engine-meta dt {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #888;
+    font-weight: 500;
+}
+
+.engine-meta dd {
+    margin: 0;
+}
+
+.engine-lineage {
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.engine-child-chip {
+    background-color: rgba(100, 140, 255, 0.15);
+    color: #8daeff !important;
+    font-weight: 500;
+}
+
+.engine-child-chip:hover {
+    background-color: rgba(100, 140, 255, 0.3);
+    color: #fff !important;
+}
+
+.engine-game-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.engine-game-row {
+    display: grid;
+    grid-template-columns: 3.25rem 1fr;
+    gap: 0.5rem;
+    align-items: baseline;
+}
+
+.engine-game-year {
+    text-align: right;
+    font-size: 0.85rem;
+}
+
+.engine-popover-games {
+    font-size: 0.85rem;
+}
+
+.popover.engine-game-popover {
+    background-color: #0a0a0a;
+    border: 1px solid #333;
+    max-width: 280px;
+}
+
+.popover.engine-game-popover .popover-header {
+    background-color: #111;
+    border-bottom-color: #333;
+    color: #fff;
+}
+
+.popover.engine-game-popover .popover-body {
+    color: #c8c8c8;
+}
+
+.popover.engine-game-popover .popover-arrow::after {
+    border-top-color: #0a0a0a;
+    border-bottom-color: #0a0a0a;
 }
 
 /* 3. Chess Variants (Evolution Graph) */

@@ -132,6 +132,10 @@ namespace ASP_site.Data.Initializers {
           LinkType = LinkType.Community, Url = "https://liquipedia.net/ageofempires/Age_of_Empires_IV/Tournaments" },
 
         // Aliens vs Predator
+        new Link { GameID = "alienisolation", Label = "Alien: Isolation on Wikipedia", Description = "Alien: Isolation on Wikipedia",
+          LinkType = LinkType.Community, Url = "https://en.wikipedia.org/wiki/Alien:_Isolation" },
+        new Link { GameID = "alienisolation", Label = "Alien: Isolation on PCGamingWiki", Description = "Alien: Isolation on PCGamingWiki",
+          LinkType = LinkType.Community, Url = "https://www.pcgamingwiki.com/wiki/Alien:_Isolation" },
         new Link { GameID = "AvP(Arcade)", Label = "Aliens vs Predator (Arcade) on Wikipedia", Description = "Aliens vs Predator (Arcade) on Wikipedia",
           LinkType = LinkType.Community, Url = "https://en.wikipedia.org/wiki/Alien_vs._Predator_(arcade_game)" },
         new Link { GameID = "AvP(1994)", Label = "Aliens vs Predator (1994) on Wikipedia", Description = "Aliens vs Predator (1994) on Wikipedia",

@@ -144,8 +144,15 @@ namespace ASP_site.Data.Initializers
                     Content = "<p>I discovered how awesome qntm's books are so I made a new author page for him as I'll quickly read all his stuff. Added a bunch of other links and stuff. Tough to find motivation and time for working on this hobby stuff with bigger ideas and projects in the works.</p>",
                     PostedDate = new DateTime(2026, 4, 9, 12, 0, 0, DateTimeKind.Utc), Author = "Phil",
                     Tags = new List<Tag> { tags.Single(t => t.Name == "Website Update") }
-                }
-
+                },
+                new UpdatePost
+                {
+                    Id = 17,
+                    Title = "Engine page updates, Aliens page added",
+                    Content = "<p>I am deep in work on the greatest development project yet, but I did find the time today to update this site. Made some internal tweaks and enhanced the Game [Engines](./Engines) page with more information and added a new Aliens vs Predator page.</p>",
+                    PostedDate = new DateTime(2026, 8, 25, 12, 0, 0, DateTimeKind.Utc), Author = "Phil",
+                    Tags = new List<Tag> { tags.Single(t => t.Name == "Website Update") }
+                },
             };
             return (posts, tags);
         }

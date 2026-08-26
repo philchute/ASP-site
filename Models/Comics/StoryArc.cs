@@ -9,6 +9,7 @@ namespace ASP_site.Models
         public string ArcID { get; set; } = "";
         public string Title { get; set; } = "";
         public string Description { get; set; } = "";
+        public int? SettingYear { get; set; }
         public List<string> IssueIDs { get; set; } = new List<string>();
 
         // Navigation properties for adaptations

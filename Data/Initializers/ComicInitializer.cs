@@ -1107,12 +1107,48 @@ namespace ASP_site.Data.Initializers {
       issues.Add(new ComicIssue { IssueID = "web-of-spider-man-super-special-1", SeriesTitle = "Web of Spider-Man Super Special", IssueNumber = "1", Description = "Planet of the Symbiotes" });
       issues.Add(new ComicIssue { IssueID = "what-if-30", SeriesTitle = "What If?", IssueNumber = "30", PublishMonth = 11, PublishYear = 1976, Description = "The Original Clone Saga" });
 
+      issues.AddRange(ComicBuilder.GenerateRun(
+        seriesIdPrefix: "aliens-1988",
+        seriesTitle: "Aliens",
+        startIssue: 1,
+        endIssue: 6,
+        startYear: 1988,
+        startMonth: 7,
+        author: "Mark Verheiden",
+        artist: "Mark A. Nelson",
+        descriptionTemplate: "Outbreak, part {0}"
+      ));
+      issues.AddRange(ComicBuilder.GenerateRun(
+        seriesIdPrefix: "predator-1989",
+        seriesTitle: "Predator",
+        startIssue: 1,
+        endIssue: 4,
+        startYear: 1989,
+        startMonth: 6,
+        author: "Mark Verheiden",
+        artist: "Chris Warner",
+        descriptionTemplate: "Concrete Jungle, part {0}"
+      ));
+      issues.AddRange(ComicBuilder.GenerateRun(
+        seriesIdPrefix: "aliens-vs-predator-1990",
+        seriesTitle: "Aliens vs. Predator",
+        startIssue: 0,
+        endIssue: 4,
+        startYear: 1990,
+        startMonth: 5,
+        author: "Randy Stradley",
+        artist: "Phill Norwood",
+        descriptionTemplate: "Issue {0}"
+      ));
+
       return issues.ToArray();
     }
     public static StoryArc[] GetStoryArcs() {
       return new StoryArc[] {
 
         new StoryArc { ArcID = "arc-all-star-superman", Title = "All-Star Superman", IssueIDs = new List<string> { "all-star-superman-1", "all-star-superman-2", "all-star-superman-3", "all-star-superman-4", "all-star-superman-5", "all-star-superman-6", "all-star-superman-7", "all-star-superman-8", "all-star-superman-9", "all-star-superman-10", "all-star-superman-11", "all-star-superman-12" } },
+        new StoryArc { ArcID = "arc-aliens-outbreak", Title = "Aliens: Outbreak", Description = "Dark Horse's 1988 Aliens miniseries by Mark Verheiden and Mark A. Nelson, later collected as Outbreak.", IssueIDs = ComicBuilder.GetIssueIds("aliens-1988", 1, 6) },
+        new StoryArc { ArcID = "arc-aliens-vs-predator-1990", Title = "Aliens vs. Predator", Description = "The original 1990 Dark Horse crossover by Randy Stradley.", IssueIDs = ComicBuilder.GetIssueIds("aliens-vs-predator-1990", 0, 4) },
         new StoryArc { ArcID = "arc-american-vampire", Title = "American Vampire", Description = "The American Vampire saga is a collection of comic books that follows the adventures of Skinner Sweet and Pearl as they battle various threats to the Earth and its people.", IssueIDs = new List<string> { "american-vampire-1", "american-vampire-2", "american-vampire-3", "american-vampire-4", "american-vampire-5", "american-vampire-6", "american-vampire-7", "american-vampire-8", "american-vampire-9", "american-vampire-10", "american-vampire-11" } },
         new StoryArc { ArcID = "arc-arkham-asylum-a-serious-house-on-serious-earth", Title = "Arkham Asylum: A Serious House on Serious Earth", IssueIDs = new List<string> { "arkham-asylum-a-serious-house-on-serious-earth-1", "batman-608" } },
         new StoryArc { ArcID = "arc-batgirl-of-burnside", Title = "Batgirl of Burnside", IssueIDs = new List<string> { "batgirl-35", "batgirl-36", "batgirl-37", "batgirl-38", "batgirl-39", "batgirl-40", "batgirl-41", "batgirl-42", "batgirl-43", "batgirl-44", "batgirl-45", "annual-batgirl-3", "secret-origins-10", "dc-sneak-peek-batgirl-1" } },
@@ -1222,6 +1258,7 @@ namespace ASP_site.Data.Initializers {
         new StoryArc { ArcID = "arc-hawkeye-my-life-as-a-weapon", Title = "Hawkeye: My Life As A Weapon", IssueIDs = new List<string> { "hawkeye-volume-4-1", "hawkeye-volume-4-2", "hawkeye-volume-4-3", "hawkeye-volume-4-4", "hawkeye-volume-4-5", "hawkeye-volume-4-6", "hawkeye-volume-4-7", "hawkeye-volume-4-8", "hawkeye-volume-4-9", "hawkeye-volume-4-10", "hawkeye-volume-4-11", "young-avengers-presents-6" } },
         new StoryArc { ArcID = "arc-planet-hulk", Title = "Planet Hulk", IssueIDs = new List<string> { "incredible-hulk-volume-2-92", "incredible-hulk-volume-2-93", "incredible-hulk-volume-2-94", "incredible-hulk-volume-2-95", "incredible-hulk-volume-2-96", "incredible-hulk-volume-2-97", "incredible-hulk-volume-2-98", "incredible-hulk-volume-2-99", "incredible-hulk-volume-2-100", "incredible-hulk-volume-2-101", "incredible-hulk-volume-2-102", "giant-size-hulk-1" } },
         new StoryArc { ArcID = "arc-punisher-welcome-back-frank", Title = "Punisher: Welcome Back, Frank", IssueIDs = new List<string> { "punisher-volume-5-1", "punisher-volume-5-2", "punisher-volume-5-3", "punisher-volume-5-4", "punisher-volume-5-5", "punisher-volume-5-6", "punisher-volume-5-7", "punisher-volume-5-8", "punisher-volume-5-9", "punisher-volume-5-10", "punisher-volume-5-11", "punisher-volume-5-12" } },
+        new StoryArc { ArcID = "arc-predator-1989", Title = "Predator", Description = "Dark Horse's original 1989 Predator miniseries, later collected as Concrete Jungle.", IssueIDs = ComicBuilder.GetIssueIds("predator-1989", 1, 4) },
         new StoryArc { ArcID = "arc-secret-wars", Title = "Secret Wars", IssueIDs = new List<string> { "secret-wars-2015-1", "secret-wars-2015-2", "secret-wars-2015-3", "secret-wars-2015-4", "secret-wars-2015-5", "secret-wars-2015-6", "secret-wars-2015-7", "secret-wars-2015-8", "secret-wars-2015-9", "secret-wars-2015-10", "secret-wars-2015-11", "secret-wars-2015-12", "secret-wars-2015-free-comic-book-day-2015-1" } },
         new StoryArc { ArcID = "arc-spider-men-worlds-collide", Title = "Spider-Men: Worlds Collide", IssueIDs = new List<string> { "spider-men-1", "spider-men-2", "spider-men-3", "spider-men-4", "spider-men-5", "spider-men-ii-1", "spider-men-ii-2", "spider-men-ii-3", "spider-men-ii-4", "spider-men-ii-5" } },
         new StoryArc { ArcID = "arc-the-visions", Title = "The Visions", IssueIDs = new List<string> { "vision-2015-1", "vision-2015-2", "vision-2015-3", "vision-2015-4", "vision-2015-5", "vision-2015-6", "vision-2015-7", "vision-2015-8", "vision-2015-9", "vision-2015-10", "vision-2015-11", "vision-2015-12" } },
@@ -1757,6 +1794,21 @@ namespace ASP_site.Data.Initializers {
         new Media { MediaID = "media-fantastic-four-animated-series-2-11", Title = "Fantastic Four Animated Series: Season 2, Episode 11: Hopelessly Impossible", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 2, ReleaseDay = 10, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-hopelessly-impossible" } },
         new Media { MediaID = "media-fantastic-four-animated-series-2-12", Title = "Fantastic Four Animated Series: Season 2, Episode 12: The Sentry Sinister", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 2, ReleaseDay = 17, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-the-sentry-sinister" } },
         new Media { MediaID = "media-fantastic-four-animated-series-2-13", Title = "Fantastic Four Animated Series: Season 2, Episode 13: Doomsday", MediaType = MediaType.TVShow, ReleaseYear = 1996, ReleaseMonth = 2, ReleaseDay = 24, AdaptedFromArcIDs = new List<string> { "arc-fantastic-four-doomsday" } },
+
+        new Media { MediaID = "media-alien-1979", Title = "Alien", MediaType = MediaType.Movie, ReleaseYear = 1979, ReleaseMonth = 5, ReleaseDay = 25, SettingYear = 2122, Description = "Ridley Scott's 1979 science-fiction horror film." },
+        new Media { MediaID = "media-aliens-1986", Title = "Aliens", MediaType = MediaType.Movie, ReleaseYear = 1986, ReleaseMonth = 7, ReleaseDay = 18, SettingYear = 2179, Description = "James Cameron's 1986 sequel to Alien." },
+        new Media { MediaID = "media-alien-3-1992", Title = "Alien 3", MediaType = MediaType.Movie, ReleaseYear = 1992, ReleaseMonth = 5, ReleaseDay = 22, SettingYear = 2179, Description = "David Fincher's 1992 sequel to Aliens." },
+        new Media { MediaID = "media-alien-resurrection-1997", Title = "Alien Resurrection", MediaType = MediaType.Movie, ReleaseYear = 1997, ReleaseMonth = 11, ReleaseDay = 26, SettingYear = 2381, Description = "Jean-Pierre Jeunet's 1997 sequel to Alien 3." },
+        new Media { MediaID = "media-prometheus-2012", Title = "Prometheus", MediaType = MediaType.Movie, ReleaseYear = 2012, ReleaseMonth = 6, ReleaseDay = 8, SettingYear = 2093, Description = "Ridley Scott's 2012 Alien prequel." },
+        new Media { MediaID = "media-alien-covenant-2017", Title = "Alien: Covenant", MediaType = MediaType.Movie, ReleaseYear = 2017, ReleaseMonth = 5, ReleaseDay = 19, SettingYear = 2104, Description = "Ridley Scott's 2017 sequel to Prometheus." },
+        new Media { MediaID = "media-alien-romulus-2024", Title = "Alien: Romulus", MediaType = MediaType.Movie, ReleaseYear = 2024, ReleaseMonth = 8, ReleaseDay = 16, SettingYear = 2142, Description = "Fede Álvarez's 2024 film set between Alien and Aliens." },
+        new Media { MediaID = "media-predator-1987", Title = "Predator", MediaType = MediaType.Movie, ReleaseYear = 1987, ReleaseMonth = 6, ReleaseDay = 12, SettingYear = 1987, Description = "John McTiernan's 1987 science-fiction action film." },
+        new Media { MediaID = "media-predator-2-1990", Title = "Predator 2", MediaType = MediaType.Movie, ReleaseYear = 1990, ReleaseMonth = 11, ReleaseDay = 21, SettingYear = 1997, Description = "Stephen Hopkins's 1990 sequel to Predator." },
+        new Media { MediaID = "media-predators-2010", Title = "Predators", MediaType = MediaType.Movie, ReleaseYear = 2010, ReleaseMonth = 7, ReleaseDay = 9, SettingYear = 2010, Description = "Nimród Antal's 2010 stand-alone sequel to Predator." },
+        new Media { MediaID = "media-the-predator-2018", Title = "The Predator", MediaType = MediaType.Movie, ReleaseYear = 2018, ReleaseMonth = 9, ReleaseDay = 14, SettingYear = 2018, Description = "Shane Black's 2018 sequel to Predator." },
+        new Media { MediaID = "media-prey-2022", Title = "Prey", MediaType = MediaType.Movie, ReleaseYear = 2022, ReleaseMonth = 8, ReleaseDay = 5, SettingYear = 1719, Description = "Dan Trachtenberg's 2022 Predator prequel." },
+        new Media { MediaID = "media-alien-vs-predator-2004", Title = "Alien vs. Predator", MediaType = MediaType.Movie, ReleaseYear = 2004, ReleaseMonth = 8, ReleaseDay = 13, SettingYear = 2004, Description = "Paul W. S. Anderson's 2004 crossover film." },
+        new Media { MediaID = "media-aliens-vs-predator-requiem-2007", Title = "Aliens vs. Predator: Requiem", MediaType = MediaType.Movie, ReleaseYear = 2007, ReleaseMonth = 12, ReleaseDay = 25, SettingYear = 2004, Description = "The Brothers Strause's 2007 sequel to Alien vs. Predator." },
 
       };
     }

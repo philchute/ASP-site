@@ -38,7 +38,7 @@ public class SiteMapService
                         new SiteNode { Id = "pieces", Label = "Pieces", Url = "/Chess/Pieces" },
                         new SiteNode { Id = "armies", Label = "Armies", Url = "/Chess/Armies/Index" },
                         new SiteNode { Id = "variants", Label = "Variants", Url = "/Chess/Variants/Index" },
-                        new SiteNode { Id = "history", Label = "History", Url = "/Chess/History" },
+                        //new SiteNode { Id = "history", Label = "History", Url = "/Chess/History" },
                         new SiteNode { Id = "parser", Label = "Betza Parser", Url = "/Chess/Parser" },
                     }
                 },
@@ -68,9 +68,10 @@ public class SiteMapService
                         new SiteNode { Id = "updates", Label = "Updates", Url = "/Updates/Index" },
                         new SiteNode { Id = "blog", Label = "Blog", Url = "/Blog/Index" },
                         new SiteNode { Id = "events", Label = "Events", Url = "/Events/Index" },
+                        new SiteNode { Id = "universes", Label = "Universes", Url = "/Universe" },
                         new SiteNode { Id = "links", Label = "Links", Url = "/Links/Index" },
                         new SiteNode { Id = "years", Label = "Years", Url = "/Years/Index" },
-                        new SiteNode { Id = "releases", Label = "Releases", Url = "/Releases/Index" },
+                        //new SiteNode { Id = "releases", Label = "Releases", Url = "/Releases/Index" },
                     }
                 },
             }

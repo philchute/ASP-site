@@ -1,13 +1,17 @@
-@page
+@page "{engineID?}"
 @model ASP_site.Pages.Engines.IndexModel
 
 @{
-  ViewData["Title"] = "Engines List";
+  ViewData["Title"] = Model.Engine?.Name ?? "Engines";
+  ViewData["SelectedEngineID"] = Model.Engine?.EngineID;
 }
 
 <div class="jumbotron p-2 d-flex justify-content-between align-items-end mb-4">
-  <h2 class="mr-auto display-3">Engines List</h2>
-  <form class="d-flex align-items-end flex-wrap gap-2">
+  <div>
+    <h2 class="mr-auto display-3 mb-0">Engines</h2>
+    <p class="lead text-muted mb-0">Family tree of game engines. Click a node for lineage and games.</p>
+  </div>
+  <form class="d-flex align-items-end flex-wrap gap-2" method="get" action="@(string.IsNullOrEmpty(Model.EngineID) ? "/Engines" : $"/Engines/{Model.EngineID}")">
     <div class="form-group flex-grow-1">
         <label class="form-label" for="SortField">Sort:</label>
         <select class="form-control" asp-for="SortField" onchange="this.form.submit();">
@@ -20,23 +24,26 @@
         <div class="d-flex">
             <input id="SearchString" class="form-control" type="text" asp-for="SearchString" placeholder="Name..." />
             <button class="btn btn-secondary ms-1" type="submit">Search</button>
+            @if (!string.IsNullOrWhiteSpace(Model.SearchString))
+            {
+                <a class="btn btn-outline-secondary ms-1" href="/Engines">Clear</a>
+            }
         </div>
     </div>
-  </form>    
+  </form>
 </div>
 
 @if (Model.Engines != null)
 {
-    @* Flat List Mode (Search/Filter active) *@
     <section class="grid">
       <div class="row bg-dark text-white fw-bold g-0">
         <div class="p-1 col-sm-4 text-center">Year</div>
-        <div class="p-1 col-sm">Name</div>
+        <div class="p-1 col-sm">Name <i>(@Model.Engines.Count shown)</i></div>
       </div>
 
       @foreach (Engine e in Model.Engines) {
-          <a class="row g-0 text-decoration-none text-reset border-bottom @Model.EngineClass(e) table-row-hover" asp-page="./Engine" asp-route-EngineID="@e.EngineID">
-            <div class="p-1 col-sm-4 text-center">@e.Year</div>
+          <a class="row g-0 text-decoration-none text-reset border-bottom @Model.EngineClass(e) table-row-hover" asp-page="./Index" asp-route-engineID="@e.EngineID" asp-route-SearchString="">
+            <div class="p-1 col-sm-4 text-center">@(e.Year?.ToString() ?? "-")</div>
             <div class="p-1 col-sm text-white">@e.Name</div>
           </a>
         }
@@ -44,12 +51,23 @@
 }
 else
 {
-    @* Tree View Mode *@
-    <div class="evolution-tree">
-        @foreach (var root in Model.Roots)
-        {
-            <partial name="_EngineNode" model="root" />
-        }
+    <div class="row engine-explorer g-4">
+        <div class="col-lg-8">
+            <div class="evolution-tree">
+                @foreach (var root in Model.Roots)
+                {
+                    <div class="engine-family">
+                        <partial name="_EngineNode" model="root" />
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <partial name="_EngineDetail" model="Model" />
+        </div>
     </div>
 }
 
+@section Scripts {
+    <script src="~/js/engine-tree.js" asp-append-version="true"></script>
+}

@@ -14,7 +14,7 @@ namespace ASP_site.Tests
         public SeedFixture()
         {
             var options = new DbContextOptionsBuilder<GameContext>()
-                .UseInMemoryDatabase("SeedIntegrity")
+                .UseInMemoryDatabase("SeedIntegrity-" + Guid.NewGuid())
                 .Options;
             Context = new GameContext(options);
             Context.Database.EnsureCreated();
@@ -64,6 +64,47 @@ namespace ASP_site.Tests
         {
             var dupes = DuplicateKeys(GameInitializer.GetGames().Select(g => g.GameID));
             Assert.True(dupes.Count == 0, FormatDupes("Game.GameID", dupes));
+        }
+
+        [Fact]
+        public void EngineIds_AreUnique()
+        {
+            var dupes = DuplicateKeys(EngineInitializer.GetEngines().Select(e => e.EngineID));
+            Assert.True(dupes.Count == 0, FormatDupes("Engine.EngineID", dupes));
+        }
+
+        [Fact]
+        public void GameEngineIds_ResolveToEngines()
+        {
+            var engineIds = _context.Engines.Select(e => e.EngineID).ToHashSet(StringComparer.OrdinalIgnoreCase);
+            var missing = _context.Games
+                .Where(g => !string.IsNullOrEmpty(g.EngineID) && !engineIds.Contains(g.EngineID!))
+                .Select(g => $"{g.GameID}: {g.EngineID}")
+                .Distinct()
+                .ToList();
+            Assert.True(missing.Count == 0, "Game.EngineID values with no matching Engine:\n" + string.Join("\n", missing));
+        }
+
+        [Fact]
+        public void EngineParentIds_ResolveToEngines()
+        {
+            var engineIds = _context.Engines.Select(e => e.EngineID).ToHashSet(StringComparer.OrdinalIgnoreCase);
+            var missing = _context.Engines
+                .Where(e => !string.IsNullOrEmpty(e.ParentID) && !engineIds.Contains(e.ParentID))
+                .Select(e => $"{e.EngineID}: {e.ParentID}")
+                .ToList();
+            Assert.True(missing.Count == 0, "Engine.ParentID values with no matching Engine:\n" + string.Join("\n", missing));
+        }
+
+        [Fact]
+        public void EngineDebutGameIds_ResolveToGames()
+        {
+            var gameIds = _context.Games.Select(g => g.GameID).ToHashSet(StringComparer.OrdinalIgnoreCase);
+            var missing = _context.Engines
+                .Where(e => !string.IsNullOrEmpty(e.DebutGameID) && !gameIds.Contains(e.DebutGameID!))
+                .Select(e => $"{e.EngineID}: {e.DebutGameID}")
+                .ToList();
+            Assert.True(missing.Count == 0, "Engine.DebutGameID values with no matching Game:\n" + string.Join("\n", missing));
         }
 
         [Fact]
@@ -218,16 +259,66 @@ namespace ASP_site.Tests
         [Fact]
         public void LinkGameIds_ResolveToGames()
         {
-            var knownUncatalogued = new HashSet<string>(StringComparer.OrdinalIgnoreCase) { "prey", "kof" };
             var gameIds = _context.Games.Select(g => g.GameID).ToHashSet(StringComparer.OrdinalIgnoreCase);
             var missing = _context.Links
-                .Where(l => !string.IsNullOrEmpty(l.GameID)
-                    && !gameIds.Contains(l.GameID!)
-                    && !knownUncatalogued.Contains(l.GameID!))
+                .Where(l => !string.IsNullOrEmpty(l.GameID) && !gameIds.Contains(l.GameID!))
                 .Select(l => $"{l.Label}: {l.GameID}")
                 .Distinct()
                 .ToList();
             Assert.True(missing.Count == 0, "Link.GameID values with no matching Game:\n" + string.Join("\n", missing));
+        }
+
+        [Fact]
+        public void FranchiseIds_AreUnique()
+        {
+            var (franchises, _) = FranchiseInitializer.GetData();
+            var dupes = DuplicateKeys(franchises.Select(f => f.FranchiseID));
+            Assert.True(dupes.Count == 0, FormatDupes("Franchise.FranchiseID", dupes));
+        }
+
+        [Fact]
+        public void FranchiseWorkForeignKeys_Resolve()
+        {
+            var franchiseIds = _context.Franchises.Select(f => f.FranchiseID).ToHashSet(StringComparer.OrdinalIgnoreCase);
+            var gameIds = _context.Games.Select(g => g.GameID).ToHashSet(StringComparer.OrdinalIgnoreCase);
+            var bookTitles = _context.Books.Select(b => b.Title).ToHashSet(StringComparer.OrdinalIgnoreCase);
+            var mediaIds = _context.Media.Select(m => m.MediaID).ToHashSet(StringComparer.OrdinalIgnoreCase);
+            var arcIds = _context.StoryArcs.Select(a => a.ArcID).ToHashSet(StringComparer.OrdinalIgnoreCase);
+
+            var missing = new List<string>();
+            foreach (var work in _context.FranchiseWorks.ToList())
+            {
+                if (!franchiseIds.Contains(work.FranchiseID))
+                {
+                    missing.Add($"Work {work.Id}: FranchiseID {work.FranchiseID}");
+                }
+
+                var populated = new[] { work.GameID, work.BookTitle, work.MediaID, work.StoryArcID }
+                    .Count(id => !string.IsNullOrEmpty(id));
+                if (populated != 1)
+                {
+                    missing.Add($"Work {work.Id} ({work.Kind}): expected exactly one catalog key, found {populated}");
+                }
+
+                if (!string.IsNullOrEmpty(work.GameID) && !gameIds.Contains(work.GameID))
+                {
+                    missing.Add($"Work {work.Id}: GameID {work.GameID}");
+                }
+                if (!string.IsNullOrEmpty(work.BookTitle) && !bookTitles.Contains(work.BookTitle))
+                {
+                    missing.Add($"Work {work.Id}: BookTitle {work.BookTitle}");
+                }
+                if (!string.IsNullOrEmpty(work.MediaID) && !mediaIds.Contains(work.MediaID))
+                {
+                    missing.Add($"Work {work.Id}: MediaID {work.MediaID}");
+                }
+                if (!string.IsNullOrEmpty(work.StoryArcID) && !arcIds.Contains(work.StoryArcID))
+                {
+                    missing.Add($"Work {work.Id}: StoryArcID {work.StoryArcID}");
+                }
+            }
+
+            Assert.True(missing.Count == 0, "FranchiseWork keys that do not resolve:\n" + string.Join("\n", missing));
         }
 
         private static Dictionary<string, int> DuplicateKeys(IEnumerable<string> ids)

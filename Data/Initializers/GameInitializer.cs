@@ -212,6 +212,24 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
+          GameID = "alienisolation",
+          Name = "Alien: Isolation",
+          Description = "A 2014 survival horror game set 15 years after Alien. Amanda Ripley investigates the disappearance of her mother aboard the Sevastopol space station while evading a single xenomorph.",
+          Developer = "Creative Assembly",
+          SteamID = 214490,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.Adventure,
+          SettingYear = 2137,
+          PlayWith = new List<int> { 0 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2014, Month = 10, Day = 7}
+          ]
+        },
+        new Game {
           GameID = "attackersgored",
           Name = "Attackers Go Red",
           Description = "A team-based multiplayer mod for Quake.",
@@ -1554,6 +1572,24 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
+          GameID = "crysis2",
+          Name = "Crysis 2",
+          Description = "Crysis 2 is a first-person shooter video game developed by Crytek, published by Electronic Arts and released in North America, Australia and Europe in March 2011 for Microsoft Windows, PlayStation 3, and Xbox 360.",
+          EngineID = "CryEngine3",
+          Developer = "Crytek",
+          SteamID = 108800,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2011, Month = 3, Day = 22}
+          ]
+        },
+        new Game {
           GameID = "cs16",
           Name = "Counter-Strike 1.6",
           Description = "The classic version of Counter-Strike that defined competitive FPS gaming. Features tactical gameplay between terrorists and counter-terrorists.",
@@ -2661,6 +2697,24 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/fof"
           }
+        },
+        new Game {
+          GameID = "fortnite",
+          Name = "Fortnite",
+          Description = "Fortnite is a 2017 online video game and game platform developed and released by Epic Games originally on Unreal Engine 3.",
+          EngineID = "unreal5",
+          Developer = "Epic Games",
+          SteamID = 1203400,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2017, Month = 7, Day = 25}
+          ]
         },
         new Game {
           GameID = "ff",
@@ -4965,7 +5019,7 @@ namespace ASP_site.Data.Initializers {
           SteamID = 215,
           EngineID = "source",
           Genre = Genre.FPS,
-          Developer = "Valve",
+          Developer = "Valve Software",
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/sdk",
             GameDirectory = "hl2mp"
@@ -4978,7 +5032,7 @@ namespace ASP_site.Data.Initializers {
           SteamID = 218,
           EngineID = "source",
           Genre = Genre.FPS,
-          Developer = "Valve",
+          Developer = "Valve Software",
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/sdk",
             GameDirectory = "sourcetest"
@@ -4992,7 +5046,7 @@ namespace ASP_site.Data.Initializers {
           EngineID = "source",
           Genre = Genre.FPS,
           PlayWith = new List<int> { 0 },
-          Developer = "Valve",
+          Developer = "Valve Software",
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/sdk"
           }
@@ -6181,7 +6235,7 @@ namespace ASP_site.Data.Initializers {
           GameID = "warofrights",
           Name = "War of Rights",
           Description = "War of Rights is a first-person shooter based on the American Civil War with up to 400 players on a server.",
-          EngineID = "cryengine5",
+          EngineID = "CryEngineV",
           Developer = "Campfire Games",
           IsFree = true,
           IsPaid = false,

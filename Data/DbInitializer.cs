@@ -18,6 +18,8 @@ namespace ASP_site.Data {
       context.UpdatePosts.RemoveRange(context.UpdatePosts);
       context.Tags.RemoveRange(context.Tags);
       context.Books.RemoveRange(context.Books);
+      context.FranchiseWorks.RemoveRange(context.FranchiseWorks);
+      context.Franchises.RemoveRange(context.Franchises);
 
       // Clear Chess tables
       context.Variants.RemoveRange(context.Variants);
@@ -292,6 +294,13 @@ namespace ASP_site.Data {
         }
         context.Media.Add(media);
       }
+      context.SaveChanges();
+
+      var (franchises, franchiseWorks) = FranchiseInitializer.GetData();
+      ThrowIfDuplicateIds(franchises, f => f.FranchiseID, "Franchise.FranchiseID");
+      context.Franchises.AddRange(franchises);
+      context.SaveChanges();
+      context.FranchiseWorks.AddRange(franchiseWorks);
       context.SaveChanges();
 
       CatalogLinker.LinkYearEntries(context);

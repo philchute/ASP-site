@@ -17,7 +17,7 @@
 }
 @if(Model.Game?.EngineID != null)
 {
-  <div>Engine: <a class="" asp-page="/Engines/Engine" asp-route-EngineID="@Model.Game.EngineID">@Model.Game.EngineID</a></div>
+  <div>Engine: <a class="" asp-page="/Engines/Index" asp-route-engineID="@Model.Game.EngineID">@Model.Game.EngineID</a></div>
   <hr/>
 }
 @if(Model.Game?.ModForGameID != null && Model.Game.ModForGameID != "")

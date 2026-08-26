@@ -1,0 +1,36 @@
+@page
+@model ASP_site.Pages.Universe.IndexModel
+
+@{
+    ViewData["Title"] = "Universes";
+    ViewData["ActivePage"] = "Universes";
+}
+
+<div class="container mt-4">
+    <h1 class="display-3">Universes</h1>
+    <p class="lead">Shared settings that cut across movies, games, books, and comics.</p>
+    <hr />
+
+    @if (Model.Universes.Any())
+    {
+        <section class="grid mt-3">
+            <div class="row g-0 bg-dark text-white fw-bold">
+                <div class="p-1 text-start col-sm-4">Universe</div>
+                <div class="p-1 text-center col-sm-2">Works</div>
+                <div class="p-1 text-start col-sm">About</div>
+            </div>
+            @foreach (var universe in Model.Universes)
+            {
+                <a asp-page="/Universe/Universe" asp-route-id="@universe.Id" class="row g-0 text-decoration-none text-reset border-bottom table-row-hover">
+                    <div class="p-1 text-start col-12 col-sm-4 text-white">@universe.Name</div>
+                    <div class="p-1 text-center col-12 col-sm-2">@universe.WorkCount</div>
+                    <div class="p-1 text-start col-12 col-sm text-muted">@universe.Description</div>
+                </a>
+            }
+        </section>
+    }
+    else
+    {
+        <p>No universes have been catalogued yet.</p>
+    }
+</div>
