@@ -130,6 +130,34 @@ namespace ASP_site.Tests
         }
 
         [Fact]
+        public void Games_WithSettingYear_HaveAge()
+        {
+            var missing = _context.Games
+                .Where(g => g.SettingYear.HasValue && g.Age == null)
+                .Select(g => g.GameID)
+                .ToList();
+            Assert.True(missing.Count == 0, "Games with SettingYear but no Age:\n" + string.Join("\n", missing));
+        }
+
+        [Fact]
+        public void YearEntry_TypeGame_DoesNotDuplicateCatalogSettingYear()
+        {
+            var gamesWithSettingYear = _context.Games
+                .Where(g => g.SettingYear.HasValue)
+                .Select(g => g.GameID)
+                .ToHashSet(StringComparer.OrdinalIgnoreCase);
+
+            var dupes = YearEntryInitializer.GetYearEntries()
+                .Where(e => e.Type == ContentType.Game
+                    && !string.IsNullOrEmpty(e.GameID)
+                    && gamesWithSettingYear.Contains(e.GameID!))
+                .Select(e => $"{e.Title}: {e.GameID}")
+                .ToList();
+
+            Assert.True(dupes.Count == 0, "Type=Game YearEntries that duplicate a Game.SettingYear row:\n" + string.Join("\n", dupes));
+        }
+
+        [Fact]
         public void AdaptedFromArcIds_ResolveToStoryArcs()
         {
             var arcIds = _context.StoryArcs.Select(a => a.ArcID).ToHashSet(StringComparer.OrdinalIgnoreCase);

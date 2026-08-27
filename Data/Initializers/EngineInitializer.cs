@@ -455,8 +455,17 @@ namespace ASP_site.Data.Initializers {
           Developer = "Epic Games",
           License = "Proprietary",
           DebutGameID = "fortnite",
-          Description = "Unreal Engine 5 is a game engine developed by Epic Games, first used in Fortnite.",
+          Description = "Unreal Engine 5 is a game engine developed by Epic Games, first used in in an engine update for Fortnite.",
           ParentID = "unreal4", Year = 2022
+        }, 
+        new Engine {
+          EngineID = "unreal6",
+          Name = "Unreal Engine 6",
+          Developer = "Epic Games",
+          License = "Proprietary",
+          DebutGameID = "rocketleague",
+          Description = "Unreal Engine 6 is a game engine developed by Epic Games, first used in an engine update for Rocket League.",
+          ParentID = "unreal5", Year = 2028
         }, 
         new Engine {
           EngineID = "jedi",
@@ -573,7 +582,60 @@ namespace ASP_site.Data.Initializers {
           DebutGameID = "aoe",
           Description = "Genie Engine is a game engine developed by Ensemble Studios, first used in 1997's Age of Empires.",
           ParentID = "", Year = 1997
-        }
+        },
+        new Engine {
+          EngineID = "scimitar",
+          Name = "Scimitar Engine",
+          Developer = "Ubisoft",
+          License = "Proprietary",
+          DebutGameID = "ac",
+          Description = "Scimitar Engine is a game engine developed by Ubisoft, first used in 2007's Assassin's Creed.",
+          ParentID = "", Year = 2007
+        },
+        new Engine {
+          EngineID = "anvil",
+          Name = "Anvil Engine",
+          Developer = "Ubisoft",
+          License = "Proprietary",
+          DebutGameID = "ac3",
+          Description = "Anvil Engine is a game engine developed by Ubisoft, first used in 2012's Assassin's Creed III.",
+          ParentID = "scimitar", Year = 2012
+        },
+        new Engine {
+          EngineID = "anvilnext",
+          Name = "AnvilNext Engine",
+          Developer = "Ubisoft",
+          License = "Proprietary",
+          DebutGameID = "ac4",
+          Description = "AnvilNext Engine is a game engine developed by Ubisoft, first used in 2013's Assassin's Creed IV: Black Flag.",
+          ParentID = "anvil", Year = 2013
+        },
+        new Engine {
+          EngineID = "anvilnext2",
+          Name = "AnvilNext 2 Engine",
+          Developer = "Ubisoft",
+          License = "Proprietary",
+          DebutGameID = "acunity",
+          Description = "AnvilNext 2 Engine is a game engine developed by Ubisoft, first used in 2014's Assassin's Creed Unity.",
+          ParentID = "anvilnext", Year = 2014
+        },
+        new Engine {
+          EngineID = "steep",
+          Name = "Steep Engine",
+          Developer = "Ubisoft",
+          License = "Proprietary",
+          Description = "Steep Engine is a game engine developed by Ubisoft, first used in 2016's 'For Honor'",
+          ParentID = "anvilnext2", Year = 2016
+        },
+        new Engine {
+          EngineID = "ubisoftanvil",
+          Name = "Ubisoft Anvil Engine",
+          Developer = "Ubisoft",
+          License = "Proprietary",
+          DebutGameID = "acvalhalla",
+          Description = "Ubisoft Anvil Engine is a game engine developed by Ubisoft, first used in 2020's Assassin's Creed Valhalla.",
+          ParentID = "anvilnext2", Year = 2020
+        },
       };
     }
   }

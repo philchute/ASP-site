@@ -3,9 +3,29 @@ using System.ComponentModel.DataAnnotations;
 namespace ASP_site.Models
 {
     public enum EventCategoryGroup { Esports, Racing, Sports, Local }
-    public enum EventCategory { ApexLegends, CallOfDuty, CounterStrike, Dota2, FightingGames,Fortnite, LeagueOfLegends, 
-        Overwatch2, PUBG, RainbowSixSiege, RocketLeague, Trackmania, Valorant,
-        Chess, NASCAR, F1, IndyCar, Soccer, Olympics, Other }
+    public enum EventCategory
+    {
+        [Display(Name = "Apex Legends")] ApexLegends,
+        [Display(Name = "Call of Duty")] CallOfDuty,
+        [Display(Name = "Counter-Strike")] CounterStrike,
+        [Display(Name = "Dota 2")] Dota2,
+        [Display(Name = "Fighting Games")] FightingGames,
+        Fortnite,
+        [Display(Name = "League of Legends")] LeagueOfLegends,
+        [Display(Name = "Overwatch 2")] Overwatch2,
+        PUBG,
+        [Display(Name = "Rainbow Six Siege")] RainbowSixSiege,
+        [Display(Name = "Rocket League")] RocketLeague,
+        Trackmania,
+        Valorant,
+        Chess,
+        NASCAR,
+        F1,
+        IndyCar,
+        Soccer,
+        Olympics,
+        Other
+    }
     public enum WatchPlatform { BroadcastTV, CableTV, Free, Paid }
 
     public class Event

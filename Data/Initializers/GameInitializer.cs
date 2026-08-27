@@ -1,8 +1,12 @@
 using ASP_site.Models;
+using System.Linq;
 
 namespace ASP_site.Data.Initializers {
   public static class GameInitializer {
-    public static Game[] GetGames() {
+    public static Game[] GetGames() =>
+      GetListedGames().Concat(TimelineGameInitializer.GetGames()).ToArray();
+
+    private static Game[] GetListedGames() {
       return new Game[] {
         new Game {
           GameID = "0ad",
@@ -14,6 +18,8 @@ namespace ASP_site.Data.Initializers {
           IsOpenSource = true,
           IsCommunityMaintained = true,
           Genre = Genre.RTS,
+          SettingYear = 0,
+          Age = AgeAppropriateness.Middle,
           PlayWith = new List<int> { 0 , 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 2010}
@@ -283,7 +289,7 @@ namespace ASP_site.Data.Initializers {
         },
 
         new Game {
-          GameID = "alien:descent",
+          GameID = "aliendescent",
           Name = "Alien: Descent",
           Description = "Alien: Descent is a virtual reality game developed by Pure Imagination Studios and published by Pure Imagination Studios.",
           Developer = "Pure Imagination Studios",
@@ -298,7 +304,6 @@ namespace ASP_site.Data.Initializers {
             new ReleaseDate{Year = 2018}
           ]
         },
-
         new Game {
           GameID = "predatorvr",
           Name = "Predator VR",
@@ -414,6 +419,7 @@ namespace ASP_site.Data.Initializers {
           IsCommunityMaintained = false,
           Genre = Genre.Adventure,
           SettingYear = 2137,
+          Age = AgeAppropriateness.Teen,
           PlayWith = new List<int> { 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 2014, Month = 10, Day = 7}
@@ -432,12 +438,12 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = false,
           Genre = Genre.Adventure,
+          Age = AgeAppropriateness.Teen,
           PlayWith = new List<int> { 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 2027}
           ]
         },
-
         new Game {
           GameID = "americanmcgeesalice",
           Name = "American McGee's Alice",
@@ -449,10 +455,421 @@ namespace ASP_site.Data.Initializers {
           IsOpenSource = false,
           IsDeveloperMaintained = false,
           IsCommunityMaintained = false,
+          Age = AgeAppropriateness.Teen,
           Genre = Genre.Adventure,
-          PlayWith = new List<int> { 0 },
+          PlayWith = new List<int> { 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 2000, Month = 12, Day = 5}
+          ]
+        },
+        new Game {
+          GameID = "anno117",
+          Name = "Anno 117: Pax Romana",
+          Description = "City-building game set in the Roman Empire.",
+          Developer = "Ubisoft",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.TBS,
+          SettingYear = 117,
+          Age = AgeAppropriateness.Teen,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2025, Month = 11, Day = 13}
+          ]
+        },
+        new Game {
+          GameID = "anno1404",
+          Name = "Anno 1404",
+          Description = "Historical simulation game set in the 1400s. Also marketed as Dawn of Discovery.",
+          Developer = "Related Designs",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.TBS,
+          SettingYear = 1404,
+          Age = AgeAppropriateness.Teen,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2009, Month = 6, Day = 23}
+          ]
+        },
+        new Game {
+          GameID = "anno1503",
+          Name = "Anno 1503: The New World",
+          Description = "Historical simulation game set in the 1500s. Also marketed as 1503 A.D.: The New World.",
+          Developer = "Max Design",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.TBS,
+          SettingYear = 1503,
+          Age = AgeAppropriateness.Teen,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2002, Month = 3, Day = 23}
+          ]
+        },
+        new Game {
+          GameID = "anno1602",
+          Name = "Anno 1602: Creation of a New World",
+          Description = "Historical simulation game set in the 1600s. Also marketed as 1602 A.D.",
+          Developer = "Max Design",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.TBS,
+          SettingYear = 1602,
+          Age = AgeAppropriateness.Teen,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 1998, Month = 9, Day = 24}
+          ]
+        },
+        new Game {
+          GameID = "anno1701",
+          Name = "Anno 1701",
+          Description = "Historical simulation game set in the 1700s. Also marketed as 1701 A.D.",
+          Developer = "Related Designs",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.TBS,
+          SettingYear = 1701,
+          Age = AgeAppropriateness.Teen,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2006, Month = 10, Day = 26}
+          ]
+        },
+        new Game {
+          GameID = "anno1800",
+          Name = "Anno 1800",
+          Description = "Historical simulation game set in the 1800s. First game in the main series to release on consoles.",
+          Developer = "Ubisoft Blue Byte",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.TBS,
+          SettingYear = 1800,
+          Age = AgeAppropriateness.Teen,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2019, Month = 4, Day = 16}
+          ]
+        },
+        new Game {
+          GameID = "anno2070",
+          Name = "Anno 2070",
+          Description = "City-building game set in the 2070s.",
+          Developer = "Related Designs",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.TBS,
+          SettingYear = 2070,
+          Age = AgeAppropriateness.Teen,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2011, Month = 11, Day = 17}
+          ]
+        },
+        new Game {
+          GameID = "anno2205",
+          Name = "Anno 2205",
+          Description = "City-building game set in the 2200s.",
+          Developer = "Ubisoft Blue Byte",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.TBS,
+          SettingYear = 2205,
+          Age = AgeAppropriateness.Teen,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2015, Month = 11, Day = 3}
+          ]
+        },
+        new Game {
+          GameID = "ac",
+          Name = "Assassin's Creed",
+          Description = "First of the series, set in the Crusades.",
+          Developer = "Ubisoft",
+          EngineID = "Scimitar",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.Adventure,
+          Age = AgeAppropriateness.Teen,
+          PlayWith = new List<int> { 1 },
+          SettingYear = 1191,
+          ReleaseDates = [
+            new ReleaseDate{Year = 2007}
+          ]
+        },
+        new Game {
+          GameID = "ac2",
+          Name = "Assassin's Creed II",
+          Description = "Action-adventure game set in Italy during the Renaissance.",
+          Developer = "Ubisoft",
+          EngineID = "Anvil",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.Adventure,
+          Age = AgeAppropriateness.Teen,
+          PlayWith = new List<int> { 1 },
+          SettingYear = 1476,
+          ReleaseDates = [
+            new ReleaseDate{Year = 2009}
+          ]
+        },
+        new Game {
+          GameID = "ac3",
+          Name = "Assassin's Creed III",
+          Description = "Action-adventure game set in the American Revolutionary War.",
+          Developer = "Ubisoft",
+          EngineID = "AnvilNext",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.Adventure,
+          Age = AgeAppropriateness.Teen,
+          PlayWith = new List<int> { 1 },
+          SettingYear = 1754,
+          ReleaseDates = [
+            new ReleaseDate{Year = 2012}
+          ]
+        },
+        new Game {
+          GameID = "ac4",
+          Name = "Assassin's Creed IV: Black Flag",
+          Description = "Action-adventure game set in the Caribbean during the Golden Age of Piracy.",
+          Developer = "Ubisoft",
+          EngineID = "AnvilNext",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.Adventure,
+          Age = AgeAppropriateness.Teen,
+          PlayWith = new List<int> { 1 },
+          SettingYear = 1715,
+          ReleaseDates = [
+            new ReleaseDate{Year = 2013}
+          ]
+        },
+        new Game {
+          GameID = "acbrotherhood",
+          Name = "Assassin's Creed Brotherhood",
+          Description = "Action-adventure game set in Italy during the Renaissance.",
+          Developer = "Ubisoft",
+          EngineID = "Scimitar",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.Adventure,
+          Age = AgeAppropriateness.Teen,
+          PlayWith = new List<int> { 1 },
+          SettingYear = 1499,
+          ReleaseDates = [
+            new ReleaseDate{Year = 2010}
+          ]
+        },
+        new Game {
+          GameID = "acmirage",
+          Name = "Assassin's Creed Mirage",
+          Description = "Action-adventure game set in Baghdad during the Abbasid Caliphate.",
+          Developer = "Ubisoft",
+          EngineID = "UbisoftAnvil",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.Adventure,
+          Age = AgeAppropriateness.Teen,
+          PlayWith = new List<int> { 1 },
+          SettingYear = 861,
+          ReleaseDates = [
+            new ReleaseDate{Year = 2023}
+          ]
+        },
+        new Game {
+          GameID = "acodyssey",
+          Name = "Assassin's Creed Odyssey",
+          Description = "Historical action-adventure game set in Ancient Greece during the Peloponnesian War.",
+          Developer = "Ubisoft",
+          EngineID = "steep",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.Adventure,
+          Age = AgeAppropriateness.Teen,
+          PlayWith = new List<int> { 1 },
+          SettingYear = 431,
+          ReleaseDates = [
+            new ReleaseDate{Year = 2018}
+          ]
+        },
+        new Game {
+          GameID = "acorigins",
+          Name = "Assassin's Creed Origins",
+          Description = "Action-adventure game set in Ptolemaic Egypt.",
+          Developer = "Ubisoft",
+          EngineID = "steep",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.Adventure,
+          Age = AgeAppropriateness.Teen,
+          PlayWith = new List<int> { 1 },
+          SettingYear = -49,
+          ReleaseDates = [
+            new ReleaseDate{Year = 2017}
+          ]
+        },
+        new Game {
+          GameID = "acrevelations",
+          Name = "Assassin's Creed Revelations",
+          Description = "Action-adventure game set in Constantinople during the Renaissance.",
+          Developer = "Ubisoft",
+          EngineID = "anvil",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.Adventure,
+          Age = AgeAppropriateness.Teen,
+          PlayWith = new List<int> { 1 },
+          SettingYear = 1511,
+          ReleaseDates = [
+            new ReleaseDate{Year = 2011}
+          ]
+        },
+        new Game {
+          GameID = "acrogue",
+          Name = "Assassin's Creed Rogue",
+          Description = "Action-adventure game set during the Seven Years' War.",
+          Developer = "Ubisoft",
+          EngineID = "anvilnext",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.Adventure,
+          Age = AgeAppropriateness.Teen,
+          PlayWith = new List<int> { 1 },
+          SettingYear = 1752,
+          ReleaseDates = [
+            new ReleaseDate{Year = 2014}
+          ]
+        },
+        new Game {
+          GameID = "acshadows",
+          Name = "Assassin's Creed Shadows",
+          Description = "Action-adventure game set in Sengoku-period Japan.",
+          Developer = "Ubisoft",
+          EngineID = "anvilnext2",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.Adventure,
+          Age = AgeAppropriateness.Teen,
+          PlayWith = new List<int> { 1 },
+          SettingYear = 1579,
+          ReleaseDates = [
+            new ReleaseDate{Year = 2025}
+          ]
+        },
+        new Game {
+          GameID = "acsyndicate",
+          Name = "Assassin's Creed Syndicate",
+          Description = "Action-adventure game set in Victorian London.",
+          Developer = "Ubisoft",
+          EngineID = "anvilnext2",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.Adventure,
+          Age = AgeAppropriateness.Teen,
+          PlayWith = new List<int> { 1 },
+          SettingYear = 1868,
+          ReleaseDates = [
+            new ReleaseDate{Year = 2015}
+          ]
+        },
+        new Game {
+          GameID = "acunity",
+          Name = "Assassin's Creed Unity",
+          Description = "Action-adventure game set in the French Revolution.",
+          Developer = "Ubisoft",
+          EngineID = "anvilnext2",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.Adventure,
+          Age = AgeAppropriateness.Teen,
+          PlayWith = new List<int> { 1 },
+          SettingYear = 1789,
+          ReleaseDates = [
+            new ReleaseDate{Year = 2014}
+          ]
+        },
+        new Game {
+          GameID = "acvalhalla",
+          Name = "Assassin's Creed Valhalla",
+          Description = "Action-adventure game set in the Viking Age in England.",
+          Developer = "Ubisoft",
+          EngineID = "ubisoftanvil",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.Adventure,
+          Age = AgeAppropriateness.Teen,
+          PlayWith = new List<int> { 1 },
+          SettingYear = 872,
+          ReleaseDates = [
+            new ReleaseDate{Year = 2020}
           ]
         },
         new Game {
@@ -466,6 +883,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          Age = AgeAppropriateness.Teen,
           PlayWith = new List<int> { 0 },
           ReleaseDates = [
             new ReleaseDate{Year = 2000}
@@ -1261,6 +1679,8 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          SettingYear = 1942,
+          Age = AgeAppropriateness.Teen,
           PlayWith = new List<int> { 0, 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 2003, Month = 10, Day = 29},
@@ -1285,9 +1705,30 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          SettingYear = 1941,
+          Age = AgeAppropriateness.Teen,
           PlayWith = new List<int> { 0, 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 2005, Month = 10, Day = 25},
+          ]
+        },
+        new Game {
+          GameID = "cod3",
+          Name = "Call of Duty 3",
+          Description = "Call of Duty 3 is set during World War II. It was console-only and not released on PC.",
+          EngineID = "treyarch",
+          Developer = "Treyarch",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = true,
+          Genre = Genre.FPS,
+          SettingYear = 1944,
+          Age = AgeAppropriateness.Teen,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2006, Month = 11, Day = 7},
           ]
         },
         new Game {
@@ -1319,6 +1760,8 @@ namespace ASP_site.Data.Initializers {
           IsPaid = true,
           IsOpenSource = false,
           Genre = Genre.FPS,
+          SettingYear = 2054,
+          Age = AgeAppropriateness.Teen,
           PlayWith = new List<int> { 0, 1, 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 2014, Month = 11, Day = 4},
@@ -1337,6 +1780,8 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          SettingYear = 1961,
+          Age = AgeAppropriateness.Teen,
           PlayWith = new List<int> { 0, 1, 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 2010, Month = 11, Day = 9},
@@ -1355,6 +1800,8 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          SettingYear = 1986,
+          Age = AgeAppropriateness.Teen,
           PlayWith = new List<int> { 0, 1, 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 2012, Month = 11, Day = 13},
@@ -1373,6 +1820,8 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          SettingYear = 2065,
+          Age = AgeAppropriateness.Teen,
           PlayWith = new List<int> { 0, 1, 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 2015, Month = 11, Day = 6},
@@ -1391,6 +1840,8 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          SettingYear = 2043,
+          Age = AgeAppropriateness.Teen,
           PlayWith = new List<int> { 0, 1, 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 2018, Month = 10, Day = 12},
@@ -1407,6 +1858,8 @@ namespace ASP_site.Data.Initializers {
           IsPaid = true,
           IsOpenSource = false,
           Genre = Genre.FPS,
+          SettingYear = 1991,
+          Age = AgeAppropriateness.Teen,
           PlayWith = new List<int> { 0, 1, 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 2024, Month = 10, Day = 25},
@@ -1423,6 +1876,8 @@ namespace ASP_site.Data.Initializers {
           IsPaid = true,
           IsOpenSource = false,
           Genre = Genre.FPS,
+          SettingYear = 1981,
+          Age = AgeAppropriateness.Teen,
           PlayWith = new List<int> { 0, 1, 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 2020, Month = 11, Day = 13},
@@ -1455,6 +1910,8 @@ namespace ASP_site.Data.Initializers {
           IsPaid = true,
           IsOpenSource = false,
           Genre = Genre.FPS,
+          SettingYear = 2187,
+          Age = AgeAppropriateness.Teen,
           PlayWith = new List<int> { 0, 1, 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 2016, Month = 11, Day = 4},
@@ -1555,6 +2012,8 @@ namespace ASP_site.Data.Initializers {
           IsPaid = true,
           IsOpenSource = false,
           Genre = Genre.FPS,
+          SettingYear = 1941,
+          Age = AgeAppropriateness.Teen,
           PlayWith = new List<int> { 0, 1, 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 2021, Month = 11, Day = 5},
@@ -1573,6 +2032,8 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          SettingYear = 1942,
+          Age = AgeAppropriateness.Teen,
           PlayWith = new List<int> { 0, 1, 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 2008, Month = 11, Day = 11},
@@ -1589,6 +2050,8 @@ namespace ASP_site.Data.Initializers {
           IsPaid = true,
           IsOpenSource = false,
           Genre = Genre.FPS,
+          SettingYear = 1940,
+          Age = AgeAppropriateness.Teen,
           PlayWith = new List<int> { 0, 1, 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 2017, Month = 11, Day = 3},
@@ -2296,7 +2759,7 @@ namespace ASP_site.Data.Initializers {
         new Game {
           GameID = "duke3d",
           Name = "Duke Nukem 3D",
-          Description = "Duke Nukem 3D is a first-person shooter game developed by Apogee Software.",
+          Description = "Duke Nukem 3D is a first-person shooter set in a post-apocalyptic 2007.",
           EngineID = "build",
           Developer = "Apogee Software",
           IsFree = true,
@@ -2305,6 +2768,8 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          SettingYear = 2007,
+          Age = AgeAppropriateness.Teen,
           PlayWith = new List<int> { 0, 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 1996, Month = 1, Day = 29}
@@ -2698,7 +3163,7 @@ namespace ASP_site.Data.Initializers {
         new Game {
           GameID = "farCryPrimal",
           Name = "Far Cry Primal",
-          Description = "Far Cry Primal is a first-person shooter game developed by Ubisoft.",
+          Description = "Far Cry Primal is set in the Stone Age, around 10,000 BC.",
           EngineID = "Dunia2",
           Developer = "Ubisoft",
           SteamID = 2015,
@@ -2708,6 +3173,8 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          SettingYear = -10000,
+          Age = AgeAppropriateness.Middle,
           PlayWith = new List<int> { 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 2016, Month = 3, Day = 3}
@@ -2970,6 +3437,26 @@ namespace ASP_site.Data.Initializers {
             NoBackgroundService = true
           }
         },
+        new Game {
+          GameID = "gladius",
+          Name = "Gladius",
+          Description = "PS2, Xbox, Gamecube tactical role-playing game about gladiators.",
+          Developer = "LucasArts", 
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          SettingYear = 180,
+          Genre = Genre.RPG,
+          Age = AgeAppropriateness.Teen,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2003, Month = 10, Day = 28, Region = Region.NA},
+            new ReleaseDate{Year = 2003, Month = 11, Day = 28, Region = Region.EU},
+          ]
+        },
+
         new Game {
           GameID = "globalops",
           Name = "Global Operations",
@@ -3586,6 +4073,8 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          SettingYear = 1915,
+          Age = AgeAppropriateness.Teen,
           PlayWith = new List<int> { 0 },
           ReleaseDates = [
             new ReleaseDate{Year = 2022, Month = 9, Day = 13}
@@ -5740,6 +6229,8 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
+          SettingYear = 1914,
+          Age = AgeAppropriateness.Teen,
           PlayWith = new List<int> { 0 },
           ReleaseDates = [
             new ReleaseDate{Year = 2019, Month = 2, Day = 13, Region = Region.Worldwide}
@@ -6044,6 +6535,230 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
+          GameID = "empiretw",
+          Name = "Empire: Total War",
+          Description = "Empire: Total War is a real-time strategy game set in the Early Modern period.",
+          Developer = "Creative Assembly",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          Genre = Genre.RTS,
+          SettingYear = 1700,
+          Age = AgeAppropriateness.Middle,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2009, Month = 3, Day = 3}
+          ]
+        },
+        new Game {
+          GameID = "medievaltw",
+          Name = "Medieval: Total War",
+          Description = "Medieval: Total War is a real-time strategy game set in the High Middle Ages.",
+          Developer = "Creative Assembly",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          Genre = Genre.RTS,
+          SettingYear = 1080,
+          Age = AgeAppropriateness.Middle,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2002, Month = 8, Day = 20}
+          ]
+        },
+        new Game {
+          GameID = "medievaltw2",
+          Name = "Medieval II: Total War",
+          Description = "Medieval II: Total War is a real-time strategy game set in the High Middle Ages.",
+          Developer = "Creative Assembly",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          Genre = Genre.RTS,
+          SettingYear = 1080,
+          Age = AgeAppropriateness.Middle,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2006, Month = 11, Day = 10}
+          ]
+        },
+        new Game {
+          GameID = "napoleontw",
+          Name = "Napoleon: Total War",
+          Description = "Napoleon: Total War is a real-time strategy game set in the Napoleonic Wars.",
+          Developer = "Creative Assembly",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          Genre = Genre.RTS,
+          SettingYear = 1805,
+          Age = AgeAppropriateness.Middle,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2010, Month = 2, Day = 23}
+          ]
+        },
+        new Game {
+          GameID = "rometw",
+          Name = "Rome: Total War",
+          Description = "Rome: Total War is a real-time strategy game set in the Roman Empire.",
+          Developer = "Creative Assembly",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          Genre = Genre.RTS,
+          SettingYear = 270,
+          Age = AgeAppropriateness.Middle,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2004, Month = 9, Day = 22}
+          ]
+        },
+        new Game {
+          GameID = "rometw2",
+          Name = "Total War: Rome II",
+          Description = "Total War: Rome II is a real-time strategy game set in the Roman Empire.",
+          Developer = "Creative Assembly",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          Genre = Genre.RTS,
+          SettingYear = 272,
+          Age = AgeAppropriateness.Middle,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2013, Month = 9, Day = 3}
+          ]
+        },
+        new Game {
+          GameID = "shogun2",
+          Name = "Total War: Shogun 2",
+          Description = "Total War: Shogun 2 is a real-time strategy game set in Sengoku-period Japan.",
+          Developer = "Creative Assembly",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          Genre = Genre.RTS,
+          SettingYear = 1545,
+          Age = AgeAppropriateness.Middle,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2011, Month = 3, Day = 15}
+          ]
+        },
+        new Game {
+          GameID = "shogun2fotw",
+          Name = "Total War: Shogun 2: Fall of the Samurai",
+          Description = "Total War: Shogun 2: Fall of the Samurai is a real-time strategy game set in Sengoku-period Japan.",
+          Developer = "Creative Assembly",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          Genre = Genre.RTS,
+          SettingYear = 1864,
+          Age = AgeAppropriateness.Middle,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2012, Month = 3, Day = 23}
+          ]
+        },
+        new Game {
+          GameID = "shoguntw",
+          Name = "Shogun: Total War",
+          Description = "Shogun: Total War is a real-time strategy game set in Japan during the Sengoku period.",
+          Developer = "Creative Assembly",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          Genre = Genre.RTS,
+          SettingYear = 1467,
+          Age = AgeAppropriateness.Middle,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2000, Month = 6, Day = 13}
+          ]
+        },
+        new Game {
+          GameID = "tw3k",
+          Name = "Total War: Three Kingdoms",
+          Description = "Total War: Three Kingdoms is a real-time strategy game set during the Three Kingdoms period of China.",
+          Developer = "Creative Assembly",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          Genre = Genre.RTS,
+          SettingYear = 190,
+          Age = AgeAppropriateness.Middle,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2019, Month = 5, Day = 23}
+          ]
+        },
+        new Game {
+          GameID = "twattila",
+          Name = "Total War: Attila",
+          Description = "Total War: Attila is a real-time strategy game set in the fifth century during the downfall of the Western Roman Empire.",
+          Developer = "Creative Assembly",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          Genre = Genre.RTS,
+          SettingYear = 395,
+          Age = AgeAppropriateness.Middle,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2015, Month = 2, Day = 17}
+          ]
+        },
+        new Game {
+          GameID = "twpharaoh",
+          Name = "Total War: Pharaoh",
+          Description = "Total War: Pharaoh is a real-time strategy game set during the collapse of many centuries-old Mediterranean civilisations at the end of the Bronze Age.",
+          Developer = "Creative Assembly",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          Genre = Genre.RTS,
+          SettingYear = -1205,
+          Age = AgeAppropriateness.Middle,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2023, Month = 10, Day = 11}
+          ]
+        },
+        new Game {
+          GameID = "twthrones",
+          Name = "Total War Saga: Thrones of Britannia",
+          Description = "Total War Saga: Thrones of Britannia is a real-time strategy game set in the Anglo-Saxon kingdoms.",
+          Developer = "Creative Assembly",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          Genre = Genre.RTS,
+          SettingYear = 878,
+          Age = AgeAppropriateness.Middle,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2018, Month = 5, Day = 3}
+          ]
+        },
+        new Game {
+          GameID = "twtroy",
+          Name = "Total War Saga: Troy",
+          Description = "Total War Saga: Troy is a real-time strategy game set during the Trojan War of Greek mythology.",
+          Developer = "Creative Assembly",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          Genre = Genre.RTS,
+          SettingYear = -1200,
+          Age = AgeAppropriateness.Middle,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2020, Month = 8, Day = 13}
+          ]
+        },
+        new Game {
           GameID = "touhoucrisis",
           Name = "Touhou Crisis",
           Description = "Touhou Crisis is a free cover-based lightgun game available on Steam, inspired by the anime series and Time Crisis.",
@@ -6318,6 +7033,8 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = true,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          SettingYear = 1916,
+          Age = AgeAppropriateness.Teen,
           PlayWith = new List<int> { 0 },
           ReleaseDates = [
             new ReleaseDate{Year = 2015, Month = 4, Day = 28}
@@ -6399,6 +7116,8 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          SettingYear = 1860,
+          Age = AgeAppropriateness.Teen,
           PlayWith = new List<int> { 0, 400 },
           ReleaseDates = [
             new ReleaseDate{Year = 2018, Month = 12, Day = 3}

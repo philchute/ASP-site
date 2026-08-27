@@ -8,8 +8,9 @@ namespace ASP_site.Helpers
     {
         private static readonly Dictionary<string, string> GameIdAliases = new(StringComparer.OrdinalIgnoreCase)
         {
-            ["aoe1"] = "aoe",
-            ["momentum"] = "momentummod"
+            ["cod"] = "callofduty",
+            ["codww2"] = "codwwii",
+            ["codbo"] = "codbo1"
         };
 
         private static readonly Regex TrailingParen = new(@"\s*\([^)]*\)\s*$", RegexOptions.Compiled);

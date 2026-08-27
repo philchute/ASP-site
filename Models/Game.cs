@@ -24,6 +24,7 @@ namespace ASP_site.Models {
     public ServerBrowserConfig? ServerConfig { get; set; }
     public int? Year { get; set; }
     public int? SettingYear { get; set; }
+    public AgeAppropriateness? Age { get; set; }
     public ReleaseDate[] ReleaseDates { get; set; } = [];
     public bool IsReleased { get; set; } = true;
     public bool IsPlayable { get; set; } = true;
@@ -84,7 +85,7 @@ namespace ASP_site.Models {
     }
   }
 
-  public enum Genre { FPS, TPS, RTS, TBS, MOBA, Sports, Fighting, Adventure, Lightgun, Puzzle, Racing }
+  public enum Genre { FPS, TPS, RPG,RTS, TBS, MOBA, Sports, Fighting, Adventure, Lightgun, Puzzle, Racing }
   public enum Region { Worldwide, NA, SA, EU, UK, JP, AU, Asia }
   public enum ReleaseVersion { Alpha, Beta, Demo, FullGame, SteamRelease, ReRelease, LatestUpdate, Arcade, Dreamcast, GameCube, Xbox, PSP, PS1, PS2, PS3, PS4, PS5, Xbox360, Wii, WiiU, Switch, Mobile, VR }
   

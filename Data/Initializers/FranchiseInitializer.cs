@@ -42,11 +42,20 @@ namespace ASP_site.Data.Initializers
             yield return Movie(FranchiseBranch.Crossover, "media-aliens-vs-predator-requiem-2007");
 
             // Games
-            yield return Game(FranchiseBranch.Alien, "alienisolation");
             yield return Game(FranchiseBranch.Crossover, "AvP(Arcade)");
             yield return Game(FranchiseBranch.Crossover, "AvP(1994)");
             yield return Game(FranchiseBranch.Crossover, "AvP(1999)");
             yield return Game(FranchiseBranch.Crossover, "AvP(2010)");
+            yield return Game(FranchiseBranch.Crossover, "alienscolonialmarines");
+            yield return Game(FranchiseBranch.Alien, "aliendescent");
+            yield return Game(FranchiseBranch.Predator, "predatorvr");
+            yield return Game(FranchiseBranch.Predator, "predatorhuntinggrounds");
+            yield return Game(FranchiseBranch.Crossover, "aliensrogueincursion");
+            yield return Game(FranchiseBranch.Crossover, "aliensdarkdescent");
+            yield return Game(FranchiseBranch.Crossover, "aliensfireteamelite");
+            yield return Game(FranchiseBranch.Crossover, "aliensfireteamelite2");
+            yield return Game(FranchiseBranch.Alien, "alienisolation");
+            yield return Game(FranchiseBranch.Alien, "alienisolation2");
 
             // Books
             yield return Book(FranchiseBranch.Alien, "Prometheus");
@@ -85,6 +94,7 @@ namespace ASP_site.Data.Initializers
             yield return Book(FranchiseBranch.Alien, "Alien: Uncivil War");
             yield return Book(FranchiseBranch.Alien, "Alien: Cult");
             yield return Book(FranchiseBranch.Alien, "Alien: Perfect Organisms");
+            yield return Book(FranchiseBranch.Alien, "Aliens: Bug Hunt");
             yield return Book(FranchiseBranch.Alien, "Aliens: Earth Hive");
             yield return Book(FranchiseBranch.Alien, "Aliens: Nightmare Asylum");
             yield return Book(FranchiseBranch.Alien, "Aliens: The Female War");

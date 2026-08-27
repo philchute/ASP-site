@@ -453,6 +453,217 @@ section.grid a:hover {
     transition: background-color 0.1s ease-in-out;
 }
 
+/* 8. Events calendar */
+.event-view-toggle a.btn,
+.event-range-btns a.btn {
+    color: #9a9a9a !important;
+    background: #1a1a1a !important;
+    border: 1px solid #444 !important;
+    text-shadow: none !important;
+}
+
+.event-view-toggle a.btn:hover,
+.event-range-btns a.btn:hover {
+    color: #fff !important;
+    border-color: #777 !important;
+    background: #252525 !important;
+    text-shadow: none !important;
+}
+
+.event-view-toggle a.btn.is-active,
+.event-range-btns a.btn.is-active {
+    background-color: #ffa028 !important;
+    border-color: #ffa028 !important;
+    color: #111 !important;
+    font-weight: 700;
+    text-shadow: none !important;
+}
+
+.event-view-toggle a.btn.is-active:hover,
+.event-range-btns a.btn.is-active:hover {
+    background-color: #ffb24d !important;
+    border-color: #ffb24d !important;
+    color: #111 !important;
+    text-shadow: none !important;
+}
+
+.event-cal-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.75rem;
+}
+
+.event-cal-title {
+    font-size: 1.35rem;
+    margin: 0 0.5rem 0 0;
+    color: #fff;
+    min-width: 12rem;
+}
+
+.event-cal-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 0.6rem;
+}
+
+.event-cal-legend .event-chip {
+    cursor: default;
+    max-width: none;
+    width: auto;
+    padding: 0.15rem 0.5rem;
+}
+
+.event-cal-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #080808;
+}
+
+.event-cal-dow {
+    padding: 0.4rem 0.25rem;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #aaa;
+    background: #111;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.event-cal-dow.is-weekend {
+    background: rgba(255, 160, 40, 0.12);
+    color: #ffa028;
+}
+
+.event-cal-cell {
+    min-height: 7.25rem;
+    padding: 0.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: #0a0a0a;
+}
+
+.event-cal-cell.is-weekend {
+    background: rgba(255, 160, 40, 0.05);
+}
+
+.event-cal-cell.is-outside {
+    opacity: 0.4;
+}
+
+.event-cal-cell.is-today {
+    outline: 1px solid #648cff;
+    outline-offset: -1px;
+    background: rgba(100, 140, 255, 0.08);
+}
+
+.event-cal-cell.is-out-of-range {
+    opacity: 0.35;
+}
+
+.event-cal-date {
+    display: block;
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-bottom: 0.2rem;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: #ddd;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.event-cal-date:hover,
+.event-cal-date:focus {
+    background: rgba(100, 140, 255, 0.25);
+    color: #fff;
+    outline: none;
+}
+
+.event-chip {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.68rem;
+    line-height: 1.25;
+    border: 0;
+    border-left: 3px solid #666;
+    padding: 0.12rem 0.3rem;
+    margin-bottom: 0.15rem;
+    background: #1a1a1a;
+    color: #ddd;
+    border-radius: 2px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.event-chip:hover,
+.event-chip:focus {
+    filter: brightness(1.2);
+    outline: none;
+}
+
+.event-chip-esports { border-left-color: #648cff; }
+.event-chip-racing { border-left-color: #ffa028; }
+.event-chip-sports { border-left-color: #5cbf7a; }
+.event-chip-local { border-left-color: #a78bfa; }
+.event-chip-other { border-left-color: #888; }
+
+.event-cal-more {
+    display: block;
+    width: 100%;
+    border: 0;
+    background: transparent;
+    color: #8daeff;
+    font-size: 0.7rem;
+    text-align: left;
+    padding: 0.1rem 0.25rem;
+    cursor: pointer;
+}
+
+.event-cal-more:hover,
+.event-cal-more:focus {
+    color: #fff;
+    outline: none;
+}
+
+.event-day-panel {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #0c0c0c;
+    padding: 0.75rem 1rem 0.25rem;
+}
+
+.event-day-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+@media (max-width: 767.98px) {
+    .event-cal-cell {
+        min-height: 5.25rem;
+        padding: 0.15rem;
+    }
+    .event-chip {
+        font-size: 0.6rem;
+        padding: 0.08rem 0.2rem;
+    }
+    .event-cal-title {
+        min-width: 0;
+        font-size: 1.1rem;
+    }
+}
+
 /* ==========================================================================
    Nebula Icon (Constellation Theme)
    ========================================================================== */

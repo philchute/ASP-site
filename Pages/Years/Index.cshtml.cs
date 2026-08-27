@@ -71,49 +71,93 @@ namespace ASP_site.Pages.Years
                  SelectedAgeAppropriateness = Enum.GetNames(typeof(AgeAppropriateness)).ToList(); 
             }
 
-            // Fetch entries from context as IQueryable
-            IQueryable<ASP_site.Models.YearEntry> entriesQuery = _context.YearEntries.AsQueryable();
+            var catalogGames = await _context.Games.AsNoTracking()
+                .Where(g => g.SettingYear.HasValue)
+                .ToListAsync();
+            var catalogBooks = await _context.Books.AsNoTracking()
+                .Where(b => b.SettingYear.HasValue)
+                .ToListAsync();
+            var catalogMedia = await _context.Media.AsNoTracking()
+                .Where(m => m.SettingYear.HasValue)
+                .ToListAsync();
+            var yearEntries = await _context.YearEntries.AsNoTracking().ToListAsync();
 
-            // Filter by selected Content Types
-            // Check count against AllContentTypes dictionary size
-            if (SelectedContentTypes != null && SelectedContentTypes.Any() && SelectedContentTypes.Count < AllContentTypes.Count) 
+            var gamesWithSettingYear = catalogGames
+                .Select(g => g.GameID)
+                .ToHashSet(StringComparer.OrdinalIgnoreCase);
+            var booksWithSettingYear = catalogBooks
+                .Select(b => b.Title)
+                .ToHashSet(StringComparer.OrdinalIgnoreCase);
+            var mediaWithSettingYear = catalogMedia
+                .Select(m => m.MediaID)
+                .ToHashSet(StringComparer.OrdinalIgnoreCase);
+
+            IEnumerable<ASP_site.Models.YearEntry> entries = catalogGames.Select(ASP_site.Models.YearEntry.FromGame)
+                .Concat(catalogBooks.Select(ASP_site.Models.YearEntry.FromBook))
+                .Concat(catalogMedia.Select(ASP_site.Models.YearEntry.FromMedia))
+                .Concat(yearEntries.Where(e => !IsSupersededByCatalog(e, gamesWithSettingYear, booksWithSettingYear, mediaWithSettingYear)));
+
+            if (SelectedContentTypes != null && SelectedContentTypes.Any() && SelectedContentTypes.Count < AllContentTypes.Count)
             {
-                entriesQuery = entriesQuery.Where(e => e.Type.HasValue && SelectedContentTypes.Contains(e.Type.Value.ToString()));
+                entries = entries.Where(e => e.Type.HasValue && SelectedContentTypes.Contains(e.Type.Value.ToString()));
             }
 
-            // Filter by selected Age Appropriateness levels
-            // Check count against total number of AgeAppropriateness enum values
             if (SelectedAgeAppropriateness != null && SelectedAgeAppropriateness.Any() && SelectedAgeAppropriateness.Count < Enum.GetNames(typeof(AgeAppropriateness)).Length)
             {
-                entriesQuery = entriesQuery.Where(e => e.Age.HasValue && SelectedAgeAppropriateness.Contains(e.Age.Value.ToString()));
+                entries = entries.Where(e => e.Age.HasValue && SelectedAgeAppropriateness.Contains(e.Age.Value.ToString()));
             }
-
 
             if (!string.IsNullOrEmpty(SearchString))
             {
-                entriesQuery = entriesQuery.Where(s => (s.Title != null && s.Title.Contains(SearchString, StringComparison.OrdinalIgnoreCase)) ||
+                entries = entries.Where(s => (s.Title != null && s.Title.Contains(SearchString, StringComparison.OrdinalIgnoreCase)) ||
                                              (s.Description != null && s.Description.Contains(SearchString, StringComparison.OrdinalIgnoreCase)));
             }
 
-            // Apply Sorting
-            switch (SortField)
+            TimelineEntries = SortField switch
             {
-                case "Title":
-                    entriesQuery = entriesQuery.OrderBy(e => e.Title).ThenBy(e => e.Year);
-                    TimelineEntries = await entriesQuery.ToListAsync();
-                    break;
-                case "Published":
-                    TimelineEntries = (await entriesQuery.ToListAsync())
-                        .OrderBy(e => e.GetPublishedYear() ?? int.MaxValue)
-                        .ThenBy(e => e.Year)
-                        .ThenBy(e => e.Title)
-                        .ToList();
-                    break;
-                default: // Year
-                    entriesQuery = entriesQuery.OrderBy(e => e.Year).ThenBy(e => e.Title);
-                    TimelineEntries = await entriesQuery.ToListAsync();
-                    break;
+                "Title" => entries.OrderBy(e => e.Title).ThenBy(e => e.Year).ToList(),
+                "Published" => entries
+                    .OrderBy(e => e.GetPublishedYear() ?? int.MaxValue)
+                    .ThenBy(e => e.Year)
+                    .ThenBy(e => e.Title)
+                    .ToList(),
+                _ => entries.OrderBy(e => e.Year).ThenBy(e => e.Title).ToList()
+            };
+        }
+
+        private static bool IsSupersededByCatalog(
+            ASP_site.Models.YearEntry entry,
+            HashSet<string> gamesWithSettingYear,
+            HashSet<string> booksWithSettingYear,
+            HashSet<string> mediaWithSettingYear)
+        {
+            if (entry.Type == ContentType.GameMission)
+            {
+                return false;
             }
+
+            if (entry.Type == ContentType.Game
+                && !string.IsNullOrEmpty(entry.GameID)
+                && gamesWithSettingYear.Contains(entry.GameID))
+            {
+                return true;
+            }
+
+            if (entry.Type == ContentType.Book
+                && !string.IsNullOrEmpty(entry.BookTitle)
+                && booksWithSettingYear.Contains(entry.BookTitle))
+            {
+                return true;
+            }
+
+            if ((entry.Type == ContentType.Movie || entry.Type == ContentType.Series || entry.Type == ContentType.Episode)
+                && !string.IsNullOrEmpty(entry.MediaID)
+                && mediaWithSettingYear.Contains(entry.MediaID))
+            {
+                return true;
+            }
+
+            return false;
         }
 
         // Helper to get DisplayName for enums

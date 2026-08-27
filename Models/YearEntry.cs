@@ -65,6 +65,37 @@ namespace ASP_site.Models
             if (!string.IsNullOrEmpty(StoryArcID)) links.Add(CatalogLink.Arc(StoryArcID));
             return links;
         }
+
+        public static YearEntry FromGame(Game game) => new()
+        {
+            Title = game.Name,
+            Type = ContentType.Game,
+            Age = game.Age,
+            Year = game.SettingYear ?? 0,
+            Description = game.Description,
+            GameID = game.GameID,
+            Published = game.Year?.ToString()
+        };
+
+        public static YearEntry FromBook(Book book) => new()
+        {
+            Title = book.Title,
+            Type = book.Type == BookType.Play ? ContentType.Play : ContentType.Book,
+            Year = book.SettingYear ?? 0,
+            Description = book.Description,
+            BookTitle = book.Title,
+            Published = book.PublicationYear?.ToString()
+        };
+
+        public static YearEntry FromMedia(Media media) => new()
+        {
+            Title = media.Title,
+            Type = media.MediaType == MediaType.TVShow ? ContentType.Series : ContentType.Movie,
+            Year = media.SettingYear ?? 0,
+            Description = media.Description,
+            MediaID = media.MediaID,
+            Published = media.ReleaseYear.ToString()
+        };
     }
 
     public class CatalogLink

@@ -4,32 +4,65 @@
 
 @{
     ViewData["Title"] = "Events";
+    var rangeToday = Model.GetRangeAnchor("today");
+    var rangeWeekend = Model.GetRangeAnchor("weekend");
+    var rangeWeek = Model.GetRangeAnchor("week");
 }
 
 <div class="container mt-4">
-    <form method="get" class="mb-4">
+    <form method="get" class="mb-4" id="events-filter-form">
+        <input type="hidden" asp-for="View" />
+        <input type="hidden" asp-for="Year" />
+        <input type="hidden" asp-for="Month" />
+        <input type="hidden" asp-for="Range" />
+        <input type="hidden" asp-for="TzIana" id="TzIana" />
+
         <div class="row align-items-end">
-            <div class="col-md-7">
+            <div class="col-lg-6">
                 <h1 class="display-3">Events</h1>
                 <p class="lead">Upcoming tournaments, races, and broadcasts.</p>
             </div>
-            <div class="col-md-5">
-                <div class="d-flex justify-content-end align-items-end flex-wrap gap-2">
-                    <div class="form-group flex-grow-1">
-                        <label class="form-label" for="SortField">Sort:</label>
-                        <select class="form-control" asp-for="SortField" asp-items="Model.SortOptions" onchange="this.form.submit();">
-                        </select>
-                    </div>
-                    <div class="form-group flex-grow-1">
-                        <label class="form-label" for="SearchString">Search:</label>
-                        <div class="d-flex">
-                            <input id="SearchString" type="text" asp-for="SearchString" class="form-control" placeholder="Search name..." />
-                            <button type="submit" class="btn btn-secondary ms-1">Search</button>
+            <div class="col-lg-6">
+                <div class="d-flex flex-column align-items-lg-end gap-2">
+                    <div class="d-flex justify-content-lg-end align-items-end flex-wrap gap-2">
+                        @if (!Model.IsCalendarView)
+                        {
+                            <div class="form-group">
+                                <label class="form-label" for="SortField">Sort:</label>
+                                <select class="form-control" asp-for="SortField" asp-items="Model.SortOptions" onchange="this.form.submit();">
+                                </select>
+                            </div>
+                        }
+                        else
+                        {
+                            <input type="hidden" asp-for="SortField" />
+                        }
+                        <div class="form-group">
+                            <label class="form-label" for="Tz">Timezone:</label>
+                            <select class="form-control" asp-for="Tz" asp-items="Model.TimeZoneOptions" id="Tz" onchange="this.form.submit();">
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="SearchString">Search:</label>
+                            <div class="d-flex">
+                                <input id="SearchString" type="text" asp-for="SearchString" class="form-control" placeholder="Search name..." />
+                                <button type="submit" class="btn btn-secondary ms-1">Search</button>
+                            </div>
                         </div>
                     </div>
-                    <a asp-page="/Events/Index" class="btn btn-outline-secondary">Clear filters</a>
-                    <a href="/Events@(Model.GetExportQueryString("Export"))" class="btn btn-secondary">Export CSV</a>
-                    <a href="/Events@(Model.GetExportQueryString("EventsPdf"))" class="btn btn-secondary">Export PDF</a>
+                    <div class="d-flex justify-content-lg-end align-items-center flex-wrap gap-2">
+                        <a asp-page="/Events/Index" class="btn btn-outline-secondary">Clear filters</a>
+                        <a href="/Events@(Model.GetExportQueryString("Export"))" class="btn btn-secondary">Export CSV</a>
+                        <a href="/Events@(Model.GetExportQueryString("EventsPdf"))" class="btn btn-secondary">Export PDF</a>
+                        <div class="btn-group event-range-btns" role="group" aria-label="Quick date filters">
+                            <a class="btn btn-sm @(Model.IsRange("today") ? "is-active" : "")" aria-pressed="@(Model.IsRange("today") ? "true" : "false")"
+                               href="/Events@(Model.GetFilterQueryString(range: Model.IsRange("today") ? "all" : "today", year: rangeToday.Year, month: rangeToday.Month))">Today</a>
+                            <a class="btn btn-sm @(Model.IsRange("weekend") ? "is-active" : "")" aria-pressed="@(Model.IsRange("weekend") ? "true" : "false")"
+                               href="/Events@(Model.GetFilterQueryString(range: Model.IsRange("weekend") ? "all" : "weekend", year: rangeWeekend.Year, month: rangeWeekend.Month))">This weekend</a>
+                            <a class="btn btn-sm @(Model.IsRange("week") ? "is-active" : "")" aria-pressed="@(Model.IsRange("week") ? "true" : "false")"
+                               href="/Events@(Model.GetFilterQueryString(range: Model.IsRange("week") ? "all" : "week", year: rangeWeek.Year, month: rangeWeek.Month))">Next 7 days</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -81,70 +114,169 @@
         </div>
     </form>
 
+    <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+        <div class="btn-group event-view-toggle" role="group" aria-label="View">
+            <a class="btn @(Model.IsCalendarView ? "is-active" : "")" aria-pressed="@(Model.IsCalendarView ? "true" : "false")"
+               href="/Events@(Model.GetFilterQueryString(view: "calendar"))">Calendar</a>
+            <a class="btn @(!Model.IsCalendarView ? "is-active" : "")" aria-pressed="@(!Model.IsCalendarView ? "true" : "false")"
+               href="/Events@(Model.GetFilterQueryString(view: "list"))">List</a>
+        </div>
+        <span class="text-muted small ms-auto">Times shown in <span class="tz-label">@Model.TzSuffix</span> (@Model.TimeZoneLabel).</span>
+    </div>
+
     <p>
-        A list of upcoming esports tournaments, races, and broadcasts. Filter by category, series, or platform.
-        Hover titles for more details.
-        <span id="timezone-indicator" class="text-muted small">Times shown in <span class="tz-label">ET</span>.</span>
+        @(Model.IsCalendarView ? "Calendar of upcoming esports tournaments, races, and broadcasts." : "A list of upcoming esports tournaments, races, and broadcasts.")
+        Filter by category, series, or platform. Click a day for details.
+        <i>(@(Model.EventViews?.Count ?? 0) shown)</i>
     </p>
 
-    <section class="grid mt-3">
-        <div class="row g-0 bg-dark text-white fw-bold">
-            <div class="p-1 text-center col-sm-3">Date / Time <span class="tz-label-col small fw-normal">(ET)</span></div>
-            <div class="p-1 text-center col-sm-2">Platform / Channel</div>
-            <div class="p-1 text-center col-sm-2">Category</div>
-            <div class="p-1 text-start col-sm">Name <i>(@(Model.EventList?.Count ?? 0) shown)</i></div>
+    @if (Model.IsCalendarView)
+    {
+        var prev = Model.PreviousMonth;
+        var next = Model.NextMonth;
+        <div class="event-cal">
+            <div class="event-cal-toolbar">
+                <a class="btn btn-outline-secondary" href="/Events@(Model.GetFilterQueryString(range: "all", year: prev.Year, month: prev.Month))" aria-label="Previous month">&lsaquo;</a>
+                <h2 class="event-cal-title">@Model.CalendarMonthStart.ToString("MMMM yyyy")</h2>
+                <a class="btn btn-outline-secondary" href="/Events@(Model.GetFilterQueryString(range: "all", year: next.Year, month: next.Month))" aria-label="Next month">&rsaquo;</a>
+                <a class="btn btn-secondary" href="/Events@(Model.GetFilterQueryString(range: "all", year: Model.TodayInZone.Year, month: Model.TodayInZone.Month))">Today</a>
+            </div>
+            <div class="event-cal-legend">
+                <span class="event-chip event-chip-esports">Esports</span>
+                <span class="event-chip event-chip-racing">Racing</span>
+                <span class="event-chip event-chip-sports">Sports</span>
+                <span class="event-chip event-chip-local">Local</span>
+            </div>
+            <div class="event-cal-grid" role="grid" aria-label="Events calendar">
+                @{
+                    var dows = new[] { "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+                }
+                @for (var i = 0; i < 7; i++)
+                {
+                    var weekend = i == 0 || i == 6;
+                    <div class="event-cal-dow @(weekend ? "is-weekend" : "")" role="columnheader">@dows[i]</div>
+                }
+                @foreach (var cell in Model.CalendarDays)
+                {
+                    var iso = cell.Date.ToString("yyyy-MM-dd");
+                    var extra = cell.Events.Count > ASP_site.Pages.Events.IndexModel.CalendarChipLimit ? cell.Events.Count - ASP_site.Pages.Events.IndexModel.CalendarChipLimit : 0;
+                    var shown = extra > 0 ? cell.Events.Take(ASP_site.Pages.Events.IndexModel.CalendarChipLimit) : cell.Events;
+                    var dimOutside = !cell.IsCurrentMonth && !(cell.IsInRange && !Model.IsRange("all"));
+                    <div class="event-cal-cell @(dimOutside ? "is-outside" : "") @(cell.IsToday ? "is-today" : "") @(cell.IsWeekend ? "is-weekend" : "") @(!cell.IsInRange ? "is-out-of-range" : "")"
+                         role="gridcell" data-day="@iso">
+                        <button type="button" class="event-cal-date" data-day="@iso" aria-label="@cell.Date.ToString("dddd, MMMM d, yyyy")">
+                            @cell.Date.Day
+                        </button>
+                        @foreach (var row in shown)
+                        {
+                            var chipLabel = string.IsNullOrEmpty(row.ChipTimeText)
+                                ? row.Event.Name
+                                : $"{row.ChipTimeText} {row.Event.Name}";
+                            <button type="button" class="event-chip @ASP_site.Pages.Events.IndexModel.ChipClass(row.Event.CategoryGroup)" data-day="@iso" title="@chipLabel">
+                                @chipLabel
+                            </button>
+                        }
+                        @if (extra > 0)
+                        {
+                            <button type="button" class="event-cal-more" data-day="@iso">+@extra more</button>
+                        }
+                    </div>
+                }
+            </div>
         </div>
 
-        @if (Model.EventList != null && Model.EventList.Any())
-        {
-            foreach (var evt in Model.EventList)
+        <div id="event-day-panel" class="event-day-panel mt-3" hidden>
+            <div class="event-day-panel-header">
+                <h3 id="event-day-panel-title" class="h5 mb-0">Events</h3>
+                <button type="button" class="btn btn-sm btn-outline-secondary" id="event-day-panel-close">Close</button>
+            </div>
+            <p id="event-day-panel-empty" class="text-muted mb-0" hidden>No events on this day.</p>
+            @foreach (var group in Model.EventsByDay.OrderBy(g => g.Key))
             {
-                var titleAttr = evt.Description ?? "";
-                if (evt.Link != null) { titleAttr += (string.IsNullOrEmpty(titleAttr) ? "" : "\n\n") + "Link: " + evt.Link; }
-                <div class="row g-0 border-bottom table-row-hover">
-                    <div class="p-1 text-center col-sm-3">@evt.Day.ToString("dddd, MMMM d, yyyy")
-                        @{
-                            var utcIso = ASP_site.Pages.Events.IndexModel.GetUtcIsoForEvent(evt);
-                        }
-                        @if (utcIso != null)
-                        {
-                            <span class="event-time-local" data-et="@utcIso" title="Displayed in your local timezone">@Event.FormatTime(evt.SortTime, evt.TimeDisplay)</span>
-                        }
-                        else
-                        {
-                            @Event.FormatTime(evt.SortTime, evt.TimeDisplay)
-                        }
-                    </div>
-                    <div class="p-1 text-center col-sm-2 text-muted">
-                        @if (!string.IsNullOrEmpty(evt.Channel) && evt.Platform.HasValue) { @($"{evt.Channel} ({evt.Platform})") }
-                        else if (!string.IsNullOrEmpty(evt.Channel)) { @evt.Channel }
-                        else if (evt.Platform.HasValue) { @evt.Platform.Value.ToString() }
-                        else { @("-") }
-                    </div>
-                    <div class="p-1 text-center col-sm-2 text-muted">
-                        @(evt.CategoryGroup?.ToString() ?? "-")@(evt.Category.HasValue && evt.Category != EventCategory.Other ? $" / {evt.Category}" : "")
-                    </div>
-                    <div class="p-1 text-start col-sm fw-bold" title="@titleAttr">
-                        @if (evt.Link != null)
-                        {
-                            <a href="@evt.Link" target="_blank" rel="noopener" class="text-decoration-none">@(evt.Name ?? "-")</a>
-                        }
-                        else
-                        {
-                            @(evt.Name ?? "-")
-                        }
-                    </div>
+                var iso = group.Key.ToString("yyyy-MM-dd");
+                <div class="event-day-panel-body" data-day="@iso" hidden>
+                    @foreach (var row in group.Value)
+                    {
+                        var evt = row.Event;
+                        <div class="row g-0 border-bottom table-row-hover">
+                            <div class="p-1 text-center col-sm-3">
+                                @row.DateText
+                                @if (!string.IsNullOrEmpty(row.TimeText))
+                                {
+                                    <span> @row.TimeText</span>
+                                }
+                            </div>
+                            <div class="p-1 text-center col-sm-2 text-muted">@row.WatchText</div>
+                            <div class="p-1 text-center col-sm-2 text-muted">@row.CategoryText</div>
+                            <div class="p-1 text-start col-sm">
+                                <div class="fw-bold">
+                                    @if (evt.Link != null)
+                                    {
+                                        <a href="@evt.Link" target="_blank" rel="noopener" class="text-decoration-none">@(evt.Name ?? "-")</a>
+                                    }
+                                    else
+                                    {
+                                        @(evt.Name ?? "-")
+                                    }
+                                </div>
+                                @if (!string.IsNullOrEmpty(evt.Description))
+                                {
+                                    <div class="text-muted small">@evt.Description</div>
+                                }
+                            </div>
+                        </div>
+                    }
                 </div>
             }
-        }
-        else
-        {
-            <p class="p-2">No events found matching your criteria. Try adjusting the filters or check "Show past events".</p>
-        }
-    </section>
+        </div>
+    }
+    else
+    {
+        <section class="grid mt-3">
+            <div class="row g-0 bg-dark text-white fw-bold">
+                <div class="p-1 text-center col-sm-3">Date / Time <span class="tz-label-col small fw-normal">(@Model.TzSuffix)</span></div>
+                <div class="p-1 text-center col-sm-2">Platform / Channel</div>
+                <div class="p-1 text-center col-sm-2">Category</div>
+                <div class="p-1 text-start col-sm">Name <i>(@(Model.EventViews?.Count ?? 0) shown)</i></div>
+            </div>
+
+            @if (Model.EventViews != null && Model.EventViews.Any())
+            {
+                foreach (var row in Model.EventViews)
+                {
+                    var evt = row.Event;
+                    var titleAttr = evt.Description ?? "";
+                    if (evt.Link != null) { titleAttr += (string.IsNullOrEmpty(titleAttr) ? "" : "\n\n") + "Link: " + evt.Link; }
+                    <div class="row g-0 border-bottom table-row-hover">
+                        <div class="p-1 text-center col-sm-3">@row.DateText
+                            @if (!string.IsNullOrEmpty(row.TimeText))
+                            {
+                                <span> @row.TimeText</span>
+                            }
+                        </div>
+                        <div class="p-1 text-center col-sm-2 text-muted">@row.WatchText</div>
+                        <div class="p-1 text-center col-sm-2 text-muted">@row.CategoryText</div>
+                        <div class="p-1 text-start col-sm fw-bold" title="@titleAttr">
+                            @if (evt.Link != null)
+                            {
+                                <a href="@evt.Link" target="_blank" rel="noopener" class="text-decoration-none">@(evt.Name ?? "-")</a>
+                            }
+                            else
+                            {
+                                @(evt.Name ?? "-")
+                            }
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <p class="p-2">No events found matching your criteria. Try adjusting the filters or check "Show past events".</p>
+            }
+        </section>
+    }
 </div>
 
 @section Scripts {
     <script src="~/js/events-local-time.js" asp-append-version="true"></script>
 }
-
