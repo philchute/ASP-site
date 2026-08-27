@@ -1,0 +1,74 @@
+@page "/Genres/{genre}"
+@model ASP_site.Pages.Genres.GenreModel
+
+@{
+    ViewData["Title"] = Model.DisplayName;
+}
+
+<div class="container-fluid mt-3">
+    <div class="row">
+        <div class="col-lg-8 order-2 order-lg-1">
+            @if (Model.MarkdownHtml != null)
+            {
+                <div class="markdown-content" style="max-width: 800px;">
+                    @Html.Raw(Model.MarkdownHtml)
+                </div>
+            }
+            else
+            {
+                <h1>@Model.DisplayName</h1>
+                <p class="text-muted">No history essay yet for this genre.</p>
+            }
+        </div>
+        <div class="col-lg-4 order-1 order-lg-2 mb-4">
+            <div class="genre-catalog sticky-top pt-2">
+                <h2 class="h4">In the catalog</h2>
+                <p class="small text-muted mb-2">
+                    @(Model.Games.Count) title@(Model.Games.Count == 1 ? "" : "s")
+                    · <a asp-page="/Games/Index" asp-route-SelectedGenre="@Model.Genre">Full games list</a>
+                </p>
+                @if (Model.Games.Count == 0)
+                {
+                    <p class="text-muted">No games in the catalog yet.</p>
+                }
+                else
+                {
+                    <div class="table-responsive">
+                        <table class="table table-sm mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Year</th>
+                                    <th>Name</th>
+                                    <th>Developer</th>
+                                    <th>Engine</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var g in Model.Games)
+                                {
+                                    <tr>
+                                        <td>@(g.Year?.ToString() ?? "-")</td>
+                                        <td>
+                                            <a asp-page="/Games/Game" asp-route-GameID="@g.GameID">@g.Name</a>
+                                        </td>
+                                        <td>@(g.Developer ?? "-")</td>
+                                        <td>
+                                            @if (g.EngineID != null)
+                                            {
+                                                <a asp-page="/Engines/Index" asp-route-engineID="@g.EngineID">@g.EngineID</a>
+                                            }
+                                            else
+                                            {
+                                                @("-")
+                                            }
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

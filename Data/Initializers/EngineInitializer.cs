@@ -584,6 +584,25 @@ namespace ASP_site.Data.Initializers {
           ParentID = "", Year = 1997
         },
         new Engine {
+          EngineID = "europa",
+          Name = "Europa Engine",
+          Developer = "Paradox Development Studio",
+          License = "Source Available",
+          DebutGameID = "eur",
+          Description = "Europa Engine is a game engine developed by Paradox Development Studio, first used in 2000's Europa Universalis.",
+          ParentID = "", Year = 2000
+        },
+        new Engine {
+          EngineID = "clausewitz",
+          Name = "Clausewitz Engine",
+          Developer = "Paradox Development Studio",
+          License = "Proprietary",
+          DebutGameID = "eur3",
+          Description = "Clausewitz Engine is a game engine developed by Paradox Development Studio, first used in 2007's Europa Universalis III.",
+          ParentID = "europa", Year = 2007
+        },
+
+        new Engine {
           EngineID = "scimitar",
           Name = "Scimitar Engine",
           Developer = "Ubisoft",
@@ -618,14 +637,6 @@ namespace ASP_site.Data.Initializers {
           DebutGameID = "acunity",
           Description = "AnvilNext 2 Engine is a game engine developed by Ubisoft, first used in 2014's Assassin's Creed Unity.",
           ParentID = "anvilnext", Year = 2014
-        },
-        new Engine {
-          EngineID = "steep",
-          Name = "Steep Engine",
-          Developer = "Ubisoft",
-          License = "Proprietary",
-          Description = "Steep Engine is a game engine developed by Ubisoft, first used in 2016's 'For Honor'",
-          ParentID = "anvilnext2", Year = 2016
         },
         new Engine {
           EngineID = "ubisoftanvil",

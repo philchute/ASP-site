@@ -55,7 +55,7 @@ public class SiteMapService
                         new SiteNode { Id = "servers", Label = "Server Browser", Url = "/Servers/Index" },
                         new SiteNode { Id = "scales", Label = "Model Scales", Url = "/Math/Scales/Index" },
                         new SiteNode { Id = "gunpla", Label = "Gunpla Dashboard", Url = "/Gundam/Dashboard" },
-                        new SiteNode { Id = "fighting-games", Label = "Fighting Games", Url = "/FightingGames/Index" },
+                        new SiteNode { Id = "fighting-games", Label = "Fighting Games", Url = "/Genres/Fighting" },
                     }
                 },
                 new SiteNode

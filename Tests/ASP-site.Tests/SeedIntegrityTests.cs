@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using ASP_site.Data;
 using ASP_site.Data.Initializers;
 using ASP_site.Helpers;
@@ -351,6 +352,52 @@ namespace ASP_site.Tests
             }
 
             Assert.True(missing.Count == 0, "FranchiseWork keys that do not resolve:\n" + string.Join("\n", missing));
+        }
+
+        [Fact]
+        public void GenreMarkdownGameLinks_ResolveToGames()
+        {
+            var markdownDir = Path.Combine(FindWebRoot(), "markdown", "genres");
+            Assert.True(Directory.Exists(markdownDir), $"Genre markdown directory not found: {markdownDir}");
+
+            var gameIds = _context.Games.Select(g => g.GameID).ToHashSet(StringComparer.OrdinalIgnoreCase);
+            var missing = new List<string>();
+            var gameLink = new Regex(@"\]\(/Games/([^)\s#]+)\)");
+            var linkedCount = 0;
+
+            foreach (var file in Directory.GetFiles(markdownDir, "*.md"))
+            {
+                var text = File.ReadAllText(file);
+                var fileName = Path.GetFileName(file);
+                foreach (Match match in gameLink.Matches(text))
+                {
+                    linkedCount++;
+                    var id = match.Groups[1].Value;
+                    if (!gameIds.Contains(id))
+                    {
+                        missing.Add($"{fileName}: {id}");
+                    }
+                }
+            }
+
+            Assert.True(linkedCount >= 20, $"Expected genre essays to link to catalog games, found {linkedCount} /Games/{{id}} links");
+            Assert.True(missing.Count == 0, "Genre markdown /Games/{id} links with no matching Game:\n" + string.Join("\n", missing));
+        }
+
+        private static string FindWebRoot()
+        {
+            var dir = new DirectoryInfo(AppContext.BaseDirectory);
+            while (dir != null)
+            {
+                var wwwroot = Path.Combine(dir.FullName, "wwwroot");
+                if (Directory.Exists(wwwroot) && File.Exists(Path.Combine(dir.FullName, "ASP-site.csproj")))
+                {
+                    return wwwroot;
+                }
+                dir = dir.Parent;
+            }
+
+            throw new DirectoryNotFoundException("Could not locate wwwroot from " + AppContext.BaseDirectory);
         }
 
         private static Dictionary<string, int> DuplicateKeys(IEnumerable<string> ids)

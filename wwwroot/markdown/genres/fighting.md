@@ -112,6 +112,7 @@ As always, this is some information I'm sorting out in a more useful format than
 ### Street Fighter II Series
 
 #### Street Fighter II: The World Warrior
+[Open game page](/Games/sf2ww)
 - 1991 - Street Fighter II: The World Warrior (CPS-1 Arcade) *developed by Capcom*
     - 1992 - Street Fighter II (SNES) *ported by Capcom*
         - ? - Street Fighter II (Wii port) 
@@ -127,6 +128,7 @@ As always, this is some information I'm sorting out in a more useful format than
     - 2011 - Street Fighter II (iOS in Street Fighter II Collection) *ported by Capcom*
 
 #### Street Fighter II: Champion Edition
+[Open game page](/Games/sf2ce)
 - 1992 - Street Fighter II: Champion Edition (CPS-1 Arcade) *developed by Capcom*
     - 1993 - Street Fighter II: Champion Edition (PC-Engine in Japan) *ported by Capcom*
         - ? - Street Fighter II: Champion Edition (Wii port) 
@@ -141,6 +143,7 @@ As always, this is some information I'm sorting out in a more useful format than
     - 2011 - Street Fighter II: Champion Edition (iOS in Street Fighter II Collection) *ported by Capcom*
 
 #### Street Fighter II: Hyper Fighting
+[Open game page](/Games/sf2hf)
 - 1992 - Street Fighter II: Hyper Fighting (CPS-1 Arcade) *developed by Capcom*
     - 1993 - Street Fighter II Turbo (SNES) *ported by Capcom*
     - 1993 - Street Fighter II': Special Champion Edition (Genesis by Capcom) *ported by Capcom*
@@ -153,6 +156,7 @@ As always, this is some information I'm sorting out in a more useful format than
     - 2011 - Street Fighter II Turbo (iOS in Street Fighter II Collection) *ported by Capcom*
 
 #### Super Street Fighter II: The New Challengers
+[Open game page](/Games/ssf2nc)
 Added Fei Long, Cammy, T. Hawk, and Dee Jay. A special version of this game, titled Super Street Fighter II: Tournament Battle, was created to allow eight players to participate in an elimination tournament.
 - 1993 - Super Street Fighter II: The New Challengers (CPS-2 Arcade) *developed by Capcom*
     - 1994 - Super Street Fighter II: The New Challengers (SNES, supported online) *ported by Capcom*
@@ -166,6 +170,7 @@ Added Fei Long, Cammy, T. Hawk, and Dee Jay. A special version of this game, tit
     - 2018 - Super Street Fighter II: The New Challengers (PS4, XboxOne, Switch, Steam in Street Fighter 30th Anniversary Collection) *ported by Digital Eclipse*
 
 #### Super Street Fighter II Turbo (Super Street Fighter II X: Grand Master Challenge in Japan)
+[Open game page](/Games/ssf2t)
 - 1994 - Super Street Fighter II Turbo (CPS-2 Arcade) *developed by Capcom*
     - 1994 - Super Street Fighter II Turbo (3DO, best port at the time) *ported by Capcom*
     - 1995 - Super Street Fighter II Turbo (MS-DOS) *ported by Eurocom*
@@ -193,6 +198,7 @@ MT Framework. Choose 4:3 classic or 16:9 HD Remix graphics. Adds Evil Ryu (Stree
 ### Street Fighter Alpha Series
 
 #### Street Fighter Alpha/Street Fighter Zero
+[Open game page](/Games/sfalpha)
 13 characters: Ryu, Ken, Sagat, Birdie, Adon (Street Fighter), Chun-Li, M. Bison, and Akuma (Street Fighter II), Guy and Sodom from Final Fight, new characters Charlie, Rose, and Dan.
 - 1995 - Street Fighter Zero (CPS-1 arcade and CP Changer in Japan) *developed by Capcom*
 - 1995 - Street Fighter Alpha: Warriors' Dreams (CPS-1 Arcade) *developed by Capcom*
@@ -208,6 +214,7 @@ MT Framework. Choose 4:3 classic or 16:9 HD Remix graphics. Adds Evil Ryu (Stree
 
 
 #### Street Fighter Alpha 2
+[Open game page](/Games/sfalpha2)
 Five new characters: Gen from Street Fighter, Zangief and Dhalsim from Street Fighter II, Rolento from Final Fight, new character Sakura
 - 1996 - Street Fighter Zero 2 (CPS-2 Arcade in Japan) *developed by Capcom*
     - 1996 - Street Fighter Alpha 2 (CPS-2 Arcade) *developed by Capcom*
@@ -230,6 +237,7 @@ Five new characters: Gen from Street Fighter, Zangief and Dhalsim from Street Fi
     - 2006 - Street Fighter Alpha 2 Gold in Street Fighter Alpha Anthology (PS2) *ported by Capcom*
 
 #### Street Fighter Alpha 3
+[Open game page](/Games/sfalpha3)
 19 from Street Fighter Alpha 2 Gold plus nine additional characters: E. Honda, Blanka, Balrog, and Vega from Street Fighter II, Cody from Final Fight, and new characters R. Mika, Karin Kanzuki, Juli and Juni.
 - 1998 - Street Fighter Zero 3 (CPS-2 Arcade in Japan) *developed by Capcom*
 - 1998 - Street Fighter Alpha 3 (Arcade) *developed by Capcom* Added Guile, Evil Ryu and Shin Akuma
@@ -258,16 +266,19 @@ Play as all characters
 ### Street Fighter III Series
 
 #### Street Fighter III: New Generation
+[Open game page](/Games/sf3)
 - 1997 - Street Fighter III: New Generation (Arcade) *developed by Capcom*
     - 1999 - Street Fighter III: Double Impact (Dreamcast) *ported by Capcom*
     - 2018 - Street Fighter 30th Anniversary Collection (PS4, XboxOne, Switch, PC) *ported by Digital Eclipse*
 
 #### Street Fighter III: 2nd Impact
+[Open game page](/Games/sf32ndimpact)
 - 1997 - Street Fighter III: 2nd Impact – Giant Attack (Arcade) *developed by Capcom*
     - 1999 - Street Fighter III: Double Impact (Dreamcast) *ported by Capcom*
     - 2018 - Street Fighter 30th Anniversary Collection (PS4, XboxOne, Switch, PC) *ported by Digital Eclipse*
 
 #### Street Fighter III: 3rd Strike
+[Open game page](/Games/sf33rdstrike)
 - 1999 - Street Fighter III: 3rd Strike – Fight for the Future v1 (Arcade) *developed by Capcom*
 - 1999 - Street Fighter III: 3rd Strike – Fight for the Future v2 (Arcade) *developed by Capcom*
 - 1999 - Street Fighter III: 3rd Strike – Fight for the Future v3 (Arcade) *developed by Capcom*
@@ -281,6 +292,7 @@ Play as all characters
 ### Street Fighter IV Series
 
 #### Street Fighter IV
+[Open game page](/Games/sf4)
 - 2008 - Street Fighter IV (Arcade) *developed by Capcom*
     - 2009 - Street Fighter IV (Xbox 360, PlayStation 3 and PC)
     - 2017 - Street Fighter IV (XboxOne)
@@ -299,9 +311,11 @@ Play as all characters
 	- 2012 - Super Street Fighter IV: Arcade Edition (Xbox360, PS3 and PC)
 
 #### Ultra Street Fighter IV
+[Open game page](/Games/usf4)
 - 2014 - Ultra Street Fighter IV (Xbox360, PS3, PS4, PC) *developed by Capcom*
 
 ### Street Fighter V
+[Open game page](/Games/sf5)
 Unreal 4 engine
 - 2016 - Street Fighter V (PlayStation 4 and PC) *developed by Capcom*
     - 2018 - Street Fighter V: Arcade Edition (PlayStation 4 and PC)
@@ -309,6 +323,7 @@ Unreal 4 engine
     - 2020 - Street Fighter V: Champion Edition (PlayStation 4 and PC)
 
 ### Street Fighter 6
+[Open game page](/Games/sf6)
 - 2023 - Street Fighter 6 (PS4, PS5, Xbox Series X|S, PC) *developed by Capcom*
     - 2023 - Street Fighter 6 Type Arcade *developed by Capcom*
     - 2025 - Street Fighter 6 Years 1-2 Fighters Edition (PS4, PS5, Xbox Series X|S, Switch 2, PC) *developed by Capcom*
@@ -317,6 +332,7 @@ Unreal 4 engine
 ## Darkstalkers / Vampire Savior Franchise
 
 #### Darkstalkers: The Night Warriors
+[Open game page](/Games/ds)
 - 1994 - Vampire: The Night Warriors (CPS-2 Arcade in Japan) *developed by Capcom*
     - 2005 - Vampire: Darkstalkers Collection (PS2 in Japan) *ported by Capcom*
     - 2021 - Darkstalkers: The Night Warriors in Capcom Arcade 2nd Stadium (2021 PS4, Xbox One, Switch, Windows) *ported by Capcom*
@@ -331,6 +347,7 @@ Unreal 4 engine
     - 2022 - Night Warriors: Darkstalkers' Revenge in Capcom Fighting Collection (has online play PlayStation 4, Xbox One, Switch, Windows) *ported by Capcom*
 
 #### Vampire Savior
+[Open game page](/Games/vs)
 - 1997 - Vampire Savior: World of Darkness (Initial USA CPS-2 Arcade release) *developed by Capcom*
 - 1997 - Vampire Savior: The Lord of Vampire (other CPS-2 Arcade releases) *developed by Capcom*
 - 1998 - Vampire Savior (Saturn in Japan includes addition characters from Nightwarriors) *ported by Capcom*
@@ -342,12 +359,14 @@ Unreal 4 engine
     - 2022 - Vampire Savior in Capcom Fighting Collection (has online play PlayStation 4, Xbox One, Switch, Windows) *ported by Capcom*
 
 #### Vampire Hunter 2: Darkstalkers' Revenge
+[Open game page](/Games/vh2)
 Modified version of Vampire Savior which uses the character roster from Vampire Hunter, Vampire: Darkstalkers Collection
 - 1997 - Vampire Hunter 2: Dark Stalkers' Revenge (Arcade in Japan) *developed by Capcom*
     - 2005 - Vampire Hunter 2: Dark Stalkers' Revenge in Vampire: Darkstalkers Collection (PS2 in Japan) *ported by Capcom*
     - 2022 - Vampire Hunter 2: Darkstalkers' Revenge in Capcom Fighting Collection (in Japanese language, has online play PlayStation 4, Xbox One, Switch, Windows) *ported by Capcom*
 
 #### Vampire Savior 2: The Lord of Vampire
+[Open game page](/Games/vs2)
 Modified version of Vampire Savior that removes J. Talbain, Sasquatch, and Rikuo and replaces them with Donovan, Huitzil, and Pyron
 - 1997 - Vampire Savior 2: The Lord of Vampire (Arcade in Japan) *developed by Capcom*
     - 2005 - Vampire Savior 2: The Lord of Vampire in Vampire: Darkstalkers Collection (PS2 in Japan) *ported by Capcom*
@@ -363,6 +382,7 @@ All franchise characters and allows the player to select game-specific variants 
 ## Marvel Franchise
 
 #### X-Men: Children of the Atom
+[Open game page](/Games/x-men)
 Featuring: Akuma (hidden), Colossus, Cyclops, Iceman, Omega Red, Psylocke, Sentinel, Silver Samurai, Spiral, Storm, Wolverine. Bosses: Juggernaut, Magneto
 - 1994 - X-Men: Children of the Atom (CPS-2 Arcade) *developed by Capcom*
     - 1995 - X-Men: Children of the Atom (Saturn) *ported by Capcom*
@@ -379,6 +399,7 @@ Wolverine, Magneto, Juggernaut, plus Anita (hidden), Blackheart, Captain America
     - 2024 - Marvel Super Heroes in Marvel vs. Capcom Fighting Collection: Arcade Classics (PS4, XboxOne, Switch, Steam) *ported by Capcom*
 
 #### X-Men vs. Street Fighter
+[Open game page](/Games/xvsf)
 X-Men: Cyclops, Gambit, Juggernaut, Magneto, Rogue, Sabretooth, Storm, Wolverine. 
 Street Fighter characters: Akuma, Cammy, Charlie Nash, Chun-Li, Dhalsim, Ken Masters, M. Bison, Ryu, Zangief
 - 1996 - X-Men vs. Street Fighter (CPS-2 Arcade) *developed by Capcom*
@@ -387,6 +408,7 @@ Street Fighter characters: Akuma, Cammy, Charlie Nash, Chun-Li, Dhalsim, Ken Mas
     - 2024 - X-Men vs. Street Fighter in Marvel vs. Capcom Fighting Collection: Arcade Classics (PS4, XboxOne, Switch, Steam) *ported by Capcom*
 
 #### Marvel Super Heroes vs. Street Fighter
+[Open game page](/Games/mvsf)
 Marvel characters: Armor Spider-Man (hidden), Blackheart, Captain America, Cyclops, Hulk, Mephisto (hidden), Omega Red, Shuma-Gorath, Spider-Man, U.S. Agent (hidden), Wolverine
 Street Fighter characters: Akuma, Chun-Li, Dan Hibiki, Dark Sakura (hidden), Dhalsim, Ken Masters, M. Bison, Mech-Zangief (hidden), Ryu, Sakura Kasugano, Shadow (hidden), Zangief
 - 1997 - Marvel Super Heroes vs. Street Fighter (CPS-2 Arcade) *developed by Capcom*
@@ -395,6 +417,7 @@ Street Fighter characters: Akuma, Chun-Li, Dan Hibiki, Dark Sakura (hidden), Dha
     - 2024 - Marvel Super Heroes vs. Street Fighter in Marvel vs. Capcom Fighting Collection: Arcade Classics (PS4, XboxOne, Switch, Steam) *ported by Capcom*
 
 #### Marvel vs. Capcom: Clash of Super Heroes
+[Open game page](/Games/mvc)
 - 1998 - Marvel vs. Capcom: Clash of Super Heroes (CPS-2 Arcade) *developed by Capcom*
     - 1999 - Marvel vs. Capcom: Clash of Super Heroes (Dreamcast) *ported by Capcom*
     - 2000 - Marvel vs. Capcom: Clash of Super Heroes EX Edition (PS1, memory restricted) *ported by Capcom*
@@ -402,6 +425,7 @@ Street Fighter characters: Akuma, Chun-Li, Dan Hibiki, Dark Sakura (hidden), Dha
     - 2024 - Marvel vs. Capcom: Clash of Super Heroes in Marvel vs. Capcom Fighting Collection: Arcade Classics (PS4, XboxOne, Switch, Steam) *ported by Capcom*
 
 #### Marvel vs. Capcom 2: New Age of Heroes
+[Open game page](/Games/mvc2)
 - 2000 - Marvel vs. Capcom 2: New Age of Heroes (CPS-2 Arcade) *developed by Capcom*
     - 2000 - Marvel vs. Capcom 2: New Age of Heroes (Dreamcast) *ported by Capcom*
     - 2002 - Marvel vs. Capcom 2: New Age of Heroes (PS2) *ported by Capcom*
@@ -412,6 +436,7 @@ Street Fighter characters: Akuma, Chun-Li, Dan Hibiki, Dark Sakura (hidden), Dha
     - 2024 - **Marvel vs. Capcom 2: New Age of Heroes** in Marvel vs. Capcom Fighting Collection: Arcade Classics (PS4, XboxOne, Switch, Steam) *ported by Capcom*
 
 #### Marvel vs. Capcom 3: Fate of Two Worlds
+[Open game page](/Games/mvc3)
 - 2011 - Marvel vs. Capcom 3: Fate of Two Worlds (PS3, XBox360) *developed by Capcom*
     - 2011 - Ultimate Marvel vs. Capcom 3 (PS3, XBox360, PSVita)
     - 2016 - Ultimate Marvel vs. Capcom 3 (PS4, XboxOne, Steam)
@@ -434,6 +459,7 @@ Released in Japan as Warzard (ウォーザード, Wōzādo)
     - 2022 - Red Earth In Capcom Fighting Collection (PS4, XboxOne, Switch, Steam) *ported by Capcom*
 
 #### Super Puzzle Fighter II Turbo
+[Open game page](/Games/spf2t)
 Released in Japan as Super Puzzle Fighter II X
 - 1996 - Super Puzzle Fighter II Turbo (CPS-2 Arcade) *developed by Capcom*
     - 2017 - Super Puzzle Fighter II Turbo HD Remix (PS3, Xbox360, XboxOne)
@@ -456,6 +482,7 @@ Handheld game produced by SNK
     - 2021 - SNK vs. Capcom: The Match of the Millennium (Switch, Steam)
 
 #### Capcom vs. SNK: Millennium Fight 2000
+[Open game page](/Games/cvssnk)
 - 2000 - Capcom vs. SNK: Millennium Fight 2000 (NAOMI Arcade) *developed by Capcom*
     - 2000 - Capcom vs. SNK: Millennium Fight 2000 (Dreamcast) *ported by Capcom*
 - 2001 - Capcom vs. SNK: Millennium Fight 2000 Pro (NAOMI Arcade) *developed by Capcom*
@@ -464,6 +491,7 @@ Handheld game produced by SNK
     - 2025 - Capcom vs. SNK: Millennium Fight 2000 Pro in Capcom Fighting Collection 2 (has online PlayStation 4, Xbox One, Switch, Windows) *ported by Capcom*
 
 #### Capcom vs. SNK 2: Mark of the Millennium 2001
+[Open game page](/Games/cvssnk2)
 - 2001 - Capcom vs. SNK 2: Mark of the Millennium 2001 (NAOMI Arcade) *developed by Capcom*
     - 2001 - Capcom vs. SNK 2: Mark of the Millennium 2001 (Dreamcast) *ported by Capcom*
     - 2001 - Capcom vs. SNK 2: Mark of the Millennium 2001 (PS2) *ported by Capcom*
@@ -505,11 +533,13 @@ Released in Japan as Private Justice Academy: Legion of Heroes. Sakura Kasugano 
     - 2025 - Project Justice in Capcom Fighting Collection 2 (PS4, Xbox One, Switch, Windows) *ported by Capcom*
 
 #### Power Stone
+[Open game page](/Games/powerstone)
 - 1999 - Power Stone (NAOMI Arcade, Dreamcast) *developed by Capcom*
     - 2006 - Power Stone in Power Stone Collection (PSP) *developed by Capcom*
     - 2025 - Power Stone in Capcom Fighting Collection 2 (PS4, Xbox One, Switch, Windows) *ported by Capcom*
 
 #### Power Stone 2
+[Open game page](/Games/powerstone2)
 - 2000 - Power Stone 2 (NAOMI Arcade, Dreamcast) *developed by Capcom*
     - 2006 - Power Stone 2 in Power Stone Collection (PSP) *developed by Capcom*
     - 2025 - Power Stone 2 in Capcom Fighting Collection 2 (PS4, Xbox One, Switch, Windows) *ported by Capcom*

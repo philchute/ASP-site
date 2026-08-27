@@ -14780,7 +14780,6 @@ namespace ASP_site.Data.Initializers
                         new Tag { Name = "Collection: The Complete Aliens Omnibus - Volume 4" }
                     }
                 },
-
             };
 
             var links = new List<Link>

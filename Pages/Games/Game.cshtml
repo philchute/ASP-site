@@ -15,6 +15,13 @@
   <div>@Model.Game.Description</div>
   <hr/>
 }
+@if(Model.Game?.Genre != null && GenreHub.HasEssay(Model.Game.Genre))
+{
+  <div>
+    <a asp-page="/Genres/Genre" asp-route-genre="@Model.Game.Genre">@GenreHub.DisplayName(Model.Game.Genre.Value) history</a>
+  </div>
+  <hr/>
+}
 @if(Model.Universes.Count > 0)
 {
   <div>

@@ -405,6 +405,12 @@ section.grid a:hover {
 }
 
 /* 6. Markdown Content (CCGs, Blog) */
+.genre-catalog {
+    top: 4.5rem;
+    max-height: calc(100vh - 5.5rem);
+    overflow-y: auto;
+}
+
 .markdown-content .table {
     border-collapse: collapse;
     color: #ccc;

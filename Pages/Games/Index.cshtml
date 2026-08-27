@@ -82,7 +82,18 @@
               else if (g.Genre == Genre.RTS) { <span data-bs-toggle="tooltip" data-bs-title="Real-Time Strategy" class="position-relative" style="z-index: 1;"><img src="~/image/rts.svg" alt="RTS" /></span> }
               else if (g.Genre == Genre.MOBA) { <span data-bs-toggle="tooltip" data-bs-title="Multiplayer Online Battle Arena" class="position-relative" style="z-index: 1;"><img src="~/image/moba.svg" alt="MOBA" /></span> }
               else if (g.Genre == Genre.TBS) { <span data-bs-toggle="tooltip" data-bs-title="Turn-Based Strategy" class="position-relative" style="z-index: 1;"><img src="~/image/tbs.svg" alt="TBS" /></span> }
-              else if (g.Genre == Genre.Fighting) { <span data-bs-toggle="tooltip" data-bs-title="Fighting Game" class="position-relative" style="z-index: 1;"><img src="~/image/fighting.svg" alt="Fighting" /></span> }
+              else if (g.Genre == Genre.Fighting) {
+                @if (GenreHub.HasEssay(g.Genre))
+                {
+                  <a asp-page="/Genres/Genre" asp-route-genre="@g.Genre" class="position-relative" style="z-index: 1;" data-bs-toggle="tooltip" data-bs-title="Fighting Games history">
+                    <img src="~/image/fighting.svg" alt="Fighting" />
+                  </a>
+                }
+                else
+                {
+                  <span data-bs-toggle="tooltip" data-bs-title="Fighting Game" class="position-relative" style="z-index: 1;"><img src="~/image/fighting.svg" alt="Fighting" /></span>
+                }
+              }
               else if (g.Genre == Genre.Adventure) { <span data-bs-toggle="tooltip" data-bs-title="Adventure Game" class="position-relative" style="z-index: 1;"><img src="~/image/adventure.svg" alt="Adventure" /></span> }
               else if (g.Genre == Genre.Lightgun) { <span data-bs-toggle="tooltip" data-bs-title="Lightgun Game" class="position-relative" style="z-index: 1;"><img src="~/image/lightgun.svg" alt="Lightgun" /></span> }
               else if (g.Genre == Genre.Puzzle) { <span data-bs-toggle="tooltip" data-bs-title="Puzzle Game" class="position-relative" style="z-index: 1;"><img src="~/image/puzzle.svg" alt="Puzzle" /></span> }

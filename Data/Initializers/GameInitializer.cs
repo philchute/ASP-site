@@ -611,7 +611,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Assassin's Creed",
           Description = "First of the series, set in the Crusades.",
           Developer = "Ubisoft",
-          EngineID = "Scimitar",
+          EngineID = "scimitar",
           IsFree = false,
           IsPaid = true,
           IsOpenSource = false,
@@ -630,7 +630,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Assassin's Creed II",
           Description = "Action-adventure game set in Italy during the Renaissance.",
           Developer = "Ubisoft",
-          EngineID = "Anvil",
+          EngineID = "anvil",
           IsFree = false,
           IsPaid = true,
           IsOpenSource = false,
@@ -649,7 +649,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Assassin's Creed III",
           Description = "Action-adventure game set in the American Revolutionary War.",
           Developer = "Ubisoft",
-          EngineID = "AnvilNext",
+          EngineID = "anvilnext",
           IsFree = false,
           IsPaid = true,
           IsOpenSource = false,
@@ -668,7 +668,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Assassin's Creed IV: Black Flag",
           Description = "Action-adventure game set in the Caribbean during the Golden Age of Piracy.",
           Developer = "Ubisoft",
-          EngineID = "AnvilNext",
+          EngineID = "anvilnext",
           IsFree = false,
           IsPaid = true,
           IsOpenSource = false,
@@ -687,7 +687,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Assassin's Creed Brotherhood",
           Description = "Action-adventure game set in Italy during the Renaissance.",
           Developer = "Ubisoft",
-          EngineID = "Scimitar",
+          EngineID = "scimitar",
           IsFree = false,
           IsPaid = true,
           IsOpenSource = false,
@@ -706,7 +706,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Assassin's Creed Mirage",
           Description = "Action-adventure game set in Baghdad during the Abbasid Caliphate.",
           Developer = "Ubisoft",
-          EngineID = "UbisoftAnvil",
+          EngineID = "ubisoftanvil",
           IsFree = false,
           IsPaid = true,
           IsOpenSource = false,
@@ -725,7 +725,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Assassin's Creed Odyssey",
           Description = "Historical action-adventure game set in Ancient Greece during the Peloponnesian War.",
           Developer = "Ubisoft",
-          EngineID = "steep",
+          EngineID = "anvilnext2",
           IsFree = false,
           IsPaid = true,
           IsOpenSource = false,
@@ -744,7 +744,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Assassin's Creed Origins",
           Description = "Action-adventure game set in Ptolemaic Egypt.",
           Developer = "Ubisoft",
-          EngineID = "steep",
+          EngineID = "anvilnext2",
           IsFree = false,
           IsPaid = true,
           IsOpenSource = false,
@@ -782,7 +782,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Assassin's Creed Rogue",
           Description = "Action-adventure game set during the Seven Years' War.",
           Developer = "Ubisoft",
-          EngineID = "anvilnext",
+          EngineID = "anvil",
           IsFree = false,
           IsPaid = true,
           IsOpenSource = false,
@@ -801,7 +801,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Assassin's Creed Shadows",
           Description = "Action-adventure game set in Sengoku-period Japan.",
           Developer = "Ubisoft",
-          EngineID = "anvilnext2",
+          EngineID = "ubisoftanvil",
           IsFree = false,
           IsPaid = true,
           IsOpenSource = false,
@@ -916,6 +916,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
+          EngineID = "goldsource",
           PlayWith = new List<int> { 0 },
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/bd"
@@ -2410,6 +2411,7 @@ namespace ASP_site.Data.Initializers {
           GameID = "ds",
           Name = "Darkstalkers",
           Description = "Darkstalkers is a fighting game developed by Capcom.",
+          Developer = "Capcom",
           EngineID = "CPS-2",
           IsFree = false,
           IsPaid = true,
@@ -4136,6 +4138,7 @@ namespace ASP_site.Data.Initializers {
           Name = "JoJo's Bizarre Adventure",
           Description = "JoJo's Bizarre Adventure (ジョジョの奇妙な冒険) is a fighting game developed by Capcom.",
           EngineID = "CPS-3",
+          Developer = "Capcom",
           IsFree = false,
           IsPaid = true,
           IsOpenSource = false,
@@ -4150,6 +4153,7 @@ namespace ASP_site.Data.Initializers {
           Name = "JoJo's Bizarre Adventure: Heritage for the Future",
           Description = "JoJo's Bizarre Adventure: Heritage for the Future (ジョジョの奇妙な冒険 未来への遺産) is a fighting game developed by Capcom.",
           EngineID = "CPS-3",
+          Developer = "Capcom",
           IsFree = false,
           IsPaid = true,
           IsOpenSource = false,
@@ -5567,6 +5571,26 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
+          GameID = "skullandbones",
+          Name = "Skull and Bones",
+          Description = "Skull and Bones is a 2024 action-adventure game developed by Ubisoft Singapore and published by Ubisoft. The game revolves around piracy and naval warfare with a fantastical setting in East Africa and Southeast Asia during the late 17th century, the peak of the historical Golden Age of Piracy. It was released for PlayStation 5, Windows, and Xbox Series X/S on February 16, 2024,",
+          EngineID = "ubisoftanvil",
+          Developer = "Ubisoft Singapore",
+          SteamID = 2853730,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.TPS,
+          Age = AgeAppropriateness.Teen,
+          SettingYear = 1695,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2024, Month = 2, Day = 16}
+          ]
+        },
+        new Game {
           GameID = "situationoutbreak",
           Name = "Situation Outbreak",
           Description = "",
@@ -5798,6 +5822,58 @@ namespace ASP_site.Data.Initializers {
           PlayWith = new List<int> { 0, 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 2026, Month = 3, Day = 15}
+          ]
+        },
+        new Game {
+          GameID = "startrekeliteforce",
+          Name = "Star Trek: Voyager - Elite Force",
+          Description = "Star Trek: Voyager - Elite Force is a first-person shooter game developed by Raven Software. It follows the Hazard Team aboard Voyager.",
+          EngineID = "idtech3",
+          Developer = "Raven Software",
+          Age = AgeAppropriateness.Middle,
+          SettingYear = 2376,
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = true,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2000, Month = 9, Day = 20}
+          ]
+        },
+        new Game {
+          GameID = "startrekeliteforce2",
+          Name = "Star Trek: Elite Force II",
+          Description = "Star Trek: Elite Force II is a first-person shooter game developed by Ritual Entertainment. It is the sequel to Star Trek: Voyager - Elite Force.",
+          EngineID = "idtech3",
+          Developer = "Ritual Entertainment",
+          Age = AgeAppropriateness.Middle,
+          SettingYear = 2379,
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = true,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2003, Month = 6, Day = 18}
+          ]
+        },
+        new Game {
+          GameID = "startrekinfinite",
+          Name = "Star Trek: Infinite",
+          Description = "Star Trek: Infinite is a grand strategy 4X game developed by Nimble Giant Entertainment and Published by Paradox Interactive. It is set during The Next Generation.",
+          EngineID = "clausewitz",
+          Developer = "Nimble Giant Entertainment",
+          SettingYear = 2360,
+          Age = AgeAppropriateness.Middle,
+          SteamID = 1622900,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          Genre = Genre.TBS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2023, Month = 10, Day = 12}
           ]
         },
         new Game {
@@ -6183,7 +6259,7 @@ namespace ASP_site.Data.Initializers {
         new Game {
           GameID = "thetalosprinciple",
           Name = "The Talos Principle",
-          Description = "The Talos Principle is a first-person puzzle game developed by Croteam.",
+          Description = "The Talos Principle is a first-person puzzle game developed by Croteam. The Reawakened remaster was on Unreal5.",
           EngineID = "seriousengine4",
           Developer = "Croteam",
           SteamID = 257510,
@@ -6420,6 +6496,46 @@ namespace ASP_site.Data.Initializers {
           PlayWith = new List<int> { 0, 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 2016, Month = 10, Day = 28}
+          ]
+        },
+        new Game {
+          GameID = "ghostreconwildlands",
+          Name = "Tom Clancy's Ghost Recon Wildlands",
+          Description = "Tom Clancy's Ghost Recon Wildlands is a third-person tactical shooter video game developed by Ubisoft Paris and Ubisoft Milan, and published by Ubisoft. It was released worldwide on March 7, 2017, for PlayStation 4, Xbox One, and Windows.",
+          EngineID = "ubisoftanvil2",
+          Developer = "Ubisoft",
+          SteamID = 460930,
+          SettingYear = 2019,
+          Age = AgeAppropriateness.Teen,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.TPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2017, Month = 3, Day = 7}
+          ]
+        },
+        new Game {
+          GameID = "ghostreconbreakpoint",
+          Name = "Tom Clancy's Ghost Recon Breakpoint",
+          Description = "Tom Clancy's Ghost Recon Breakpoint is an online tactical shooter video game developed by Ubisoft Paris and published by Ubisoft. Narrative sequel to Wildlands, it was shut down after NFTs were introduced.",
+          EngineID = "ubisoftanvil2",
+          Developer = "Ubisoft",
+          SteamID = 2231380,
+          SettingYear = 2025,
+          Age = AgeAppropriateness.Teen,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.TPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2019, Month = 10, Day = 4}
           ]
         },
         new Game {
