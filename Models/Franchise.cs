@@ -3,13 +3,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ASP_site.Models
 {
-    public enum FranchiseBranch
-    {
-        Alien,
-        Predator,
-        Crossover
-    }
-
     public enum FranchiseWorkKind
     {
         Movie,
@@ -42,7 +35,7 @@ namespace ASP_site.Models
 
         public Franchise? Franchise { get; set; }
 
-        public FranchiseBranch Branch { get; set; }
+        public string Branch { get; set; } = "";
 
         public FranchiseWorkKind Kind { get; set; }
 
@@ -95,10 +88,7 @@ namespace ASP_site.Models
             _ => kind.ToString()
         };
 
-        public static string FormatBranch(FranchiseBranch branch) => branch switch
-        {
-            FranchiseBranch.Crossover => "AvP",
-            _ => branch.ToString()
-        };
+        public static string FormatBranch(string branch) =>
+            string.IsNullOrEmpty(branch) ? "—" : branch;
     }
 }

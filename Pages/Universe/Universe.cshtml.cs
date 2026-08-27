@@ -75,9 +75,10 @@ namespace ASP_site.Pages.Universe
 
             AllBranches = works
                 .Select(w => w.Branch)
+                .Where(b => !string.IsNullOrEmpty(b))
                 .Distinct()
                 .OrderBy(b => b)
-                .ToDictionary(b => b.ToString(), FranchiseWork.FormatBranch);
+                .ToDictionary(b => b, FranchiseWork.FormatBranch);
 
             AllKinds = KindOrder
                 .Where(k => works.Any(w => w.Kind == k))
@@ -109,7 +110,7 @@ namespace ASP_site.Pages.Universe
 
             if (SelectedBranches.Any())
             {
-                filtered = filtered.Where(w => SelectedBranches.Contains(w.Branch.ToString()));
+                filtered = filtered.Where(w => SelectedBranches.Contains(w.Branch));
             }
 
             if (SelectedKinds.Any())

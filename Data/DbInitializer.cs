@@ -286,7 +286,10 @@ namespace ASP_site.Data {
       
       context.SaveChanges();
 
-      var adaptedMedia = ComicInitializer.GetMedia();
+      var adaptedMedia = ComicInitializer.GetMedia()
+        .Concat(StarTrekInitializer.GetMedia())
+        .Concat(DuneInitializer.GetMedia())
+        .ToArray();
       ThrowIfDuplicateIds(adaptedMedia, m => m.MediaID, "Media.MediaID");
       foreach (var media in adaptedMedia) {
         if (media.AdaptedFromArcIDs != null && media.AdaptedFromArcIDs.Any()) {

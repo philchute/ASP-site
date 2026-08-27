@@ -55,7 +55,11 @@ namespace ASP_site.Tests
         [Fact]
         public void MediaIds_AreUnique()
         {
-            var dupes = DuplicateKeys(ComicInitializer.GetMedia().Select(m => m.MediaID));
+            var dupes = DuplicateKeys(
+                ComicInitializer.GetMedia()
+                    .Concat(StarTrekInitializer.GetMedia())
+                    .Concat(DuneInitializer.GetMedia())
+                    .Select(m => m.MediaID));
             Assert.True(dupes.Count == 0, FormatDupes("Media.MediaID", dupes));
         }
 
@@ -163,13 +167,13 @@ namespace ASP_site.Tests
             var arcIds = _context.StoryArcs.Select(a => a.ArcID).ToHashSet(StringComparer.OrdinalIgnoreCase);
             var missing = new List<string>();
 
-            foreach (var media in ComicInitializer.GetMedia())
+            foreach (var media in _context.Media.Include(m => m.AdaptedFromArcs).ToList())
             {
-                foreach (var id in SplitArcIds(media.AdaptedFromArcIDs))
+                foreach (var arc in media.AdaptedFromArcs)
                 {
-                    if (!arcIds.Contains(id))
+                    if (!arcIds.Contains(arc.ArcID))
                     {
-                        missing.Add($"Media {media.MediaID}: {id}");
+                        missing.Add($"Media {media.MediaID}: {arc.ArcID}");
                     }
                 }
             }

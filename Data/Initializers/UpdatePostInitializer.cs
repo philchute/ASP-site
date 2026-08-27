@@ -153,6 +153,14 @@ namespace ASP_site.Data.Initializers
                     PostedDate = new DateTime(2026, 8, 25, 12, 0, 0, DateTimeKind.Utc), Author = "Phil",
                     Tags = new List<Tag> { tags.Single(t => t.Name == "Website Update") }
                 },
+                new UpdatePost
+                {
+                    Id = 18,
+                    Title = "Events page updates, Star Trek and Dune added",
+                    Content = "<p>Throwing some new models at some old pages and exploring some new ways to link data here. Nerding out about nerd stuff I guess but it all fits.</p>",
+                    PostedDate = new DateTime(2026, 8, 26, 12, 0, 0, DateTimeKind.Utc), Author = "Phil",
+                    Tags = new List<Tag> { tags.Single(t => t.Name == "Website Update") }
+                },
             };
             return (posts, tags);
         }

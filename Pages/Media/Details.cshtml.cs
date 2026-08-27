@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using ASP_site.Data;
+using ASP_site.Helpers;
 using ASP_site.Models;
 
 namespace ASP_site.Pages.MediaPages
@@ -15,12 +16,18 @@ namespace ASP_site.Pages.MediaPages
         }
 
         public Media? Item { get; set; }
+        public List<Franchise> Universes { get; set; } = [];
 
         public async Task OnGetAsync(string id)
         {
             Item = await _context.Media
                 .Include(m => m.AdaptedFromArcs)
                 .FirstOrDefaultAsync(m => m.MediaID == id);
+
+            if (Item != null)
+            {
+                Universes = await FranchiseLookup.ForMediaAsync(_context, id);
+            }
         }
     }
 }

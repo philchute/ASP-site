@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using ASP_site.Models;
 using ASP_site.Data;
+using ASP_site.Helpers;
 
 namespace ASP_site.Pages.Games
 {
@@ -15,6 +16,7 @@ namespace ASP_site.Pages.Games
 
     public Game? Game { get; set; }
     public List<Link> GameLinks { get; set; } = new List<Link>();
+    public List<Franchise> Universes { get; set; } = [];
 
     public async Task OnGetAsync(string GameID)
     {
@@ -27,6 +29,7 @@ namespace ASP_site.Pages.Games
         Game.Mods = await _context.Games.Where(g => g.ModForGameID == GameID).ToListAsync();
         GameLinks = await _context.Links.Where(l => l.GameID == GameID).ToListAsync();
         Game.Servers = await _context.Servers.Where(s => s.GameID == GameID).ToListAsync();
+        Universes = await FranchiseLookup.ForGameAsync(_context, GameID);
       }
     }
   }
