@@ -588,7 +588,6 @@ namespace ASP_site.Data.Initializers {
           Name = "Europa Engine",
           Developer = "Paradox Development Studio",
           License = "Source Available",
-          DebutGameID = "eur",
           Description = "Europa Engine is a game engine developed by Paradox Development Studio, first used in 2000's Europa Universalis.",
           ParentID = "", Year = 2000
         },
@@ -597,7 +596,6 @@ namespace ASP_site.Data.Initializers {
           Name = "Clausewitz Engine",
           Developer = "Paradox Development Studio",
           License = "Proprietary",
-          DebutGameID = "eur3",
           Description = "Clausewitz Engine is a game engine developed by Paradox Development Studio, first used in 2007's Europa Universalis III.",
           ParentID = "europa", Year = 2007
         },
