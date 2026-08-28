@@ -25,10 +25,27 @@ namespace ASP_site.Models
         // Protocol to use for querying individual servers (e.g., "A2S", "GameSpy")
         public string QueryProtocol { get; set; } = "A2S";
 
+        // Override when GameID does not match the master-server slug (prefer renaming GameID instead).
+        public string? MasterGameName { get; set; }
+
         // URL for a custom master server, used for non-Steam games
         public string? MasterServerUrl { get; set; }
 
         // Secret key for some master servers
         public string? SecretKey { get; set; }
+
+        public string GetMasterGameName(string gameId) =>
+            string.IsNullOrWhiteSpace(MasterGameName) ? gameId : MasterGameName;
+
+        public bool UsesThreeNetworks =>
+            string.Equals(MasterServerKey, "333networks", StringComparison.OrdinalIgnoreCase);
+
+        public bool UsesDefinedServerList => UseDefinedServerList == true;
+
+        public bool UsesA2SMaster =>
+            !UsesThreeNetworks && !UsesDefinedServerList && !string.IsNullOrEmpty(MasterServerKey);
+
+        public bool UsesSteamApi =>
+            !UsesThreeNetworks && !UsesDefinedServerList && string.IsNullOrEmpty(MasterServerKey);
     }
 } 

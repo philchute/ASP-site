@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using ASP_site.Models;
 using ASP_site.Helpers;
 using ASP_site.Services;
@@ -24,10 +25,13 @@ namespace ASP_site.Pages.Servers
             _gameDataService = gameDataService;
             _logger = logger;
             GamesList = new List<Game>();
+            GameSelectItems = new List<SelectListItem>();
         }
 
         public List<Game> GamesList { get; set; }
+        public List<SelectListItem> GameSelectItems { get; set; }
         public Game? SelectedGame { get; set; }
+        public ServerBrowserColumns Columns { get; set; } = new();
         public bool IsLoading { get; set; }
         public string? ErrorMessage { get; set; }
 
@@ -41,7 +45,10 @@ namespace ASP_site.Pages.Servers
         public string VacFilter { get; set; } = "all";
 
         [BindProperty(SupportsGet = true)]
-        public string PopulationFilter { get; set; } = "all";
+        public bool HideEmpty { get; set; }
+
+        [BindProperty(SupportsGet = true)]
+        public bool HideFull { get; set; }
 
         [BindProperty(SupportsGet = true)]
         public string PasswordFilter { get; set; } = "all";
@@ -51,6 +58,7 @@ namespace ASP_site.Pages.Servers
             ViewData["ActivePage"] = "Servers";
             await _gameDataService.InitializeAsync();
             GamesList = _gameDataService.GetGames().OrderBy(g => g.Name).ToList();
+            GameSelectItems = BuildGameSelectItems(GamesList);
 
             if (!string.IsNullOrEmpty(GameId))
             {
@@ -61,6 +69,7 @@ namespace ASP_site.Pages.Servers
                 }
                 else
                 {
+                    Columns = ServerBrowserUi.Columns(SelectedGame);
                     IsLoading = true;
                 }
             }
@@ -88,21 +97,12 @@ namespace ASP_site.Pages.Servers
                     return JsonError($"Could not fetch server list for {game.Name}. The game server browser service might be unavailable or the game might not be supported correctly.");
                 }
 
-                var filtered = ApplyFiltersAndSort(rawServerList);
+                var columns = ServerBrowserUi.Columns(game);
                 return new JsonResult(new
                 {
                     gameName = game.Name,
-                    servers = filtered.Select(s => new ServerListDto
-                    {
-                        Name = s.Name,
-                        Map = s.Map,
-                        PlayersStr = s.PlayersStr,
-                        IpPort = $"{s.Address}:{s.Port}",
-                        Environment = s.Environment.ToString(),
-                        ServerType = s.ServerType.ToString(),
-                        RequiresVAC = s.RequiresVAC,
-                        PasswordProtected = s.PasswordProtected
-                    }).ToList()
+                    columns,
+                    servers = rawServerList.Select(s => ToDto(s, game)).ToList()
                 }, new System.Text.Json.JsonSerializerOptions { PropertyNamingPolicy = System.Text.Json.JsonNamingPolicy.CamelCase });
             }
             catch (Exception ex)
@@ -112,33 +112,38 @@ namespace ASP_site.Pages.Servers
             }
         }
 
-        private List<GameServerItem> ApplyFiltersAndSort(IEnumerable<GameServerItem> rawServerList)
+        public static List<SelectListItem> BuildGameSelectItems(IEnumerable<Game> games)
         {
-            IEnumerable<GameServerItem> filteredList = rawServerList;
+            return games
+                .OrderBy(g => g.Name, StringComparer.OrdinalIgnoreCase)
+                .Select(g => new SelectListItem
+                {
+                    Value = g.GameID,
+                    Text = ServerBrowserUi.SelectLabel(g)
+                })
+                .ToList();
+        }
 
-            if (VacFilter == "yes")
-                filteredList = filteredList.Where(s => s.RequiresVAC == true);
-            else if (VacFilter == "no")
-                filteredList = filteredList.Where(s => s.RequiresVAC == false);
-
-            if (PopulationFilter == "hide_empty")
-                filteredList = filteredList.Where(s => s.Players > 0);
-            else if (PopulationFilter == "hide_full")
-                filteredList = filteredList.Where(s => s.Players < s.MaxPlayers);
-
-            if (PasswordFilter == "yes")
-                filteredList = filteredList.Where(s => s.PasswordProtected == true);
-            else if (PasswordFilter == "no")
-                filteredList = filteredList.Where(s => s.PasswordProtected == false);
-
-            filteredList = SortBy?.ToLowerInvariant() switch
+        public static ServerListDto ToDto(GameServerItem s, Game game)
+        {
+            var ipPort = $"{s.Address}:{s.Port}";
+            return new ServerListDto
             {
-                "name" => filteredList.OrderBy(s => s.Name),
-                "map" => filteredList.OrderBy(s => s.Map).ThenByDescending(s => s.Players),
-                _ => filteredList.OrderByDescending(s => s.Players).ThenBy(s => s.Name)
+                Name = s.Name,
+                Map = s.Map,
+                Players = s.Players,
+                MaxPlayers = s.MaxPlayers,
+                PlayersStr = s.PlayersStr,
+                IpPort = ipPort,
+                Environment = s.Environment.ToString(),
+                ServerType = s.ServerType.ToString(),
+                RequiresVAC = s.RequiresVAC,
+                PasswordProtected = s.PasswordProtected,
+                GameType = s.GameType,
+                Country = s.Country,
+                ConnectCommand = ServerBrowserUi.ConnectCommand(game, ipPort),
+                SteamConnectUrl = ServerBrowserUi.SteamConnectUrl(game, ipPort)
             };
-
-            return filteredList.ToList();
         }
 
         private JsonResult JsonError(string message)
@@ -151,12 +156,18 @@ namespace ASP_site.Pages.Servers
         {
             public string Name { get; set; } = "";
             public string Map { get; set; } = "";
+            public int Players { get; set; }
+            public int MaxPlayers { get; set; }
             public string PlayersStr { get; set; } = "";
             public string IpPort { get; set; } = "";
             public string Environment { get; set; } = "";
             public string ServerType { get; set; } = "";
             public bool? RequiresVAC { get; set; }
             public bool? PasswordProtected { get; set; }
+            public string? GameType { get; set; }
+            public string? Country { get; set; }
+            public string ConnectCommand { get; set; } = "";
+            public string? SteamConnectUrl { get; set; }
         }
     }
 }

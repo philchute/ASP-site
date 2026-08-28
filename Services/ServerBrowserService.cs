@@ -65,7 +65,7 @@ namespace ASP_site.Services
             if (game?.ServerConfig is null)
                 return [];
 
-            var key = $"Servers-{game.SteamID}-{game.Name}".ToUpper();
+            var key = $"Servers-{game.GameID}".ToUpperInvariant();
 
             return await _cache.GetOrCreateAsync(key, async entry =>
             {
@@ -125,7 +125,8 @@ namespace ASP_site.Services
                         }
 
                         int countBeforeGameSpecificFilter = servers.Count;
-                        if ((!string.IsNullOrEmpty(game.ServerConfig.MasterServerKey) && game.ServerConfig.MasterServerKey == "GoldSource") || game.SteamID == 10)
+                        if (game.SteamID is 10 or 70 ||
+                            string.Equals(game.EngineID, "goldsrc", StringComparison.OrdinalIgnoreCase))
                         {
                             servers = servers.Where(s => s.MaxPlayers <= 32).ToList();
                             _logger.LogDebug($"Applied GoldSrc MaxPlayers filter for {game.Name}.");
@@ -181,29 +182,8 @@ namespace ASP_site.Services
                 var mappedServers = new List<GameServerItem>();
                 foreach (var apiServer in apiResponse.Response.Servers)
                 {
-                    var ip = apiServer.GetIPAddress();
-                    if (ip == null) continue;
-
-                    var gameServer = new GameServerItem(ip, apiServer.GamePort, gameContext)
-                    {
-                        Name = apiServer.Name,
-                        Map = apiServer.Map,
-                        Players = apiServer.Players,
-                        MaxPlayers = apiServer.MaxPlayers,
-                        Bots = apiServer.Bots,
-                        RequiresVAC = apiServer.Secure,
-                        PasswordProtected = !apiServer.Dedicated,
-                        Version = apiServer.Version,
-                        ServerType = apiServer.Dedicated ? Models.ServerBrowser.ServerType.Dedicated : Models.ServerBrowser.ServerType.Listen,
-                        Environment = apiServer.OS.ToLowerInvariant() switch
-                        {
-                            "w" => Models.ServerBrowser.Environment.Windows,
-                            "l" => Models.ServerBrowser.Environment.Linux,
-                            "m" or "o" => Models.ServerBrowser.Environment.Mac,
-                            _ => Models.ServerBrowser.Environment.Linux
-                        }
-                    };
-                    mappedServers.Add(gameServer);
+                    if (apiServer.GetIPAddress() == null) continue;
+                    mappedServers.Add(apiServer.MapToGameServerItem(gameContext));
                 }
                 _logger.LogDebug($"Mapped {mappedServers.Count} servers from Steam API response for {url}.");
                 return mappedServers;

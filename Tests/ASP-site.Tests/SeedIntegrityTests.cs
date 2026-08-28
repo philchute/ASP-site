@@ -72,6 +72,53 @@ namespace ASP_site.Tests
         }
 
         [Fact]
+        public void ThreeNetworksGameIds_MatchMasterSlugRules()
+        {
+            var invalid = GameInitializer.GetGames()
+                .Where(g => g.ServerConfig?.UsesThreeNetworks == true)
+                .Select(g => new
+                {
+                    g.GameID,
+                    Slug = g.ServerConfig!.GetMasterGameName(g.GameID)
+                })
+                .Where(x => string.IsNullOrWhiteSpace(x.Slug) ||
+                            x.Slug.Length > 20 ||
+                            x.Slug.Any(c => !(char.IsLetterOrDigit(c) || c == '_')))
+                .Select(x => $"{x.GameID} -> '{x.Slug}'")
+                .ToList();
+
+            Assert.True(invalid.Count == 0,
+                "333networks slugs must be 1-20 word characters (GameID or MasterGameName):\n" +
+                string.Join("\n", invalid));
+        }
+
+        [Fact]
+        public void SteamApiBrowserGames_HaveSteamId()
+        {
+            var missing = GameInitializer.GetGames()
+                .Where(g => g.ServerConfig?.UsesSteamApi == true && g.SteamID is null or 0)
+                .Select(g => g.GameID)
+                .ToList();
+
+            Assert.True(missing.Count == 0,
+                "Steam Web API browser games need a SteamID (HL1 mods use 70):\n" +
+                string.Join("\n", missing));
+        }
+
+        [Fact]
+        public void GoldSourceAndSourceMasterKeys_AreNotUsed()
+        {
+            var leftover = GameInitializer.GetGames()
+                .Where(g => g.ServerConfig?.MasterServerKey is "GoldSource" or "Source")
+                .Select(g => g.GameID)
+                .ToList();
+
+            Assert.True(leftover.Count == 0,
+                "GoldSrc/Source listings should use Steam Web API, not UDP masters:\n" +
+                string.Join("\n", leftover));
+        }
+
+        [Fact]
         public void EngineIds_AreUnique()
         {
             var dupes = DuplicateKeys(EngineInitializer.GetEngines().Select(e => e.EngineID));

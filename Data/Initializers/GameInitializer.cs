@@ -42,7 +42,6 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/hl",
             GameDirectory = "3wave",
-            MasterServerKey = "GoldSource"
           }
         },
         new Game {
@@ -62,7 +61,6 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/hl",
             GameDirectory = "action",
-            MasterServerKey = "GoldSource"
           },
           ReleaseDates = [
             new ReleaseDate{Year = 2000}
@@ -916,7 +914,7 @@ namespace ASP_site.Data.Initializers {
           IsDeveloperMaintained = false,
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
-          EngineID = "goldsource",
+          EngineID = "goldsrc",
           PlayWith = new List<int> { 0 },
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/bd"
@@ -974,10 +972,6 @@ namespace ASP_site.Data.Initializers {
             new ReleaseDate{Year = 2002, Month = 9, Day = 10, Region = Region.NA},
             new ReleaseDate{Year = 2002, Month = 9, Day = 20, Region = Region.EU}
           ],
-          ServerConfig = new ServerBrowserConfig {
-            MasterServerKey = "333networks",
-            QueryProtocol = "GameSpy",
-          }
         },
         new Game {
           GameID = "bfvietnam",
@@ -1251,7 +1245,6 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/hl",
             GameDirectory = "bg",
-            MasterServerKey = "GoldSource"
           },
           ReleaseDates = [
             new ReleaseDate{Year = 2000}
@@ -1401,6 +1394,7 @@ namespace ASP_site.Data.Initializers {
           Description = "A multiplayer mod for Half-Life featuring zombies and other horror elements.",
           ModForGameID = "halflife",
           EngineID = "goldsrc",
+          SteamID = 70,
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
@@ -1411,7 +1405,6 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/bb",
             GameDirectory = "brainbread",
-            MasterServerKey = "GoldSource"
           }
         },
         new Game {
@@ -1453,6 +1446,7 @@ namespace ASP_site.Data.Initializers {
           Description = "A multiplayer mod for Half-Life featuring vehicle-based combat.",
           ModForGameID = "halflife",
           EngineID = "goldsrc",
+          SteamID = 70,
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
@@ -1463,7 +1457,6 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/hl",
             GameDirectory = "BumperCars",
-            MasterServerKey = "GoldSource"
           },
           ReleaseDates = [
             new ReleaseDate{Year = 2000}
@@ -2110,6 +2103,7 @@ namespace ASP_site.Data.Initializers {
           Description = "A remastered version of the Cold Ice mod for Half-Life.",
           ModForGameID = "halflife",
           EngineID = "goldsrc",
+          SteamID = 70,
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
@@ -2119,8 +2113,7 @@ namespace ASP_site.Data.Initializers {
           PlayWith = new List<int> { 0 },
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/hl",
-            GameDirectory = "ice_beta5",
-            MasterServerKey = "GoldSource"
+            GameDirectory = "ice",
           },
           ReleaseDates = [
             new ReleaseDate{Year = 2020}
@@ -2170,7 +2163,6 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/cof",
             GameDirectory = "cof",
-            MasterServerKey = "GoldSource"
           }
         },
         new Game {
@@ -2849,6 +2841,44 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
+          GameID = "drakan",
+          Name = "Drakan: Order of the Flame",
+          Description = "Drakan: Order of the Flame is an action-adventure video game developed by Surreal Software and published by Psygnosis in 1999.",
+          EngineID = "riot",
+          Developer = "Surreal Software",
+          IsFree = true,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = true,
+          Genre = Genre.TPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 1999, Month = 8, Day = 20}
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "333networks",
+            QueryProtocol = "GameSpy",
+          }
+        },
+        new Game {
+          GameID = "drakan2",
+          Name = "Drakan: The Ancients' Gates",
+          Description = "Drakan: The Ancients' Gates is a 2002 action-adventure video game developed by Surreal Software and published by Sony Computer Entertainment for the PlayStation 2. It is the sequel to Surreal Software's 1999 Windows game Drakan: Order of the Flame.",
+          EngineID = "riot",
+          Developer = "Surreal Software",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = true,
+          Genre = Genre.TPS,
+          PlayWith = new List<int> { 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2002, Month = 1, Day = 29}
+          ]
+        },
+        new Game {
           GameID = "eleven",
           Name = "Eleven",
           Description = "Eleven is an accurate and competitive table tennis game for VR hardware.",
@@ -2881,7 +2911,6 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/esf",
             GameDirectory = "esf",
-            MasterServerKey = "GoldSource"
           },
           ReleaseDates = [
             new ReleaseDate{Year = 2000}
@@ -2922,6 +2951,8 @@ namespace ASP_site.Data.Initializers {
           IsCommunityMaintained = true,
           Genre = Genre.FPS,
           PlayWith = new List<int> { 0 },
+          ServerConfig = new ServerBrowserConfig {
+          },
           ReleaseDates = [
             new ReleaseDate{Year = 2003, Month = 5, Day = 29},
             new ReleaseDate{Year = 2022, Month = 5, Day = 19, Region = Region.Worldwide, ReleaseVersion = ReleaseVersion.SteamRelease}
@@ -3084,7 +3115,7 @@ namespace ASP_site.Data.Initializers {
           IsOpenSource = false,
           IsDeveloperMaintained = false,
           IsCommunityMaintained = false,
-          Genre = Genre.FPS,
+          Genre = Genre.Lightgun,
           PlayWith = new List<int> { 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 2009, Month = 3, Day = 3}
@@ -3384,6 +3415,7 @@ namespace ASP_site.Data.Initializers {
           Description = "A team-oriented first person shooter mod in which players are divided into 2 teams: Attackers and Defenders.",
           ModForGameID = "halflife",
           EngineID = "goldsrc",
+          SteamID = 70,
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
@@ -3394,7 +3426,6 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/flf",
             GameDirectory = "frontline",
-            MasterServerKey = "GoldSource"
           },
           ReleaseDates = [
             new ReleaseDate{Year = 2001}
@@ -3435,7 +3466,6 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/gmod",
             GameDirectory = "gmod9",
-            MasterServerKey = "Source",
             NoBackgroundService = true
           }
         },
@@ -3533,7 +3563,6 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/hl",
             GameDirectory = "valve",
-            MasterServerKey = "GoldSource"
           },
           ReleaseDates = [
             new ReleaseDate{Year = 1998, Month = 11, Day = 19, Region = Region.NA, ReleaseVersion = ReleaseVersion.FullGame},
@@ -3649,6 +3678,7 @@ namespace ASP_site.Data.Initializers {
           Description = "Half-Life: Rally is a first-person shooter game developed by Valve Software.",
           EngineID = "goldsrc",
           ModForGameID = "halflife",
+          SteamID = 70,
           IsOpenSource = true,
           IsDeveloperMaintained = false,
           IsCommunityMaintained = false,
@@ -3657,7 +3687,6 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/hl",
             GameDirectory = "hlrally",
-            MasterServerKey = "GoldSource"
           }
         },
         new Game {
@@ -3694,7 +3723,6 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/halogs",
             GameDirectory = "halogs",
-            MasterServerKey = "GoldSource"
           }
         },
         new Game {
@@ -3857,7 +3885,6 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/hidden",
             GameDirectory = "hidden",
-            MasterServerKey = "Source",
             NoBackgroundService = true
           }
         },
@@ -3901,6 +3928,7 @@ namespace ASP_site.Data.Initializers {
           Description = "Hostile Intent is a goldsrc mod featuring tactical round based gameplay similar to Counterstrike with some hardcore mechanics.",
           ModForGameID = "halflife",
           EngineID = "goldsrc",
+          SteamID = 70,
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
@@ -3911,7 +3939,6 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/hl",
             GameDirectory = "hi",
-            MasterServerKey = "GoldSource"
           }
         },
         new Game {
@@ -4030,7 +4057,6 @@ namespace ASP_site.Data.Initializers {
           SteamID = 17700,
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/ins",
-            MasterServerKey = "Source",
             NoBackgroundService = true
           }
         },
@@ -4393,7 +4419,6 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/msr",
             GameDirectory = "msc",
-            MasterServerKey = "GoldSource"
           }
         },
         new Game {
@@ -5453,7 +5478,6 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/sai",
             GameDirectory = "sai",
-            MasterServerKey = "GoldSource"
           },
           ReleaseDates = [
             new ReleaseDate{Year = 2002},
@@ -5470,7 +5494,6 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/sh",
             GameDirectory = "scihunt",
-            MasterServerKey = "GoldSource"
           },
           ReleaseDates = [
             new ReleaseDate{Year = 2002},
@@ -5639,7 +5662,6 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/hl2",
             GameDirectory = "SmodTroopers",
-            MasterServerKey = "Source",
             NoBackgroundService = true
           }
         },
@@ -5736,10 +5758,6 @@ namespace ASP_site.Data.Initializers {
             new ReleaseDate{Year = 1999, Month = 3, Day = 1, Region = Region.NA},
             new ReleaseDate{Year = 1999, Month = 3, Day = 5, Region = Region.EU},
           ],
-          ServerConfig = new ServerBrowserConfig {
-            MasterServerKey = "333networks",
-            QueryProtocol = "GameSpy",
-          }
         },
         new Game {
           GameID = "starcraft",
@@ -6221,7 +6239,6 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/sven",
             GameDirectory = "svencoop",
-            MasterServerKey = "GoldSource"
           }
         },
         new Game {
@@ -6440,7 +6457,6 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/hl",
             GameDirectory = "ts",
-            MasterServerKey = "GoldSource"
           }
         },
         new Game {
@@ -6460,7 +6476,6 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/hl",
             GameDirectory = "tt",
-            MasterServerKey = "GoldSource"
           }
         },
         new Game {
@@ -6895,6 +6910,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Treason",
           Description = "",
           EngineID = "goldsrc",
+          SteamID = 70,
           Genre = Genre.FPS,
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/treason",
@@ -6991,6 +7007,7 @@ namespace ASP_site.Data.Initializers {
           GameID = "underworldbloodline",
           Name = "Underworld: Bloodline",
           EngineID = "goldsrc",
+          SteamID = 70,
           Genre = Genre.FPS,
           Description = "",
           ServerConfig = new ServerBrowserConfig {
@@ -7284,6 +7301,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Wizard Wars",
           Description = "",
           EngineID = "goldsrc",
+          SteamID = 70,
           Genre = Genre.FPS,
           PlayWith = new List<int> { 0 },
           ServerConfig = new ServerBrowserConfig {
@@ -7348,7 +7366,6 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/zmaster",
             GameDirectory = "zombie_master",
-            MasterServerKey = "Source",
             NoBackgroundService = true
           }
         },
@@ -7375,7 +7392,6 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/zp",
             GameDirectory = "zp",
-            MasterServerKey = "GoldSource"
           }
         },
         new Game {

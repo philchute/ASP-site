@@ -34,6 +34,10 @@ namespace ASP_site.Models.ServerBrowser
 
         public string Version { get; set; }
 
+        public string? GameType { get; set; }
+
+        public string? Country { get; set; }
+
         public string PlayersStr => Players + " / " + MaxPlayers;
 
         public GameServerItem(IPAddress address, ushort port, Game game)

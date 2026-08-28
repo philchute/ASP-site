@@ -43,6 +43,11 @@ builder.Services.AddSingleton<IServerBlacklistService, ServerBlacklistService>()
 // Register Application Services
 // Add HttpClient for ServerBrowserService and ServerBlacklistService
 builder.Services.AddHttpClient();
+builder.Services.AddHttpClient("ThreeNetworks", client =>
+{
+    client.BaseAddress = new Uri("https://master.333networks.com/");
+    client.Timeout = TimeSpan.FromSeconds(20);
+});
 builder.Services.AddSingleton<ThreeNetworksQuery>();
 
 builder.Services.AddMemoryCache();

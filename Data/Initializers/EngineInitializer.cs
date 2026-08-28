@@ -588,7 +588,7 @@ namespace ASP_site.Data.Initializers {
           Name = "Europa Engine",
           Developer = "Paradox Development Studio",
           License = "Source Available",
-          Description = "Europa Engine is a game engine developed by Paradox Development Studio, first used in 2000's Europa Universalis.",
+          Description = "Europa Engine is the name for the copy-pasted code used in Paradox Development Studio first several games, starting with Europa Universalis in 2000.",
           ParentID = "", Year = 2000
         },
         new Engine {
@@ -599,7 +599,14 @@ namespace ASP_site.Data.Initializers {
           Description = "Clausewitz Engine is a game engine developed by Paradox Development Studio, first used in 2007's Europa Universalis III.",
           ParentID = "europa", Year = 2007
         },
-
+        new Engine {
+          EngineID = "riot",
+          Name = "Riot Engine",
+           Developer = "Surreal Software",
+          License = "Proprietary",
+          Description = "Riot Engine is a game engine developed by Surreal Software and used for their games until the studio was folded into Warner Bros.",
+          ParentID = "", Year = 1996
+        },
         new Engine {
           EngineID = "scimitar",
           Name = "Scimitar Engine",

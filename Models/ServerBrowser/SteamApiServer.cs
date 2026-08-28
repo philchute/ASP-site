@@ -1,5 +1,6 @@
 using Newtonsoft.Json;
 using System.Net;
+using ASP_site.Models.ServerBrowser;
 
 namespace ASP_site.Models
 {
@@ -57,6 +58,30 @@ namespace ASP_site.Models
 
         [JsonProperty("gametype")]
         public string GameType { get; set; } = string.Empty; // Tags?
+
+        public GameServerItem MapToGameServerItem(Game gameContext)
+        {
+            var ip = GetIPAddress() ?? throw new InvalidOperationException("Server address is missing.");
+            return new GameServerItem(ip, GamePort, gameContext)
+            {
+                Name = Name,
+                Map = Map,
+                Players = Players,
+                MaxPlayers = MaxPlayers,
+                Bots = Bots,
+                RequiresVAC = Secure,
+                Version = Version,
+                ServerType = Dedicated ? ServerBrowser.ServerType.Dedicated : ServerBrowser.ServerType.Listen,
+                Environment = OS.ToLowerInvariant() switch
+                {
+                    "w" => ServerBrowser.Environment.Windows,
+                    "l" => ServerBrowser.Environment.Linux,
+                    "m" or "o" => ServerBrowser.Environment.Mac,
+                    _ => ServerBrowser.Environment.Linux
+                },
+                GameType = string.IsNullOrWhiteSpace(this.GameType) ? null : this.GameType
+            };
+        }
 
         // Helper method to get IPAddress object
         public IPAddress? GetIPAddress()
