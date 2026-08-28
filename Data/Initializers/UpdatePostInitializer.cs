@@ -165,7 +165,7 @@ namespace ASP_site.Data.Initializers
                 {
                     Id = 19,
                     Title = "Server browser updates",
-                    Content = "<p>Fixed non-working titles in the server browser, pruned a few that would not work and added one (Drakan: Order of the Flame).</p>",
+                    Content = "<p>Fixed some Steam titles that weren't working and added community master servers for idtech3 games to the server browser for Quake 3, and also Call of Duty, Call of Duty: United Offensive, Call of Duty 2, Call of Duty 4, Enemy Territory: Legacy, Open Arena, Return to Castle Wolfenstein, Star Wars: Jedi Knight 2: Jedi Outcast, Star Wars: Jedi Knight: Jedi Academy, Tremulous, Urban Terror, Warsow, and Xonotic. Soldier of Fortune 2 seems to be returning 0 servers. Also another title off of 333networks called 'Drakan: Order of the Flame'.</p>",
                     PostedDate = new DateTime(2026, 8, 27, 12, 0, 0, DateTimeKind.Utc), Author = "Phil",
                     Tags = new List<Tag> { tags.Single(t => t.Name == "Website Update"), tags.Single(t => t.Name == "Gaming Update") }
                 }

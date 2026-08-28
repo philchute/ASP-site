@@ -138,6 +138,7 @@ namespace ASP_site.Pages.Servers
                 Environment = s.Environment.ToString(),
                 ServerType = s.ServerType.ToString(),
                 RequiresVAC = s.RequiresVAC,
+                RequiresPunkBuster = s.RequiresPunkBuster,
                 PasswordProtected = s.PasswordProtected,
                 GameType = s.GameType,
                 Country = s.Country,
@@ -163,6 +164,7 @@ namespace ASP_site.Pages.Servers
             public string Environment { get; set; } = "";
             public string ServerType { get; set; } = "";
             public bool? RequiresVAC { get; set; }
+            public bool? RequiresPunkBuster { get; set; }
             public bool? PasswordProtected { get; set; }
             public string? GameType { get; set; }
             public string? Country { get; set; }

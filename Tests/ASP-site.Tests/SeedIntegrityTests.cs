@@ -119,6 +119,26 @@ namespace ASP_site.Tests
         }
 
         [Fact]
+        public void IdTech3BrowserGames_HaveMasterKeyAndProtocols()
+        {
+            var invalid = GameInitializer.GetGames()
+                .Where(g => g.ServerConfig?.UsesIdTech3 == true)
+                .Select(g => new
+                {
+                    g.GameID,
+                    g.ServerConfig!.MasterServerKey,
+                    Queries = g.ServerConfig.GetMasterProtocolQueries().ToList()
+                })
+                .Where(x => string.IsNullOrWhiteSpace(x.MasterServerKey) || x.Queries.Count == 0)
+                .Select(x => x.GameID)
+                .ToList();
+
+            Assert.True(invalid.Count == 0,
+                "IdTech3 browser games need MasterServerKey and MasterProtocols:\n" +
+                string.Join("\n", invalid));
+        }
+
+        [Fact]
         public void EngineIds_AreUnique()
         {
             var dupes = DuplicateKeys(EngineInitializer.GetEngines().Select(e => e.EngineID));

@@ -99,6 +99,18 @@ namespace ASP_site.Services
                         {
                             servers = await _threeNetworksQuery.QueryServerList(game);
                         }
+                        else if (masterServer.Protocol == "IdTech3")
+                        {
+                            var masterEndpoint = await ResolveToIPEndPointAsync(masterServer.Address);
+                            if (masterEndpoint is not null)
+                            {
+                                var masterList = await IdTech3Query.QueryMaster(masterEndpoint, game);
+                                _logger.LogInformation("IdTech3 master returned {Count} addresses for {Game}", masterList.Count, game.Name);
+                                var queried = await IdTech3Query.QueryServers(game, masterList, 2000, _logger);
+                                _logger.LogInformation("IdTech3 getinfo mapped {Mapped}/{Total} for {Game}", queried.Count, masterList.Count, game.Name);
+                                servers = MergeIdTech3Results(game, masterList, queried);
+                            }
+                        }
                     }
                     else
                     {
@@ -125,8 +137,9 @@ namespace ASP_site.Services
                         }
 
                         int countBeforeGameSpecificFilter = servers.Count;
-                        if (game.SteamID is 10 or 70 ||
-                            string.Equals(game.EngineID, "goldsrc", StringComparison.OrdinalIgnoreCase))
+                        if ((game.SteamID is 10 or 70 ||
+                            string.Equals(game.EngineID, "goldsrc", StringComparison.OrdinalIgnoreCase)) &&
+                            game.ServerConfig?.UsesIdTech3 != true)
                         {
                             servers = servers.Where(s => s.MaxPlayers <= 32).ToList();
                             _logger.LogDebug($"Applied GoldSrc MaxPlayers filter for {game.Name}.");
@@ -237,7 +250,7 @@ namespace ASP_site.Services
 
                     GameServerItem? serverItem = null;
 
-                    switch (game.ServerConfig?.QueryProtocol)
+                    switch (game.ServerConfig?.UsesIdTech3 == true ? "IdTech3" : game.ServerConfig?.QueryProtocol)
                     {
                         case "A2S":
                             var a2sServerInfo = await A2SQuery.QueryServerInfo(address, timeout);
@@ -245,6 +258,9 @@ namespace ASP_site.Services
                             {
                                 serverItem = a2sServerInfo!.MapToGameServerItem(game, ip, port);
                             }
+                            break;
+                        case "IdTech3":
+                            serverItem = await IdTech3Query.QueryServerInfo(address, game, timeout);
                             break;
                     }
 
@@ -259,6 +275,25 @@ namespace ASP_site.Services
                 }
             });
             return items.ToList();
+        }
+
+        private static List<GameServerItem> MergeIdTech3Results(Game game, List<IPEndPoint> masterList, List<GameServerItem> queried)
+        {
+            var mapped = queried.ToDictionary(s => $"{s.Address}:{s.Port}", StringComparer.Ordinal);
+            return masterList
+                .Select(ep =>
+                {
+                    var key = $"{ep.Address}:{ep.Port}";
+                    if (mapped.TryGetValue(key, out var item))
+                        return item;
+                    return new GameServerItem(ep.Address, (ushort)ep.Port, game)
+                    {
+                        Name = key,
+                        Map = "",
+                        MaxPlayers = 16
+                    };
+                })
+                .ToList();
         }
 
         private async Task<IPEndPoint?> ResolveToIPEndPointAsync(string address)

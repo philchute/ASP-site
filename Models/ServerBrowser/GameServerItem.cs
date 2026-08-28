@@ -22,6 +22,8 @@ namespace ASP_site.Models.ServerBrowser
 
         public bool? RequiresVAC { get; set; }
 
+        public bool? RequiresPunkBuster { get; set; }
+
         public int Players { get; set; }
 
         public int MaxPlayers { get; set; }

@@ -11,6 +11,7 @@ public class ServerBrowserColumns
     public bool Type { get; init; }
     public bool GameType { get; init; }
     public bool Country { get; init; }
+    public bool PunkBuster { get; init; }
 }
 
 public static class ServerBrowserUi
@@ -20,6 +21,7 @@ public static class ServerBrowserUi
     public const string GroupSourceMod = "source mod";
     public const string GroupA2S = "A2S";
     public const string GroupGameSpy = "333networks";
+    public const string GroupIdTech3 = "idtech3";
     public const string GroupDefined = "Known";
 
     public static string GroupName(Game game)
@@ -27,6 +29,7 @@ public static class ServerBrowserUi
         var config = game.ServerConfig;
         if (config == null) return SteamEngineLabel(game);
         if (config.UsesThreeNetworks) return GroupGameSpy;
+        if (config.UsesIdTech3) return GroupIdTech3;
         if (config.UsesDefinedServerList) return GroupDefined;
         if (config.UsesA2SMaster) return GroupA2S;
         return SteamEngineLabel(game);
@@ -68,6 +71,16 @@ public static class ServerBrowserUi
             };
         }
 
+        if (config.UsesIdTech3)
+        {
+            return new ServerBrowserColumns
+            {
+                Password = true,
+                GameType = true,
+                PunkBuster = true
+            };
+        }
+
         return new ServerBrowserColumns
         {
             Vac = true,
@@ -91,7 +104,7 @@ public static class ServerBrowserUi
 
     public static string? SteamConnectUrl(Game game, string ipPort)
     {
-        if (game.ServerConfig?.UsesThreeNetworks == true)
+        if (game.ServerConfig?.UsesThreeNetworks == true || game.ServerConfig?.UsesIdTech3 == true)
             return null;
         return $"steam://connect/{ipPort}";
     }
@@ -103,7 +116,8 @@ public static class ServerBrowserUi
         bool hideEmpty,
         bool hideFull,
         string? sortBy,
-        string? search)
+        string? search,
+        string? punkBusterFilter = null)
     {
         IEnumerable<GameServerItem> filtered = servers;
 
@@ -116,6 +130,11 @@ public static class ServerBrowserUi
             filtered = filtered.Where(s => s.PasswordProtected == true);
         else if (passwordFilter == "no")
             filtered = filtered.Where(s => s.PasswordProtected == false);
+
+        if (punkBusterFilter == "yes")
+            filtered = filtered.Where(s => s.RequiresPunkBuster == true);
+        else if (punkBusterFilter == "no")
+            filtered = filtered.Where(s => s.RequiresPunkBuster == false);
 
         if (hideEmpty)
             filtered = filtered.Where(s => s.Players > 0);

@@ -29,6 +29,19 @@ namespace ASP_site.Tests
             }
         };
 
+        private static Game IdTech3Game() => new()
+        {
+            GameID = "et",
+            Name = "Enemy Territory",
+            EngineID = "idtech3",
+            ServerConfig = new ServerBrowserConfig
+            {
+                MasterServerKey = "ETLegacy",
+                QueryProtocol = "IdTech3",
+                MasterProtocols = "84,83"
+            }
+        };
+
         [Fact]
         public void SteamMapping_DoesNotTreatDedicatedAsPassword()
         {
@@ -100,6 +113,83 @@ namespace ASP_site.Tests
             Assert.Equal("connect 1.2.3.4:27015", ServerBrowserUi.ConnectCommand(SteamGame(), "1.2.3.4:27015"));
             Assert.Null(ServerBrowserUi.SteamConnectUrl(UnrealGame(), "1.2.3.4:7777"));
             Assert.Equal("steam://connect/1.2.3.4:27015", ServerBrowserUi.SteamConnectUrl(SteamGame(), "1.2.3.4:27015"));
+            Assert.Equal("connect 1.2.3.4:27960", ServerBrowserUi.ConnectCommand(IdTech3Game(), "1.2.3.4:27960"));
+            Assert.Null(ServerBrowserUi.SteamConnectUrl(IdTech3Game(), "1.2.3.4:27960"));
+        }
+
+        [Fact]
+        public void IdTech3Columns_ShowPasswordPunkBusterAndMode()
+        {
+            var columns = ServerBrowserUi.Columns(IdTech3Game());
+            Assert.True(columns.Password);
+            Assert.True(columns.PunkBuster);
+            Assert.True(columns.GameType);
+            Assert.False(columns.Vac);
+            Assert.Equal("idtech3", ServerBrowserUi.GroupName(IdTech3Game()));
+        }
+
+        [Fact]
+        public void IdTech3MasterResponse_ParsesIpv4AndStopsAtEot()
+        {
+            var packet = new List<byte> { 0xFF, 0xFF, 0xFF, 0xFF };
+            packet.AddRange(System.Text.Encoding.ASCII.GetBytes("getserversResponse"));
+            packet.Add((byte)'\\');
+            packet.AddRange([1, 2, 3, 4, 0x6D, 0x38]); // 1.2.3.4:27960
+            packet.Add((byte)'\\');
+            packet.AddRange(System.Text.Encoding.ASCII.GetBytes("EOT"));
+            packet.AddRange([0, 0, 0]);
+
+            var parsed = IdTech3Query.ParseMasterResponse([.. packet]);
+            var server = Assert.Single(parsed);
+            Assert.Equal(IPAddress.Parse("1.2.3.4"), server.Address);
+            Assert.Equal((ushort)27960, server.Port);
+        }
+
+        [Fact]
+        public void IdTech3InfoResponse_StripsColorsAndMapsPunkBuster()
+        {
+            var body = "\xff\xff\xff\xffinfoResponse\\hostname\\^1Red Server\\mapname\\mp_base\\clients\\8\\sv_maxclients\\20\\g_gametype\\4\\g_needpass\\1\\sv_punkbuster\\1\\fs_game\\etpro\\g_humanplayers\\6";
+            var mapped = IdTech3Query.MapInfoResponse(System.Text.Encoding.UTF8.GetBytes(body), IdTech3Game(), IPAddress.Parse("8.8.8.8"), 27960);
+
+            Assert.NotNull(mapped);
+            Assert.Equal("Red Server", mapped!.Name);
+            Assert.Equal("mp_base", mapped.Map);
+            Assert.Equal(8, mapped.Players);
+            Assert.Equal(20, mapped.MaxPlayers);
+            Assert.Equal("etpro 4", mapped.GameType);
+            Assert.True(mapped.PasswordProtected);
+            Assert.True(mapped.RequiresPunkBuster);
+        }
+
+        [Fact]
+        public void IdTech3InfoResponse_MapsKeysAfterNewline()
+        {
+            var body = "\xff\xff\xff\xffinfoResponse\n\\challenge\\xxx\\sv_hostname\\CoD Server\\mapname\\mp_harbor\\clients\\3\\sv_maxclients\\20";
+            var mapped = IdTech3Query.MapInfoResponse(System.Text.Encoding.Latin1.GetBytes(body), IdTech3Game(), IPAddress.Parse("1.2.3.4"), 28960);
+
+            Assert.NotNull(mapped);
+            Assert.Equal("CoD Server", mapped!.Name);
+            Assert.Equal("mp_harbor", mapped.Map);
+            Assert.Equal(3, mapped.Players);
+            Assert.Equal(20, mapped.MaxPlayers);
+        }
+
+        [Fact]
+        public void IdTech3InfoResponse_KeepsServerWhenHumanPlayersZero()
+        {
+            var body = "\xff\xff\xff\xffinfoResponse\\game\\fm\\g_humanplayers\\0\\sv_maxclients\\19\\clients\\5\\mapname\\oa_rpg3dm2\\hostname\\Test";
+            var mapped = IdTech3Query.MapInfoResponse(System.Text.Encoding.Latin1.GetBytes(body), IdTech3Game(), IPAddress.Parse("1.2.3.4"), 27960);
+
+            Assert.NotNull(mapped);
+            Assert.Equal(5, mapped!.Players);
+            Assert.Equal(19, mapped.MaxPlayers);
+        }
+
+        [Fact]
+        public void MasterProtocols_SplitCommaSeparatedQueries()
+        {
+            var queries = IdTech3Game().ServerConfig!.GetMasterProtocolQueries().ToList();
+            Assert.Equal(["84", "83"], queries);
         }
 
         [Fact]

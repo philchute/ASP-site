@@ -1679,10 +1679,11 @@ namespace ASP_site.Data.Initializers {
           ReleaseDates = [
             new ReleaseDate{Year = 2003, Month = 10, Day = 29},
           ],
-          //ServerConfig = new ServerBrowserConfig {
-          //  QueryProtocol = "GameSpy",
-          //  MasterServerKey = "CallOfDuty"
-          //}
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "CallOfDuty",
+            QueryProtocol = "IdTech3",
+            MasterProtocols = "1,6"
+          }
         },
         new Game {
           GameID = "cod2",
@@ -1704,7 +1705,37 @@ namespace ASP_site.Data.Initializers {
           PlayWith = new List<int> { 0, 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 2005, Month = 10, Day = 25},
-          ]
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "CallOfDuty2",
+            QueryProtocol = "IdTech3",
+            MasterProtocols = "115,117"
+          }
+        },
+        new Game {
+          GameID = "coduo",
+          Name = "Call of Duty: United Offensive",
+          Description = "A standalone expansion for Call of Duty, featuring new maps and modes.",
+          EngineID = "iw2",
+          Developer = "Infinity Ward",
+          SteamID = 2640,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = true,
+          Genre = Genre.FPS,
+          SettingYear = 1941,
+          Age = AgeAppropriateness.Teen,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2004, Month = 9, Day = 15},
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "CallOfDutyUO",
+            QueryProtocol = "IdTech3",
+            MasterProtocols = "21"
+          }
         },
         new Game {
           GameID = "cod3",
@@ -1741,7 +1772,12 @@ namespace ASP_site.Data.Initializers {
           PlayWith = new List<int> { 0, 1, 2 },
           ReleaseDates = [
             new ReleaseDate{Year = 2007, Month = 11, Day = 5},
-          ]
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "CallOfDuty4",
+            QueryProtocol = "IdTech3",
+            MasterProtocols = "6,1"
+          }
         },
         new Game {
           GameID = "codaw",
@@ -2952,6 +2988,9 @@ namespace ASP_site.Data.Initializers {
           Genre = Genre.FPS,
           PlayWith = new List<int> { 0 },
           ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "ETLegacy",
+            QueryProtocol = "IdTech3",
+            MasterProtocols = "84"
           },
           ReleaseDates = [
             new ReleaseDate{Year = 2003, Month = 5, Day = 29},
@@ -4834,7 +4873,29 @@ namespace ASP_site.Data.Initializers {
             IconPath = "img/icons/occupationcs",
             GameDirectory = "OccupationCS"
           }
-        },     
+        },  
+        new Game {
+          GameID = "openarena",
+          Name = "OpenArena",
+          Description = "OpenArena is a free and open-source first-person shooter game that is a fork of the Quake III Arena engine.",
+          EngineID = "idtech3",
+          Developer = "OpenArena Team",
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = true,
+          IsDeveloperMaintained = true,
+          IsCommunityMaintained = true,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2004, Month = 9, Day = 15},
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "DPMaster",
+            QueryProtocol = "IdTech3",
+            MasterProtocols = "71"
+          }
+        },
         new Game {
           GameID = "openfortress",
           Name = "Open Fortress",
@@ -5240,7 +5301,12 @@ namespace ASP_site.Data.Initializers {
           PlayWith = new List<int> { 0, 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 1999, Month = 12, Day = 2},
-          ] 
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "DPMaster",
+            QueryProtocol = "IdTech3",
+            MasterProtocols = "66,67,68"
+          }
         },
         new Game {
           GameID = "quake4",
@@ -5433,7 +5499,12 @@ namespace ASP_site.Data.Initializers {
           PlayWith = new List<int> { 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 2001, Month = 11, Day = 20}
-          ]
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "DPMaster",
+            QueryProtocol = "IdTech3",
+            MasterProtocols = "50,57,60"
+          }
         },
         new Game {
           GameID = "rune",
@@ -5697,7 +5768,12 @@ namespace ASP_site.Data.Initializers {
           ReleaseDates = [
             new ReleaseDate{Year = 2002, Month = 5, Day = 21, Region = Region.NA},
             new ReleaseDate{Year = 2002, Month = 5, Day = 31, Region = Region.EU},
-          ]
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "DPMaster",
+            QueryProtocol = "IdTech3",
+            MasterProtocols = "2003,2004"
+          }
         },
         new Game {
           GameID = "sdk2006",
@@ -5937,7 +6013,12 @@ namespace ASP_site.Data.Initializers {
           PlayWith = new List<int> { 0, 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 2002, Month = 3, Day = 28},
-          ]
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "JKHub",
+            QueryProtocol = "IdTech3",
+            MasterProtocols = "15,16"
+          }
         },
         new Game {
           GameID = "starwarsjediknightacademy",
@@ -5954,7 +6035,12 @@ namespace ASP_site.Data.Initializers {
           PlayWith = new List<int> { 0, 1 },
           ReleaseDates = [
             new ReleaseDate{Year = 2003, Month = 9, Day = 16}
-          ]
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "JKHub",
+            QueryProtocol = "IdTech3",
+            MasterProtocols = "26"
+          }
         },
         new Game {
           GameID = "sf2ww",
@@ -6914,6 +7000,28 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
+          GameID = "tremulous",
+          Name = "Tremulous",
+          Description = "Tremulous is a free and open source asymmetric team-based first-person shooter with real-time strategy elements.",
+          EngineID = "idtech3",
+          Developer = "Tremulous Team",
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = true,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = true,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2000, Month = 8, Day = 11}
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "Tremulous",
+            QueryProtocol = "IdTech3",
+            MasterProtocols = "69"
+          }
+        },
+        new Game {
           GameID = "tribes1",
           Name = "Starsiege: Tribes",
           Description = "A groundbreaking multiplayer first-person shooter featuring jetpack-based combat.",
@@ -6935,7 +7043,6 @@ namespace ASP_site.Data.Initializers {
           Description = "Tribes 2 is a first-person shooter game developed by Dynamix.",
           EngineID = "Torque",
           Developer = "Dynamix",
-          SteamID = 1234560,
           IsFree = false,
           IsPaid = false,
           IsOpenSource = true,
@@ -7133,6 +7240,28 @@ namespace ASP_site.Data.Initializers {
           ReleaseDates = []
         },
         new Game {
+          GameID = "urbanterror",
+          Name = "Urban Terror",
+          Description = "Urban Terror is a freeware multiplayer first-person shooter video game developed by FrozenSand. Originally a total conversion of id Software's Quake III Arena, FrozenSand released Urban Terror as a free standalone game in 2007 utilizing ioquake3 as the game engine.",
+          EngineID = "idtech3",
+          Developer = "FrozenSand",
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = true,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = true,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2007, Month = 1, Day = 1}
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "DPMaster",
+            QueryProtocol = "IdTech3",
+            MasterProtocols = "68"
+          }
+        },
+        new Game {
           GameID = "vampireslayer",
           Name = "Vampire Slayer",
           Description = "",
@@ -7268,7 +7397,12 @@ namespace ASP_site.Data.Initializers {
           ReleaseDates = [
             new ReleaseDate{Year = 2005, Month = 6, Day = 8},
             new ReleaseDate{Year = 2012, Month = 7, Day = 28}
-          ]
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "DPMaster",
+            QueryProtocol = "IdTech3",
+            MasterProtocols = "Warsow 22"
+          }
         },
         new Game {
           GameID = "wot",
@@ -7321,6 +7455,28 @@ namespace ASP_site.Data.Initializers {
           ReleaseDates = [
             new ReleaseDate{Year = 1992, Month = 5, Day = 5}
           ]
+        },
+        new Game {
+          GameID = "xonotic",
+          Name = "Xonotic",
+          Description = "Xonotic is a free and open-source first-person shooter game that is a fork of the the Quake 1 Dark Places engine.",
+          EngineID = "idtech2",
+          Developer = "Xonotic Team",
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = true,
+          IsDeveloperMaintained = true,
+          IsCommunityMaintained = true,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ReleaseDates = [  
+            new ReleaseDate{Year = 2011, Month = 9, Day = 8}
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "DPMaster",
+            QueryProtocol = "IdTech3",
+            MasterProtocols = "Xonotic 3"
+          }
         },
         new Game {
           GameID = "x-men",

@@ -22,8 +22,11 @@ namespace ASP_site.Models
         // Corresponds to 'filters' in games.json for Steam API
         public string? ApiFilters { get; set; }
 
-        // Protocol to use for querying individual servers (e.g., "A2S", "GameSpy")
+        // Protocol to use for querying individual servers (e.g., "A2S", "GameSpy", "IdTech3")
         public string QueryProtocol { get; set; } = "A2S";
+
+        // Comma-separated getservers query bodies: "84", "50,57,60", "0", or "Warsow 15".
+        public string? MasterProtocols { get; set; }
 
         // Override when GameID does not match the master-server slug (prefer renaming GameID instead).
         public string? MasterGameName { get; set; }
@@ -37,15 +40,25 @@ namespace ASP_site.Models
         public string GetMasterGameName(string gameId) =>
             string.IsNullOrWhiteSpace(MasterGameName) ? gameId : MasterGameName;
 
+        public IEnumerable<string> GetMasterProtocolQueries()
+        {
+            if (string.IsNullOrWhiteSpace(MasterProtocols))
+                return [];
+            return MasterProtocols.Split(',', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries);
+        }
+
         public bool UsesThreeNetworks =>
             string.Equals(MasterServerKey, "333networks", StringComparison.OrdinalIgnoreCase);
+
+        public bool UsesIdTech3 =>
+            string.Equals(QueryProtocol, "IdTech3", StringComparison.OrdinalIgnoreCase);
 
         public bool UsesDefinedServerList => UseDefinedServerList == true;
 
         public bool UsesA2SMaster =>
-            !UsesThreeNetworks && !UsesDefinedServerList && !string.IsNullOrEmpty(MasterServerKey);
+            !UsesThreeNetworks && !UsesDefinedServerList && !UsesIdTech3 && !string.IsNullOrEmpty(MasterServerKey);
 
         public bool UsesSteamApi =>
-            !UsesThreeNetworks && !UsesDefinedServerList && string.IsNullOrEmpty(MasterServerKey);
+            !UsesThreeNetworks && !UsesDefinedServerList && !UsesIdTech3 && string.IsNullOrEmpty(MasterServerKey);
     }
 } 
