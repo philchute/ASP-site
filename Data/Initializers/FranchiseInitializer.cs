@@ -22,13 +22,13 @@ namespace ASP_site.Data.Initializers
                 {
                     FranchiseID = StarTrekId,
                     Name = "Star Trek",
-                    Description = "Films, television series, and games spanning Prime, Kelvin, and later-era Star Trek."
+                    Description = "Films, television series, games, and books spanning Prime, Kelvin, and later-era Star Trek."
                 },
                 new Franchise
                 {
                     FranchiseID = DuneId,
                     Name = "Dune",
-                    Description = "Films, television, and games set in Frank Herbert's Dune universe."
+                    Description = "Films, television, games, and books set in Frank Herbert's Dune universe."
                 }
             };
 
@@ -204,6 +204,14 @@ namespace ASP_site.Data.Initializers
             yield return Game(StarTrekId, tng, "startrekresurgence");
             yield return Game(StarTrekId, tng, "startrekinfinite");
             yield return Game(StarTrekId, picard, "sto");
+
+            // Books
+            yield return Book(StarTrekId, tos, "Star Trek: The Motion Picture (novelization)");
+            yield return Book(StarTrekId, tos, "Star Trek II: The Wrath of Khan (novelization)");
+            yield return Book(StarTrekId, tos, "Spock's World");
+            yield return Book(StarTrekId, tng, "Imzadi");
+            yield return Book(StarTrekId, ds9, "A Stitch in Time");
+            yield return Book(StarTrekId, kelvin, "Star Trek (2009) (novelization)");
         }
 
         private static IEnumerable<FranchiseWork> DuneWorks()
@@ -213,6 +221,7 @@ namespace ASP_site.Data.Initializers
             const string villeneuve = "Villeneuve";
             const string prophecy = "Prophecy";
             const string westwood = "Westwood";
+            const string novels = "Novels";
 
             yield return Movie(DuneId, lynch, "media-dune-1984");
             yield return Movie(DuneId, villeneuve, "media-dune-2021");
@@ -228,6 +237,13 @@ namespace ASP_site.Data.Initializers
             yield return Game(DuneId, miniseries, "duneminiseries");
             yield return Game(DuneId, villeneuve, "dunespicewars");
             yield return Game(DuneId, villeneuve, "duneawakening");
+
+            yield return Book(DuneId, novels, "Dune");
+            yield return Book(DuneId, novels, "Dune Messiah");
+            yield return Book(DuneId, novels, "Children of Dune");
+            yield return Book(DuneId, novels, "God Emperor of Dune");
+            yield return Book(DuneId, novels, "Heretics of Dune");
+            yield return Book(DuneId, novels, "Chapterhouse: Dune");
         }
 
         private static FranchiseWork Movie(string franchiseId, string branch, string mediaId) => new()

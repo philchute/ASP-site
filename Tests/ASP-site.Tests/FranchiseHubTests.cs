@@ -75,11 +75,13 @@ namespace ASP_site.Tests
             Assert.Contains(FranchiseWorkKind.Movie, kinds);
             Assert.Contains(FranchiseWorkKind.TVShow, kinds);
             Assert.Contains(FranchiseWorkKind.Game, kinds);
+            Assert.Contains(FranchiseWorkKind.Book, kinds);
 
             AssertWork(page.Works, "Star Trek: The Motion Picture", FranchiseWorkKind.Movie, "TOS", "/Media/Details", "media-star-trek-tmp");
             AssertWork(page.Works, "Star Trek: The Next Generation season 1", FranchiseWorkKind.TVShow, "TNG", "/Media/Details", "media-star-trek-tng-s1");
             AssertWork(page.Works, "Star Trek Online", FranchiseWorkKind.Game, "Picard", "/Games/Game", "sto");
             AssertWork(page.Works, "Star Trek (2009)", FranchiseWorkKind.Movie, "Kelvin", "/Media/Details", "media-star-trek-2009");
+            AssertWork(page.Works, "Imzadi", FranchiseWorkKind.Book, "TNG", "/Books/Book", "Imzadi");
 
             var settingYears = page.Works
                 .Where(w => w.SettingYear.HasValue)
@@ -196,10 +198,12 @@ namespace ASP_site.Tests
             Assert.Contains(FranchiseWorkKind.Movie, kinds);
             Assert.Contains(FranchiseWorkKind.TVShow, kinds);
             Assert.Contains(FranchiseWorkKind.Game, kinds);
+            Assert.Contains(FranchiseWorkKind.Book, kinds);
 
             AssertWork(page.Works, "Dune (2021)", FranchiseWorkKind.Movie, "Villeneuve", "/Media/Details", "media-dune-2021");
             AssertWork(page.Works, "Dune: Prophecy season 1", FranchiseWorkKind.TVShow, "Prophecy", "/Media/Details", "media-dune-prophecy-s1");
             AssertWork(page.Works, "Dune II: The Building of a Dynasty", FranchiseWorkKind.Game, "Westwood", "/Games/Game", "dune2");
+            AssertWork(page.Works, "Dune", FranchiseWorkKind.Book, "Novels", "/Books/Book", "Dune");
 
             var settingYears = page.Works
                 .Where(w => w.SettingYear.HasValue)

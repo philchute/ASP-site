@@ -14782,6 +14782,9 @@ namespace ASP_site.Data.Initializers
                 },
             };
 
+            books.AddRange(DuneInitializer.GetBooks());
+            books.AddRange(StarTrekInitializer.GetBooks());
+
             var links = new List<Link>
             {
                 new Link { BookTitle = "A Bathroom of Her Own", Url = "https://en.wikipedia.org/wiki/A_Bathroom_of_Her_Own", Label = "Wikipedia Link", LinkType = LinkType.Wiki },

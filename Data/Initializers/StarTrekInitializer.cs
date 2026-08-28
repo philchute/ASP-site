@@ -107,6 +107,25 @@ namespace ASP_site.Data.Initializers
             Season("media-star-trek-snw-s3", "Star Trek: Strange New Worlds season 3", 2025, 7, 17, 2261),
         ];
 
+        public static Book[] GetBooks() =>
+        [
+            Novel("Star Trek: The Motion Picture (novelization)", "Gene Roddenberry", 1979, 12, 2273,
+                "Novelization of the 1979 film following the original Enterprise crew's encounter with V'Ger.",
+                "Collection: Movie Novelizations"),
+            Novel("Star Trek II: The Wrath of Khan (novelization)", "Vonda N. McIntyre", 1982, 7, 2285,
+                "Novelization of the 1982 film pitting Kirk against Khan Noonien Singh.",
+                "Collection: Movie Novelizations"),
+            Novel("Spock's World", "Diane Duane", 1988, 9, 2275,
+                "A novel of Vulcan's history and a secession crisis, centered on Spock, Kirk, and McCoy."),
+            Novel("Imzadi", "Peter David", 1992, 8, 2368,
+                "Peter David's novel of Deanna Troi and William Riker, spanning their first meeting through a later tragedy."),
+            Novel("A Stitch in Time", "Andrew J. Robinson", 2000, 5, 2375,
+                "Andrew J. Robinson's novel of Elim Garak, told across Cardassia's past, the Occupation, and the Dominion War's aftermath."),
+            Novel("Star Trek (2009) (novelization)", "Alan Dean Foster", 2009, 5, 2258,
+                "Novelization of J. J. Abrams's 2009 Kelvin Timeline reboot.",
+                "Collection: Movie Novelizations"),
+        ];
+
         private static Media Movie(
             string id,
             string title,
@@ -142,6 +161,26 @@ namespace ASP_site.Data.Initializers
             ReleaseDay = day,
             SettingYear = settingYear,
             Description = title + "."
+        };
+
+        private static Book Novel(
+            string title,
+            string author,
+            int publicationYear,
+            int? publicationMonth,
+            int settingYear,
+            string description,
+            params string[] tags) => new()
+        {
+            Title = title,
+            Author = author,
+            PublicationYear = publicationYear,
+            PublicationMonth = publicationMonth,
+            SettingYear = settingYear,
+            Type = BookType.Novel,
+            Age = AgeAppropriateness.Middle,
+            Description = description,
+            Tags = tags.Select(name => new Tag { Name = name }).ToList()
         };
     }
 }

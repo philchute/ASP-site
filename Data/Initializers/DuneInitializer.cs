@@ -20,6 +20,28 @@ namespace ASP_site.Data.Initializers
                 "HBO series set in the early years of the Bene Gesserit, about 10,000 years before Paul Atreides."),
         ];
 
+        public static Book[] GetBooks() =>
+        [
+            Novel("Dune", "Frank Herbert", 1965, 8, 10191,
+                "Frank Herbert's 1965 novel about Paul Atreides, Arrakis, and the struggle for the spice melange.",
+                "Collection: Original Dune Series", "Adapted for Screen"),
+            Novel("Dune Messiah", "Frank Herbert", 1969, 10, 10207,
+                "Twelve years after Dune, Paul Atreides as Emperor faces conspiracy and the consequences of jihad.",
+                "Collection: Original Dune Series", "Adapted for Screen"),
+            Novel("Children of Dune", "Frank Herbert", 1976, 4, 10216,
+                "The twins Leto II and Ghanima Atreides confront the Golden Path and the fate of the Imperium.",
+                "Collection: Original Dune Series", "Adapted for Screen"),
+            Novel("God Emperor of Dune", "Frank Herbert", 1981, 5, 13728,
+                "3,500 years later, Leto II rules as a human-sandworm hybrid, enforcing a millennia-long peace.",
+                "Collection: Original Dune Series"),
+            Novel("Heretics of Dune", "Frank Herbert", 1984, 4, 15229,
+                "1,500 years after Leto II's death, the Bene Gesserit, Bene Tleilax, and Honored Matres contest the old Imperium.",
+                "Collection: Original Dune Series"),
+            Novel("Chapterhouse: Dune", "Frank Herbert", 1985, 4, 15232,
+                "The Bene Gesserit retreat to Chapterhouse as the Honored Matres overrun the old empire.",
+                "Collection: Original Dune Series"),
+        ];
+
         private static Media Movie(
             string id,
             string title,
@@ -56,6 +78,26 @@ namespace ASP_site.Data.Initializers
             ReleaseDay = day,
             SettingYear = settingYear,
             Description = description
+        };
+
+        private static Book Novel(
+            string title,
+            string author,
+            int publicationYear,
+            int? publicationMonth,
+            int settingYear,
+            string description,
+            params string[] tags) => new()
+        {
+            Title = title,
+            Author = author,
+            PublicationYear = publicationYear,
+            PublicationMonth = publicationMonth,
+            SettingYear = settingYear,
+            Type = BookType.Novel,
+            Age = AgeAppropriateness.Teen,
+            Description = description,
+            Tags = tags.Select(name => new Tag { Name = name }).ToList()
         };
     }
 }
