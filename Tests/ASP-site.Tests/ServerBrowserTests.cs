@@ -12,6 +12,7 @@ namespace ASP_site.Tests
         {
             GameID = "css",
             Name = "Counter-Strike: Source",
+            EngineID = "source",
             SteamID = 240,
             ServerConfig = new ServerBrowserConfig { GameDirectory = "cstrike" }
         };
@@ -107,7 +108,7 @@ namespace ASP_site.Tests
             var items = IndexModel.BuildGameSelectItems([UnrealGame(), SteamGame()]);
             Assert.Equal(2, items.Count);
             Assert.Equal("css", items[0].Value);
-            Assert.Equal("Counter-Strike: Source (Steam)", items[0].Text);
+            Assert.Equal("Counter-Strike: Source (source mod)", items[0].Text);
             Assert.Null(items[0].Group);
             Assert.Equal("ut", items[1].Value);
             Assert.Equal("Unreal Tournament 99 (333networks)", items[1].Text);

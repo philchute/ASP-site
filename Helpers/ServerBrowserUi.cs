@@ -16,6 +16,8 @@ public class ServerBrowserColumns
 public static class ServerBrowserUi
 {
     public const string GroupSteam = "Steam";
+    public const string GroupGoldSrcMod = "goldsrc mod";
+    public const string GroupSourceMod = "source mod";
     public const string GroupA2S = "A2S";
     public const string GroupGameSpy = "333networks";
     public const string GroupDefined = "Known";
@@ -23,10 +25,21 @@ public static class ServerBrowserUi
     public static string GroupName(Game game)
     {
         var config = game.ServerConfig;
-        if (config == null) return GroupSteam;
+        if (config == null) return SteamEngineLabel(game);
         if (config.UsesThreeNetworks) return GroupGameSpy;
         if (config.UsesDefinedServerList) return GroupDefined;
         if (config.UsesA2SMaster) return GroupA2S;
+        return SteamEngineLabel(game);
+    }
+
+    private static string SteamEngineLabel(Game game)
+    {
+        var engine = game.EngineID ?? "";
+        if (engine.Equals("goldsrc", StringComparison.OrdinalIgnoreCase) ||
+            engine.Equals("goldsource", StringComparison.OrdinalIgnoreCase))
+            return GroupGoldSrcMod;
+        if (engine.Equals("source", StringComparison.OrdinalIgnoreCase))
+            return GroupSourceMod;
         return GroupSteam;
     }
 

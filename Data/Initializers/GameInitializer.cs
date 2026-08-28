@@ -3590,10 +3590,6 @@ namespace ASP_site.Data.Initializers {
           IsCommunityMaintained = false,
           Genre = Genre.FPS,
           PlayWith = new List<int> { 0, 1 },
-          ServerConfig = new ServerBrowserConfig {
-            IconPath = "img/icons/hl2",
-            GameDirectory = "hl2"
-          },
           ReleaseDates = [
             new ReleaseDate{Year = 2004, Month = 11, Day = 16},
           ]
