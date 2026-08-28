@@ -168,6 +168,14 @@ namespace ASP_site.Data.Initializers
                     Content = "<p>Fixed some Steam titles that weren't working and added community master servers for idtech3 games to the server browser for Quake 3, and also Call of Duty, Call of Duty: United Offensive, Call of Duty 2, Call of Duty 4, Enemy Territory: Legacy, Open Arena, Return to Castle Wolfenstein, Star Wars: Jedi Knight 2: Jedi Outcast, Star Wars: Jedi Knight: Jedi Academy, Tremulous, Urban Terror, Warsow, and Xonotic. Soldier of Fortune 2 seems to be returning 0 servers. Also another title off of 333networks called 'Drakan: Order of the Flame'.</p>",
                     PostedDate = new DateTime(2026, 8, 27, 12, 0, 0, DateTimeKind.Utc), Author = "Phil",
                     Tags = new List<Tag> { tags.Single(t => t.Name == "Website Update"), tags.Single(t => t.Name == "Gaming Update") }
+                },
+                new UpdatePost
+                {
+                    Id = 20,
+                    Title = "More server browser games added",
+                    Content = "<p>Added some additional stand-alone half-life mods to the server browser, including TTT Classic, Half-life: C.A.G.E.D, Head Crab Frenzy!, Zombie Panic! (Stand-alone), Half-life Arena, Half-life: Restored, and Half-life: Absolute Zero.</p>",
+                    PostedDate = new DateTime(2026, 8, 28, 12, 0, 0, DateTimeKind.Utc), Author = "Phil",
+                    Tags = new List<Tag> { tags.Single(t => t.Name == "Website Update"), tags.Single(t => t.Name == "Gaming Update") }
                 }
             };
             return (posts, tags);

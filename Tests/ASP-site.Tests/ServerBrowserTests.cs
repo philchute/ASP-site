@@ -42,6 +42,25 @@ namespace ASP_site.Tests
             }
         };
 
+        private static Game HostedGoldSrcMod() => new()
+        {
+            GameID = "cstrike",
+            Name = "Counter-Strike",
+            EngineID = "goldsrc",
+            SteamID = 70,
+            ServerConfig = new ServerBrowserConfig { GameDirectory = "cstrike" }
+        };
+
+        private static Game StandaloneGoldSrcSteam() => new()
+        {
+            GameID = "tttclassic",
+            Name = "Trouble in Terrorist Town: Classic",
+            EngineID = "goldsrc",
+            SteamID = 4570530,
+            ModForGameID = "halflife",
+            ServerConfig = new ServerBrowserConfig { IconPath = "img/icons/ttt" }
+        };
+
         [Fact]
         public void SteamMapping_DoesNotTreatDedicatedAsPassword()
         {
@@ -198,10 +217,20 @@ namespace ASP_site.Tests
             var items = IndexModel.BuildGameSelectItems([UnrealGame(), SteamGame()]);
             Assert.Equal(2, items.Count);
             Assert.Equal("css", items[0].Value);
-            Assert.Equal("Counter-Strike: Source (source mod)", items[0].Text);
+            Assert.Equal("Counter-Strike: Source (Steam)", items[0].Text);
             Assert.Null(items[0].Group);
             Assert.Equal("ut", items[1].Value);
             Assert.Equal("Unreal Tournament 99 (333networks)", items[1].Text);
+        }
+
+        [Fact]
+        public void GroupName_LabelsStandaloneSteamAppsAsSteam()
+        {
+            Assert.Equal("Steam", ServerBrowserUi.GroupName(StandaloneGoldSrcSteam()));
+            Assert.Equal("Steam", ServerBrowserUi.GroupName(SteamGame()));
+            Assert.True(ServerBrowserUi.IsStandaloneSteamApp(StandaloneGoldSrcSteam()));
+            Assert.Equal("goldsrc mod", ServerBrowserUi.GroupName(HostedGoldSrcMod()));
+            Assert.False(ServerBrowserUi.IsStandaloneSteamApp(HostedGoldSrcMod()));
         }
 
         [Fact]

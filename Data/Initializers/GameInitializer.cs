@@ -1482,6 +1482,26 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
+          GameID = "caged",
+          Name = "Half-Life: C.A.G.E.D.",
+          Description = "C.A.G.E.D. is an explosive prison escape adventure! Break-out and battle your way to freedom in this electrifying modification for Half-Life.",
+          EngineID = "goldsrc",
+          SteamID = 679990,
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = true,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/caged"
+          },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2017, Month = 9, Day = 21}
+          ]
+        },
+        new Game {
           GameID = "cvssnk",
           Name = "Capcom vs. SNK: Millennium Fight 2000",
           Description = "Capcom vs. SNK: Millennium Fight 2000 is a crossover fighting game developed by Capcom.",
@@ -3746,6 +3766,66 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
+          GameID = "halflifeabsolutezero",
+          Name = "Half-Life: Absolute Zero",
+          Description = "Half-Life: Absolute Zero is a fan-made modification that re-creates the original ideas and plans from the award-winning classic: Half-Life.",
+          SteamID = 812440,
+          EngineID = "goldsrc",
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = true,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/hlaz"
+          },
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2020, Month = 7, Day = 10}
+          ]
+        },
+        new Game {
+          GameID = "halflifearena",
+          Name = "Half-Life Arena",
+          Description = "Welcome to Half-Life Arena, a mod that revamps Deathmatch of the original game into a small-scale, high intensity madness",
+          SteamID = 3771220,
+          EngineID = "goldsrc",
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = true,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/hla"
+          },
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2025, Month = 12, Day = 12}
+          ]
+        },
+        new Game {
+          GameID = "halfliferestored",
+          Name = "Half-Life: Restored",
+          Description = "Previously known as Restore-Life, Half-Life: Restored is a fan made modification for Half-Life. This modification will stretch your Half-Life experience with unused, cut and retail version content from original game.",
+          SteamID = 1283930,
+          EngineID = "goldsrc",
+          Genre = Genre.FPS,
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = true,
+          ReleaseDates = [
+            new ReleaseDate{Year = 2020, Month = 7, Day = 1}
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/hlr",
+            GameDirectory = "hlrestored",
+          }
+        },
+        new Game {
           GameID = "halogoldsrc",
           Name = "Halo: GoldSrc",
           Description = "Halo themed mod for Half-Life.",
@@ -3778,6 +3858,26 @@ namespace ASP_site.Data.Initializers {
           ReleaseDates = [
             new ReleaseDate{Year = 2017, Month = 10, Day = 5}
           ]
+        },
+
+        new Game {
+          GameID = "headcrabfrenzy",
+          Name = "Headcrab Frenzy!",
+          Description = "",
+          SteamID = 354900,
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 1, 2, 3, 4 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2015, Month = 8, Day = 20}
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/hc"
+          }
         },
         new Game {
           GameID = "heavyfireafghanistan",
@@ -7029,6 +7129,27 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
+          GameID = "tttclassic",
+          Name = "Trouble in Terrorist Town: Classic",
+          ModForGameID = "halflife",
+          Description = "Social deduction game mode for Half-Life",
+          EngineID = "goldsrc",
+          SteamID = 4570530,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = false,
+          IsDeveloperMaintained = false,
+          IsCommunityMaintained = true,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/ttt"
+          },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2026, Month = 6, Day = 23},
+          ]
+        },
+        new Game {
           GameID = "tribes1",
           Name = "Starsiege: Tribes",
           Description = "A groundbreaking multiplayer first-person shooter featuring jetpack-based combat.",
@@ -7548,6 +7669,21 @@ namespace ASP_site.Data.Initializers {
           ModForGameID = "halflife",
           EngineID = "goldsrc",
           Genre = Genre.FPS,
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/zp",
+            GameDirectory = "zp",
+          }
+        },
+        new Game {
+          GameID = "zombiepanicstandalone",
+          Name = "Zombie Panic! (Standalone)",
+          Description = "",
+          SteamID = 3825360,
+          EngineID = "goldsrc",
+          Genre = Genre.FPS,
+          ReleaseDates = [
+            new ReleaseDate{Year = 2026, Month = 3, Day = 10}
+          ],
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/zp",
             GameDirectory = "zp",

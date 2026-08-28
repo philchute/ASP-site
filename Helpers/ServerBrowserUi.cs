@@ -35,8 +35,14 @@ public static class ServerBrowserUi
         return SteamEngineLabel(game);
     }
 
+    public static bool IsStandaloneSteamApp(Game game) =>
+        game.ServerConfig?.UsesSteamApi == true && game.SteamID is > 0 and not 10 and not 70;
+
     private static string SteamEngineLabel(Game game)
     {
+        if (IsStandaloneSteamApp(game))
+            return GroupSteam;
+
         var engine = game.EngineID ?? "";
         if (engine.Equals("goldsrc", StringComparison.OrdinalIgnoreCase) ||
             engine.Equals("goldsource", StringComparison.OrdinalIgnoreCase))

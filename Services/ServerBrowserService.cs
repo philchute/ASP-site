@@ -137,9 +137,7 @@ namespace ASP_site.Services
                         }
 
                         int countBeforeGameSpecificFilter = servers.Count;
-                        if ((game.SteamID is 10 or 70 ||
-                            string.Equals(game.EngineID, "goldsrc", StringComparison.OrdinalIgnoreCase)) &&
-                            game.ServerConfig?.UsesIdTech3 != true)
+                        if (game.SteamID is 10 or 70)
                         {
                             servers = servers.Where(s => s.MaxPlayers <= 32).ToList();
                             _logger.LogDebug($"Applied GoldSrc MaxPlayers filter for {game.Name}.");
