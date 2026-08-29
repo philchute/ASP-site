@@ -88,20 +88,22 @@ namespace ASP_site.Data.Initializers {
         new Game {
           GameID = "aoc",
           Name = "Age of Chivalry",
-          Description = "A fast-paced action mod for Half-Life featuring new weapons and gameplay mechanics.",
-          ModForGameID = "halflife",  
-          EngineID = "goldsrc",
+          Description = "Age of Chivalry is a total conversion for Half-Life 2 from Team Chivalry.",
+          ModForGameID = "halflife2",  
+          EngineID = "source",
           SteamID = 17510,
           IsFree = true,
           IsPaid = false,
           IsOpenSource = false,
           IsDeveloperMaintained = false,
-          IsCommunityMaintained = false,
+          IsCommunityMaintained = true,
           Genre = Genre.FPS,
           PlayWith = new List<int> { 0 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2008, Month = 10, Day = 3}
+          ],
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/aoc",
-            GameDirectory = "aoc"
           }
         },
         new Game {
@@ -2202,7 +2204,7 @@ namespace ASP_site.Data.Initializers {
             new ReleaseDate{Year = 2019, Month = 7, Day = 30}
           ]
         },
-          new Game {
+        new Game {
           GameID = "cryoffearmod",
           Name = "Cry of Fear (Mod Version)",
           Description = "A psychological horror game that puts the player in the shoes of Simon, a paraplegic who writes a book for therapy, and in the process faces the inner demons that plague his thoughts. Features a co-op mode.",
@@ -2219,6 +2221,21 @@ namespace ASP_site.Data.Initializers {
           ServerConfig = new ServerBrowserConfig {
             IconPath = "img/icons/cof",
             GameDirectory = "cof",
+          }
+        },
+        new Game {
+          GameID = "cryoffear",
+          Name = "Cry of Fear (Standalone)",
+          Description = "Cry of Fear is a psychological horror game that puts the player in the shoes of Simon, a paraplegic who writes a book for therapy, and in the process faces the inner demons that plague his thoughts. Features a co-op mode.",
+          SteamID = 223710,
+          EngineID = "goldsrc",
+          Genre = Genre.FPS,
+          ReleaseDates = [
+            new ReleaseDate{Year = 2013, Month = 4, Day = 25}
+          ],
+          PlayWith = new List<int> { 1 },
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/cof",
           }
         },
         new Game {
@@ -3034,6 +3051,24 @@ namespace ASP_site.Data.Initializers {
           ]
         },
         new Game {
+          GameID = "entropyzero",
+          Name = "Entropy : Zero",
+          Description = "Be the bad guy in this modification for Half-Life 2 : Episode 2 and step into the boots of a stranded Metrocop, left for dead in the abandoned City 10.",
+          SteamID = 714070,
+          EngineID = "source",
+          Developer = "Breadman",
+          IsOpenSource = true,
+          IsCommunityMaintained = true,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2017, Month = 10, Day = 10}
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/ez",
+          }
+        },
+        new Game {
           GameID = "epoch",
           Name = "Epoch",
           Description = "Epoch is a cover-based lightgun game developed by Epoch Games.",
@@ -3689,7 +3724,8 @@ namespace ASP_site.Data.Initializers {
           Genre = Genre.FPS,
           PlayWith = new List<int> { 0 },
           ServerConfig = new ServerBrowserConfig {
-            IconPath = "img/icons/ag"
+            IconPath = "img/icons/ag",
+            GameDirectory = "ag"
           }
         },
         new Game {
@@ -4295,7 +4331,8 @@ namespace ASP_site.Data.Initializers {
           Genre = Genre.FPS,
           PlayWith = new List<int> { 0 },
           ServerConfig = new ServerBrowserConfig {
-            IconPath = "img/icons/jbmod"
+            IconPath = "img/icons/jbmod",
+            GameDirectory = "jb",
           }
         },
         new Game {
@@ -4392,6 +4429,24 @@ namespace ASP_site.Data.Initializers {
           ReleaseDates = [
             new ReleaseDate{Year = 2025},
           ]
+        },
+        new Game {
+          GameID = "lambdawars",
+          Name = "Lambda Wars",
+          Description = "Lambda Wars is a free standalone multiplayer Source Engine modification set in the Half-Life 2 universe that brings the war between mankind and their brutal Combine overlords to a traditional real-time strategy (RTS) setting.",
+          SteamID = 270370,
+          EngineID = "source",
+          Developer = "Vortal Storm",
+          IsOpenSource = true,
+          IsCommunityMaintained = true,
+          Genre = Genre.RTS,
+          PlayWith = new List<int> { 0 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 2014, Month = 12, Day = 5}
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            IconPath = "img/icons/lw",
+          }
         },
         new Game {
           GameID = "left4dead",
@@ -5176,7 +5231,7 @@ namespace ASP_site.Data.Initializers {
             new ReleaseDate{Year = 2005, Month = 10, Day = 14, Region = Region.EU},
           ],
           ServerConfig = new ServerBrowserConfig {
-            IconPath = "img/icons/pvkii",
+            IconPath = "img/icons/p3",
           }
         },
         new Game {
