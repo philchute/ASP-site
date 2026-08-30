@@ -164,7 +164,7 @@ public static class IdTech3Query
 
         return new GameServerItem(ip, port, game)
         {
-            Name = StringUtils.CleanString(hostname),
+            Name = StringUtils.CleanString(hostname, removeColors: false),
             Map = StringUtils.CleanString(map),
             Players = Math.Max(0, players),
             MaxPlayers = maxPlayers,

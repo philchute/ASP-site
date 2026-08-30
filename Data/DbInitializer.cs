@@ -289,6 +289,8 @@ namespace ASP_site.Data {
       var adaptedMedia = ComicInitializer.GetMedia()
         .Concat(StarTrekInitializer.GetMedia())
         .Concat(DuneInitializer.GetMedia())
+        .Concat(HaloInitializer.GetMedia())
+        .Concat(LordOfTheRingsInitializer.GetMedia())
         .ToArray();
       ThrowIfDuplicateIds(adaptedMedia, m => m.MediaID, "Media.MediaID");
       foreach (var media in adaptedMedia) {

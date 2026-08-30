@@ -459,6 +459,15 @@ section.grid a:hover {
     transition: background-color 0.1s ease-in-out;
 }
 
+.q3-name {
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+.q3-name span {
+    text-shadow: 0 0 1px #000, 0 1px 2px rgba(0, 0, 0, 0.65);
+}
+
 /* 8. Events calendar */
 .event-view-toggle a.btn,
 .event-range-btns a.btn {

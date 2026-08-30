@@ -51,6 +51,12 @@ namespace ASP_site.Models
         public int? SettingYear { get; set; }
 
         [NotMapped]
+        public SettingCalendar SettingCalendar { get; set; } = SettingCalendar.Gregorian;
+
+        [NotMapped]
+        public string? Description { get; set; }
+
+        [NotMapped]
         public int? ReleasedYear { get; set; }
 
         [NotMapped]

@@ -172,12 +172,16 @@ namespace ASP_site.Pages.Universe
                 {
                     work.Title = game.Name;
                     work.SettingYear = game.SettingYear;
+                    work.SettingCalendar = game.SettingCalendar;
+                    work.Description = game.Description;
                     work.ReleasedYear = game.Year;
                 }
                 else if (!string.IsNullOrEmpty(work.BookTitle) && books.TryGetValue(work.BookTitle, out var book))
                 {
                     work.Title = book.Title;
                     work.SettingYear = book.SettingYear;
+                    work.SettingCalendar = book.SettingCalendar;
+                    work.Description = book.Description;
                     work.ReleasedYear = book.PublicationYear;
                     work.ReleasedMonth = book.PublicationMonth;
                     work.CollectionNames = book.Tags
@@ -189,6 +193,8 @@ namespace ASP_site.Pages.Universe
                 {
                     work.Title = item.Title;
                     work.SettingYear = item.SettingYear;
+                    work.SettingCalendar = item.SettingCalendar;
+                    work.Description = item.Description;
                     work.ReleasedYear = item.ReleaseYear;
                     work.ReleasedMonth = item.ReleaseMonth;
                 }

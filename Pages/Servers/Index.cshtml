@@ -148,7 +148,8 @@
             type: @Html.Raw(Model.Columns.Type ? "true" : "false"),
             gameType: @Html.Raw(Model.Columns.GameType ? "true" : "false"),
             country: @Html.Raw(Model.Columns.Country ? "true" : "false"),
-            punkBuster: @Html.Raw(Model.Columns.PunkBuster ? "true" : "false")
+            punkBuster: @Html.Raw(Model.Columns.PunkBuster ? "true" : "false"),
+            colorNames: @Html.Raw(Model.Columns.ColorNames ? "true" : "false")
         };
 
         document.addEventListener('DOMContentLoaded', function () {
@@ -234,14 +235,14 @@
             if (f.search) {
                 const q = f.search.toLowerCase();
                 list = list.filter(s =>
-                    (s.name || '').toLowerCase().includes(q) ||
+                    stripQuake3Colors(s.name || '').toLowerCase().includes(q) ||
                     (s.map || '').toLowerCase().includes(q) ||
                     (s.gameType || '').toLowerCase().includes(q) ||
                     (s.ipPort || '').toLowerCase().includes(q));
             }
-            if (f.sortBy === 'name') list.sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+            if (f.sortBy === 'name') list.sort((a, b) => stripQuake3Colors(a.name).localeCompare(stripQuake3Colors(b.name)));
             else if (f.sortBy === 'map') list.sort((a, b) => (a.map || '').localeCompare(b.map || '') || (b.players - a.players));
-            else list.sort((a, b) => (b.players - a.players) || (a.name || '').localeCompare(b.name || ''));
+            else list.sort((a, b) => (b.players - a.players) || stripQuake3Colors(a.name).localeCompare(stripQuake3Colors(b.name)));
             return list;
         }
 
@@ -294,7 +295,7 @@
                 row.dataset.connectCommand = server.connectCommand;
                 row.style.cursor = 'pointer';
 
-                appendTextCell(row, server.name);
+                appendColoredName(row, server.name);
                 appendTextCell(row, server.map);
                 if (columns.gameType) appendTextCell(row, server.gameType || '');
                 appendTextCell(row, server.playersStr);
@@ -323,6 +324,88 @@
                 body.appendChild(row);
             });
             bindCopyHandlers();
+        }
+
+        function stripQuake3Colors(text) {
+            const s = text || '';
+            let out = '';
+            for (let i = 0; i < s.length; i++) {
+                if (s[i] !== '^' || i + 1 >= s.length) {
+                    out += s[i];
+                    continue;
+                }
+                const next = s[i + 1];
+                if (next === '^') {
+                    out += '^';
+                    i++;
+                    continue;
+                }
+                if ((next === 'x' || next === 'X') && /^[0-9a-fA-F]{6}$/.test(s.slice(i + 2, i + 8))) {
+                    i += 7;
+                    continue;
+                }
+                i++;
+            }
+            return out;
+        }
+
+        const q3Colors = {
+            '0': '#777777',
+            '1': '#ff2a2a',
+            '2': '#33ff33',
+            '3': '#ffff33',
+            '4': '#6a8cff',
+            '5': '#33ffff',
+            '6': '#ff33ff',
+            '7': '#ffffff',
+            '8': '#ff8800',
+            '9': '#cccccc'
+        };
+
+        function appendColoredName(row, text) {
+            const td = document.createElement('td');
+            td.className = 'q3-name';
+            const s = text || '';
+            if (!columns.colorNames || s.indexOf('^') < 0) {
+                td.textContent = stripQuake3Colors(s);
+                row.appendChild(td);
+                return;
+            }
+
+            let color = q3Colors['7'];
+            let buf = '';
+            const flush = () => {
+                if (!buf) return;
+                const span = document.createElement('span');
+                span.style.color = color;
+                span.textContent = buf;
+                td.appendChild(span);
+                buf = '';
+            };
+
+            for (let i = 0; i < s.length; i++) {
+                if (s[i] !== '^' || i + 1 >= s.length) {
+                    buf += s[i];
+                    continue;
+                }
+                const next = s[i + 1];
+                if (next === '^') {
+                    buf += '^';
+                    i++;
+                    continue;
+                }
+                if ((next === 'x' || next === 'X') && /^[0-9a-fA-F]{6}$/.test(s.slice(i + 2, i + 8))) {
+                    flush();
+                    color = '#' + s.slice(i + 2, i + 8);
+                    i += 7;
+                    continue;
+                }
+                flush();
+                color = q3Colors[next] || q3Colors[String((next.charCodeAt(0) - 48) & 7)] || color;
+                i++;
+            }
+            flush();
+            row.appendChild(td);
         }
 
         function appendTextCell(row, text) {

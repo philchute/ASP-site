@@ -5,6 +5,15 @@ namespace ASP_site.Models
 {
     public enum ContentType  { Book, Play, Movie, Series, Episode, Game, GameMission }
     public enum AgeAppropriateness { Early, Middle, Teen, Adult }
+    public enum SettingCalendar
+    {
+        [Display(Name = "Gregorian Calendar")]
+        Gregorian,
+        [Display(Name = "Dune")]
+        AfterGuild,
+        [Display(Name = "Middle-earth")]
+        MiddleEarth
+    }
 
     public class YearEntry
     {
@@ -21,6 +30,7 @@ namespace ASP_site.Models
         public string? StoryArcID { get; set; }
         public string? Published { get; set; }
         public string? Availability { get; set; }
+        public SettingCalendar SettingCalendar { get; set; } = SettingCalendar.Gregorian;
 
         public bool HasCatalogLink =>
             !string.IsNullOrEmpty(GameID)
@@ -74,7 +84,8 @@ namespace ASP_site.Models
             Year = game.SettingYear ?? 0,
             Description = game.Description,
             GameID = game.GameID,
-            Published = game.Year?.ToString()
+            Published = game.Year?.ToString(),
+            SettingCalendar = game.SettingCalendar
         };
 
         public static YearEntry FromBook(Book book) => new()
@@ -84,7 +95,8 @@ namespace ASP_site.Models
             Year = book.SettingYear ?? 0,
             Description = book.Description,
             BookTitle = book.Title,
-            Published = book.PublicationYear?.ToString()
+            Published = book.PublicationYear?.ToString(),
+            SettingCalendar = book.SettingCalendar
         };
 
         public static YearEntry FromMedia(Media media) => new()
@@ -94,7 +106,8 @@ namespace ASP_site.Models
             Year = media.SettingYear ?? 0,
             Description = media.Description,
             MediaID = media.MediaID,
-            Published = media.ReleaseYear.ToString()
+            Published = media.ReleaseYear.ToString(),
+            SettingCalendar = media.SettingCalendar
         };
     }
 

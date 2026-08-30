@@ -24,7 +24,7 @@ else
                 @Model.Item.ReleaseYear
                 @if (Model.Item.SettingYear.HasValue)
                 {
-                    <text> · set @Model.Item.SettingYear</text>
+                    <text> · set @ViewHelper.FormatSettingYear(Model.Item.SettingYear, Model.Item.SettingCalendar)</text>
                 }
             </small>
         </h1>

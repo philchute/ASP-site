@@ -12,6 +12,7 @@ public class ServerBrowserColumns
     public bool GameType { get; init; }
     public bool Country { get; init; }
     public bool PunkBuster { get; init; }
+    public bool ColorNames { get; init; }
 }
 
 public static class ServerBrowserUi
@@ -83,7 +84,8 @@ public static class ServerBrowserUi
             {
                 Password = true,
                 GameType = true,
-                PunkBuster = true
+                PunkBuster = true,
+                ColorNames = true
             };
         }
 
@@ -151,16 +153,16 @@ public static class ServerBrowserUi
         {
             var q = search.Trim();
             filtered = filtered.Where(s =>
-                (s.Name?.Contains(q, StringComparison.OrdinalIgnoreCase) ?? false) ||
+                (StringUtils.StripQuake3Colors(s.Name).Contains(q, StringComparison.OrdinalIgnoreCase)) ||
                 (s.Map?.Contains(q, StringComparison.OrdinalIgnoreCase) ?? false) ||
                 (s.GameType?.Contains(q, StringComparison.OrdinalIgnoreCase) ?? false));
         }
 
         filtered = sortBy?.ToLowerInvariant() switch
         {
-            "name" => filtered.OrderBy(s => s.Name),
+            "name" => filtered.OrderBy(s => StringUtils.StripQuake3Colors(s.Name)),
             "map" => filtered.OrderBy(s => s.Map).ThenByDescending(s => s.Players),
-            _ => filtered.OrderByDescending(s => s.Players).ThenBy(s => s.Name)
+            _ => filtered.OrderByDescending(s => s.Players).ThenBy(s => StringUtils.StripQuake3Colors(s.Name))
         };
 
         return filtered.ToList();

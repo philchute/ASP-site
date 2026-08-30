@@ -61,6 +61,7 @@ namespace ASP_site.Pages.Books
 
             var allBooks = await booksIQ.AsNoTracking().ToListAsync();
             AllLinks = await _context.Links.Where(l => l.BookTitle != null).AsNoTracking().ToListAsync();
+            await ApplyUniverseTagsAsync(allBooks);
 
             var existingTypes = allBooks.Select(b => b.Type).Distinct().ToList();
             IEnumerable<BookType> typeSource = Enum.GetValues<BookType>();
@@ -123,6 +124,74 @@ namespace ASP_site.Pages.Books
                 ? filtered.OrderBy(b => b.Title)
                 : filtered.OrderBy(b => b.PublicationYear).ThenBy(b => b.PublicationMonth).ThenBy(b => b.Title))
                 .ToList();
+        }
+
+        private async Task ApplyUniverseTagsAsync(List<Book> books)
+        {
+            if (books.Count == 0)
+            {
+                return;
+            }
+
+            var titles = books.Select(b => b.Title).ToList();
+            var works = await _context.FranchiseWorks
+                .AsNoTracking()
+                .Where(w => w.BookTitle != null && titles.Contains(w.BookTitle))
+                .Select(w => new { w.BookTitle, w.Branch, w.FranchiseID })
+                .ToListAsync();
+
+            if (works.Count == 0)
+            {
+                return;
+            }
+
+            var franchiseIds = works.Select(w => w.FranchiseID).Distinct().ToList();
+            var franchiseNames = await _context.Franchises
+                .AsNoTracking()
+                .Where(f => franchiseIds.Contains(f.FranchiseID))
+                .ToDictionaryAsync(f => f.FranchiseID, f => f.Name);
+
+            var tagsByTitle = works
+                .GroupBy(w => w.BookTitle!, StringComparer.OrdinalIgnoreCase)
+                .ToDictionary(
+                    g => g.Key,
+                    g => g.SelectMany(w => UniverseTagNames(w.Branch, franchiseNames.GetValueOrDefault(w.FranchiseID)))
+                        .Distinct(StringComparer.OrdinalIgnoreCase)
+                        .ToList(),
+                    StringComparer.OrdinalIgnoreCase);
+
+            foreach (var book in books)
+            {
+                if (!tagsByTitle.TryGetValue(book.Title, out var names))
+                {
+                    continue;
+                }
+
+                var existing = book.Tags
+                    .Select(t => t.Name)
+                    .ToHashSet(StringComparer.OrdinalIgnoreCase);
+
+                foreach (var name in names)
+                {
+                    if (existing.Add(name))
+                    {
+                        book.Tags.Add(new Tag { Name = name });
+                    }
+                }
+            }
+        }
+
+        private static IEnumerable<string> UniverseTagNames(string branch, string? franchiseName)
+        {
+            if (!string.IsNullOrWhiteSpace(franchiseName))
+            {
+                yield return franchiseName;
+            }
+
+            if (!string.IsNullOrWhiteSpace(branch))
+            {
+                yield return branch;
+            }
         }
     }
 }

@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using ASP_site.Models;
 using ASP_site.Data;
+using ASP_site.Helpers;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 using System.Linq;
@@ -17,6 +18,7 @@ namespace ASP_site.Pages.Books
 
     public Book? Book { get; set; }
     public List<Link> BookLinks { get; set; } = new List<Link>();
+    public List<Franchise> Universes { get; set; } = [];
 
     public async Task OnGetAsync(string BookTitle)
     {
@@ -30,6 +32,7 @@ namespace ASP_site.Pages.Books
           BookLinks = await _context.Links
               .Where(l => l.BookTitle == Book.Title)
               .ToListAsync();
+          Universes = await FranchiseLookup.ForBookAsync(_context, Book.Title);
       }
     }
   }

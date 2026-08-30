@@ -4645,14 +4645,13 @@ namespace ASP_site.Data.Initializers
                 {
                     Title = "Robbie",
                     Author = "Isaac Asimov",
+                    SettingYear = 1998,
                     PublicationYear = 1940,
                     PublicationMonth = 9,
                     Type = BookType.ShortStory,
                     Description = "a.k.a. 'Strange Playfellow'. First published in Super Science Stories in September, 1940. Published separately by Creative Education in 1989. Won 1941 Retro Hugo Award for Best Short Story.",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: I, Robot" },
                         new Tag { Name = "Collection: The Complete Robot" },
                         new Tag { Name = "Collection: The Asimov Chronicles" },
@@ -4728,14 +4727,13 @@ namespace ASP_site.Data.Initializers
                 {
                     Title = "Reason",
                     Author = "Isaac Asimov",
+                    SettingYear = 2015,
                     PublicationYear = 1941,
                     PublicationMonth = 4,
                     Type = BookType.ShortStory,
                     Description = "First published in I, Robot in April, 1941.",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: I, Robot" },
                         new Tag { Name = "Collection: The Complete Robot" },
                         new Tag { Name = "Collection: Robot Visions" }
@@ -4745,14 +4743,13 @@ namespace ASP_site.Data.Initializers
                 {
                     Title = "Liar!",
                     Author = "Isaac Asimov",
+                    SettingYear = 2021,
                     PublicationYear = 1941,
                     PublicationMonth = 4,
                     Type = BookType.ShortStory,
                     Description = "First published in Astounding Science Fiction in April, 1941.",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Adapted for Radio" },
                         new Tag { Name = "Collection: I, Robot" },
                         new Tag { Name = "Collection: The Complete Robot" },
@@ -4827,8 +4824,6 @@ namespace ASP_site.Data.Initializers
                     Description = "First published in Amazing Stories in February, 1942.",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: The Rest of the Robots" },
                         new Tag { Name = "Collection: The Complete Robot" }
                     }
@@ -4837,14 +4832,13 @@ namespace ASP_site.Data.Initializers
                 {
                     Title = "Runaround",
                     Author = "Isaac Asimov",
+                    SettingYear = 2015,
                     PublicationYear = 1942,
                     PublicationMonth = 2,
                     Type = BookType.ShortStory,
                     Description = "First published in Amazing Stories in February, 1942.",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: I, Robot" },
                         new Tag { Name = "Collection: The Complete Robot" },
                         new Tag { Name = "Collection: The Asimov Chronicles" },
@@ -4882,6 +4876,7 @@ namespace ASP_site.Data.Initializers
                 {
                     Title = "Foundation",
                     Author = "Isaac Asimov",
+                    SettingYear = 23703,
                     PublicationYear = 1942,
                     PublicationMonth = 5,
                     Type = BookType.ShortStory,
@@ -4889,8 +4884,6 @@ namespace ASP_site.Data.Initializers
                     Tags = new List<Tag>
                     {
                         new Tag { Name = "Adapted for Radio" },
-                        new Tag { Name = "Foundation Universe" },
-                        new Tag { Name = "Foundation Series" },
                         new Tag { Name = "Collection: Foundation" },
                         new Tag { Name = "Adapted for Screen" }
                     }
@@ -4913,6 +4906,7 @@ namespace ASP_site.Data.Initializers
                 {
                     Title = "Bridle and Saddle",
                     Author = "Isaac Asimov",
+                    SettingYear = 23733,
                     PublicationYear = 1942,
                     PublicationMonth = 6,
                     Type = BookType.ShortStory,
@@ -4920,8 +4914,6 @@ namespace ASP_site.Data.Initializers
                     Tags = new List<Tag>
                     {
                         new Tag { Name = "Adapted for Radio" },
-                        new Tag { Name = "Foundation Universe" },
-                        new Tag { Name = "Foundation Series" },
                         new Tag { Name = "Collection: Foundation" }
                     }
                 },
@@ -4935,8 +4927,6 @@ namespace ASP_site.Data.Initializers
                     Description = "First published in Super Science Stories in August, 1942.",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: The Rest of the Robots" },
                         new Tag { Name = "Collection: The Complete Robot" }
                     }
@@ -4987,14 +4977,13 @@ namespace ASP_site.Data.Initializers
                 {
                     Title = "Catch That Rabbit",
                     Author = "Isaac Asimov",
+                    SettingYear = 2015,
                     PublicationYear = 1944,
                     PublicationMonth = 2,
                     Type = BookType.ShortStory,
                     Description = "First published in Astounding Science Fiction in February, 1944.",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: I, Robot" },
                         new Tag { Name = "Collection: The Complete Robot" },
                         new Tag { Name = "Collection: The Asimov Chronicles" }
@@ -5004,6 +4993,7 @@ namespace ASP_site.Data.Initializers
                 {
                     Title = "The Big and the Little",
                     Author = "Isaac Asimov",
+                    SettingYear = 23808,
                     PublicationYear = 1944,
                     PublicationMonth = 8,
                     Type = BookType.ShortStory,
@@ -5011,8 +5001,6 @@ namespace ASP_site.Data.Initializers
                     Tags = new List<Tag>
                     {
                         new Tag { Name = "Adapted for Radio" },
-                        new Tag { Name = "Foundation Universe" },
-                        new Tag { Name = "Foundation Series" },
                         new Tag { Name = "Collection: Foundation" }
                     }
                 },
@@ -5020,6 +5008,7 @@ namespace ASP_site.Data.Initializers
                 {
                     Title = "The Wedge",
                     Author = "Isaac Asimov",
+                    SettingYear = 23788,
                     PublicationYear = 1944,
                     PublicationMonth = 10,
                     Type = BookType.ShortStory,
@@ -5027,8 +5016,6 @@ namespace ASP_site.Data.Initializers
                     Tags = new List<Tag>
                     {
                         new Tag { Name = "Adapted for Radio" },
-                        new Tag { Name = "Foundation Universe" },
-                        new Tag { Name = "Foundation Series" },
                         new Tag { Name = "Collection: Foundation" }
                     }
                 },
@@ -5036,14 +5023,13 @@ namespace ASP_site.Data.Initializers
                 {
                     Title = "Blind Alley",
                     Author = "Isaac Asimov",
+                    SettingYear = 12561,
                     PublicationYear = 1945,
                     PublicationMonth = 3,
                     Type = BookType.ShortStory,
                     Description = "First published in Astounding Science Fiction in March, 1945.",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Galactic Empire" },
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: The Early Asimov" },
                         new Tag { Name = "Collection: The Asimov Chronicles" },
                         new Tag { Name = "Collection: The Complete Stories, Volume 2" }
@@ -5053,14 +5039,13 @@ namespace ASP_site.Data.Initializers
                 {
                     Title = "Dead Hand",
                     Author = "Isaac Asimov",
+                    SettingYear = 23848,
                     PublicationYear = 1945,
                     PublicationMonth = 4,
                     Type = BookType.ShortStory,
                     Description = "a.k.a. 'The General'. First published in Astounding Science Fiction in April, 1945.",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Foundation Universe" },
-                        new Tag { Name = "Foundation Series" },
                         new Tag { Name = "Collection: Foundation and Empire" }
                     }
                 },
@@ -5068,14 +5053,13 @@ namespace ASP_site.Data.Initializers
                 {
                     Title = "Escape!",
                     Author = "Isaac Asimov",
+                    SettingYear = 2030,
                     PublicationYear = 1945,
                     PublicationMonth = 8,
                     Type = BookType.ShortStory,
                     Description = "a.k.a. 'Paradoxical Escape'. First published in Astounding Science Fiction in August, 1945.",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: I, Robot" },
                         new Tag { Name = "Collection: The Complete Robot" },
                     }
@@ -5084,14 +5068,13 @@ namespace ASP_site.Data.Initializers
                 {
                     Title = "The Mule",
                     Author = "Isaac Asimov",
+                    SettingYear = 23953,
                     PublicationYear = 1945,
                     PublicationMonth = 11,
                     Type = BookType.ShortStory,
                     Description = "a.k.a. 'The Mule's Children'. First published in Astounding Science Fiction in November and December, 1945.",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Foundation Universe" },
-                        new Tag { Name = "Foundation Series" },
                         new Tag { Name = "Collection: Foundation and Empire" }
                     }
                 },
@@ -5099,14 +5082,13 @@ namespace ASP_site.Data.Initializers
                 {
                     Title = "Evidence",
                     Author = "Isaac Asimov",
+                    SettingYear = 2032,
                     PublicationYear = 1946,
                     PublicationMonth = 9,
                     Type = BookType.ShortStory,
                     Description = "First published in Astounding Science Fiction in September, 1946.",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: I, Robot" },
                         new Tag { Name = "Collection: The Complete Robot" },
                         new Tag { Name = "Collection: The Asimov Chronicles" },
@@ -5118,14 +5100,13 @@ namespace ASP_site.Data.Initializers
                 {
                     Title = "Little Lost Robot",
                     Author = "Isaac Asimov",
+                    SettingYear = 2029,
                     PublicationYear = 1947,
                     PublicationMonth = 3,
                     Type = BookType.ShortStory,
                     Description = "First published in Astounding Science Fiction in March, 1947. Made into an episode of 'Out of This World' in 1962. Part of the BBC Radio Drama 'I, Robot'.",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Adapted for Screen" },
                         new Tag { Name = "Adapted for Radio" },
                         new Tag { Name = "Collection: I, Robot" },
@@ -5139,13 +5120,13 @@ namespace ASP_site.Data.Initializers
                 {
                     Title = "Now You See It—",
                     Author = "Isaac Asimov",
+                    SettingYear = 23963,
                     PublicationYear = 1948,
                     PublicationMonth = 1,
                     Type = BookType.ShortStory,
                     Description = "a.k.a. 'Search by the Mule'. First published in Astounding Science Fiction in January, 1948.",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: Second Foundation" }
                     }
                 },
@@ -5197,14 +5178,13 @@ namespace ASP_site.Data.Initializers
                 {
                     Title = "Mother Earth",
                     Author = "Isaac Asimov",
+                    SettingYear = 2421,
                     PublicationYear = 1949,
                     PublicationMonth = 5,
                     Type = BookType.ShortStory,
                     Description = "First published in Astounding Science Fiction in May, 1949.",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: The Early Asimov" },
                     }
                 },
@@ -5212,13 +5192,13 @@ namespace ASP_site.Data.Initializers
                 {
                     Title = "—And Now You Don't",
                     Author = "Isaac Asimov",
+                    SettingYear = 24029,
                     PublicationYear = 1949,
                     PublicationMonth = 11,
                     Type = BookType.ShortStory,
                     Description = "a.k.a. 'Search by the Foundation'. First published in Astounding Science Fiction in November, 1949.",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: Second Foundation" }
                     }
                 },
@@ -5239,14 +5219,13 @@ namespace ASP_site.Data.Initializers
                 {
                     Title = "The Evitable Conflict",
                     Author = "Isaac Asimov",
+                    SettingYear = 2052,
                     PublicationYear = 1950,
                     PublicationMonth = 6,
                     Type = BookType.ShortStory,
                     Description = "First published in Astounding Science Fiction in June, 1950.",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: I, Robot" },
                         new Tag { Name = "Collection: The Complete Robot" },
                         new Tag { Name = "Collection: Robot Visions" }
@@ -5317,8 +5296,6 @@ namespace ASP_site.Data.Initializers
                     Description = "First published in Amazing Stories in April, 1951.",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: Earth Is Room Enough" },
                         new Tag { Name = "Collection: The Rest of the Robots" },
                         new Tag { Name = "Collection: The Complete Robot" },
@@ -5363,14 +5340,13 @@ namespace ASP_site.Data.Initializers
                 {
                     Title = "The Psychohistorians",
                     Author = "Isaac Asimov",
+                    SettingYear = 23651,
                     PublicationYear = 1951,
                     Type = BookType.ShortStory,
                     Description = "First published in the Foundation novel (Gnome Press, 1951).",
                     Tags = new List<Tag>
                     {
                         new Tag { Name = "Adapted for Radio" },
-                        new Tag { Name = "Foundation Universe" },
-                        new Tag { Name = "Foundation Series" },
                         new Tag { Name = "Collection: Foundation" }
                     }
                 },
@@ -5544,8 +5520,6 @@ namespace ASP_site.Data.Initializers
                     Description = "First published in Fantastic in May, 1953. Published separately by Creative Education in 1989.",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: Nightfall and Other Stories" },
                         new Tag { Name = "Collection: The Complete Robot" },
                         new Tag { Name = "Collection: Robot Dreams" },
@@ -5745,8 +5719,6 @@ namespace ASP_site.Data.Initializers
                     Description = "First published in Astounding Science Fiction in May, 1955.",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: The Rest of the Robots" },
                         new Tag { Name = "Collection: The Complete Robot" }
                     }
@@ -5935,8 +5907,6 @@ namespace ASP_site.Data.Initializers
                     Tags = new List<Tag>
                     {
                         new Tag { Name = "Multivac" },
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: Earth Is Room Enough" },
                         new Tag { Name = "Collection: The Complete Robot" },
                         new Tag { Name = "Collection: Robot Visions" },
@@ -5997,8 +5967,6 @@ namespace ASP_site.Data.Initializers
                     Description = "First published in Fantastic Universe in October, 1956.",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: The Rest of the Robots" },
                         new Tag { Name = "Collection: The Complete Robot" },
                     }
@@ -6094,8 +6062,6 @@ namespace ASP_site.Data.Initializers
                     Description = "First published in Infinity Science Fiction in February, 1957.",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: The Rest of the Robots" },
                         new Tag { Name = "Collection: The Complete Robot" },
                         new Tag { Name = "Collection: The Complete Stories, Volume 2" }
@@ -6235,8 +6201,6 @@ namespace ASP_site.Data.Initializers
                     Description = "First published in Galaxy Science Fiction in December, 1957.",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: The Rest of the Robots" },
                         new Tag { Name = "Collection: The Complete Robot" },
                         new Tag { Name = "Collection: Robot Visions" },
@@ -6283,8 +6247,6 @@ namespace ASP_site.Data.Initializers
                     Description = "First published in Infinity Science Fiction in January, 1958.",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: The Rest of the Robots" },
                         new Tag { Name = "Collection: The Complete Robot" },
                         new Tag { Name = "Collection: Robot Visions" },
@@ -6682,8 +6644,6 @@ namespace ASP_site.Data.Initializers
                     Description = "First published in Abbottempo, book 4, 1967.",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: Nightfall and Other Stories" },
                         new Tag { Name = "Collection: The Complete Robot" },
                         new Tag { Name = "Collection: Robot Visions" },
@@ -6756,8 +6716,6 @@ namespace ASP_site.Data.Initializers
                     Description = "First published in The Magazine of Fantasy and Science Fiction in October, 1969.",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: The Bicentennial Man and Other Stories" },
                         new Tag { Name = "Collection: The Complete Robot" },
                         new Tag { Name = "Collection: The Asimov Chronicles" },
@@ -6848,14 +6806,13 @@ namespace ASP_site.Data.Initializers
                 {
                     Title = "Mirror Image",
                     Author = "Isaac Asimov",
+                    SettingYear = 3423,
                     PublicationYear = 1972,
                     PublicationMonth = 5,
                     Type = BookType.ShortStory,
                     Description = "First published in Analog Science Fiction and Fact in May, 1972.",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: The Best of Isaac Asimov" },
                         new Tag { Name = "Collection: The Complete Robot" },
                         new Tag { Name = "Collection: The Asimov Chronicles" },
@@ -6992,8 +6949,6 @@ namespace ASP_site.Data.Initializers
                     Description = "First published in The Saturday Evening Post in September-October, 1973.",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: Buy Jupiter and Other Stories" },
                         new Tag { Name = "Collection: Opus 200" },
                         new Tag { Name = "Collection: The Complete Robot" },
@@ -7121,8 +7076,6 @@ namespace ASP_site.Data.Initializers
                     Description = "First published in The Magazine of Fantasy and Science Fiction in May, 1974.",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: The Bicentennial Man and Other Stories" },
                         new Tag { Name = "Collection: The Complete Robot" },
                         new Tag { Name = "Collection: The Asimov Chronicles" },
@@ -7139,8 +7092,6 @@ namespace ASP_site.Data.Initializers
                     Description = "First published in If: Worlds of Science Fiction in May, 1974.",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: The Bicentennial Man and Other Stories" },
                         new Tag { Name = "Collection: The Complete Robot" },
                         new Tag { Name = "Collection: The Complete Stories, Volume 2" }
@@ -7269,8 +7220,6 @@ namespace ASP_site.Data.Initializers
                     Description = "First published in Boys' Life in March, 1975.",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: The Complete Robot" }
                     }
                 },
@@ -7312,8 +7261,6 @@ namespace ASP_site.Data.Initializers
                     Tags = new List<Tag>
                     {
                         new Tag { Name = "Multivac" },
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: The Complete Robot" }
                     }
                 },
@@ -7444,8 +7391,6 @@ namespace ASP_site.Data.Initializers
                     Tags = new List<Tag>
                     {
                         new Tag { Name = "Adapted for Screen" },
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: Robot Visions" },
                         new Tag { Name = "Collection: The Bicentennial Man and Other Stories" },
                         new Tag { Name = "Collection: Opus 200" },
@@ -7532,8 +7477,6 @@ namespace ASP_site.Data.Initializers
                     Description = "First published in Ellery Queen's Mystery Magazine in August, 1976.",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: The Bicentennial Man and Other Stories" },
                         new Tag { Name = "Collection: The Complete Robot" },
                         new Tag { Name = "Collection: The Complete Stories, Volume 2" }
@@ -7588,8 +7531,6 @@ namespace ASP_site.Data.Initializers
                     Tags = new List<Tag>
                     {
                         new Tag { Name = "Multivac" },
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: 3 by Asimov" },
                         new Tag { Name = "Collection: The Complete Robot" },
                         new Tag { Name = "Collection: Robot Dreams" },
@@ -7605,8 +7546,6 @@ namespace ASP_site.Data.Initializers
                     Description = "First published in Isaac Asimov's Science Fiction Magazine in Spring, 1977.",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: The Complete Robot" },
                         new Tag { Name = "Collection: Robot Visions" }
                     }
@@ -9209,8 +9148,6 @@ namespace ASP_site.Data.Initializers
                     Description = "First published in Robot Dreams (Berkley Books, November 1986).",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: Robot Dreams" }
                     }
                 },
@@ -9443,8 +9380,6 @@ namespace ASP_site.Data.Initializers
                     Description = "First published in Isaac Asimov's Science Fiction Magazine in December, 1988.",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: Robot Visions" }
                     }
                 },
@@ -9590,8 +9525,6 @@ namespace ASP_site.Data.Initializers
                     Description = "First published in The Microverse (Bantam, November 1989).",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: Robot Visions" }
                     }
                 },
@@ -9669,8 +9602,6 @@ namespace ASP_site.Data.Initializers
                     Description = "First published in Robot Visions (Roc Books, April 1990).",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: Robot Visions" }
                     }
                 },
@@ -9736,8 +9667,6 @@ namespace ASP_site.Data.Initializers
                     Description = "First published in Cal (Doubleday, 1990) (limited edition pamphlet).",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: Gold" }
                     }
                 },
@@ -9777,8 +9706,6 @@ namespace ASP_site.Data.Initializers
                     Description = "First published in Isaac Asimov's Science Fiction Magazine in mid-December 1990.",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: Gold" }
                     }
                 },
@@ -9929,20 +9856,20 @@ namespace ASP_site.Data.Initializers
                 {
                     Title = "Pebble in the Sky",
                     Author = "Isaac Asimov",
+                    SettingYear = 12411,
                     PublicationYear = 1950,
                     Type = BookType.Novel,
                     Description = "First published by Doubleday in 1950.",
                     Tags = new List<Tag>
                     {
                         new Tag { Name = "Adapted for Radio" },
-                        new Tag { Name = "Galactic Empire" },
-                        new Tag { Name = "Foundation Universe" }
                     }
                 },
                 new Book
                 {
                     Title = "I, Robot",
                     Author = "Isaac Asimov",
+                    SettingYear = 2052,
                     PublicationYear = 1950,
                     PublicationMonth = 12,
                     Type = BookType.Novel,
@@ -9956,14 +9883,10 @@ namespace ASP_site.Data.Initializers
                 {
                     Title = "The Stars, Like Dust",
                     Author = "Isaac Asimov",
+                    SettingYear = 4850,
                     PublicationYear = 1951,
                     Type = BookType.Novel,
                     Description = "First published by Doubleday in 1951.",
-                    Tags = new List<Tag>
-                    {
-                        new Tag { Name = "Foundation Universe" },
-                        new Tag { Name = "Galactic Empire" }
-                    }
                 },
                 new Book
                 {
@@ -9981,6 +9904,7 @@ namespace ASP_site.Data.Initializers
                 {
                     Title = "Foundation and Empire",
                     Author = "Isaac Asimov",
+                    SettingYear = 23847,
                     PublicationYear = 1952,
                     Type = BookType.Novel,
                     Description = "First published by Gnome Press in 1952."
@@ -9989,13 +9913,10 @@ namespace ASP_site.Data.Initializers
                 {
                     Title = "The Currents of Space",
                     Author = "Isaac Asimov",
+                    SettingYear = 11129,
                     PublicationYear = 1952,
                     Type = BookType.Novel,
                     Description = "First published by Doubleday in 1952.",
-                    Tags = new List<Tag>
-                    {
-                        new Tag { Name = "Galactic Empire" }
-                    }
                 },
                 new Book
                 {
@@ -10009,6 +9930,7 @@ namespace ASP_site.Data.Initializers
                 {
                     Title = "Second Foundation",
                     Author = "Isaac Asimov",
+                    SettingYear = 23968,
                     PublicationYear = 1953,
                     Type = BookType.Novel,
                     Description = "First published by Gnome Press in 1953."
@@ -10029,13 +9951,12 @@ namespace ASP_site.Data.Initializers
                 {
                     Title = "The Caves of Steel",
                     Author = "Isaac Asimov",
+                    SettingYear = 3421,
                     PublicationYear = 1954,
                     Type = BookType.Novel,
                     Description = "First published by Doubleday in 1954.",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: The Rest of the Robots" }
                     }
                 },
@@ -10066,10 +9987,6 @@ namespace ASP_site.Data.Initializers
                     PublicationYear = 1955,
                     Type = BookType.Novel,
                     Description = "First published by Doubleday in 1955.",
-                    Tags = new List<Tag>
-                    {
-                        new Tag { Name = "Foundation Universe" }
-                    }
                 },
                 new Book
                 {
@@ -10119,13 +10036,12 @@ namespace ASP_site.Data.Initializers
                 {
                     Title = "The Naked Sun",
                     Author = "Isaac Asimov",
+                    SettingYear = 3422,
                     PublicationYear = 1957,
                     Type = BookType.Novel,
                     Description = "First published by Doubleday in 1957.",
                     Tags = new List<Tag>
                     {
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" },
                         new Tag { Name = "Collection: The Rest of the Robots" }
                     }
                 },
@@ -11778,13 +11694,10 @@ namespace ASP_site.Data.Initializers
                 {
                     Title = "Foundation's Edge",
                     Author = "Isaac Asimov",
+                    SettingYear = 24150,
                     PublicationYear = 1982,
                     Type = BookType.Novel,
                     Description = "First published by Doubleday in 1982.",
-                    Tags = new List<Tag>
-                    {
-                        new Tag { Name = "Foundation Universe" }
-                    }
                 },
                 new Book
                 {
@@ -11846,14 +11759,10 @@ namespace ASP_site.Data.Initializers
                 {
                     Title = "The Robots of Dawn",
                     Author = "Isaac Asimov",
+                    SettingYear = 3424,
                     PublicationYear = 1983,
                     Type = BookType.Novel,
                     Description = "First published by Doubleday in 1983.",
-                    Tags = new List<Tag>
-                    {
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" }
-                    }
                 },
                 new Book
                 {
@@ -12019,14 +11928,10 @@ namespace ASP_site.Data.Initializers
                 {
                     Title = "Robots and Empire",
                     Author = "Isaac Asimov",
+                    SettingYear = 3624,
                     PublicationYear = 1985,
                     Type = BookType.Novel,
                     Description = "First published by Doubleday in 1985.",
-                    Tags = new List<Tag>
-                    {
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" }
-                    }
                 },
                 new Book
                 {
@@ -12116,13 +12021,10 @@ namespace ASP_site.Data.Initializers
                 {
                     Title = "Foundation and Earth",
                     Author = "Isaac Asimov",
+                    SettingYear = 24150,
                     PublicationYear = 1986,
                     Type = BookType.Novel,
                     Description = "First published by Doubleday in 1986.",
-                    Tags = new List<Tag>
-                    {
-                        new Tag { Name = "Foundation Universe" }
-                    }
                 },
                 new Book
                 {
@@ -12264,14 +12166,10 @@ namespace ASP_site.Data.Initializers
                 {
                     Title = "Prelude to Foundation",
                     Author = "Isaac Asimov",
+                    SettingYear = 23604,
                     PublicationYear = 1988,
                     Type = BookType.Novel,
                     Description = "First published by Doubleday in 1988.",
-                    Tags = new List<Tag>
-                    {
-                        new Tag { Name = "Foundation Universe" },
-                        new Tag { Name = "Foundation Series" }
-                    }
                 },
                 new Book
                 {
@@ -12624,10 +12522,6 @@ namespace ASP_site.Data.Initializers
                     PublicationYear = 1989,
                     Type = BookType.Novel,
                     Description = "First published by Doubleday in 1989.",
-                    Tags = new List<Tag>
-                    {
-                        new Tag { Name = "Foundation Universe" }
-                    }
                 },
                 new Book
                 {
@@ -13129,14 +13023,10 @@ namespace ASP_site.Data.Initializers
                 {
                     Title = "Forward the Foundation",
                     Author = "Isaac Asimov",
+                    SettingYear = 23612,
                     PublicationYear = 1992,
                     Type = BookType.Novel,
                     Description = "First published by Doubleday in 1992.",
-                    Tags = new List<Tag>
-                    {
-                        new Tag { Name = "Foundation Universe" },
-                        new Tag { Name = "Foundation Series" }
-                    }
                 },
                 new Book
                 {
@@ -13148,8 +13038,6 @@ namespace ASP_site.Data.Initializers
                     Tags = new List<Tag>
                     {
                         new Tag { Name = "Adapted for Screen" },
-                        new Tag { Name = "Robot" },
-                        new Tag { Name = "Foundation Universe" }
                     }
                 },
                 new Book
@@ -14784,6 +14672,8 @@ namespace ASP_site.Data.Initializers
 
             books.AddRange(DuneInitializer.GetBooks());
             books.AddRange(StarTrekInitializer.GetBooks());
+            books.AddRange(HaloInitializer.GetBooks());
+            books.AddRange(LordOfTheRingsInitializer.GetBooks());
 
             var links = new List<Link>
             {

@@ -2527,6 +2527,25 @@ namespace ASP_site.Data.Initializers {
           }
         },
         new Game {
+          GameID = "deusexcoop",
+          Name = "Deus Ex (Hans Coop mod)",
+          Description = "Coop mod supported on 333networks.",
+          ModForGameID = "deusex",
+          EngineID = "unreal",
+          Developer = "Hans",
+          IsFree = true,
+          IsPaid = false,
+          IsOpenSource = true,
+          IsCommunityMaintained = true,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "333networks",
+            QueryProtocol = "GameSpy",
+            MasterGameName = "hx"
+          }
+        },
+        new Game {
           GameID = "deusexinvisiblewar",
           Name = "Deus Ex: Invisible War",
           Description = "Deus Ex: Invisible War is a first-person shooter game developed by Ion Storm.",
@@ -7288,6 +7307,24 @@ namespace ASP_site.Data.Initializers {
           ReleaseDates = [
             new ReleaseDate{Year = 2010, Month = 10, Day = 12}
           ]
+        },
+        new Game {
+          GameID = "turok2",
+          Name = "Turok 2: Seeds of Evil",
+          Description = "Turok 2: Seeds of Evil is a first-person shooter video game developed by Iguana Entertainment.",
+          Developer = "Iguana Entertainment",
+          IsFree = false,
+          IsPaid = true,
+          IsOpenSource = false,
+          Genre = Genre.FPS,
+          PlayWith = new List<int> { 0, 1 },
+          ReleaseDates = [
+            new ReleaseDate{Year = 1999, Month = 2, Day = 9}
+          ],
+          ServerConfig = new ServerBrowserConfig {
+            MasterServerKey = "333networks",
+            QueryProtocol = "GameSpy",
+          }
         },
         new Game {
           GameID = "underworldbloodline",

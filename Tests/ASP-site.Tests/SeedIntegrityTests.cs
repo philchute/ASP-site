@@ -60,6 +60,8 @@ namespace ASP_site.Tests
                 ComicInitializer.GetMedia()
                     .Concat(StarTrekInitializer.GetMedia())
                     .Concat(DuneInitializer.GetMedia())
+                    .Concat(HaloInitializer.GetMedia())
+                    .Concat(LordOfTheRingsInitializer.GetMedia())
                     .Select(m => m.MediaID));
             Assert.True(dupes.Count == 0, FormatDupes("Media.MediaID", dupes));
         }

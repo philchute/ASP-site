@@ -176,6 +176,14 @@ namespace ASP_site.Data.Initializers
                     Content = "<p>Added some additional stand-alone half-life mods to the server browser, including TTT Classic, Half-life: C.A.G.E.D, Head Crab Frenzy!, Zombie Panic! (Stand-alone), Half-life Arena, Half-life: Restored, and Half-life: Absolute Zero.</p>",
                     PostedDate = new DateTime(2026, 8, 28, 12, 0, 0, DateTimeKind.Utc), Author = "Phil",
                     Tags = new List<Tag> { tags.Single(t => t.Name == "Website Update"), tags.Single(t => t.Name == "Gaming Update") }
+                },
+                new UpdatePost
+                {
+                    Id = 21,
+                    Title = "More universes, more games",
+                    Content = "<p>Added universes for Halo, LotR, and converted book tags to universe for Asimov's Foundation. Foudn more games I can catch in the server browser and I think there's some more mods I can list even without adding support for new protocols.</p>",
+                    PostedDate = new DateTime(2026, 8, 29, 12, 0, 0, DateTimeKind.Utc), Author = "Phil",
+                    Tags = new List<Tag> { tags.Single(t => t.Name == "Website Update"), tags.Single(t => t.Name == "Gaming Update") }
                 }
             };
             return (posts, tags);

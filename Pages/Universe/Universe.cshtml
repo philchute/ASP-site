@@ -104,7 +104,7 @@ else
             {
                 var link = work.GetCatalogLink();
                 <div class="row g-0 border-bottom table-row-hover">
-                    <div class="p-1 text-center col-12 col-sm-1">@(work.SettingYear?.ToString() ?? "—")</div>
+                    <div class="p-1 text-center col-12 col-sm-1">@ViewHelper.FormatSettingYear(work.SettingYear, work.SettingCalendar)</div>
                     <div class="p-1 text-center col-12 col-sm-2 text-muted">
                         @if (work.ReleasedMonth.HasValue)
                         {
@@ -122,6 +122,10 @@ else
                         else
                         {
                             @work.Title
+                        }
+                        @if (!string.IsNullOrEmpty(work.Description))
+                        {
+                            <div class="text-muted small">@work.Description</div>
                         }
                     </div>
                     <div class="p-1 text-start col-12 col-sm-3 d-flex flex-wrap align-content-start">

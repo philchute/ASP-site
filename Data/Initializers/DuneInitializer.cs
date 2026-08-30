@@ -40,6 +40,63 @@ namespace ASP_site.Data.Initializers
             Novel("Chapterhouse: Dune", "Frank Herbert", 1985, 4, 15232,
                 "The Bene Gesserit retreat to Chapterhouse as the Honored Matres overrun the old empire.",
                 "Collection: Original Dune Series"),
+
+            Novel("Dune: The Butlerian Jihad", "Brian Herbert and Kevin J. Anderson", 2002, 9, -200,
+                "The war between free humans and thinking machines, set about 10,000 years before Dune.",
+                "Collection: Legends of Dune"),
+            Novel("Dune: The Machine Crusade", "Brian Herbert and Kevin J. Anderson", 2003, 9, -175,
+                "The long middle of the Butlerian Jihad, as the League of Nobles and the machine empire fight across the stars.",
+                "Collection: Legends of Dune"),
+            Novel("Dune: The Battle of Corrin", "Brian Herbert and Kevin J. Anderson", 2004, 8, -88,
+                "The campaign that ends the Jihad and sets the Corrino Imperium in place for the next ten millennia.",
+                "Collection: Legends of Dune"),
+
+            Novel("Sisterhood of Dune", "Brian Herbert and Kevin J. Anderson", 2012, 1, -8,
+                "Decades after the Jihad, the early Bene Gesserit take shape amid a rising anti-technology movement.",
+                "Collection: Great Schools of Dune"),
+            Novel("Mentats of Dune", "Brian Herbert and Kevin J. Anderson", 2014, 3, -4,
+                "The Mentat school trains human computers while Butlerian fervor threatens remaining machines.",
+                "Collection: Great Schools of Dune"),
+            Novel("Navigators of Dune", "Brian Herbert and Kevin J. Anderson", 2016, 9, 0,
+                "Spacefolding, spice, and the first Navigators give rise to the Spacing Guild.",
+                "Collection: Great Schools of Dune"),
+
+            Novel("Dune: House Atreides", "Brian Herbert and Kevin J. Anderson", 1999, 10, 10154,
+                "Young Leto Atreides, Crown Prince Shaddam, and the generation before Paul, set decades before Dune.",
+                "Collection: Prelude to Dune"),
+            Novel("Dune: House Harkonnen", "Brian Herbert and Kevin J. Anderson", 2000, 10, 10174,
+                "Harkonnen, Atreides, and Bene Gesserit threads continue in the years after House Atreides.",
+                "Collection: Prelude to Dune"),
+            Novel("Dune: House Corrino", "Brian Herbert and Kevin J. Anderson", 2001, 10, 10188,
+                "House Corrino, Ix, and the Landsraad in the last years before the Atreides leave Caladan.",
+                "Collection: Prelude to Dune"),
+
+            Novel("Dune: The Duke of Caladan", "Brian Herbert and Kevin J. Anderson", 2020, 10, 10190,
+                "Duke Leto Atreides on Caladan in the years immediately before the move to Arrakis.",
+                "Collection: Caladan Trilogy"),
+            Novel("Dune: The Lady of Caladan", "Brian Herbert and Kevin J. Anderson", 2021, 9, 10190,
+                "Lady Jessica's path on Caladan and beyond in the same stretch before Dune.",
+                "Collection: Caladan Trilogy"),
+            Novel("Dune: The Heir of Caladan", "Brian Herbert and Kevin J. Anderson", 2022, 11, 10191,
+                "Paul Atreides on Caladan immediately before the events of Dune.",
+                "Collection: Caladan Trilogy"),
+
+            Novel("Princess of Dune", "Brian Herbert and Kevin J. Anderson", 2023, 10, 10189,
+                "Princess Irulan and Chani two years before Dune, as their paths begin to converge on Arrakis.",
+                "Collection: Heroes of Dune"),
+            Novel("Paul of Dune", "Brian Herbert and Kevin J. Anderson", 2008, 9, 10196,
+                "Paul's early years and the years between Dune and Dune Messiah.",
+                "Collection: Heroes of Dune"),
+            Novel("The Winds of Dune", "Brian Herbert and Kevin J. Anderson", 2009, 8, 10210,
+                "The years between Dune Messiah and Children of Dune, as Paul's inner circle holds the Imperium together.",
+                "Collection: Heroes of Dune"),
+
+            Novel("Hunters of Dune", "Brian Herbert and Kevin J. Anderson", 2006, 8, 15236,
+                "A continuation of the story left open at the end of Chapterhouse: Dune.",
+                "Collection: Dune Sequels"),
+            Novel("Sandworms of Dune", "Brian Herbert and Kevin J. Anderson", 2007, 8, 15238,
+                "The second half of that continuation, closing the saga begun in Heretics and Chapterhouse.",
+                "Collection: Dune Sequels"),
         ];
 
         private static Media Movie(
@@ -58,6 +115,7 @@ namespace ASP_site.Data.Initializers
             ReleaseMonth = month,
             ReleaseDay = day,
             SettingYear = settingYear,
+            SettingCalendar = SettingCalendar.AfterGuild,
             Description = description
         };
 
@@ -77,6 +135,7 @@ namespace ASP_site.Data.Initializers
             ReleaseMonth = month,
             ReleaseDay = day,
             SettingYear = settingYear,
+            SettingCalendar = SettingCalendar.AfterGuild,
             Description = description
         };
 
@@ -94,6 +153,7 @@ namespace ASP_site.Data.Initializers
             PublicationYear = publicationYear,
             PublicationMonth = publicationMonth,
             SettingYear = settingYear,
+            SettingCalendar = SettingCalendar.AfterGuild,
             Type = BookType.Novel,
             Age = AgeAppropriateness.Teen,
             Description = description,

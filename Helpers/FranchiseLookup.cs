@@ -12,6 +12,9 @@ namespace ASP_site.Helpers
         public static Task<List<Franchise>> ForGameAsync(GameContext context, string gameId) =>
             ForKeysAsync(context, works => works.Where(w => w.GameID == gameId));
 
+        public static Task<List<Franchise>> ForBookAsync(GameContext context, string bookTitle) =>
+            ForKeysAsync(context, works => works.Where(w => w.BookTitle == bookTitle));
+
         private static async Task<List<Franchise>> ForKeysAsync(
             GameContext context,
             Func<IQueryable<FranchiseWork>, IQueryable<FranchiseWork>> filter)

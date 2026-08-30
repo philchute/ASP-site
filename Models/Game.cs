@@ -24,6 +24,7 @@ namespace ASP_site.Models {
     public ServerBrowserConfig? ServerConfig { get; set; }
     public int? Year { get; set; }
     public int? SettingYear { get; set; }
+    public SettingCalendar SettingCalendar { get; set; } = SettingCalendar.Gregorian;
     public AgeAppropriateness? Age { get; set; }
     public ReleaseDate[] ReleaseDates { get; set; } = [];
     public bool IsReleased { get; set; } = true;

@@ -143,6 +143,7 @@ namespace ASP_site.Tests
             Assert.True(columns.Password);
             Assert.True(columns.PunkBuster);
             Assert.True(columns.GameType);
+            Assert.True(columns.ColorNames);
             Assert.False(columns.Vac);
             Assert.Equal("idtech3", ServerBrowserUi.GroupName(IdTech3Game()));
         }
@@ -165,19 +166,41 @@ namespace ASP_site.Tests
         }
 
         [Fact]
-        public void IdTech3InfoResponse_StripsColorsAndMapsPunkBuster()
+        public void IdTech3InfoResponse_KeepsColorCodesAndMapsPunkBuster()
         {
             var body = "\xff\xff\xff\xffinfoResponse\\hostname\\^1Red Server\\mapname\\mp_base\\clients\\8\\sv_maxclients\\20\\g_gametype\\4\\g_needpass\\1\\sv_punkbuster\\1\\fs_game\\etpro\\g_humanplayers\\6";
             var mapped = IdTech3Query.MapInfoResponse(System.Text.Encoding.UTF8.GetBytes(body), IdTech3Game(), IPAddress.Parse("8.8.8.8"), 27960);
 
             Assert.NotNull(mapped);
-            Assert.Equal("Red Server", mapped!.Name);
+            Assert.Equal("^1Red Server", mapped!.Name);
+            Assert.Equal("Red Server", StringUtils.StripQuake3Colors(mapped.Name));
             Assert.Equal("mp_base", mapped.Map);
             Assert.Equal(8, mapped.Players);
             Assert.Equal(20, mapped.MaxPlayers);
             Assert.Equal("etpro 4", mapped.GameType);
             Assert.True(mapped.PasswordProtected);
             Assert.True(mapped.RequiresPunkBuster);
+        }
+
+        [Fact]
+        public void StripQuake3Colors_HandlesCaretEscapeAndHex()
+        {
+            Assert.Equal("Red Server", StringUtils.StripQuake3Colors("^1Red ^2Server"));
+            Assert.Equal("100% ^pure", StringUtils.StripQuake3Colors("^1100% ^^pure"));
+            Assert.Equal("Hex Name", StringUtils.StripQuake3Colors("^xffaa00Hex ^7Name"));
+        }
+
+        [Fact]
+        public void ApplyFiltersAndSort_MatchesNameWithoutColorCodes()
+        {
+            var game = IdTech3Game();
+            var servers = new[]
+            {
+                new GameServerItem(IPAddress.Loopback, 27960, game) { Name = "^1Red ^7Server", Players = 1, MaxPlayers = 16 }
+            };
+
+            var found = ServerBrowserUi.ApplyFiltersAndSort(servers, "all", "all", hideEmpty: false, hideFull: false, "name", "red");
+            Assert.Single(found);
         }
 
         [Fact]

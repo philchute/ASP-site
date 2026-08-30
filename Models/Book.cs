@@ -23,6 +23,7 @@ namespace ASP_site.Models
 
         public string? WrittenAs { get; set; } // Pseudonym
         public int? SettingYear { get; set; }
+        public SettingCalendar SettingCalendar { get; set; } = SettingCalendar.Gregorian;
         public AgeAppropriateness? Age { get; set; }
 
         public int? PublicationYear { get; set; }

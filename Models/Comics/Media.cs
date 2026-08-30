@@ -14,6 +14,7 @@ namespace ASP_site.Models
         public int? ReleaseMonth { get; set; }
         public int? ReleaseDay { get; set; }
         public int? SettingYear { get; set; }
+        public SettingCalendar SettingCalendar { get; set; } = SettingCalendar.Gregorian;
         
         // Used only for initialization, not saved to DB
         [System.ComponentModel.DataAnnotations.Schema.NotMapped]

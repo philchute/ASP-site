@@ -18,6 +18,8 @@ namespace ASP_site.Pages.Years
 
         // Helper dictionaries for checkboxes
         public Dictionary<string, string> AllContentTypes { get; private set; }
+        public Dictionary<string, string> GregorianCalendars { get; private set; }
+        public Dictionary<string, string> FictionalCalendars { get; private set; }
 
 
         public IndexModel(GameContext context)
@@ -30,6 +32,14 @@ namespace ASP_site.Pages.Years
                                 .Cast<ContentType>()
                                 .ToDictionary(e => e.ToString(), e => e.ToString());
 
+            GregorianCalendars = new Dictionary<string, string>
+            {
+                [nameof(SettingCalendar.Gregorian)] = GetEnumDisplayName(SettingCalendar.Gregorian)
+            };
+            FictionalCalendars = Enum.GetValues<SettingCalendar>()
+                .Where(c => c != SettingCalendar.Gregorian)
+                .ToDictionary(c => c.ToString(), c => GetEnumDisplayName(c));
+
             // Simplified Sort Options
             SortOptions = new SelectList(new List<SelectListItem>
             {
@@ -41,6 +51,7 @@ namespace ASP_site.Pages.Years
             // Initialize lists
             SelectedContentTypes = new List<string>();
             SelectedAgeAppropriateness = new List<string>();
+            SelectedCalendars = new List<string>();
         }
 
         public IList<ASP_site.Models.YearEntry> TimelineEntries { get; set; }
@@ -50,6 +61,9 @@ namespace ASP_site.Pages.Years
 
         [BindProperty(SupportsGet = true)]
         public List<string> SelectedAgeAppropriateness { get; set; }
+
+        [BindProperty(SupportsGet = true)]
+        public List<string> SelectedCalendars { get; set; }
 
         [BindProperty(SupportsGet = true)]
         public string? SearchString { get; set; }
@@ -69,6 +83,10 @@ namespace ASP_site.Pages.Years
             {
                  // When empty, consider all possible enum values selected
                  SelectedAgeAppropriateness = Enum.GetNames(typeof(AgeAppropriateness)).ToList(); 
+            }
+            if (SelectedCalendars == null || !SelectedCalendars.Any())
+            {
+                SelectedCalendars = new List<string> { nameof(SettingCalendar.Gregorian) };
             }
 
             var catalogGames = await _context.Games.AsNoTracking()
@@ -105,6 +123,11 @@ namespace ASP_site.Pages.Years
             if (SelectedAgeAppropriateness != null && SelectedAgeAppropriateness.Any() && SelectedAgeAppropriateness.Count < Enum.GetNames(typeof(AgeAppropriateness)).Length)
             {
                 entries = entries.Where(e => e.Age.HasValue && SelectedAgeAppropriateness.Contains(e.Age.Value.ToString()));
+            }
+
+            if (SelectedCalendars.Any())
+            {
+                entries = entries.Where(e => SelectedCalendars.Contains(e.SettingCalendar.ToString()));
             }
 
             if (!string.IsNullOrEmpty(SearchString))
@@ -170,8 +193,12 @@ namespace ASP_site.Pages.Years
                             .GetCustomAttribute<DisplayAttribute>()?.GetName() ?? enumValue.ToString();
         }
 
-        public static string GetEra(int year)
+        public static string GetEra(int year) => GetEra(year, SettingCalendar.Gregorian);
+
+        public static string GetEra(int year, SettingCalendar calendar)
         {
+            if (calendar == SettingCalendar.AfterGuild) return "Dune";
+            if (calendar == SettingCalendar.MiddleEarth) return year < 0 ? "Second Age" : "Third Age";
             if (year <= -3000) return "Prehistory";
             if (year <= -1200) return "Bronze Age";  //Bronze Age (3000 BCE to 1200 BC)
             if (year <= -550) return "Iron Age"; // Iron Age (1200 BC to 550 BC) 
