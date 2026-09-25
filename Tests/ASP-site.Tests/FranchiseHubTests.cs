@@ -350,10 +350,30 @@ namespace ASP_site.Tests
             AssertWork(page.Works, "Halo season 1", FranchiseWorkKind.TVShow, "Silver", "/Media/Details", "media-halo-s1");
             AssertWork(page.Works, "Halo: Combat Evolved", FranchiseWorkKind.Game, "Games", "/Games/Game", "halo");
             AssertWork(page.Works, "Halo: The Fall of Reach", FranchiseWorkKind.Book, "Novels", "/Books/Book", "Halo: The Fall of Reach");
+            AssertWork(page.Works, "Halo: Cryptum", FranchiseWorkKind.Book, "Novels", "/Books/Book", "Halo: Cryptum");
+            AssertWork(page.Works, "Halo: The Cole Protocol", FranchiseWorkKind.Book, "Novels", "/Books/Book", "Halo: The Cole Protocol");
+            AssertWork(page.Works, "Halo: The Rubicon Protocol", FranchiseWorkKind.Book, "Novels", "/Books/Book", "Halo: The Rubicon Protocol");
 
             var titles = page.Works.Select(w => w.Title).ToList();
+            Assert.True(titles.IndexOf("Halo: Cryptum") < titles.IndexOf("Halo: Broken Circle"));
+            Assert.True(titles.IndexOf("Halo: Broken Circle") < titles.IndexOf("Halo: Contact Harvest"));
             Assert.True(titles.IndexOf("Halo: Contact Harvest") < titles.IndexOf("Halo: Combat Evolved"));
             Assert.True(titles.IndexOf("Halo: Combat Evolved") < titles.IndexOf("Halo Infinite"));
+            Assert.True(titles.IndexOf("Halo Infinite") < titles.IndexOf("Halo: Edge of Dawn"));
+
+            Assert.Contains("Collection: The Forerunner Saga", page.AllCollections.Keys);
+            Assert.Contains("Collection: Kilo-Five Trilogy", page.AllCollections.Keys);
+            Assert.Contains("Collection: A Master Chief Story", page.AllCollections.Keys);
+            Assert.Contains("Collection: The Ferrets", page.AllCollections.Keys);
+            Assert.Contains("Collection: The Master Chief Omnibus", page.AllCollections.Keys);
+
+            var cryptum = Assert.Single(page.Works, w => w.Title == "Halo: Cryptum");
+            Assert.Equal(-97445, cryptum.SettingYear);
+            Assert.Equal("97445 BC", ViewHelper.FormatSettingYear(cryptum.SettingYear, cryptum.SettingCalendar));
+
+            var brokenCircle = Assert.Single(page.Works, w => w.Title == "Halo: Broken Circle");
+            Assert.Equal(-852, brokenCircle.SettingYear);
+            Assert.Equal("852 BC", ViewHelper.FormatSettingYear(brokenCircle.SettingYear, brokenCircle.SettingCalendar));
 
             var settingYears = page.Works
                 .Where(w => w.SettingYear.HasValue)

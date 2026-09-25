@@ -312,11 +312,44 @@ namespace ASP_site.Data.Initializers
             yield return Game(HaloId, games, "halowars2");
             yield return Game(HaloId, games, "haloinfinite");
 
+            yield return Book(HaloId, novels, "Halo: Cryptum");
+            yield return Book(HaloId, novels, "Halo: Primordium");
+            yield return Book(HaloId, novels, "Halo: Silentium");
+            yield return Book(HaloId, novels, "Halo: Broken Circle");
             yield return Book(HaloId, novels, "Halo: Contact Harvest");
+            yield return Book(HaloId, novels, "Halo: Silent Storm");
+            yield return Book(HaloId, novels, "Halo: Oblivion");
+            yield return Book(HaloId, novels, "Halo: The Cole Protocol");
+            yield return Book(HaloId, novels, "Halo: Battle Born");
+            yield return Book(HaloId, novels, "Halo: Meridian Divide");
             yield return Book(HaloId, novels, "Halo: The Fall of Reach");
             yield return Book(HaloId, novels, "Halo: The Flood");
             yield return Book(HaloId, novels, "Halo: First Strike");
             yield return Book(HaloId, novels, "Halo: Ghosts of Onyx");
+            yield return Book(HaloId, novels, "Halo: Glasslands");
+            yield return Book(HaloId, novels, "Halo: The Thursday War");
+            yield return Book(HaloId, novels, "Halo: Mortal Dictata");
+            yield return Book(HaloId, novels, "Halo: Last Light");
+            yield return Book(HaloId, novels, "Halo: Retribution");
+            yield return Book(HaloId, novels, "Halo: Shadow of Intent");
+            yield return Book(HaloId, novels, "Halo: New Blood");
+            yield return Book(HaloId, novels, "Halo: Hunters in the Dark");
+            yield return Book(HaloId, novels, "Halo: Smoke and Shadow");
+            yield return Book(HaloId, novels, "Halo: Renegades");
+            yield return Book(HaloId, novels, "Halo: Epitaph");
+            yield return Book(HaloId, novels, "Halo: Saint's Testimony");
+            yield return Book(HaloId, novels, "Halo: Envoy");
+            yield return Book(HaloId, novels, "Halo: Legacy of Onyx");
+            yield return Book(HaloId, novels, "Halo: Point of Light");
+            yield return Book(HaloId, novels, "Halo: Bad Blood");
+            yield return Book(HaloId, novels, "Halo: Shadows of Reach");
+            yield return Book(HaloId, novels, "Halo: Divine Wind");
+            yield return Book(HaloId, novels, "Halo: Outcasts");
+            yield return Book(HaloId, novels, "Halo: Empty Throne");
+            yield return Book(HaloId, novels, "Halo: The Rubicon Protocol");
+            yield return Book(HaloId, novels, "Halo: Edge of Dawn");
+            yield return Book(HaloId, novels, "Halo: Parasite's Wake");
+            yield return Book(HaloId, novels, "Halo: Fireteam Noble");
         }
 
         private static IEnumerable<FranchiseWork> LordOfTheRingsWorks()

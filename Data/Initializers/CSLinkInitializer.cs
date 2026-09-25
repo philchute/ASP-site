@@ -213,6 +213,8 @@ namespace ASP_site.Data.Initializers
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=k_o3fd-dnM0" },
         new Link { GameID = "cs2", MapID = "mirage", Label = "The Evolution of the Mirage Window Smoke", Description = "The Evolution of the Mirage Window Smoke",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=NiZ61Nph58w" },
+        new Link { GameID = "cs2", MapID = "mirage", Label = "How Teams Solved CT Mirage", Description = "Voo's guide to modern competitive Mirage",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=JQIyD_VsE_0" },
         // de_nuke
         new Link { GameID = "cs2", MapID = "nuke", Label = "de_nuke CT guide", Description = "Bird's nuke CT side guide",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=SR7CXB4mBA4" },
