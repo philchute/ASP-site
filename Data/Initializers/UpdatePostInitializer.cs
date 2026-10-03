@@ -181,8 +181,16 @@ namespace ASP_site.Data.Initializers
                 {
                     Id = 21,
                     Title = "More universes, more games",
-                    Content = "<p>Added universes for Halo, LotR, and converted book tags to universe for Asimov's Foundation. Foudn more games I can catch in the server browser and I think there's some more mods I can list even without adding support for new protocols.</p>",
+                    Content = "<p>Added universes for Halo, LotR, and converted book tags to universe for Asimov's Foundation. Found more games I can catch in the server browser and I think there's some more mods I can list even without adding support for new protocols.</p>",
                     PostedDate = new DateTime(2026, 8, 29, 12, 0, 0, DateTimeKind.Utc), Author = "Phil",
+                    Tags = new List<Tag> { tags.Single(t => t.Name == "Website Update"), tags.Single(t => t.Name == "Gaming Update") }
+                },
+                new UpdatePost
+                {
+                    Id = 22,
+                    Title = "More additions",
+                    Content = "<p>Updated events, books, maps, and other data.</p>",
+                    PostedDate = new DateTime(2026, 8, 30, 12, 0, 0, DateTimeKind.Utc), Author = "Phil",
                     Tags = new List<Tag> { tags.Single(t => t.Name == "Website Update"), tags.Single(t => t.Name == "Gaming Update") }
                 }
             };

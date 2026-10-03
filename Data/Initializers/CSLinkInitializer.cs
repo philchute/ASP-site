@@ -157,6 +157,9 @@ namespace ASP_site.Data.Initializers
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=QxV6PH22FRs" },
         new Link { GameID = "cs2", MapID = "ancient", Label = "The Pros' Approach to Holding Ancient Mid", Description = "mahone's ancient mid guide",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=FRmhiVf_3gI" },
+        // de_cache
+        new Link { GameID = "cs2", MapID = "cache", Label = "CS2 Cache - How to DOMINATE MID!", Description = "CS2 Cache - How to DOMINATE MID!",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=PMDYgxoTD8I" },
         // de_dust2
         new Link { GameID = "cs2", MapID = "dust2", Label = "de_dust2 CT guide", Description = "Bird's dust2 CT side guide",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=JwGE65uxBdY" },
@@ -187,7 +190,10 @@ namespace ASP_site.Data.Initializers
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=z3YogGOML3c" },
         new Link { GameID = "cs2", MapID = "inferno", Label = "The Pros' Approach to Holding Inferno B", Description = "The Pros' Approach to Holding Inferno B",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=hx_zM91WmyA" },
-
+        new Link { GameID = "cs2", MapID = "inferno", Label = "Entry Pathing Explained: Inferno B site", Description = "Entry Pathing Explained: Inferno B site",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=ZGLNdKsWqao" },
+        new Link { GameID = "cs2", MapID = "inferno", Label = "How to play Inferno", Description = "How to play Inferno",
+          LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=zmYU5QAQvfU" },
         // de_mirage
         new Link { GameID = "cs2", MapID = "mirage", Label = "de_mirage CT guide", Description = "Bird's mirage CT side guide",
           LinkType = LinkType.Guide, Url = "https://www.youtube.com/watch?v=VyhGmGoRUNg" },

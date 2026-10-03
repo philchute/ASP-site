@@ -202,7 +202,7 @@ namespace ASP_site.Data.Initializers
         new Map
         {
           MapID = "anubis",
-          IsCompetitive = false,
+          IsCompetitive = true,
           Description = "Egyptian themed map",
           GameInfo = new List<MapGameInfo>
           {
@@ -226,11 +226,12 @@ namespace ASP_site.Data.Initializers
         new Map
         {
           MapID = "cache",
-          IsCompetitive = false,
+          IsCompetitive = true,
           Description = "Modern map set in a warehouse district",
           GameInfo = new List<MapGameInfo>
           {
-            new MapGameInfo { GameID = "csgo", Author = "", Description = "CS:GO", FileName = "de_cache" }
+            new MapGameInfo { GameID = "csgo", Author = "", Description = "CS:GO", FileName = "de_cache" },
+            new MapGameInfo { GameID = "cs2", Author = "", Description = "CS2", FileName = "de_cache" }
           }
         },
         new Map
@@ -363,7 +364,7 @@ namespace ASP_site.Data.Initializers
         new Map
         {
           MapID = "overpass",
-          IsCompetitive = true,
+          IsCompetitive = false,
           Description = "Modern map set in Berlin",
           GameInfo = new List<MapGameInfo>
           {
@@ -474,7 +475,7 @@ namespace ASP_site.Data.Initializers
         new Map
         {
           MapID = "train",
-          IsCompetitive = true,
+          IsCompetitive = false,
           Description = "Train yard themed map",
           GameInfo = new List<MapGameInfo>
           {
